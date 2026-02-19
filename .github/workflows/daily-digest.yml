@@ -2,6 +2,8 @@ name: Daily Digest
 
 on:
   schedule:
+    # TEMP smoke test schedule (方案B): every 5 minutes.
+    - cron: '*/5 * * * *'
     # Primary + retry windows for daily digest:
     # 06:00 UTC  (22:00 Los Angeles / 14:00 Beijing)
     # 06:10 UTC  (22:10 Los Angeles / 14:10 Beijing)
