@@ -42,6 +42,7 @@ cp .env.example .env
 
 ```sql
 -- supabase/migrations/20260217_0001_p0_foundation.sql
+-- supabase/migrations/20260219_0002_backup_dispatch_scheduler.sql
 ```
 
 ### 4. 本地测试
@@ -75,6 +76,48 @@ npm run web:dev
 3. Push 代码，Actions 会在每天 06:00 UTC 自动执行
 4. 也可在 Actions 页面手动触发 (workflow_dispatch)
 
+### 7.（强烈建议）开启 Supabase 兜底调度
+
+> 目标：当 GitHub `schedule` 偶发延迟/漏触发时，Supabase 仍会自动触发 `workflow_dispatch`，保证不断更。
+
+#### 7.1 先在 Supabase Vault 写入 5 个密钥
+
+在 Supabase SQL Editor 执行（把 `<...>` 替换成你的实际值）：
+
+```sql
+select vault.create_secret('Wekhoh', 'github_repo_owner');
+select vault.create_secret('AMZ-Daily-Digest-', 'github_repo_name');
+select vault.create_secret('daily-digest.yml', 'github_workflow_file');
+select vault.create_secret('main', 'github_dispatch_ref');
+select vault.create_secret('<GITHUB_TOKEN_WITH_ACTIONS_WRITE>', 'github_dispatch_token');
+```
+
+#### 7.2 执行迁移（创建兜底调度）
+
+```sql
+-- supabase/migrations/20260219_0002_backup_dispatch_scheduler.sql
+```
+
+#### 7.3 验证是否生效
+
+```sql
+-- 查看定时任务
+select jobid, jobname, schedule, active
+from cron.job
+where jobname like 'amz-digest-backup-%'
+order by jobname;
+
+-- 查看兜底触发日志
+select *
+from public.digest_dispatch_logs
+order by triggered_at desc
+limit 20;
+```
+
+说明：
+- 兜底任务时间：`06:08 UTC` 与 `06:18 UTC`（洛杉矶冬令时 `22:08/22:18 PST`）。
+- 如果主调度已经成功发送，当天兜底触发会因幂等性自动跳过，不会重复发邮件。
+
 ## 项目结构
 
 ```
@@ -102,6 +145,7 @@ app/
 └── api/                  # 运维 API
 supabase/migrations/
 └── 20260217_0001_p0_foundation.sql
+└── 20260219_0002_backup_dispatch_scheduler.sql
 ```
 
 ## 环境变量
