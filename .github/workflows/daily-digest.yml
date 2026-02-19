@@ -1,0 +1,171 @@
+name: Daily Digest
+
+on:
+  schedule:
+    # Primary + retry windows for daily digest:
+    # 06:00 UTC  (22:00 Los Angeles / 14:00 Beijing)
+    # 06:10 UTC  (22:10 Los Angeles / 14:10 Beijing)
+    # 06:20 UTC  (22:20 Los Angeles / 14:20 Beijing)
+    - cron: '0 6 * * *'
+    - cron: '10 6 * * *'
+    - cron: '20 6 * * *'
+    # Watchdog check:
+    # 06:35 UTC (22:35 Los Angeles / 14:35 Beijing)
+    - cron: '35 6 * * *'
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: 'Type "yes" to confirm manual run'
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: daily-digest-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  digest:
+    if: github.event_name == 'workflow_dispatch' || github.event.schedule != '35 6 * * *'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+
+      - name: Confirm manual run
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          if [ "${{ github.event.inputs.confirm }}" != "yes" ]; then
+            echo "::error::Manual run not confirmed. Type 'yes' to proceed."
+            exit 1
+          fi
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Audit dependencies
+        run: npm audit --audit-level=high || true
+
+      - name: Install Playwright Chromium
+        run: npx playwright install chromium --with-deps
+
+      - name: Run daily digest
+        run: npx tsx src/main.ts
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          DIGEST_EMAIL: ${{ secrets.DIGEST_EMAIL }}
+          WEARESELLERS_COOKIES: ${{ secrets.WEARESELLERS_COOKIES }}
+
+  watchdog:
+    if: github.event_name == 'schedule' && github.event.schedule == '35 6 * * *'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Verify digest exists for today (UTC)
+        id: verify_digest
+        continue-on-error: true
+        run: npx tsx src/watchdog.ts
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          DIGEST_EMAIL: ${{ secrets.DIGEST_EMAIL }}
+
+      - name: Trigger fallback digest run
+        if: steps.verify_digest.outcome == 'failure'
+        run: |
+          echo "::warning::Watchdog detected missing digest. Triggering fallback run now."
+          npx playwright install chromium --with-deps
+          npx tsx src/main.ts
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          DIGEST_EMAIL: ${{ secrets.DIGEST_EMAIL }}
+          WEARESELLERS_COOKIES: ${{ secrets.WEARESELLERS_COOKIES }}
+
+      - name: Re-verify digest after fallback
+        if: steps.verify_digest.outcome == 'failure'
+        run: |
+          AMZ_WATCHDOG_ALERT_ON_MISSING=0 npx tsx src/watchdog.ts
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          DIGEST_EMAIL: ${{ secrets.DIGEST_EMAIL }}
+
+  notify-failure:
+    runs-on: ubuntu-latest
+    needs:
+      - digest
+      - watchdog
+    if: failure()
+    steps:
+      - name: Send failure alert email
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          DIGEST_EMAIL: ${{ secrets.DIGEST_EMAIL }}
+          RUN_URL: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          npm install nodemailer@8
+          node -e "
+            const nodemailer = require('nodemailer');
+            const t = nodemailer.createTransport({
+              service: 'Gmail',
+              auth: { user: process.env.GMAIL_USER, pass: process.env.GMAIL_APP_PASSWORD }
+            });
+            t.sendMail({
+              from: 'AMZ Daily Digest <' + process.env.GMAIL_USER + '>',
+              to: process.env.DIGEST_EMAIL,
+              subject: 'AMZ Daily Digest — Pipeline 失败告警',
+              html: '<div style=\"font-family:Arial,sans-serif;padding:24px;max-width:560px;margin:0 auto\">' +
+                '<h2 style=\"color:#c53030;margin:0 0 16px\">Pipeline 执行失败</h2>' +
+                '<div style=\"background:#fff5f5;border:1px solid #feb2b2;border-radius:8px;padding:16px\">' +
+                '<p style=\"margin:0;color:#742a2a;font-size:14px;line-height:1.6\">' +
+                'Daily Digest 管道在 ' + new Date().toISOString() + ' 执行失败。<br><br>' +
+                '请查看 <a href=\"' + process.env.RUN_URL + '\">GitHub Actions 日志</a></p></div>' +
+                '<p style=\"margin:16px 0 0;font-size:12px;color:#a0aec0\">自动生成 by AMZ Daily Digest</p></div>'
+            }).then(() => console.log('Failure alert sent')).catch(e => { console.error(e); process.exit(1); });
+          "
+      - name: Log failure to summary
+        run: echo "Daily Digest failed at $(date -u '+%Y-%m-%d %H:%M UTC')" >> $GITHUB_STEP_SUMMARY
