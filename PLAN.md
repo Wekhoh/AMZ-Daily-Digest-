@@ -1,7 +1,7 @@
 # AMZ Daily Digest — 实施计划
 
-> 最后更新: 2026-02-17
-> 状态: v1.0 完成 + 全面优化已应用
+> 最后更新: 2026-02-20
+> 状态: v1.1 收尾中（自动化与可观测性加固）
 
 ## 方案概要
 
@@ -176,6 +176,32 @@ WEARESELLERS_COOKIES=
 3. 检查邮箱收到摘要
 4. Push GitHub → 手动 workflow_dispatch
 5. 等一天确认 cron 自动执行
+
+## Go-Live 收尾清单（明天不翻车）
+
+- [ ] GitHub Actions `Daily Digest` workflow 状态为 `active`
+- [ ] Secrets 已配置且非空：
+  - `GEMINI_API_KEY`
+  - `SUPABASE_URL`
+  - `SUPABASE_KEY`
+  - `GMAIL_USER`
+  - `GMAIL_APP_PASSWORD`
+  - `DIGEST_EMAIL`
+  - `WEARESELLERS_COOKIES`
+- [ ] `.github/workflows/daily-digest.yml` 已包含 4 个时段：
+  - `06:00 / 06:10 / 06:20 / 06:35 UTC`
+- [ ] digest job 包含发送后静默复核：
+  - `Verify digest quality floor after run (silent)`
+- [ ] watchdog job 包含低量阈值检查（`article_count >= 30`）
+- [ ] 今天的 Daily Digest 运行链路已出现：
+  - 至少 1 次 `digest=success`
+  - 06:35 的 `watchdog=success`
+- [ ] 邮箱能在收件箱/垃圾箱搜索到主题：
+  - `AMZ Daily Digest — YYYY-MM-DD`
+
+回滚与应急：
+- 若明天 06:35 UTC 后仍无合格 digest，先手动触发 `workflow_dispatch(confirm=yes)`；
+- 同时检查 Supabase 迁移是否完整（`digest_runs/subscribers/digest_deliveries`）。
 
 ## V2 扩展路线
 

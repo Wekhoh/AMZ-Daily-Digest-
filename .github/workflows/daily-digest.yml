@@ -64,6 +64,7 @@ jobs:
         run: npx playwright install chromium --with-deps
 
       - name: Run daily digest
+        id: run_digest
         run: npx tsx src/main.ts
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -73,6 +74,30 @@ jobs:
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           DIGEST_EMAIL: ${{ secrets.DIGEST_EMAIL }}
           WEARESELLERS_COOKIES: ${{ secrets.WEARESELLERS_COOKIES }}
+
+      - name: Verify digest quality floor after run (silent)
+        id: verify_after_digest
+        run: AMZ_WATCHDOG_ALERT_ON_MISSING=0 npx tsx src/watchdog.ts
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          DIGEST_EMAIL: ${{ secrets.DIGEST_EMAIL }}
+          AMZ_WATCHDOG_MIN_ARTICLES: '30'
+
+      - name: Digest job summary
+        if: always()
+        run: |
+          {
+            echo "## Daily Digest Job Summary"
+            echo ""
+            echo "- Trigger: \`${{ github.event_name }}\`"
+            echo "- Schedule slot: \`${{ github.event.schedule || 'manual' }}\`"
+            echo "- Digest step outcome: \`${{ steps.run_digest.outcome }}\`"
+            echo "- Post-run verify outcome: \`${{ steps.verify_after_digest.outcome }}\`"
+            echo "- Quality floor: \`article_count >= 30\`"
+          } >> "$GITHUB_STEP_SUMMARY"
 
   watchdog:
     if: github.event_name == 'schedule' && github.event.schedule == '35 6 * * *'
@@ -106,11 +131,13 @@ jobs:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           DIGEST_EMAIL: ${{ secrets.DIGEST_EMAIL }}
+          AMZ_WATCHDOG_MIN_ARTICLES: '30'
 
       - name: Trigger fallback digest run
+        id: trigger_fallback
         if: steps.verify_digest.outcome == 'failure'
         run: |
-          echo "::warning::Watchdog detected missing digest. Triggering fallback run now."
+          echo "::warning::Watchdog detected missing/low-volume digest. Triggering fallback run now."
           npx playwright install chromium --with-deps
           npx tsx src/main.ts
         env:
@@ -123,6 +150,7 @@ jobs:
           WEARESELLERS_COOKIES: ${{ secrets.WEARESELLERS_COOKIES }}
 
       - name: Re-verify digest after fallback
+        id: reverify_after_fallback
         if: steps.verify_digest.outcome == 'failure'
         run: |
           AMZ_WATCHDOG_ALERT_ON_MISSING=0 npx tsx src/watchdog.ts
@@ -132,6 +160,20 @@ jobs:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           DIGEST_EMAIL: ${{ secrets.DIGEST_EMAIL }}
+          AMZ_WATCHDOG_MIN_ARTICLES: '30'
+
+      - name: Watchdog job summary
+        if: always()
+        run: |
+          {
+            echo "## Watchdog Job Summary"
+            echo ""
+            echo "- Trigger slot: \`${{ github.event.schedule }}\`"
+            echo "- Verify outcome: \`${{ steps.verify_digest.outcome }}\`"
+            echo "- Fallback step outcome: \`${{ steps.trigger_fallback.outcome || 'not-run' }}\`"
+            echo "- Re-verify outcome: \`${{ steps.reverify_after_fallback.outcome || 'not-run' }}\`"
+            echo "- Quality floor: \`article_count >= 30\`"
+          } >> "$GITHUB_STEP_SUMMARY"
 
   notify-failure:
     runs-on: ubuntu-latest

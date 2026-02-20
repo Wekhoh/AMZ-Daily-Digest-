@@ -76,6 +76,31 @@ npm run web:dev
 3. Push 代码，Actions 会在每天 06:00 UTC 自动执行
 4. 也可在 Actions 页面手动触发 (workflow_dispatch)
 
+### 6.1 自动化保障（核心）
+
+当前 workflow 为“主调度 + 重试 + 看门狗”三层保障：
+
+- 主调度：`06:00 UTC`（洛杉矶 22:00 / 北京 14:00）
+- 重试窗口：`06:10 UTC`、`06:20 UTC`
+- 看门狗复核：`06:35 UTC`（若缺失或低量会触发 fallback）
+
+系统最低质量门槛：
+- `article_count >= 30`（由 `watchdog.ts` + workflow 显式注入 `AMZ_WATCHDOG_MIN_ARTICLES=30`）
+- digest job 在发送后会立刻做一次静默复核（不额外告警），避免“发送成功但条数不达标”漏检。
+
+成功判定（Actions 页面）：
+1. `Run daily digest` = success
+2. `Verify digest quality floor after run (silent)` = success
+3. 在 `GITHUB_STEP_SUMMARY` 可看到本次 job 的汇总结果。
+
+异常排障顺序（建议）：
+1. 先看 `Run daily digest` 失败点（采集、AI、SMTP、Supabase）
+2. 若 digest 成功但 verify 失败，优先检查去重过严 / 数据源波动 / 当日低量
+3. 看 `watchdog` job：
+   - `Trigger fallback digest run` 是否执行
+   - `Re-verify digest after fallback` 是否 success
+4. 若仍失败，查看 `notify-failure` 邮件和 run 日志链接
+
 ### 7.（强烈建议）开启 Supabase 兜底调度
 
 > 目标：当 GitHub `schedule` 偶发延迟/漏触发时，Supabase 仍会自动触发 `workflow_dispatch`，保证不断更。
