@@ -7,6 +7,7 @@ import { collectSellerCentral } from './collectors/sellercentral.js';
 import { processArticles } from './process.js';
 import {
   getExistingUrls,
+  getFallbackArticlesForDigest,
   upsertArticles,
   saveDigest,
   getDigestByDate,
@@ -14,12 +15,14 @@ import {
   markRunSent,
   markRunFailed,
   markRunSkipped,
+  getRecentRuns,
   getActiveSubscribers,
   saveDigestDeliveries,
 } from './store.js';
 import { generateEmailHtml, sendDigestEmail, sendAlertEmail } from './email.js';
 import type { Article } from './store.js';
 import { canonicalizeUrl } from './utils.js';
+import { AI } from './config.js';
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -61,6 +64,94 @@ function normalizeAndDedupeUrls(articles: Article[]): {
   }
 
   return { articles: deduped, dropped };
+}
+
+function dedupeByUrl(articles: Article[]): Article[] {
+  const seen = new Set<string>();
+  const deduped: Article[] = [];
+
+  for (const article of articles) {
+    const key = article.canonical_url ?? article.url;
+    if (seen.has(key)) {
+      continue;
+    }
+    seen.add(key);
+    deduped.push(article);
+  }
+
+  return deduped;
+}
+
+async function ensureDigestWindow(
+  date: string,
+  selected: Article[],
+): Promise<Article[]> {
+  const initial = dedupeByUrl(selected).slice(0, AI.MAX_ARTICLES);
+  if (initial.length >= AI.MIN_ARTICLES) {
+    return initial;
+  }
+
+  const needed = AI.MIN_ARTICLES - initial.length;
+  const fallbackLimit = Math.min(AI.MAX_ARTICLES * 3, needed * 4);
+  const fallbackPool = await getFallbackArticlesForDigest({
+    limit: fallbackLimit,
+    minScore: AI.RELAXED_MIN_SCORE,
+    excludeUrls: initial.map((item) => item.canonical_url ?? item.url),
+  });
+
+  const merged = dedupeByUrl(
+    [...initial, ...fallbackPool].sort((a, b) => (b.score ?? 0) - (a.score ?? 0)),
+  ).slice(0, AI.MAX_ARTICLES);
+
+  if (merged.length < AI.MIN_ARTICLES) {
+    const message =
+      `[Main] Final digest for ${date} below minimum: ${merged.length}/${AI.MIN_ARTICLES} ` +
+      `(fallback candidates=${fallbackPool.length})`;
+    await sendAlertEmail(`${message}\n请检查采集源稳定性、去重与筛选阈值。`);
+    throw new Error(`${message} — aborting send`);
+  }
+
+  if (merged.length > initial.length) {
+    console.log(
+      `[Main] Topped up digest with ${merged.length - initial.length} fallback articles ` +
+      `(from history pool ${fallbackPool.length})`,
+    );
+  }
+
+  return merged;
+}
+
+async function releaseSentRunLockForRepair(
+  date: string,
+  existingCount: number,
+): Promise<void> {
+  const repairReason =
+    `Auto-repair requested: existing digest for ${date} below minimum ` +
+    `(${existingCount}/${AI.MIN_ARTICLES})`;
+
+  try {
+    const recentRuns = await getRecentRuns(60);
+    const sentRun = recentRuns.find(
+      (run) => run.digest_date === date && run.status === 'sent',
+    );
+
+    if (!sentRun) {
+      console.warn(
+        `[Main] ${repairReason}. No sent run lock found in recent runs; will attempt lock acquisition directly.`,
+      );
+      return;
+    }
+
+    await markRunFailed(sentRun.run_id, repairReason);
+    console.log(
+      `[Main] Released previous sent run lock ${sentRun.run_id} for ${date}; starting repair run.`,
+    );
+  } catch (err) {
+    console.warn(
+      `[Main] Failed to release sent run lock for ${date}; repair may be blocked by idempotency lock.`,
+      err,
+    );
+  }
 }
 
 /**
@@ -118,17 +209,34 @@ export async function runPipeline(): Promise<void> {
     // Step 0: Validate configuration + idempotency guard
     // ------------------------------------------------------------------
     validateConfig();
+    const existingDigest = await getDigestByDate(date);
+    const existingCount = existingDigest?.article_count ?? 0;
+    const shouldRepairExistingDigest =
+      Boolean(existingDigest) && existingCount < AI.MIN_ARTICLES;
+
+    if (shouldRepairExistingDigest) {
+      console.warn(
+        `[Main] Existing digest for ${date} is below minimum: ${existingCount}/${AI.MIN_ARTICLES}. ` +
+        'Attempting auto-repair run.',
+      );
+      await releaseSentRunLockForRepair(date, existingCount);
+    }
 
     const lockAcquired = await acquireRunLock(date, runId);
     if (!lockAcquired) {
-      console.log(
-        `[Main] Lock not acquired for ${date}. Another run is active or digest already sent. Skipping.`
-      );
+      if (shouldRepairExistingDigest) {
+        console.log(
+          `[Main] Lock not acquired for ${date} during repair attempt. Another run is active or sent lock was not releasable.`,
+        );
+      } else {
+        console.log(
+          `[Main] Lock not acquired for ${date}. Another run is active or digest already sent. Skipping.`,
+        );
+      }
       return;
     }
 
-    const existingDigest = await getDigestByDate(date);
-    if (existingDigest) {
+    if (existingDigest && !shouldRepairExistingDigest) {
       await markRunSkipped(runId, `Digest already exists for ${date}`);
       console.log(
         `[Main] Digest for ${date} already sent (${existingDigest.article_count} articles). Skipping.`
@@ -220,7 +328,8 @@ export async function runPipeline(): Promise<void> {
       return;
     }
 
-    sentArticleCount = processed.length;
+    const finalArticles = await ensureDigestWindow(date, processed);
+    sentArticleCount = finalArticles.length;
 
     // ------------------------------------------------------------------
     // Step 4: Generate and send digest email (BEFORE storing to DB)
@@ -229,7 +338,7 @@ export async function runPipeline(): Promise<void> {
     // ------------------------------------------------------------------
     console.log('[Main] Step 4/5: Generating and sending email...');
 
-    const emailHtml = generateEmailHtml(processed, date);
+    const emailHtml = generateEmailHtml(finalArticles, date);
     const subscribers = await getActiveSubscribers();
     const fallbackRecipient = process.env.DIGEST_EMAIL?.trim();
     const recipients = subscribers.length > 0
@@ -287,20 +396,20 @@ export async function runPipeline(): Promise<void> {
     // ------------------------------------------------------------------
     console.log('[Main] Step 5/5: Saving to Supabase...');
 
-    const insertedCount = await upsertArticles(processed);
+    const insertedCount = await upsertArticles(finalArticles);
     console.log(`[Main] ${insertedCount} articles saved to database`);
 
     // Save digest record (marks this date as "done" for idempotency)
     await saveDigest({
       date,
       sent_at: new Date().toISOString(),
-      article_count: processed.length,
+      article_count: finalArticles.length,
       email_html: emailHtml,
       run_id: runId,
       status: 'sent',
     });
 
-    await markRunSent(runId, processed.length);
+    await markRunSent(runId, finalArticles.length);
 
     // ------------------------------------------------------------------
     // Done
@@ -309,7 +418,7 @@ export async function runPipeline(): Promise<void> {
     console.log(`  Done in ${elapsed(startTime)}s`);
     const email = process.env.DIGEST_EMAIL ?? '';
     const masked = email.replace(/(.{2}).*(@.*)/, '$1***$2');
-    console.log(`  ${processed.length} articles → digest completed (default recipient: ${masked})`);
+    console.log(`  ${finalArticles.length} articles → digest completed (default recipient: ${masked})`);
     console.log(`${'='.repeat(60)}\n`);
   } catch (err) {
     const message = err instanceof Error ? err.message : String(err);

@@ -15,6 +15,8 @@ interface PipelineMocks {
   markRunSent: ReturnType<typeof vi.fn>;
   markRunFailed: ReturnType<typeof vi.fn>;
   markRunSkipped: ReturnType<typeof vi.fn>;
+  getRecentRuns: ReturnType<typeof vi.fn>;
+  getFallbackArticlesForDigest: ReturnType<typeof vi.fn>;
   getActiveSubscribers: ReturnType<typeof vi.fn>;
   saveDigestDeliveries: ReturnType<typeof vi.fn>;
   generateEmailHtml: ReturnType<typeof vi.fn>;
@@ -22,11 +24,24 @@ interface PipelineMocks {
   sendAlertEmail: ReturnType<typeof vi.fn>;
 }
 
+function makeScoredArticles(count: number, source = 'rss'): Article[] {
+  return Array.from({ length: count }, (_, index) => ({
+    source,
+    url: `https://example.com/${source}/${index}`,
+    title: `Sample ${source} title ${index}`,
+    summary: `摘要 ${index}`,
+    category: 'trend',
+    score: 8,
+    keywords: ['关键词1', '关键词2', '关键词3'],
+  }));
+}
+
 const BASE_ARTICLE: Article = {
   source: 'rss',
   url: 'https://example.com/post?utm_source=test',
   title: 'Sample title',
 };
+const TODAY = new Date().toISOString().slice(0, 10);
 
 function applyRequiredEnv(): void {
   process.env.AMZ_SKIP_MAIN_AUTORUN = '1';
@@ -54,15 +69,7 @@ async function loadMainWithMocks(
     collectRSS: vi.fn().mockResolvedValue([]),
     collectReddit: vi.fn().mockResolvedValue([]),
     collectSellerCentral: vi.fn().mockResolvedValue([]),
-    processArticles: vi.fn().mockResolvedValue([
-      {
-        ...BASE_ARTICLE,
-        summary: '摘要',
-        category: 'trend',
-        score: 8,
-        keywords: ['关键词1', '关键词2', '关键词3'],
-      },
-    ]),
+    processArticles: vi.fn().mockResolvedValue(makeScoredArticles(30, 'rss')),
     getExistingUrls: vi.fn().mockResolvedValue(new Set<string>()),
     upsertArticles: vi.fn().mockResolvedValue(1),
     saveDigest: vi.fn().mockResolvedValue(undefined),
@@ -71,6 +78,8 @@ async function loadMainWithMocks(
     markRunSent: vi.fn().mockResolvedValue(undefined),
     markRunFailed: vi.fn().mockResolvedValue(undefined),
     markRunSkipped: vi.fn().mockResolvedValue(undefined),
+    getRecentRuns: vi.fn().mockResolvedValue([]),
+    getFallbackArticlesForDigest: vi.fn().mockResolvedValue([]),
     getActiveSubscribers: vi.fn().mockResolvedValue([]),
     saveDigestDeliveries: vi.fn().mockResolvedValue(undefined),
     generateEmailHtml: vi.fn().mockReturnValue('<html>digest</html>'),
@@ -109,6 +118,8 @@ async function loadMainWithMocks(
     markRunSent: mocks.markRunSent,
     markRunFailed: mocks.markRunFailed,
     markRunSkipped: mocks.markRunSkipped,
+    getRecentRuns: mocks.getRecentRuns,
+    getFallbackArticlesForDigest: mocks.getFallbackArticlesForDigest,
     getActiveSubscribers: mocks.getActiveSubscribers,
     saveDigestDeliveries: mocks.saveDigestDeliveries,
   }));
@@ -138,7 +149,7 @@ describe('runPipeline orchestration', () => {
 
     await runPipeline();
 
-    expect(mocks.getDigestByDate).not.toHaveBeenCalled();
+    expect(mocks.getDigestByDate).toHaveBeenCalledWith(TODAY);
     expect(mocks.collectWeAreSellers).not.toHaveBeenCalled();
     expect(mocks.markRunFailed).not.toHaveBeenCalled();
   });
@@ -170,10 +181,10 @@ describe('runPipeline orchestration', () => {
       expect.objectContaining({
         run_id: 'run-test-id',
         status: 'sent',
-        article_count: 1,
+        article_count: 30,
       }),
     );
-    expect(mocks.markRunSent).toHaveBeenCalledWith('run-test-id', 1);
+    expect(mocks.markRunSent).toHaveBeenCalledWith('run-test-id', 30);
     expect(mocks.markRunFailed).not.toHaveBeenCalled();
   });
 
@@ -200,10 +211,71 @@ describe('runPipeline orchestration', () => {
 
     expect(mocks.markRunSent).toHaveBeenCalledWith(
       'run-test-id',
-      1,
+      30,
       expect.stringContaining('Post-send warning: save digest failed'),
     );
     expect(mocks.markRunFailed).not.toHaveBeenCalled();
+  });
+
+  it('fails before sending when final article count stays below minimum', async () => {
+    const { runPipeline, mocks } = await loadMainWithMocks({
+      processArticles: vi.fn().mockResolvedValue(makeScoredArticles(8, 'rss')),
+      getFallbackArticlesForDigest: vi.fn().mockResolvedValue(
+        makeScoredArticles(10, 'reddit_fba'),
+      ),
+    });
+
+    await expect(runPipeline()).rejects.toThrow('below minimum');
+
+    expect(mocks.getFallbackArticlesForDigest).toHaveBeenCalledTimes(1);
+    expect(mocks.sendAlertEmail).toHaveBeenCalledWith(
+      expect.stringContaining('below minimum'),
+    );
+    expect(mocks.sendDigestEmail).not.toHaveBeenCalled();
+    expect(mocks.markRunFailed).toHaveBeenCalled();
+  });
+
+  it('tops up digest with fallback articles when fresh pool is insufficient', async () => {
+    const { runPipeline, mocks } = await loadMainWithMocks({
+      processArticles: vi.fn().mockResolvedValue(makeScoredArticles(12, 'wearesellers')),
+      getFallbackArticlesForDigest: vi.fn().mockResolvedValue(
+        makeScoredArticles(25, 'reddit_seller'),
+      ),
+    });
+
+    await runPipeline();
+
+    const generatedArticles = mocks.generateEmailHtml.mock.calls[0]?.[0] as Article[];
+    expect(generatedArticles.length).toBeGreaterThanOrEqual(30);
+    expect(generatedArticles.length).toBeLessThanOrEqual(50);
+    expect(mocks.sendDigestEmail).toHaveBeenCalledTimes(1);
+  });
+
+  it('attempts repair run when an existing digest is below minimum threshold', async () => {
+    const { runPipeline, mocks } = await loadMainWithMocks({
+      getDigestByDate: vi.fn().mockResolvedValue({
+        date: TODAY,
+        sent_at: `${TODAY}T06:00:00.000Z`,
+        article_count: 11,
+        email_html: '<html>old digest</html>',
+      }),
+      getRecentRuns: vi.fn().mockResolvedValue([
+        {
+          run_id: 'old-run-id',
+          digest_date: TODAY,
+          status: 'sent',
+          started_at: `${TODAY}T06:00:00.000Z`,
+        },
+      ]),
+    });
+
+    await runPipeline();
+
+    expect(mocks.markRunFailed).toHaveBeenCalledWith(
+      'old-run-id',
+      expect.stringContaining('Auto-repair requested'),
+    );
+    expect(mocks.sendDigestEmail).toHaveBeenCalledTimes(1);
   });
 
   it('clears timeout timer when pipeline finishes before timeout', async () => {

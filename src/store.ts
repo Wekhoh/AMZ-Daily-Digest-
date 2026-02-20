@@ -47,6 +47,12 @@ export interface DigestRunRecord {
   error_message?: string | null;
 }
 
+export interface FallbackQuery {
+  limit: number;
+  minScore: number;
+  excludeUrls: string[];
+}
+
 let client: SupabaseClient | null = null;
 
 function getClient(): SupabaseClient {
@@ -519,4 +525,78 @@ export async function getRecentDigests(limit = 30): Promise<Digest[]> {
   }
 
   return (modernResult.data ?? []) as Digest[];
+}
+
+export async function getFallbackArticlesForDigest(
+  query: FallbackQuery,
+): Promise<Article[]> {
+  if (query.limit <= 0) {
+    return [];
+  }
+
+  const db = getClient();
+  const rowsLimit = Math.max(query.limit, 1);
+
+  const modernSelect = await db
+    .from('articles')
+    .select(
+      'source,url,raw_url,canonical_url,title,content,summary,category,score,keywords,published_at,created_at',
+    )
+    .gte('score', query.minScore)
+    .not('summary', 'is', null)
+    .order('score', { ascending: false })
+    .order('published_at', { ascending: false, nullsFirst: false })
+    .order('created_at', { ascending: false })
+    .limit(rowsLimit * 3);
+
+  if (modernSelect.error && isMissingColumnError(modernSelect.error.code)) {
+    const legacySelect = await db
+      .from('articles')
+      .select('source,url,title,content,summary,category,score,keywords,published_at,created_at')
+      .gte('score', query.minScore)
+      .not('summary', 'is', null)
+      .order('score', { ascending: false })
+      .order('published_at', { ascending: false, nullsFirst: false })
+      .order('created_at', { ascending: false })
+      .limit(rowsLimit * 3);
+
+    if (legacySelect.error) {
+      throw new Error(`Failed to fetch fallback articles: ${legacySelect.error.message}`);
+    }
+
+    const exclude = new Set(query.excludeUrls);
+    const deduped: Article[] = [];
+
+    for (const item of legacySelect.data ?? []) {
+      const article = item as Article;
+      if (exclude.has(article.url)) continue;
+      if (deduped.some((existing) => existing.url === article.url)) continue;
+      deduped.push(article);
+      if (deduped.length >= rowsLimit) break;
+    }
+
+    return deduped;
+  }
+
+  if (modernSelect.error) {
+    throw new Error(`Failed to fetch fallback articles: ${modernSelect.error.message}`);
+  }
+
+  const exclude = new Set(query.excludeUrls);
+  const deduped: Article[] = [];
+
+  for (const item of modernSelect.data ?? []) {
+    const article = item as Article;
+    const key = article.canonical_url ?? article.url;
+    if (exclude.has(key)) continue;
+    if (
+      deduped.some((existing) => (existing.canonical_url ?? existing.url) === key)
+    ) {
+      continue;
+    }
+    deduped.push(article);
+    if (deduped.length >= rowsLimit) break;
+  }
+
+  return deduped;
 }

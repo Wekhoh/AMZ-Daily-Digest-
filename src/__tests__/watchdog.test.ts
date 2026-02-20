@@ -66,12 +66,26 @@ describe('watchdog', () => {
     const { runWatchdog, mocks } = await loadWatchdogWithMocks({
       getDigestByDate: vi.fn().mockResolvedValue({
         date: '2026-02-19',
-        article_count: 25,
+        article_count: 35,
       }),
     });
 
     await expect(runWatchdog(new Date('2026-02-19T06:35:00.000Z'))).resolves.toBeUndefined();
     expect(mocks.sendAlertEmail).not.toHaveBeenCalled();
+  });
+
+  it('runWatchdog alerts and fails when digest exists but article_count is below minimum', async () => {
+    const { runWatchdog, mocks } = await loadWatchdogWithMocks({
+      getDigestByDate: vi.fn().mockResolvedValue({
+        date: '2026-02-19',
+        article_count: 11,
+      }),
+    });
+
+    await expect(
+      runWatchdog(new Date('2026-02-19T06:35:00.000Z')),
+    ).rejects.toThrow('below minimum');
+    expect(mocks.sendAlertEmail).toHaveBeenCalledTimes(1);
   });
 
   it('runWatchdog alerts and fails when digest is missing', async () => {

@@ -48,6 +48,32 @@ describe('collectReddit', () => {
         });
       }
 
+      if (url.includes('/comments/3/seller_post.json')) {
+        return createJsonResponse([
+          { data: { children: [] } },
+          {
+            data: {
+              children: [
+                {
+                  data: {
+                    body: 'Use exact match negatives before broad expansion to cut wasted spend.',
+                    stickied: false,
+                    author: 'sellerA',
+                  },
+                },
+                {
+                  data: {
+                    body: 'Track week-over-week TACoS and only scale ad sets that keep margin.',
+                    stickied: false,
+                    author: 'sellerB',
+                  },
+                },
+              ],
+            },
+          },
+        ]);
+      }
+
       return createJsonResponse({
         data: {
           children: [
@@ -70,7 +96,7 @@ describe('collectReddit', () => {
 
     const articles = await collectReddit();
 
-    expect(fetchMock).toHaveBeenCalledTimes(2);
+    expect(fetchMock).toHaveBeenCalledTimes(3);
     expect(articles).toHaveLength(2);
     expect(articles[0]).toMatchObject({
       source: 'reddit_fba',
@@ -82,8 +108,9 @@ describe('collectReddit', () => {
       source: 'reddit_seller',
       title: 'Seller Post',
       url: 'https://www.reddit.com/r/AmazonSeller/comments/3/seller_post',
-      content: undefined,
     });
+    expect(articles[1].content).toContain('Use exact match negatives');
+    expect(articles[1].content).toContain('Track week-over-week TACoS');
   });
 
   it('retries failing subreddit and continues with other sources', async () => {
@@ -128,5 +155,43 @@ describe('collectReddit', () => {
     expect(articles).toHaveLength(1);
     expect(articles[0].source).toBe('reddit_seller');
     expect(articles[0].title).toBe('Recovered Seller Post');
+  });
+
+  it('keeps post when comment fetch fails', async () => {
+    const fetchMock = vi.fn(async (input: string | URL) => {
+      const url = String(input);
+
+      if (url.includes('/hot.json')) {
+        return createJsonResponse({
+          data: {
+            children: [
+              {
+                data: {
+                  title: 'Need listing advice',
+                  permalink: '/r/AmazonSeller/comments/55/listing_advice',
+                  selftext: '',
+                  created_utc: 1_700_001_000,
+                  stickied: false,
+                  url: 'https://example.com/listing_advice',
+                },
+              },
+            ],
+          },
+        });
+      }
+
+      if (url.includes('/comments/55/listing_advice.json')) {
+        throw new Error('comments endpoint timeout');
+      }
+
+      return createJsonResponse({ data: { children: [] } });
+    });
+    vi.stubGlobal('fetch', fetchMock as unknown as typeof fetch);
+
+    const articles = await collectReddit();
+
+    expect(fetchMock).toHaveBeenCalled();
+    expect(articles.length).toBeGreaterThan(0);
+    expect(articles[0].title).toBe('Need listing advice');
   });
 });

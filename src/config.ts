@@ -5,11 +5,27 @@
 /** AI processing */
 export const AI = {
   /** Articles per Gemini batch */
-  BATCH_SIZE: 10,
+  BATCH_SIZE: 6,
+  /** Gemini model name (override with GEMINI_MODEL if needed) */
+  MODEL: process.env.GEMINI_MODEL?.trim() || 'gemini-2.0-flash',
+  /** Max output tokens per AI call */
+  MAX_OUTPUT_TOKENS: 8192,
   /** Max chars of article content sent to AI */
   CONTENT_LIMIT: 1500,
+  /** Lower bound of digest size target */
+  MIN_ARTICLES: 30,
   /** Minimum AI score to keep an article */
   MIN_SCORE: 6,
+  /** Coarse filter threshold */
+  COARSE_MIN_SCORE: 6,
+  /** Fine filter threshold */
+  FINE_MIN_SCORE: 6,
+  /** Emergency fallback threshold when strict pool is too small */
+  RELAXED_MIN_SCORE: 3,
+  /** Minimum summary chars to avoid placeholder-style output */
+  MIN_SUMMARY_CHARS: 45,
+  /** Minimum evidence snippet length used for grounding checks */
+  MIN_EVIDENCE_CHARS: 8,
   /** Maximum articles in the final digest */
   MAX_ARTICLES: 50,
   /** Retry attempts per batch */
@@ -45,6 +61,11 @@ export const COLLECTORS = {
   REDDIT_TIMEOUT_MS: 10_000,
   REDDIT_MAX_RETRIES: 2,
   REDDIT_RETRY_DELAY_MS: 2_000,
+  REDDIT_MIN_SELFTEXT_CHARS: 1,
+  REDDIT_COMMENT_ENRICH_MAX_POSTS: 8,
+  REDDIT_COMMENTS_PER_POST: 4,
+  REDDIT_COMMENT_MIN_CHARS: 20,
+  REDDIT_CONTENT_LIMIT: 2_000,
 
   /** AMZ123 RSS */
   RSS_TIMEOUT_MS: 15_000,

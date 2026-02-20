@@ -1,5 +1,10 @@
 import { describe, it, expect } from 'vitest';
-import { sanitizeContent, parseAiResponse } from '../process.js';
+import {
+  sanitizeContent,
+  parseAiResponse,
+  enforceDigestWindow,
+} from '../process.js';
+import type { Article } from '../store.js';
 
 describe('sanitizeContent', () => {
   it('strips lines starting with injection keywords', () => {
@@ -38,7 +43,8 @@ describe('parseAiResponse', () => {
     ]);
     const result = parseAiResponse(json, 1);
     expect(result).toHaveLength(1);
-    expect(result[0].score).toBe(8);
+    expect(result[0].coarseScore).toBe(8);
+    expect(result[0].fineScore).toBe(8);
     expect(result[0].summary).toBe('摘要');
     expect(result[0].category).toBe('trend');
   });
@@ -47,7 +53,8 @@ describe('parseAiResponse', () => {
     const json = '```json\n[{"index":0,"score":7,"summary":"s","category":"other","keywords":[]}]\n```';
     const result = parseAiResponse(json, 1);
     expect(result).toHaveLength(1);
-    expect(result[0].score).toBe(7);
+    expect(result[0].coarseScore).toBe(7);
+    expect(result[0].fineScore).toBe(7);
   });
 
   it('clamps score to 1-10 range', () => {
@@ -56,8 +63,10 @@ describe('parseAiResponse', () => {
       { index: 1, score: -3, summary: 's', category: 'trend', keywords: [] },
     ]);
     const result = parseAiResponse(json, 2);
-    expect(result[0].score).toBe(10);
-    expect(result[1].score).toBe(1);
+    expect(result[0].coarseScore).toBe(10);
+    expect(result[0].fineScore).toBe(10);
+    expect(result[1].coarseScore).toBe(1);
+    expect(result[1].fineScore).toBe(1);
   });
 
   it('normalizes unknown category to "other"', () => {
@@ -100,5 +109,48 @@ describe('parseAiResponse', () => {
 
   it('throws on non-array JSON', () => {
     expect(() => parseAiResponse('{"key": "value"}', 1)).toThrow('not a JSON array');
+  });
+});
+
+describe('enforceDigestWindow', () => {
+  function makeArticles(count: number, prefix: string, score = 7): Article[] {
+    return Array.from({ length: count }, (_, index) => ({
+      source: prefix,
+      url: `https://example.com/${prefix}/${index}`,
+      title: `${prefix}-${index}`,
+      summary: `summary-${index}`,
+      score,
+    }));
+  }
+
+  it('fills to at least 30 articles with fallback pool when strict pool is too small', () => {
+    const strictPool = makeArticles(11, 'strict', 8);
+    const fallbackPool = makeArticles(40, 'fallback', 6);
+
+    const result = enforceDigestWindow(strictPool, fallbackPool);
+
+    expect(result.length).toBeGreaterThanOrEqual(30);
+    expect(result.length).toBeLessThanOrEqual(50);
+  });
+
+  it('caps final selection at 50 articles', () => {
+    const strictPool = makeArticles(60, 'strict', 9);
+
+    const result = enforceDigestWindow(strictPool, []);
+
+    expect(result).toHaveLength(50);
+  });
+
+  it('deduplicates by URL when strict and fallback overlap', () => {
+    const strictPool = makeArticles(20, 'same', 8);
+    const fallbackPool = [
+      ...makeArticles(20, 'same', 6),
+      ...makeArticles(20, 'extra', 6),
+    ];
+
+    const result = enforceDigestWindow(strictPool, fallbackPool);
+    const uniqueUrls = new Set(result.map((item) => item.url));
+
+    expect(uniqueUrls.size).toBe(result.length);
   });
 });
