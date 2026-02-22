@@ -85,6 +85,65 @@ function dedupeByUrl(articles: Article[]): Article[] {
   return deduped;
 }
 
+function parsePublishedAt(article: Article): Date | null {
+  if (!article.published_at) {
+    return null;
+  }
+  const parsed = new Date(article.published_at);
+  if (Number.isNaN(parsed.getTime())) {
+    return null;
+  }
+  return parsed;
+}
+
+function isPublishedOnDigestDate(article: Article, date: string): boolean {
+  const parsed = parsePublishedAt(article);
+  if (!parsed) {
+    return false;
+  }
+  return parsed.toISOString().slice(0, 10) === date;
+}
+
+function compareNewestFirst(a: Article, b: Article): number {
+  const aTime = parsePublishedAt(a)?.getTime() ?? 0;
+  const bTime = parsePublishedAt(b)?.getTime() ?? 0;
+  if (aTime !== bTime) {
+    return bTime - aTime;
+  }
+  return (b.score ?? 0) - (a.score ?? 0);
+}
+
+function prioritizeFreshArticles(articles: Article[], date: string): Article[] {
+  const deduped = dedupeByUrl(articles).slice(0, AI.MAX_ARTICLES * 2);
+  const fresh = deduped
+    .filter((item) => isPublishedOnDigestDate(item, date))
+    .sort(compareNewestFirst);
+  const stale = deduped
+    .filter((item) => !isPublishedOnDigestDate(item, date))
+    .sort((a, b) => (b.score ?? 0) - (a.score ?? 0));
+
+  const desiredFresh = Math.min(AI.FRESH_TARGET_MIN, fresh.length, AI.MAX_ARTICLES);
+  const selected: Article[] = [];
+  const seen = new Set<string>();
+
+  for (const article of fresh.slice(0, desiredFresh)) {
+    const key = article.canonical_url ?? article.url;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    selected.push(article);
+  }
+
+  for (const article of [...fresh.slice(desiredFresh), ...stale]) {
+    if (selected.length >= AI.MAX_ARTICLES) break;
+    const key = article.canonical_url ?? article.url;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    selected.push(article);
+  }
+
+  return selected;
+}
+
 function resolveRecentDigestExclusionDays(
   override = process.env.AMZ_RECENT_DIGEST_EXCLUDE_DAYS,
 ): number {
@@ -156,53 +215,89 @@ async function ensureDigestWindow(
   selected: Article[],
   recentDigestExcludeUrls: string[],
 ): Promise<Article[]> {
-  const initial = dedupeByUrl(selected).slice(0, AI.MAX_ARTICLES);
-  if (initial.length >= AI.MIN_ARTICLES) {
-    return initial;
+  const dedupedSelected = dedupeByUrl(selected);
+  const strictInitial = dedupedSelected.filter((item) => (item.score ?? 0) >= AI.MIN_SCORE);
+  const relaxedInitial = dedupedSelected.filter(
+    (item) => (item.score ?? 0) >= AI.RELAXED_MIN_SCORE && (item.score ?? 0) < AI.MIN_SCORE,
+  );
+
+  if (strictInitial.length >= AI.MIN_ARTICLES) {
+    return prioritizeFreshArticles(strictInitial, date).slice(0, AI.MAX_ARTICLES);
   }
 
+  const basePool = [...strictInitial, ...relaxedInitial];
   const excludeUrls = new Set<string>([
-    ...initial.map((item) => item.canonical_url ?? item.url),
+    ...basePool.map((item) => item.canonical_url ?? item.url),
     ...recentDigestExcludeUrls,
   ]);
-  const needed = AI.MIN_ARTICLES - initial.length;
+  const needed = AI.MIN_ARTICLES - strictInitial.length;
   const fallbackLimit = Math.min(AI.MAX_ARTICLES * 3, needed * 4);
-  const fallbackPool = await getFallbackArticlesForDigest({
+  const strictFallbackPool = await getFallbackArticlesForDigest({
     limit: fallbackLimit,
-    minScore: AI.RELAXED_MIN_SCORE,
+    minScore: AI.MIN_SCORE,
     excludeUrls: [...excludeUrls],
   });
-  const filteredFallback = fallbackPool.filter((article) => {
+  const strictFallback = strictFallbackPool.filter((article) => {
     const key = article.canonical_url ?? article.url;
     return !excludeUrls.has(key);
   });
-  const filteredOutCount = fallbackPool.length - filteredFallback.length;
+  for (const article of strictFallback) {
+    excludeUrls.add(article.canonical_url ?? article.url);
+  }
 
-  const merged = dedupeByUrl(
-    [...initial, ...filteredFallback].sort((a, b) => (b.score ?? 0) - (a.score ?? 0)),
-  ).slice(0, AI.MAX_ARTICLES);
+  let relaxedFallbackPoolSize = 0;
+  let relaxedFallback: Article[] = [];
+  if (strictInitial.length + strictFallback.length < AI.MIN_ARTICLES) {
+    const relaxedFallbackPool = await getFallbackArticlesForDigest({
+      limit: fallbackLimit,
+      minScore: AI.RELAXED_MIN_SCORE,
+      excludeUrls: [...excludeUrls],
+    });
+    relaxedFallbackPoolSize = relaxedFallbackPool.length;
+    relaxedFallback = relaxedFallbackPool.filter((article) => {
+      const key = article.canonical_url ?? article.url;
+      return !excludeUrls.has(key);
+    });
+  }
+
+  const mergedPool = [
+    ...strictInitial,
+    ...strictFallback,
+    ...relaxedInitial,
+    ...relaxedFallback,
+  ];
+  const prioritized = prioritizeFreshArticles(mergedPool, date).slice(0, AI.MAX_ARTICLES);
+  const merged = dedupeByUrl(prioritized).slice(0, AI.MAX_ARTICLES);
+
+  const filteredOutCount =
+    strictFallbackPool.length + relaxedFallbackPoolSize - strictFallback.length - relaxedFallback.length;
+
+  const freshCount = merged.filter((item) => isPublishedOnDigestDate(item, date)).length;
 
   if (merged.length < AI.MIN_ARTICLES) {
     const message =
       `[Main] Final digest for ${date} below minimum: ${merged.length}/${AI.MIN_ARTICLES} ` +
-      `(fallback candidates=${filteredFallback.length})`;
+      `(strict fallback=${strictFallback.length}, relaxed fallback=${relaxedFallback.length})`;
     await sendAlertEmail(`${message}\n请检查采集源稳定性、去重与筛选阈值。`);
     throw new Error(`${message} — aborting send`);
   }
 
-  if (filteredOutCount > 0) {
+  if (filteredOutCount > 0 || recentDigestExcludeUrls.length > 0) {
     console.log(
       `[Main] Removed ${filteredOutCount} fallback articles already delivered in recent digests ` +
       `(cooldown pool size=${recentDigestExcludeUrls.length})`,
     );
   }
 
-  if (merged.length > initial.length) {
+  if (merged.length > strictInitial.length) {
     console.log(
-      `[Main] Topped up digest with ${merged.length - initial.length} fallback articles ` +
-      `(from history pool ${filteredFallback.length})`,
+      `[Main] Topped up digest with ${merged.length - strictInitial.length} fallback articles ` +
+      `(strict fallback=${strictFallback.length}, relaxed fallback=${relaxedFallback.length})`,
     );
   }
+  console.log(
+    `[Main] Freshness priority applied: ${freshCount}/${merged.length} articles published on ${date}`,
+  );
 
   return merged;
 }

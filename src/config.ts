@@ -21,7 +21,9 @@ export const AI = {
   /** Fine filter threshold */
   FINE_MIN_SCORE: 6,
   /** Emergency fallback threshold when strict pool is too small */
-  RELAXED_MIN_SCORE: 3,
+  RELAXED_MIN_SCORE: 5,
+  /** Prefer at least this many same-day items when available */
+  FRESH_TARGET_MIN: 20,
   /** Minimum summary chars to avoid placeholder-style output */
   MIN_SUMMARY_CHARS: 45,
   /** Minimum evidence snippet length used for grounding checks */

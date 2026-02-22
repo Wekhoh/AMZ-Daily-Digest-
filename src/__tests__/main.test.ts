@@ -37,6 +37,34 @@ function makeScoredArticles(count: number, source = 'rss'): Article[] {
   }));
 }
 
+function makePublishedArticles(
+  count: number,
+  options: {
+    source?: string;
+    score?: number;
+    startUrl?: string;
+    publishedAt: string;
+  },
+): Article[] {
+  const {
+    source = 'rss',
+    score = 8,
+    startUrl = `https://example.com/${source}`,
+    publishedAt,
+  } = options;
+  return Array.from({ length: count }, (_, index) => ({
+    source,
+    url: `${startUrl}/${index}`,
+    canonical_url: `${startUrl}/${index}`,
+    title: `Article ${source} ${index}`,
+    summary: `摘要 ${index}`,
+    category: 'trend',
+    score,
+    keywords: ['关键词1', '关键词2', '关键词3'],
+    published_at: publishedAt,
+  }));
+}
+
 const BASE_ARTICLE: Article = {
   source: 'rss',
   url: 'https://example.com/post?utm_source=test',
@@ -46,6 +74,8 @@ const TODAY = new Date().toISOString().slice(0, 10);
 const YESTERDAY = new Date(Date.now() - 24 * 60 * 60 * 1_000)
   .toISOString()
   .slice(0, 10);
+const YESTERDAY_ISO = `${YESTERDAY}T08:00:00.000Z`;
+const TODAY_ISO = `${TODAY}T08:00:00.000Z`;
 
 function applyRequiredEnv(): void {
   process.env.AMZ_SKIP_MAIN_AUTORUN = '1';
@@ -233,7 +263,7 @@ describe('runPipeline orchestration', () => {
 
     await expect(runPipeline()).rejects.toThrow('below minimum');
 
-    expect(mocks.getFallbackArticlesForDigest).toHaveBeenCalledTimes(1);
+    expect(mocks.getFallbackArticlesForDigest).toHaveBeenCalledTimes(2);
     expect(mocks.sendAlertEmail).toHaveBeenCalledWith(
       expect.stringContaining('below minimum'),
     );
@@ -309,6 +339,80 @@ describe('runPipeline orchestration', () => {
     for (const repeatedUrl of repeatedLinks) {
       expect(generatedUrls.has(repeatedUrl)).toBe(false);
     }
+  });
+
+  it('prioritizes same-day fresh content over stale fallback when filling window', async () => {
+    const strictSelected = makePublishedArticles(10, {
+      source: 'wearesellers',
+      score: 8,
+      startUrl: 'https://example.com/strict',
+      publishedAt: YESTERDAY_ISO,
+    });
+    const staleFallback = makePublishedArticles(30, {
+      source: 'amz123',
+      score: 9,
+      startUrl: 'https://example.com/stale-fallback',
+      publishedAt: YESTERDAY_ISO,
+    });
+    const freshFallback = makePublishedArticles(25, {
+      source: 'reddit_fba',
+      score: 6,
+      startUrl: 'https://example.com/fresh-fallback',
+      publishedAt: TODAY_ISO,
+    });
+
+    const { runPipeline, mocks } = await loadMainWithMocks({
+      processArticles: vi.fn().mockResolvedValue(strictSelected),
+      getFallbackArticlesForDigest: vi
+        .fn()
+        .mockResolvedValueOnce([...staleFallback, ...freshFallback])
+        .mockResolvedValueOnce([...staleFallback, ...freshFallback]),
+    });
+
+    await runPipeline();
+
+    const generatedArticles = (mocks.generateEmailHtml.mock.calls[0]?.[0] as Article[]) ?? [];
+    const freshCount = generatedArticles.filter(
+      (item) => item.published_at?.slice(0, 10) === TODAY,
+    ).length;
+    expect(generatedArticles.length).toBeGreaterThanOrEqual(30);
+    expect(freshCount).toBeGreaterThanOrEqual(20);
+  });
+
+  it('avoids relaxed low-score items when strict-quality pool can satisfy minimum', async () => {
+    const strictSelected = makePublishedArticles(10, {
+      source: 'wearesellers',
+      score: 7,
+      startUrl: 'https://example.com/strict-only',
+      publishedAt: TODAY_ISO,
+    });
+    const strictFallback = makePublishedArticles(30, {
+      source: 'reddit_seller',
+      score: 6,
+      startUrl: 'https://example.com/strict-fallback',
+      publishedAt: YESTERDAY_ISO,
+    });
+    const lowScoreFallback = makePublishedArticles(20, {
+      source: 'amz123',
+      score: 4,
+      startUrl: 'https://example.com/low-score',
+      publishedAt: YESTERDAY_ISO,
+    });
+
+    const { runPipeline, mocks } = await loadMainWithMocks({
+      processArticles: vi.fn().mockResolvedValue(strictSelected),
+      getFallbackArticlesForDigest: vi
+        .fn()
+        .mockResolvedValueOnce(strictFallback)
+        .mockResolvedValueOnce(lowScoreFallback),
+    });
+
+    await runPipeline();
+
+    const generatedArticles = (mocks.generateEmailHtml.mock.calls[0]?.[0] as Article[]) ?? [];
+    const minScore = Math.min(...generatedArticles.map((item) => item.score ?? 0));
+    expect(generatedArticles.length).toBeGreaterThanOrEqual(30);
+    expect(minScore).toBeGreaterThanOrEqual(6);
   });
 
   it('attempts repair run when an existing digest is below minimum threshold', async () => {
