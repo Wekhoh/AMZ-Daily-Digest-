@@ -16,6 +16,7 @@ interface PipelineMocks {
   markRunFailed: ReturnType<typeof vi.fn>;
   markRunSkipped: ReturnType<typeof vi.fn>;
   getRecentRuns: ReturnType<typeof vi.fn>;
+  getRecentDigests: ReturnType<typeof vi.fn>;
   getFallbackArticlesForDigest: ReturnType<typeof vi.fn>;
   getActiveSubscribers: ReturnType<typeof vi.fn>;
   saveDigestDeliveries: ReturnType<typeof vi.fn>;
@@ -42,6 +43,9 @@ const BASE_ARTICLE: Article = {
   title: 'Sample title',
 };
 const TODAY = new Date().toISOString().slice(0, 10);
+const YESTERDAY = new Date(Date.now() - 24 * 60 * 60 * 1_000)
+  .toISOString()
+  .slice(0, 10);
 
 function applyRequiredEnv(): void {
   process.env.AMZ_SKIP_MAIN_AUTORUN = '1';
@@ -79,6 +83,7 @@ async function loadMainWithMocks(
     markRunFailed: vi.fn().mockResolvedValue(undefined),
     markRunSkipped: vi.fn().mockResolvedValue(undefined),
     getRecentRuns: vi.fn().mockResolvedValue([]),
+    getRecentDigests: vi.fn().mockResolvedValue([]),
     getFallbackArticlesForDigest: vi.fn().mockResolvedValue([]),
     getActiveSubscribers: vi.fn().mockResolvedValue([]),
     saveDigestDeliveries: vi.fn().mockResolvedValue(undefined),
@@ -119,6 +124,7 @@ async function loadMainWithMocks(
     markRunFailed: mocks.markRunFailed,
     markRunSkipped: mocks.markRunSkipped,
     getRecentRuns: mocks.getRecentRuns,
+    getRecentDigests: mocks.getRecentDigests,
     getFallbackArticlesForDigest: mocks.getFallbackArticlesForDigest,
     getActiveSubscribers: mocks.getActiveSubscribers,
     saveDigestDeliveries: mocks.saveDigestDeliveries,
@@ -249,6 +255,60 @@ describe('runPipeline orchestration', () => {
     expect(generatedArticles.length).toBeGreaterThanOrEqual(30);
     expect(generatedArticles.length).toBeLessThanOrEqual(50);
     expect(mocks.sendDigestEmail).toHaveBeenCalledTimes(1);
+  });
+
+  it('excludes recently delivered URLs when filling from fallback pool', async () => {
+    const fresh = makeScoredArticles(10, 'wearesellers');
+    const repeatedLinks = Array.from(
+      { length: 20 },
+      (_, index) => `https://example.com/repeat/${index}`,
+    );
+    const fallback = [
+      ...repeatedLinks.map((url, index) => ({
+        ...makeScoredArticles(1, 'amz123')[0],
+        url,
+        canonical_url: url,
+        source: 'amz123',
+        title: `Repeated ${index}`,
+      })),
+      ...Array.from({ length: 20 }, (_, index) => {
+        const url = `https://example.com/newpool/${index}`;
+        return {
+          ...makeScoredArticles(1, 'reddit_fba')[0],
+          url,
+          canonical_url: url,
+          source: 'reddit_fba',
+          title: `Fresh fallback ${index}`,
+        };
+      }),
+    ];
+    const recentDigestHtml = repeatedLinks
+      .map(
+        (url) =>
+          `<a href="${url}" style="font-size:15px;font-weight:600;color:#1a365d;text-decoration:none;line-height:1.5;" target="_blank">old</a>`,
+      )
+      .join('\n');
+
+    const { runPipeline, mocks } = await loadMainWithMocks({
+      processArticles: vi.fn().mockResolvedValue(fresh),
+      getRecentDigests: vi.fn().mockResolvedValue([
+        {
+          date: YESTERDAY,
+          email_html: recentDigestHtml,
+        },
+      ]),
+      getFallbackArticlesForDigest: vi.fn().mockResolvedValue(fallback),
+    });
+
+    await runPipeline();
+
+    const generatedArticles = (mocks.generateEmailHtml.mock.calls[0]?.[0] as Article[]) ?? [];
+    const generatedUrls = new Set(generatedArticles.map((item) => item.url));
+    expect(generatedArticles.length).toBe(30);
+    expect(mocks.getRecentDigests).toHaveBeenCalledTimes(1);
+    for (const repeatedUrl of repeatedLinks) {
+      expect(generatedUrls.has(repeatedUrl)).toBe(false);
+    }
   });
 
   it('attempts repair run when an existing digest is below minimum threshold', async () => {

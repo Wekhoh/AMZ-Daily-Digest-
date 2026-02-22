@@ -16,6 +16,7 @@ import {
   markRunFailed,
   markRunSkipped,
   getRecentRuns,
+  getRecentDigests,
   getActiveSubscribers,
   saveDigestDeliveries,
 } from './store.js';
@@ -29,6 +30,8 @@ import { AI } from './config.js';
 // ---------------------------------------------------------------------------
 
 const WEARESELLERS_MIN_ARTICLES = 5;
+const RECENT_DIGEST_EXCLUDE_DAYS_DEFAULT = 2;
+const DIGEST_LINK_REGEX = /<a\s+href="([^"]+)"/gi;
 
 function today(): string {
   return new Date().toISOString().split('T')[0];
@@ -82,39 +85,122 @@ function dedupeByUrl(articles: Article[]): Article[] {
   return deduped;
 }
 
+function resolveRecentDigestExclusionDays(
+  override = process.env.AMZ_RECENT_DIGEST_EXCLUDE_DAYS,
+): number {
+  if (!override) {
+    return RECENT_DIGEST_EXCLUDE_DAYS_DEFAULT;
+  }
+
+  const parsed = Number.parseInt(override, 10);
+  if (!Number.isFinite(parsed) || parsed < 0) {
+    console.warn(
+      `[Main] Invalid AMZ_RECENT_DIGEST_EXCLUDE_DAYS=${override}; ` +
+      `fallback to ${RECENT_DIGEST_EXCLUDE_DAYS_DEFAULT}`,
+    );
+    return RECENT_DIGEST_EXCLUDE_DAYS_DEFAULT;
+  }
+
+  return parsed;
+}
+
+function extractUrlsFromDigestHtml(html: string): string[] {
+  const urls = new Set<string>();
+  let match: RegExpExecArray | null = DIGEST_LINK_REGEX.exec(html);
+  while (match) {
+    const rawUrl = match[1];
+    const canonical = canonicalizeUrl(rawUrl) ?? rawUrl;
+    urls.add(canonical);
+    match = DIGEST_LINK_REGEX.exec(html);
+  }
+  DIGEST_LINK_REGEX.lastIndex = 0;
+  return [...urls];
+}
+
+async function getRecentDigestExclusionUrls(currentDate: string): Promise<string[]> {
+  const cooldownDays = resolveRecentDigestExclusionDays();
+  if (cooldownDays <= 0) {
+    return [];
+  }
+
+  const current = new Date(`${currentDate}T00:00:00.000Z`);
+  if (Number.isNaN(current.getTime())) {
+    return [];
+  }
+
+  const cutoff = new Date(current);
+  cutoff.setUTCDate(cutoff.getUTCDate() - cooldownDays);
+  const cutoffDate = cutoff.toISOString().slice(0, 10);
+
+  const history = await getRecentDigests(Math.max(14, cooldownDays + 7));
+  const urls = new Set<string>();
+
+  for (const digest of history) {
+    if (digest.date >= currentDate || digest.date < cutoffDate) {
+      continue;
+    }
+    if (!digest.email_html) {
+      continue;
+    }
+
+    for (const url of extractUrlsFromDigestHtml(digest.email_html)) {
+      urls.add(url);
+    }
+  }
+
+  return [...urls];
+}
+
 async function ensureDigestWindow(
   date: string,
   selected: Article[],
+  recentDigestExcludeUrls: string[],
 ): Promise<Article[]> {
   const initial = dedupeByUrl(selected).slice(0, AI.MAX_ARTICLES);
   if (initial.length >= AI.MIN_ARTICLES) {
     return initial;
   }
 
+  const excludeUrls = new Set<string>([
+    ...initial.map((item) => item.canonical_url ?? item.url),
+    ...recentDigestExcludeUrls,
+  ]);
   const needed = AI.MIN_ARTICLES - initial.length;
   const fallbackLimit = Math.min(AI.MAX_ARTICLES * 3, needed * 4);
   const fallbackPool = await getFallbackArticlesForDigest({
     limit: fallbackLimit,
     minScore: AI.RELAXED_MIN_SCORE,
-    excludeUrls: initial.map((item) => item.canonical_url ?? item.url),
+    excludeUrls: [...excludeUrls],
   });
+  const filteredFallback = fallbackPool.filter((article) => {
+    const key = article.canonical_url ?? article.url;
+    return !excludeUrls.has(key);
+  });
+  const filteredOutCount = fallbackPool.length - filteredFallback.length;
 
   const merged = dedupeByUrl(
-    [...initial, ...fallbackPool].sort((a, b) => (b.score ?? 0) - (a.score ?? 0)),
+    [...initial, ...filteredFallback].sort((a, b) => (b.score ?? 0) - (a.score ?? 0)),
   ).slice(0, AI.MAX_ARTICLES);
 
   if (merged.length < AI.MIN_ARTICLES) {
     const message =
       `[Main] Final digest for ${date} below minimum: ${merged.length}/${AI.MIN_ARTICLES} ` +
-      `(fallback candidates=${fallbackPool.length})`;
+      `(fallback candidates=${filteredFallback.length})`;
     await sendAlertEmail(`${message}\n请检查采集源稳定性、去重与筛选阈值。`);
     throw new Error(`${message} — aborting send`);
+  }
+
+  if (filteredOutCount > 0) {
+    console.log(
+      `[Main] Removed ${filteredOutCount} fallback articles already delivered in recent digests ` +
+      `(cooldown pool size=${recentDigestExcludeUrls.length})`,
+    );
   }
 
   if (merged.length > initial.length) {
     console.log(
       `[Main] Topped up digest with ${merged.length - initial.length} fallback articles ` +
-      `(from history pool ${fallbackPool.length})`,
+      `(from history pool ${filteredFallback.length})`,
     );
   }
 
@@ -328,7 +414,12 @@ export async function runPipeline(): Promise<void> {
       return;
     }
 
-    const finalArticles = await ensureDigestWindow(date, processed);
+    const recentDigestExcludeUrls = await getRecentDigestExclusionUrls(date);
+    const finalArticles = await ensureDigestWindow(
+      date,
+      processed,
+      recentDigestExcludeUrls,
+    );
     sentArticleCount = finalArticles.length;
 
     // ------------------------------------------------------------------
