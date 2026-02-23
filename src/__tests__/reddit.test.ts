@@ -10,6 +10,15 @@ function createJsonResponse(payload: unknown, status = 200): Response {
   } as unknown as Response;
 }
 
+function createTextResponse(payload: string, status = 200): Response {
+  return {
+    ok: status >= 200 && status < 300,
+    status,
+    statusText: status === 200 ? 'OK' : 'ERR',
+    text: async () => payload,
+  } as unknown as Response;
+}
+
 afterEach(() => {
   vi.unstubAllGlobals();
   vi.restoreAllMocks();
@@ -149,8 +158,8 @@ describe('collectReddit', () => {
 
     const articles = await collectReddit();
 
-    // FulfillmentByAmazon fails 3 attempts, AmazonSeller succeeds 1 attempt.
-    expect(fetchMock).toHaveBeenCalledTimes(4);
+    // FulfillmentByAmazon fails across endpoint fallbacks and retries, AmazonSeller still succeeds.
+    expect(fetchMock.mock.calls.length).toBeGreaterThanOrEqual(4);
     expect(timeoutSpy).toHaveBeenCalled();
     expect(articles).toHaveLength(1);
     expect(articles[0].source).toBe('reddit_seller');
@@ -193,5 +202,49 @@ describe('collectReddit', () => {
     expect(fetchMock).toHaveBeenCalled();
     expect(articles.length).toBeGreaterThan(0);
     expect(articles[0].title).toBe('Need listing advice');
+  });
+
+  it('falls back to subreddit atom feed when JSON endpoints are blocked', async () => {
+    const atomFeed = `<?xml version="1.0" encoding="UTF-8"?>
+      <feed xmlns="http://www.w3.org/2005/Atom">
+        <entry>
+          <title>Fallback Reddit Post</title>
+          <link href="https://www.reddit.com/r/FulfillmentByAmazon/comments/abc/fallback/" />
+          <content type="html">&lt;div&gt;Fallback body from RSS&lt;/div&gt;</content>
+          <published>2026-02-23T08:00:00+00:00</published>
+        </entry>
+      </feed>`;
+
+    const fetchMock = vi.fn(async (input: string | URL) => {
+      const url = String(input);
+
+      if (url.includes('/hot.json') || url.includes('api.reddit.com/r/')) {
+        return createJsonResponse({ error: 'blocked' }, 403);
+      }
+
+      if (url.includes('/hot/.rss')) {
+        return createTextResponse(atomFeed, 200);
+      }
+
+      return createJsonResponse({ data: { children: [] } });
+    });
+
+    vi.stubGlobal('fetch', fetchMock as unknown as typeof fetch);
+    const timeoutSpy = vi
+      .spyOn(globalThis, 'setTimeout')
+      .mockImplementation((handler: TimerHandler) => {
+        if (typeof handler === 'function') {
+          handler();
+        }
+        return 0 as unknown as ReturnType<typeof setTimeout>;
+      });
+
+    const articles = await collectReddit();
+
+    expect(timeoutSpy).toHaveBeenCalled();
+    expect(
+      fetchMock.mock.calls.some((call) => String(call[0]).includes('/hot/.rss')),
+    ).toBe(true);
+    expect(articles.some((article) => article.title === 'Fallback Reddit Post')).toBe(true);
   });
 });

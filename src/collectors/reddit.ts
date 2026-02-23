@@ -1,5 +1,6 @@
 import type { Article } from '../store.js';
 import { COLLECTORS } from '../config.js';
+import { isSafeUrl } from '../utils.js';
 
 const SUBREDDITS = [
   { name: 'FulfillmentByAmazon', source: 'reddit_fba' },
@@ -7,6 +8,23 @@ const SUBREDDITS = [
 ] as const;
 
 const USER_AGENT = 'amz-daily-digest/1.0 (Node.js; educational project)';
+const ALLOWED_REDDIT_DOMAINS = ['reddit.com', 'www.reddit.com', 'old.reddit.com'];
+
+const REDDIT_JSON_ENDPOINT_BUILDERS = [
+  (subreddit: string) =>
+    `https://www.reddit.com/r/${subreddit}/hot.json?limit=${COLLECTORS.REDDIT_POSTS_PER_SUB}`,
+  (subreddit: string) =>
+    `https://api.reddit.com/r/${subreddit}/hot?limit=${COLLECTORS.REDDIT_POSTS_PER_SUB}`,
+  (subreddit: string) =>
+    `https://old.reddit.com/r/${subreddit}/hot.json?limit=${COLLECTORS.REDDIT_POSTS_PER_SUB}`,
+] as const;
+
+const REDDIT_ATOM_ENDPOINT_BUILDERS = [
+  (subreddit: string) =>
+    `https://www.reddit.com/r/${subreddit}/hot/.rss?limit=${COLLECTORS.REDDIT_POSTS_PER_SUB}`,
+  (subreddit: string) =>
+    `https://old.reddit.com/r/${subreddit}/hot/.rss?limit=${COLLECTORS.REDDIT_POSTS_PER_SUB}`,
+] as const;
 
 interface RedditPost {
   data: {
@@ -38,6 +56,99 @@ function isRedditListing(data: unknown): data is RedditListing {
 
 function normalizeText(text: string): string {
   return text.replace(/\s+/g, ' ').trim();
+}
+
+function stripCdata(text: string): string {
+  const cdataMatch = text.match(/^<!\[CDATA\[([\s\S]*?)\]\]>$/);
+  return cdataMatch ? cdataMatch[1] : text;
+}
+
+function decodeHtmlEntities(text: string): string {
+  const namedEntityMap: Record<string, string> = {
+    amp: '&',
+    lt: '<',
+    gt: '>',
+    quot: '"',
+    apos: '\'',
+    nbsp: ' ',
+  };
+
+  return text
+    .replace(/&#(\d+);/g, (_match, dec: string) => {
+      const code = Number.parseInt(dec, 10);
+      return Number.isFinite(code) ? String.fromCodePoint(code) : '';
+    })
+    .replace(/&#x([0-9a-fA-F]+);/g, (_match, hex: string) => {
+      const code = Number.parseInt(hex, 16);
+      return Number.isFinite(code) ? String.fromCodePoint(code) : '';
+    })
+    .replace(/&([a-zA-Z]+);/g, (match, named: string) => namedEntityMap[named] ?? match);
+}
+
+function extractTagValue(block: string, tagName: string): string | undefined {
+  const matcher = new RegExp(`<${tagName}(?:\\s+[^>]*)?>([\\s\\S]*?)<\\/${tagName}>`, 'i');
+  const match = block.match(matcher);
+  if (!match) return undefined;
+  return stripCdata(match[1]).trim();
+}
+
+function extractLinkHref(entry: string): string | undefined {
+  const match = entry.match(/<link\b[^>]*\bhref=(?:"([^"]+)"|'([^']+)')[^>]*\/?>/i);
+  const href = match?.[1] ?? match?.[2];
+  if (!href) return undefined;
+  return decodeHtmlEntities(stripCdata(href)).trim();
+}
+
+function buildFallbackContent(contentHtml: string): string | undefined {
+  const decoded = decodeHtmlEntities(contentHtml);
+  const plainText = normalizeText(
+    decoded
+      .replace(/<!--[\s\S]*?-->/g, ' ')
+      .replace(/<[^>]*>/g, ' ')
+      .replace(/\[(?:link|comments)\]/gi, ' ')
+      .replace(/submitted by/gi, ' '),
+  );
+  return plainText ? plainText.slice(0, COLLECTORS.REDDIT_CONTENT_LIMIT) : undefined;
+}
+
+function toIsoOrUndefined(value?: string): string | undefined {
+  if (!value) return undefined;
+  const date = new Date(value);
+  return Number.isNaN(date.getTime()) ? undefined : date.toISOString();
+}
+
+function parseAtomFeed(xml: string): Array<{
+  title: string;
+  link: string;
+  content?: string;
+  published_at?: string;
+}> {
+  const entryMatches = xml.match(/<entry\b[\s\S]*?<\/entry>/gi) ?? [];
+  const articles: Array<{
+    title: string;
+    link: string;
+    content?: string;
+    published_at?: string;
+  }> = [];
+
+  for (const entry of entryMatches) {
+    const title = extractTagValue(entry, 'title');
+    const link = extractLinkHref(entry);
+    const contentRaw = extractTagValue(entry, 'content') ?? '';
+    const published =
+      extractTagValue(entry, 'published') ?? extractTagValue(entry, 'updated');
+
+    if (!title || !link) continue;
+
+    articles.push({
+      title: decodeHtmlEntities(title),
+      link,
+      content: buildFallbackContent(contentRaw),
+      published_at: toIsoOrUndefined(published),
+    });
+  }
+
+  return articles;
 }
 
 function parseTopComments(payload: unknown): string[] {
@@ -156,6 +267,20 @@ export async function collectReddit(): Promise<Article[]> {
       }
     }
     if (lastErr) {
+      console.warn(`[Reddit] r/${sub.name} JSON endpoints unavailable, trying Atom fallback...`);
+      try {
+        const fallbackArticles = await fetchSubredditViaAtom(sub.name, sub.source);
+        allArticles.push(...fallbackArticles);
+        lastErr = undefined;
+        console.log(
+          `[Reddit] r/${sub.name} Atom fallback recovered ${fallbackArticles.length} posts`,
+        );
+      } catch (fallbackErr) {
+        const msg = fallbackErr instanceof Error ? fallbackErr.message : String(fallbackErr);
+        console.warn(`[Reddit] r/${sub.name} Atom fallback failed: ${msg}`);
+      }
+    }
+    if (lastErr) {
       console.warn(
         `[Reddit] r/${sub.name} failed after ${COLLECTORS.REDDIT_MAX_RETRIES + 1} attempts, skipping`,
       );
@@ -170,10 +295,40 @@ async function fetchSubreddit(
   subreddit: string,
   source: string,
 ): Promise<Article[]> {
-  const url = `https://www.reddit.com/r/${subreddit}/hot.json?limit=${COLLECTORS.REDDIT_POSTS_PER_SUB}`;
-
   console.log(`[Reddit] Fetching r/${subreddit}...`);
 
+  const endpointErrors: string[] = [];
+  let hadZeroResult = false;
+
+  for (const buildUrl of REDDIT_JSON_ENDPOINT_BUILDERS) {
+    const url = buildUrl(subreddit);
+    try {
+      const articles = await fetchSubredditFromJsonEndpoint(url, source, subreddit);
+      if (articles.length > 0) {
+        return articles;
+      }
+      hadZeroResult = true;
+      endpointErrors.push(`${url} -> zero posts`);
+      console.warn(`[Reddit] JSON endpoint returned 0 posts (${url}), trying next endpoint`);
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err);
+      endpointErrors.push(`${url} -> ${msg}`);
+      console.warn(`[Reddit] JSON endpoint failed (${url}): ${msg}`);
+    }
+  }
+
+  if (hadZeroResult) {
+    throw new Error(`JSON endpoints returned zero posts for r/${subreddit}`);
+  }
+
+  throw new Error(`All JSON endpoints failed for r/${subreddit}: ${endpointErrors.join(' | ')}`);
+}
+
+async function fetchSubredditFromJsonEndpoint(
+  url: string,
+  source: string,
+  subreddit: string,
+): Promise<Article[]> {
   const response = await fetch(url, {
     headers: {
       'User-Agent': USER_AGENT,
@@ -220,4 +375,49 @@ async function fetchSubreddit(
 
   console.log(`[Reddit] Got ${articles.length} posts from r/${subreddit}`);
   return articles;
+}
+
+async function fetchSubredditViaAtom(
+  subreddit: string,
+  source: string,
+): Promise<Article[]> {
+  const endpointErrors: string[] = [];
+
+  for (const buildUrl of REDDIT_ATOM_ENDPOINT_BUILDERS) {
+    const atomUrl = buildUrl(subreddit);
+    try {
+      const response = await fetch(atomUrl, {
+        headers: {
+          'User-Agent': USER_AGENT,
+          Accept: 'application/atom+xml, application/xml;q=0.9, */*;q=0.1',
+        },
+        signal: AbortSignal.timeout(COLLECTORS.REDDIT_TIMEOUT_MS),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
+
+      const xml = await response.text();
+      const entries = parseAtomFeed(xml).slice(0, COLLECTORS.REDDIT_POSTS_PER_SUB);
+
+      const articles: Article[] = entries
+        .filter((entry) => isSafeUrl(entry.link, ALLOWED_REDDIT_DOMAINS))
+        .map((entry) => ({
+          source,
+          url: entry.link,
+          title: entry.title,
+          content: entry.content,
+          published_at: entry.published_at,
+        }));
+
+      return articles;
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err);
+      endpointErrors.push(`${atomUrl} -> ${msg}`);
+      console.warn(`[Reddit] Atom endpoint failed (${atomUrl}): ${msg}`);
+    }
+  }
+
+  throw new Error(`All Atom endpoints failed for r/${subreddit}: ${endpointErrors.join(' | ')}`);
 }
