@@ -70,6 +70,14 @@ const BASE_ARTICLE: Article = {
   url: 'https://example.com/post?utm_source=test',
   title: 'Sample title',
 };
+
+function makeRawArticle(source: string, suffix: string): Article {
+  return {
+    source,
+    url: `https://example.com/raw/${source}/${suffix}`,
+    title: `Raw ${source} ${suffix}`,
+  };
+}
 const TODAY = new Date().toISOString().slice(0, 10);
 const YESTERDAY = new Date(Date.now() - 24 * 60 * 60 * 1_000)
   .toISOString()
@@ -222,6 +230,57 @@ describe('runPipeline orchestration', () => {
     );
     expect(mocks.markRunSent).toHaveBeenCalledWith('run-test-id', 30);
     expect(mocks.markRunFailed).not.toHaveBeenCalled();
+  });
+
+  it('preserves at least one item per active source group when fallback can provide them', async () => {
+    const strictOnlyAmz = makePublishedArticles(35, {
+      source: 'amz123',
+      score: 8,
+      startUrl: 'https://example.com/strict-amz',
+      publishedAt: TODAY_ISO,
+    });
+    const sourceRecoveryFallback = [
+      makePublishedArticles(1, {
+        source: 'wearesellers',
+        score: 7,
+        startUrl: 'https://example.com/recover-wearesellers',
+        publishedAt: TODAY_ISO,
+      })[0],
+      makePublishedArticles(1, {
+        source: 'reddit_fba',
+        score: 7,
+        startUrl: 'https://example.com/recover-reddit',
+        publishedAt: TODAY_ISO,
+      })[0],
+      makePublishedArticles(1, {
+        source: 'sellercentral',
+        score: 7,
+        startUrl: 'https://example.com/recover-sellercentral',
+        publishedAt: TODAY_ISO,
+      })[0],
+    ];
+
+    const { runPipeline, mocks } = await loadMainWithMocks({
+      collectWeAreSellers: vi.fn().mockResolvedValue([makeRawArticle('wearesellers', '1')]),
+      collectRSS: vi.fn().mockResolvedValue([makeRawArticle('amz123', '1')]),
+      collectReddit: vi.fn().mockResolvedValue([makeRawArticle('reddit_fba', '1')]),
+      collectSellerCentral: vi.fn().mockResolvedValue([makeRawArticle('sellercentral', '1')]),
+      processArticles: vi.fn().mockResolvedValue(strictOnlyAmz),
+      getFallbackArticlesForDigest: vi.fn().mockResolvedValue(sourceRecoveryFallback),
+    });
+
+    await runPipeline();
+
+    const generatedArticles = (mocks.generateEmailHtml.mock.calls[0]?.[0] as Article[]) ?? [];
+    const sources = new Set(generatedArticles.map((item) => item.source));
+    expect(sources.has('wearesellers')).toBe(true);
+    expect(sources.has('amz123')).toBe(true);
+    expect(sources.has('sellercentral')).toBe(true);
+    expect(
+      generatedArticles.some(
+        (item) => item.source === 'reddit_fba' || item.source === 'reddit_seller',
+      ),
+    ).toBe(true);
   });
 
   it('sends source-gap alert tag when key sources are missing but pipeline continues', async () => {

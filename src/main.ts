@@ -32,6 +32,31 @@ import { AI, SOURCE_HEALTH } from './config.js';
 const RECENT_DIGEST_EXCLUDE_DAYS_DEFAULT = 2;
 const DIGEST_LINK_REGEX = /<a\s+href="([^"]+)"/gi;
 
+interface SourceGroupTarget {
+  key: 'wearesellers' | 'amz123' | 'reddit' | 'sellercentral';
+  label: string;
+  sources: string[];
+  min: number;
+}
+
+const SOURCE_GROUP_DEFINITIONS: ReadonlyArray<{
+  key: SourceGroupTarget['key'];
+  label: string;
+  sources: string[];
+}> = [
+  { key: 'wearesellers', label: '知无不言', sources: ['wearesellers'] },
+  { key: 'amz123', label: 'AMZ123', sources: ['amz123'] },
+  { key: 'reddit', label: 'Reddit', sources: ['reddit_fba', 'reddit_seller'] },
+  { key: 'sellercentral', label: 'SellerCentral', sources: ['sellercentral'] },
+] as const;
+
+interface SourceGroupCounts {
+  wearesellers: number;
+  amz123: number;
+  reddit: number;
+  sellercentral: number;
+}
+
 function today(): string {
   return new Date().toISOString().split('T')[0];
 }
@@ -82,6 +107,121 @@ function dedupeByUrl(articles: Article[]): Article[] {
   }
 
   return deduped;
+}
+
+function getArticleKey(article: Article): string {
+  return article.canonical_url ?? article.url;
+}
+
+function countArticlesForSources(articles: Article[], sources: string[]): number {
+  if (sources.length === 0) {
+    return 0;
+  }
+  const sourceSet = new Set(sources);
+  return articles.filter((item) => sourceSet.has(item.source)).length;
+}
+
+function evaluateSourceGroupCoverage(
+  articles: Article[],
+  targets: SourceGroupTarget[],
+): { missingTags: string[]; missingSlots: number } {
+  if (targets.length === 0) {
+    return { missingTags: [], missingSlots: 0 };
+  }
+
+  const missingTags: string[] = [];
+  let missingSlots = 0;
+
+  for (const target of targets) {
+    const count = countArticlesForSources(articles, target.sources);
+    if (count >= target.min) {
+      continue;
+    }
+    missingTags.push(`${target.label}=${count}/${target.min}`);
+    missingSlots += target.min - count;
+  }
+
+  return { missingTags, missingSlots };
+}
+
+function applySourceGroupTargets(
+  rankedArticles: Article[],
+  targets: SourceGroupTarget[],
+  limit: number,
+): { articles: Article[]; missingTags: string[] } {
+  const ranked = dedupeByUrl(rankedArticles);
+  if (targets.length === 0) {
+    return { articles: ranked.slice(0, limit), missingTags: [] };
+  }
+
+  const required: Article[] = [];
+  const requiredKeys = new Set<string>();
+
+  for (const target of targets) {
+    let added = 0;
+    for (const article of ranked) {
+      if (added >= target.min) {
+        break;
+      }
+      if (!target.sources.includes(article.source)) {
+        continue;
+      }
+      const key = getArticleKey(article);
+      if (requiredKeys.has(key)) {
+        continue;
+      }
+      required.push(article);
+      requiredKeys.add(key);
+      added += 1;
+    }
+  }
+
+  const rankIndex = new Map(ranked.map((item, index) => [getArticleKey(item), index]));
+  const requiredSorted = [...required].sort(
+    (a, b) => (rankIndex.get(getArticleKey(a)) ?? Number.MAX_SAFE_INTEGER) -
+      (rankIndex.get(getArticleKey(b)) ?? Number.MAX_SAFE_INTEGER),
+  );
+
+  const selected: Article[] = [];
+  const selectedKeys = new Set<string>();
+  for (const article of requiredSorted) {
+    if (selected.length >= limit) break;
+    const key = getArticleKey(article);
+    if (selectedKeys.has(key)) continue;
+    selected.push(article);
+    selectedKeys.add(key);
+  }
+
+  for (const article of ranked) {
+    if (selected.length >= limit) {
+      break;
+    }
+    const key = getArticleKey(article);
+    if (selectedKeys.has(key)) {
+      continue;
+    }
+    selected.push(article);
+    selectedKeys.add(key);
+  }
+
+  const coverage = evaluateSourceGroupCoverage(selected, targets);
+  return { articles: selected, missingTags: coverage.missingTags };
+}
+
+function buildActiveSourceGroupTargets(counts: SourceGroupCounts): SourceGroupTarget[] {
+  const allTargets: SourceGroupTarget[] = SOURCE_GROUP_DEFINITIONS.map((group) => ({
+    key: group.key,
+    label: group.label,
+    sources: [...group.sources],
+    min: 1,
+  }));
+
+  return allTargets.filter((target) => {
+    if (target.key === 'reddit') {
+      return counts.reddit > 0;
+    }
+    return counts[target.key] > 0;
+  });
 }
 
 function parsePublishedAt(article: Article): Date | null {
@@ -239,6 +379,7 @@ interface DigestWindowOptions {
   preferredSources?: string[];
   preferredMin?: number;
   fallbackMultiplier?: number;
+  sourceGroupTargets?: SourceGroupTarget[];
 }
 
 async function ensureDigestWindow(
@@ -250,6 +391,7 @@ async function ensureDigestWindow(
   const preferredSources = options.preferredSources ?? [];
   const preferredMin = options.preferredMin ?? 0;
   const fallbackMultiplier = Math.max(1, options.fallbackMultiplier ?? 4);
+  const sourceGroupTargets = options.sourceGroupTargets ?? [];
   const candidateLimit = preferredSources.length > 0
     ? AI.MAX_ARTICLES * 2
     : AI.MAX_ARTICLES;
@@ -265,27 +407,43 @@ async function ensureDigestWindow(
     candidateLimit,
   )
     .slice(0, candidateLimit);
-  if (strictInitialPrioritized.length >= AI.MIN_ARTICLES) {
-    return strictInitialPrioritized.slice(0, AI.MAX_ARTICLES);
+  const strictInitialPreferred = prioritizePreferredSources(
+    strictInitialPrioritized,
+    preferredSources,
+    preferredMin,
+  ).slice(0, AI.MAX_ARTICLES);
+  const strictInitialCoverage = evaluateSourceGroupCoverage(
+    strictInitialPreferred,
+    sourceGroupTargets,
+  );
+  if (
+    strictInitialPreferred.length >= AI.MIN_ARTICLES &&
+    strictInitialCoverage.missingSlots === 0
+  ) {
+    return strictInitialPreferred.slice(0, AI.MAX_ARTICLES);
   }
 
   const excludeUrls = new Set<string>([
-    ...dedupedSelected.map((item) => item.canonical_url ?? item.url),
+    ...dedupedSelected.map((item) => getArticleKey(item)),
     ...recentDigestExcludeUrls,
   ]);
-  const needed = AI.MIN_ARTICLES - strictInitialPrioritized.length;
-  const fallbackLimit = Math.min(AI.MAX_ARTICLES * 6, needed * fallbackMultiplier);
+  const minCountNeeded = Math.max(0, AI.MIN_ARTICLES - strictInitialPrioritized.length);
+  const needed = Math.max(minCountNeeded, strictInitialCoverage.missingSlots);
+  const fallbackLimit = Math.min(
+    AI.MAX_ARTICLES * 6,
+    Math.max(needed * fallbackMultiplier, AI.BATCH_SIZE * 2),
+  );
   const strictFallbackPool = await getFallbackArticlesForDigest({
     limit: fallbackLimit,
     minScore: AI.MIN_SCORE,
     excludeUrls: [...excludeUrls],
   });
   const strictFallback = strictFallbackPool.filter((article) => {
-    const key = article.canonical_url ?? article.url;
+    const key = getArticleKey(article);
     return !excludeUrls.has(key);
   });
   for (const article of strictFallback) {
-    excludeUrls.add(article.canonical_url ?? article.url);
+    excludeUrls.add(getArticleKey(article));
   }
 
   const strictMerged = prioritizeFreshArticles(
@@ -306,7 +464,7 @@ async function ensureDigestWindow(
     });
     relaxedFallbackPoolSize = relaxedFallbackPool.length;
     relaxedFallback = relaxedFallbackPool.filter((article) => {
-      const key = article.canonical_url ?? article.url;
+      const key = getArticleKey(article);
       return !excludeUrls.has(key);
     });
 
@@ -324,16 +482,29 @@ async function ensureDigestWindow(
     date,
     candidateLimit,
   ).slice(0, candidateLimit);
-  const strictOnlyMerged = prioritizePreferredSources(
+  const strictPreferred = prioritizePreferredSources(
     strictMerged,
     preferredSources,
     preferredMin,
-  ).slice(0, AI.MAX_ARTICLES);
-  const merged = prioritizePreferredSources(
+  ).slice(0, candidateLimit);
+  const strictCoverageResult = applySourceGroupTargets(
+    strictPreferred,
+    sourceGroupTargets,
+    AI.MAX_ARTICLES,
+  );
+  const strictOnlyMerged = strictCoverageResult.articles;
+
+  const mergedPreferred = prioritizePreferredSources(
     mergedBase,
     preferredSources,
     preferredMin,
-  ).slice(0, AI.MAX_ARTICLES);
+  ).slice(0, candidateLimit);
+  const mergedCoverageResult = applySourceGroupTargets(
+    mergedPreferred,
+    sourceGroupTargets,
+    AI.MAX_ARTICLES,
+  );
+  const merged = mergedCoverageResult.articles;
   if (preferredSources.length > 0) {
     const preferredSet = new Set(preferredSources);
     const availablePreferred = mergedBase.filter((item) => preferredSet.has(item.source)).length;
@@ -359,6 +530,23 @@ async function ensureDigestWindow(
       merged.length < AI.MIN_ARTICLES ||
       relaxedNeededForMinimum > AI.MAX_RELAXED_TOPUP_FOR_FULL
     );
+
+  const chosenCoverageMissing = shouldUseLowVolumeMode
+    ? strictCoverageResult.missingTags
+    : mergedCoverageResult.missingTags;
+  if (chosenCoverageMissing.length > 0) {
+    const coverageAlert =
+      `[SOURCE_COVERAGE_GAP] ${date} 分源最低配额未满足: ${chosenCoverageMissing.join(', ')}`;
+    console.warn(`[Main] ${coverageAlert}`);
+    try {
+      await sendAlertEmail(
+        `${coverageAlert}\n` +
+        'Pipeline 已继续执行（不中断）。请检查来源当日可用内容与来源健康状态。',
+      );
+    } catch (alertErr) {
+      console.error('[Main] Failed to send source-coverage alert email:', alertErr);
+    }
+  }
 
   if (shouldUseLowVolumeMode) {
     const reason = merged.length < AI.MIN_ARTICLES
@@ -658,6 +846,12 @@ export async function runPipeline(): Promise<void> {
     const strictQualityCount = processed.filter(
       (item) => (item.score ?? 0) >= AI.MIN_SCORE,
     ).length;
+    const sourceGroupTargets = buildActiveSourceGroupTargets({
+      wearesellers: wearesellersArticles.length,
+      amz123: rssArticles.length,
+      reddit: redditArticles.length,
+      sellercentral: sellerCentralArticles.length,
+    });
     const shouldBoostReddit =
       wearesellersArticles.length < SOURCE_HEALTH.WEARESELLERS_MIN_ARTICLES &&
       strictQualityCount < AI.MIN_ARTICLES;
@@ -673,11 +867,12 @@ export async function runPipeline(): Promise<void> {
       recentDigestExcludeUrls,
       shouldBoostReddit
         ? {
-          preferredSources: ['reddit_fba', 'reddit_seller'],
-          preferredMin: SOURCE_HEALTH.REDDIT_BOOST_TARGET,
-          fallbackMultiplier: SOURCE_HEALTH.REDDIT_BOOST_FALLBACK_MULTIPLIER,
-        }
-        : undefined,
+            preferredSources: ['reddit_fba', 'reddit_seller'],
+            preferredMin: SOURCE_HEALTH.REDDIT_BOOST_TARGET,
+            fallbackMultiplier: SOURCE_HEALTH.REDDIT_BOOST_FALLBACK_MULTIPLIER,
+            sourceGroupTargets,
+          }
+        : { sourceGroupTargets },
     );
     sentArticleCount = finalArticles.length;
 
