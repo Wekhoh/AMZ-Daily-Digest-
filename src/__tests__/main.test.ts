@@ -463,6 +463,51 @@ describe('runPipeline orchestration', () => {
     expect(generatedArticles.every((item) => (item.score ?? 0) >= 6)).toBe(true);
   });
 
+  it('boosts reddit items when wearesellers is weak and strict pool is below minimum', async () => {
+    const weakWearesellers = makePublishedArticles(2, {
+      source: 'wearesellers',
+      score: 6,
+      startUrl: 'https://example.com/ws-weak',
+      publishedAt: YESTERDAY_ISO,
+    });
+    const strictBase = makePublishedArticles(12, {
+      source: 'amz123',
+      score: 6,
+      startUrl: 'https://example.com/base',
+      publishedAt: YESTERDAY_ISO,
+    });
+    const amzFallback = makePublishedArticles(40, {
+      source: 'amz123',
+      score: 6,
+      startUrl: 'https://example.com/fallback-amz',
+      publishedAt: YESTERDAY_ISO,
+    });
+    const redditFallback = makePublishedArticles(10, {
+      source: 'reddit_fba',
+      score: 6,
+      startUrl: 'https://example.com/fallback-reddit',
+      publishedAt: YESTERDAY_ISO,
+    });
+
+    const { runPipeline, mocks } = await loadMainWithMocks({
+      collectWeAreSellers: vi.fn().mockResolvedValue(weakWearesellers),
+      processArticles: vi.fn().mockResolvedValue(strictBase),
+      getFallbackArticlesForDigest: vi.fn().mockResolvedValue([
+        ...amzFallback,
+        ...redditFallback,
+      ]),
+    });
+
+    await runPipeline();
+
+    const generatedArticles = (mocks.generateEmailHtml.mock.calls[0]?.[0] as Article[]) ?? [];
+    const redditCount = generatedArticles.filter((item) =>
+      item.source === 'reddit_fba' || item.source === 'reddit_seller',
+    ).length;
+    expect(generatedArticles.length).toBeGreaterThanOrEqual(30);
+    expect(redditCount).toBeGreaterThanOrEqual(8);
+  });
+
   it('attempts repair run when an existing digest is below minimum threshold', async () => {
     const { runPipeline, mocks } = await loadMainWithMocks({
       getDigestByDate: vi.fn().mockResolvedValue({

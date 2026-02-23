@@ -112,8 +112,12 @@ function compareNewestFirst(a: Article, b: Article): number {
   return (b.score ?? 0) - (a.score ?? 0);
 }
 
-function prioritizeFreshArticles(articles: Article[], date: string): Article[] {
-  const deduped = dedupeByUrl(articles).slice(0, AI.MAX_ARTICLES * 2);
+function prioritizeFreshArticles(
+  articles: Article[],
+  date: string,
+  limit: number = AI.MAX_ARTICLES,
+): Article[] {
+  const deduped = dedupeByUrl(articles).slice(0, limit * 2);
   const fresh = deduped
     .filter((item) => isPublishedOnDigestDate(item, date))
     .sort(compareNewestFirst);
@@ -121,7 +125,7 @@ function prioritizeFreshArticles(articles: Article[], date: string): Article[] {
     .filter((item) => !isPublishedOnDigestDate(item, date))
     .sort(compareNewestFirst);
 
-  const desiredFresh = Math.min(AI.FRESH_TARGET_MIN, fresh.length, AI.MAX_ARTICLES);
+  const desiredFresh = Math.min(AI.FRESH_TARGET_MIN, fresh.length, limit);
   const selected: Article[] = [];
   const seen = new Set<string>();
 
@@ -133,7 +137,7 @@ function prioritizeFreshArticles(articles: Article[], date: string): Article[] {
   }
 
   for (const article of [...fresh.slice(desiredFresh), ...stale]) {
-    if (selected.length >= AI.MAX_ARTICLES) break;
+    if (selected.length >= limit) break;
     const key = article.canonical_url ?? article.url;
     if (seen.has(key)) continue;
     seen.add(key);
@@ -141,6 +145,28 @@ function prioritizeFreshArticles(articles: Article[], date: string): Article[] {
   }
 
   return selected;
+}
+
+function prioritizePreferredSources(
+  articles: Article[],
+  preferredSources: string[],
+  preferredMin: number,
+): Article[] {
+  if (preferredSources.length === 0 || preferredMin <= 0) {
+    return dedupeByUrl(articles).slice(0, AI.MAX_ARTICLES);
+  }
+
+  const preferredSet = new Set(preferredSources);
+  const prioritized = dedupeByUrl(articles);
+  const preferred = prioritized.filter((item) => preferredSet.has(item.source));
+  const others = prioritized.filter((item) => !preferredSet.has(item.source));
+  const front = preferred.slice(0, preferredMin);
+  const frontKeys = new Set(front.map((item) => item.canonical_url ?? item.url));
+  const tail = [...preferred.slice(preferredMin), ...others].filter(
+    (item) => !frontKeys.has(item.canonical_url ?? item.url),
+  );
+
+  return [...front, ...tail].slice(0, AI.MAX_ARTICLES);
 }
 
 function resolveRecentDigestExclusionDays(
@@ -209,21 +235,38 @@ async function getRecentDigestExclusionUrls(currentDate: string): Promise<string
   return [...urls];
 }
 
+interface DigestWindowOptions {
+  preferredSources?: string[];
+  preferredMin?: number;
+  fallbackMultiplier?: number;
+}
+
 async function ensureDigestWindow(
   date: string,
   selected: Article[],
   recentDigestExcludeUrls: string[],
+  options: DigestWindowOptions = {},
 ): Promise<Article[]> {
+  const preferredSources = options.preferredSources ?? [];
+  const preferredMin = options.preferredMin ?? 0;
+  const fallbackMultiplier = Math.max(1, options.fallbackMultiplier ?? 4);
+  const candidateLimit = preferredSources.length > 0
+    ? AI.MAX_ARTICLES * 2
+    : AI.MAX_ARTICLES;
   const dedupedSelected = dedupeByUrl(selected);
   const strictInitial = dedupedSelected.filter((item) => (item.score ?? 0) >= AI.MIN_SCORE);
   const relaxedInitial = dedupedSelected.filter(
     (item) => (item.score ?? 0) >= AI.RELAXED_MIN_SCORE && (item.score ?? 0) < AI.MIN_SCORE,
   );
 
-  const strictInitialPrioritized = prioritizeFreshArticles(strictInitial, date)
-    .slice(0, AI.MAX_ARTICLES);
+  const strictInitialPrioritized = prioritizeFreshArticles(
+    strictInitial,
+    date,
+    candidateLimit,
+  )
+    .slice(0, candidateLimit);
   if (strictInitialPrioritized.length >= AI.MIN_ARTICLES) {
-    return strictInitialPrioritized;
+    return strictInitialPrioritized.slice(0, AI.MAX_ARTICLES);
   }
 
   const excludeUrls = new Set<string>([
@@ -231,7 +274,7 @@ async function ensureDigestWindow(
     ...recentDigestExcludeUrls,
   ]);
   const needed = AI.MIN_ARTICLES - strictInitialPrioritized.length;
-  const fallbackLimit = Math.min(AI.MAX_ARTICLES * 3, needed * 4);
+  const fallbackLimit = Math.min(AI.MAX_ARTICLES * 6, needed * fallbackMultiplier);
   const strictFallbackPool = await getFallbackArticlesForDigest({
     limit: fallbackLimit,
     minScore: AI.MIN_SCORE,
@@ -248,7 +291,8 @@ async function ensureDigestWindow(
   const strictMerged = prioritizeFreshArticles(
     [...strictInitialPrioritized, ...strictFallback],
     date,
-  ).slice(0, AI.MAX_ARTICLES);
+    candidateLimit,
+  ).slice(0, candidateLimit);
 
   let relaxedFallbackPoolSize = 0;
   let relaxedFallback: Article[] = [];
@@ -269,15 +313,31 @@ async function ensureDigestWindow(
     const relaxedCandidates = prioritizeFreshArticles(
       [...relaxedInitial, ...relaxedFallback],
       date,
-    ).slice(0, AI.MAX_ARTICLES);
+      candidateLimit,
+    ).slice(0, candidateLimit);
     const neededRelaxed = Math.max(0, AI.MIN_ARTICLES - strictMerged.length);
     relaxedUsed = relaxedCandidates.slice(0, neededRelaxed);
   }
 
-  const merged = prioritizeFreshArticles(
+  const mergedBase = prioritizeFreshArticles(
     [...strictMerged, ...relaxedUsed],
     date,
+    candidateLimit,
+  ).slice(0, candidateLimit);
+  const merged = prioritizePreferredSources(
+    mergedBase,
+    preferredSources,
+    preferredMin,
   ).slice(0, AI.MAX_ARTICLES);
+  if (preferredSources.length > 0) {
+    const preferredSet = new Set(preferredSources);
+    const availablePreferred = mergedBase.filter((item) => preferredSet.has(item.source)).length;
+    const selectedPreferred = merged.filter((item) => preferredSet.has(item.source)).length;
+    console.log(
+      `[Main] Preferred-source boost: preferred=${preferredSources.join(',')} ` +
+      `available=${availablePreferred}, selected=${selectedPreferred}, target=${preferredMin}`,
+    );
+  }
 
   const filteredOutCount =
     strictFallbackPool.length + relaxedFallbackPoolSize - strictFallback.length - relaxedFallback.length;
@@ -543,10 +603,29 @@ export async function runPipeline(): Promise<void> {
     }
 
     const recentDigestExcludeUrls = await getRecentDigestExclusionUrls(date);
+    const strictQualityCount = processed.filter(
+      (item) => (item.score ?? 0) >= AI.MIN_SCORE,
+    ).length;
+    const shouldBoostReddit =
+      wearesellersArticles.length < SOURCE_HEALTH.WEARESELLERS_MIN_ARTICLES &&
+      strictQualityCount < AI.MIN_ARTICLES;
+    if (shouldBoostReddit) {
+      console.warn(
+        `[Main] Reddit boost enabled: wearesellers=${wearesellersArticles.length}/${SOURCE_HEALTH.WEARESELLERS_MIN_ARTICLES}, ` +
+        `strict_quality=${strictQualityCount}/${AI.MIN_ARTICLES}`,
+      );
+    }
     const finalArticles = await ensureDigestWindow(
       date,
       processed,
       recentDigestExcludeUrls,
+      shouldBoostReddit
+        ? {
+          preferredSources: ['reddit_fba', 'reddit_seller'],
+          preferredMin: SOURCE_HEALTH.REDDIT_BOOST_TARGET,
+          fallbackMultiplier: SOURCE_HEALTH.REDDIT_BOOST_FALLBACK_MULTIPLIER,
+        }
+        : undefined,
     );
     sentArticleCount = finalArticles.length;
 

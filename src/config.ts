@@ -43,6 +43,8 @@ export const SOURCE_HEALTH = {
   WEARESELLERS_MIN_ARTICLES: 5,
   REDDIT_MIN_ARTICLES: 1,
   SELLERCENTRAL_MIN_ARTICLES: 1,
+  REDDIT_BOOST_TARGET: 10,
+  REDDIT_BOOST_FALLBACK_MULTIPLIER: 8,
 } as const;
 
 /** Source caps for secondary sources (primary sources are uncapped) */
