@@ -269,7 +269,7 @@ describe('runPipeline orchestration', () => {
     expect(mocks.markRunFailed).not.toHaveBeenCalled();
   });
 
-  it('fails before sending when final article count stays below minimum', async () => {
+  it('sends degraded digest when strict-quality pool is below minimum and relaxed top-up is poor', async () => {
     const { runPipeline, mocks } = await loadMainWithMocks({
       processArticles: vi.fn().mockResolvedValue(makeScoredArticles(8, 'rss')),
       getFallbackArticlesForDigest: vi.fn().mockResolvedValue(
@@ -277,12 +277,28 @@ describe('runPipeline orchestration', () => {
       ),
     });
 
+    await runPipeline();
+
+    const generatedArticles = (mocks.generateEmailHtml.mock.calls[0]?.[0] as Article[]) ?? [];
+    expect(generatedArticles.length).toBe(18);
+    expect(generatedArticles.every((item) => (item.score ?? 0) >= 6)).toBe(true);
+    expect(mocks.sendAlertEmail).toHaveBeenCalledWith(
+      expect.stringContaining('[LOW_VOLUME_MODE]'),
+    );
+    expect(mocks.sendDigestEmail).toHaveBeenCalledTimes(1);
+    expect(mocks.markRunFailed).not.toHaveBeenCalled();
+  });
+
+  it('fails before sending when strict-quality pool is too small for degraded mode', async () => {
+    const { runPipeline, mocks } = await loadMainWithMocks({
+      processArticles: vi.fn().mockResolvedValue(makeScoredArticles(3, 'rss')),
+      getFallbackArticlesForDigest: vi.fn().mockResolvedValue(
+        makeScoredArticles(2, 'reddit_fba'),
+      ),
+    });
+
     await expect(runPipeline()).rejects.toThrow('below minimum');
 
-    expect(mocks.getFallbackArticlesForDigest).toHaveBeenCalledTimes(2);
-    expect(mocks.sendAlertEmail).toHaveBeenCalledWith(
-      expect.stringContaining('below minimum'),
-    );
     expect(mocks.sendDigestEmail).not.toHaveBeenCalled();
     expect(mocks.markRunFailed).toHaveBeenCalled();
   });

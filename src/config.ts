@@ -14,6 +14,10 @@ export const AI = {
   CONTENT_LIMIT: 1500,
   /** Lower bound of digest size target */
   MIN_ARTICLES: 30,
+  /** Degraded mode minimum: if strict-quality count reaches this, allow sending < MIN_ARTICLES */
+  DEGRADED_MIN_ARTICLES: 8,
+  /** If filling to 30 needs too many relaxed items, prefer degraded high-quality mode */
+  MAX_RELAXED_TOPUP_FOR_FULL: 8,
   /** Minimum AI score to keep an article */
   MIN_SCORE: 6,
   /** Coarse filter threshold */

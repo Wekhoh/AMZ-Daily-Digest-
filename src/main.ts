@@ -324,6 +324,11 @@ async function ensureDigestWindow(
     date,
     candidateLimit,
   ).slice(0, candidateLimit);
+  const strictOnlyMerged = prioritizePreferredSources(
+    strictMerged,
+    preferredSources,
+    preferredMin,
+  ).slice(0, AI.MAX_ARTICLES);
   const merged = prioritizePreferredSources(
     mergedBase,
     preferredSources,
@@ -343,6 +348,53 @@ async function ensureDigestWindow(
     strictFallbackPool.length + relaxedFallbackPoolSize - strictFallback.length - relaxedFallback.length;
 
   const freshCount = merged.filter((item) => isPublishedOnDigestDate(item, date)).length;
+  const strictFreshCount = strictOnlyMerged.filter(
+    (item) => isPublishedOnDigestDate(item, date),
+  ).length;
+  const relaxedNeededForMinimum = Math.max(0, AI.MIN_ARTICLES - strictOnlyMerged.length);
+  const shouldUseLowVolumeMode =
+    strictOnlyMerged.length < AI.MIN_ARTICLES &&
+    strictOnlyMerged.length >= AI.DEGRADED_MIN_ARTICLES &&
+    (
+      merged.length < AI.MIN_ARTICLES ||
+      relaxedNeededForMinimum > AI.MAX_RELAXED_TOPUP_FOR_FULL
+    );
+
+  if (shouldUseLowVolumeMode) {
+    const reason = merged.length < AI.MIN_ARTICLES
+      ? 'insufficient_fallback'
+      : 'quality_guard';
+    const lowVolumeMessage =
+      `[LOW_VOLUME_MODE] ${date} strict=${strictOnlyMerged.length}/${AI.MIN_ARTICLES}, ` +
+      `merged=${merged.length}, relaxed_needed=${relaxedNeededForMinimum}, ` +
+      `relaxed_used=${relaxedUsed.length}, reason=${reason}`;
+
+    console.warn(`[Main] ${lowVolumeMessage}`);
+    try {
+      await sendAlertEmail(`${lowVolumeMessage}\n已启用低容量高质量推送模式。`);
+    } catch (alertErr) {
+      console.error('[Main] Failed to send low-volume alert email:', alertErr);
+    }
+
+    if (filteredOutCount > 0 || recentDigestExcludeUrls.length > 0) {
+      console.log(
+        `[Main] Removed ${filteredOutCount} fallback articles already delivered in recent digests ` +
+        `(cooldown pool size=${recentDigestExcludeUrls.length})`,
+      );
+    }
+
+    if (strictOnlyMerged.length > strictInitialPrioritized.length) {
+      console.log(
+        `[Main] Topped up digest with ${strictOnlyMerged.length - strictInitialPrioritized.length} fallback articles ` +
+        `(strict fallback=${strictFallback.length}, relaxed fallback=0)`,
+      );
+    }
+
+    console.log(
+      `[Main] Freshness priority applied: ${strictFreshCount}/${strictOnlyMerged.length} articles published on ${date}`,
+    );
+    return strictOnlyMerged;
+  }
 
   if (merged.length < AI.MIN_ARTICLES) {
     const message =
