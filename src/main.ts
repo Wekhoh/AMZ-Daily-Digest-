@@ -31,6 +31,8 @@ import { AI, SOURCE_HEALTH } from './config.js';
 
 const RECENT_DIGEST_EXCLUDE_DAYS_DEFAULT = 2;
 const DIGEST_LINK_REGEX = /<a\s+href="([^"]+)"/gi;
+const REDDIT_RECOVERY_ATTEMPTS_DEFAULT = 2;
+const REDDIT_RECOVERY_DELAY_MS_DEFAULT = 3_000;
 
 interface SourceGroupTarget {
   key: 'wearesellers' | 'amz123' | 'reddit' | 'sellercentral';
@@ -63,6 +65,61 @@ function today(): string {
 
 function elapsed(start: number): string {
   return ((Date.now() - start) / 1_000).toFixed(1);
+}
+
+async function sleep(ms: number): Promise<void> {
+  await new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function escapeHtmlText(value: string): string {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#x27;');
+}
+
+function resolvePositiveIntFromEnv(raw: string | undefined, fallback: number): number {
+  if (!raw) {
+    return fallback;
+  }
+  const parsed = Number.parseInt(raw, 10);
+  if (!Number.isFinite(parsed) || parsed < 0) {
+    return fallback;
+  }
+  return parsed;
+}
+
+function injectDigestWarnings(html: string, warnings: string[]): string {
+  if (warnings.length === 0) {
+    return html;
+  }
+
+  const warningItems = warnings
+    .map(
+      (warning) =>
+        `<li style="margin:0 0 6px 0;line-height:1.6;">${escapeHtmlText(warning)}</li>`,
+    )
+    .join('');
+
+  const warningBlock = `
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 18px 0;">
+      <tr>
+        <td style="background:#fff5f5;border:1px solid #feb2b2;border-radius:8px;padding:12px 14px;">
+          <p style="margin:0 0 6px 0;font-size:13px;color:#9b2c2c;font-weight:700;">⚠ 系统提醒</p>
+          <ul style="margin:0;padding-left:18px;font-size:12px;color:#7f1d1d;">
+            ${warningItems}
+          </ul>
+        </td>
+      </tr>
+    </table>`;
+
+  const bodyMarker = '<td style="padding:32px 28px 16px 28px;">';
+  if (html.includes(bodyMarker)) {
+    return html.replace(bodyMarker, `${bodyMarker}${warningBlock}`);
+  }
+  return `${warningBlock}${html}`;
 }
 
 function normalizeAndDedupeUrls(articles: Article[]): {
@@ -740,13 +797,51 @@ export async function runPipeline(): Promise<void> {
     // ------------------------------------------------------------------
     console.log('[Main] Step 1/5: Collecting articles from all sources...');
 
-    const [wearesellersArticles, rssArticles, redditArticles, sellerCentralArticles] =
-      await Promise.all([
-        safeCollect('wearesellers', collectWeAreSellers),
-        safeCollect('rss', collectRSS),
-        safeCollect('reddit', collectReddit),
-        safeCollect('sellercentral', collectSellerCentral),
-      ]);
+    const [
+      wearesellersArticles,
+      rssArticles,
+      initialRedditArticles,
+      sellerCentralArticles,
+    ] = await Promise.all([
+      safeCollect('wearesellers', collectWeAreSellers),
+      safeCollect('rss', collectRSS),
+      safeCollect('reddit', collectReddit),
+      safeCollect('sellercentral', collectSellerCentral),
+    ]);
+    let redditArticles = initialRedditArticles;
+
+    const redditRecoveryAttempts = resolvePositiveIntFromEnv(
+      process.env.AMZ_REDDIT_RECOVERY_ATTEMPTS,
+      REDDIT_RECOVERY_ATTEMPTS_DEFAULT,
+    );
+    const redditRecoveryDelayMs = resolvePositiveIntFromEnv(
+      process.env.AMZ_REDDIT_RECOVERY_DELAY_MS,
+      REDDIT_RECOVERY_DELAY_MS_DEFAULT,
+    );
+    let redditRecovered = false;
+    let redditRecoveryTried = 0;
+
+    if (redditArticles.length === 0 && redditRecoveryAttempts > 0) {
+      for (let attempt = 1; attempt <= redditRecoveryAttempts; attempt++) {
+        redditRecoveryTried = attempt;
+        console.warn(
+          `[Main] Reddit initial collect returned 0. ` +
+          `Starting recovery attempt ${attempt}/${redditRecoveryAttempts} (collector has multi-route fallback).`,
+        );
+        const recovered = await safeCollect(`reddit-recovery-${attempt}`, collectReddit);
+        if (recovered.length > 0) {
+          redditArticles = recovered;
+          redditRecovered = true;
+          console.log(
+            `[Main] Reddit recovery succeeded on attempt ${attempt}: ${recovered.length} articles`,
+          );
+          break;
+        }
+        if (attempt < redditRecoveryAttempts && redditRecoveryDelayMs > 0) {
+          await sleep(redditRecoveryDelayMs * attempt);
+        }
+      }
+    }
 
     // Alert if WeAreSellers (P0 source) returned too few — likely cookie expired or scraping degraded
     if (wearesellersArticles.length < SOURCE_HEALTH.WEARESELLERS_MIN_ARTICLES) {
@@ -784,6 +879,25 @@ export async function runPipeline(): Promise<void> {
       }
     }
 
+    const digestWarnings: string[] = [];
+    if (redditArticles.length === 0) {
+      const redditRecoveryFailureAlert =
+        `[REDDIT_RECOVERY_FAILED] ${date} Reddit after initial+${redditRecoveryTried} recovery attempt(s) ` +
+        'still returned 0. Pipeline will continue with explicit warning in digest.';
+      console.warn(`[Main] ${redditRecoveryFailureAlert}`);
+      digestWarnings.push('今日 Reddit 采集失败（已自动重试恢复但未成功）');
+      try {
+        await sendAlertEmail(
+          `${redditRecoveryFailureAlert}\n` +
+          '请检查来源侧封禁、网络可达性与采集器兼容性。',
+        );
+      } catch (alertErr) {
+        console.error('[Main] Failed to send reddit-recovery-failed alert email:', alertErr);
+      }
+    } else if (redditRecovered) {
+      digestWarnings.push('Reddit 采集已自动恢复成功（本次推送已纳入恢复结果）');
+    }
+
     const allRaw: Article[] = [
       ...wearesellersArticles,
       ...rssArticles,
@@ -794,7 +908,8 @@ export async function runPipeline(): Promise<void> {
     console.log(
       `[Main] Collected ${allRaw.length} raw articles ` +
         `(知无不言: ${wearesellersArticles.length}, AMZ123: ${rssArticles.length}, ` +
-        `Reddit: ${redditArticles.length}, SellerCentral: ${sellerCentralArticles.length})`
+        `Reddit: ${redditArticles.length}, SellerCentral: ${sellerCentralArticles.length}, ` +
+        `RedditRecovery: ${redditRecovered ? `recovered@${redditRecoveryTried}` : `none@${redditRecoveryTried}`})`
     );
 
     if (allRaw.length === 0) {
@@ -883,7 +998,8 @@ export async function runPipeline(): Promise<void> {
     // ------------------------------------------------------------------
     console.log('[Main] Step 4/5: Generating and sending email...');
 
-    const emailHtml = generateEmailHtml(finalArticles, date);
+    const baseEmailHtml = generateEmailHtml(finalArticles, date);
+    const emailHtml = injectDigestWarnings(baseEmailHtml, digestWarnings);
     const subscribers = await getActiveSubscribers();
     const fallbackRecipient = process.env.DIGEST_EMAIL?.trim();
     const recipients = subscribers.length > 0

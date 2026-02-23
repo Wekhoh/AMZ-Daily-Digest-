@@ -94,6 +94,8 @@ function applyRequiredEnv(): void {
   process.env.GMAIL_APP_PASSWORD = 'test-password';
   process.env.DIGEST_EMAIL = 'digest@example.com';
   process.env.WEARESELLERS_COOKIES = '[{"name":"x","value":"y","domain":"wearesellers.com"}]';
+  process.env.AMZ_REDDIT_RECOVERY_ATTEMPTS = '2';
+  process.env.AMZ_REDDIT_RECOVERY_DELAY_MS = '0';
 }
 
 async function loadMainWithMocks(
@@ -297,6 +299,45 @@ describe('runPipeline orchestration', () => {
       expect.stringContaining('[SOURCE_GAP]'),
     );
     expect(mocks.sendDigestEmail).toHaveBeenCalledTimes(1);
+  });
+
+  it('retries reddit collection and recovers before continuing pipeline', async () => {
+    const recoverableReddit = vi
+      .fn()
+      .mockResolvedValueOnce([])
+      .mockResolvedValueOnce([makeRawArticle('reddit_fba', 'recovered')]);
+
+    const { runPipeline, mocks } = await loadMainWithMocks({
+      collectReddit: recoverableReddit,
+      collectWeAreSellers: vi.fn().mockResolvedValue(makeScoredArticles(6, 'wearesellers')),
+      collectRSS: vi.fn().mockResolvedValue(makeScoredArticles(5, 'amz123')),
+      collectSellerCentral: vi.fn().mockResolvedValue(makeScoredArticles(3, 'sellercentral')),
+    });
+
+    await runPipeline();
+
+    expect(recoverableReddit).toHaveBeenCalledTimes(2);
+    const sentHtml = mocks.sendDigestEmail.mock.calls[0]?.[0] as string;
+    expect(sentHtml).not.toContain('今日 Reddit 采集失败');
+  });
+
+  it('continues sending with explicit warning when reddit recovery still fails', async () => {
+    const failedReddit = vi.fn().mockResolvedValue([]);
+    const { runPipeline, mocks } = await loadMainWithMocks({
+      collectReddit: failedReddit,
+      collectWeAreSellers: vi.fn().mockResolvedValue(makeScoredArticles(6, 'wearesellers')),
+      collectRSS: vi.fn().mockResolvedValue(makeScoredArticles(5, 'amz123')),
+      collectSellerCentral: vi.fn().mockResolvedValue(makeScoredArticles(3, 'sellercentral')),
+    });
+
+    await runPipeline();
+
+    expect(failedReddit).toHaveBeenCalledTimes(3);
+    expect(mocks.sendAlertEmail).toHaveBeenCalledWith(
+      expect.stringContaining('[REDDIT_RECOVERY_FAILED]'),
+    );
+    const sentHtml = mocks.sendDigestEmail.mock.calls[0]?.[0] as string;
+    expect(sentHtml).toContain('今日 Reddit 采集失败');
   });
 
   it('marks run failed when error happens before email is sent', async () => {
