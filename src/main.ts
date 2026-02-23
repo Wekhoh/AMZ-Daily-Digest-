@@ -23,13 +23,12 @@ import {
 import { generateEmailHtml, sendDigestEmail, sendAlertEmail } from './email.js';
 import type { Article } from './store.js';
 import { canonicalizeUrl } from './utils.js';
-import { AI } from './config.js';
+import { AI, SOURCE_HEALTH } from './config.js';
 
 // ---------------------------------------------------------------------------
 // Helpers
 // ---------------------------------------------------------------------------
 
-const WEARESELLERS_MIN_ARTICLES = 5;
 const RECENT_DIGEST_EXCLUDE_DAYS_DEFAULT = 2;
 const DIGEST_LINK_REGEX = /<a\s+href="([^"]+)"/gi;
 
@@ -120,7 +119,7 @@ function prioritizeFreshArticles(articles: Article[], date: string): Article[] {
     .sort(compareNewestFirst);
   const stale = deduped
     .filter((item) => !isPublishedOnDigestDate(item, date))
-    .sort((a, b) => (b.score ?? 0) - (a.score ?? 0));
+    .sort(compareNewestFirst);
 
   const desiredFresh = Math.min(AI.FRESH_TARGET_MIN, fresh.length, AI.MAX_ARTICLES);
   const selected: Article[] = [];
@@ -221,16 +220,17 @@ async function ensureDigestWindow(
     (item) => (item.score ?? 0) >= AI.RELAXED_MIN_SCORE && (item.score ?? 0) < AI.MIN_SCORE,
   );
 
-  if (strictInitial.length >= AI.MIN_ARTICLES) {
-    return prioritizeFreshArticles(strictInitial, date).slice(0, AI.MAX_ARTICLES);
+  const strictInitialPrioritized = prioritizeFreshArticles(strictInitial, date)
+    .slice(0, AI.MAX_ARTICLES);
+  if (strictInitialPrioritized.length >= AI.MIN_ARTICLES) {
+    return strictInitialPrioritized;
   }
 
-  const basePool = [...strictInitial, ...relaxedInitial];
   const excludeUrls = new Set<string>([
-    ...basePool.map((item) => item.canonical_url ?? item.url),
+    ...dedupedSelected.map((item) => item.canonical_url ?? item.url),
     ...recentDigestExcludeUrls,
   ]);
-  const needed = AI.MIN_ARTICLES - strictInitial.length;
+  const needed = AI.MIN_ARTICLES - strictInitialPrioritized.length;
   const fallbackLimit = Math.min(AI.MAX_ARTICLES * 3, needed * 4);
   const strictFallbackPool = await getFallbackArticlesForDigest({
     limit: fallbackLimit,
@@ -245,9 +245,16 @@ async function ensureDigestWindow(
     excludeUrls.add(article.canonical_url ?? article.url);
   }
 
+  const strictMerged = prioritizeFreshArticles(
+    [...strictInitialPrioritized, ...strictFallback],
+    date,
+  ).slice(0, AI.MAX_ARTICLES);
+
   let relaxedFallbackPoolSize = 0;
   let relaxedFallback: Article[] = [];
-  if (strictInitial.length + strictFallback.length < AI.MIN_ARTICLES) {
+  let relaxedUsed: Article[] = [];
+
+  if (strictMerged.length < AI.MIN_ARTICLES) {
     const relaxedFallbackPool = await getFallbackArticlesForDigest({
       limit: fallbackLimit,
       minScore: AI.RELAXED_MIN_SCORE,
@@ -258,16 +265,19 @@ async function ensureDigestWindow(
       const key = article.canonical_url ?? article.url;
       return !excludeUrls.has(key);
     });
+
+    const relaxedCandidates = prioritizeFreshArticles(
+      [...relaxedInitial, ...relaxedFallback],
+      date,
+    ).slice(0, AI.MAX_ARTICLES);
+    const neededRelaxed = Math.max(0, AI.MIN_ARTICLES - strictMerged.length);
+    relaxedUsed = relaxedCandidates.slice(0, neededRelaxed);
   }
 
-  const mergedPool = [
-    ...strictInitial,
-    ...strictFallback,
-    ...relaxedInitial,
-    ...relaxedFallback,
-  ];
-  const prioritized = prioritizeFreshArticles(mergedPool, date).slice(0, AI.MAX_ARTICLES);
-  const merged = dedupeByUrl(prioritized).slice(0, AI.MAX_ARTICLES);
+  const merged = prioritizeFreshArticles(
+    [...strictMerged, ...relaxedUsed],
+    date,
+  ).slice(0, AI.MAX_ARTICLES);
 
   const filteredOutCount =
     strictFallbackPool.length + relaxedFallbackPoolSize - strictFallback.length - relaxedFallback.length;
@@ -277,7 +287,7 @@ async function ensureDigestWindow(
   if (merged.length < AI.MIN_ARTICLES) {
     const message =
       `[Main] Final digest for ${date} below minimum: ${merged.length}/${AI.MIN_ARTICLES} ` +
-      `(strict fallback=${strictFallback.length}, relaxed fallback=${relaxedFallback.length})`;
+      `(strict fallback=${strictFallback.length}, relaxed fallback=${relaxedUsed.length})`;
     await sendAlertEmail(`${message}\n请检查采集源稳定性、去重与筛选阈值。`);
     throw new Error(`${message} — aborting send`);
   }
@@ -289,10 +299,10 @@ async function ensureDigestWindow(
     );
   }
 
-  if (merged.length > strictInitial.length) {
+  if (merged.length > strictInitialPrioritized.length) {
     console.log(
-      `[Main] Topped up digest with ${merged.length - strictInitial.length} fallback articles ` +
-      `(strict fallback=${strictFallback.length}, relaxed fallback=${relaxedFallback.length})`,
+      `[Main] Topped up digest with ${merged.length - strictInitialPrioritized.length} fallback articles ` +
+      `(strict fallback=${strictFallback.length}, relaxed fallback=${relaxedUsed.length})`,
     );
   }
   console.log(
@@ -439,7 +449,7 @@ export async function runPipeline(): Promise<void> {
       ]);
 
     // Alert if WeAreSellers (P0 source) returned too few — likely cookie expired or scraping degraded
-    if (wearesellersArticles.length < WEARESELLERS_MIN_ARTICLES) {
+    if (wearesellersArticles.length < SOURCE_HEALTH.WEARESELLERS_MIN_ARTICLES) {
       const msg = wearesellersArticles.length === 0
         ? '知无不言采集返回 0 篇文章，Cookie 可能已过期。'
         : `知无不言仅采集到 ${wearesellersArticles.length} 篇文章（正常应 20+），页面结构可能变化或 Cookie 即将过期。`;
@@ -448,6 +458,29 @@ export async function runPipeline(): Promise<void> {
         await sendAlertEmail(`${msg}\n请检查并更新 WEARESELLERS_COOKIES secret。`);
       } catch (alertErr) {
         console.error('[Main] Failed to send alert email:', alertErr);
+      }
+    }
+
+    const sourceGapTags: string[] = [];
+    if (redditArticles.length < SOURCE_HEALTH.REDDIT_MIN_ARTICLES) {
+      sourceGapTags.push(`Reddit=${redditArticles.length}/${SOURCE_HEALTH.REDDIT_MIN_ARTICLES}`);
+    }
+    if (sellerCentralArticles.length < SOURCE_HEALTH.SELLERCENTRAL_MIN_ARTICLES) {
+      sourceGapTags.push(
+        `SellerCentral=${sellerCentralArticles.length}/${SOURCE_HEALTH.SELLERCENTRAL_MIN_ARTICLES}`,
+      );
+    }
+    if (sourceGapTags.length > 0) {
+      const sourceGapAlert =
+        `[SOURCE_GAP] ${date} 关键来源低于阈值: ${sourceGapTags.join(', ')}`;
+      console.warn(`[Main] ${sourceGapAlert}`);
+      try {
+        await sendAlertEmail(
+          `${sourceGapAlert}\n` +
+          'Pipeline 已继续执行（不中断）。请检查对应采集器可用性与来源侧可访问性。',
+        );
+      } catch (alertErr) {
+        console.error('[Main] Failed to send source-gap alert email:', alertErr);
       }
     }
 

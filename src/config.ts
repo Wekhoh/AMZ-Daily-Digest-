@@ -38,6 +38,13 @@ export const AI = {
   MAX_CONCURRENCY: 3,
 } as const;
 
+/** Source health thresholds for non-blocking observability alerts */
+export const SOURCE_HEALTH = {
+  WEARESELLERS_MIN_ARTICLES: 5,
+  REDDIT_MIN_ARTICLES: 1,
+  SELLERCENTRAL_MIN_ARTICLES: 1,
+} as const;
+
 /** Source caps for secondary sources (primary sources are uncapped) */
 export const SOURCE_CAPS: Record<string, number> = {
   amz123: 10,

@@ -224,6 +224,22 @@ describe('runPipeline orchestration', () => {
     expect(mocks.markRunFailed).not.toHaveBeenCalled();
   });
 
+  it('sends source-gap alert tag when key sources are missing but pipeline continues', async () => {
+    const { runPipeline, mocks } = await loadMainWithMocks({
+      collectWeAreSellers: vi.fn().mockResolvedValue(makeScoredArticles(6, 'wearesellers')),
+      collectRSS: vi.fn().mockResolvedValue(makeScoredArticles(5, 'amz123')),
+      collectReddit: vi.fn().mockResolvedValue([]),
+      collectSellerCentral: vi.fn().mockResolvedValue([]),
+    });
+
+    await runPipeline();
+
+    expect(mocks.sendAlertEmail).toHaveBeenCalledWith(
+      expect.stringContaining('[SOURCE_GAP]'),
+    );
+    expect(mocks.sendDigestEmail).toHaveBeenCalledTimes(1);
+  });
+
   it('marks run failed when error happens before email is sent', async () => {
     const { runPipeline, mocks } = await loadMainWithMocks({
       sendDigestEmail: vi.fn().mockRejectedValue(new Error('SMTP unavailable')),
@@ -413,6 +429,38 @@ describe('runPipeline orchestration', () => {
     const minScore = Math.min(...generatedArticles.map((item) => item.score ?? 0));
     expect(generatedArticles.length).toBeGreaterThanOrEqual(30);
     expect(minScore).toBeGreaterThanOrEqual(6);
+  });
+
+  it('does not include relaxed initial articles when strict pool already reaches minimum after strict fallback', async () => {
+    const strictSelected = makePublishedArticles(20, {
+      source: 'wearesellers',
+      score: 6,
+      startUrl: 'https://example.com/strict-selected',
+      publishedAt: YESTERDAY_ISO,
+    });
+    const relaxedInitial = makePublishedArticles(20, {
+      source: 'amz123',
+      score: 5,
+      startUrl: 'https://example.com/relaxed-initial',
+      publishedAt: TODAY_ISO,
+    });
+    const strictFallback = makePublishedArticles(10, {
+      source: 'reddit_seller',
+      score: 6,
+      startUrl: 'https://example.com/strict-fallback-min',
+      publishedAt: YESTERDAY_ISO,
+    });
+
+    const { runPipeline, mocks } = await loadMainWithMocks({
+      processArticles: vi.fn().mockResolvedValue([...strictSelected, ...relaxedInitial]),
+      getFallbackArticlesForDigest: vi.fn().mockResolvedValue(strictFallback),
+    });
+
+    await runPipeline();
+
+    const generatedArticles = (mocks.generateEmailHtml.mock.calls[0]?.[0] as Article[]) ?? [];
+    expect(generatedArticles.length).toBeGreaterThanOrEqual(30);
+    expect(generatedArticles.every((item) => (item.score ?? 0) >= 6)).toBe(true);
   });
 
   it('attempts repair run when an existing digest is below minimum threshold', async () => {
