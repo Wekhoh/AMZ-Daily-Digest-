@@ -31,14 +31,24 @@ import { AI, SOURCE_HEALTH } from './config.js';
 
 const RECENT_DIGEST_EXCLUDE_DAYS_DEFAULT = 2;
 const DIGEST_LINK_REGEX = /<a\s+href="([^"]+)"/gi;
+const DIGEST_SOURCE_REGEX = /来源:\s*([^<\n\r]+)/gi;
 const REDDIT_RECOVERY_ATTEMPTS_DEFAULT = 2;
 const REDDIT_RECOVERY_DELAY_MS_DEFAULT = 3_000;
+const COLLECTOR_RECOVERY_ATTEMPTS_DEFAULT = 1;
+const COLLECTOR_RECOVERY_DELAY_MS_DEFAULT = 2_000;
+const SECONDARY_COVERAGE_ALERT_STREAK_DEFAULT = 2;
 
 interface SourceGroupTarget {
   key: 'wearesellers' | 'amz123' | 'reddit' | 'sellercentral';
   label: string;
   sources: string[];
   min: number;
+}
+
+interface MissingSourceGroup {
+  target: SourceGroupTarget;
+  count: number;
+  missing: number;
 }
 
 const SOURCE_GROUP_DEFINITIONS: ReadonlyArray<{
@@ -58,6 +68,8 @@ interface SourceGroupCounts {
   reddit: number;
   sellercentral: number;
 }
+
+const SECONDARY_SOURCE_GROUP_KEYS = new Set<SourceGroupTarget['key']>(['sellercentral']);
 
 function today(): string {
   return new Date().toISOString().split('T')[0];
@@ -181,12 +193,13 @@ function countArticlesForSources(articles: Article[], sources: string[]): number
 function evaluateSourceGroupCoverage(
   articles: Article[],
   targets: SourceGroupTarget[],
-): { missingTags: string[]; missingSlots: number } {
+): { missingTags: string[]; missingSlots: number; missingGroups: MissingSourceGroup[] } {
   if (targets.length === 0) {
-    return { missingTags: [], missingSlots: 0 };
+    return { missingTags: [], missingSlots: 0, missingGroups: [] };
   }
 
   const missingTags: string[] = [];
+  const missingGroups: MissingSourceGroup[] = [];
   let missingSlots = 0;
 
   for (const target of targets) {
@@ -194,21 +207,23 @@ function evaluateSourceGroupCoverage(
     if (count >= target.min) {
       continue;
     }
+    const missing = target.min - count;
     missingTags.push(`${target.label}=${count}/${target.min}`);
-    missingSlots += target.min - count;
+    missingSlots += missing;
+    missingGroups.push({ target, count, missing });
   }
 
-  return { missingTags, missingSlots };
+  return { missingTags, missingSlots, missingGroups };
 }
 
 function applySourceGroupTargets(
   rankedArticles: Article[],
   targets: SourceGroupTarget[],
   limit: number,
-): { articles: Article[]; missingTags: string[] } {
+): { articles: Article[]; missingTags: string[]; missingGroups: MissingSourceGroup[] } {
   const ranked = dedupeByUrl(rankedArticles);
   if (targets.length === 0) {
-    return { articles: ranked.slice(0, limit), missingTags: [] };
+    return { articles: ranked.slice(0, limit), missingTags: [], missingGroups: [] };
   }
 
   const required: Article[] = [];
@@ -262,7 +277,11 @@ function applySourceGroupTargets(
   }
 
   const coverage = evaluateSourceGroupCoverage(selected, targets);
-  return { articles: selected, missingTags: coverage.missingTags };
+  return {
+    articles: selected,
+    missingTags: coverage.missingTags,
+    missingGroups: coverage.missingGroups,
+  };
 }
 
 function buildActiveSourceGroupTargets(counts: SourceGroupCounts): SourceGroupTarget[] {
@@ -588,20 +607,35 @@ async function ensureDigestWindow(
       relaxedNeededForMinimum > AI.MAX_RELAXED_TOPUP_FOR_FULL
     );
 
-  const chosenCoverageMissing = shouldUseLowVolumeMode
-    ? strictCoverageResult.missingTags
-    : mergedCoverageResult.missingTags;
-  if (chosenCoverageMissing.length > 0) {
+  const chosenCoverage = shouldUseLowVolumeMode
+    ? strictCoverageResult
+    : mergedCoverageResult;
+  if (chosenCoverage.missingTags.length > 0) {
     const coverageAlert =
-      `[SOURCE_COVERAGE_GAP] ${date} 分源最低配额未满足: ${chosenCoverageMissing.join(', ')}`;
+      `[SOURCE_COVERAGE_GAP] ${date} 分源最低配额未满足: ${chosenCoverage.missingTags.join(', ')}`;
     console.warn(`[Main] ${coverageAlert}`);
-    try {
-      await sendAlertEmail(
-        `${coverageAlert}\n` +
-        'Pipeline 已继续执行（不中断）。请检查来源当日可用内容与来源健康状态。',
+    const coverageDecision = await decideCoverageGapAlert(
+      date,
+      chosenCoverage.missingGroups,
+    );
+
+    if (coverageDecision.shouldAlert) {
+      try {
+        const streakDetail = coverageDecision.streakTags.length > 0
+          ? `\nSecondary streak: ${coverageDecision.streakTags.join(', ')}`
+          : '';
+        await sendAlertEmail(
+          `${coverageAlert}${streakDetail}\n` +
+          'Pipeline 已继续执行（不中断）。请检查来源当日可用内容与来源健康状态。',
+        );
+      } catch (alertErr) {
+        console.error('[Main] Failed to send source-coverage alert email:', alertErr);
+      }
+    } else {
+      console.log(
+        `[Main] Coverage-gap alert suppressed for secondary sources: ` +
+        `${coverageDecision.suppressedTags.join(', ')}`,
       );
-    } catch (alertErr) {
-      console.error('[Main] Failed to send source-coverage alert email:', alertErr);
     }
   }
 
@@ -738,6 +772,137 @@ async function safeCollect(
   }
 }
 
+interface CollectorRecoveryOptions {
+  attempts: number;
+  delayMs: number;
+}
+
+async function collectWithRecovery(
+  name: string,
+  fn: () => Promise<Article[]>,
+  options: CollectorRecoveryOptions,
+): Promise<Article[]> {
+  const { attempts, delayMs } = options;
+  let articles = await safeCollect(name, fn);
+
+  if (articles.length > 0 || attempts <= 0) {
+    return articles;
+  }
+
+  for (let attempt = 1; attempt <= attempts; attempt++) {
+    const waitMs = Math.max(0, delayMs * attempt);
+    console.warn(
+      `[Main] Collector "${name}" returned 0, retrying ${attempt}/${attempts}` +
+      `${waitMs > 0 ? ` after ${waitMs}ms` : ''}...`,
+    );
+
+    if (waitMs > 0) {
+      await sleep(waitMs);
+    }
+
+    articles = await safeCollect(`${name}-retry-${attempt}`, fn);
+    if (articles.length > 0) {
+      console.log(
+        `[Main] Collector "${name}" recovered with ${articles.length} articles on retry ${attempt}`,
+      );
+      break;
+    }
+  }
+
+  return articles;
+}
+
+function extractSourcesFromDigestHtml(html: string): Set<string> {
+  const sources = new Set<string>();
+  let match: RegExpExecArray | null = DIGEST_SOURCE_REGEX.exec(html);
+  while (match) {
+    const source = match[1]?.trim();
+    if (source) {
+      sources.add(source);
+    }
+    match = DIGEST_SOURCE_REGEX.exec(html);
+  }
+  DIGEST_SOURCE_REGEX.lastIndex = 0;
+  return sources;
+}
+
+function digestContainsAnySource(html: string, sources: string[]): boolean {
+  if (!html || sources.length === 0) {
+    return false;
+  }
+  const sourceSet = extractSourcesFromDigestHtml(html);
+  return sources.some((source) => sourceSet.has(source));
+}
+
+async function getMissingCoverageStreakBeforeDate(
+  date: string,
+  target: SourceGroupTarget,
+): Promise<number> {
+  const history = await getRecentDigests(14);
+  const sortedHistory = [...history].sort((a, b) => (a.date < b.date ? 1 : -1));
+  let streak = 0;
+
+  for (const digest of sortedHistory) {
+    if (digest.date >= date) {
+      continue;
+    }
+
+    if (digestContainsAnySource(digest.email_html ?? '', target.sources)) {
+      break;
+    }
+
+    streak += 1;
+  }
+
+  return streak;
+}
+
+interface CoverageGapAlertDecision {
+  shouldAlert: boolean;
+  streakTags: string[];
+  suppressedTags: string[];
+}
+
+async function decideCoverageGapAlert(
+  date: string,
+  missingGroups: MissingSourceGroup[],
+): Promise<CoverageGapAlertDecision> {
+  if (missingGroups.length === 0) {
+    return { shouldAlert: false, streakTags: [], suppressedTags: [] };
+  }
+
+  const primaryMissing = missingGroups.filter(
+    (group) => !SECONDARY_SOURCE_GROUP_KEYS.has(group.target.key),
+  );
+  if (primaryMissing.length > 0) {
+    return { shouldAlert: true, streakTags: [], suppressedTags: [] };
+  }
+
+  const threshold = Math.max(
+    1,
+    resolvePositiveIntFromEnv(
+      process.env.AMZ_SECONDARY_COVERAGE_ALERT_STREAK,
+      SECONDARY_COVERAGE_ALERT_STREAK_DEFAULT,
+    ),
+  );
+  const streakTags: string[] = [];
+  const suppressedTags: string[] = [];
+  let shouldAlert = false;
+
+  for (const group of missingGroups) {
+    const historyStreak = await getMissingCoverageStreakBeforeDate(date, group.target);
+    const consecutive = historyStreak + 1;
+    streakTags.push(`${group.target.label}=${consecutive}/${threshold}`);
+    if (consecutive >= threshold) {
+      shouldAlert = true;
+    } else {
+      suppressedTags.push(`${group.target.label}=${consecutive}/${threshold}`);
+    }
+  }
+
+  return { shouldAlert, streakTags, suppressedTags };
+}
+
 // ---------------------------------------------------------------------------
 // Main pipeline
 // ---------------------------------------------------------------------------
@@ -797,16 +962,42 @@ export async function runPipeline(): Promise<void> {
     // ------------------------------------------------------------------
     console.log('[Main] Step 1/5: Collecting articles from all sources...');
 
+    const collectorRecoveryDelayMs = resolvePositiveIntFromEnv(
+      process.env.AMZ_COLLECTOR_RECOVERY_DELAY_MS,
+      COLLECTOR_RECOVERY_DELAY_MS_DEFAULT,
+    );
+    const wearesellersRecoveryAttempts = resolvePositiveIntFromEnv(
+      process.env.AMZ_WS_RECOVERY_ATTEMPTS,
+      COLLECTOR_RECOVERY_ATTEMPTS_DEFAULT,
+    );
+    const rssRecoveryAttempts = resolvePositiveIntFromEnv(
+      process.env.AMZ_RSS_RECOVERY_ATTEMPTS,
+      COLLECTOR_RECOVERY_ATTEMPTS_DEFAULT,
+    );
+    const sellercentralRecoveryAttempts = resolvePositiveIntFromEnv(
+      process.env.AMZ_SC_RECOVERY_ATTEMPTS,
+      COLLECTOR_RECOVERY_ATTEMPTS_DEFAULT,
+    );
+
     const [
       wearesellersArticles,
       rssArticles,
       initialRedditArticles,
       sellerCentralArticles,
     ] = await Promise.all([
-      safeCollect('wearesellers', collectWeAreSellers),
-      safeCollect('rss', collectRSS),
+      collectWithRecovery('wearesellers', collectWeAreSellers, {
+        attempts: wearesellersRecoveryAttempts,
+        delayMs: collectorRecoveryDelayMs,
+      }),
+      collectWithRecovery('rss', collectRSS, {
+        attempts: rssRecoveryAttempts,
+        delayMs: collectorRecoveryDelayMs,
+      }),
       safeCollect('reddit', collectReddit),
-      safeCollect('sellercentral', collectSellerCentral),
+      collectWithRecovery('sellercentral', collectSellerCentral, {
+        attempts: sellercentralRecoveryAttempts,
+        delayMs: collectorRecoveryDelayMs,
+      }),
     ]);
     let redditArticles = initialRedditArticles;
 
@@ -856,18 +1047,21 @@ export async function runPipeline(): Promise<void> {
       }
     }
 
-    const sourceGapTags: string[] = [];
+    const primarySourceGapTags: string[] = [];
     if (redditArticles.length < SOURCE_HEALTH.REDDIT_MIN_ARTICLES) {
-      sourceGapTags.push(`Reddit=${redditArticles.length}/${SOURCE_HEALTH.REDDIT_MIN_ARTICLES}`);
-    }
-    if (sellerCentralArticles.length < SOURCE_HEALTH.SELLERCENTRAL_MIN_ARTICLES) {
-      sourceGapTags.push(
-        `SellerCentral=${sellerCentralArticles.length}/${SOURCE_HEALTH.SELLERCENTRAL_MIN_ARTICLES}`,
+      primarySourceGapTags.push(
+        `Reddit=${redditArticles.length}/${SOURCE_HEALTH.REDDIT_MIN_ARTICLES}`,
       );
     }
-    if (sourceGapTags.length > 0) {
+    if (sellerCentralArticles.length < SOURCE_HEALTH.SELLERCENTRAL_MIN_ARTICLES) {
+      console.warn(
+        `[Main] [SOURCE_GAP_SECONDARY] ${date} SellerCentral=${sellerCentralArticles.length}/` +
+        `${SOURCE_HEALTH.SELLERCENTRAL_MIN_ARTICLES}; skip immediate alert and rely on streak-based coverage alert.`,
+      );
+    }
+    if (primarySourceGapTags.length > 0) {
       const sourceGapAlert =
-        `[SOURCE_GAP] ${date} 关键来源低于阈值: ${sourceGapTags.join(', ')}`;
+        `[SOURCE_GAP] ${date} 关键来源低于阈值: ${primarySourceGapTags.join(', ')}`;
       console.warn(`[Main] ${sourceGapAlert}`);
       try {
         await sendAlertEmail(

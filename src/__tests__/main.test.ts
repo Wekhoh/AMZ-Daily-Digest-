@@ -96,6 +96,11 @@ function applyRequiredEnv(): void {
   process.env.WEARESELLERS_COOKIES = '[{"name":"x","value":"y","domain":"wearesellers.com"}]';
   process.env.AMZ_REDDIT_RECOVERY_ATTEMPTS = '2';
   process.env.AMZ_REDDIT_RECOVERY_DELAY_MS = '0';
+  process.env.AMZ_COLLECTOR_RECOVERY_DELAY_MS = '0';
+  process.env.AMZ_WS_RECOVERY_ATTEMPTS = '1';
+  process.env.AMZ_RSS_RECOVERY_ATTEMPTS = '1';
+  process.env.AMZ_SC_RECOVERY_ATTEMPTS = '1';
+  process.env.AMZ_SECONDARY_COVERAGE_ALERT_STREAK = '2';
 }
 
 async function loadMainWithMocks(
@@ -299,6 +304,80 @@ describe('runPipeline orchestration', () => {
       expect.stringContaining('[SOURCE_GAP]'),
     );
     expect(mocks.sendDigestEmail).toHaveBeenCalledTimes(1);
+  });
+
+  it('retries wearesellers collector when initial result is empty and recovers', async () => {
+    const recoverableWearesellers = vi
+      .fn()
+      .mockResolvedValueOnce([])
+      .mockResolvedValueOnce(makeScoredArticles(6, 'wearesellers'));
+
+    const { runPipeline } = await loadMainWithMocks({
+      collectWeAreSellers: recoverableWearesellers,
+      collectRSS: vi.fn().mockResolvedValue(makeScoredArticles(5, 'amz123')),
+      collectReddit: vi.fn().mockResolvedValue(makeScoredArticles(5, 'reddit_fba')),
+      collectSellerCentral: vi.fn().mockResolvedValue(makeScoredArticles(3, 'sellercentral')),
+    });
+
+    await runPipeline();
+
+    expect(recoverableWearesellers).toHaveBeenCalledTimes(2);
+  });
+
+  it('suppresses first-day sellercentral-only coverage gap alert', async () => {
+    const onlySellerCentralMissing = [
+      ...makeScoredArticles(14, 'wearesellers'),
+      ...makeScoredArticles(14, 'reddit_fba'),
+      ...makeScoredArticles(2, 'amz123'),
+    ];
+
+    const { runPipeline, mocks } = await loadMainWithMocks({
+      collectWeAreSellers: vi.fn().mockResolvedValue(makeScoredArticles(6, 'wearesellers')),
+      collectRSS: vi.fn().mockResolvedValue(makeScoredArticles(5, 'amz123')),
+      collectReddit: vi.fn().mockResolvedValue(makeScoredArticles(5, 'reddit_fba')),
+      collectSellerCentral: vi.fn().mockResolvedValue(makeScoredArticles(1, 'sellercentral')),
+      processArticles: vi.fn().mockResolvedValue(onlySellerCentralMissing),
+      getRecentDigests: vi.fn().mockResolvedValue([
+        {
+          date: YESTERDAY,
+          email_html: '<p>来源: sellercentral</p>',
+        },
+      ]),
+    });
+
+    await runPipeline();
+
+    expect(mocks.sendAlertEmail).not.toHaveBeenCalledWith(
+      expect.stringContaining('[SOURCE_COVERAGE_GAP]'),
+    );
+  });
+
+  it('alerts sellercentral coverage gap when missing streak reaches threshold', async () => {
+    const onlySellerCentralMissing = [
+      ...makeScoredArticles(14, 'wearesellers'),
+      ...makeScoredArticles(14, 'reddit_fba'),
+      ...makeScoredArticles(2, 'amz123'),
+    ];
+
+    const { runPipeline, mocks } = await loadMainWithMocks({
+      collectWeAreSellers: vi.fn().mockResolvedValue(makeScoredArticles(6, 'wearesellers')),
+      collectRSS: vi.fn().mockResolvedValue(makeScoredArticles(5, 'amz123')),
+      collectReddit: vi.fn().mockResolvedValue(makeScoredArticles(5, 'reddit_fba')),
+      collectSellerCentral: vi.fn().mockResolvedValue(makeScoredArticles(1, 'sellercentral')),
+      processArticles: vi.fn().mockResolvedValue(onlySellerCentralMissing),
+      getRecentDigests: vi.fn().mockResolvedValue([
+        {
+          date: YESTERDAY,
+          email_html: '<p>来源: wearesellers</p>',
+        },
+      ]),
+    });
+
+    await runPipeline();
+
+    expect(mocks.sendAlertEmail).toHaveBeenCalledWith(
+      expect.stringContaining('[SOURCE_COVERAGE_GAP]'),
+    );
   });
 
   it('retries reddit collection and recovers before continuing pipeline', async () => {
