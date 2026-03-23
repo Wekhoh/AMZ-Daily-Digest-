@@ -19,11 +19,11 @@
     "health": "tsx src/health-check.ts"
   },
   "dependencies": {
-    "@google/genai": "^1.0.0",
-    "@supabase/supabase-js": "^2.49.0",
-    "dotenv": "^16.4.0",
-    "next": "^16.1.5",
-    "nodemailer": "^8.0.1",
+    "@google/genai": "^1.46.0",
+    "@supabase/supabase-js": "^2.100.0",
+    "dotenv": "^17.3.1",
+    "next": "^16.2.1",
+    "nodemailer": "^8.0.3",
     "playwright": "^1.50.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
