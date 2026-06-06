@@ -7,7 +7,7 @@ export const AI = {
   /** Articles per Gemini batch */
   BATCH_SIZE: 6,
   /** Gemini model name (override with GEMINI_MODEL if needed) */
-  MODEL: process.env.GEMINI_MODEL?.trim() || 'gemini-2.0-flash',
+  MODEL: process.env.GEMINI_MODEL?.trim() || 'gemini-3.5-flash',
   /** Max output tokens per AI call */
   MAX_OUTPUT_TOKENS: 8192,
   /** Max chars of article content sent to AI */
