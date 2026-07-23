@@ -20,7 +20,7 @@ on:
         type: string
 
 permissions:
-  contents: read
+  contents: write   # commit the published public/digest-latest.json (D-042)
 
 concurrency:
   group: daily-digest-${{ github.ref }}
@@ -85,6 +85,20 @@ jobs:
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           DIGEST_EMAIL: ${{ secrets.DIGEST_EMAIL }}
           AMZ_WATCHDOG_MIN_ARTICLES: '30'
+
+      - name: Commit published digest-latest.json
+        if: steps.run_digest.outcome == 'success'
+        run: |
+          if [ -n "$(git status --porcelain public/digest-latest.json)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add public/digest-latest.json
+            git commit -m "chore(digest): publish digest-latest.json for $(date -u +%Y-%m-%d) [skip ci]"
+            git push
+            echo "Committed public/digest-latest.json"
+          else
+            echo "public/digest-latest.json unchanged - nothing to commit"
+          fi
 
       - name: Digest job summary
         if: always()
