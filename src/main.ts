@@ -21,6 +21,7 @@ import {
   saveDigestDeliveries,
 } from './store.js';
 import { generateEmailHtml, sendDigestEmail, sendAlertEmail } from './email.js';
+import { writeDigestJson } from './publish.js';
 import type { Article } from './store.js';
 import { canonicalizeUrl } from './utils.js';
 import { AI, SOURCE_HEALTH } from './config.js';
@@ -1265,6 +1266,20 @@ export async function runPipeline(): Promise<void> {
     });
 
     await markRunSent(runId, finalArticles.length);
+
+    // ------------------------------------------------------------------
+    // Step 6: Publish the machine-readable digest (amz-autopilot reads this over
+    // a credential-free HTTPS GET; the workflow commits it). Non-fatal — a write
+    // failure must never fail an already-sent digest (post-send policy).
+    // ------------------------------------------------------------------
+    try {
+      const published = await writeDigestJson(finalArticles, date);
+      console.log(
+        `[Main] Published ${published.articles.length}/${published.article_count} articles to public/digest-latest.json`,
+      );
+    } catch (publishErr) {
+      console.error('[Main] Failed to write public/digest-latest.json (non-fatal):', publishErr);
+    }
 
     // ------------------------------------------------------------------
     // Done

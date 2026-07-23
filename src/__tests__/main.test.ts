@@ -23,6 +23,7 @@ interface PipelineMocks {
   generateEmailHtml: ReturnType<typeof vi.fn>;
   sendDigestEmail: ReturnType<typeof vi.fn>;
   sendAlertEmail: ReturnType<typeof vi.fn>;
+  writeDigestJson: ReturnType<typeof vi.fn>;
 }
 
 function makeScoredArticles(count: number, source = 'rss'): Article[] {
@@ -138,6 +139,7 @@ async function loadMainWithMocks(
       failed: [],
     }),
     sendAlertEmail: vi.fn().mockResolvedValue(undefined),
+    writeDigestJson: vi.fn().mockResolvedValue({ articles: [], article_count: 0 }),
     ...overrides,
   };
 
@@ -178,6 +180,9 @@ async function loadMainWithMocks(
     generateEmailHtml: mocks.generateEmailHtml,
     sendDigestEmail: mocks.sendDigestEmail,
     sendAlertEmail: mocks.sendAlertEmail,
+  }));
+  vi.doMock('../publish.js', () => ({
+    writeDigestJson: mocks.writeDigestJson,
   }));
 
   const mod = await import('../main.js');
