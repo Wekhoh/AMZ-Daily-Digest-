@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-07-24T08:12:15Z",
+  "digest_date": "2026-07-24",
+  "article_count": 50,
+  "articles": [
+    {
+      "title": "亚马逊AI图片合规新规实操分享 哪些图要打标怎么打标一次说清楚",
+      "summary": "详解亚马逊AI图片合规新规及实操方法。凡含AI生成逼真人物的图片，必须在元数据XMP dc subject或Windows标记字段中写入contains-synthetic-performer标签。提供排查归档、批量写入、建立素材表等三步走合规流程，规避Listing下架风险。",
+      "category": "policy",
+      "score": 10,
+      "url": "https://www.wearesellers.com/question/122542",
+      "source": "wearesellers",
+      "published_at": "2026-07-24T07:09:55.702Z"
+    },
+    {
+      "title": "一文回答所有关于提升自然流量，降低广告订单占比的相关问题——可以推自然位的关键词特征",
+      "summary": "提升亚马逊自然流量需通过SP手动精准广告冲首页位置。在预算分配上建议SP占比约80%，SB和SD占20%。利用TOS位置的高点击率和清晰转化路径，让系统判定产品与关键词的高相关性，从而最高效地推动自然排名上升。",
+      "category": "experience",
+      "score": 10,
+      "url": "https://www.wearesellers.com/question/122397",
+      "source": "wearesellers",
+      "published_at": "2026-07-21T07:10:03.329+00:00"
+    },
+    {
+      "title": "亚马逊视频认证启动历史违规账户回溯核查",
+      "summary": "亚马逊于2026年下半年启动视频认证历史违规账户回溯核查，对涉嫌提供虚假身份信息的账户进行关闭并冻结资金。目前审核已直连支付宝国家政务服务平台进行电子证照实人核验，卖家必须使用真实合规的身份材料，严禁使用伪造证件。",
+      "category": "policy",
+      "score": 10,
+      "url": "https://www.amz123.com/kx/zNWpOKXA",
+      "source": "amz123",
+      "published_at": "2026-07-17T09:24:58+00:00"
+    },
+    {
+      "title": "ACOS 偏高时，我会先看哪些数据？自动广告最近 30 天一共出了 344 单，整体转化率是 8.9%，ACOS 62.18%。应该怎么调整？应该先看整体转化率，再看细分转化率.....",
+      "summary": "阐述了亚马逊广告ACOS偏高时的优化实操方法。核心步骤为：先对比顶部、其余和商品页三个位置的转化率、ACOS及点击率；通过降低整体基础竞价并提高表现优异位置的百分比溢价，实现流量精准转移；对于数据量大的自动广告，应将紧密和宽泛匹配拆分单独管理，避免预算被单一模式抢占。",
+      "category": "experience",
+      "score": 10,
+      "url": "https://www.wearesellers.com/question/122160",
+      "source": "wearesellers",
+      "published_at": "2026-07-15T07:36:18.964+00:00"
+    },
+    {
+      "title": "亚马逊下半年大促提报开启，早鸟优惠、促销资格速看！",
+      "summary": "2026年亚马逊下半年大促提报开启。美国站Prime会员大促提报为7月8日至9月8日，黑五网一为7月8日至10月20日。促销要求定价不高于60天最低价，且比30天最低价至少优惠5%。早鸟提报可省50美元固定费。旺季配送费平均每件上涨0.32美元。",
+      "category": "policy",
+      "score": 10,
+      "url": "https://www.wearesellers.com/question/122045",
+      "source": "wearesellers",
+      "published_at": "2026-07-09T09:01:29.635+00:00"
+    },
+    {
+      "title": "7月27日亚马逊商品名称新规倒计时：标题优化实操指南",
+      "summary": "亚马逊新规要求非媒介类商品标题缩减至75字符以内。卖家应主动优化标题，仅保留品牌名和核心流量词，将材质、功能等次要卖点转移至新增的125字符商品亮点板块及五点描述中。建议先用中等销量链接测试，避免被系统AI强制乱改。",
+      "category": "policy",
+      "score": 10,
+      "url": "https://www.wearesellers.com/question/122034",
+      "source": "wearesellers",
+      "published_at": "2026-07-09T08:52:43.54+00:00"
+    },
+    {
+      "title": "SFP delivery-speed thresholds go up July 6. Here's exactly what changes by size tier",
+      "summary": "亚马逊自配送Prime（SFP）时效门槛于7月6日提高。标准件一日达门槛升至40%，两日达升至75%；大件和超大件门槛亦有提升。未达标将失去Prime标志并影响购物车与排名。10月17日前周末暂不计入考核，卖家需尽快优化配送。",
+      "category": "policy",
+      "score": 10,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1uly4ik/sfp_deliveryspeed_thresholds_go_up_july_6_heres",
+      "source": "reddit_fba",
+      "published_at": "2026-07-02T23:30:41+00:00"
+    },
+    {
+      "title": "会员日后关键词排名稳不住？不是自然回落，是结构塌了",
+      "summary": "会员日后关键词排名下滑本质是流量结构在重新分配。卖家应利用后7天黄金期进行调整：第一至二天稳住主词广告预算与结构不动以止跌；第三至五天将关键词分类，并将预算重新分配为30%给主词稳排名、50%给高转化长尾词接流量、20%给防守词防竞品，实现多点支撑。",
+      "category": "experience",
+      "score": 10,
+      "url": "https://www.wearesellers.com/question/121579",
+      "source": "wearesellers",
+      "published_at": "2026-06-30T01:57:57.196+00:00"
+    },
+    {
+      "title": "菜鸟英德海外仓接入亚马逊欧洲站MSF",
+      "summary": "菜鸟英德海外仓正式接入亚马逊欧洲站MSF服务，为家具、健身器材等重型大件卖家提供第三方仓备货加亚马逊尾程配送的履约方案。卖家可将商品存入菜鸟仓，由菜鸟分拣打包并由亚马逊配送，商品可自动获得Prime标识且不占用FBA仓储容量，有效降低大件仓储成本。",
+      "category": "experience",
+      "score": 9.4,
+      "url": "https://www.amz123.com/kx/2IJWREi1",
+      "source": "amz123",
+      "published_at": "2026-07-24T02:08:03.000Z"
+    },
+    {
+      "title": "亚马逊GWD上海仓7月16日全面开放",
+      "summary": "亚马逊GWD上海仓于2026年7月16日全面开放并支持FOB条款。该仓提供ASRS自动化分拣并直送FBA，可避免丢件。卖家通过设置自动补货，可豁免低量库存费、超龄库存费及仓储利用率附加费，同时享受透明的港口与报关费，便于出口退税。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.amz123.com/kx/W4MfvhPM",
+      "source": "amz123",
+      "published_at": "2026-07-17T09:14:26+00:00"
+    }
+  ]
+}
