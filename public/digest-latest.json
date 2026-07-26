@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-07-25T07:54:58Z",
-  "digest_date": "2026-07-25",
+  "generated_at_utc": "2026-07-26T08:12:25Z",
+  "digest_date": "2026-07-26",
   "article_count": 50,
   "articles": [
     {
-      "title": "亚马逊全球一测通GTO上线，一次检测覆盖美欧日澳等16大站点",
-      "summary": "亚马逊面向中国卖家推出全球一测通服务，实现一次测试、多站通行，首期覆盖玩具品类，可同步满足美、欧、日、澳等16大站点的合规审核。卖家可通过亚马逊SPN服务商网络，预约Intertek、SGS、TÜV SÜD或宁波海关技术中心进行寄样检测，大幅简化多站点合规流程。",
-      "category": "policy",
-      "score": 10,
-      "url": "https://www.amz123.com/kx/w0dsfdw4",
-      "source": "amz123",
-      "published_at": "2026-07-16T06:04:16+00:00"
-    },
-    {
-      "title": "亚马逊美英站更新FBM政策：BHDR≥90%，英国站默认处理时间缩至1天",
-      "summary": "亚马逊美英站更新FBM政策。美国站自2026年9月30日起新增营业时间送达率考核，要求滚动14天内面向企业客户的送达率不低于90%，否则暂停Amazon Business端展示，卖家应优先使用购买配送及自动化工具。英国站默认处理时间缩短至0或1天，且系统会根据实际速度自动调整。",
-      "category": "policy",
-      "score": 10,
-      "url": "https://www.amz123.com/kx/LUfRb7Rh",
-      "source": "amz123",
-      "published_at": "2026-07-01T03:23:46+00:00"
-    },
-    {
-      "title": "CPSC电子申报新规7月8日强制落地，双清包税时代结束——整理了一些思路给大家参考",
-      "summary": "本文详解了7月8日强制执行的CPSC电子申报新规。由于违规罚款高，货代不再代担风险。卖家可通过两种申报方式应对：一是完整申报提供产品标识等七要素；二是引用申报提前在CPSC备案。无自有BOND的卖家可找代报货代或通过购买BOND服务解决。",
-      "category": "policy",
-      "score": 10,
-      "url": "https://www.wearesellers.com/question/121155",
-      "source": "wearesellers",
-      "published_at": "2026-06-18T07:07:22.703+00:00"
-    },
-    {
-      "title": "亚马逊Vine跨站评论同步功能恢复 美欧日站评价批量回显",
-      "summary": "亚马逊美欧日站Vine评论跨站同步功能已恢复，前期因风控失联的评价正批量回显。该功能可低成本扩充评价基数并提升转化率。若后台未自动恢复，卖家可在Prime Day前通过提交Case申请刷新全球ASIN同步权限，通常24小时内即可完成修复。",
+      "title": "你的亚马逊广告位调价是正向优化还是反向烧钱？90%朋友选错了",
+      "summary": "亚马逊广告位调价应以流量分流为导向而非单纯奖励表现。实操方法是先降低底价（如降至0.3）使不想要的广告位自然熄火，再通过公式‘加价比例=（目标出价-新底价）/新底价’，针对性提高目标广告位的加价比例，实现精准控流。",
       "category": "experience",
       "score": 10,
-      "url": "https://www.amz123.com/kx/47Ah3vUB",
-      "source": "amz123",
-      "published_at": "2026-06-18T03:38:54+00:00"
+      "url": "https://www.wearesellers.com/question/122094",
+      "source": "wearesellers",
+      "published_at": "2026-07-11T06:50:43.904+00:00"
     },
     {
-      "title": "FedEx 2026旺季附加费最高可达595美元，黑五网一窗口11月23日起收费达到上限",
-      "summary": "FedEx公布2026年旺季附加费方案，自9月28日起分阶段生效。在11月23日至12月27日的黑五和圣诞销售窗口期，住宅地面配送附加费最高涨至0.80美元每件，超规格未授权包裹附加费峰值达595美元。卖家需提前规划物流预算以应对成本上升。",
+      "title": "亚马逊美站自发货卖家须维持90%营业时间配送率",
+      "summary": "亚马逊美国站规定自2026年9月30日起，卖家自配送发往企业购客户的订单，其营业时间配送率必须保持在90%以上。该指标按14天滚动周期计算。若10月30日仍未达标，自配送商品将在企业购频道被暂停展示。自发货卖家须密切监控配送时效，优化末端派送，确保在企业客户营业时间内送达以维持销售权限。",
+      "category": "policy",
+      "score": 10,
+      "url": "https://www.amz123.com/kx/1yaEUQpk",
+      "source": "amz123",
+      "published_at": "2026-07-08T01:49:07+00:00"
+    },
+    {
+      "title": "你是否真的理解运营节奏？在内卷的2026年 大红海产品是否还有一飞冲天的机会？5年亚马逊精品卖家分享超硬核广告节奏，助力每一个梦想的实现",
+      "summary": "亚马逊广告精细化运营需建立量化标准。否定词判定上，单搜索词7天花费超2倍客单价且无转化，或点击超20次且转化率低于类目均值30%则精准否定。冷启动期手动组仅开精准匹配，每日筛选高花费无转化词否定，若点击率连续3天低于0.5%则暂停加预算并优化Listing，通过精细化数据指标指导运营。",
+      "category": "experience",
+      "score": 10,
+      "url": "https://www.wearesellers.com/question/121064",
+      "source": "wearesellers",
+      "published_at": "2026-06-15T10:47:58.105+00:00"
+    },
+    {
+      "title": "市调不会做？类目看不懂？产品开不出来？我教你！！",
+      "summary": "以长方形桌布类目为例，详解亚马逊市场调研与选品方法。通过分析市场容量、季节性波动（3至5月旺季）、父体集中度（CR10为26.78%）及新品表现，提出小卖家应采取少量备货、快速测图、主打长尾词的轻资产运营策略。",
+      "category": "experience",
+      "score": 10,
+      "url": "https://www.wearesellers.com/question/120903",
+      "source": "wearesellers",
+      "published_at": "2026-06-12T09:43:11.164+00:00"
+    },
+    {
+      "title": "This is Amazon's response to a demand letter (and why you should send one)",
+      "summary": "针对亚马逊丢失库存等过失，卖家可依据服务条款向其邮寄正式律师函索赔。作者实测每年发送5至6封且成功率接近100%，通常在60天内获得退款。此举属于合规争议解决流程，只要证据充分且符合政策，卖家无需担心账号遭报复。",
+      "category": "experience",
+      "score": 10,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1u2hqdz/this_is_amazons_response_to_a_demand_letter_and",
+      "source": "reddit_fba",
+      "published_at": "2026-06-10T22:57:29+00:00"
+    },
+    {
+      "title": "If you saw that the EU packaging rule got delayed, that delay does not cover US and UK sellers",
+      "summary": "澄清欧盟包装法延期政策不适用于美英卖家，8月12日授权代表义务依然有效。德国LUCID无小卖家豁免，须免费注册并按量购买包装授权，否则亚马逊将封锁Listing；法国则需环保组织成员身份及Triman标志。非欧盟卖家必须在销售国指定授权代表以确保合规。",
       "category": "policy",
       "score": 9.4,
-      "url": "https://www.amz123.com/kx/nHXdhU3g",
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1v6eumy/if_you_saw_that_the_eu_packaging_rule_got_delayed",
+      "source": "reddit_fba",
+      "published_at": "2026-07-25T17:46:20.000Z"
+    },
+    {
+      "title": "欧洲酷暑推动亚马逊移动空调销量猛增，冬季选品窗口开启",
+      "summary": "欧洲酷暑推动移动空调、隔热膜等高价改造居所产品销量大增。卖家应把握季节性选品规律，在7月开始选择冬季产品并对接供应链，8月进行打样，9月入仓，10月中旬借助万圣节进行预热，11月迎来黑五和圣诞购物季，实现淡季练兵与旺季打仗的闭环。",
+      "category": "experience",
+      "score": 9.4,
+      "url": "https://www.amz123.com/kx/llgZ7a7w",
       "source": "amz123",
-      "published_at": "2026-07-24T09:16:33.000Z"
+      "published_at": "2026-07-23T03:41:29+00:00"
     },
     {
-      "title": "无品牌新品期干到小类BSR第二，你敢信？",
-      "summary": "分析了无品牌新品利用SP控词和国鹰元素设计快速冲上BSR前列的案例。介绍通过Sif MCP工具连接AI与数据库，深度拆解竞品广告架构。分享了包含流量结构、关键词生命周期等维度的选品评估提示词，帮助卖家规避开模跟品风险。",
-      "category": "experience",
-      "score": 9.4,
-      "url": "https://www.wearesellers.com/question/122495",
-      "source": "wearesellers",
-      "published_at": "2026-07-22T07:29:12.238+00:00"
-    },
-    {
-      "title": "低CPC不等于低成本，转化效率才是关键",
-      "summary": "优化亚马逊广告需以转化率为核心。通过对比不同广告位的转化率、ACOS和点击率，确定表现最佳的位置。操作上采用先降低基础竞价、再提高优势位置溢价比例的方式引导流量，并关掉低效广告组以集中预算。",
-      "category": "experience",
-      "score": 9.4,
-      "url": "https://www.wearesellers.com/question/122281",
-      "source": "wearesellers",
-      "published_at": "2026-07-16T06:59:07.267+00:00"
-    },
-    {
-      "title": "亚马逊美国AWD将于7月31日起全面停止接收大件商品",
-      "summary": "亚马逊美国站AWD将于2026年7月31日起停止接收大件及超重商品，单件尺寸超45.7×35.6×20.3厘米或重超9公斤将被拦截。主营家具、健身器材等大件商品的卖家需及早调整海外仓布局，改变依靠AWD储备长期库存以降低FBA仓储成本的运营模式。",
+      "title": "亚马逊北美站收紧锂电池小家电合规要求",
+      "summary": "亚马逊北美站针对锂电池家用设备卖家启动专项合规审核。卖家须在收到通知30天内，购买单次及年度累计保额不低于100万美元的商业综合责任险，且保险需覆盖锂电池供电家用电器责任，将亚马逊列为附加被保险人，并完成TIC第三方直接验证。",
       "category": "policy",
       "score": 9.4,
-      "url": "https://www.amz123.com/kx/S1F3tDAH",
+      "url": "https://www.amz123.com/kx/ZTxldODD",
       "source": "amz123",
-      "published_at": "2026-07-16T05:54:01+00:00"
+      "published_at": "2026-07-23T03:20:30+00:00"
     },
     {
-      "title": "亚马逊取消精选报价前置门槛，全球卖家同台内卷",
-      "summary": "亚马逊调整精选报价规则，自今年7月起分批取消卖家前置资格筛选，全店产品报价自动进入候选池。虽然取消了前置审核，但最终评选逻辑不变。卖家无需手动操作，但必须持续优化价格竞争力、配送时效及店铺综合绩效这三个核心维度，以在更激烈的自动竞争中获取购物车权重。",
+      "title": "美国10%全球临时附加税将于7月24日到期",
+      "summary": "美国10%全球临时进口附加税将于2026年7月24日到期，整体进口关税率将降至7.2%。但随后将推出两轮新301条款，对中国等46个地区加征12.5%额外关税。卖家需提前调整出货计划，核算新税率下的综合关税成本。",
       "category": "policy",
       "score": 9.4,
-      "url": "https://www.amz123.com/kx/VLqeusSZ",
+      "url": "https://www.amz123.com/kx/4MbU40jW",
       "source": "amz123",
-      "published_at": "2026-07-13T06:19:29+00:00"
+      "published_at": "2026-07-20T06:00:28+00:00"
     },
     {
-      "title": "亚马逊上架19天，就拿下多个大词排名第一，究竟是什么“神秘打法”？",
-      "summary": "该打法通过多店铺跟卖同一链接并统一高定价来拉高参考价，在前台生成超大额折扣划线价。随后利用YouTube红人、短视频及站外推广网站进行大额折扣放量，在短时间内快速提升销量与大词排名，实现血海市场中的短线爆发与持续获利。",
+      "title": "推链接，是否有必要花大额广告花费去推排名 冲销量？我把广告费从500美金降到200多美金，订单翻了3倍、利润翻到4-5倍，为什么老板还是让我把花费加到1000美金以上去冲销量，难道不怕转化崩盘丢权重吗？",
+      "summary": "针对大件非标品，通过将广告费从500美金降至200多美金、避开高流量大词、改从泛流量入手，实现订单翻3倍且利润提升4-5倍。方法证实盲目加大广告费死磕大词会降低转化率并损害链接权重，应根据链接实际情况合理控制广告预算。",
       "category": "experience",
       "score": 9.4,
-      "url": "https://www.wearesellers.com/question/121998",
+      "url": "https://www.wearesellers.com/question/122324",
       "source": "wearesellers",
-      "published_at": "2026-07-10T08:21:26.534+00:00"
+      "published_at": "2026-07-17T07:12:36.529+00:00"
     }
   ]
 }
