@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-07-27T09:35:47Z",
-  "digest_date": "2026-07-27",
+  "generated_at_utc": "2026-07-28T08:19:17Z",
+  "digest_date": "2026-07-28",
   "article_count": 50,
   "articles": [
     {
-      "title": "亚马逊AI图片合规新规实操分享 哪些图要打标怎么打标一次说清楚",
-      "summary": "详解亚马逊AI图片合规新规及实操方法。凡含AI生成逼真人物的图片，必须在元数据XMP dc subject或Windows标记字段中写入contains-synthetic-performer标签。提供排查归档、批量写入、建立素材表等三步走合规流程，规避Listing下架风险。",
+      "title": "亚马逊卖家别忽略AI图标签，contains-synthetic-performer怎么加才算过验证？",
+      "summary": "亚马逊要求对包含AI生成逼真人物的商品图片添加特定标签。卖家可通过Windows属性、macOS预览或ExifTool命令行，在图片XMP元数据的dc:subject字段中写入contains-synthetic-performer关键词，并通过Metadata++等工具验证成功后上传审核。",
       "category": "policy",
       "score": 10,
-      "url": "https://www.wearesellers.com/question/122542",
+      "url": "https://www.wearesellers.com/question/122681",
       "source": "wearesellers",
-      "published_at": "2026-07-24T07:09:55.702+00:00"
+      "published_at": "2026-07-28T07:26:47.873Z"
     },
     {
-      "title": "一文回答所有关于提升自然流量，降低广告订单占比的相关问题——可以推自然位的关键词特征",
-      "summary": "提升亚马逊自然流量需通过SP手动精准广告冲首页位置。在预算分配上建议SP占比约80%，SB和SD占20%。利用TOS位置的高点击率和清晰转化路径，让系统判定产品与关键词的高相关性，从而最高效地推动自然排名上升。",
-      "category": "experience",
-      "score": 10,
-      "url": "https://www.wearesellers.com/question/122397",
-      "source": "wearesellers",
-      "published_at": "2026-07-21T07:10:03.329+00:00"
-    },
-    {
-      "title": "亚马逊视频认证启动历史违规账户回溯核查",
-      "summary": "亚马逊于2026年下半年启动视频认证历史违规账户回溯核查，对涉嫌提供虚假身份信息的账户进行关闭并冻结资金。目前审核已直连支付宝国家政务服务平台进行电子证照实人核验，卖家必须使用真实合规的身份材料，严禁使用伪造证件。",
+      "title": "亚马逊全球一测通GTO上线，一次检测覆盖美欧日澳等16大站点",
+      "summary": "亚马逊面向中国卖家推出全球一测通服务，实现一次测试、多站通行，首期覆盖玩具品类，可同步满足美、欧、日、澳等16大站点的合规审核。卖家可通过亚马逊SPN服务商网络，预约Intertek、SGS、TÜV SÜD或宁波海关技术中心进行寄样检测，大幅简化多站点合规流程。",
       "category": "policy",
       "score": 10,
-      "url": "https://www.amz123.com/kx/zNWpOKXA",
+      "url": "https://www.amz123.com/kx/w0dsfdw4",
       "source": "amz123",
-      "published_at": "2026-07-17T09:24:58+00:00"
+      "published_at": "2026-07-16T06:04:16+00:00"
     },
     {
-      "title": "ACOS 偏高时，我会先看哪些数据？自动广告最近 30 天一共出了 344 单，整体转化率是 8.9%，ACOS 62.18%。应该怎么调整？应该先看整体转化率，再看细分转化率.....",
-      "summary": "阐述了亚马逊广告ACOS偏高时的优化实操方法。核心步骤为：先对比顶部、其余和商品页三个位置的转化率、ACOS及点击率；通过降低整体基础竞价并提高表现优异位置的百分比溢价，实现流量精准转移；对于数据量大的自动广告，应将紧密和宽泛匹配拆分单独管理，避免预算被单一模式抢占。",
-      "category": "experience",
-      "score": 10,
-      "url": "https://www.wearesellers.com/question/122160",
-      "source": "wearesellers",
-      "published_at": "2026-07-15T07:36:18.964+00:00"
-    },
-    {
-      "title": "亚马逊下半年大促提报开启，早鸟优惠、促销资格速看！",
-      "summary": "2026年亚马逊下半年大促提报开启。美国站Prime会员大促提报为7月8日至9月8日，黑五网一为7月8日至10月20日。促销要求定价不高于60天最低价，且比30天最低价至少优惠5%。早鸟提报可省50美元固定费。旺季配送费平均每件上涨0.32美元。",
+      "title": "亚马逊美英站更新FBM政策：BHDR≥90%，英国站默认处理时间缩至1天",
+      "summary": "亚马逊美英站更新FBM政策。美国站自2026年9月30日起新增营业时间送达率考核，要求滚动14天内面向企业客户的送达率不低于90%，否则暂停Amazon Business端展示，卖家应优先使用购买配送及自动化工具。英国站默认处理时间缩短至0或1天，且系统会根据实际速度自动调整。",
       "category": "policy",
       "score": 10,
-      "url": "https://www.wearesellers.com/question/122045",
-      "source": "wearesellers",
-      "published_at": "2026-07-09T09:01:29.635+00:00"
+      "url": "https://www.amz123.com/kx/LUfRb7Rh",
+      "source": "amz123",
+      "published_at": "2026-07-01T03:23:46+00:00"
     },
     {
-      "title": "7月27日亚马逊商品名称新规倒计时：标题优化实操指南",
-      "summary": "亚马逊新规要求非媒介类商品标题缩减至75字符以内。卖家应主动优化标题，仅保留品牌名和核心流量词，将材质、功能等次要卖点转移至新增的125字符商品亮点板块及五点描述中。建议先用中等销量链接测试，避免被系统AI强制乱改。",
+      "title": "CPSC电子申报新规7月8日强制落地，双清包税时代结束——整理了一些思路给大家参考",
+      "summary": "本文详解了7月8日强制执行的CPSC电子申报新规。由于违规罚款高，货代不再代担风险。卖家可通过两种申报方式应对：一是完整申报提供产品标识等七要素；二是引用申报提前在CPSC备案。无自有BOND的卖家可找代报货代或通过购买BOND服务解决。",
       "category": "policy",
       "score": 10,
-      "url": "https://www.wearesellers.com/question/122034",
+      "url": "https://www.wearesellers.com/question/121155",
       "source": "wearesellers",
-      "published_at": "2026-07-09T08:52:43.54+00:00"
+      "published_at": "2026-06-18T07:07:22.703+00:00"
     },
     {
-      "title": "SFP delivery-speed thresholds go up July 6. Here's exactly what changes by size tier",
-      "summary": "亚马逊自配送Prime（SFP）时效门槛于7月6日提高。标准件一日达门槛升至40%，两日达升至75%；大件和超大件门槛亦有提升。未达标将失去Prime标志并影响购物车与排名。10月17日前周末暂不计入考核，卖家需尽快优化配送。",
-      "category": "policy",
-      "score": 10,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1uly4ik/sfp_deliveryspeed_thresholds_go_up_july_6_heres",
-      "source": "reddit_fba",
-      "published_at": "2026-07-02T23:30:41+00:00"
-    },
-    {
-      "title": "会员日后关键词排名稳不住？不是自然回落，是结构塌了",
-      "summary": "会员日后关键词排名下滑本质是流量结构在重新分配。卖家应利用后7天黄金期进行调整：第一至二天稳住主词广告预算与结构不动以止跌；第三至五天将关键词分类，并将预算重新分配为30%给主词稳排名、50%给高转化长尾词接流量、20%给防守词防竞品，实现多点支撑。",
-      "category": "experience",
-      "score": 10,
-      "url": "https://www.wearesellers.com/question/121579",
-      "source": "wearesellers",
-      "published_at": "2026-06-30T01:57:57.196+00:00"
-    },
-    {
-      "title": "#超级话题#亚马逊标题新规，怎么大家都没改",
-      "summary": "亚马逊规定自2026年7月27日起，除媒介类外所有商品名称须缩减至75字符以内以适配移动端。同时新增125字符的商品亮点用于补充材质或场景信息，该亮点支持搜索与展示。卖家需在截止日前将标题精简至75字符并配置商品亮点，利用新增空间进行埋词与卖点展示。",
+      "title": "FedEx 2026旺季附加费最高可达595美元，黑五网一窗口11月23日起收费达到上限",
+      "summary": "FedEx公布2026年旺季附加费方案，自9月28日起分阶段生效。在11月23日至12月27日的黑五和圣诞销售窗口期，住宅地面配送附加费最高涨至0.80美元每件，超规格未授权包裹附加费峰值达595美元。卖家需提前规划物流预算以应对成本上升。",
       "category": "policy",
       "score": 9.4,
-      "url": "https://www.wearesellers.com/question/122662",
-      "source": "wearesellers",
-      "published_at": "2026-07-27T09:12:15.311Z"
+      "url": "https://www.amz123.com/kx/nHXdhU3g",
+      "source": "amz123",
+      "published_at": "2026-07-24T09:16:33+00:00"
     },
     {
-      "title": "亚马逊ShipTrack扩展至墨西哥站和印度站，Amazon SEND完成领星ERP对接",
-      "summary": "亚马逊ShipTrack系统正式接入墨西哥站和印度站，对接多家本土物流商，实现发货、清关、送仓等全链路节点信息同步并自动录入单号，降低入库缺陷。同时，Amazon SEND完成与领星ERP对接，卖家可实现一键批量下单，提升运营效率。",
+      "title": "无品牌新品期干到小类BSR第二，你敢信？",
+      "summary": "分析了无品牌新品利用SP控词和国鹰元素设计快速冲上BSR前列的案例。介绍通过Sif MCP工具连接AI与数据库，深度拆解竞品广告架构。分享了包含流量结构、关键词生命周期等维度的选品评估提示词，帮助卖家规避开模跟品风险。",
       "category": "experience",
       "score": 9.4,
-      "url": "https://www.amz123.com/kx/ILQAv9Kb",
+      "url": "https://www.wearesellers.com/question/122495",
+      "source": "wearesellers",
+      "published_at": "2026-07-22T07:29:12.238+00:00"
+    },
+    {
+      "title": "低CPC不等于低成本，转化效率才是关键",
+      "summary": "优化亚马逊广告需以转化率为核心。通过对比不同广告位的转化率、ACOS和点击率，确定表现最佳的位置。操作上采用先降低基础竞价、再提高优势位置溢价比例的方式引导流量，并关掉低效广告组以集中预算。",
+      "category": "experience",
+      "score": 9.4,
+      "url": "https://www.wearesellers.com/question/122281",
+      "source": "wearesellers",
+      "published_at": "2026-07-16T06:59:07.267+00:00"
+    },
+    {
+      "title": "亚马逊美国AWD将于7月31日起全面停止接收大件商品",
+      "summary": "亚马逊美国站AWD将于2026年7月31日起停止接收大件及超重商品，单件尺寸超45.7×35.6×20.3厘米或重超9公斤将被拦截。主营家具、健身器材等大件商品的卖家需及早调整海外仓布局，改变依靠AWD储备长期库存以降低FBA仓储成本的运营模式。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.amz123.com/kx/S1F3tDAH",
       "source": "amz123",
-      "published_at": "2026-07-27T02:23:23.000Z"
+      "published_at": "2026-07-16T05:54:01+00:00"
+    },
+    {
+      "title": "亚马逊取消精选报价前置门槛，全球卖家同台内卷",
+      "summary": "亚马逊调整精选报价规则，自今年7月起分批取消卖家前置资格筛选，全店产品报价自动进入候选池。虽然取消了前置审核，但最终评选逻辑不变。卖家无需手动操作，但必须持续优化价格竞争力、配送时效及店铺综合绩效这三个核心维度，以在更激烈的自动竞争中获取购物车权重。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.amz123.com/kx/VLqeusSZ",
+      "source": "amz123",
+      "published_at": "2026-07-13T06:19:29+00:00"
+    },
+    {
+      "title": "亚马逊上架19天，就拿下多个大词排名第一，究竟是什么“神秘打法”？",
+      "summary": "该打法通过多店铺跟卖同一链接并统一高定价来拉高参考价，在前台生成超大额折扣划线价。随后利用YouTube红人、短视频及站外推广网站进行大额折扣放量，在短时间内快速提升销量与大词排名，实现血海市场中的短线爆发与持续获利。",
+      "category": "experience",
+      "score": 9.4,
+      "url": "https://www.wearesellers.com/question/121998",
+      "source": "wearesellers",
+      "published_at": "2026-07-10T08:21:26.534+00:00"
     }
   ]
 }
