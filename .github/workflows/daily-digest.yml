@@ -67,6 +67,7 @@ jobs:
         id: run_digest
         run: npx tsx src/main.ts
         env:
+          AMZ_DIGEST_EMAIL_ENABLED: '0'
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
@@ -155,6 +156,7 @@ jobs:
           npx playwright install chromium --with-deps
           npx tsx src/main.ts
         env:
+          AMZ_DIGEST_EMAIL_ENABLED: '0'
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}

@@ -1195,6 +1195,11 @@ export async function runPipeline(): Promise<void> {
 
     const baseEmailHtml = generateEmailHtml(finalArticles, date);
     const emailHtml = injectDigestWarnings(baseEmailHtml, digestWarnings);
+    // email leg retired per Director ruling 2026-07-29; delete the env line in the
+    // workflow to restore. Only the daily briefing delivery is disabled: HTML
+    // generation above stays (persisted and read back by dedup + coverage checks),
+    // and every sendAlertEmail path stays armed.
+    if (process.env.AMZ_DIGEST_EMAIL_ENABLED !== '0') {
     const subscribers = await getActiveSubscribers();
     const fallbackRecipient = process.env.DIGEST_EMAIL?.trim();
     const recipients = subscribers.length > 0
@@ -1245,6 +1250,9 @@ export async function runPipeline(): Promise<void> {
       } catch (alertErr) {
         console.error('[Main] Failed to send partial-failure alert email:', alertErr);
       }
+    }
+    } else {
+      console.log('[Main] Step 4/5: email delivery disabled (AMZ_DIGEST_EMAIL_ENABLED=0); HTML generated, send skipped');
     }
 
     // ------------------------------------------------------------------

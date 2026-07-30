@@ -244,6 +244,30 @@ describe('runPipeline orchestration', () => {
     expect(mocks.markRunFailed).not.toHaveBeenCalled();
   });
 
+  it('skips the send but still persists and publishes when AMZ_DIGEST_EMAIL_ENABLED=0', async () => {
+    // email leg retired per Director ruling 2026-07-29: the switch must disable
+    // delivery only - HTML generation, Supabase persistence and the
+    // digest-latest.json publish (amz-autopilot's news source) all stay live.
+    process.env.AMZ_DIGEST_EMAIL_ENABLED = '0';
+    try {
+      const { runPipeline, mocks } = await loadMainWithMocks();
+
+      await runPipeline();
+
+      expect(mocks.sendDigestEmail).not.toHaveBeenCalled();
+      expect(mocks.getActiveSubscribers).not.toHaveBeenCalled();
+      expect(mocks.generateEmailHtml).toHaveBeenCalledTimes(1);
+      expect(mocks.saveDigest).toHaveBeenCalledWith(
+        expect.objectContaining({ run_id: 'run-test-id', status: 'sent' }),
+      );
+      expect(mocks.writeDigestJson).toHaveBeenCalledTimes(1);
+      expect(mocks.markRunSent).toHaveBeenCalledWith('run-test-id', 30);
+      expect(mocks.markRunFailed).not.toHaveBeenCalled();
+    } finally {
+      delete process.env.AMZ_DIGEST_EMAIL_ENABLED;
+    }
+  });
+
   it('preserves at least one item per active source group when fallback can provide them', async () => {
     const strictOnlyAmz = makePublishedArticles(35, {
       source: 'amz123',
