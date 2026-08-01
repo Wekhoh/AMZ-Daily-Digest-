@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-07-31T08:38:35Z",
-  "digest_date": "2026-07-31",
+  "generated_at_utc": "2026-08-01T08:07:59Z",
+  "digest_date": "2026-08-01",
   "article_count": 50,
   "articles": [
     {
-      "title": "亚马逊卖家别忽略AI图标签，contains-synthetic-performer怎么加才算过验证？",
-      "summary": "亚马逊要求对包含AI生成逼真人物的商品图片添加特定标签。卖家可通过Windows属性、macOS预览或ExifTool命令行，在图片XMP元数据的dc:subject字段中写入contains-synthetic-performer关键词，并通过Metadata++等工具验证成功后上传审核。",
-      "category": "policy",
-      "score": 10,
-      "url": "https://www.wearesellers.com/question/122681",
-      "source": "wearesellers",
-      "published_at": "2026-07-28T07:26:47.873+00:00"
-    },
-    {
-      "title": "亚马逊全球一测通GTO上线，一次检测覆盖美欧日澳等16大站点",
-      "summary": "亚马逊面向中国卖家推出全球一测通服务，实现一次测试、多站通行，首期覆盖玩具品类，可同步满足美、欧、日、澳等16大站点的合规审核。卖家可通过亚马逊SPN服务商网络，预约Intertek、SGS、TÜV SÜD或宁波海关技术中心进行寄样检测，大幅简化多站点合规流程。",
-      "category": "policy",
-      "score": 10,
-      "url": "https://www.amz123.com/kx/w0dsfdw4",
-      "source": "amz123",
-      "published_at": "2026-07-16T06:04:16+00:00"
-    },
-    {
-      "title": "亚马逊美英站更新FBM政策：BHDR≥90%，英国站默认处理时间缩至1天",
-      "summary": "亚马逊美英站更新FBM政策。美国站自2026年9月30日起新增营业时间送达率考核，要求滚动14天内面向企业客户的送达率不低于90%，否则暂停Amazon Business端展示，卖家应优先使用购买配送及自动化工具。英国站默认处理时间缩短至0或1天，且系统会根据实际速度自动调整。",
-      "category": "policy",
-      "score": 10,
-      "url": "https://www.amz123.com/kx/LUfRb7Rh",
-      "source": "amz123",
-      "published_at": "2026-07-01T03:23:46+00:00"
-    },
-    {
-      "title": "CPSC电子申报新规7月8日强制落地，双清包税时代结束——整理了一些思路给大家参考",
-      "summary": "本文详解了7月8日强制执行的CPSC电子申报新规。由于违规罚款高，货代不再代担风险。卖家可通过两种申报方式应对：一是完整申报提供产品标识等七要素；二是引用申报提前在CPSC备案。无自有BOND的卖家可找代报货代或通过购买BOND服务解决。",
-      "category": "policy",
-      "score": 10,
-      "url": "https://www.wearesellers.com/question/121155",
-      "source": "wearesellers",
-      "published_at": "2026-06-18T07:07:22.703+00:00"
-    },
-    {
-      "title": "那些鲜为认知的亚马逊运营手法：卡位、捡漏与受众精准收割卡位瀑布流、低竞价捡漏广告、AMC（亚马逊营销云）人群包再营销......",
-      "summary": "亚马逊高阶运营可通过卡位瀑布流提升大词曝光，利用极低基础竞价配合极高位置溢价的捡漏广告获取长尾流量。同时，利用种子链接低价做Vine并合并变体，以及开CASE修改权威链接嵌入核心词，可实现新品快速冷启动。",
+      "title": "你的亚马逊广告位调价是正向优化还是反向烧钱？90%朋友选错了",
+      "summary": "亚马逊广告位调价应以流量分流为导向而非单纯奖励表现。实操方法是先降低底价（如降至0.3）使不想要的广告位自然熄火，再通过公式‘加价比例=（目标出价-新底价）/新底价’，针对性提高目标广告位的加价比例，实现精准控流。",
       "category": "experience",
       "score": 10,
-      "url": "https://www.wearesellers.com/question/120639",
+      "url": "https://www.wearesellers.com/question/122094",
       "source": "wearesellers",
-      "published_at": "2026-06-06T10:13:54.511+00:00"
+      "published_at": "2026-07-11T06:50:43.904+00:00"
     },
     {
-      "title": "亚马逊关闭卖家主动联系差评买家功能",
-      "summary": "亚马逊分批取消卖家通过后台主动联系差评买家的权限，过去常用的退款补发等救火式改评方式失效，仅能等待买家主动联系。卖家必须严禁通过站外邮箱或社媒绕道联系买家，应将运营重心转向前期品控与Listing描述的准确性，避免封号风险。",
+      "title": "亚马逊美站自发货卖家须维持90%营业时间配送率",
+      "summary": "亚马逊美国站规定自2026年9月30日起，卖家自配送发往企业购客户的订单，其营业时间配送率必须保持在90%以上。该指标按14天滚动周期计算。若10月30日仍未达标，自配送商品将在企业购频道被暂停展示。自发货卖家须密切监控配送时效，优化末端派送，确保在企业客户营业时间内送达以维持销售权限。",
       "category": "policy",
       "score": 10,
-      "url": "https://www.amz123.com/kx/HgNnbFK3",
+      "url": "https://www.amz123.com/kx/1yaEUQpk",
       "source": "amz123",
-      "published_at": "2026-06-05T05:57:07+00:00"
+      "published_at": "2026-07-08T01:49:07+00:00"
     },
     {
-      "title": "亚马逊NSP计划将于7月30日进行重大升级",
-      "summary": "亚马逊物流新品入仓优惠计划（NSP）将于2026年7月30日升级。旧用户需在10月31日前重新确认注册。升级后新父ASIN首件入仓120天内享优惠，前100件商品佣金降至10%，次100件降至5%，前200件免除仓储费等多项费用，并新增Vine和Coupon费用优惠。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.amz123.com/kx/4ifaih3a",
+      "title": "亚马逊Vine跨站评论同步功能恢复 美欧日站评价批量回显",
+      "summary": "亚马逊美欧日站Vine评论跨站同步功能已恢复，前期因风控失联的评价正批量回显。该功能可低成本扩充评价基数并提升转化率。若后台未自动恢复，卖家可在Prime Day前通过提交Case申请刷新全球ASIN同步权限，通常24小时内即可完成修复。",
+      "category": "experience",
+      "score": 10,
+      "url": "https://www.amz123.com/kx/47Ah3vUB",
       "source": "amz123",
-      "published_at": "2026-07-31T06:29:54.000Z"
+      "published_at": "2026-06-18T03:38:54+00:00"
     },
     {
-      "title": "I looked at the top 20 Amazon listings for water bottles and electric kettles. Here's what they all had in common.",
-      "summary": "通过分析亚马逊热水壶类目Top20主图发现，高点击率主图具有高共性：产品需占满大部分画面以减少空白，利用强对比度提升移动端辨识度，采用简单拍摄角度，确保轮廓在一秒内可识别，且整体干净整洁。卖家应优先保证主图直观易懂，而非单纯追求美观，以此提升主图点击率。",
+      "title": "你是否真的理解运营节奏？在内卷的2026年 大红海产品是否还有一飞冲天的机会？5年亚马逊精品卖家分享超硬核广告节奏，助力每一个梦想的实现",
+      "summary": "亚马逊广告精细化运营需建立量化标准。否定词判定上，单搜索词7天花费超2倍客单价且无转化，或点击超20次且转化率低于类目均值30%则精准否定。冷启动期手动组仅开精准匹配，每日筛选高花费无转化词否定，若点击率连续3天低于0.5%则暂停加预算并优化Listing，通过精细化数据指标指导运营。",
+      "category": "experience",
+      "score": 10,
+      "url": "https://www.wearesellers.com/question/121064",
+      "source": "wearesellers",
+      "published_at": "2026-06-15T10:47:58.105+00:00"
+    },
+    {
+      "title": "The reimbursement money I was leaving on the table for over a year (FBA)",
+      "summary": "亚马逊FBA索赔实操方法。卖家应每月比对退货报告与赔偿报告，针对买家未退回货物、超45天未退回已退款件、库容损毁未自动赔偿等异常，以一单一案、只陈述事实的方式开case索赔，避免因超出时效而造成资金损失。",
       "category": "experience",
       "score": 9.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vbh2gx/i_looked_at_the_top_20_amazon_listings_for_water",
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vbqfwd/the_reimbursement_money_i_was_leaving_on_the",
       "source": "reddit_fba",
-      "published_at": "2026-07-31T04:58:34.000Z"
+      "published_at": "2026-07-31T13:06:17.000Z"
     },
     {
-      "title": "刚接手链接广告到底该怎么开？一个实例展开广告搭建，轻松驾驭广告结构.",
-      "summary": "针对新接手Listing的广告搭建，应采用项目式思维，通过定量计算推导运营指标。首先根据客单价、库存和目标广告成本占比计算出每日预算；再结合历史或调研的平均CPC，倒推出维持销售所需的每日有效点击数与目标转化率基准，从而实现广告指标的精准量化。",
-      "category": "experience",
-      "score": 9.4,
-      "url": "https://www.wearesellers.com/question/122786",
-      "source": "wearesellers",
-      "published_at": "2026-07-31T08:23:18.427Z"
-    },
-    {
-      "title": "标题超限直接被AI改写！亚马逊75字符新规即将强制执行",
-      "summary": "亚马逊将于2026年7月27日起强制执行75字符标题新规。超出字符需移至可被搜索的商品亮点中。卖家需在后台管理所有库存中，通过编辑页面的查看改进内容，预览并一键采用或调整AI推荐的名称与亮点，避免逾期被AI强制替代。",
+      "title": "关于亚马逊引流洞察的一些信息分享：14天归因期内至少需10次点击才会显示数据，品牌引流奖励计划中平均10%的返点奖励规则",
+      "summary": "亚马逊引流洞察可追踪站外广告效果，归因期14天内需至少10次点击才显示数据。创建时需选择投放渠道并生成归因标签。品牌引流奖励计划平均返点10%，但仅限美国本土广告商，返点延迟两个月存入，仅可用于抵扣销售佣金。",
       "category": "policy",
       "score": 9.4,
-      "url": "https://www.wearesellers.com/question/122858",
+      "url": "https://www.wearesellers.com/question/122721",
       "source": "wearesellers",
-      "published_at": "2026-07-31T08:01:06.536Z"
+      "published_at": "2026-07-29T07:24:07.531+00:00"
+    },
+    {
+      "title": "做了5年亚马逊站外推广，我整理了100个坑",
+      "summary": "亚马逊站外推广需严防折扣叠加与定价失误。实操中应通过买家端验证到手价，设置优惠券与折扣码不叠加以防0元购；站外推广结束须及时关闭折扣码；上Deal站前应扣除FBA配送费、佣金等核算保本价，且折扣力度建议在50%以上以激发购买欲；多变体申报须明确ASIN及适用变体。",
+      "category": "experience",
+      "score": 9.4,
+      "url": "https://www.wearesellers.com/question/122710",
+      "source": "wearesellers",
+      "published_at": "2026-07-29T06:23:00.415+00:00"
+    },
+    {
+      "title": "If you saw that the EU packaging rule got delayed, that delay does not cover US and UK sellers",
+      "summary": "澄清欧盟包装法延期政策不适用于美英卖家，8月12日授权代表义务依然有效。德国LUCID无小卖家豁免，须免费注册并按量购买包装授权，否则亚马逊将封锁Listing；法国则需环保组织成员身份及Triman标志。非欧盟卖家必须在销售国指定授权代表以确保合规。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1v6eumy/if_you_saw_that_the_eu_packaging_rule_got_delayed",
+      "source": "reddit_fba",
+      "published_at": "2026-07-25T17:46:20+00:00"
+    },
+    {
+      "title": "欧洲酷暑推动亚马逊移动空调销量猛增，冬季选品窗口开启",
+      "summary": "欧洲酷暑推动移动空调、隔热膜等高价改造居所产品销量大增。卖家应把握季节性选品规律，在7月开始选择冬季产品并对接供应链，8月进行打样，9月入仓，10月中旬借助万圣节进行预热，11月迎来黑五和圣诞购物季，实现淡季练兵与旺季打仗的闭环。",
+      "category": "experience",
+      "score": 9.4,
+      "url": "https://www.amz123.com/kx/llgZ7a7w",
+      "source": "amz123",
+      "published_at": "2026-07-23T03:41:29+00:00"
+    },
+    {
+      "title": "亚马逊北美站收紧锂电池小家电合规要求",
+      "summary": "亚马逊北美站针对锂电池家用设备卖家启动专项合规审核。卖家须在收到通知30天内，购买单次及年度累计保额不低于100万美元的商业综合责任险，且保险需覆盖锂电池供电家用电器责任，将亚马逊列为附加被保险人，并完成TIC第三方直接验证。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.amz123.com/kx/ZTxldODD",
+      "source": "amz123",
+      "published_at": "2026-07-23T03:20:30+00:00"
     }
   ]
 }
