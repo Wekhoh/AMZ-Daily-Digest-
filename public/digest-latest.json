@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-08-03T09:27:01Z",
-  "digest_date": "2026-08-03",
+  "generated_at_utc": "2026-08-04T08:26:00Z",
+  "digest_date": "2026-08-04",
   "article_count": 50,
   "articles": [
     {
-      "title": "亚马逊卖家别忽略AI图标签，contains-synthetic-performer怎么加才算过验证？",
-      "summary": "亚马逊要求对包含AI生成逼真人物的商品图片添加特定标签。卖家可通过Windows属性、macOS预览或ExifTool命令行，在图片XMP元数据的dc:subject字段中写入contains-synthetic-performer关键词，并通过Metadata++等工具验证成功后上传审核。",
-      "category": "policy",
+      "title": "为什么TOS加到900%还是没曝光？一文带你了解所有关于亚马逊广告位的问题",
+      "summary": "亚马逊广告位调整需基于数据分析。卖家应下载并透视分析最长90天的广告位报告，获取各位置的CPC、CVR和ROI。冲自然排名时，应筛选出有潜力的词，通过高比例加价主打首页顶部（TOS）；平稳期以盈利为目的时，则需在CPA约束下，依据透视表数据计算基础竞价与百分比，精准卡控各位置以提升投产比。",
+      "category": "experience",
       "score": 10,
-      "url": "https://www.wearesellers.com/question/122681",
+      "url": "https://www.wearesellers.com/question/122921",
       "source": "wearesellers",
-      "published_at": "2026-07-28T07:26:47.873+00:00"
+      "published_at": "2026-08-04T07:23:26.720Z"
     },
     {
-      "title": "亚马逊全球一测通GTO上线，一次检测覆盖美欧日澳等16大站点",
-      "summary": "亚马逊面向中国卖家推出全球一测通服务，实现一次测试、多站通行，首期覆盖玩具品类，可同步满足美、欧、日、澳等16大站点的合规审核。卖家可通过亚马逊SPN服务商网络，预约Intertek、SGS、TÜV SÜD或宁波海关技术中心进行寄样检测，大幅简化多站点合规流程。",
+      "title": "你的亚马逊广告位调价是正向优化还是反向烧钱？90%朋友选错了",
+      "summary": "亚马逊广告位调价应以流量分流为导向而非单纯奖励表现。实操方法是先降低底价（如降至0.3）使不想要的广告位自然熄火，再通过公式‘加价比例=（目标出价-新底价）/新底价’，针对性提高目标广告位的加价比例，实现精准控流。",
+      "category": "experience",
+      "score": 10,
+      "url": "https://www.wearesellers.com/question/122094",
+      "source": "wearesellers",
+      "published_at": "2026-07-11T06:50:43.904+00:00"
+    },
+    {
+      "title": "亚马逊美站自发货卖家须维持90%营业时间配送率",
+      "summary": "亚马逊美国站规定自2026年9月30日起，卖家自配送发往企业购客户的订单，其营业时间配送率必须保持在90%以上。该指标按14天滚动周期计算。若10月30日仍未达标，自配送商品将在企业购频道被暂停展示。自发货卖家须密切监控配送时效，优化末端派送，确保在企业客户营业时间内送达以维持销售权限。",
       "category": "policy",
       "score": 10,
-      "url": "https://www.amz123.com/kx/w0dsfdw4",
+      "url": "https://www.amz123.com/kx/1yaEUQpk",
       "source": "amz123",
-      "published_at": "2026-07-16T06:04:16+00:00"
+      "published_at": "2026-07-08T01:49:07+00:00"
     },
     {
-      "title": "亚马逊美英站更新FBM政策：BHDR≥90%，英国站默认处理时间缩至1天",
-      "summary": "亚马逊美英站更新FBM政策。美国站自2026年9月30日起新增营业时间送达率考核，要求滚动14天内面向企业客户的送达率不低于90%，否则暂停Amazon Business端展示，卖家应优先使用购买配送及自动化工具。英国站默认处理时间缩短至0或1天，且系统会根据实际速度自动调整。",
+      "title": "CPSC电子申报新规7月8日强制落地，双清包税时代结束——整理了一些思路给大家参考",
+      "summary": "本文详解了7月8日强制执行的CPSC电子申报新规。由于违规罚款高，货代不再代担风险。卖家可通过两种申报方式应对：一是完整申报提供产品标识等七要素；二是引用申报提前在CPSC备案。无自有BOND的卖家可找代报货代或通过购买BOND服务解决。",
       "category": "policy",
       "score": 10,
-      "url": "https://www.amz123.com/kx/LUfRb7Rh",
-      "source": "amz123",
-      "published_at": "2026-07-01T03:23:46+00:00"
+      "url": "https://www.wearesellers.com/question/121155",
+      "source": "wearesellers",
+      "published_at": "2026-06-18T07:07:22.703+00:00"
     },
     {
-      "title": "刚接手链接广告到底该怎么开？一个实例展开广告搭建，轻松驾驭广告结构.",
-      "summary": "针对新接手Listing的广告搭建，应采用项目式思维，通过定量计算推导运营指标。首先根据客单价、库存和目标广告成本占比计算出每日预算；再结合历史或调研的平均CPC，倒推出维持销售所需的每日有效点击数与目标转化率基准，从而实现广告指标的精准量化。",
+      "title": "亚马逊Vine跨站评论同步功能恢复 美欧日站评价批量回显",
+      "summary": "亚马逊美欧日站Vine评论跨站同步功能已恢复，前期因风控失联的评价正批量回显。该功能可低成本扩充评价基数并提升转化率。若后台未自动恢复，卖家可在Prime Day前通过提交Case申请刷新全球ASIN同步权限，通常24小时内即可完成修复。",
+      "category": "experience",
+      "score": 10,
+      "url": "https://www.amz123.com/kx/47Ah3vUB",
+      "source": "amz123",
+      "published_at": "2026-06-18T03:38:54+00:00"
+    },
+    {
+      "title": "ERP 和亚马逊后台差了 12,480 元：用一组假数据拆解五层排查法",
+      "summary": "针对ERP与亚马逊后台数据不一致问题，通过五层排查法进行定位。首先明确指标口径，建立指标合同表统一业务范围与金额字段；其次统一日期字段与时区，保留原始和转换时间以解决跨期问题；最后通过订单状态和事件类型匹配，排查如退款双重扣减等状态导致的金额差异，避免盲目调整。",
       "category": "experience",
       "score": 9.4,
-      "url": "https://www.wearesellers.com/question/122786",
+      "url": "https://www.wearesellers.com/question/123007",
       "source": "wearesellers",
-      "published_at": "2026-07-31T08:23:18.427+00:00"
+      "published_at": "2026-08-04T08:14:40.040Z"
     },
     {
-      "title": "标题超限直接被AI改写！亚马逊75字符新规即将强制执行",
-      "summary": "亚马逊将于2026年7月27日起强制执行75字符标题新规。超出字符需移至可被搜索的商品亮点中。卖家需在后台管理所有库存中，通过编辑页面的查看改进内容，预览并一键采用或调整AI推荐的名称与亮点，避免逾期被AI强制替代。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.wearesellers.com/question/122858",
-      "source": "wearesellers",
-      "published_at": "2026-07-31T08:01:06.536+00:00"
-    },
-    {
-      "title": "亚马逊NSP计划将于7月30日进行重大升级",
-      "summary": "亚马逊物流新品入仓优惠计划（NSP）将于2026年7月30日升级。旧用户需在10月31日前重新确认注册。升级后新父ASIN首件入仓120天内享优惠，前100件商品佣金降至10%，次100件降至5%，前200件免除仓储费等多项费用，并新增Vine和Coupon费用优惠。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.amz123.com/kx/4ifaih3a",
-      "source": "amz123",
-      "published_at": "2026-07-31T06:29:54+00:00"
-    },
-    {
-      "title": "I looked at the top 20 Amazon listings for water bottles and electric kettles. Here's what they all had in common.",
-      "summary": "通过分析亚马逊热水壶类目Top20主图发现，高点击率主图具有高共性：产品需占满大部分画面以减少空白，利用强对比度提升移动端辨识度，采用简单拍摄角度，确保轮廓在一秒内可识别，且整体干净整洁。卖家应优先保证主图直观易懂，而非单纯追求美观，以此提升主图点击率。",
+      "title": "当亚马逊广告ACOS爆表时，靠调整竞价能实现逆袭吗？",
+      "summary": "针对亚马逊广告ACOS爆表，应基于数据分类调整竞价。高花费无转化词若预算有限直接否定或暂停；高ACOS且低转化词可逐步下调竞价10%到20%或降低预算并增加高转化位溢价；ACOS达标词可提价5%到10%抢占优质流量；高转化明星词则大胆提价并拓展长尾词。",
       "category": "experience",
       "score": 9.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vbh2gx/i_looked_at_the_top_20_amazon_listings_for_water",
+      "url": "https://www.wearesellers.com/question/109544",
+      "source": "wearesellers",
+      "published_at": "2026-08-04T07:27:08.791Z"
+    },
+    {
+      "title": "The reimbursement money I was leaving on the table for over a year (FBA)",
+      "summary": "亚马逊FBA索赔实操方法。卖家应每月比对退货报告与赔偿报告，针对买家未退回货物、超45天未退回已退款件、库容损毁未自动赔偿等异常，以一单一案、只陈述事实的方式开case索赔，避免因超出时效而造成资金损失。",
+      "category": "experience",
+      "score": 9.4,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vbqfwd/the_reimbursement_money_i_was_leaving_on_the",
       "source": "reddit_fba",
-      "published_at": "2026-07-31T04:58:34+00:00"
+      "published_at": "2026-07-31T13:06:17+00:00"
     },
     {
-      "title": "FedEx 2026旺季附加费最高可达595美元，黑五网一窗口11月23日起收费达到上限",
-      "summary": "FedEx公布2026年旺季附加费方案，自9月28日起分阶段生效。在11月23日至12月27日的黑五和圣诞销售窗口期，住宅地面配送附加费最高涨至0.80美元每件，超规格未授权包裹附加费峰值达595美元。卖家需提前规划物流预算以应对成本上升。",
+      "title": "关于亚马逊引流洞察的一些信息分享：14天归因期内至少需10次点击才会显示数据，品牌引流奖励计划中平均10%的返点奖励规则",
+      "summary": "亚马逊引流洞察可追踪站外广告效果，归因期14天内需至少10次点击才显示数据。创建时需选择投放渠道并生成归因标签。品牌引流奖励计划平均返点10%，但仅限美国本土广告商，返点延迟两个月存入，仅可用于抵扣销售佣金。",
       "category": "policy",
       "score": 9.4,
-      "url": "https://www.amz123.com/kx/nHXdhU3g",
-      "source": "amz123",
-      "published_at": "2026-07-24T09:16:33+00:00"
+      "url": "https://www.wearesellers.com/question/122721",
+      "source": "wearesellers",
+      "published_at": "2026-07-29T07:24:07.531+00:00"
     },
     {
-      "title": "无品牌新品期干到小类BSR第二，你敢信？",
-      "summary": "分析了无品牌新品利用SP控词和国鹰元素设计快速冲上BSR前列的案例。介绍通过Sif MCP工具连接AI与数据库，深度拆解竞品广告架构。分享了包含流量结构、关键词生命周期等维度的选品评估提示词，帮助卖家规避开模跟品风险。",
+      "title": "做了5年亚马逊站外推广，我整理了100个坑",
+      "summary": "亚马逊站外推广需严防折扣叠加与定价失误。实操中应通过买家端验证到手价，设置优惠券与折扣码不叠加以防0元购；站外推广结束须及时关闭折扣码；上Deal站前应扣除FBA配送费、佣金等核算保本价，且折扣力度建议在50%以上以激发购买欲；多变体申报须明确ASIN及适用变体。",
       "category": "experience",
       "score": 9.4,
-      "url": "https://www.wearesellers.com/question/122495",
+      "url": "https://www.wearesellers.com/question/122710",
       "source": "wearesellers",
-      "published_at": "2026-07-22T07:29:12.238+00:00"
-    },
-    {
-      "title": "低CPC不等于低成本，转化效率才是关键",
-      "summary": "优化亚马逊广告需以转化率为核心。通过对比不同广告位的转化率、ACOS和点击率，确定表现最佳的位置。操作上采用先降低基础竞价、再提高优势位置溢价比例的方式引导流量，并关掉低效广告组以集中预算。",
-      "category": "experience",
-      "score": 9.4,
-      "url": "https://www.wearesellers.com/question/122281",
-      "source": "wearesellers",
-      "published_at": "2026-07-16T06:59:07.267+00:00"
+      "published_at": "2026-07-29T06:23:00.415+00:00"
     }
   ]
 }
