@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-08-04T08:26:00Z",
-  "digest_date": "2026-08-04",
+  "generated_at_utc": "2026-08-05T08:22:32Z",
+  "digest_date": "2026-08-05",
   "article_count": 50,
   "articles": [
     {
-      "title": "为什么TOS加到900%还是没曝光？一文带你了解所有关于亚马逊广告位的问题",
-      "summary": "亚马逊广告位调整需基于数据分析。卖家应下载并透视分析最长90天的广告位报告，获取各位置的CPC、CVR和ROI。冲自然排名时，应筛选出有潜力的词，通过高比例加价主打首页顶部（TOS）；平稳期以盈利为目的时，则需在CPA约束下，依据透视表数据计算基础竞价与百分比，精准卡控各位置以提升投产比。",
-      "category": "experience",
-      "score": 10,
-      "url": "https://www.wearesellers.com/question/122921",
-      "source": "wearesellers",
-      "published_at": "2026-08-04T07:23:26.720Z"
-    },
-    {
-      "title": "你的亚马逊广告位调价是正向优化还是反向烧钱？90%朋友选错了",
-      "summary": "亚马逊广告位调价应以流量分流为导向而非单纯奖励表现。实操方法是先降低底价（如降至0.3）使不想要的广告位自然熄火，再通过公式‘加价比例=（目标出价-新底价）/新底价’，针对性提高目标广告位的加价比例，实现精准控流。",
-      "category": "experience",
-      "score": 10,
-      "url": "https://www.wearesellers.com/question/122094",
-      "source": "wearesellers",
-      "published_at": "2026-07-11T06:50:43.904+00:00"
-    },
-    {
-      "title": "亚马逊美站自发货卖家须维持90%营业时间配送率",
-      "summary": "亚马逊美国站规定自2026年9月30日起，卖家自配送发往企业购客户的订单，其营业时间配送率必须保持在90%以上。该指标按14天滚动周期计算。若10月30日仍未达标，自配送商品将在企业购频道被暂停展示。自发货卖家须密切监控配送时效，优化末端派送，确保在企业客户营业时间内送达以维持销售权限。",
+      "title": "亚马逊AI图片合规新规实操分享 哪些图要打标怎么打标一次说清楚",
+      "summary": "详解亚马逊AI图片合规新规及实操方法。凡含AI生成逼真人物的图片，必须在元数据XMP dc subject或Windows标记字段中写入contains-synthetic-performer标签。提供排查归档、批量写入、建立素材表等三步走合规流程，规避Listing下架风险。",
       "category": "policy",
       "score": 10,
-      "url": "https://www.amz123.com/kx/1yaEUQpk",
-      "source": "amz123",
-      "published_at": "2026-07-08T01:49:07+00:00"
+      "url": "https://www.wearesellers.com/question/122542",
+      "source": "wearesellers",
+      "published_at": "2026-07-24T07:09:55.702+00:00"
     },
     {
-      "title": "CPSC电子申报新规7月8日强制落地，双清包税时代结束——整理了一些思路给大家参考",
-      "summary": "本文详解了7月8日强制执行的CPSC电子申报新规。由于违规罚款高，货代不再代担风险。卖家可通过两种申报方式应对：一是完整申报提供产品标识等七要素；二是引用申报提前在CPSC备案。无自有BOND的卖家可找代报货代或通过购买BOND服务解决。",
+      "title": "一文回答所有关于提升自然流量，降低广告订单占比的相关问题——可以推自然位的关键词特征",
+      "summary": "提升亚马逊自然流量需通过SP手动精准广告冲首页位置。在预算分配上建议SP占比约80%，SB和SD占20%。利用TOS位置的高点击率和清晰转化路径，让系统判定产品与关键词的高相关性，从而最高效地推动自然排名上升。",
+      "category": "experience",
+      "score": 10,
+      "url": "https://www.wearesellers.com/question/122397",
+      "source": "wearesellers",
+      "published_at": "2026-07-21T07:10:03.329+00:00"
+    },
+    {
+      "title": "亚马逊视频认证启动历史违规账户回溯核查",
+      "summary": "亚马逊于2026年下半年启动视频认证历史违规账户回溯核查，对涉嫌提供虚假身份信息的账户进行关闭并冻结资金。目前审核已直连支付宝国家政务服务平台进行电子证照实人核验，卖家必须使用真实合规的身份材料，严禁使用伪造证件。",
       "category": "policy",
       "score": 10,
-      "url": "https://www.wearesellers.com/question/121155",
-      "source": "wearesellers",
-      "published_at": "2026-06-18T07:07:22.703+00:00"
+      "url": "https://www.amz123.com/kx/zNWpOKXA",
+      "source": "amz123",
+      "published_at": "2026-07-17T09:24:58+00:00"
     },
     {
-      "title": "亚马逊Vine跨站评论同步功能恢复 美欧日站评价批量回显",
-      "summary": "亚马逊美欧日站Vine评论跨站同步功能已恢复，前期因风控失联的评价正批量回显。该功能可低成本扩充评价基数并提升转化率。若后台未自动恢复，卖家可在Prime Day前通过提交Case申请刷新全球ASIN同步权限，通常24小时内即可完成修复。",
+      "title": "ACOS 偏高时，我会先看哪些数据？自动广告最近 30 天一共出了 344 单，整体转化率是 8.9%，ACOS 62.18%。应该怎么调整？应该先看整体转化率，再看细分转化率.....",
+      "summary": "阐述了亚马逊广告ACOS偏高时的优化实操方法。核心步骤为：先对比顶部、其余和商品页三个位置的转化率、ACOS及点击率；通过降低整体基础竞价并提高表现优异位置的百分比溢价，实现流量精准转移；对于数据量大的自动广告，应将紧密和宽泛匹配拆分单独管理，避免预算被单一模式抢占。",
       "category": "experience",
       "score": 10,
-      "url": "https://www.amz123.com/kx/47Ah3vUB",
-      "source": "amz123",
-      "published_at": "2026-06-18T03:38:54+00:00"
-    },
-    {
-      "title": "ERP 和亚马逊后台差了 12,480 元：用一组假数据拆解五层排查法",
-      "summary": "针对ERP与亚马逊后台数据不一致问题，通过五层排查法进行定位。首先明确指标口径，建立指标合同表统一业务范围与金额字段；其次统一日期字段与时区，保留原始和转换时间以解决跨期问题；最后通过订单状态和事件类型匹配，排查如退款双重扣减等状态导致的金额差异，避免盲目调整。",
-      "category": "experience",
-      "score": 9.4,
-      "url": "https://www.wearesellers.com/question/123007",
+      "url": "https://www.wearesellers.com/question/122160",
       "source": "wearesellers",
-      "published_at": "2026-08-04T08:14:40.040Z"
+      "published_at": "2026-07-15T07:36:18.964+00:00"
     },
     {
-      "title": "当亚马逊广告ACOS爆表时，靠调整竞价能实现逆袭吗？",
-      "summary": "针对亚马逊广告ACOS爆表，应基于数据分类调整竞价。高花费无转化词若预算有限直接否定或暂停；高ACOS且低转化词可逐步下调竞价10%到20%或降低预算并增加高转化位溢价；ACOS达标词可提价5%到10%抢占优质流量；高转化明星词则大胆提价并拓展长尾词。",
-      "category": "experience",
-      "score": 9.4,
-      "url": "https://www.wearesellers.com/question/109544",
+      "title": "亚马逊下半年大促提报开启，早鸟优惠、促销资格速看！",
+      "summary": "2026年亚马逊下半年大促提报开启。美国站Prime会员大促提报为7月8日至9月8日，黑五网一为7月8日至10月20日。促销要求定价不高于60天最低价，且比30天最低价至少优惠5%。早鸟提报可省50美元固定费。旺季配送费平均每件上涨0.32美元。",
+      "category": "policy",
+      "score": 10,
+      "url": "https://www.wearesellers.com/question/122045",
       "source": "wearesellers",
-      "published_at": "2026-08-04T07:27:08.791Z"
+      "published_at": "2026-07-09T09:01:29.635+00:00"
     },
     {
-      "title": "The reimbursement money I was leaving on the table for over a year (FBA)",
-      "summary": "亚马逊FBA索赔实操方法。卖家应每月比对退货报告与赔偿报告，针对买家未退回货物、超45天未退回已退款件、库容损毁未自动赔偿等异常，以一单一案、只陈述事实的方式开case索赔，避免因超出时效而造成资金损失。",
-      "category": "experience",
-      "score": 9.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vbqfwd/the_reimbursement_money_i_was_leaving_on_the",
+      "title": "7月27日亚马逊商品名称新规倒计时：标题优化实操指南",
+      "summary": "亚马逊新规要求非媒介类商品标题缩减至75字符以内。卖家应主动优化标题，仅保留品牌名和核心流量词，将材质、功能等次要卖点转移至新增的125字符商品亮点板块及五点描述中。建议先用中等销量链接测试，避免被系统AI强制乱改。",
+      "category": "policy",
+      "score": 10,
+      "url": "https://www.wearesellers.com/question/122034",
+      "source": "wearesellers",
+      "published_at": "2026-07-09T08:52:43.54+00:00"
+    },
+    {
+      "title": "SFP delivery-speed thresholds go up July 6. Here's exactly what changes by size tier",
+      "summary": "亚马逊自配送Prime（SFP）时效门槛于7月6日提高。标准件一日达门槛升至40%，两日达升至75%；大件和超大件门槛亦有提升。未达标将失去Prime标志并影响购物车与排名。10月17日前周末暂不计入考核，卖家需尽快优化配送。",
+      "category": "policy",
+      "score": 10,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1uly4ik/sfp_deliveryspeed_thresholds_go_up_july_6_heres",
       "source": "reddit_fba",
-      "published_at": "2026-07-31T13:06:17+00:00"
+      "published_at": "2026-07-02T23:30:41+00:00"
     },
     {
-      "title": "关于亚马逊引流洞察的一些信息分享：14天归因期内至少需10次点击才会显示数据，品牌引流奖励计划中平均10%的返点奖励规则",
-      "summary": "亚马逊引流洞察可追踪站外广告效果，归因期14天内需至少10次点击才显示数据。创建时需选择投放渠道并生成归因标签。品牌引流奖励计划平均返点10%，但仅限美国本土广告商，返点延迟两个月存入，仅可用于抵扣销售佣金。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.wearesellers.com/question/122721",
-      "source": "wearesellers",
-      "published_at": "2026-07-29T07:24:07.531+00:00"
-    },
-    {
-      "title": "做了5年亚马逊站外推广，我整理了100个坑",
-      "summary": "亚马逊站外推广需严防折扣叠加与定价失误。实操中应通过买家端验证到手价，设置优惠券与折扣码不叠加以防0元购；站外推广结束须及时关闭折扣码；上Deal站前应扣除FBA配送费、佣金等核算保本价，且折扣力度建议在50%以上以激发购买欲；多变体申报须明确ASIN及适用变体。",
+      "title": "会员日后关键词排名稳不住？不是自然回落，是结构塌了",
+      "summary": "会员日后关键词排名下滑本质是流量结构在重新分配。卖家应利用后7天黄金期进行调整：第一至二天稳住主词广告预算与结构不动以止跌；第三至五天将关键词分类，并将预算重新分配为30%给主词稳排名、50%给高转化长尾词接流量、20%给防守词防竞品，实现多点支撑。",
       "category": "experience",
-      "score": 9.4,
-      "url": "https://www.wearesellers.com/question/122710",
+      "score": 10,
+      "url": "https://www.wearesellers.com/question/121579",
       "source": "wearesellers",
-      "published_at": "2026-07-29T06:23:00.415+00:00"
+      "published_at": "2026-06-30T01:57:57.196+00:00"
+    },
+    {
+      "title": "你是否真的理解运营节奏？在内卷的2026年 大红海产品是否还有一飞冲天的机会？5年亚马逊精品卖家分享超硬核广告节奏，助力每一个梦想的实现",
+      "summary": "亚马逊广告精细化运营需建立量化标准。否定词判定上，单搜索词7天花费超2倍客单价且无转化，或点击超20次且转化率低于类目均值30%则精准否定。冷启动期手动组仅开精准匹配，每日筛选高花费无转化词否定，若点击率连续3天低于0.5%则暂停加预算并优化Listing，通过精细化数据指标指导运营。",
+      "category": "experience",
+      "score": 10,
+      "url": "https://www.wearesellers.com/question/121064",
+      "source": "wearesellers",
+      "published_at": "2026-06-15T10:47:58.105+00:00"
+    },
+    {
+      "title": "市调不会做？类目看不懂？产品开不出来？我教你！！",
+      "summary": "以长方形桌布类目为例，详解亚马逊市场调研与选品方法。通过分析市场容量、季节性波动（3至5月旺季）、父体集中度（CR10为26.78%）及新品表现，提出小卖家应采取少量备货、快速测图、主打长尾词的轻资产运营策略。",
+      "category": "experience",
+      "score": 10,
+      "url": "https://www.wearesellers.com/question/120903",
+      "source": "wearesellers",
+      "published_at": "2026-06-12T09:43:11.164+00:00"
     }
   ]
 }
