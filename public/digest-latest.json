@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-08-08T06:37:59Z",
-  "digest_date": "2026-08-08",
+  "generated_at_utc": "2026-08-09T06:42:09Z",
+  "digest_date": "2026-08-09",
   "article_count": 50,
   "articles": [
     {
-      "title": "亚马逊AI图片合规新规实操分享 哪些图要打标怎么打标一次说清楚",
-      "summary": "详解亚马逊AI图片合规新规及实操方法。凡含AI生成逼真人物的图片，必须在元数据XMP dc subject或Windows标记字段中写入contains-synthetic-performer标签。提供排查归档、批量写入、建立素材表等三步走合规流程，规避Listing下架风险。",
+      "title": "亚马逊卖家别忽略AI图标签，contains-synthetic-performer怎么加才算过验证？",
+      "summary": "亚马逊要求对包含AI生成逼真人物的商品图片添加特定标签。卖家可通过Windows属性、macOS预览或ExifTool命令行，在图片XMP元数据的dc:subject字段中写入contains-synthetic-performer关键词，并通过Metadata++等工具验证成功后上传审核。",
       "category": "policy",
       "score": 10,
-      "url": "https://www.wearesellers.com/question/122542",
+      "url": "https://www.wearesellers.com/question/122681",
       "source": "wearesellers",
-      "published_at": "2026-07-24T07:09:55.702+00:00"
+      "published_at": "2026-07-28T07:26:47.873+00:00"
     },
     {
-      "title": "一文回答所有关于提升自然流量，降低广告订单占比的相关问题——可以推自然位的关键词特征",
-      "summary": "提升亚马逊自然流量需通过SP手动精准广告冲首页位置。在预算分配上建议SP占比约80%，SB和SD占20%。利用TOS位置的高点击率和清晰转化路径，让系统判定产品与关键词的高相关性，从而最高效地推动自然排名上升。",
-      "category": "experience",
-      "score": 10,
-      "url": "https://www.wearesellers.com/question/122397",
-      "source": "wearesellers",
-      "published_at": "2026-07-21T07:10:03.329+00:00"
-    },
-    {
-      "title": "亚马逊视频认证启动历史违规账户回溯核查",
-      "summary": "亚马逊于2026年下半年启动视频认证历史违规账户回溯核查，对涉嫌提供虚假身份信息的账户进行关闭并冻结资金。目前审核已直连支付宝国家政务服务平台进行电子证照实人核验，卖家必须使用真实合规的身份材料，严禁使用伪造证件。",
+      "title": "亚马逊全球一测通GTO上线，一次检测覆盖美欧日澳等16大站点",
+      "summary": "亚马逊面向中国卖家推出全球一测通服务，实现一次测试、多站通行，首期覆盖玩具品类，可同步满足美、欧、日、澳等16大站点的合规审核。卖家可通过亚马逊SPN服务商网络，预约Intertek、SGS、TÜV SÜD或宁波海关技术中心进行寄样检测，大幅简化多站点合规流程。",
       "category": "policy",
       "score": 10,
-      "url": "https://www.amz123.com/kx/zNWpOKXA",
+      "url": "https://www.amz123.com/kx/w0dsfdw4",
       "source": "amz123",
-      "published_at": "2026-07-17T09:24:58+00:00"
+      "published_at": "2026-07-16T06:04:16+00:00"
     },
     {
-      "title": "ACOS 偏高时，我会先看哪些数据？自动广告最近 30 天一共出了 344 单，整体转化率是 8.9%，ACOS 62.18%。应该怎么调整？应该先看整体转化率，再看细分转化率.....",
-      "summary": "阐述了亚马逊广告ACOS偏高时的优化实操方法。核心步骤为：先对比顶部、其余和商品页三个位置的转化率、ACOS及点击率；通过降低整体基础竞价并提高表现优异位置的百分比溢价，实现流量精准转移；对于数据量大的自动广告，应将紧密和宽泛匹配拆分单独管理，避免预算被单一模式抢占。",
+      "title": "亚马逊美英站更新FBM政策：BHDR≥90%，英国站默认处理时间缩至1天",
+      "summary": "亚马逊美英站更新FBM政策。美国站自2026年9月30日起新增营业时间送达率考核，要求滚动14天内面向企业客户的送达率不低于90%，否则暂停Amazon Business端展示，卖家应优先使用购买配送及自动化工具。英国站默认处理时间缩短至0或1天，且系统会根据实际速度自动调整。",
+      "category": "policy",
+      "score": 10,
+      "url": "https://www.amz123.com/kx/LUfRb7Rh",
+      "source": "amz123",
+      "published_at": "2026-07-01T03:23:46+00:00"
+    },
+    {
+      "title": "亚马逊9月1日起多类目退货期限调整为14天",
+      "summary": "亚马逊自2026年9月1日起，将母婴、美妆、家居等十余个品类的退货期限缩短至14天，适用于FBA和自配送模式。配送日期在10月1日前的订单有过渡缓冲期。卖家可通过后台撤销权设置主动延长退货期以优化体验，商品详情页将自动展示新退货窗口。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.amz123.com/kx/KzlNFjAq",
+      "source": "amz123",
+      "published_at": "2026-08-05T09:47:24+00:00"
+    },
+    {
+      "title": "亚马逊新规标题改完，销量为什么反而掉了？标题仍然承担产品识别和第一眼点击，Item Highlights 是补充信息位。正确做法不是机械搬家，而是重新分配信息权重......",
+      "summary": "针对亚马逊标题限制75字符新规，提出修改标题后销量下滑的诊断与应对方法。运营应将信息重构为标题、Item Highlights和五点描述三层，通过分析曝光、点击和转化三项指标，利用业务报告与SQP数据定位流失关键词，避免盲目改回。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.wearesellers.com/question/123070",
+      "source": "wearesellers",
+      "published_at": "2026-08-06T03:17:08.421+00:00"
+    },
+    {
+      "title": "0110报关监管趋严：境外收货人不得填写Amazon或FBA仓名",
+      "summary": "自2026年7月下旬起，多地报关行明确0110一般贸易报关单中境外收货人不得填写Amazon或FBA仓名。卖家必须提供真实境外购货方信息、购销合同、商业发票及货款结算凭证。此举是金税四期推进下多部门数据联动监管的落实，不合规将面临拒绝接单。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.amz123.com/kx/lADJn1c1",
+      "source": "amz123",
+      "published_at": "2026-08-05T09:26:54+00:00"
+    },
+    {
+      "title": "刚接手链接广告到底该怎么开？一个实例展开广告搭建，轻松驾驭广告结构.",
+      "summary": "针对新接手Listing的广告搭建，应采用项目式思维，通过定量计算推导运营指标。首先根据客单价、库存和目标广告成本占比计算出每日预算；再结合历史或调研的平均CPC，倒推出维持销售所需的每日有效点击数与目标转化率基准，从而实现广告指标的精准量化。",
       "category": "experience",
-      "score": 10,
-      "url": "https://www.wearesellers.com/question/122160",
+      "score": 9.4,
+      "url": "https://www.wearesellers.com/question/122786",
       "source": "wearesellers",
-      "published_at": "2026-07-15T07:36:18.964+00:00"
+      "published_at": "2026-07-31T08:23:18.427+00:00"
     },
     {
-      "title": "亚马逊下半年大促提报开启，早鸟优惠、促销资格速看！",
-      "summary": "2026年亚马逊下半年大促提报开启。美国站Prime会员大促提报为7月8日至9月8日，黑五网一为7月8日至10月20日。促销要求定价不高于60天最低价，且比30天最低价至少优惠5%。早鸟提报可省50美元固定费。旺季配送费平均每件上涨0.32美元。",
+      "title": "标题超限直接被AI改写！亚马逊75字符新规即将强制执行",
+      "summary": "亚马逊将于2026年7月27日起强制执行75字符标题新规。超出字符需移至可被搜索的商品亮点中。卖家需在后台管理所有库存中，通过编辑页面的查看改进内容，预览并一键采用或调整AI推荐的名称与亮点，避免逾期被AI强制替代。",
       "category": "policy",
-      "score": 10,
-      "url": "https://www.wearesellers.com/question/122045",
+      "score": 9.4,
+      "url": "https://www.wearesellers.com/question/122858",
       "source": "wearesellers",
-      "published_at": "2026-07-09T09:01:29.635+00:00"
+      "published_at": "2026-07-31T08:01:06.536+00:00"
     },
     {
-      "title": "7月27日亚马逊商品名称新规倒计时：标题优化实操指南",
-      "summary": "亚马逊新规要求非媒介类商品标题缩减至75字符以内。卖家应主动优化标题，仅保留品牌名和核心流量词，将材质、功能等次要卖点转移至新增的125字符商品亮点板块及五点描述中。建议先用中等销量链接测试，避免被系统AI强制乱改。",
+      "title": "亚马逊NSP计划将于7月30日进行重大升级",
+      "summary": "亚马逊物流新品入仓优惠计划（NSP）将于2026年7月30日升级。旧用户需在10月31日前重新确认注册。升级后新父ASIN首件入仓120天内享优惠，前100件商品佣金降至10%，次100件降至5%，前200件免除仓储费等多项费用，并新增Vine和Coupon费用优惠。",
       "category": "policy",
-      "score": 10,
-      "url": "https://www.wearesellers.com/question/122034",
-      "source": "wearesellers",
-      "published_at": "2026-07-09T08:52:43.54+00:00"
+      "score": 9.4,
+      "url": "https://www.amz123.com/kx/4ifaih3a",
+      "source": "amz123",
+      "published_at": "2026-07-31T06:29:54+00:00"
     },
     {
-      "title": "SFP delivery-speed thresholds go up July 6. Here's exactly what changes by size tier",
-      "summary": "亚马逊自配送Prime（SFP）时效门槛于7月6日提高。标准件一日达门槛升至40%，两日达升至75%；大件和超大件门槛亦有提升。未达标将失去Prime标志并影响购物车与排名。10月17日前周末暂不计入考核，卖家需尽快优化配送。",
-      "category": "policy",
-      "score": 10,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1uly4ik/sfp_deliveryspeed_thresholds_go_up_july_6_heres",
+      "title": "I looked at the top 20 Amazon listings for water bottles and electric kettles. Here's what they all had in common.",
+      "summary": "通过分析亚马逊热水壶类目Top20主图发现，高点击率主图具有高共性：产品需占满大部分画面以减少空白，利用强对比度提升移动端辨识度，采用简单拍摄角度，确保轮廓在一秒内可识别，且整体干净整洁。卖家应优先保证主图直观易懂，而非单纯追求美观，以此提升主图点击率。",
+      "category": "experience",
+      "score": 9.4,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vbh2gx/i_looked_at_the_top_20_amazon_listings_for_water",
       "source": "reddit_fba",
-      "published_at": "2026-07-02T23:30:41+00:00"
-    },
-    {
-      "title": "会员日后关键词排名稳不住？不是自然回落，是结构塌了",
-      "summary": "会员日后关键词排名下滑本质是流量结构在重新分配。卖家应利用后7天黄金期进行调整：第一至二天稳住主词广告预算与结构不动以止跌；第三至五天将关键词分类，并将预算重新分配为30%给主词稳排名、50%给高转化长尾词接流量、20%给防守词防竞品，实现多点支撑。",
-      "category": "experience",
-      "score": 10,
-      "url": "https://www.wearesellers.com/question/121579",
-      "source": "wearesellers",
-      "published_at": "2026-06-30T01:57:57.196+00:00"
-    },
-    {
-      "title": "CPSC电子申报新规7月8日强制落地，双清包税时代结束——整理了一些思路给大家参考",
-      "summary": "本文详解了7月8日强制执行的CPSC电子申报新规。由于违规罚款高，货代不再代担风险。卖家可通过两种申报方式应对：一是完整申报提供产品标识等七要素；二是引用申报提前在CPSC备案。无自有BOND的卖家可找代报货代或通过购买BOND服务解决。",
-      "category": "policy",
-      "score": 10,
-      "url": "https://www.wearesellers.com/question/121155",
-      "source": "wearesellers",
-      "published_at": "2026-06-18T07:07:22.703+00:00"
-    },
-    {
-      "title": "亚马逊Vine跨站评论同步功能恢复 美欧日站评价批量回显",
-      "summary": "亚马逊美欧日站Vine评论跨站同步功能已恢复，前期因风控失联的评价正批量回显。该功能可低成本扩充评价基数并提升转化率。若后台未自动恢复，卖家可在Prime Day前通过提交Case申请刷新全球ASIN同步权限，通常24小时内即可完成修复。",
-      "category": "experience",
-      "score": 10,
-      "url": "https://www.amz123.com/kx/47Ah3vUB",
-      "source": "amz123",
-      "published_at": "2026-06-18T03:38:54+00:00"
+      "published_at": "2026-07-31T04:58:34+00:00"
     }
   ]
 }
