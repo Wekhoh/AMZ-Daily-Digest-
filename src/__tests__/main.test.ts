@@ -7,6 +7,7 @@ interface PipelineMocks {
   collectRSS: ReturnType<typeof vi.fn>;
   collectReddit: ReturnType<typeof vi.fn>;
   collectSellerCentral: ReturnType<typeof vi.fn>;
+  collectAmazonOfficial: ReturnType<typeof vi.fn>;
   processArticles: ReturnType<typeof vi.fn>;
   rerankFinalSelection: ReturnType<typeof vi.fn>;
   getExistingUrls: ReturnType<typeof vi.fn>;
@@ -125,6 +126,7 @@ async function loadMainWithMocks(
     collectRSS: vi.fn().mockResolvedValue([]),
     collectReddit: vi.fn().mockResolvedValue([]),
     collectSellerCentral: vi.fn().mockResolvedValue([]),
+    collectAmazonOfficial: vi.fn().mockResolvedValue([]),
     processArticles: vi.fn().mockResolvedValue(makeScoredArticles(30, 'rss')),
     rerankFinalSelection: vi.fn(async (articles: Article[]) => articles),
     getExistingUrls: vi.fn().mockResolvedValue(new Set<string>()),
@@ -164,6 +166,9 @@ async function loadMainWithMocks(
   }));
   vi.doMock('../collectors/sellercentral.js', () => ({
     collectSellerCentral: mocks.collectSellerCentral,
+  }));
+  vi.doMock('../collectors/amazonofficial.js', () => ({
+    collectAmazonOfficial: mocks.collectAmazonOfficial,
   }));
   vi.doMock('../process.js', () => ({
     processArticles: mocks.processArticles,
@@ -473,6 +478,65 @@ describe('runPipeline orchestration', () => {
 
       expect(warn).toHaveBeenCalledWith(
         expect.stringContaining('[SOURCE_STALE] SellerCentral'),
+      );
+    } finally {
+      warn.mockRestore();
+    }
+  });
+
+  it('gives the Amazon official group a digest slot when it brings new articles', async () => {
+    const strictOnlyAmz = makePublishedArticles(35, {
+      source: 'amz123',
+      score: 8,
+      startUrl: 'https://example.com/strict-amz',
+      publishedAt: TODAY_ISO,
+    });
+    const officialFallback = makePublishedArticles(1, {
+      source: 'amazon_official',
+      score: 7,
+      startUrl: 'https://example.com/recover-official',
+      publishedAt: TODAY_ISO,
+    });
+
+    const { runPipeline, mocks } = await loadMainWithMocks({
+      collectWeAreSellers: vi.fn().mockResolvedValue([]),
+      collectRSS: vi.fn().mockResolvedValue([makeRawArticle('amz123', '1')]),
+      collectReddit: vi.fn().mockResolvedValue([]),
+      collectSellerCentral: vi.fn().mockResolvedValue([]),
+      collectAmazonOfficial: vi.fn().mockResolvedValue([makeRawArticle('amazon_official', '1')]),
+      processArticles: vi.fn().mockResolvedValue(strictOnlyAmz),
+      getFallbackArticlesForDigest: vi.fn().mockResolvedValue(officialFallback),
+    });
+
+    await runPipeline();
+
+    const generatedArticles = (mocks.generateEmailHtml.mock.calls[0]?.[0] as Article[]) ?? [];
+    expect(generatedArticles.some((item) => item.source === 'amazon_official')).toBe(true);
+  });
+
+  it('drops the Amazon official quota slot when its articles are all already stored', async () => {
+    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+
+    try {
+      const { runPipeline, mocks } = await loadMainWithMocks({
+        collectWeAreSellers: vi.fn().mockResolvedValue([]),
+        collectRSS: vi.fn().mockResolvedValue(makeScoredArticles(5, 'amz123')),
+        collectReddit: vi.fn().mockResolvedValue([]),
+        collectSellerCentral: vi.fn().mockResolvedValue([]),
+        collectAmazonOfficial: vi.fn().mockResolvedValue([makeRawArticle('amazon_official', '1')]),
+        getExistingUrls: vi.fn(async (urls: string[]) =>
+          new Set(urls.filter((url) => url.includes('/amazon_official/'))),
+        ),
+        processArticles: vi.fn().mockResolvedValue(makeScoredArticles(30, 'amz123')),
+      });
+
+      await runPipeline();
+
+      expect(warn).toHaveBeenCalledWith(
+        expect.stringContaining('[SOURCE_STALE] Amazon官方'),
+      );
+      expect(mocks.sendAlertEmail).not.toHaveBeenCalledWith(
+        expect.stringContaining('[SOURCE_COVERAGE_GAP]'),
       );
     } finally {
       warn.mockRestore();

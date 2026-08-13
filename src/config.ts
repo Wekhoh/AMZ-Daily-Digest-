@@ -80,6 +80,7 @@ export const SOURCE_HEALTH = {
 export const SOURCE_CAPS: Record<string, number> = {
   amz123: 10,
   sellercentral: 5,
+  amazon_official: 5,
 };
 
 /** Primary sources — discussions, experience, strategies (no cap) */
@@ -115,6 +116,11 @@ export const COLLECTORS = {
   SC_TIMEOUT_MS: 20_000,
   SC_MAX_POSTS: 30,
   SC_DETAIL_DELAY_MS: 1_500,
+
+  /** Amazon official announcements (SP-API changelog RSS) */
+  OFFICIAL_TIMEOUT_MS: 15_000,
+  OFFICIAL_MAX_ITEMS: 10,
+  OFFICIAL_MAX_AGE_DAYS: 30,
 } as const;
 
 /** Email delivery */
