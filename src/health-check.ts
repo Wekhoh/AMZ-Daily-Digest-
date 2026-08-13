@@ -6,13 +6,13 @@
  * 1. All required env vars are set
  * 2. Supabase connection works
  * 3. Gmail SMTP transporter verifies
- * 4. Gemini API key is valid (lightweight test)
+ * 4. DeepSeek API key is valid (lightweight test)
  */
 
 import 'dotenv/config';
 import { createClient } from '@supabase/supabase-js';
 import nodemailer from 'nodemailer';
-import { GoogleGenAI } from '@google/genai';
+import OpenAI from 'openai';
 
 interface CheckResult {
   name: string;
@@ -20,14 +20,13 @@ interface CheckResult {
   detail: string;
 }
 
-interface GeminiCandidateLike {
-  finishReason?: string;
+interface ChatChoiceLike {
+  message?: { content?: string | null } | null;
+  finish_reason?: string | null;
 }
 
-interface GeminiResponseLike {
-  text?: string | null;
-  candidates?: GeminiCandidateLike[] | null;
-  promptFeedback?: unknown;
+interface ChatCompletionLike {
+  choices?: ChatChoiceLike[] | null;
 }
 
 const results: CheckResult[] = [];
@@ -38,35 +37,29 @@ function record(name: string, ok: boolean, detail: string): void {
   console.log(`${icon} ${name}: ${detail}`);
 }
 
-export function evaluateGeminiResponse(response: GeminiResponseLike): {
+export function evaluateChatCompletionResponse(response: ChatCompletionLike): {
   ok: boolean;
   detail: string;
 } {
-  const text = typeof response.text === 'string' ? response.text.trim() : '';
+  const choices = Array.isArray(response.choices) ? response.choices : [];
+  const rawText = choices[0]?.message?.content;
+  const text = typeof rawText === 'string' ? rawText.trim() : '';
   if (text.length > 0) {
     return { ok: true, detail: `Response: "${text.slice(0, 20)}"` };
   }
 
-  const candidates = Array.isArray(response.candidates) ? response.candidates : [];
-  if (candidates.length > 0) {
+  if (choices.length > 0) {
     const finishReasons = [
       ...new Set(
-        candidates
-          .map((candidate) => candidate.finishReason?.trim())
+        choices
+          .map((choice) => choice.finish_reason?.trim())
           .filter((value): value is string => Boolean(value))
       ),
     ];
     const reasonText = finishReasons.length > 0 ? finishReasons.join(', ') : 'UNKNOWN';
     return {
       ok: true,
-      detail: `No text, but ${candidates.length} candidate(s) returned (finish: ${reasonText})`,
-    };
-  }
-
-  if (response.promptFeedback) {
-    return {
-      ok: true,
-      detail: 'No text/candidates, but prompt feedback returned',
+      detail: `No text, but ${choices.length} choice(s) returned (finish: ${reasonText})`,
     };
   }
 
@@ -78,7 +71,7 @@ export function evaluateGeminiResponse(response: GeminiResponseLike): {
 // ---------------------------------------------------------------------------
 function checkEnvVars(): void {
   const required = [
-    'GEMINI_API_KEY',
+    'DEEPSEEK_API_KEY',
     'SUPABASE_URL',
     'SUPABASE_KEY',
     'GMAIL_USER',
@@ -146,28 +139,28 @@ async function checkGmail(): Promise<void> {
 }
 
 // ---------------------------------------------------------------------------
-// Check 4: Gemini API
+// Check 4: DeepSeek API
 // ---------------------------------------------------------------------------
-async function checkGemini(): Promise<void> {
+async function checkDeepSeek(): Promise<void> {
   try {
-    const apiKey = process.env.GEMINI_API_KEY;
+    const apiKey = process.env.DEEPSEEK_API_KEY;
     if (!apiKey) {
-      record('Gemini API', false, 'Missing GEMINI_API_KEY');
+      record('DeepSeek API', false, 'Missing DEEPSEEK_API_KEY');
       return;
     }
 
-    const ai = new GoogleGenAI({ apiKey });
-    const response = await ai.models.generateContent({
-      model: 'gemini-3-flash-preview',
-      contents: 'Reply with only the word "OK".',
-      config: { maxOutputTokens: 64 },
+    const client = new OpenAI({ apiKey, baseURL: 'https://api.deepseek.com' });
+    const response = await client.chat.completions.create({
+      model: process.env.DEEPSEEK_MODEL?.trim() || 'deepseek-v4-pro',
+      messages: [{ role: 'user', content: 'Reply with only the word "OK".' }],
+      max_tokens: 64,
     });
 
-    const evaluation = evaluateGeminiResponse(response);
-    record('Gemini API', evaluation.ok, evaluation.detail);
+    const evaluation = evaluateChatCompletionResponse(response);
+    record('DeepSeek API', evaluation.ok, evaluation.detail);
   } catch (err) {
     const msg = err instanceof Error ? err.message : String(err);
-    record('Gemini API', false, `API error: ${msg}`);
+    record('DeepSeek API', false, `API error: ${msg}`);
   }
 }
 
@@ -180,7 +173,7 @@ async function main(): Promise<void> {
   checkEnvVars();
   await checkSupabase();
   await checkGmail();
-  await checkGemini();
+  await checkDeepSeek();
 
   console.log('\n--- Summary ---');
   const passed = results.filter((r) => r.ok).length;

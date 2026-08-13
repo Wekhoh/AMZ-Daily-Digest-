@@ -743,7 +743,7 @@ async function releaseSentRunLockForRepair(
  */
 function validateConfig(): void {
   const required = [
-    'GEMINI_API_KEY',
+    'DEEPSEEK_API_KEY',
     'SUPABASE_URL',
     'SUPABASE_KEY',
     'GMAIL_USER',

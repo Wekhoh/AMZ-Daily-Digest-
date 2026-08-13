@@ -110,6 +110,16 @@ describe('parseAiResponse', () => {
   it('throws on non-array JSON', () => {
     expect(() => parseAiResponse('{"key": "value"}', 1)).toThrow('not a JSON array');
   });
+
+  it('unwraps the {"results": [...]} envelope object', () => {
+    const json = JSON.stringify({
+      results: [{ index: 0, score: 8, summary: '摘要', category: 'trend', keywords: [] }],
+    });
+    const result = parseAiResponse(json, 1);
+    expect(result).toHaveLength(1);
+    expect(result[0].coarseScore).toBe(8);
+    expect(result[0].summary).toBe('摘要');
+  });
 });
 
 describe('enforceDigestWindow', () => {
