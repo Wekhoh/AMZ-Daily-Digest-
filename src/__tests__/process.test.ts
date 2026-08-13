@@ -7,14 +7,15 @@ import {
   applyRerank,
   buildRerankPrompt,
   rerankFinalSelection,
+  processArticles,
 } from '../process.js';
 import type { Article } from '../store.js';
 
-const rerankCreate = vi.hoisted(() => vi.fn());
+const openaiCreate = vi.hoisted(() => vi.fn());
 
 vi.mock('openai', () => ({
   default: class MockOpenAI {
-    chat = { completions: { create: rerankCreate } };
+    chat = { completions: { create: openaiCreate } };
   },
 }));
 
@@ -289,6 +290,43 @@ describe('buildRerankPrompt', () => {
   });
 });
 
+describe('processArticles', () => {
+  it('disables thinking mode on scoring calls', async () => {
+    const previousKey = process.env.DEEPSEEK_API_KEY;
+    process.env.DEEPSEEK_API_KEY = 'test-key';
+    openaiCreate.mockReset();
+    openaiCreate.mockResolvedValue({
+      choices: [
+        {
+          message: {
+            content:
+              '{"results":[{"index":0,"coarse_score":8,"fine_score":8,' +
+              '"summary":"摘要","category":"trend","keywords":[],"evidence":[]}]}',
+          },
+        },
+      ],
+    });
+
+    try {
+      await processArticles([
+        { source: 'rss', url: 'https://example.test/scored', title: 'scored', content: '内容' },
+      ]);
+
+      expect(openaiCreate).toHaveBeenCalledTimes(1);
+      expect(openaiCreate.mock.calls[0]?.[0]).toMatchObject({
+        thinking: { type: 'disabled' },
+      });
+    } finally {
+      openaiCreate.mockReset();
+      if (previousKey === undefined) {
+        delete process.env.DEEPSEEK_API_KEY;
+      } else {
+        process.env.DEEPSEEK_API_KEY = previousKey;
+      }
+    }
+  });
+});
+
 describe('rerankFinalSelection', () => {
   function rerankPool(): Article[] {
     return ['a', 'b', 'c', 'd'].map((title) => ({
@@ -301,8 +339,8 @@ describe('rerankFinalSelection', () => {
   it('applies the parsed plan to the pool on the success path', async () => {
     const previousKey = process.env.DEEPSEEK_API_KEY;
     process.env.DEEPSEEK_API_KEY = 'test-key';
-    rerankCreate.mockReset();
-    rerankCreate.mockResolvedValue({
+    openaiCreate.mockReset();
+    openaiCreate.mockResolvedValue({
       choices: [{ message: { content: '{"order":[3,1,0,2],"duplicate_groups":[[1,0]]}' } }],
     });
 
@@ -311,13 +349,18 @@ describe('rerankFinalSelection', () => {
 
       const result = await rerankFinalSelection(pool, '2026-07-23');
 
-      expect(rerankCreate).toHaveBeenCalledTimes(1);
+      expect(openaiCreate).toHaveBeenCalledTimes(1);
+      // Thinking mode would spend max_tokens on reasoning_content and return
+      // empty content, so every DeepSeek call must pin it off.
+      expect(openaiCreate.mock.calls[0]?.[0]).toMatchObject({
+        thinking: { type: 'disabled' },
+      });
       // The order alone would give d,b,a,c; the duplicate group sinks 'a' behind
       // its earlier-ranked twin 'b', so this also proves applyRerank ran.
       expect(result.map((item) => item.title)).toEqual(['d', 'b', 'c', 'a']);
       expect(new Set(result)).toEqual(new Set(pool));
     } finally {
-      rerankCreate.mockReset();
+      openaiCreate.mockReset();
       if (previousKey === undefined) {
         delete process.env.DEEPSEEK_API_KEY;
       } else {

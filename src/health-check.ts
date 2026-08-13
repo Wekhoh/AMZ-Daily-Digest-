@@ -13,6 +13,7 @@ import 'dotenv/config';
 import { createClient } from '@supabase/supabase-js';
 import nodemailer from 'nodemailer';
 import OpenAI from 'openai';
+import { DEEPSEEK_THINKING_DISABLED, type DeepSeekChatParams } from './config.js';
 
 interface CheckResult {
   name: string;
@@ -150,11 +151,14 @@ async function checkDeepSeek(): Promise<void> {
     }
 
     const client = new OpenAI({ apiKey, baseURL: 'https://api.deepseek.com' });
-    const response = await client.chat.completions.create({
+    const body: DeepSeekChatParams = {
       model: process.env.DEEPSEEK_MODEL?.trim() || 'deepseek-v4-pro',
       messages: [{ role: 'user', content: 'Reply with only the word "OK".' }],
       max_tokens: 64,
-    });
+      thinking: DEEPSEEK_THINKING_DISABLED,
+    };
+
+    const response = await client.chat.completions.create(body);
 
     const evaluation = evaluateChatCompletionResponse(response);
     record('DeepSeek API', evaluation.ok, evaluation.detail);

@@ -1,6 +1,11 @@
 import OpenAI from 'openai';
 import type { Article } from './store.js';
-import { AI, SOURCE_CAPS } from './config.js';
+import {
+  AI,
+  DEEPSEEK_THINKING_DISABLED,
+  SOURCE_CAPS,
+  type DeepSeekChatParams,
+} from './config.js';
 import { sleep } from './utils.js';
 
 const VALID_CATEGORIES = new Set(['policy', 'experience', 'trend', 'other']);
@@ -220,13 +225,16 @@ async function processBatch(
 ): Promise<AiResult[]> {
   const prompt = buildPrompt(batch);
 
-  const response = await ai.chat.completions.create({
+  const body: DeepSeekChatParams = {
     model: AI.MODEL,
     messages: [{ role: 'user', content: prompt }],
     temperature: 0.2,
     max_tokens: AI.MAX_OUTPUT_TOKENS,
     response_format: { type: 'json_object' },
-  });
+    thinking: DEEPSEEK_THINKING_DISABLED,
+  };
+
+  const response = await ai.chat.completions.create(body);
 
   const text = response.choices[0]?.message?.content;
   if (!text) {
@@ -651,16 +659,19 @@ export async function rerankFinalSelection(
 
   try {
     const ai = getAiClient();
-    const response = await ai.chat.completions.create(
-      {
-        model: AI.MODEL,
-        messages: [{ role: 'user', content: buildRerankPrompt(articles, digestDate) }],
-        temperature: 0.1,
-        max_tokens: RERANK_MAX_OUTPUT_TOKENS,
-        response_format: { type: 'json_object' },
-      },
-      { timeout: RERANK_TIMEOUT_MS, maxRetries: 0 },
-    );
+    const body: DeepSeekChatParams = {
+      model: AI.MODEL,
+      messages: [{ role: 'user', content: buildRerankPrompt(articles, digestDate) }],
+      temperature: 0.1,
+      max_tokens: RERANK_MAX_OUTPUT_TOKENS,
+      response_format: { type: 'json_object' },
+      thinking: DEEPSEEK_THINKING_DISABLED,
+    };
+
+    const response = await ai.chat.completions.create(body, {
+      timeout: RERANK_TIMEOUT_MS,
+      maxRetries: 0,
+    });
 
     const text = response.choices[0]?.message?.content;
     if (!text) {

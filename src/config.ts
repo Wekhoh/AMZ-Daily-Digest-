@@ -2,6 +2,8 @@
 // Centralized configuration — all tunable constants in one place
 // ---------------------------------------------------------------------------
 
+import type OpenAI from 'openai';
+
 /** AI processing */
 export const AI = {
   /** Articles per AI batch */
@@ -41,6 +43,20 @@ export const AI = {
   /** Concurrent AI batch limit */
   MAX_CONCURRENCY: 3,
 } as const;
+
+/**
+ * DeepSeek defaults `thinking` to enabled: the model spends the completion
+ * budget on reasoning_content and can hand back empty `content`. Every call in
+ * this project follows a fixed rubric and needs none of it, so all three call
+ * sites pin it off through this one constant instead of hand-copying it.
+ */
+export const DEEPSEEK_THINKING_DISABLED = { type: 'disabled' } as const;
+
+/** DeepSeek accepts `thinking` on top of the OpenAI-compatible request body. */
+export type DeepSeekChatParams =
+  OpenAI.Chat.Completions.ChatCompletionCreateParamsNonStreaming & {
+    thinking?: { type: 'enabled' | 'disabled' };
+  };
 
 /** Source health thresholds for non-blocking observability alerts */
 export const SOURCE_HEALTH = {
