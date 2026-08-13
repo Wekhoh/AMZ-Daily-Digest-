@@ -4,6 +4,7 @@ import { collectWeAreSellers } from './collectors/wearesellers.js';
 import { collectRSS } from './collectors/rss.js';
 import { collectReddit } from './collectors/reddit.js';
 import { collectSellerCentral } from './collectors/sellercentral.js';
+import { collectAmazonOfficial } from './collectors/amazonofficial.js';
 import { processArticles, rerankFinalSelection } from './process.js';
 import {
   getExistingUrls,
@@ -42,7 +43,7 @@ const SECONDARY_COVERAGE_ALERT_STREAK_DEFAULT = 2;
 const SECONDARY_COVERAGE_REALERT_UTC_WEEKDAY = 1;
 
 export interface SourceGroupTarget {
-  key: 'wearesellers' | 'amz123' | 'reddit' | 'sellercentral';
+  key: 'wearesellers' | 'amz123' | 'reddit' | 'sellercentral' | 'official';
   label: string;
   sources: string[];
   min: number;
@@ -63,9 +64,15 @@ const SOURCE_GROUP_DEFINITIONS: ReadonlyArray<{
   { key: 'amz123', label: 'AMZ123', sources: ['amz123'] },
   { key: 'reddit', label: 'Reddit', sources: ['reddit_fba', 'reddit_seller'] },
   { key: 'sellercentral', label: 'SellerCentral', sources: ['sellercentral'] },
+  { key: 'official', label: 'Amazon官方', sources: ['amazon_official'] },
 ] as const;
 
-const SECONDARY_SOURCE_GROUP_KEYS = new Set<SourceGroupTarget['key']>(['sellercentral']);
+// Low-frequency sources: Amazon publishes official announcements weekly at best,
+// so their gaps go through the streak-based alert instead of a daily one.
+const SECONDARY_SOURCE_GROUP_KEYS = new Set<SourceGroupTarget['key']>([
+  'sellercentral',
+  'official',
+]);
 
 function today(): string {
   return new Date().toISOString().split('T')[0];
@@ -1003,12 +1010,17 @@ export async function runPipeline(): Promise<void> {
       process.env.AMZ_SC_RECOVERY_ATTEMPTS,
       COLLECTOR_RECOVERY_ATTEMPTS_DEFAULT,
     );
+    const officialRecoveryAttempts = resolvePositiveIntFromEnv(
+      process.env.AMZ_OFFICIAL_RECOVERY_ATTEMPTS,
+      COLLECTOR_RECOVERY_ATTEMPTS_DEFAULT,
+    );
 
     const [
       wearesellersArticles,
       rssArticles,
       initialRedditArticles,
       sellerCentralArticles,
+      officialArticles,
     ] = await Promise.all([
       collectWithRecovery('wearesellers', collectWeAreSellers, {
         attempts: wearesellersRecoveryAttempts,
@@ -1021,6 +1033,10 @@ export async function runPipeline(): Promise<void> {
       safeCollect('reddit', collectReddit),
       collectWithRecovery('sellercentral', collectSellerCentral, {
         attempts: sellercentralRecoveryAttempts,
+        delayMs: collectorRecoveryDelayMs,
+      }),
+      collectWithRecovery('amazonofficial', collectAmazonOfficial, {
+        attempts: officialRecoveryAttempts,
         delayMs: collectorRecoveryDelayMs,
       }),
     ]);
@@ -1122,12 +1138,14 @@ export async function runPipeline(): Promise<void> {
       ...rssArticles,
       ...redditArticles,
       ...sellerCentralArticles,
+      ...officialArticles,
     ];
 
     console.log(
       `[Main] Collected ${allRaw.length} raw articles ` +
         `(知无不言: ${wearesellersArticles.length}, AMZ123: ${rssArticles.length}, ` +
         `Reddit: ${redditArticles.length}, SellerCentral: ${sellerCentralArticles.length}, ` +
+        `Amazon官方: ${officialArticles.length}, ` +
         `RedditRecovery: ${redditRecovered ? `recovered@${redditRecoveryTried}` : `none@${redditRecoveryTried}`})`
     );
 

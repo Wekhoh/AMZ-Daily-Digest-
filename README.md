@@ -151,7 +151,8 @@ src/
 │   ├── wearesellers.ts   # 知无不言爬虫 (P0)
 │   ├── rss.ts            # AMZ123 RSS
 │   ├── reddit.ts         # Reddit JSON
-│   └── sellercentral.ts  # Seller Central 爬虫 (P2)
+│   ├── sellercentral.ts  # Seller Central 爬虫 (P2)
+│   └── amazonofficial.ts # Amazon 官方公告 RSS (SP-API changelog)
 ├── config.ts             # 集中配置常量
 ├── utils.ts              # 共享工具 (SSRF 防护, sleep)
 ├── process.ts            # DeepSeek AI 处理
