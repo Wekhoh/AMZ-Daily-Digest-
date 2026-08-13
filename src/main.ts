@@ -65,13 +65,6 @@ const SOURCE_GROUP_DEFINITIONS: ReadonlyArray<{
   { key: 'sellercentral', label: 'SellerCentral', sources: ['sellercentral'] },
 ] as const;
 
-interface SourceGroupCounts {
-  wearesellers: number;
-  amz123: number;
-  reddit: number;
-  sellercentral: number;
-}
-
 const SECONDARY_SOURCE_GROUP_KEYS = new Set<SourceGroupTarget['key']>(['sellercentral']);
 
 function today(): string {
@@ -287,20 +280,20 @@ function applySourceGroupTargets(
   };
 }
 
-function buildActiveSourceGroupTargets(counts: SourceGroupCounts): SourceGroupTarget[] {
-  const allTargets: SourceGroupTarget[] = SOURCE_GROUP_DEFINITIONS.map((group) => ({
+/**
+ * A group claims a digest slot only when it contributed articles that survived
+ * dedup. Raw collector counts would keep demanding a slot for a source whose
+ * posts were all already delivered, producing a permanent coverage gap.
+ */
+function buildActiveSourceGroupTargets(newArticles: Article[]): SourceGroupTarget[] {
+  return SOURCE_GROUP_DEFINITIONS.filter(
+    (group) => countArticlesForSources(newArticles, group.sources) > 0,
+  ).map((group) => ({
     key: group.key,
     label: group.label,
     sources: [...group.sources],
     min: 1,
   }));
-
-  return allTargets.filter((target) => {
-    if (target.key === 'reddit') {
-      return counts.reddit > 0;
-    }
-    return counts[target.key] > 0;
-  });
 }
 
 function parsePublishedAt(article: Article): Date | null {
@@ -1170,12 +1163,7 @@ export async function runPipeline(): Promise<void> {
     const strictQualityCount = processed.filter(
       (item) => (item.score ?? 0) >= AI.MIN_SCORE,
     ).length;
-    const sourceGroupTargets = buildActiveSourceGroupTargets({
-      wearesellers: wearesellersArticles.length,
-      amz123: rssArticles.length,
-      reddit: redditArticles.length,
-      sellercentral: sellerCentralArticles.length,
-    });
+    const sourceGroupTargets = buildActiveSourceGroupTargets(newArticles);
     const shouldBoostReddit =
       wearesellersArticles.length < SOURCE_HEALTH.WEARESELLERS_MIN_ARTICLES &&
       strictQualityCount < AI.MIN_ARTICLES;

@@ -418,6 +418,40 @@ describe('runPipeline orchestration', () => {
     );
   });
 
+  it('does not claim a quota slot for a source whose raw articles are all DB duplicates', async () => {
+    const onlySellerCentralMissing = [
+      ...makeScoredArticles(14, 'wearesellers'),
+      ...makeScoredArticles(14, 'reddit_fba'),
+      ...makeScoredArticles(2, 'amz123'),
+    ];
+
+    const { runPipeline, mocks } = await loadMainWithMocks({
+      collectWeAreSellers: vi.fn().mockResolvedValue(makeScoredArticles(6, 'wearesellers')),
+      collectRSS: vi.fn().mockResolvedValue(makeScoredArticles(5, 'amz123')),
+      collectReddit: vi.fn().mockResolvedValue(makeScoredArticles(5, 'reddit_fba')),
+      collectSellerCentral: vi.fn().mockResolvedValue([makeRawArticle('sellercentral', '1')]),
+      // Every collected SellerCentral URL is already stored, so the group brings no
+      // new article today and must not be asked to fill a digest slot.
+      getExistingUrls: vi.fn(async (urls: string[]) =>
+        new Set(urls.filter((url) => url.includes('/sellercentral/'))),
+      ),
+      processArticles: vi.fn().mockResolvedValue(onlySellerCentralMissing),
+      getRecentDigests: vi.fn().mockResolvedValue([
+        {
+          date: YESTERDAY,
+          email_html: '<p>来源: wearesellers</p>',
+        },
+      ]),
+    });
+
+    await runPipeline();
+
+    expect(mocks.sendAlertEmail).not.toHaveBeenCalledWith(
+      expect.stringContaining('[SOURCE_COVERAGE_GAP]'),
+    );
+    expect(mocks.sendDigestEmail).toHaveBeenCalledTimes(1);
+  });
+
   it('retries reddit collection and recovers before continuing pipeline', async () => {
     const recoverableReddit = vi
       .fn()
