@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-08-11T06:53:30Z",
-  "digest_date": "2026-08-11",
+  "generated_at_utc": "2026-08-13T07:24:23Z",
+  "digest_date": "2026-08-13",
   "article_count": 50,
   "articles": [
     {
-      "title": "亚马逊AI图片合规新规实操分享 哪些图要打标怎么打标一次说清楚",
-      "summary": "详解亚马逊AI图片合规新规及实操方法。凡含AI生成逼真人物的图片，必须在元数据XMP dc subject或Windows标记字段中写入contains-synthetic-performer标签。提供排查归档、批量写入、建立素材表等三步走合规流程，规避Listing下架风险。",
+      "title": "发往美国的货件显示已送达，货物丢失，走ups快递，提交了官方正式出具的POD装箱清单跟形式发票亚马逊却拒绝赔偿，该如何处理",
+      "summary": "卖家发往美国WBW2仓库的3箱货仅1箱上架，2箱约1000件产品丢失，总价值约1万美金。已提交UPS官方POD、装箱单、形式发票及仓库签收人姓名，亚马逊仍以签收单只能证明送达仓库、不能证明仓库接收为由拒绝赔偿。多次开case被合并，尝试联系法务发律师函需5000元且不保证成功，UPS和保险均不赔付，目前无有效索赔路径。",
       "category": "policy",
-      "score": 10,
-      "url": "https://www.wearesellers.com/question/122542",
+      "score": 8.4,
+      "url": "https://www.wearesellers.com/question/111602",
       "source": "wearesellers",
-      "published_at": "2026-07-24T07:09:55.702+00:00"
+      "published_at": "2026-08-13T06:15:02.926Z"
     },
     {
-      "title": "一文回答所有关于提升自然流量，降低广告订单占比的相关问题——可以推自然位的关键词特征",
-      "summary": "提升亚马逊自然流量需通过SP手动精准广告冲首页位置。在预算分配上建议SP占比约80%，SB和SD占20%。利用TOS位置的高点击率和清晰转化路径，让系统判定产品与关键词的高相关性，从而最高效地推动自然排名上升。",
+      "title": "# 运营案例分析 # 广告流量严重错位！ASIN 商品投放狂跑搜索结果，关键词广告全部耗在商品页面，预算大量无效浪费，该怎么调整？",
+      "summary": "卖家将ASIN商品投放与关键词手动广告分开搭建，原计划前者只展示竞品详情页、后者只占搜索结果，实际却完全颠倒，ASIN广告预算多耗在搜索结果，关键词广告多跑在商品页面。尝试固定竞价并将商品页面和搜索结果其余位置加价100%到300%，结果展示量减少或点击无转化，目前未找到调整方法。",
       "category": "experience",
-      "score": 10,
-      "url": "https://www.wearesellers.com/question/122397",
+      "score": 7.4,
+      "url": "https://www.wearesellers.com/question/123347",
       "source": "wearesellers",
-      "published_at": "2026-07-21T07:10:03.329+00:00"
+      "published_at": "2026-08-13T06:47:07.414Z"
     },
     {
-      "title": "亚马逊视频认证启动历史违规账户回溯核查",
-      "summary": "亚马逊于2026年下半年启动视频认证历史违规账户回溯核查，对涉嫌提供虚假身份信息的账户进行关闭并冻结资金。目前审核已直连支付宝国家政务服务平台进行电子证照实人核验，卖家必须使用真实合规的身份材料，严禁使用伪造证件。",
-      "category": "policy",
-      "score": 10,
-      "url": "https://www.amz123.com/kx/zNWpOKXA",
-      "source": "amz123",
-      "published_at": "2026-07-17T09:24:58+00:00"
-    },
-    {
-      "title": "ACOS 偏高时，我会先看哪些数据？自动广告最近 30 天一共出了 344 单，整体转化率是 8.9%，ACOS 62.18%。应该怎么调整？应该先看整体转化率，再看细分转化率.....",
-      "summary": "阐述了亚马逊广告ACOS偏高时的优化实操方法。核心步骤为：先对比顶部、其余和商品页三个位置的转化率、ACOS及点击率；通过降低整体基础竞价并提高表现优异位置的百分比溢价，实现流量精准转移；对于数据量大的自动广告，应将紧密和宽泛匹配拆分单独管理，避免预算被单一模式抢占。",
+      "title": "Reinstated on the 13th appeal after 110 days. The thing that finally worked was the opposite of what I'd been arguing.",
+      "summary": "卖家因多账户政策被停用110天，前12次申诉坚持证明账户无关均被拒。第13次改变策略，不再辩解无关，而是逐项列出所有共享数据点（曾用公司卡、地址、电话）已移除，并附上亚马逊邮件时间戳及对方书面确认，最终恢复账户。核心方法：承认历史关联并证明数据已清除，而非强调分离。教训包括亚马逊永久保留历史匹配记录。",
       "category": "experience",
-      "score": 10,
-      "url": "https://www.wearesellers.com/question/122160",
-      "source": "wearesellers",
-      "published_at": "2026-07-15T07:36:18.964+00:00"
-    },
-    {
-      "title": "亚马逊下半年大促提报开启，早鸟优惠、促销资格速看！",
-      "summary": "2026年亚马逊下半年大促提报开启。美国站Prime会员大促提报为7月8日至9月8日，黑五网一为7月8日至10月20日。促销要求定价不高于60天最低价，且比30天最低价至少优惠5%。早鸟提报可省50美元固定费。旺季配送费平均每件上涨0.32美元。",
-      "category": "policy",
-      "score": 10,
-      "url": "https://www.wearesellers.com/question/122045",
-      "source": "wearesellers",
-      "published_at": "2026-07-09T09:01:29.635+00:00"
-    },
-    {
-      "title": "7月27日亚马逊商品名称新规倒计时：标题优化实操指南",
-      "summary": "亚马逊新规要求非媒介类商品标题缩减至75字符以内。卖家应主动优化标题，仅保留品牌名和核心流量词，将材质、功能等次要卖点转移至新增的125字符商品亮点板块及五点描述中。建议先用中等销量链接测试，避免被系统AI强制乱改。",
-      "category": "policy",
-      "score": 10,
-      "url": "https://www.wearesellers.com/question/122034",
-      "source": "wearesellers",
-      "published_at": "2026-07-09T08:52:43.54+00:00"
-    },
-    {
-      "title": "SFP delivery-speed thresholds go up July 6. Here's exactly what changes by size tier",
-      "summary": "亚马逊自配送Prime（SFP）时效门槛于7月6日提高。标准件一日达门槛升至40%，两日达升至75%；大件和超大件门槛亦有提升。未达标将失去Prime标志并影响购物车与排名。10月17日前周末暂不计入考核，卖家需尽快优化配送。",
-      "category": "policy",
-      "score": 10,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1uly4ik/sfp_deliveryspeed_thresholds_go_up_july_6_heres",
+      "score": 8.4,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vlkamz/reinstated_on_the_13th_appeal_after_110_days_the",
       "source": "reddit_fba",
-      "published_at": "2026-07-02T23:30:41+00:00"
+      "published_at": "2026-08-11T15:15:26.000Z"
     },
     {
-      "title": "会员日后关键词排名稳不住？不是自然回落，是结构塌了",
-      "summary": "会员日后关键词排名下滑本质是流量结构在重新分配。卖家应利用后7天黄金期进行调整：第一至二天稳住主词广告预算与结构不动以止跌；第三至五天将关键词分类，并将预算重新分配为30%给主词稳排名、50%给高转化长尾词接流量、20%给防守词防竞品，实现多点支撑。",
+      "title": "大促后自然流量稳定，但是广告流量一直在下跌，CPC超出建议价很多都没点击。最近将自动广告跟关键词组广告改为固定出价，CPC高于最高建议价，但是广告仍然没有什么消耗。恳请各位大佬给分析分析，看看如何调整",
+      "summary": "店铺运营一年半，两款产品小类目排名20和60，广告订单占比65%。大促后SP自动和关键词组广告日消耗从约200美元骤降到20美元，且无点击，但自然流量和SB广告正常。卖家已尝试固定出价、CPC高于最高建议价、新开精准广告，展现仍低于100；客服称店铺无异常，类目降幅小于本店。文中提出可能原因但未给出有效调整方案。",
       "category": "experience",
-      "score": 10,
-      "url": "https://www.wearesellers.com/question/121579",
+      "score": 7.8,
+      "url": "https://www.wearesellers.com/question/123278",
       "source": "wearesellers",
-      "published_at": "2026-06-30T01:57:57.196+00:00"
+      "published_at": "2026-08-13T03:14:44.644Z"
     },
     {
-      "title": "CPSC电子申报新规7月8日强制落地，双清包税时代结束——整理了一些思路给大家参考",
-      "summary": "本文详解了7月8日强制执行的CPSC电子申报新规。由于违规罚款高，货代不再代担风险。卖家可通过两种申报方式应对：一是完整申报提供产品标识等七要素；二是引用申报提前在CPSC备案。无自有BOND的卖家可找代报货代或通过购买BOND服务解决。",
+      "title": "VOC 与竞品结构解码 ：竞品 Listing 里有没有真话？对Amazon US 刮痧板（Gua Sha Tool）类目实测分析",
+      "summary": "通过MYLEVIS智能体调用卖家精灵、Sorftime、Keepa对Amazon US刮痧板类目8个ASIN做VOC与竞品分析。需求侧去浮肿（7/8）、放松（7/8）、下颌线塑形（6/8）覆盖近九成竞品；负面痛点集中在材质易碎（5/8）和边缘锋利（4/8），用户差评如掉落即碎、金属毛刺划脸等可翻译为工程指标指导供应链改进。未获取数据如实披露。",
+      "category": "experience",
+      "score": 8,
+      "url": "https://www.wearesellers.com/question/123299",
+      "source": "wearesellers",
+      "published_at": "2026-08-12T07:14:33.239Z"
+    },
+    {
+      "title": "亚马逊广告的误区，\"低 ACoS\"不一定是好事",
+      "summary": "破除低ACoS即广告健康的误区，树立边际利润导向。运营应通过计算三道线进行优化：保本线（扣除各项成本后的利润空间）、目标线（保本线减去期望利润率）和扩量线（不超过保本线）。若ACoS反常偏低，应通过提高出价、拓词和增加预算向外推流量，以TACoS and 总利润增长作为最终衡量标准。",
+      "category": "experience",
+      "score": 9.4,
+      "url": "https://www.wearesellers.com/question/123204",
+      "source": "wearesellers",
+      "published_at": "2026-08-10T07:05:26.121+00:00"
+    },
+    {
+      "title": "亚马逊 1DC（One Distribution Center）仓点入仓异常风险，你们遇到过这些新的仓库代码吗？IMS1、IGA3、XMI3、XCH2、IMI1、IMO1、ITX3、INC1 等",
+      "summary": "亚马逊上线1DC仓网导致IMS1、IGA3等新仓库出现无法送仓、不更新等异常。卖家在创建货件时应重点留意仓库代码，谨慎分配。应对方法是创建多于5个货件以刷出老仓库；若货件已送达并出现异常，可利用货代提供的POD送仓凭证向亚马逊开Case进行申诉。",
       "category": "policy",
-      "score": 10,
-      "url": "https://www.wearesellers.com/question/121155",
+      "score": 9.4,
+      "url": "https://www.wearesellers.com/question/123088",
       "source": "wearesellers",
-      "published_at": "2026-06-18T07:07:22.703+00:00"
+      "published_at": "2026-08-07T05:02:15.665+00:00"
     },
     {
-      "title": "亚马逊Vine跨站评论同步功能恢复 美欧日站评价批量回显",
-      "summary": "亚马逊美欧日站Vine评论跨站同步功能已恢复，前期因风控失联的评价正批量回显。该功能可低成本扩充评价基数并提升转化率。若后台未自动恢复，卖家可在Prime Day前通过提交Case申请刷新全球ASIN同步权限，通常24小时内即可完成修复。",
+      "title": "Stop running Amazon PPC on all your ASIN variations. Here is the strict logic you need to apply to your catalog:",
+      "summary": "针对多变体ASIN的亚马逊PPC广告，应避免将所有子变体混入同个广告组。核心策略是：将高转化、普适性强的Hero SKU用于投放高流量核心词；将尺寸、颜色等具体变体精准匹配长尾特定意图词。若父体TACoS升高，需隔离分析具体子ASIN的TACoS和搜索词重叠度，优化变体层面的广告流失。",
       "category": "experience",
-      "score": 10,
-      "url": "https://www.amz123.com/kx/47Ah3vUB",
+      "score": 9.4,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vht1zt/stop_running_amazon_ppc_on_all_your_asin",
+      "source": "reddit_fba",
+      "published_at": "2026-08-07T06:42:46+00:00"
+    },
+    {
+      "title": "The reimbursement money I was leaving on the table for over a year (FBA)",
+      "summary": "亚马逊FBA索赔实操方法。卖家应每月比对退货报告与赔偿报告，针对买家未退回货物、超45天未退回已退款件、库容损毁未自动赔偿等异常，以一单一案、只陈述事实的方式开case索赔，避免因超出时效而造成资金损失。",
+      "category": "experience",
+      "score": 9.4,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vbqfwd/the_reimbursement_money_i_was_leaving_on_the",
+      "source": "reddit_fba",
+      "published_at": "2026-07-31T13:06:17+00:00"
+    },
+    {
+      "title": "亚马逊北美站收紧锂电池小家电合规要求",
+      "summary": "亚马逊北美站针对锂电池家用设备卖家启动专项合规审核。卖家须在收到通知30天内，购买单次及年度累计保额不低于100万美元的商业综合责任险，且保险需覆盖锂电池供电家用电器责任，将亚马逊列为附加被保险人，并完成TIC第三方直接验证。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.amz123.com/kx/ZTxldODD",
       "source": "amz123",
-      "published_at": "2026-06-18T03:38:54+00:00"
+      "published_at": "2026-07-23T03:20:30+00:00"
     }
   ]
 }
