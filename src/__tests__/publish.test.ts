@@ -34,9 +34,25 @@ describe('buildDigestDoc', () => {
     expect(doc.generated_at_utc).toBe('2026-07-23T06:00:00Z');
     expect(doc.article_count).toBe(15);
     expect(doc.articles).toHaveLength(MAX_PUBLISHED_ARTICLES);
-    const scores = doc.articles.map((a) => a.score);
-    expect(scores).toEqual([...scores].sort((x, y) => y - x));
-    expect(scores[0]).toBe(14);
+    expect(doc.articles.map((a) => a.title)).toEqual(
+      Array.from({ length: MAX_PUBLISHED_ARTICLES }, (_, i) => `t${i}`),
+    );
+  });
+
+  it('publishes the head of the selection without re-ranking it by score', () => {
+    const reranked = [
+      article({ url: 'https://example.test/a', title: 'rerank-first', score: 6 }),
+      article({ url: 'https://example.test/b', title: 'rerank-second', score: 9 }),
+      article({ url: 'https://example.test/c', title: 'rerank-third', score: 7 }),
+    ];
+
+    const doc = buildDigestDoc(reranked, '2026-07-23');
+
+    expect(doc.articles.map((a) => a.title)).toEqual([
+      'rerank-first',
+      'rerank-second',
+      'rerank-third',
+    ]);
   });
 
   it('whitelists fields and normalizes unknown categories to "other"', () => {

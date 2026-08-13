@@ -4,7 +4,7 @@ import { collectWeAreSellers } from './collectors/wearesellers.js';
 import { collectRSS } from './collectors/rss.js';
 import { collectReddit } from './collectors/reddit.js';
 import { collectSellerCentral } from './collectors/sellercentral.js';
-import { processArticles } from './process.js';
+import { processArticles, rerankFinalSelection } from './process.js';
 import {
   getExistingUrls,
   getFallbackArticlesForDigest,
@@ -64,13 +64,6 @@ const SOURCE_GROUP_DEFINITIONS: ReadonlyArray<{
   { key: 'reddit', label: 'Reddit', sources: ['reddit_fba', 'reddit_seller'] },
   { key: 'sellercentral', label: 'SellerCentral', sources: ['sellercentral'] },
 ] as const;
-
-interface SourceGroupCounts {
-  wearesellers: number;
-  amz123: number;
-  reddit: number;
-  sellercentral: number;
-}
 
 const SECONDARY_SOURCE_GROUP_KEYS = new Set<SourceGroupTarget['key']>(['sellercentral']);
 
@@ -287,20 +280,37 @@ function applySourceGroupTargets(
   };
 }
 
-function buildActiveSourceGroupTargets(counts: SourceGroupCounts): SourceGroupTarget[] {
-  const allTargets: SourceGroupTarget[] = SOURCE_GROUP_DEFINITIONS.map((group) => ({
+/**
+ * A group claims a digest slot only when it contributed articles that survived
+ * dedup. Raw collector counts would keep demanding a slot for a source whose
+ * posts were all already delivered, producing a permanent coverage gap.
+ */
+function buildActiveSourceGroupTargets(newArticles: Article[]): SourceGroupTarget[] {
+  return SOURCE_GROUP_DEFINITIONS.filter(
+    (group) => countArticlesForSources(newArticles, group.sources) > 0,
+  ).map((group) => ({
     key: group.key,
     label: group.label,
     sources: [...group.sources],
     min: 1,
   }));
+}
 
-  return allTargets.filter((target) => {
-    if (target.key === 'reddit') {
-      return counts.reddit > 0;
+/**
+ * Log-only counterpart to the quota rule above: a group that keeps re-collecting
+ * already-stored posts no longer raises a coverage alert, so say so here instead
+ * of letting the source disappear from the digest unnoticed.
+ */
+function warnStaleSourceGroups(rawArticles: Article[], newArticles: Article[]): void {
+  for (const group of SOURCE_GROUP_DEFINITIONS) {
+    const rawCount = countArticlesForSources(rawArticles, group.sources);
+    if (rawCount > 0 && countArticlesForSources(newArticles, group.sources) === 0) {
+      console.warn(
+        `[Main] [SOURCE_STALE] ${group.label} collected ${rawCount} article(s) but none ` +
+        'survived dedup; no digest slot claimed today.',
+      );
     }
-    return counts[target.key] > 0;
-  });
+  }
 }
 
 function parsePublishedAt(article: Article): Date | null {
@@ -1170,12 +1180,8 @@ export async function runPipeline(): Promise<void> {
     const strictQualityCount = processed.filter(
       (item) => (item.score ?? 0) >= AI.MIN_SCORE,
     ).length;
-    const sourceGroupTargets = buildActiveSourceGroupTargets({
-      wearesellers: wearesellersArticles.length,
-      amz123: rssArticles.length,
-      reddit: redditArticles.length,
-      sellercentral: sellerCentralArticles.length,
-    });
+    warnStaleSourceGroups(allRaw, newArticles);
+    const sourceGroupTargets = buildActiveSourceGroupTargets(newArticles);
     const shouldBoostReddit =
       wearesellersArticles.length < SOURCE_HEALTH.WEARESELLERS_MIN_ARTICLES &&
       strictQualityCount < AI.MIN_ARTICLES;
@@ -1185,7 +1191,7 @@ export async function runPipeline(): Promise<void> {
         `strict_quality=${strictQualityCount}/${AI.MIN_ARTICLES}`,
       );
     }
-    const finalArticles = await ensureDigestWindow(
+    let finalArticles = await ensureDigestWindow(
       date,
       processed,
       recentDigestExcludeUrls,
@@ -1198,6 +1204,7 @@ export async function runPipeline(): Promise<void> {
           }
         : { sourceGroupTargets },
     );
+    finalArticles = await rerankFinalSelection(finalArticles, date);
     sentArticleCount = finalArticles.length;
 
     // ------------------------------------------------------------------
@@ -1331,14 +1338,14 @@ export async function runPipeline(): Promise<void> {
 // Entry point
 // ---------------------------------------------------------------------------
 
-const PIPELINE_TIMEOUT_MS = 10 * 60 * 1_000;
+const PIPELINE_TIMEOUT_MS = 20 * 60 * 1_000;
 export async function runPipelineWithTimeout(
   timeoutMs = PIPELINE_TIMEOUT_MS,
 ): Promise<void> {
   let timeoutId: ReturnType<typeof setTimeout> | undefined;
   const timeoutPromise = new Promise<never>((_, reject) => {
     timeoutId = setTimeout(
-      () => reject(new Error('Pipeline timeout (10 min)')),
+      () => reject(new Error('Pipeline timeout (20 min)')),
       timeoutMs,
     );
   });

@@ -9,14 +9,16 @@ import type { Article } from './store.js';
  * briefing. The shape is a HARD CONTRACT: keep it in lockstep with amz-autopilot
  * `src/amz_autopilot/sources/news.py` `parse_digest` (schema_version, digest_date,
  * articles[] with title/summary/category/score/url/source/published_at). Bump
- * DIGEST_SCHEMA_VERSION only alongside the consumer.
+ * DIGEST_SCHEMA_VERSION only alongside the consumer. The contract covers the
+ * field shape, not the ordering: `articles` carries the head of the reranked
+ * final selection.
  */
 export const DIGEST_SCHEMA_VERSION = 1;
 export const DIGEST_JSON_PATH = 'public/digest-latest.json';
 
-/** Top-N articles (by score) carried to consumers; the full digest size is
- * reported separately in `article_count`. Consumers show fewer still (e.g. a
- * card top-3). */
+/** How many articles off the head of the final selection reach consumers; the
+ * full digest size is reported separately in `article_count`. Consumers show
+ * fewer still (e.g. a card top-3). */
 export const MAX_PUBLISHED_ARTICLES = 10;
 
 const KNOWN_CATEGORIES = new Set(['policy', 'experience', 'trend', 'other']);
@@ -43,14 +45,17 @@ function isoSeconds(now: Date): string {
   return now.toISOString().replace(/\.\d{3}Z$/, 'Z');
 }
 
-/** Pure: build the published document from the final digest articles. */
+/**
+ * Pure: build the published document from the final digest articles, keeping
+ * their order. The incoming array is the reranked selection, so re-sorting here
+ * would throw away the duplicate demotion and topic spread it encodes.
+ */
 export function buildDigestDoc(
   articles: Article[],
   digestDate: string,
   now = new Date(),
 ): DigestDoc {
-  const ranked = [...articles].sort((a, b) => (b.score ?? -1) - (a.score ?? -1));
-  const top = ranked
+  const top = articles
     .slice(0, MAX_PUBLISHED_ARTICLES)
     .map((a): PublishedArticle => ({
       title: a.title,

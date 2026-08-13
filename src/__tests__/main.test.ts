@@ -8,6 +8,7 @@ interface PipelineMocks {
   collectReddit: ReturnType<typeof vi.fn>;
   collectSellerCentral: ReturnType<typeof vi.fn>;
   processArticles: ReturnType<typeof vi.fn>;
+  rerankFinalSelection: ReturnType<typeof vi.fn>;
   getExistingUrls: ReturnType<typeof vi.fn>;
   upsertArticles: ReturnType<typeof vi.fn>;
   saveDigest: ReturnType<typeof vi.fn>;
@@ -125,6 +126,7 @@ async function loadMainWithMocks(
     collectReddit: vi.fn().mockResolvedValue([]),
     collectSellerCentral: vi.fn().mockResolvedValue([]),
     processArticles: vi.fn().mockResolvedValue(makeScoredArticles(30, 'rss')),
+    rerankFinalSelection: vi.fn(async (articles: Article[]) => articles),
     getExistingUrls: vi.fn().mockResolvedValue(new Set<string>()),
     upsertArticles: vi.fn().mockResolvedValue(1),
     saveDigest: vi.fn().mockResolvedValue(undefined),
@@ -165,6 +167,7 @@ async function loadMainWithMocks(
   }));
   vi.doMock('../process.js', () => ({
     processArticles: mocks.processArticles,
+    rerankFinalSelection: mocks.rerankFinalSelection,
   }));
   vi.doMock('../store.js', () => ({
     getExistingUrls: mocks.getExistingUrls,
@@ -418,6 +421,64 @@ describe('runPipeline orchestration', () => {
     );
   });
 
+  it('does not claim a quota slot for a source whose raw articles are all DB duplicates', async () => {
+    const onlySellerCentralMissing = [
+      ...makeScoredArticles(14, 'wearesellers'),
+      ...makeScoredArticles(14, 'reddit_fba'),
+      ...makeScoredArticles(2, 'amz123'),
+    ];
+
+    const { runPipeline, mocks } = await loadMainWithMocks({
+      collectWeAreSellers: vi.fn().mockResolvedValue(makeScoredArticles(6, 'wearesellers')),
+      collectRSS: vi.fn().mockResolvedValue(makeScoredArticles(5, 'amz123')),
+      collectReddit: vi.fn().mockResolvedValue(makeScoredArticles(5, 'reddit_fba')),
+      collectSellerCentral: vi.fn().mockResolvedValue([makeRawArticle('sellercentral', '1')]),
+      // Every collected SellerCentral URL is already stored, so the group brings no
+      // new article today and must not be asked to fill a digest slot.
+      getExistingUrls: vi.fn(async (urls: string[]) =>
+        new Set(urls.filter((url) => url.includes('/sellercentral/'))),
+      ),
+      processArticles: vi.fn().mockResolvedValue(onlySellerCentralMissing),
+      getRecentDigests: vi.fn().mockResolvedValue([
+        {
+          date: YESTERDAY,
+          email_html: '<p>来源: wearesellers</p>',
+        },
+      ]),
+    });
+
+    await runPipeline();
+
+    expect(mocks.sendAlertEmail).not.toHaveBeenCalledWith(
+      expect.stringContaining('[SOURCE_COVERAGE_GAP]'),
+    );
+    expect(mocks.sendDigestEmail).toHaveBeenCalledTimes(1);
+  });
+
+  it('warns [SOURCE_STALE] when a collector only returned already-stored posts', async () => {
+    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+
+    try {
+      const { runPipeline } = await loadMainWithMocks({
+        collectWeAreSellers: vi.fn().mockResolvedValue(makeScoredArticles(6, 'wearesellers')),
+        collectRSS: vi.fn().mockResolvedValue(makeScoredArticles(5, 'amz123')),
+        collectReddit: vi.fn().mockResolvedValue(makeScoredArticles(5, 'reddit_fba')),
+        collectSellerCentral: vi.fn().mockResolvedValue([makeRawArticle('sellercentral', '1')]),
+        getExistingUrls: vi.fn(async (urls: string[]) =>
+          new Set(urls.filter((url) => url.includes('/sellercentral/'))),
+        ),
+      });
+
+      await runPipeline();
+
+      expect(warn).toHaveBeenCalledWith(
+        expect.stringContaining('[SOURCE_STALE] SellerCentral'),
+      );
+    } finally {
+      warn.mockRestore();
+    }
+  });
+
   it('retries reddit collection and recovers before continuing pipeline', async () => {
     const recoverableReddit = vi
       .fn()
@@ -455,6 +516,24 @@ describe('runPipeline orchestration', () => {
     );
     const sentHtml = mocks.sendDigestEmail.mock.calls[0]?.[0] as string;
     expect(sentHtml).toContain('今日 Reddit 采集失败');
+  });
+
+  it('renders the digest from the reranked final selection', async () => {
+    const reranked = makeScoredArticles(30, 'reranked');
+
+    const { runPipeline, mocks } = await loadMainWithMocks({
+      rerankFinalSelection: vi.fn().mockResolvedValue(reranked),
+    });
+
+    await runPipeline();
+
+    expect(mocks.rerankFinalSelection).toHaveBeenCalledTimes(1);
+    expect(mocks.rerankFinalSelection).toHaveBeenCalledWith(expect.any(Array), TODAY);
+    const rerankInput = mocks.rerankFinalSelection.mock.calls[0]?.[0] as Article[];
+    expect(rerankInput.length).toBe(30);
+    expect(mocks.generateEmailHtml.mock.calls[0]?.[0]).toBe(reranked);
+    // digest-latest.json is the live consumer path, so pin it too.
+    expect(mocks.writeDigestJson.mock.calls[0]?.[0]).toBe(reranked);
   });
 
   it('marks run failed when error happens before email is sent', async () => {
