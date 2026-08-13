@@ -38,15 +38,17 @@ const REDDIT_RECOVERY_DELAY_MS_DEFAULT = 3_000;
 const COLLECTOR_RECOVERY_ATTEMPTS_DEFAULT = 1;
 const COLLECTOR_RECOVERY_DELAY_MS_DEFAULT = 2_000;
 const SECONDARY_COVERAGE_ALERT_STREAK_DEFAULT = 2;
+// UTC weekday (0=Sunday) on which a persisting secondary coverage gap re-alerts.
+const SECONDARY_COVERAGE_REALERT_UTC_WEEKDAY = 1;
 
-interface SourceGroupTarget {
+export interface SourceGroupTarget {
   key: 'wearesellers' | 'amz123' | 'reddit' | 'sellercentral';
   label: string;
   sources: string[];
   min: number;
 }
 
-interface MissingSourceGroup {
+export interface MissingSourceGroup {
   target: SourceGroupTarget;
   count: number;
   missing: number;
@@ -858,13 +860,21 @@ async function getMissingCoverageStreakBeforeDate(
   return streak;
 }
 
-interface CoverageGapAlertDecision {
+function isSecondaryCoverageRealertDay(date: string): boolean {
+  const parsed = new Date(`${date}T00:00:00.000Z`);
+  if (Number.isNaN(parsed.getTime())) {
+    return false;
+  }
+  return parsed.getUTCDay() === SECONDARY_COVERAGE_REALERT_UTC_WEEKDAY;
+}
+
+export interface CoverageGapAlertDecision {
   shouldAlert: boolean;
   streakTags: string[];
   suppressedTags: string[];
 }
 
-async function decideCoverageGapAlert(
+export async function decideCoverageGapAlert(
   date: string,
   missingGroups: MissingSourceGroup[],
 ): Promise<CoverageGapAlertDecision> {
@@ -889,12 +899,16 @@ async function decideCoverageGapAlert(
   const streakTags: string[] = [];
   const suppressedTags: string[] = [];
   let shouldAlert = false;
+  const isRealertDay = isSecondaryCoverageRealertDay(date);
 
   for (const group of missingGroups) {
     const historyStreak = await getMissingCoverageStreakBeforeDate(date, group.target);
     const consecutive = historyStreak + 1;
     streakTags.push(`${group.target.label}=${consecutive}/${threshold}`);
-    if (consecutive >= threshold) {
+    // Fire on the day the streak first crosses the threshold, then at most weekly
+    // (Monday UTC) while the gap persists — repeating an identical alert daily is
+    // noise, not signal (2026-08 SellerCentral incident: 10 straight daily emails).
+    if (consecutive === threshold || (consecutive > threshold && isRealertDay)) {
       shouldAlert = true;
     } else {
       suppressedTags.push(`${group.target.label}=${consecutive}/${threshold}`);

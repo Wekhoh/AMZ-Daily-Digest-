@@ -1,5 +1,6 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import type { Article } from '../store.js';
+import type { CoverageGapAlertDecision, MissingSourceGroup } from '../main.js';
 
 interface PipelineMocks {
   collectWeAreSellers: ReturnType<typeof vi.fn>;
@@ -109,6 +110,10 @@ async function loadMainWithMocks(
 ): Promise<{
   runPipeline: () => Promise<void>;
   runPipelineWithTimeout: (timeoutMs?: number) => Promise<void>;
+  decideCoverageGapAlert: (
+    date: string,
+    missingGroups: MissingSourceGroup[],
+  ) => Promise<CoverageGapAlertDecision>;
   mocks: PipelineMocks;
 }> {
   vi.resetModules();
@@ -189,6 +194,10 @@ async function loadMainWithMocks(
   return {
     runPipeline: mod.runPipeline as () => Promise<void>,
     runPipelineWithTimeout: mod.runPipelineWithTimeout as (timeoutMs?: number) => Promise<void>,
+    decideCoverageGapAlert: mod.decideCoverageGapAlert as (
+      date: string,
+      missingGroups: MissingSourceGroup[],
+    ) => Promise<CoverageGapAlertDecision>,
     mocks,
   };
 }
@@ -772,5 +781,84 @@ describe('runPipeline orchestration', () => {
     } finally {
       vi.useRealTimers();
     }
+  });
+});
+
+describe('decideCoverageGapAlert cadence', () => {
+  const MONDAY_UTC = '2026-08-10';
+  const WEDNESDAY_UTC = '2026-08-12';
+
+  function missingSellerCentralGroup(): MissingSourceGroup {
+    return {
+      target: { key: 'sellercentral', label: 'SellerCentral', sources: ['sellercentral'], min: 1 },
+      count: 0,
+      missing: 1,
+    };
+  }
+
+  function digestsWithoutSellerCentral(dates: string[]) {
+    return dates.map((date) => ({ date, email_html: '<p>来源: wearesellers</p>' }));
+  }
+
+  it('fires on the first day the missing streak reaches the threshold, on any weekday', async () => {
+    const { decideCoverageGapAlert } = await loadMainWithMocks({
+      getRecentDigests: vi.fn().mockResolvedValue(digestsWithoutSellerCentral(['2026-08-11'])),
+    });
+
+    const decision = await decideCoverageGapAlert(WEDNESDAY_UTC, [missingSellerCentralGroup()]);
+
+    expect(decision.shouldAlert).toBe(true);
+    expect(decision.streakTags).toEqual(['SellerCentral=2/2']);
+  });
+
+  it('suppresses repeat alerts past the threshold on non-reminder days', async () => {
+    const { decideCoverageGapAlert } = await loadMainWithMocks({
+      getRecentDigests: vi.fn().mockResolvedValue(
+        digestsWithoutSellerCentral([
+          '2026-08-11',
+          '2026-08-10',
+          '2026-08-09',
+          '2026-08-08',
+          '2026-08-07',
+        ]),
+      ),
+    });
+
+    const decision = await decideCoverageGapAlert(WEDNESDAY_UTC, [missingSellerCentralGroup()]);
+
+    expect(decision.shouldAlert).toBe(false);
+    expect(decision.suppressedTags).toEqual(['SellerCentral=6/2']);
+  });
+
+  it('re-alerts on the weekly reminder day (Monday UTC) while the gap persists', async () => {
+    const { decideCoverageGapAlert } = await loadMainWithMocks({
+      getRecentDigests: vi.fn().mockResolvedValue(
+        digestsWithoutSellerCentral([
+          '2026-08-09',
+          '2026-08-08',
+          '2026-08-07',
+          '2026-08-06',
+          '2026-08-05',
+        ]),
+      ),
+    });
+
+    const decision = await decideCoverageGapAlert(MONDAY_UTC, [missingSellerCentralGroup()]);
+
+    expect(decision.shouldAlert).toBe(true);
+  });
+
+  it('always fires when a primary source group is missing', async () => {
+    const { decideCoverageGapAlert } = await loadMainWithMocks();
+
+    const decision = await decideCoverageGapAlert(WEDNESDAY_UTC, [
+      {
+        target: { key: 'wearesellers', label: '知无不言', sources: ['wearesellers'], min: 1 },
+        count: 0,
+        missing: 1,
+      },
+    ]);
+
+    expect(decision.shouldAlert).toBe(true);
   });
 });
