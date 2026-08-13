@@ -1338,14 +1338,14 @@ export async function runPipeline(): Promise<void> {
 // Entry point
 // ---------------------------------------------------------------------------
 
-const PIPELINE_TIMEOUT_MS = 10 * 60 * 1_000;
+const PIPELINE_TIMEOUT_MS = 20 * 60 * 1_000;
 export async function runPipelineWithTimeout(
   timeoutMs = PIPELINE_TIMEOUT_MS,
 ): Promise<void> {
   let timeoutId: ReturnType<typeof setTimeout> | undefined;
   const timeoutPromise = new Promise<never>((_, reject) => {
     timeoutId = setTimeout(
-      () => reject(new Error('Pipeline timeout (10 min)')),
+      () => reject(new Error('Pipeline timeout (20 min)')),
       timeoutMs,
     );
   });

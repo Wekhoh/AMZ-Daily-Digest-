@@ -2,7 +2,8 @@ import OpenAI from 'openai';
 import type { Article } from './store.js';
 import {
   AI,
-  DEEPSEEK_THINKING_DISABLED,
+  DEEPSEEK_REASONING_EFFORT,
+  DEEPSEEK_THINKING_ENABLED,
   SOURCE_CAPS,
   type DeepSeekChatParams,
 } from './config.js';
@@ -29,6 +30,12 @@ interface AiResult {
 }
 
 const DEEPSEEK_BASE_URL = 'https://api.deepseek.com';
+/**
+ * Per-request ceiling for every DeepSeek call. Max-effort reasoning is slow, and
+ * the SDK would otherwise wait 10 minutes and retry twice on top; both call
+ * sites run their own retry policy, so the SDK layer is switched off.
+ */
+const DEEPSEEK_REQUEST_TIMEOUT_MS = 300_000;
 
 function getAiClient(): OpenAI {
   const apiKey = process.env.DEEPSEEK_API_KEY;
@@ -231,10 +238,14 @@ async function processBatch(
     temperature: 0.2,
     max_tokens: AI.MAX_OUTPUT_TOKENS,
     response_format: { type: 'json_object' },
-    thinking: DEEPSEEK_THINKING_DISABLED,
+    thinking: DEEPSEEK_THINKING_ENABLED,
+    reasoning_effort: DEEPSEEK_REASONING_EFFORT,
   };
 
-  const response = await ai.chat.completions.create(body);
+  const response = await ai.chat.completions.create(body, {
+    timeout: DEEPSEEK_REQUEST_TIMEOUT_MS,
+    maxRetries: 0,
+  });
 
   const text = response.choices[0]?.message?.content;
   if (!text) {
@@ -510,9 +521,8 @@ export interface RerankPlan {
   duplicateGroups: number[][];
 }
 
-/** One request, hard-capped: a slow rerank must not eat the pipeline send budget. */
-const RERANK_TIMEOUT_MS = 120_000;
-const RERANK_MAX_OUTPUT_TOKENS = 2_048;
+/** Reasoning tokens are billed against this, so it sits far above the JSON payload. */
+const RERANK_MAX_OUTPUT_TOKENS = 32_768;
 /** Titles are attacker-reachable text; keep only enough to judge relevance. */
 const RERANK_TITLE_LIMIT = 120;
 /** More duplicate groups than one per this many articles reads as invention, not detection. */
@@ -665,11 +675,12 @@ export async function rerankFinalSelection(
       temperature: 0.1,
       max_tokens: RERANK_MAX_OUTPUT_TOKENS,
       response_format: { type: 'json_object' },
-      thinking: DEEPSEEK_THINKING_DISABLED,
+      thinking: DEEPSEEK_THINKING_ENABLED,
+      reasoning_effort: DEEPSEEK_REASONING_EFFORT,
     };
 
     const response = await ai.chat.completions.create(body, {
-      timeout: RERANK_TIMEOUT_MS,
+      timeout: DEEPSEEK_REQUEST_TIMEOUT_MS,
       maxRetries: 0,
     });
 

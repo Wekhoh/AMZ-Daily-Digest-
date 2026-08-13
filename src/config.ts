@@ -10,8 +10,8 @@ export const AI = {
   BATCH_SIZE: 6,
   /** DeepSeek model name (override with DEEPSEEK_MODEL if needed) */
   MODEL: process.env.DEEPSEEK_MODEL?.trim() || 'deepseek-v4-pro',
-  /** Max output tokens per AI call */
-  MAX_OUTPUT_TOKENS: 8192,
+  /** Max output tokens per AI call; reasoning tokens are billed against it */
+  MAX_OUTPUT_TOKENS: 32_768,
   /** Max chars of article content sent to AI */
   CONTENT_LIMIT: 1500,
   /** Lower bound of digest size target */
@@ -45,17 +45,26 @@ export const AI = {
 } as const;
 
 /**
- * DeepSeek defaults `thinking` to enabled: the model spends the completion
- * budget on reasoning_content and can hand back empty `content`. Every call in
- * this project follows a fixed rubric and needs none of it, so all three call
- * sites pin it off through this one constant instead of hand-copying it.
+ * DeepSeek defaults `thinking` to enabled and `reasoning_effort` to high, and
+ * reasoning tokens are billed against the completion budget — left implicit, a
+ * provider-side default flip silently changes both cost and output. Every call
+ * site therefore states its choice through these constants.
+ *
+ * Scoring and rerank are the quality steps and buy max effort (Director
+ * ruling); the health check is a connectivity ping and buys none.
  */
+export const DEEPSEEK_THINKING_ENABLED = { type: 'enabled' } as const;
 export const DEEPSEEK_THINKING_DISABLED = { type: 'disabled' } as const;
+export const DEEPSEEK_REASONING_EFFORT = 'max' as const;
 
-/** DeepSeek accepts `thinking` on top of the OpenAI-compatible request body. */
+/**
+ * DeepSeek adds `thinking` to the OpenAI-compatible body and accepts only
+ * low/high/max for `reasoning_effort`, narrower than the SDK union.
+ */
 export type DeepSeekChatParams =
   OpenAI.Chat.Completions.ChatCompletionCreateParamsNonStreaming & {
     thinking?: { type: 'enabled' | 'disabled' };
+    reasoning_effort?: 'low' | 'high' | 'max';
   };
 
 /** Source health thresholds for non-blocking observability alerts */

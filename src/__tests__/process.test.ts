@@ -291,7 +291,7 @@ describe('buildRerankPrompt', () => {
 });
 
 describe('processArticles', () => {
-  it('disables thinking mode on scoring calls', async () => {
+  it('runs scoring at max reasoning effort', async () => {
     const previousKey = process.env.DEEPSEEK_API_KEY;
     process.env.DEEPSEEK_API_KEY = 'test-key';
     openaiCreate.mockReset();
@@ -314,7 +314,8 @@ describe('processArticles', () => {
 
       expect(openaiCreate).toHaveBeenCalledTimes(1);
       expect(openaiCreate.mock.calls[0]?.[0]).toMatchObject({
-        thinking: { type: 'disabled' },
+        thinking: { type: 'enabled' },
+        reasoning_effort: 'max',
       });
     } finally {
       openaiCreate.mockReset();
@@ -350,10 +351,11 @@ describe('rerankFinalSelection', () => {
       const result = await rerankFinalSelection(pool, '2026-07-23');
 
       expect(openaiCreate).toHaveBeenCalledTimes(1);
-      // Thinking mode would spend max_tokens on reasoning_content and return
-      // empty content, so every DeepSeek call must pin it off.
+      // Reasoning is an explicit purchase, never a provider default: the quality
+      // steps buy max effort, and max_tokens has to cover the reasoning spend.
       expect(openaiCreate.mock.calls[0]?.[0]).toMatchObject({
-        thinking: { type: 'disabled' },
+        thinking: { type: 'enabled' },
+        reasoning_effort: 'max',
       });
       // The order alone would give d,b,a,c; the duplicate group sinks 'a' behind
       // its earlier-ranked twin 'b', so this also proves applyRerank ran.
