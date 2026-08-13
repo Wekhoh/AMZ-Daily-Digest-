@@ -6,12 +6,12 @@ async function loadHealthModule() {
   return import('../health-check.js');
 }
 
-describe('evaluateGeminiResponse', () => {
-  it('passes when response has text', async () => {
-    const { evaluateGeminiResponse } = await loadHealthModule();
+describe('evaluateChatCompletionResponse', () => {
+  it('passes when the first choice has text content', async () => {
+    const { evaluateChatCompletionResponse } = await loadHealthModule();
 
-    const result = evaluateGeminiResponse({
-      text: 'OK',
+    const result = evaluateChatCompletionResponse({
+      choices: [{ message: { content: 'OK' }, finish_reason: 'stop' }],
     });
 
     expect(result).toEqual({
@@ -20,28 +20,22 @@ describe('evaluateGeminiResponse', () => {
     });
   });
 
-  it('passes when response has candidates even without text', async () => {
-    const { evaluateGeminiResponse } = await loadHealthModule();
+  it('passes when choices exist but content is empty', async () => {
+    const { evaluateChatCompletionResponse } = await loadHealthModule();
 
-    const result = evaluateGeminiResponse({
-      text: '',
-      candidates: [
-        { finishReason: 'MAX_TOKENS' },
-      ],
+    const result = evaluateChatCompletionResponse({
+      choices: [{ message: { content: '' }, finish_reason: 'length' }],
     });
 
     expect(result.ok).toBe(true);
-    expect(result.detail).toContain('candidate');
-    expect(result.detail).toContain('MAX_TOKENS');
+    expect(result.detail).toContain('choice');
+    expect(result.detail).toContain('length');
   });
 
-  it('fails when response has no text and no candidates', async () => {
-    const { evaluateGeminiResponse } = await loadHealthModule();
+  it('fails when there are no choices at all', async () => {
+    const { evaluateChatCompletionResponse } = await loadHealthModule();
 
-    const result = evaluateGeminiResponse({
-      text: '',
-      candidates: [],
-    });
+    const result = evaluateChatCompletionResponse({ choices: [] });
 
     expect(result).toEqual({
       ok: false,

@@ -89,7 +89,7 @@ const TODAY_ISO = `${TODAY}T08:00:00.000Z`;
 
 function applyRequiredEnv(): void {
   process.env.AMZ_SKIP_MAIN_AUTORUN = '1';
-  process.env.GEMINI_API_KEY = 'test-gemini';
+  process.env.DEEPSEEK_API_KEY = 'test-deepseek';
   process.env.SUPABASE_URL = 'https://example.supabase.co';
   process.env.SUPABASE_KEY = 'test-supabase-key';
   process.env.GMAIL_USER = 'sender@example.com';
