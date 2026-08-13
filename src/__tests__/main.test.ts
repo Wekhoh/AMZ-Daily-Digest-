@@ -532,6 +532,8 @@ describe('runPipeline orchestration', () => {
     const rerankInput = mocks.rerankFinalSelection.mock.calls[0]?.[0] as Article[];
     expect(rerankInput.length).toBe(30);
     expect(mocks.generateEmailHtml.mock.calls[0]?.[0]).toBe(reranked);
+    // digest-latest.json is the live consumer path, so pin it too.
+    expect(mocks.writeDigestJson.mock.calls[0]?.[0]).toBe(reranked);
   });
 
   it('marks run failed when error happens before email is sent', async () => {

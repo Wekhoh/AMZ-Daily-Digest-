@@ -604,8 +604,9 @@ export function parseRerankResponse(text: string, poolSize: number): RerankPlan 
 
 /**
  * Reorder the pool, then sink every repeat of a duplicated event behind the
- * earliest-ranked member. Pure permutation: the output always holds exactly
- * the input articles.
+ * earliest-ranked member. For a plan that cleared parseRerankResponse — the only
+ * kind produced in this module — the output holds exactly the input articles.
+ * An unvalidated plan such as {order:[0,0,0]} would not preserve the set.
  */
 export function applyRerank(articles: Article[], plan: RerankPlan): Article[] {
   if (plan.order.length !== articles.length) {
