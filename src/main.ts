@@ -39,6 +39,13 @@ const REDDIT_RECOVERY_DELAY_MS_DEFAULT = 3_000;
 const COLLECTOR_RECOVERY_ATTEMPTS_DEFAULT = 1;
 const COLLECTOR_RECOVERY_DELAY_MS_DEFAULT = 2_000;
 const SECONDARY_COVERAGE_ALERT_STREAK_DEFAULT = 2;
+// Doubles as the marker the fallback streak is counted from: the warning is
+// written into email_html, so past digests carry their own rerank verdict.
+const RERANK_FALLBACK_WARNING = 'AI 重排未生效，本期按原始分数排序';
+// One fallback day is a blip (timeout, a single bad completion); three in a row
+// means the plan is being rejected systematically and nobody would see it —
+// the daily briefing mail was retired 2026-07-29.
+const RERANK_FALLBACK_ALERT_STREAK = 3;
 // UTC weekday (0=Sunday) on which a persisting secondary coverage gap re-alerts.
 const SECONDARY_COVERAGE_REALERT_UTC_WEEKDAY = 1;
 
@@ -885,6 +892,45 @@ function isSecondaryCoverageRealertDay(date: string): boolean {
   return parsed.getUTCDay() === SECONDARY_COVERAGE_REALERT_UTC_WEEKDAY;
 }
 
+async function getRerankFallbackStreakBeforeDate(date: string): Promise<number> {
+  const history = await getRecentDigests(14);
+  const sortedHistory = [...history].sort((a, b) => (a.date < b.date ? 1 : -1));
+  // The warning reaches email_html escaped, so search for it the same way.
+  const marker = escapeHtmlText(RERANK_FALLBACK_WARNING);
+  let streak = 0;
+
+  for (const digest of sortedHistory) {
+    if (digest.date >= date) {
+      continue;
+    }
+
+    if (!(digest.email_html ?? '').includes(marker)) {
+      break;
+    }
+
+    streak += 1;
+  }
+
+  return streak;
+}
+
+export interface RerankFallbackAlertDecision {
+  shouldAlert: boolean;
+  streak: number;
+}
+
+/**
+ * Alert once per outage — on the day the streak crosses the threshold — rather
+ * than every day it persists; repeating an identical alert daily is the noise
+ * pattern the coverage alert already had to unlearn.
+ */
+export async function decideRerankFallbackAlert(
+  date: string,
+): Promise<RerankFallbackAlertDecision> {
+  const streak = (await getRerankFallbackStreakBeforeDate(date)) + 1;
+  return { shouldAlert: streak === RERANK_FALLBACK_ALERT_STREAK, streak };
+}
+
 export interface CoverageGapAlertDecision {
   shouldAlert: boolean;
   streakTags: string[];
@@ -1222,7 +1268,27 @@ export async function runPipeline(): Promise<void> {
           }
         : { sourceGroupTargets },
     );
-    finalArticles = await rerankFinalSelection(finalArticles, date);
+    const rerankOutcome = await rerankFinalSelection(finalArticles, date);
+    finalArticles = rerankOutcome.articles;
+    if (!rerankOutcome.reranked) {
+      digestWarnings.push(RERANK_FALLBACK_WARNING);
+      const rerankDecision = await decideRerankFallbackAlert(date);
+      const rerankFallbackAlert =
+        `[RERANK_FALLBACK] ${date} AI 重排连续 ${rerankDecision.streak} 天未生效 ` +
+        `(告警阈值 ${RERANK_FALLBACK_ALERT_STREAK} 天)`;
+      console.warn(`[Main] ${rerankFallbackAlert}`);
+
+      if (rerankDecision.shouldAlert) {
+        try {
+          await sendAlertEmail(
+            `${rerankFallbackAlert}\n` +
+            '日报仍按原始分数排序发出（不中断）。请检查重排调用是否超时、模型响应是否仍是合法排列。',
+          );
+        } catch (alertErr) {
+          console.error('[Main] Failed to send rerank-fallback alert email:', alertErr);
+        }
+      }
+    }
     sentArticleCount = finalArticles.length;
 
     // ------------------------------------------------------------------
