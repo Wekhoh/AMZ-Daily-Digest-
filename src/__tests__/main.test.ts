@@ -455,6 +455,30 @@ describe('runPipeline orchestration', () => {
     expect(mocks.sendDigestEmail).toHaveBeenCalledTimes(1);
   });
 
+  it('warns [SOURCE_STALE] when a collector only returned already-stored posts', async () => {
+    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+
+    try {
+      const { runPipeline } = await loadMainWithMocks({
+        collectWeAreSellers: vi.fn().mockResolvedValue(makeScoredArticles(6, 'wearesellers')),
+        collectRSS: vi.fn().mockResolvedValue(makeScoredArticles(5, 'amz123')),
+        collectReddit: vi.fn().mockResolvedValue(makeScoredArticles(5, 'reddit_fba')),
+        collectSellerCentral: vi.fn().mockResolvedValue([makeRawArticle('sellercentral', '1')]),
+        getExistingUrls: vi.fn(async (urls: string[]) =>
+          new Set(urls.filter((url) => url.includes('/sellercentral/'))),
+        ),
+      });
+
+      await runPipeline();
+
+      expect(warn).toHaveBeenCalledWith(
+        expect.stringContaining('[SOURCE_STALE] SellerCentral'),
+      );
+    } finally {
+      warn.mockRestore();
+    }
+  });
+
   it('retries reddit collection and recovers before continuing pipeline', async () => {
     const recoverableReddit = vi
       .fn()
@@ -504,6 +528,7 @@ describe('runPipeline orchestration', () => {
     await runPipeline();
 
     expect(mocks.rerankFinalSelection).toHaveBeenCalledTimes(1);
+    expect(mocks.rerankFinalSelection).toHaveBeenCalledWith(expect.any(Array), TODAY);
     const rerankInput = mocks.rerankFinalSelection.mock.calls[0]?.[0] as Article[];
     expect(rerankInput.length).toBe(30);
     expect(mocks.generateEmailHtml.mock.calls[0]?.[0]).toBe(reranked);

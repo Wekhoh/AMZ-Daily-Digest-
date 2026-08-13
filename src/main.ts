@@ -296,6 +296,23 @@ function buildActiveSourceGroupTargets(newArticles: Article[]): SourceGroupTarge
   }));
 }
 
+/**
+ * Log-only counterpart to the quota rule above: a group that keeps re-collecting
+ * already-stored posts no longer raises a coverage alert, so say so here instead
+ * of letting the source disappear from the digest unnoticed.
+ */
+function warnStaleSourceGroups(rawArticles: Article[], newArticles: Article[]): void {
+  for (const group of SOURCE_GROUP_DEFINITIONS) {
+    const rawCount = countArticlesForSources(rawArticles, group.sources);
+    if (rawCount > 0 && countArticlesForSources(newArticles, group.sources) === 0) {
+      console.warn(
+        `[Main] [SOURCE_STALE] ${group.label} collected ${rawCount} article(s) but none ` +
+        'survived dedup; no digest slot claimed today.',
+      );
+    }
+  }
+}
+
 function parsePublishedAt(article: Article): Date | null {
   if (!article.published_at) {
     return null;
@@ -1163,6 +1180,7 @@ export async function runPipeline(): Promise<void> {
     const strictQualityCount = processed.filter(
       (item) => (item.score ?? 0) >= AI.MIN_SCORE,
     ).length;
+    warnStaleSourceGroups(allRaw, newArticles);
     const sourceGroupTargets = buildActiveSourceGroupTargets(newArticles);
     const shouldBoostReddit =
       wearesellersArticles.length < SOURCE_HEALTH.WEARESELLERS_MIN_ARTICLES &&
@@ -1186,7 +1204,7 @@ export async function runPipeline(): Promise<void> {
           }
         : { sourceGroupTargets },
     );
-    finalArticles = await rerankFinalSelection(finalArticles);
+    finalArticles = await rerankFinalSelection(finalArticles, date);
     sentArticleCount = finalArticles.length;
 
     // ------------------------------------------------------------------
