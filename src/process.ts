@@ -521,6 +521,16 @@ export interface RerankPlan {
   duplicateGroups: number[][];
 }
 
+/**
+ * `reranked: false` means the digest kept its incoming order — the caller needs
+ * that fact to leave a trace, since a fallback is otherwise indistinguishable
+ * from a rerank that agreed with the score order.
+ */
+export interface RerankOutcome {
+  articles: Article[];
+  reranked: boolean;
+}
+
 /** Reasoning tokens are billed against this, so it sits far above the JSON payload. */
 const RERANK_MAX_OUTPUT_TOKENS = 32_768;
 /** Titles are attacker-reachable text; keep only enough to judge relevance. */
@@ -571,19 +581,36 @@ function toIndexArray(value: unknown, poolSize: number): number[] | null {
   return indexes;
 }
 
+/** Single exit for every discard, so a silent drop cannot happen by omission. */
+function dropDuplicateGroups(reason: string): number[][] {
+  console.warn(`[AI] [RERANK_DUPGROUPS_DROPPED] ${reason}`);
+  return [];
+}
+
 /** Partial duplicate data is worse than none, so one bad group discards them all. */
 function parseDuplicateGroups(value: unknown, poolSize: number): number[][] {
   if (!Array.isArray(value)) return [];
-  if (value.length > Math.ceil(poolSize / RERANK_ARTICLES_PER_DUPLICATE_GROUP)) return [];
+  const groupCap = Math.ceil(poolSize / RERANK_ARTICLES_PER_DUPLICATE_GROUP);
+  if (value.length > groupCap) {
+    return dropDuplicateGroups(
+      `${value.length} groups exceed the cap of ${groupCap} for a pool of ${poolSize}`,
+    );
+  }
 
   const groups: number[][] = [];
   const claimed = new Set<number>();
 
   for (const rawGroup of value) {
     const group = toIndexArray(rawGroup, poolSize);
-    if (!group) return [];
+    if (!group) {
+      return dropDuplicateGroups(
+        `a group is not an array of in-range integers (pool size ${poolSize})`,
+      );
+    }
     for (const index of group) {
-      if (claimed.has(index)) return [];
+      if (claimed.has(index)) {
+        return dropDuplicateGroups(`index ${index} appears in more than one group`);
+      }
       claimed.add(index);
     }
     groups.push(group);
@@ -662,9 +689,11 @@ export function applyRerank(articles: Article[], plan: RerankPlan): Article[] {
 export async function rerankFinalSelection(
   articles: Article[],
   digestDate: string,
-): Promise<Article[]> {
+): Promise<RerankOutcome> {
+  // A pool this small cannot be reranked; the digest floor keeps it unreachable
+  // in production, and reporting it as "not reranked" stays literally true.
   if (articles.length < 2) {
-    return articles;
+    return { articles, reranked: false };
   }
 
   try {
@@ -692,19 +721,19 @@ export async function rerankFinalSelection(
     const plan = parseRerankResponse(text, articles.length);
     if (!plan) {
       console.warn('[AI] [RERANK_FALLBACK] response rejected; keeping original order');
-      return articles;
+      return { articles, reranked: false };
     }
 
-    const reranked = applyRerank(articles, plan);
+    const ordered = applyRerank(articles, plan);
     console.log(
-      `[AI] Reranked ${reranked.length} articles ` +
+      `[AI] Reranked ${ordered.length} articles ` +
       `(duplicate groups: ${plan.duplicateGroups.length})`,
     );
-    return reranked;
+    return { articles: ordered, reranked: true };
   } catch (err) {
     const msg = err instanceof Error ? err.message : String(err);
     console.warn(`[AI] [RERANK_FALLBACK] rerank failed (${msg}); keeping original order`);
-    return articles;
+    return { articles, reranked: false };
   }
 }
 

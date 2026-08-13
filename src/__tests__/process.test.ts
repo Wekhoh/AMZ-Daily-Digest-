@@ -208,28 +208,58 @@ describe('parseRerankResponse', () => {
   });
 
   it('keeps the order but drops duplicate groups holding an out-of-range index', () => {
-    const plan = parseRerankResponse('{"order":[0,1,2],"duplicate_groups":[[0,7]]}', 3);
-    expect(plan?.order).toEqual([0, 1, 2]);
-    expect(plan?.duplicateGroups).toEqual([]);
+    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+
+    try {
+      const plan = parseRerankResponse('{"order":[0,1,2],"duplicate_groups":[[0,7]]}', 3);
+      expect(plan?.order).toEqual([0, 1, 2]);
+      expect(plan?.duplicateGroups).toEqual([]);
+      expect(warn).toHaveBeenCalledWith(
+        expect.stringContaining('[RERANK_DUPGROUPS_DROPPED]'),
+      );
+      expect(warn).toHaveBeenCalledWith(expect.stringContaining('in-range'));
+    } finally {
+      warn.mockRestore();
+    }
   });
 
   it('keeps the order but drops duplicate groups that share an index', () => {
-    // Pool of 10 so the group-count cap cannot mask the overlap rule.
-    const plan = parseRerankResponse(
-      '{"order":[0,1,2,3,4,5,6,7,8,9],"duplicate_groups":[[0,1],[1,2]]}',
-      10,
-    );
-    expect(plan?.order).toHaveLength(10);
-    expect(plan?.duplicateGroups).toEqual([]);
+    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+
+    try {
+      // Pool of 10 so the group-count cap cannot mask the overlap rule.
+      const plan = parseRerankResponse(
+        '{"order":[0,1,2,3,4,5,6,7,8,9],"duplicate_groups":[[0,1],[1,2]]}',
+        10,
+      );
+      expect(plan?.order).toHaveLength(10);
+      expect(plan?.duplicateGroups).toEqual([]);
+      expect(warn).toHaveBeenCalledWith(
+        expect.stringContaining('[RERANK_DUPGROUPS_DROPPED]'),
+      );
+      expect(warn).toHaveBeenCalledWith(expect.stringContaining('more than one group'));
+    } finally {
+      warn.mockRestore();
+    }
   });
 
   it('keeps the order but drops duplicate groups once they exceed the pool cap', () => {
-    const plan = parseRerankResponse(
-      '{"order":[0,1,2,3,4,5,6,7,8,9],"duplicate_groups":[[0,1],[2,3],[4,5]]}',
-      10,
-    );
-    expect(plan?.order).toHaveLength(10);
-    expect(plan?.duplicateGroups).toEqual([]);
+    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+
+    try {
+      const plan = parseRerankResponse(
+        '{"order":[0,1,2,3,4,5,6,7,8,9],"duplicate_groups":[[0,1],[2,3],[4,5]]}',
+        10,
+      );
+      expect(plan?.order).toHaveLength(10);
+      expect(plan?.duplicateGroups).toEqual([]);
+      expect(warn).toHaveBeenCalledWith(
+        expect.stringContaining('[RERANK_DUPGROUPS_DROPPED]'),
+      );
+      expect(warn).toHaveBeenCalledWith(expect.stringContaining('exceed the cap'));
+    } finally {
+      warn.mockRestore();
+    }
   });
 
   it('rejects non-integer and coercible string indices instead of repairing them', () => {
@@ -359,8 +389,9 @@ describe('rerankFinalSelection', () => {
       });
       // The order alone would give d,b,a,c; the duplicate group sinks 'a' behind
       // its earlier-ranked twin 'b', so this also proves applyRerank ran.
-      expect(result.map((item) => item.title)).toEqual(['d', 'b', 'c', 'a']);
-      expect(new Set(result)).toEqual(new Set(pool));
+      expect(result.articles.map((item) => item.title)).toEqual(['d', 'b', 'c', 'a']);
+      expect(new Set(result.articles)).toEqual(new Set(pool));
+      expect(result.reranked).toBe(true);
     } finally {
       openaiCreate.mockReset();
       if (previousKey === undefined) {
@@ -384,10 +415,39 @@ describe('rerankFinalSelection', () => {
 
       const result = await rerankFinalSelection(pool, '2026-07-23');
 
-      expect(result).toBe(pool);
+      expect(result.articles).toBe(pool);
+      expect(result.reranked).toBe(false);
       expect(warn).toHaveBeenCalledWith(expect.stringContaining('[RERANK_FALLBACK]'));
     } finally {
       warn.mockRestore();
+      if (previousKey === undefined) {
+        delete process.env.DEEPSEEK_API_KEY;
+      } else {
+        process.env.DEEPSEEK_API_KEY = previousKey;
+      }
+    }
+  });
+
+  it('reports a fallback when the model returns a plan the parser rejects', async () => {
+    const previousKey = process.env.DEEPSEEK_API_KEY;
+    process.env.DEEPSEEK_API_KEY = 'test-key';
+    openaiCreate.mockReset();
+    openaiCreate.mockResolvedValue({
+      choices: [{ message: { content: '{"order":[0,1]}' } }],
+    });
+    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+
+    try {
+      const pool = rerankPool();
+
+      const result = await rerankFinalSelection(pool, '2026-07-23');
+
+      expect(result.articles).toBe(pool);
+      expect(result.reranked).toBe(false);
+      expect(warn).toHaveBeenCalledWith(expect.stringContaining('[RERANK_FALLBACK]'));
+    } finally {
+      warn.mockRestore();
+      openaiCreate.mockReset();
       if (previousKey === undefined) {
         delete process.env.DEEPSEEK_API_KEY;
       } else {

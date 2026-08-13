@@ -1,6 +1,10 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import type { Article } from '../store.js';
-import type { CoverageGapAlertDecision, MissingSourceGroup } from '../main.js';
+import type {
+  CoverageGapAlertDecision,
+  MissingSourceGroup,
+  RerankFallbackAlertDecision,
+} from '../main.js';
 
 interface PipelineMocks {
   collectWeAreSellers: ReturnType<typeof vi.fn>;
@@ -116,6 +120,7 @@ async function loadMainWithMocks(
     date: string,
     missingGroups: MissingSourceGroup[],
   ) => Promise<CoverageGapAlertDecision>;
+  decideRerankFallbackAlert: (date: string) => Promise<RerankFallbackAlertDecision>;
   mocks: PipelineMocks;
 }> {
   vi.resetModules();
@@ -128,7 +133,10 @@ async function loadMainWithMocks(
     collectSellerCentral: vi.fn().mockResolvedValue([]),
     collectAmazonOfficial: vi.fn().mockResolvedValue([]),
     processArticles: vi.fn().mockResolvedValue(makeScoredArticles(30, 'rss')),
-    rerankFinalSelection: vi.fn(async (articles: Article[]) => articles),
+    rerankFinalSelection: vi.fn(async (articles: Article[]) => ({
+      articles,
+      reranked: true,
+    })),
     getExistingUrls: vi.fn().mockResolvedValue(new Set<string>()),
     upsertArticles: vi.fn().mockResolvedValue(1),
     saveDigest: vi.fn().mockResolvedValue(undefined),
@@ -206,6 +214,9 @@ async function loadMainWithMocks(
       date: string,
       missingGroups: MissingSourceGroup[],
     ) => Promise<CoverageGapAlertDecision>,
+    decideRerankFallbackAlert: mod.decideRerankFallbackAlert as (
+      date: string,
+    ) => Promise<RerankFallbackAlertDecision>,
     mocks,
   };
 }
@@ -586,7 +597,7 @@ describe('runPipeline orchestration', () => {
     const reranked = makeScoredArticles(30, 'reranked');
 
     const { runPipeline, mocks } = await loadMainWithMocks({
-      rerankFinalSelection: vi.fn().mockResolvedValue(reranked),
+      rerankFinalSelection: vi.fn().mockResolvedValue({ articles: reranked, reranked: true }),
     });
 
     await runPipeline();
@@ -598,6 +609,52 @@ describe('runPipeline orchestration', () => {
     expect(mocks.generateEmailHtml.mock.calls[0]?.[0]).toBe(reranked);
     // digest-latest.json is the live consumer path, so pin it too.
     expect(mocks.writeDigestJson.mock.calls[0]?.[0]).toBe(reranked);
+    const sentHtml = mocks.sendDigestEmail.mock.calls[0]?.[0] as string;
+    expect(sentHtml).not.toContain('AI 重排未生效');
+  });
+
+  it('records a digest warning when the rerank fell back to the incoming order', async () => {
+    const { runPipeline, mocks } = await loadMainWithMocks({
+      rerankFinalSelection: vi.fn(async (articles: Article[]) => ({
+        articles,
+        reranked: false,
+      })),
+    });
+
+    await runPipeline();
+
+    const sentHtml = mocks.sendDigestEmail.mock.calls[0]?.[0] as string;
+    expect(sentHtml).toContain('AI 重排未生效');
+    // The briefing mail is retired, so the stored copy is the trace that survives.
+    const savedDigest = mocks.saveDigest.mock.calls[0]?.[0] as { email_html: string };
+    expect(savedDigest.email_html).toContain('AI 重排未生效');
+    // Day one of a fallback is a blip: the trace lands, the alert does not.
+    expect(mocks.sendAlertEmail).not.toHaveBeenCalledWith(
+      expect.stringContaining('[RERANK_FALLBACK]'),
+    );
+  });
+
+  it('alerts once the rerank fallback streak reaches the threshold', async () => {
+    const dayBeforeYesterday = new Date(Date.now() - 2 * 24 * 60 * 60 * 1_000)
+      .toISOString()
+      .slice(0, 10);
+
+    const { runPipeline, mocks } = await loadMainWithMocks({
+      rerankFinalSelection: vi.fn(async (articles: Article[]) => ({
+        articles,
+        reranked: false,
+      })),
+      getRecentDigests: vi.fn().mockResolvedValue([
+        { date: YESTERDAY, email_html: '<li>AI 重排未生效，本期按原始分数排序</li>' },
+        { date: dayBeforeYesterday, email_html: '<li>AI 重排未生效，本期按原始分数排序</li>' },
+      ]),
+    });
+
+    await runPipeline();
+
+    expect(mocks.sendAlertEmail).toHaveBeenCalledWith(
+      expect.stringContaining('[RERANK_FALLBACK]'),
+    );
   });
 
   it('marks run failed when error happens before email is sent', async () => {
@@ -1003,5 +1060,66 @@ describe('decideCoverageGapAlert cadence', () => {
     ]);
 
     expect(decision.shouldAlert).toBe(true);
+  });
+});
+
+describe('decideRerankFallbackAlert cadence', () => {
+  const TODAY_UTC = '2026-08-12';
+
+  function digestsWithFallback(dates: string[]) {
+    return dates.map((date) => ({
+      date,
+      email_html: '<li>AI 重排未生效，本期按原始分数排序</li>',
+    }));
+  }
+
+  it('stays quiet on the first fallback day', async () => {
+    const { decideRerankFallbackAlert } = await loadMainWithMocks({
+      getRecentDigests: vi.fn().mockResolvedValue([
+        { date: '2026-08-11', email_html: '<p>来源: wearesellers</p>' },
+      ]),
+    });
+
+    const decision = await decideRerankFallbackAlert(TODAY_UTC);
+
+    expect(decision).toEqual({ shouldAlert: false, streak: 1 });
+  });
+
+  it('fires on the day the fallback streak reaches the threshold', async () => {
+    const { decideRerankFallbackAlert } = await loadMainWithMocks({
+      getRecentDigests: vi.fn().mockResolvedValue(
+        digestsWithFallback(['2026-08-11', '2026-08-10']),
+      ),
+    });
+
+    const decision = await decideRerankFallbackAlert(TODAY_UTC);
+
+    expect(decision).toEqual({ shouldAlert: true, streak: 3 });
+  });
+
+  it('does not repeat the alert while the fallback persists', async () => {
+    const { decideRerankFallbackAlert } = await loadMainWithMocks({
+      getRecentDigests: vi.fn().mockResolvedValue(
+        digestsWithFallback(['2026-08-11', '2026-08-10', '2026-08-09']),
+      ),
+    });
+
+    const decision = await decideRerankFallbackAlert(TODAY_UTC);
+
+    expect(decision).toEqual({ shouldAlert: false, streak: 4 });
+  });
+
+  it('breaks the streak on a digest that carries no fallback warning', async () => {
+    const { decideRerankFallbackAlert } = await loadMainWithMocks({
+      getRecentDigests: vi.fn().mockResolvedValue([
+        ...digestsWithFallback(['2026-08-11']),
+        { date: '2026-08-10', email_html: '<p>来源: wearesellers</p>' },
+        ...digestsWithFallback(['2026-08-09']),
+      ]),
+    });
+
+    const decision = await decideRerankFallbackAlert(TODAY_UTC);
+
+    expect(decision).toEqual({ shouldAlert: false, streak: 2 });
   });
 });
