@@ -8,6 +8,7 @@ interface PipelineMocks {
   collectReddit: ReturnType<typeof vi.fn>;
   collectSellerCentral: ReturnType<typeof vi.fn>;
   processArticles: ReturnType<typeof vi.fn>;
+  rerankFinalSelection: ReturnType<typeof vi.fn>;
   getExistingUrls: ReturnType<typeof vi.fn>;
   upsertArticles: ReturnType<typeof vi.fn>;
   saveDigest: ReturnType<typeof vi.fn>;
@@ -125,6 +126,7 @@ async function loadMainWithMocks(
     collectReddit: vi.fn().mockResolvedValue([]),
     collectSellerCentral: vi.fn().mockResolvedValue([]),
     processArticles: vi.fn().mockResolvedValue(makeScoredArticles(30, 'rss')),
+    rerankFinalSelection: vi.fn(async (articles: Article[]) => articles),
     getExistingUrls: vi.fn().mockResolvedValue(new Set<string>()),
     upsertArticles: vi.fn().mockResolvedValue(1),
     saveDigest: vi.fn().mockResolvedValue(undefined),
@@ -165,6 +167,7 @@ async function loadMainWithMocks(
   }));
   vi.doMock('../process.js', () => ({
     processArticles: mocks.processArticles,
+    rerankFinalSelection: mocks.rerankFinalSelection,
   }));
   vi.doMock('../store.js', () => ({
     getExistingUrls: mocks.getExistingUrls,
@@ -489,6 +492,21 @@ describe('runPipeline orchestration', () => {
     );
     const sentHtml = mocks.sendDigestEmail.mock.calls[0]?.[0] as string;
     expect(sentHtml).toContain('今日 Reddit 采集失败');
+  });
+
+  it('renders the digest from the reranked final selection', async () => {
+    const reranked = makeScoredArticles(30, 'reranked');
+
+    const { runPipeline, mocks } = await loadMainWithMocks({
+      rerankFinalSelection: vi.fn().mockResolvedValue(reranked),
+    });
+
+    await runPipeline();
+
+    expect(mocks.rerankFinalSelection).toHaveBeenCalledTimes(1);
+    const rerankInput = mocks.rerankFinalSelection.mock.calls[0]?.[0] as Article[];
+    expect(rerankInput.length).toBe(30);
+    expect(mocks.generateEmailHtml.mock.calls[0]?.[0]).toBe(reranked);
   });
 
   it('marks run failed when error happens before email is sent', async () => {

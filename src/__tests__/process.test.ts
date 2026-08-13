@@ -3,6 +3,8 @@ import {
   sanitizeContent,
   parseAiResponse,
   enforceDigestWindow,
+  parseRerankResponse,
+  applyRerank,
 } from '../process.js';
 import type { Article } from '../store.js';
 
@@ -162,5 +164,93 @@ describe('enforceDigestWindow', () => {
     const uniqueUrls = new Set(result.map((item) => item.url));
 
     expect(uniqueUrls.size).toBe(result.length);
+  });
+});
+
+describe('parseRerankResponse', () => {
+  it('accepts an exact permutation with duplicate groups', () => {
+    const plan = parseRerankResponse('{"order":[2,0,1],"duplicate_groups":[[0,1]]}', 3);
+    expect(plan).toEqual({ order: [2, 0, 1], duplicateGroups: [[0, 1]] });
+  });
+
+  it('strips markdown code block wrappers and defaults duplicate groups to empty', () => {
+    const plan = parseRerankResponse('```json\n{"order":[1,0]}\n```', 2);
+    expect(plan?.order).toEqual([1, 0]);
+    expect(plan?.duplicateGroups).toEqual([]);
+  });
+
+  it('rejects an order that does not cover the whole pool', () => {
+    expect(parseRerankResponse('{"order":[0,1]}', 3)).toBeNull();
+  });
+
+  it('rejects an order with a repeated index', () => {
+    expect(parseRerankResponse('{"order":[0,1,1]}', 3)).toBeNull();
+  });
+
+  it('rejects an order with an out-of-range index', () => {
+    expect(parseRerankResponse('{"order":[0,1,3]}', 3)).toBeNull();
+  });
+
+  it('rejects malformed JSON and a missing order field', () => {
+    expect(parseRerankResponse('not json', 3)).toBeNull();
+    expect(parseRerankResponse('{"duplicate_groups":[[0,1]]}', 3)).toBeNull();
+  });
+
+  it('keeps the order but drops duplicate groups holding an out-of-range index', () => {
+    const plan = parseRerankResponse('{"order":[0,1,2],"duplicate_groups":[[0,7]]}', 3);
+    expect(plan?.order).toEqual([0, 1, 2]);
+    expect(plan?.duplicateGroups).toEqual([]);
+  });
+
+  it('keeps the order but drops duplicate groups that share an index', () => {
+    const plan = parseRerankResponse('{"order":[0,1,2],"duplicate_groups":[[0,1],[1,2]]}', 3);
+    expect(plan?.order).toEqual([0, 1, 2]);
+    expect(plan?.duplicateGroups).toEqual([]);
+  });
+});
+
+describe('applyRerank', () => {
+  function makePool(count: number): Article[] {
+    return Array.from({ length: count }, (_, index) => ({
+      source: 'rss',
+      url: `https://example.com/pool/${index}`,
+      title: `pool-${index}`,
+    }));
+  }
+
+  it('applies the order without adding or dropping articles', () => {
+    const pool = makePool(5);
+
+    const result = applyRerank(pool, { order: [3, 1, 4, 0, 2], duplicateGroups: [] });
+
+    expect(result.map((item) => item.title)).toEqual([
+      'pool-3',
+      'pool-1',
+      'pool-4',
+      'pool-0',
+      'pool-2',
+    ]);
+    expect(new Set(result)).toEqual(new Set(pool));
+  });
+
+  it('keeps the earliest member of a duplicate group and sinks the rest in order', () => {
+    const pool = makePool(5);
+
+    const result = applyRerank(pool, { order: [3, 1, 4, 0, 2], duplicateGroups: [[1, 4, 0]] });
+
+    expect(result.map((item) => item.title)).toEqual([
+      'pool-3',
+      'pool-1',
+      'pool-2',
+      'pool-4',
+      'pool-0',
+    ]);
+    expect(new Set(result)).toEqual(new Set(pool));
+  });
+
+  it('returns the pool untouched when the plan size does not match', () => {
+    const pool = makePool(3);
+
+    expect(applyRerank(pool, { order: [1, 0], duplicateGroups: [] })).toBe(pool);
   });
 });

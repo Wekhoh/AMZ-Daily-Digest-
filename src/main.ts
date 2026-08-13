@@ -4,7 +4,7 @@ import { collectWeAreSellers } from './collectors/wearesellers.js';
 import { collectRSS } from './collectors/rss.js';
 import { collectReddit } from './collectors/reddit.js';
 import { collectSellerCentral } from './collectors/sellercentral.js';
-import { processArticles } from './process.js';
+import { processArticles, rerankFinalSelection } from './process.js';
 import {
   getExistingUrls,
   getFallbackArticlesForDigest,
@@ -1173,7 +1173,7 @@ export async function runPipeline(): Promise<void> {
         `strict_quality=${strictQualityCount}/${AI.MIN_ARTICLES}`,
       );
     }
-    const finalArticles = await ensureDigestWindow(
+    let finalArticles = await ensureDigestWindow(
       date,
       processed,
       recentDigestExcludeUrls,
@@ -1186,6 +1186,7 @@ export async function runPipeline(): Promise<void> {
           }
         : { sourceGroupTargets },
     );
+    finalArticles = await rerankFinalSelection(finalArticles);
     sentArticleCount = finalArticles.length;
 
     // ------------------------------------------------------------------
