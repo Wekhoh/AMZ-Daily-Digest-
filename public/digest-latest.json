@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-08-14T07:21:17Z",
-  "digest_date": "2026-08-14",
+  "generated_at_utc": "2026-08-15T06:29:44Z",
+  "digest_date": "2026-08-15",
   "article_count": 50,
   "articles": [
     {
-      "title": "Looks like TIC testing is now required by 3rd party before listing items",
-      "summary": "亚马逊收紧合规政策，取消了新品上架的检测宽限期。玩具、电子和膳食补充剂等受管制类目的卖家，必须在产品上架前通过合规的第三方TIC机构完成检测，且检测报告须由实验室直接提交给亚马逊，否则新品将立即面临禁售。",
+      "title": "Compliance for product with small magnets",
+      "summary": "卖家产品含不可拆卸的弱磁铁，亚马逊现行规定要求认证，需第三方测试证明合规，否则无法走FBA。帖子未给出具体检测机构或费用，仅表述产品售价约14美元，不愿投入过高但也不想违规，目前暂在eBay手动发货。",
       "category": "policy",
-      "score": 9.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vhurrl/looks_like_tic_testing_is_now_required_by_3rd",
+      "score": 6.2,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1votjy6/compliance_for_product_with_small_magnets",
       "source": "reddit_fba",
-      "published_at": "2026-08-07T08:25:31+00:00"
+      "published_at": "2026-08-15T04:49:18.000Z"
     },
     {
-      "title": "重生之做了很久亚马逊运营，闲来无事，让GPT出题，测试测试运营水平，最后竟然得出这样的结论。",
-      "summary": "多个运营场景问答给出具体决策：淡季转化下滑需根据利润率控制广告预算；广告位稳定但自然排名下降应优先降价，deal可推自然排名；低客单价先做精准词和长尾词；转化率8%且ACOS 100%时直接放弃；广泛广告需否低转化词并拆分高转化词；deal结束后自然单下降正常，流量是首位因素；库存按旺季、大促和现金流灵活处理。",
-      "category": "experience",
-      "score": 8.4,
-      "url": "https://www.wearesellers.com/question/123391",
-      "source": "wearesellers",
-      "published_at": "2026-08-14T06:29:30.232Z"
-    },
-    {
-      "title": "​佣金开到 20%，联盟客也找到了，为什么站外推广还是跑不动？",
-      "summary": "联盟营销效果取决于产品受众匹配、价格、Listing转化、评价、佣金及收益稳定性。Affiliate不仅看佣金比例，更关注EPC（每次点击收益），高佣金未必带来推广。站外引流后，站内需靠价格、Review、促销、库存承接转化。建议优化站内表现再投联盟，并利用Levanta等平台管理8万+美国本土联盟客资源，覆盖Creator、媒体、Deal站等。",
-      "category": "experience",
-      "score": 8.4,
-      "url": "https://www.wearesellers.com/question/123385",
-      "source": "wearesellers",
-      "published_at": "2026-08-14T04:11:48.438Z"
-    },
-    {
-      "title": "Notice: New AWD Inbound Rules (Effective Jul 31, 2026)",
-      "summary": "亚马逊美国站AWD将于2026年7月31日起停止接收超重或超大件商品，仅允许标准尺寸商品入库。标准为单件长宽高不超过18x14x8英寸且重量不超过20磅。超标商品创建货件时将被自动拦截，卖家需直接发往FBA或第三方海外仓。",
+      "title": "今天我被税务专管员找了： 关于亚马逊销售收入申报的问题 增值税以及消费税到底该怎么申报",
+      "summary": "税务专管员称申报收入必须高于平台推送，卖家申报少的是欧洲VAT和美国消费税。卖家核算税款差额与三季度的缺口基本吻合，但12366热线认为VAT不应计入收入。专管员不接受解释，要求按平台数据申报并建议提供差额说明和原始数据，暂无定论。",
       "category": "policy",
-      "score": 9.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1uyu9tp/notice_new_awd_inbound_rules_effective_jul_31_2026",
+      "score": 8.4,
+      "url": "https://www.wearesellers.com/question/123419",
+      "source": "wearesellers",
+      "published_at": "2026-08-15T05:48:35.134Z"
+    },
+    {
+      "title": "AGL delay?",
+      "summary": "卖家使用亚马逊全球物流（AGL）从中国发美国LCL拼箱，3周无更新，AGL称舱位未定，需舱位确认后才审核货物并报内陆运费，远慢于自有货代一周内提货，可能导致75天自动取消窗口失效。帖子警示AGL头程延迟风险。",
+      "category": "experience",
+      "score": 6.8,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vo6ig4/agl_delay",
       "source": "reddit_fba",
-      "published_at": "2026-07-17T08:58:01+00:00"
+      "published_at": "2026-08-14T12:54:43.000Z"
     },
     {
-      "title": "如何确认开品的需求机会？粘蚊贴没有引诱剂，用户自己加苹果醋，这算产品机会吗？关于粘蚊贴的 VOC 案例",
-      "summary": "基于Amazon US粘捕式飞虫陷阱7个ASIN共291条评论的VOC分析，发现无引诱剂只能被动等待出现10次以上，用户DIY苹果醋或糖后捕获量才增加，说明主动引诱需求证据充分；但对蚊子效果不明显虽出现8次以上，因样本主要处理真菌蚊虫和果蝇，不能判定灭蚊粘捕器为成熟机会，需另做虫种测试。植物场景下用户通常组合黄色粘板、蚊子饼、硅藻土和线虫处理土壤幼虫，因此产品定义需根据虫种区分引诱或源头组合方案。",
-      "category": "trend",
-      "score": 7.4,
-      "url": "https://www.wearesellers.com/question/123340",
-      "source": "wearesellers",
-      "published_at": "2026-08-14T06:47:04.860Z"
-    },
-    {
-      "title": "亚马逊FBA新费政生效：超龄库存附加费大幅上涨",
-      "summary": "亚马逊FBA新费政实施，商品库龄达181天即收超龄附加费，超365天最高达月仓储费13倍；未加入SIPP的大件商品加收包装费。卖家须通过Outlet、清仓或移除清理冗余库存，大件商品应尽快申请SIPP认证以降低包装成本。",
+      "title": "亚马逊9月1日起多类目退货期限调整为14天",
+      "summary": "亚马逊自2026年9月1日起，将母婴、美妆、家居等十余个品类的退货期限缩短至14天，适用于FBA和自配送模式。配送日期在10月1日前的订单有过渡缓冲期。卖家可通过后台撤销权设置主动延长退货期以优化体验，商品详情页将自动展示新退货窗口。",
       "category": "policy",
       "score": 9.4,
-      "url": "https://www.amz123.com/kx/RkUvZPFw",
+      "url": "https://www.amz123.com/kx/KzlNFjAq",
       "source": "amz123",
-      "published_at": "2026-07-08T02:31:43+00:00"
+      "published_at": "2026-08-05T09:47:24+00:00"
     },
     {
-      "title": "7月27日亚马逊商品名称新规倒计时：标题优化实操指南",
-      "summary": "亚马逊新规要求非媒介类商品标题缩减至75字符以内。卖家应主动优化标题，仅保留品牌名和核心流量词，将材质、功能等次要卖点转移至新增的125字符商品亮点板块及五点描述中。建议先用中等销量链接测试，避免被系统AI强制乱改。",
+      "title": "0110报关监管趋严：境外收货人不得填写Amazon或FBA仓名",
+      "summary": "自2026年7月下旬起，多地报关行明确0110一般贸易报关单中境外收货人不得填写Amazon或FBA仓名。卖家必须提供真实境外购货方信息、购销合同、商业发票及货款结算凭证。此举是金税四期推进下多部门数据联动监管的落实，不合规将面临拒绝接单。",
       "category": "policy",
-      "score": 10,
-      "url": "https://www.wearesellers.com/question/122034",
-      "source": "wearesellers",
-      "published_at": "2026-07-09T08:52:43.54+00:00"
+      "score": 9.4,
+      "url": "https://www.amz123.com/kx/lADJn1c1",
+      "source": "amz123",
+      "published_at": "2026-08-05T09:26:54+00:00"
     },
     {
-      "title": "ACOS 偏高时，我会先看哪些数据？自动广告最近 30 天一共出了 344 单，整体转化率是 8.9%，ACOS 62.18%。应该怎么调整？应该先看整体转化率，再看细分转化率.....",
-      "summary": "阐述了亚马逊广告ACOS偏高时的优化实操方法。核心步骤为：先对比顶部、其余和商品页三个位置的转化率、ACOS及点击率；通过降低整体基础竞价并提高表现优异位置的百分比溢价，实现流量精准转移；对于数据量大的自动广告，应将紧密和宽泛匹配拆分单独管理，避免预算被单一模式抢占。",
-      "category": "experience",
-      "score": 10,
-      "url": "https://www.wearesellers.com/question/122160",
+      "title": "亚马逊新规标题改完，销量为什么反而掉了？标题仍然承担产品识别和第一眼点击，Item Highlights 是补充信息位。正确做法不是机械搬家，而是重新分配信息权重......",
+      "summary": "针对亚马逊标题限制75字符新规，提出修改标题后销量下滑的诊断与应对方法。运营应将信息重构为标题、Item Highlights和五点描述三层，通过分析曝光、点击和转化三项指标，利用业务报告与SQP数据定位流失关键词，避免盲目改回。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.wearesellers.com/question/123070",
       "source": "wearesellers",
-      "published_at": "2026-07-15T07:36:18.964+00:00"
+      "published_at": "2026-08-06T03:17:08.421+00:00"
     },
     {
-      "title": "一文回答所有关于提升自然流量，降低广告订单占比的相关问题——可以推自然位的关键词特征",
-      "summary": "提升亚马逊自然流量需通过SP手动精准广告冲首页位置。在预算分配上建议SP占比约80%，SB和SD占20%。利用TOS位置的高点击率和清晰转化路径，让系统判定产品与关键词的高相关性，从而最高效地推动自然排名上升。",
-      "category": "experience",
-      "score": 10,
-      "url": "https://www.wearesellers.com/question/122397",
-      "source": "wearesellers",
-      "published_at": "2026-07-21T07:10:03.329+00:00"
+      "title": "亚马逊NSP计划将于7月30日进行重大升级",
+      "summary": "亚马逊物流新品入仓优惠计划（NSP）将于2026年7月30日升级。旧用户需在10月31日前重新确认注册。升级后新父ASIN首件入仓120天内享优惠，前100件商品佣金降至10%，次100件降至5%，前200件免除仓储费等多项费用，并新增Vine和Coupon费用优惠。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.amz123.com/kx/4ifaih3a",
+      "source": "amz123",
+      "published_at": "2026-07-31T06:29:54+00:00"
     },
     {
-      "title": "怎么用AI 帮你从亚马逊竞品身上找到哇哇靠谱的关键词？",
-      "summary": "利用AI筛选同水平直接竞品稳定排名的关键词进行精准投放。首先避开高权重的T0级竞品，锁定同水平直接竞品。接着利用AI工具调用数据，筛选出竞品自然排名在前两三页且近三十天排名波动小即每日自然排名方差小的关键词。这类词竞品能稳住，自身投放也更易稳定排名，可降低测试成本。",
+      "title": "# 运营案例分析 # 是不是过度依赖广告反而抑制了自然增长？为什么我的广告转化和预算都远超行业水平，大词自然位却始终卡在首页中间，无法像竞品那样靠自然流量拉动排名？",
+      "summary": "卖家月销一万、排名二到三，大词自然位卡在首页十五到二十名。广告转化百分之二十六但自然转化仅百分之六，大词流量八成来自广告，而竞品自然流量占八成。卖家自查怀疑三十个子体销量分散，单一子体仅一两千销量，以及广告压制自然排名，但无具体方案。",
       "category": "experience",
-      "score": 9,
-      "url": "https://www.wearesellers.com/question/122643",
+      "score": 8.4,
+      "url": "https://www.wearesellers.com/question/111580",
       "source": "wearesellers",
-      "published_at": "2026-07-27T09:30:05.984+00:00"
+      "published_at": "2026-08-14T11:22:55.011Z"
+    },
+    {
+      "title": "亚马逊美国AWD将于7月31日起全面停止接收大件商品",
+      "summary": "亚马逊美国站AWD将于2026年7月31日起停止接收大件及超重商品，单件尺寸超45.7×35.6×20.3厘米或重超9公斤将被拦截。主营家具、健身器材等大件商品的卖家需及早调整海外仓布局，改变依靠AWD储备长期库存以降低FBA仓储成本的运营模式。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.amz123.com/kx/S1F3tDAH",
+      "source": "amz123",
+      "published_at": "2026-07-16T05:54:01+00:00"
+    },
+    {
+      "title": "New: Introducing the Tracking API v2026-01-30",
+      "summary": "Tracking API v2026-01-30已在美国站上线，卖家可通过SP-API调用该接口获取货件在亚马逊供应链中的实时跟踪详情。具体用法需查阅Release Notes，适合有开发能力的FBA卖家集成物流节点信息以优化库存管理。该更新可直接用于运营决策，但需具备API对接能力。",
+      "category": "trend",
+      "score": 6.4,
+      "url": "https://developer-docs.amazon.com/sp-api/changelog/new-introducing-the-tracking-api-v2026-01-30",
+      "source": "amazon_official",
+      "published_at": "2026-08-05T20:54:59.000Z"
     }
   ]
 }
