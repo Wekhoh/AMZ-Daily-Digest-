@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-08-15T06:29:44Z",
-  "digest_date": "2026-08-15",
+  "generated_at_utc": "2026-08-16T06:31:02Z",
+  "digest_date": "2026-08-16",
   "article_count": 50,
   "articles": [
     {
-      "title": "Compliance for product with small magnets",
-      "summary": "卖家产品含不可拆卸的弱磁铁，亚马逊现行规定要求认证，需第三方测试证明合规，否则无法走FBA。帖子未给出具体检测机构或费用，仅表述产品售价约14美元，不愿投入过高但也不想违规，目前暂在eBay手动发货。",
+      "title": "亚马逊 1DC（One Distribution Center）仓点入仓异常风险，你们遇到过这些新的仓库代码吗？IMS1、IGA3、XMI3、XCH2、IMI1、IMO1、ITX3、INC1 等",
+      "summary": "亚马逊上线1DC仓网导致IMS1、IGA3等新仓库出现无法送仓、不更新等异常。卖家在创建货件时应重点留意仓库代码，谨慎分配。应对方法是创建多于5个货件以刷出老仓库；若货件已送达并出现异常，可利用货代提供的POD送仓凭证向亚马逊开Case进行申诉。",
       "category": "policy",
-      "score": 6.2,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1votjy6/compliance_for_product_with_small_magnets",
-      "source": "reddit_fba",
-      "published_at": "2026-08-15T04:49:18.000Z"
-    },
-    {
-      "title": "今天我被税务专管员找了： 关于亚马逊销售收入申报的问题 增值税以及消费税到底该怎么申报",
-      "summary": "税务专管员称申报收入必须高于平台推送，卖家申报少的是欧洲VAT和美国消费税。卖家核算税款差额与三季度的缺口基本吻合，但12366热线认为VAT不应计入收入。专管员不接受解释，要求按平台数据申报并建议提供差额说明和原始数据，暂无定论。",
-      "category": "policy",
-      "score": 8.4,
-      "url": "https://www.wearesellers.com/question/123419",
+      "score": 9.4,
+      "url": "https://www.wearesellers.com/question/123088",
       "source": "wearesellers",
-      "published_at": "2026-08-15T05:48:35.134Z"
+      "published_at": "2026-08-07T05:02:15.665+00:00"
     },
     {
-      "title": "AGL delay?",
-      "summary": "卖家使用亚马逊全球物流（AGL）从中国发美国LCL拼箱，3周无更新，AGL称舱位未定，需舱位确认后才审核货物并报内陆运费，远慢于自有货代一周内提货，可能导致75天自动取消窗口失效。帖子警示AGL头程延迟风险。",
+      "title": "亚马逊广告的误区，\"低 ACoS\"不一定是好事",
+      "summary": "破除低ACoS即广告健康的误区，树立边际利润导向。运营应通过计算三道线进行优化：保本线（扣除各项成本后的利润空间）、目标线（保本线减去期望利润率）和扩量线（不超过保本线）。若ACoS反常偏低，应通过提高出价、拓词和增加预算向外推流量，以TACoS and 总利润增长作为最终衡量标准。",
       "category": "experience",
-      "score": 6.8,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vo6ig4/agl_delay",
-      "source": "reddit_fba",
-      "published_at": "2026-08-14T12:54:43.000Z"
-    },
-    {
-      "title": "亚马逊9月1日起多类目退货期限调整为14天",
-      "summary": "亚马逊自2026年9月1日起，将母婴、美妆、家居等十余个品类的退货期限缩短至14天，适用于FBA和自配送模式。配送日期在10月1日前的订单有过渡缓冲期。卖家可通过后台撤销权设置主动延长退货期以优化体验，商品详情页将自动展示新退货窗口。",
-      "category": "policy",
       "score": 9.4,
-      "url": "https://www.amz123.com/kx/KzlNFjAq",
-      "source": "amz123",
-      "published_at": "2026-08-05T09:47:24+00:00"
-    },
-    {
-      "title": "0110报关监管趋严：境外收货人不得填写Amazon或FBA仓名",
-      "summary": "自2026年7月下旬起，多地报关行明确0110一般贸易报关单中境外收货人不得填写Amazon或FBA仓名。卖家必须提供真实境外购货方信息、购销合同、商业发票及货款结算凭证。此举是金税四期推进下多部门数据联动监管的落实，不合规将面临拒绝接单。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.amz123.com/kx/lADJn1c1",
-      "source": "amz123",
-      "published_at": "2026-08-05T09:26:54+00:00"
-    },
-    {
-      "title": "亚马逊新规标题改完，销量为什么反而掉了？标题仍然承担产品识别和第一眼点击，Item Highlights 是补充信息位。正确做法不是机械搬家，而是重新分配信息权重......",
-      "summary": "针对亚马逊标题限制75字符新规，提出修改标题后销量下滑的诊断与应对方法。运营应将信息重构为标题、Item Highlights和五点描述三层，通过分析曝光、点击和转化三项指标，利用业务报告与SQP数据定位流失关键词，避免盲目改回。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.wearesellers.com/question/123070",
+      "url": "https://www.wearesellers.com/question/123204",
       "source": "wearesellers",
-      "published_at": "2026-08-06T03:17:08.421+00:00"
+      "published_at": "2026-08-10T07:05:26.121+00:00"
     },
     {
-      "title": "亚马逊NSP计划将于7月30日进行重大升级",
-      "summary": "亚马逊物流新品入仓优惠计划（NSP）将于2026年7月30日升级。旧用户需在10月31日前重新确认注册。升级后新父ASIN首件入仓120天内享优惠，前100件商品佣金降至10%，次100件降至5%，前200件免除仓储费等多项费用，并新增Vine和Coupon费用优惠。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.amz123.com/kx/4ifaih3a",
-      "source": "amz123",
-      "published_at": "2026-07-31T06:29:54+00:00"
-    },
-    {
-      "title": "# 运营案例分析 # 是不是过度依赖广告反而抑制了自然增长？为什么我的广告转化和预算都远超行业水平，大词自然位却始终卡在首页中间，无法像竞品那样靠自然流量拉动排名？",
-      "summary": "卖家月销一万、排名二到三，大词自然位卡在首页十五到二十名。广告转化百分之二十六但自然转化仅百分之六，大词流量八成来自广告，而竞品自然流量占八成。卖家自查怀疑三十个子体销量分散，单一子体仅一两千销量，以及广告压制自然排名，但无具体方案。",
+      "title": "The reimbursement money I was leaving on the table for over a year (FBA)",
+      "summary": "亚马逊FBA索赔实操方法。卖家应每月比对退货报告与赔偿报告，针对买家未退回货物、超45天未退回已退款件、库容损毁未自动赔偿等异常，以一单一案、只陈述事实的方式开case索赔，避免因超出时效而造成资金损失。",
       "category": "experience",
-      "score": 8.4,
-      "url": "https://www.wearesellers.com/question/111580",
-      "source": "wearesellers",
-      "published_at": "2026-08-14T11:22:55.011Z"
+      "score": 9.4,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vbqfwd/the_reimbursement_money_i_was_leaving_on_the",
+      "source": "reddit_fba",
+      "published_at": "2026-07-31T13:06:17+00:00"
     },
     {
-      "title": "亚马逊美国AWD将于7月31日起全面停止接收大件商品",
-      "summary": "亚马逊美国站AWD将于2026年7月31日起停止接收大件及超重商品，单件尺寸超45.7×35.6×20.3厘米或重超9公斤将被拦截。主营家具、健身器材等大件商品的卖家需及早调整海外仓布局，改变依靠AWD储备长期库存以降低FBA仓储成本的运营模式。",
+      "title": "亚马逊北美站收紧锂电池小家电合规要求",
+      "summary": "亚马逊北美站针对锂电池家用设备卖家启动专项合规审核。卖家须在收到通知30天内，购买单次及年度累计保额不低于100万美元的商业综合责任险，且保险需覆盖锂电池供电家用电器责任，将亚马逊列为附加被保险人，并完成TIC第三方直接验证。",
       "category": "policy",
       "score": 9.4,
-      "url": "https://www.amz123.com/kx/S1F3tDAH",
+      "url": "https://www.amz123.com/kx/ZTxldODD",
       "source": "amz123",
-      "published_at": "2026-07-16T05:54:01+00:00"
+      "published_at": "2026-07-23T03:20:30+00:00"
     },
     {
-      "title": "New: Introducing the Tracking API v2026-01-30",
-      "summary": "Tracking API v2026-01-30已在美国站上线，卖家可通过SP-API调用该接口获取货件在亚马逊供应链中的实时跟踪详情。具体用法需查阅Release Notes，适合有开发能力的FBA卖家集成物流节点信息以优化库存管理。该更新可直接用于运营决策，但需具备API对接能力。",
-      "category": "trend",
-      "score": 6.4,
-      "url": "https://developer-docs.amazon.com/sp-api/changelog/new-introducing-the-tracking-api-v2026-01-30",
-      "source": "amazon_official",
-      "published_at": "2026-08-05T20:54:59.000Z"
+      "title": "Stop running Amazon PPC on all your ASIN variations. Here is the strict logic you need to apply to your catalog:",
+      "summary": "针对多变体ASIN的亚马逊PPC广告，应避免将所有子变体混入同个广告组。核心策略是：将高转化、普适性强的Hero SKU用于投放高流量核心词；将尺寸、颜色等具体变体精准匹配长尾特定意图词。若父体TACoS升高，需隔离分析具体子ASIN的TACoS和搜索词重叠度，优化变体层面的广告流失。",
+      "category": "experience",
+      "score": 9.4,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vht1zt/stop_running_amazon_ppc_on_all_your_asin",
+      "source": "reddit_fba",
+      "published_at": "2026-08-07T06:42:46+00:00"
+    },
+    {
+      "title": "亚马逊美站自发货卖家须维持90%营业时间配送率",
+      "summary": "亚马逊美国站规定自2026年9月30日起，卖家自配送发往企业购客户的订单，其营业时间配送率必须保持在90%以上。该指标按14天滚动周期计算。若10月30日仍未达标，自配送商品将在企业购频道被暂停展示。自发货卖家须密切监控配送时效，优化末端派送，确保在企业客户营业时间内送达以维持销售权限。",
+      "category": "policy",
+      "score": 10,
+      "url": "https://www.amz123.com/kx/1yaEUQpk",
+      "source": "amz123",
+      "published_at": "2026-07-08T01:49:07+00:00"
+    },
+    {
+      "title": "亚马逊MFN备货时间新规6月29日生效，严禁虚报时效",
+      "summary": "亚马逊MFN备货时间新规将于2026年6月29日执行。卖家SKU备货时效必须与真实发货能力一致，严禁拉长处理时间规避延迟发货率考核。平台将对比近30天数据，违规将由系统自动以实际备货时间接管。卖家应开启自动处理时间工具获取保护，或手动精准匹配实际发货节奏，定制及大件商品可申请豁免。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.amz123.com/kx/Y7Uk3LdE",
+      "source": "amz123",
+      "published_at": "2026-06-25T02:07:48+00:00"
+    },
+    {
+      "title": "不用请专家，WorkBuddy一句话直出亚马逊Listing体检报告",
+      "summary": "卖家可利用WorkBuddy工具安装amazon-listing-doctor技能，输入ASIN或导入Excel数据，快速生成Listing体检报告。针对标题超长和品牌缺失问题，需严格执行品牌前置规则，并将标题长度控制在75个字符上限内，确保核心品类词在移动端前50字符内显示。",
+      "category": "experience",
+      "score": 9.4,
+      "url": "https://www.wearesellers.com/question/123199",
+      "source": "wearesellers",
+      "published_at": "2026-08-10T06:13:51.552+00:00"
+    },
+    {
+      "title": "亚马逊严打包内感谢卡诱导留评行为 多卖家因违规被扣分",
+      "summary": "亚马逊近期严厉打击包装内感谢卡诱导留评行为。卖家若在产品包装中放置含有感谢您的评价或有问题联系我们勿用后台等表述的手写卡或明信片，将被判定为评价滥用并扣减账户绩效分，严重者将导致店铺停用。卖家必须立即排查并下架含有此类诱导留评和规避后台沟通表述的包装配件。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.amz123.com/kx/gSS4TUzg",
+      "source": "amz123",
+      "published_at": "2026-06-25T01:45:34+00:00"
+    },
+    {
+      "title": "亚马逊标题又出新规？其实是道超车的机会来了！特别温馨提醒，如果你不想要PD的流量了，你就现在改标题，否则我劝你最好等PD完了再动……",
+      "summary": "亚马逊将于7月27日实施75字符标题限制。卖家应改变运营思路，将标题定位为产品身份识别，只保留核心品类和适配规格；同时利用125字符的Item Highlights承接卖点刺激转化。中小卖家应放弃大词覆盖，通过更窄的定位和精准亮点进行需求爆破，实现与大链接的差异化竞争。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.wearesellers.com/question/121027",
+      "source": "wearesellers",
+      "published_at": "2026-06-13T14:20:32.205+00:00"
     }
   ]
 }
