@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-08-16T06:31:02Z",
-  "digest_date": "2026-08-16",
+  "generated_at_utc": "2026-08-17T06:45:17Z",
+  "digest_date": "2026-08-17",
   "article_count": 50,
   "articles": [
     {
-      "title": "亚马逊 1DC（One Distribution Center）仓点入仓异常风险，你们遇到过这些新的仓库代码吗？IMS1、IGA3、XMI3、XCH2、IMI1、IMO1、ITX3、INC1 等",
-      "summary": "亚马逊上线1DC仓网导致IMS1、IGA3等新仓库出现无法送仓、不更新等异常。卖家在创建货件时应重点留意仓库代码，谨慎分配。应对方法是创建多于5个货件以刷出老仓库；若货件已送达并出现异常，可利用货代提供的POD送仓凭证向亚马逊开Case进行申诉。",
+      "title": "​亚马逊 Listing 不知道怎么优化？看这几个方向",
+      "summary": "主图以完整包装瓶为核心，突出品牌、容量、核心功效，并放置真实胶囊显示形态；第二图补充成分或功能信息；模特直视镜头可提升信任。标题前75字符优先放品牌词和核心属性，五点描述精简去掉无搜索价值的无效话术。品牌故事模块配置产品矩阵做交叉销售；A+页面使用新场景图与排版，并针对差评和QA提炼的疑虑解答。",
+      "category": "experience",
+      "score": 8.4,
+      "url": "https://www.wearesellers.com/question/123464",
+      "source": "wearesellers",
+      "published_at": "2026-08-17T06:08:42.155Z"
+    },
+    {
+      "title": "# 案例分析 # 非知名品牌新品10天冲进类目Top 10？美国站新品靠秒杀+跨站点评分合并起量的打法太猛了",
+      "summary": "案例显示新品8月5日上架，当天上传3个直评并设260美元以上高价铺垫List Price；8月7日出现排名，推测已安排订单；8月8日通过其他ASIN混报Deal启动秒杀，成交价约80美元、约70% OFF，同日开广告；排名7天内从Top100升至Top10。Listing含8图、双卖家视频、红人视频、高级A+、Brand Story和FBA，推测首批备货至少5000件。",
+      "category": "experience",
+      "score": 8,
+      "url": "https://www.wearesellers.com/question/123441",
+      "source": "wearesellers",
+      "published_at": "2026-08-17T02:36:13.760Z"
+    },
+    {
+      "title": "Looks like TIC testing is now required by 3rd party before listing items",
+      "summary": "亚马逊收紧合规政策，取消了新品上架的检测宽限期。玩具、电子和膳食补充剂等受管制类目的卖家，必须在产品上架前通过合规的第三方TIC机构完成检测，且检测报告须由实验室直接提交给亚马逊，否则新品将立即面临禁售。",
       "category": "policy",
       "score": 9.4,
-      "url": "https://www.wearesellers.com/question/123088",
-      "source": "wearesellers",
-      "published_at": "2026-08-07T05:02:15.665+00:00"
-    },
-    {
-      "title": "亚马逊广告的误区，\"低 ACoS\"不一定是好事",
-      "summary": "破除低ACoS即广告健康的误区，树立边际利润导向。运营应通过计算三道线进行优化：保本线（扣除各项成本后的利润空间）、目标线（保本线减去期望利润率）和扩量线（不超过保本线）。若ACoS反常偏低，应通过提高出价、拓词和增加预算向外推流量，以TACoS and 总利润增长作为最终衡量标准。",
-      "category": "experience",
-      "score": 9.4,
-      "url": "https://www.wearesellers.com/question/123204",
-      "source": "wearesellers",
-      "published_at": "2026-08-10T07:05:26.121+00:00"
-    },
-    {
-      "title": "The reimbursement money I was leaving on the table for over a year (FBA)",
-      "summary": "亚马逊FBA索赔实操方法。卖家应每月比对退货报告与赔偿报告，针对买家未退回货物、超45天未退回已退款件、库容损毁未自动赔偿等异常，以一单一案、只陈述事实的方式开case索赔，避免因超出时效而造成资金损失。",
-      "category": "experience",
-      "score": 9.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vbqfwd/the_reimbursement_money_i_was_leaving_on_the",
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vhurrl/looks_like_tic_testing_is_now_required_by_3rd",
       "source": "reddit_fba",
-      "published_at": "2026-07-31T13:06:17+00:00"
+      "published_at": "2026-08-07T08:25:31+00:00"
     },
     {
-      "title": "亚马逊北美站收紧锂电池小家电合规要求",
-      "summary": "亚马逊北美站针对锂电池家用设备卖家启动专项合规审核。卖家须在收到通知30天内，购买单次及年度累计保额不低于100万美元的商业综合责任险，且保险需覆盖锂电池供电家用电器责任，将亚马逊列为附加被保险人，并完成TIC第三方直接验证。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.amz123.com/kx/ZTxldODD",
-      "source": "amz123",
-      "published_at": "2026-07-23T03:20:30+00:00"
-    },
-    {
-      "title": "Stop running Amazon PPC on all your ASIN variations. Here is the strict logic you need to apply to your catalog:",
-      "summary": "针对多变体ASIN的亚马逊PPC广告，应避免将所有子变体混入同个广告组。核心策略是：将高转化、普适性强的Hero SKU用于投放高流量核心词；将尺寸、颜色等具体变体精准匹配长尾特定意图词。若父体TACoS升高，需隔离分析具体子ASIN的TACoS和搜索词重叠度，优化变体层面的广告流失。",
+      "title": "亚马逊广告如何打？总结了一些广告思路打法框架，欢迎讨论指正",
+      "summary": "阐述了亚马逊广告的系统性打法框架。在推新阶段，提倡将SP精准广告按流量相近程度分活动分组投放，避免预算被大词蚕食；同时采用带边界的广泛投放法，以核心词为锚点组合已验证的高价值词根进行拓词，并在启动前否定无效词根，实现精准引流。",
       "category": "experience",
       "score": 9.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vht1zt/stop_running_amazon_ppc_on_all_your_asin",
-      "source": "reddit_fba",
-      "published_at": "2026-08-07T06:42:46+00:00"
-    },
-    {
-      "title": "亚马逊美站自发货卖家须维持90%营业时间配送率",
-      "summary": "亚马逊美国站规定自2026年9月30日起，卖家自配送发往企业购客户的订单，其营业时间配送率必须保持在90%以上。该指标按14天滚动周期计算。若10月30日仍未达标，自配送商品将在企业购频道被暂停展示。自发货卖家须密切监控配送时效，优化末端派送，确保在企业客户营业时间内送达以维持销售权限。",
-      "category": "policy",
-      "score": 10,
-      "url": "https://www.amz123.com/kx/1yaEUQpk",
-      "source": "amz123",
-      "published_at": "2026-07-08T01:49:07+00:00"
-    },
-    {
-      "title": "亚马逊MFN备货时间新规6月29日生效，严禁虚报时效",
-      "summary": "亚马逊MFN备货时间新规将于2026年6月29日执行。卖家SKU备货时效必须与真实发货能力一致，严禁拉长处理时间规避延迟发货率考核。平台将对比近30天数据，违规将由系统自动以实际备货时间接管。卖家应开启自动处理时间工具获取保护，或手动精准匹配实际发货节奏，定制及大件商品可申请豁免。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.amz123.com/kx/Y7Uk3LdE",
-      "source": "amz123",
-      "published_at": "2026-06-25T02:07:48+00:00"
-    },
-    {
-      "title": "不用请专家，WorkBuddy一句话直出亚马逊Listing体检报告",
-      "summary": "卖家可利用WorkBuddy工具安装amazon-listing-doctor技能，输入ASIN或导入Excel数据，快速生成Listing体检报告。针对标题超长和品牌缺失问题，需严格执行品牌前置规则，并将标题长度控制在75个字符上限内，确保核心品类词在移动端前50字符内显示。",
-      "category": "experience",
-      "score": 9.4,
-      "url": "https://www.wearesellers.com/question/123199",
+      "url": "https://www.wearesellers.com/question/123147",
       "source": "wearesellers",
-      "published_at": "2026-08-10T06:13:51.552+00:00"
+      "published_at": "2026-08-08T03:35:55.859+00:00"
     },
     {
-      "title": "亚马逊严打包内感谢卡诱导留评行为 多卖家因违规被扣分",
-      "summary": "亚马逊近期严厉打击包装内感谢卡诱导留评行为。卖家若在产品包装中放置含有感谢您的评价或有问题联系我们勿用后台等表述的手写卡或明信片，将被判定为评价滥用并扣减账户绩效分，严重者将导致店铺停用。卖家必须立即排查并下架含有此类诱导留评和规避后台沟通表述的包装配件。",
+      "title": "美国301关税正式实施，对中国商品加征12.5%关税",
+      "summary": "美国正式实施301关税，对中国、印度等国输美商品加征12.5%关税，覆盖99.4%的进口商品。石油、天然气、部分食品及特定豁免条款货物除外。中国跨境卖家需立即评估关税对产品利润率的影响，调整定价策略，并合理利用过境宽限期安排出货。",
       "category": "policy",
-      "score": 9.4,
-      "url": "https://www.amz123.com/kx/gSS4TUzg",
+      "score": 8.8,
+      "url": "https://www.amz123.com/kx/JQshE6Rd",
       "source": "amz123",
-      "published_at": "2026-06-25T01:45:34+00:00"
+      "published_at": "2026-07-24T02:28:27+00:00"
     },
     {
-      "title": "亚马逊标题又出新规？其实是道超车的机会来了！特别温馨提醒，如果你不想要PD的流量了，你就现在改标题，否则我劝你最好等PD完了再动……",
-      "summary": "亚马逊将于7月27日实施75字符标题限制。卖家应改变运营思路，将标题定位为产品身份识别，只保留核心品类和适配规格；同时利用125字符的Item Highlights承接卖点刺激转化。中小卖家应放弃大词覆盖，通过更窄的定位和精准亮点进行需求爆破，实现与大链接的差异化竞争。",
+      "title": "今天开始，美国清关彻底变了！不会电子申报，货物可能直接卡港！",
+      "summary": "美国CPSC电子申报于2026年7月8日起强制实施，进口消费品全面进入先系统核验、再放行模式。涉及儿童玩具、电子产品、服装等监管产品的卖家，必须通过eFiling提交结构化电子数据，在途货物亦受限制。卖家须立即自查CPC证书并对接数字化清关流程。",
       "category": "policy",
       "score": 9.4,
-      "url": "https://www.wearesellers.com/question/121027",
+      "url": "https://www.wearesellers.com/question/121981",
       "source": "wearesellers",
-      "published_at": "2026-06-13T14:20:32.205+00:00"
+      "published_at": "2026-07-08T07:51:40.029+00:00"
+    },
+    {
+      "title": "#超级话题#亚马逊标题新规，怎么大家都没改",
+      "summary": "亚马逊规定自2026年7月27日起，除媒介类外所有商品名称须缩减至75字符以内以适配移动端。同时新增125字符的商品亮点用于补充材质或场景信息，该亮点支持搜索与展示。卖家需在截止日前将标题精简至75字符并配置商品亮点，利用新增空间进行埋词与卖点展示。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.wearesellers.com/question/122662",
+      "source": "wearesellers",
+      "published_at": "2026-07-27T09:12:15.311+00:00"
+    },
+    {
+      "title": "美海关2R禁装指令集中出现，ISF异常货物面临起运港拦截",
+      "summary": "美国海关近期集中启动2R前置拦截措施，ISF申报异常货物将在起运港被禁装，或在目的港面临最高一万美元罚款。卖家需确保ISF与AMS及提单数据一致，保证IOR主体、EIN及Bond有效，且必须在装船前24小时完成提交，避免临近开船改单。",
+      "category": "policy",
+      "score": 9,
+      "url": "https://www.amz123.com/kx/J8S12Yar",
+      "source": "amz123",
+      "published_at": "2026-07-29T06:16:24+00:00"
+    },
+    {
+      "title": "亚马逊上线AI商品图片自动翻译功能",
+      "summary": "亚马逊在13个站点上线AI商品图片自动翻译功能，可自动识别并替换非媒体类商品详情图中的非本地文字，同时保留品牌标识和视觉效果（主图除外）。系统还会根据用户偏好生成多语言变体。卖家可利用此功能快速实现多站点图片本地化，若上传自定义新图，系统会自动替换机器翻译版本。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.amz123.com/kx/GAonkF8c",
+      "source": "amz123",
+      "published_at": "2026-08-05T06:35:25+00:00"
+    },
+    {
+      "title": "如何使用codex一句话创建一个批量功能：在商品信息和 A+ 商品描述中为由 AI 生成的包含人物的图片添加AI标签",
+      "summary": "亚马逊政策要求对包含相片级逼真AI人物的商品图片添加特定元数据标记。卖家可通过Codex等AI编程工具，一句话创建批量处理功能：将任意格式图片统一输出为JPG并调整尺寸，同时将contains-synthetic-performer标签写入JPG的XMP dc:subject字段，实现合规化操作。",
+      "category": "policy",
+      "score": 9,
+      "url": "https://www.wearesellers.com/question/122585",
+      "source": "wearesellers",
+      "published_at": "2026-07-24T07:12:45.565+00:00"
     }
   ]
 }
