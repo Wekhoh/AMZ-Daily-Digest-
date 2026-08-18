@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-08-17T06:45:17Z",
-  "digest_date": "2026-08-17",
+  "generated_at_utc": "2026-08-18T06:37:57Z",
+  "digest_date": "2026-08-18",
   "article_count": 50,
   "articles": [
     {
-      "title": "​亚马逊 Listing 不知道怎么优化？看这几个方向",
-      "summary": "主图以完整包装瓶为核心，突出品牌、容量、核心功效，并放置真实胶囊显示形态；第二图补充成分或功能信息；模特直视镜头可提升信任。标题前75字符优先放品牌词和核心属性，五点描述精简去掉无搜索价值的无效话术。品牌故事模块配置产品矩阵做交叉销售；A+页面使用新场景图与排版，并针对差评和QA提炼的疑虑解答。",
+      "title": "全宇宙第二的【亚马逊Review分析 Skill】 - 已完整开源",
+      "summary": "作者开源可复用的Amazon评论分析Skill，将翻译、情绪和好评/差评点提取自动化，并采用自生长分类标注体系。已用美区割草机10个ASIN共963条评论验证，最终输出HTML看板和Excel。该方法解决Shulex等工具只能做浅层VOC的不足，可显著减少新品调研中理解标注分类的70%时间。",
       "category": "experience",
       "score": 8.4,
-      "url": "https://www.wearesellers.com/question/123464",
+      "url": "https://www.wearesellers.com/question/123446",
       "source": "wearesellers",
-      "published_at": "2026-08-17T06:08:42.155Z"
+      "published_at": "2026-08-18T06:17:20.905Z"
     },
     {
-      "title": "# 案例分析 # 非知名品牌新品10天冲进类目Top 10？美国站新品靠秒杀+跨站点评分合并起量的打法太猛了",
-      "summary": "案例显示新品8月5日上架，当天上传3个直评并设260美元以上高价铺垫List Price；8月7日出现排名，推测已安排订单；8月8日通过其他ASIN混报Deal启动秒杀，成交价约80美元、约70% OFF，同日开广告；排名7天内从Top100升至Top10。Listing含8图、双卖家视频、红人视频、高级A+、Brand Story和FBA，推测首批备货至少5000件。",
-      "category": "experience",
-      "score": 8,
-      "url": "https://www.wearesellers.com/question/123441",
-      "source": "wearesellers",
-      "published_at": "2026-08-17T02:36:13.760Z"
-    },
-    {
-      "title": "Looks like TIC testing is now required by 3rd party before listing items",
-      "summary": "亚马逊收紧合规政策，取消了新品上架的检测宽限期。玩具、电子和膳食补充剂等受管制类目的卖家，必须在产品上架前通过合规的第三方TIC机构完成检测，且检测报告须由实验室直接提交给亚马逊，否则新品将立即面临禁售。",
+      "title": "亚马逊9月1日起多类目退货期限调整为14天",
+      "summary": "亚马逊自2026年9月1日起，将母婴、美妆、家居等十余个品类的退货期限缩短至14天，适用于FBA和自配送模式。配送日期在10月1日前的订单有过渡缓冲期。卖家可通过后台撤销权设置主动延长退货期以优化体验，商品详情页将自动展示新退货窗口。",
       "category": "policy",
       "score": 9.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vhurrl/looks_like_tic_testing_is_now_required_by_3rd",
-      "source": "reddit_fba",
-      "published_at": "2026-08-07T08:25:31+00:00"
-    },
-    {
-      "title": "亚马逊广告如何打？总结了一些广告思路打法框架，欢迎讨论指正",
-      "summary": "阐述了亚马逊广告的系统性打法框架。在推新阶段，提倡将SP精准广告按流量相近程度分活动分组投放，避免预算被大词蚕食；同时采用带边界的广泛投放法，以核心词为锚点组合已验证的高价值词根进行拓词，并在启动前否定无效词根，实现精准引流。",
-      "category": "experience",
-      "score": 9.4,
-      "url": "https://www.wearesellers.com/question/123147",
-      "source": "wearesellers",
-      "published_at": "2026-08-08T03:35:55.859+00:00"
-    },
-    {
-      "title": "美国301关税正式实施，对中国商品加征12.5%关税",
-      "summary": "美国正式实施301关税，对中国、印度等国输美商品加征12.5%关税，覆盖99.4%的进口商品。石油、天然气、部分食品及特定豁免条款货物除外。中国跨境卖家需立即评估关税对产品利润率的影响，调整定价策略，并合理利用过境宽限期安排出货。",
-      "category": "policy",
-      "score": 8.8,
-      "url": "https://www.amz123.com/kx/JQshE6Rd",
+      "url": "https://www.amz123.com/kx/KzlNFjAq",
       "source": "amz123",
-      "published_at": "2026-07-24T02:28:27+00:00"
+      "published_at": "2026-08-05T09:47:24+00:00"
     },
     {
-      "title": "今天开始，美国清关彻底变了！不会电子申报，货物可能直接卡港！",
-      "summary": "美国CPSC电子申报于2026年7月8日起强制实施，进口消费品全面进入先系统核验、再放行模式。涉及儿童玩具、电子产品、服装等监管产品的卖家，必须通过eFiling提交结构化电子数据，在途货物亦受限制。卖家须立即自查CPC证书并对接数字化清关流程。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.wearesellers.com/question/121981",
-      "source": "wearesellers",
-      "published_at": "2026-07-08T07:51:40.029+00:00"
-    },
-    {
-      "title": "#超级话题#亚马逊标题新规，怎么大家都没改",
-      "summary": "亚马逊规定自2026年7月27日起，除媒介类外所有商品名称须缩减至75字符以内以适配移动端。同时新增125字符的商品亮点用于补充材质或场景信息，该亮点支持搜索与展示。卖家需在截止日前将标题精简至75字符并配置商品亮点，利用新增空间进行埋词与卖点展示。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.wearesellers.com/question/122662",
-      "source": "wearesellers",
-      "published_at": "2026-07-27T09:12:15.311+00:00"
-    },
-    {
-      "title": "美海关2R禁装指令集中出现，ISF异常货物面临起运港拦截",
-      "summary": "美国海关近期集中启动2R前置拦截措施，ISF申报异常货物将在起运港被禁装，或在目的港面临最高一万美元罚款。卖家需确保ISF与AMS及提单数据一致，保证IOR主体、EIN及Bond有效，且必须在装船前24小时完成提交，避免临近开船改单。",
-      "category": "policy",
+      "title": "4个月投资1600万盈利250w、月销100w美元的泳池机器人，这个类目你敢豪赌吗？",
+      "summary": "泳池机器人是10亿美元级高客单价季节性品类，5-7月占全年销售额53%以上，2月前需到货。TOP100新品中95%为老品牌马甲，纯新品牌一年存活率仅5%。打爆前十需1600万人民币现金流峰值，4个月净利约250万，毛利率15.6%，但99%卖家不适合。定价169美元以下低端，399美元以上中高端。",
+      "category": "trend",
       "score": 9,
-      "url": "https://www.amz123.com/kx/J8S12Yar",
-      "source": "amz123",
-      "published_at": "2026-07-29T06:16:24+00:00"
+      "url": "https://www.wearesellers.com/question/123439",
+      "source": "wearesellers",
+      "published_at": "2026-08-18T06:12:56.831Z"
     },
     {
-      "title": "亚马逊上线AI商品图片自动翻译功能",
-      "summary": "亚马逊在13个站点上线AI商品图片自动翻译功能，可自动识别并替换非媒体类商品详情图中的非本地文字，同时保留品牌标识和视觉效果（主图除外）。系统还会根据用户偏好生成多语言变体。卖家可利用此功能快速实现多站点图片本地化，若上传自定义新图，系统会自动替换机器翻译版本。",
+      "title": "刚接手链接广告到底该怎么开？一个实例展开广告搭建，轻松驾驭广告结构.",
+      "summary": "针对新接手Listing的广告搭建，应采用项目式思维，通过定量计算推导运营指标。首先根据客单价、库存和目标广告成本占比计算出每日预算；再结合历史或调研的平均CPC，倒推出维持销售所需的每日有效点击数与目标转化率基准，从而实现广告指标的精准量化。",
+      "category": "experience",
+      "score": 9.4,
+      "url": "https://www.wearesellers.com/question/122786",
+      "source": "wearesellers",
+      "published_at": "2026-07-31T08:23:18.427+00:00"
+    },
+    {
+      "title": "亚马逊严打明信片催评及诱导改评 违规直接撤销售权限",
+      "summary": "亚马逊严厉打击通过明信片催评、PayPal或礼品卡返现诱导改评等违规行为，情节严重者将跳过警告直接封号。卖家必须立即停止任何站外联系买家、批量获取用户信息及异常返现的操纵评论行为，合规运营，将运营重心从冲评数量转向提升评论内容的真实性与场景化。",
       "category": "policy",
       "score": 9.4,
-      "url": "https://www.amz123.com/kx/GAonkF8c",
+      "url": "https://www.amz123.com/kx/NXcdeLDw",
       "source": "amz123",
-      "published_at": "2026-08-05T06:35:25+00:00"
+      "published_at": "2026-07-07T09:20:21+00:00"
     },
     {
-      "title": "如何使用codex一句话创建一个批量功能：在商品信息和 A+ 商品描述中为由 AI 生成的包含人物的图片添加AI标签",
-      "summary": "亚马逊政策要求对包含相片级逼真AI人物的商品图片添加特定元数据标记。卖家可通过Codex等AI编程工具，一句话创建批量处理功能：将任意格式图片统一输出为JPG并调整尺寸，同时将contains-synthetic-performer标签写入JPG的XMP dc:subject字段，实现合规化操作。",
-      "category": "policy",
+      "title": "每天盯竞品还是看不懂变化？我把4个ASIN的64天数据交给了智能体",
+      "summary": "作者使用竞品ASIN巡检智能体复盘4个猫饮水机ASIN共64天数据，设置两个等长32天周期对比。AI执行周期对齐、多时间窗口复核、自然位与广告位拆分、价格语义归一、多信号交叉验证等8项增量动作，最终按信号一致性将竞品分为高、中、低警惕等级。报告发现子类排名稳定但大类BSR变化显著，需警惕广告曝光被误判为自然排名改善。",
+      "category": "experience",
       "score": 9,
-      "url": "https://www.wearesellers.com/question/122585",
+      "url": "https://www.wearesellers.com/question/123475",
       "source": "wearesellers",
-      "published_at": "2026-07-24T07:12:45.565+00:00"
+      "published_at": "2026-08-18T02:27:23.136Z"
+    },
+    {
+      "title": "别人注册了一个不同类别的同名商标是否对我亚马逊有影响",
+      "summary": "美国站卖家自有28类商标但实际销售12类商品，现在他人注册成功同名12类商标。需要警惕对方可能在亚马逊品牌备案后跟卖或投诉；自己无法以商标类别不同为由无效对方商标；应尽快补充注册实际销售类目商标，或准备使用证据应对潜在侵权投诉。",
+      "category": "policy",
+      "score": 6.8,
+      "url": "https://www.wearesellers.com/question/123500",
+      "source": "wearesellers",
+      "published_at": "2026-08-18T06:07:10.502Z"
+    },
+    {
+      "title": "低CPC不等于低成本，转化效率才是关键",
+      "summary": "优化亚马逊广告需以转化率为核心。通过对比不同广告位的转化率、ACOS和点击率，确定表现最佳的位置。操作上采用先降低基础竞价、再提高优势位置溢价比例的方式引导流量，并关掉低效广告组以集中预算。",
+      "category": "experience",
+      "score": 9.4,
+      "url": "https://www.wearesellers.com/question/122281",
+      "source": "wearesellers",
+      "published_at": "2026-07-16T06:59:07.267+00:00"
+    },
+    {
+      "title": "0110报关监管趋严：境外收货人不得填写Amazon或FBA仓名",
+      "summary": "自2026年7月下旬起，多地报关行明确0110一般贸易报关单中境外收货人不得填写Amazon或FBA仓名。卖家必须提供真实境外购货方信息、购销合同、商业发票及货款结算凭证。此举是金税四期推进下多部门数据联动监管的落实，不合规将面临拒绝接单。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.amz123.com/kx/lADJn1c1",
+      "source": "amz123",
+      "published_at": "2026-08-05T09:26:54+00:00"
+    },
+    {
+      "title": "亚马逊NSP计划将于7月30日进行重大升级",
+      "summary": "亚马逊物流新品入仓优惠计划（NSP）将于2026年7月30日升级。旧用户需在10月31日前重新确认注册。升级后新父ASIN首件入仓120天内享优惠，前100件商品佣金降至10%，次100件降至5%，前200件免除仓储费等多项费用，并新增Vine和Coupon费用优惠。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.amz123.com/kx/4ifaih3a",
+      "source": "amz123",
+      "published_at": "2026-07-31T06:29:54+00:00"
     }
   ]
 }
