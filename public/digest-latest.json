@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-08-18T06:37:57Z",
-  "digest_date": "2026-08-18",
+  "generated_at_utc": "2026-08-19T07:12:55Z",
+  "digest_date": "2026-08-19",
   "article_count": 50,
   "articles": [
     {
-      "title": "全宇宙第二的【亚马逊Review分析 Skill】 - 已完整开源",
-      "summary": "作者开源可复用的Amazon评论分析Skill，将翻译、情绪和好评/差评点提取自动化，并采用自生长分类标注体系。已用美区割草机10个ASIN共963条评论验证，最终输出HTML看板和Excel。该方法解决Shulex等工具只能做浅层VOC的不足，可显著减少新品调研中理解标注分类的70%时间。",
+      "title": "次要变体怎么打广告呢？两个SKU都在赚钱，主SKU月利润5000、次SKU也有3000，次要变体到底要不要一起开广告？",
+      "summary": "两个变体SKU均盈利，主SKU月利润5000元，次SKU月利润3000元；卖家当前对两个SKU分别开广告且主SKU预算更高，但考虑合并广告组可能引发内部竞争。需要决策次要变体是否继续单独投放或与主SKU共享预算以控制广告花费。无明确结论。",
+      "category": "experience",
+      "score": 6.8,
+      "url": "https://www.wearesellers.com/question/123533",
+      "source": "wearesellers",
+      "published_at": "2026-08-19T06:28:54.797Z"
+    },
+    {
+      "title": "亚马逊 1DC（One Distribution Center）仓点入仓异常风险，你们遇到过这些新的仓库代码吗？IMS1、IGA3、XMI3、XCH2、IMI1、IMO1、ITX3、INC1 等",
+      "summary": "亚马逊上线1DC仓网导致IMS1、IGA3等新仓库出现无法送仓、不更新等异常。卖家在创建货件时应重点留意仓库代码，谨慎分配。应对方法是创建多于5个货件以刷出老仓库；若货件已送达并出现异常，可利用货代提供的POD送仓凭证向亚马逊开Case进行申诉。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.wearesellers.com/question/123088",
+      "source": "wearesellers",
+      "published_at": "2026-08-07T05:02:15.665+00:00"
+    },
+    {
+      "title": "# 运营案例分析 # Amazon新品上架3周广告爆表，价格比竞品高3美金、如何调整广告？先集中打流量最大的颜色、只保留高转化词，还是直接降价到均价？",
+      "summary": "半标品新品上架三周，评分4.8/19，价格高于竞品三美金，广告按颜色分组导致关键词点击分散；出单词转化表现好但曝光不足，颜色一流量最大但关键词无份额。核心待解问题包括是否集中预算于流量颜色、是否仅保留高转化词、新品期侧重指标以及是否降价至竞品均价。无已实施调整方案。",
+      "category": "experience",
+      "score": 7.8,
+      "url": "https://www.wearesellers.com/question/123547",
+      "source": "wearesellers",
+      "published_at": "2026-08-19T06:03:47.861Z"
+    },
+    {
+      "title": "The reimbursement money I was leaving on the table for over a year (FBA)",
+      "summary": "亚马逊FBA索赔实操方法。卖家应每月比对退货报告与赔偿报告，针对买家未退回货物、超45天未退回已退款件、库容损毁未自动赔偿等异常，以一单一案、只陈述事实的方式开case索赔，避免因超出时效而造成资金损失。",
+      "category": "experience",
+      "score": 9.4,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vbqfwd/the_reimbursement_money_i_was_leaving_on_the",
+      "source": "reddit_fba",
+      "published_at": "2026-07-31T13:06:17+00:00"
+    },
+    {
+      "title": "亚马逊两段式标题后，如果有销量下滑的，想要解决办法的看过来：AMZ的75个字符标题：主关键词+关键参数=全部放title，还有主图/能填的参数全填……",
+      "summary": "针对两段式标题后销量下滑，建议将主关键词和关键参数全部放入75字符标题，主图和可填参数全部填满；广告效果差时直接重开广告组，而不是继续优化，因平台存在杀熟现象。方法简单，有卖家反馈有效。",
+      "category": "experience",
+      "score": 7.4,
+      "url": "https://www.wearesellers.com/question/123514",
+      "source": "wearesellers",
+      "published_at": "2026-08-19T05:04:18.910Z"
+    },
+    {
+      "title": "亚马逊北美站收紧锂电池小家电合规要求",
+      "summary": "亚马逊北美站针对锂电池家用设备卖家启动专项合规审核。卖家须在收到通知30天内，购买单次及年度累计保额不低于100万美元的商业综合责任险，且保险需覆盖锂电池供电家用电器责任，将亚马逊列为附加被保险人，并完成TIC第三方直接验证。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.amz123.com/kx/ZTxldODD",
+      "source": "amz123",
+      "published_at": "2026-07-23T03:20:30+00:00"
+    },
+    {
+      "title": "亚马逊美国站大陆主体刚替换完，万里汇收款要不要同步换成新主体？怕触发视频审核。大家在店铺更换主体的时候一般是怎么处理收款账户和信用卡的问题啊？选择不动还是替换呢？",
+      "summary": "卖家已完成美国站大陆主体替换且法案通过，但万里汇收款仍为旧主体，担心主体与收款不一致引发风险或触发视频审核。内容列出三种处理方式，包括替换为新主体收款、验证法案时替换、保留旧收款持续开对账单，并询问完整替换流程及信用卡处理建议。未给出明确结论。",
+      "category": "policy",
+      "score": 6.2,
+      "url": "https://www.wearesellers.com/question/123512",
+      "source": "wearesellers",
+      "published_at": "2026-08-19T06:37:30.790Z"
+    },
+    {
+      "title": "开源分享下codex+listing一键生成的实操经验，怎样让listing真正可用",
+      "summary": "将人工Listing决策链封装为Codex Skill，针对源ASIN先锁定材质、尺寸、功能等产品事实，再分站点独立筛选竞品，过滤条件为近30天销量大于5、上架时间限制，综合相关度按主图60%加标题40%取Top20。从竞品评论提取使用场景、体验亮点与痛点，形成3至8个VOC卖点。先建立T1至T5、B1至B5、D1至D5及Search Terms关键词分配表，再写文案，确保每个词可追踪。该方法生成欧洲六站Listing约20分钟。",
       "category": "experience",
       "score": 8.4,
-      "url": "https://www.wearesellers.com/question/123446",
+      "url": "https://www.wearesellers.com/question/123523",
       "source": "wearesellers",
-      "published_at": "2026-08-18T06:17:20.905Z"
+      "published_at": "2026-08-19T03:03:16.044Z"
     },
     {
-      "title": "亚马逊9月1日起多类目退货期限调整为14天",
-      "summary": "亚马逊自2026年9月1日起，将母婴、美妆、家居等十余个品类的退货期限缩短至14天，适用于FBA和自配送模式。配送日期在10月1日前的订单有过渡缓冲期。卖家可通过后台撤销权设置主动延长退货期以优化体验，商品详情页将自动展示新退货窗口。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.amz123.com/kx/KzlNFjAq",
-      "source": "amz123",
-      "published_at": "2026-08-05T09:47:24+00:00"
-    },
-    {
-      "title": "4个月投资1600万盈利250w、月销100w美元的泳池机器人，这个类目你敢豪赌吗？",
-      "summary": "泳池机器人是10亿美元级高客单价季节性品类，5-7月占全年销售额53%以上，2月前需到货。TOP100新品中95%为老品牌马甲，纯新品牌一年存活率仅5%。打爆前十需1600万人民币现金流峰值，4个月净利约250万，毛利率15.6%，但99%卖家不适合。定价169美元以下低端，399美元以上中高端。",
-      "category": "trend",
-      "score": 9,
-      "url": "https://www.wearesellers.com/question/123439",
-      "source": "wearesellers",
-      "published_at": "2026-08-18T06:12:56.831Z"
-    },
-    {
-      "title": "刚接手链接广告到底该怎么开？一个实例展开广告搭建，轻松驾驭广告结构.",
-      "summary": "针对新接手Listing的广告搭建，应采用项目式思维，通过定量计算推导运营指标。首先根据客单价、库存和目标广告成本占比计算出每日预算；再结合历史或调研的平均CPC，倒推出维持销售所需的每日有效点击数与目标转化率基准，从而实现广告指标的精准量化。",
+      "title": "Stop running Amazon PPC on all your ASIN variations. Here is the strict logic you need to apply to your catalog:",
+      "summary": "针对多变体ASIN的亚马逊PPC广告，应避免将所有子变体混入同个广告组。核心策略是：将高转化、普适性强的Hero SKU用于投放高流量核心词；将尺寸、颜色等具体变体精准匹配长尾特定意图词。若父体TACoS升高，需隔离分析具体子ASIN的TACoS和搜索词重叠度，优化变体层面的广告流失。",
       "category": "experience",
       "score": 9.4,
-      "url": "https://www.wearesellers.com/question/122786",
-      "source": "wearesellers",
-      "published_at": "2026-07-31T08:23:18.427+00:00"
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vht1zt/stop_running_amazon_ppc_on_all_your_asin",
+      "source": "reddit_fba",
+      "published_at": "2026-08-07T06:42:46+00:00"
     },
     {
-      "title": "亚马逊严打明信片催评及诱导改评 违规直接撤销售权限",
-      "summary": "亚马逊严厉打击通过明信片催评、PayPal或礼品卡返现诱导改评等违规行为，情节严重者将跳过警告直接封号。卖家必须立即停止任何站外联系买家、批量获取用户信息及异常返现的操纵评论行为，合规运营，将运营重心从冲评数量转向提升评论内容的真实性与场景化。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.amz123.com/kx/NXcdeLDw",
-      "source": "amz123",
-      "published_at": "2026-07-07T09:20:21+00:00"
-    },
-    {
-      "title": "每天盯竞品还是看不懂变化？我把4个ASIN的64天数据交给了智能体",
-      "summary": "作者使用竞品ASIN巡检智能体复盘4个猫饮水机ASIN共64天数据，设置两个等长32天周期对比。AI执行周期对齐、多时间窗口复核、自然位与广告位拆分、价格语义归一、多信号交叉验证等8项增量动作，最终按信号一致性将竞品分为高、中、低警惕等级。报告发现子类排名稳定但大类BSR变化显著，需警惕广告曝光被误判为自然排名改善。",
+      "title": "AI赋能跨境？我悟了....",
+      "summary": "卖家在Mylevis平台手动创建VOC洞察与增长决策智能体，路径为进入平台、智能体、手动创建，填写名称与角色设定，选择MCP或Skill能力后保存。核心是明确服务场景、角色与所需能力。调用时输入一句ASIN需求，智能体自动输出包含售价、销量、销售额的VOC报告，替代跨评论整理，将高频问题识别和优先级判断收拢为报告，使卖家集中精力于运营判断与执行。",
       "category": "experience",
-      "score": 9,
-      "url": "https://www.wearesellers.com/question/123475",
+      "score": 7.4,
+      "url": "https://www.wearesellers.com/question/123491",
       "source": "wearesellers",
-      "published_at": "2026-08-18T02:27:23.136Z"
-    },
-    {
-      "title": "别人注册了一个不同类别的同名商标是否对我亚马逊有影响",
-      "summary": "美国站卖家自有28类商标但实际销售12类商品，现在他人注册成功同名12类商标。需要警惕对方可能在亚马逊品牌备案后跟卖或投诉；自己无法以商标类别不同为由无效对方商标；应尽快补充注册实际销售类目商标，或准备使用证据应对潜在侵权投诉。",
-      "category": "policy",
-      "score": 6.8,
-      "url": "https://www.wearesellers.com/question/123500",
-      "source": "wearesellers",
-      "published_at": "2026-08-18T06:07:10.502Z"
-    },
-    {
-      "title": "低CPC不等于低成本，转化效率才是关键",
-      "summary": "优化亚马逊广告需以转化率为核心。通过对比不同广告位的转化率、ACOS和点击率，确定表现最佳的位置。操作上采用先降低基础竞价、再提高优势位置溢价比例的方式引导流量，并关掉低效广告组以集中预算。",
-      "category": "experience",
-      "score": 9.4,
-      "url": "https://www.wearesellers.com/question/122281",
-      "source": "wearesellers",
-      "published_at": "2026-07-16T06:59:07.267+00:00"
-    },
-    {
-      "title": "0110报关监管趋严：境外收货人不得填写Amazon或FBA仓名",
-      "summary": "自2026年7月下旬起，多地报关行明确0110一般贸易报关单中境外收货人不得填写Amazon或FBA仓名。卖家必须提供真实境外购货方信息、购销合同、商业发票及货款结算凭证。此举是金税四期推进下多部门数据联动监管的落实，不合规将面临拒绝接单。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.amz123.com/kx/lADJn1c1",
-      "source": "amz123",
-      "published_at": "2026-08-05T09:26:54+00:00"
-    },
-    {
-      "title": "亚马逊NSP计划将于7月30日进行重大升级",
-      "summary": "亚马逊物流新品入仓优惠计划（NSP）将于2026年7月30日升级。旧用户需在10月31日前重新确认注册。升级后新父ASIN首件入仓120天内享优惠，前100件商品佣金降至10%，次100件降至5%，前200件免除仓储费等多项费用，并新增Vine和Coupon费用优惠。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.amz123.com/kx/4ifaih3a",
-      "source": "amz123",
-      "published_at": "2026-07-31T06:29:54+00:00"
+      "published_at": "2026-08-19T06:03:13.310Z"
     }
   ]
 }
