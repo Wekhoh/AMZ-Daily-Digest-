@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-08-22T06:33:17Z",
-  "digest_date": "2026-08-22",
+  "generated_at_utc": "2026-08-23T06:34:21Z",
+  "digest_date": "2026-08-23",
   "article_count": 50,
   "articles": [
     {
-      "title": "亚马逊 1DC（One Distribution Center）仓点入仓异常风险，你们遇到过这些新的仓库代码吗？IMS1、IGA3、XMI3、XCH2、IMI1、IMO1、ITX3、INC1 等",
-      "summary": "亚马逊上线1DC仓网导致IMS1、IGA3等新仓库出现无法送仓、不更新等异常。卖家在创建货件时应重点留意仓库代码，谨慎分配。应对方法是创建多于5个货件以刷出老仓库；若货件已送达并出现异常，可利用货代提供的POD送仓凭证向亚马逊开Case进行申诉。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.wearesellers.com/question/123088",
-      "source": "wearesellers",
-      "published_at": "2026-08-07T05:02:15.665+00:00"
-    },
-    {
-      "title": "The reimbursement money I was leaving on the table for over a year (FBA)",
-      "summary": "亚马逊FBA索赔实操方法。卖家应每月比对退货报告与赔偿报告，针对买家未退回货物、超45天未退回已退款件、库容损毁未自动赔偿等异常，以一单一案、只陈述事实的方式开case索赔，避免因超出时效而造成资金损失。",
+      "title": "has anyone here actually audited the hts code your broker files under",
+      "summary": "美国进口商品的HTS编码分类直接影响关税成本，如羊绒衫归类正确税率为4%，归为其他则高达16%。报关行批量操作易出错，且不承担关税差额。卖家应定期登录rulings.cbp.gov核对产品编码，发现错误可申请追回多缴关税。",
       "category": "experience",
-      "score": 9.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vbqfwd/the_reimbursement_money_i_was_leaving_on_the",
+      "score": 7.4,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vvyfmu/has_anyone_here_actually_audited_the_hts_code",
       "source": "reddit_fba",
-      "published_at": "2026-07-31T13:06:17+00:00"
+      "published_at": "2026-08-23T05:27:59.000Z"
     },
     {
-      "title": "亚马逊广告的误区，\"低 ACoS\"不一定是好事",
-      "summary": "破除低ACoS即广告健康的误区，树立边际利润导向。运营应通过计算三道线进行优化：保本线（扣除各项成本后的利润空间）、目标线（保本线减去期望利润率）和扩量线（不超过保本线）。若ACoS反常偏低，应通过提高出价、拓词和增加预算向外推流量，以TACoS and 总利润增长作为最终衡量标准。",
+      "title": "亚马逊CVR总是不稳，7天改了好几次Bid还是掉单，广告位跑偏到底怎么救？",
+      "summary": "针对亚马逊SP/SB/SD广告CVR不稳，应停止高频改Bid，遵守7-14天归因周期，每次调整后观察7-10天。下载广告位报告，若商品页面曝光转化差则降低基础竞价并提高首页溢价；自动广告出单词转手动精准，及时否定垃圾词控制词数。同时诊断详情页说服力，用竞品差评优化副图五点，补充A+和视频提升转化。",
       "category": "experience",
-      "score": 9.4,
-      "url": "https://www.wearesellers.com/question/123204",
+      "score": 9,
+      "url": "https://www.wearesellers.com/question/123707",
       "source": "wearesellers",
-      "published_at": "2026-08-10T07:05:26.121+00:00"
+      "published_at": "2026-08-23T04:25:55.630Z"
     },
     {
-      "title": "我不再急着找产品，而是先弄清用户需要什么——需求先行型AI选品日报",
-      "summary": "作者提出需求先行型选品流程：先站外发现真实问题，再做需求抽象、用户动线与补偿行为分析，然后站内反查现有方案、评论找缺口、1688供应侧验证，最后形成产品假设。强调不应从现有产品形态出发，避免同质化。举例公共浴室毛巾挂放需求，从场景、限制、任务、机制、形态逐步推导产品。该方法适合有私模能力的团队。",
+      "title": "亚马逊AI生成图片新规落地：卖家如何批量完成合规标记？",
+      "summary": "亚马逊新规要求，商品图片或视频含AI生成逼真人物时，上传前必须在文件元数据添加 contains-synthetic-performer 披露词。仅完全AI生成的非真实人物需标记，真实人物修改、影视游戏角色、无人像内容无需标记。卖家可用Windows文件属性批量处理：全选目标图，右键属性，在详细信息选项卡的标记字段输入 contains-synthetic-performer，点击应用确定即可写入多张图片，注意只选真正含AI人物的素材。",
+      "category": "policy",
+      "score": 9,
+      "url": "https://www.wearesellers.com/question/123525",
+      "source": "wearesellers",
+      "published_at": "2026-08-22T10:26:27.589Z"
+    },
+    {
+      "title": "求大佬解答 ！！！老品推广受阻，每天订单依旧不稳定，接下来怎么该如何突破。",
+      "summary": "该老品日单5-6单，FBA费用被误加1美金且多次开case未改回；关键词仅100多个远低于同行400多个，但评分4.8略优于同行。广告已全关只剩自动广告，展示5万点击仅400多、花费288美金、ACOS52%。建议先等新包装到后重测FBA尺寸重量，扩充关键词数量，旺季前控制广告ACOS并避免4.99美金一单亏0.5美金的低价策略，利用11-12月旺季节奏调整售价和广告。",
+      "category": "experience",
+      "score": 6.8,
+      "url": "https://www.wearesellers.com/question/123701",
+      "source": "wearesellers",
+      "published_at": "2026-08-22T15:26:11.717Z"
+    },
+    {
+      "title": "亚马逊广告到底有哪些目的？-如何通过广告来推广不同时期的产品",
+      "summary": "亚马逊广告以加速库存周转为核心，库存规划需覆盖FBA仓、在途与在产库存，海运美东45天美西30天，因2024年低库存费应预留约4个月量。新品期广告测CPC、点击率、转化率与出单词，ACOS上限建议2倍毛利，预算少者1-1.5倍。打排名期备足库存，选高相关、中等流量、购买意图明确、自然排名有基础且竞品不碾压的关键词。成熟期控制高低ACOS广告预算比例，库存多促销提竞价，库存少提价控费。",
       "category": "experience",
       "score": 8.4,
-      "url": "https://www.wearesellers.com/question/123662",
+      "url": "https://www.wearesellers.com/question/123481",
       "source": "wearesellers",
-      "published_at": "2026-08-21T19:23:35.726Z"
+      "published_at": "2026-08-22T11:26:25.200Z"
     },
     {
-      "title": "亚马逊北美站收紧锂电池小家电合规要求",
-      "summary": "亚马逊北美站针对锂电池家用设备卖家启动专项合规审核。卖家须在收到通知30天内，购买单次及年度累计保额不低于100万美元的商业综合责任险，且保险需覆盖锂电池供电家用电器责任，将亚马逊列为附加被保险人，并完成TIC第三方直接验证。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.amz123.com/kx/ZTxldODD",
-      "source": "amz123",
-      "published_at": "2026-07-23T03:20:30+00:00"
-    },
-    {
-      "title": "Stop running Amazon PPC on all your ASIN variations. Here is the strict logic you need to apply to your catalog:",
-      "summary": "针对多变体ASIN的亚马逊PPC广告，应避免将所有子变体混入同个广告组。核心策略是：将高转化、普适性强的Hero SKU用于投放高流量核心词；将尺寸、颜色等具体变体精准匹配长尾特定意图词。若父体TACoS升高，需隔离分析具体子ASIN的TACoS和搜索词重叠度，优化变体层面的广告流失。",
-      "category": "experience",
-      "score": 9.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vht1zt/stop_running_amazon_ppc_on_all_your_asin",
-      "source": "reddit_fba",
-      "published_at": "2026-08-07T06:42:46+00:00"
-    },
-    {
-      "title": "亚马逊真的进入“GEO时代”了吗？Alexa很重要，但现在就唱衰关键词还太早",
-      "summary": "文章认为Alexa已形成第三货架，但关键词搜索仍是基本盘。引用官方数据：Rufus 2025年使用超3亿消费者，带来近120亿美元增量年化销售额；购物中使用Rufus的消费者购买可能性高60%以上。第三方测试显示63.9%的Alexa推荐商品不在自然搜索前10。卖家应同时维护关键词排名、广告卡位和Alexa优化，不应因追逐新流量而降低关键词优先级。",
+      "title": "4个月投资1600万盈利250w、月销100w美元的泳池机器人，这个类目你敢豪赌吗？",
+      "summary": "泳池机器人是10亿美元级高客单价季节性品类，5-7月占全年销售额53%以上，2月前需到货。TOP100新品中95%为老品牌马甲，纯新品牌一年存活率仅5%。打爆前十需1600万人民币现金流峰值，4个月净利约250万，毛利率15.6%，但99%卖家不适合。定价169美元以下低端，399美元以上中高端。",
       "category": "trend",
-      "score": 7.4,
-      "url": "https://www.wearesellers.com/question/123628",
+      "score": 9,
+      "url": "https://www.wearesellers.com/question/123439",
       "source": "wearesellers",
-      "published_at": "2026-08-21T06:23:37.937Z"
+      "published_at": "2026-08-18T06:12:56.831+00:00"
     },
     {
-      "title": "Amazon Section 3 Identity Verification",
-      "summary": "卖家收到亚马逊Section 3身份验证通知，账户健康无假货问题且为FBA运营，但平台冻结资金，并将停用日期设为9月3日，视频面试却安排在9月9日。发帖者询问超过停用期限后资金如何处理以及过往经验。帖子揭示身份验证可能造成资金冻结与日期错配风险，但未提供应对步骤或官方政策依据，卖家需提前准备。",
-      "category": "policy",
-      "score": 7.2,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vukkvg/amazon_section_3_identity_verification",
-      "source": "reddit_fba",
-      "published_at": "2026-08-21T16:06:54.000Z"
-    },
-    {
-      "title": "亚马逊美站自发货卖家须维持90%营业时间配送率",
-      "summary": "亚马逊美国站规定自2026年9月30日起，卖家自配送发往企业购客户的订单，其营业时间配送率必须保持在90%以上。该指标按14天滚动周期计算。若10月30日仍未达标，自配送商品将在企业购频道被暂停展示。自发货卖家须密切监控配送时效，优化末端派送，确保在企业客户营业时间内送达以维持销售权限。",
-      "category": "policy",
-      "score": 10,
-      "url": "https://www.amz123.com/kx/1yaEUQpk",
-      "source": "amz123",
-      "published_at": "2026-07-08T01:49:07+00:00"
-    },
-    {
-      "title": "当亚马逊广告ACOS爆表时，靠调整竞价能实现逆袭吗？",
-      "summary": "针对亚马逊广告ACOS爆表，应基于数据分类调整竞价。高花费无转化词若预算有限直接否定或暂停；高ACOS且低转化词可逐步下调竞价10%到20%或降低预算并增加高转化位溢价；ACOS达标词可提价5%到10%抢占优质流量；高转化明星词则大胆提价并拓展长尾词。",
+      "title": "每天盯竞品还是看不懂变化？我把4个ASIN的64天数据交给了智能体",
+      "summary": "作者使用竞品ASIN巡检智能体复盘4个猫饮水机ASIN共64天数据，设置两个等长32天周期对比。AI执行周期对齐、多时间窗口复核、自然位与广告位拆分、价格语义归一、多信号交叉验证等8项增量动作，最终按信号一致性将竞品分为高、中、低警惕等级。报告发现子类排名稳定但大类BSR变化显著，需警惕广告曝光被误判为自然排名改善。",
       "category": "experience",
-      "score": 9.4,
-      "url": "https://www.wearesellers.com/question/109544",
+      "score": 9,
+      "url": "https://www.wearesellers.com/question/123475",
       "source": "wearesellers",
-      "published_at": "2026-08-04T07:27:08.791+00:00"
+      "published_at": "2026-08-18T02:27:23.136+00:00"
+    },
+    {
+      "title": "Looks like TIC testing is now required by 3rd party before listing items",
+      "summary": "亚马逊收紧合规政策，取消了新品上架的检测宽限期。玩具、电子和膳食补充剂等受管制类目的卖家，必须在产品上架前通过合规的第三方TIC机构完成检测，且检测报告须由实验室直接提交给亚马逊，否则新品将立即面临禁售。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vhurrl/looks_like_tic_testing_is_now_required_by_3rd",
+      "source": "reddit_fba",
+      "published_at": "2026-08-07T08:25:31+00:00"
+    },
+    {
+      "title": "美海关2R禁装指令集中出现，ISF异常货物面临起运港拦截",
+      "summary": "美国海关近期集中启动2R前置拦截措施，ISF申报异常货物将在起运港被禁装，或在目的港面临最高一万美元罚款。卖家需确保ISF与AMS及提单数据一致，保证IOR主体、EIN及Bond有效，且必须在装船前24小时完成提交，避免临近开船改单。",
+      "category": "policy",
+      "score": 9,
+      "url": "https://www.amz123.com/kx/J8S12Yar",
+      "source": "amz123",
+      "published_at": "2026-07-29T06:16:24+00:00"
+    },
+    {
+      "title": "Notice: New AWD Inbound Rules (Effective Jul 31, 2026)",
+      "summary": "亚马逊美国站AWD将于2026年7月31日起停止接收超重或超大件商品，仅允许标准尺寸商品入库。标准为单件长宽高不超过18x14x8英寸且重量不超过20磅。超标商品创建货件时将被自动拦截，卖家需直接发往FBA或第三方海外仓。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1uyu9tp/notice_new_awd_inbound_rules_effective_jul_31_2026",
+      "source": "reddit_fba",
+      "published_at": "2026-07-17T08:58:01+00:00"
     }
   ]
 }
