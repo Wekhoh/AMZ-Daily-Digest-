@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-08-23T06:34:21Z",
-  "digest_date": "2026-08-23",
+  "generated_at_utc": "2026-08-24T06:49:16Z",
+  "digest_date": "2026-08-24",
   "article_count": 50,
   "articles": [
     {
-      "title": "has anyone here actually audited the hts code your broker files under",
-      "summary": "美国进口商品的HTS编码分类直接影响关税成本，如羊绒衫归类正确税率为4%，归为其他则高达16%。报关行批量操作易出错，且不承担关税差额。卖家应定期登录rulings.cbp.gov核对产品编码，发现错误可申请追回多缴关税。",
-      "category": "experience",
-      "score": 7.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vvyfmu/has_anyone_here_actually_audited_the_hts_code",
-      "source": "reddit_fba",
-      "published_at": "2026-08-23T05:27:59.000Z"
-    },
-    {
-      "title": "亚马逊CVR总是不稳，7天改了好几次Bid还是掉单，广告位跑偏到底怎么救？",
-      "summary": "针对亚马逊SP/SB/SD广告CVR不稳，应停止高频改Bid，遵守7-14天归因周期，每次调整后观察7-10天。下载广告位报告，若商品页面曝光转化差则降低基础竞价并提高首页溢价；自动广告出单词转手动精准，及时否定垃圾词控制词数。同时诊断详情页说服力，用竞品差评优化副图五点，补充A+和视频提升转化。",
-      "category": "experience",
-      "score": 9,
-      "url": "https://www.wearesellers.com/question/123707",
-      "source": "wearesellers",
-      "published_at": "2026-08-23T04:25:55.630Z"
-    },
-    {
-      "title": "亚马逊AI生成图片新规落地：卖家如何批量完成合规标记？",
-      "summary": "亚马逊新规要求，商品图片或视频含AI生成逼真人物时，上传前必须在文件元数据添加 contains-synthetic-performer 披露词。仅完全AI生成的非真实人物需标记，真实人物修改、影视游戏角色、无人像内容无需标记。卖家可用Windows文件属性批量处理：全选目标图，右键属性，在详细信息选项卡的标记字段输入 contains-synthetic-performer，点击应用确定即可写入多张图片，注意只选真正含AI人物的素材。",
-      "category": "policy",
-      "score": 9,
-      "url": "https://www.wearesellers.com/question/123525",
-      "source": "wearesellers",
-      "published_at": "2026-08-22T10:26:27.589Z"
-    },
-    {
-      "title": "求大佬解答 ！！！老品推广受阻，每天订单依旧不稳定，接下来怎么该如何突破。",
-      "summary": "该老品日单5-6单，FBA费用被误加1美金且多次开case未改回；关键词仅100多个远低于同行400多个，但评分4.8略优于同行。广告已全关只剩自动广告，展示5万点击仅400多、花费288美金、ACOS52%。建议先等新包装到后重测FBA尺寸重量，扩充关键词数量，旺季前控制广告ACOS并避免4.99美金一单亏0.5美金的低价策略，利用11-12月旺季节奏调整售价和广告。",
-      "category": "experience",
-      "score": 6.8,
-      "url": "https://www.wearesellers.com/question/123701",
-      "source": "wearesellers",
-      "published_at": "2026-08-22T15:26:11.717Z"
-    },
-    {
-      "title": "亚马逊广告到底有哪些目的？-如何通过广告来推广不同时期的产品",
-      "summary": "亚马逊广告以加速库存周转为核心，库存规划需覆盖FBA仓、在途与在产库存，海运美东45天美西30天，因2024年低库存费应预留约4个月量。新品期广告测CPC、点击率、转化率与出单词，ACOS上限建议2倍毛利，预算少者1-1.5倍。打排名期备足库存，选高相关、中等流量、购买意图明确、自然排名有基础且竞品不碾压的关键词。成熟期控制高低ACOS广告预算比例，库存多促销提竞价，库存少提价控费。",
+      "title": "WOOT BD 怎么提报？巧豚豚 6 步拆解卖家版",
+      "summary": "WOOT BD提报：先确认资格，Review 10个以上、星级4.0以上、Deal价20美元以上、日销10个以上（新品可放宽至5）。报价确认后补活动规划并签协议，需自查站内BD/LD冲突，同ASIN不能同时叠加。划库存不动货、不换标，常规3-5工作日授权，建议提前7工作日，划库存后7日内必须启动BD。广告由卖家控制，预算预充值，按实际花费多退少补。活动数据沉淀回原Listing。",
       "category": "experience",
       "score": 8.4,
-      "url": "https://www.wearesellers.com/question/123481",
+      "url": "https://www.wearesellers.com/question/123733",
       "source": "wearesellers",
-      "published_at": "2026-08-22T11:26:25.200Z"
+      "published_at": "2026-08-24T06:10:51.031Z"
     },
     {
-      "title": "4个月投资1600万盈利250w、月销100w美元的泳池机器人，这个类目你敢豪赌吗？",
-      "summary": "泳池机器人是10亿美元级高客单价季节性品类，5-7月占全年销售额53%以上，2月前需到货。TOP100新品中95%为老品牌马甲，纯新品牌一年存活率仅5%。打爆前十需1600万人民币现金流峰值，4个月净利约250万，毛利率15.6%，但99%卖家不适合。定价169美元以下低端，399美元以上中高端。",
-      "category": "trend",
-      "score": 9,
-      "url": "https://www.wearesellers.com/question/123439",
+      "title": "Amazon 新退货流程开始引导买家直接打星？新品 Rating 正在被明显影响",
+      "summary": "亚马逊在退货流程中引导买家打星，导致退货买家样本偏差被放大，低星Rating可轻易留在链接，尤其对新品冲击大。机制形成Rating下降→转化下降→广告效率下降→自然排名下降→销量减少→新增Rating更慢的负向循环，并可能抑制新品开发。需关注该政策变化并制定防御策略。",
+      "category": "policy",
+      "score": 6.8,
+      "url": "https://www.wearesellers.com/question/123713",
       "source": "wearesellers",
-      "published_at": "2026-08-18T06:12:56.831+00:00"
+      "published_at": "2026-08-24T04:39:16.581Z"
     },
     {
-      "title": "每天盯竞品还是看不懂变化？我把4个ASIN的64天数据交给了智能体",
-      "summary": "作者使用竞品ASIN巡检智能体复盘4个猫饮水机ASIN共64天数据，设置两个等长32天周期对比。AI执行周期对齐、多时间窗口复核、自然位与广告位拆分、价格语义归一、多信号交叉验证等8项增量动作，最终按信号一致性将竞品分为高、中、低警惕等级。报告发现子类排名稳定但大类BSR变化显著，需警惕广告曝光被误判为自然排名改善。",
+      "title": "手动关键词广告增加出单量的方式有哪些？",
+      "summary": "关键词在自动广告中出单良好，后自动广告花费下降，手动广泛、短语、精准均无法恢复原量。卖家已提高广泛广告出价80%，并计划缓慢小幅增加预算、复制广告组测试自动提高降低与固定竞价、重做精准广告并提价。建议先排查竞价环境变化，再分阶段优化广告结构。",
       "category": "experience",
-      "score": 9,
-      "url": "https://www.wearesellers.com/question/123475",
+      "score": 6.8,
+      "url": "https://www.wearesellers.com/question/123722",
       "source": "wearesellers",
-      "published_at": "2026-08-18T02:27:23.136+00:00"
+      "published_at": "2026-08-24T06:20:14.345Z"
     },
     {
-      "title": "Looks like TIC testing is now required by 3rd party before listing items",
-      "summary": "亚马逊收紧合规政策，取消了新品上架的检测宽限期。玩具、电子和膳食补充剂等受管制类目的卖家，必须在产品上架前通过合规的第三方TIC机构完成检测，且检测报告须由实验室直接提交给亚马逊，否则新品将立即面临禁售。",
+      "title": "亚马逊美国AWD将于7月31日起全面停止接收大件商品",
+      "summary": "亚马逊美国站AWD将于2026年7月31日起停止接收大件及超重商品，单件尺寸超45.7×35.6×20.3厘米或重超9公斤将被拦截。主营家具、健身器材等大件商品的卖家需及早调整海外仓布局，改变依靠AWD储备长期库存以降低FBA仓储成本的运营模式。",
       "category": "policy",
       "score": 9.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vhurrl/looks_like_tic_testing_is_now_required_by_3rd",
-      "source": "reddit_fba",
-      "published_at": "2026-08-07T08:25:31+00:00"
-    },
-    {
-      "title": "美海关2R禁装指令集中出现，ISF异常货物面临起运港拦截",
-      "summary": "美国海关近期集中启动2R前置拦截措施，ISF申报异常货物将在起运港被禁装，或在目的港面临最高一万美元罚款。卖家需确保ISF与AMS及提单数据一致，保证IOR主体、EIN及Bond有效，且必须在装船前24小时完成提交，避免临近开船改单。",
-      "category": "policy",
-      "score": 9,
-      "url": "https://www.amz123.com/kx/J8S12Yar",
+      "url": "https://www.amz123.com/kx/S1F3tDAH",
       "source": "amz123",
-      "published_at": "2026-07-29T06:16:24+00:00"
+      "published_at": "2026-07-16T05:54:01+00:00"
     },
     {
-      "title": "Notice: New AWD Inbound Rules (Effective Jul 31, 2026)",
-      "summary": "亚马逊美国站AWD将于2026年7月31日起停止接收超重或超大件商品，仅允许标准尺寸商品入库。标准为单件长宽高不超过18x14x8英寸且重量不超过20磅。超标商品创建货件时将被自动拦截，卖家需直接发往FBA或第三方海外仓。",
+      "title": "亚马逊NSP计划将于7月30日进行重大升级",
+      "summary": "亚马逊物流新品入仓优惠计划（NSP）将于2026年7月30日升级。旧用户需在10月31日前重新确认注册。升级后新父ASIN首件入仓120天内享优惠，前100件商品佣金降至10%，次100件降至5%，前200件免除仓储费等多项费用，并新增Vine和Coupon费用优惠。",
       "category": "policy",
       "score": 9.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1uyu9tp/notice_new_awd_inbound_rules_effective_jul_31_2026",
+      "url": "https://www.amz123.com/kx/4ifaih3a",
+      "source": "amz123",
+      "published_at": "2026-07-31T06:29:54+00:00"
+    },
+    {
+      "title": "0110报关监管趋严：境外收货人不得填写Amazon或FBA仓名",
+      "summary": "自2026年7月下旬起，多地报关行明确0110一般贸易报关单中境外收货人不得填写Amazon或FBA仓名。卖家必须提供真实境外购货方信息、购销合同、商业发票及货款结算凭证。此举是金税四期推进下多部门数据联动监管的落实，不合规将面临拒绝接单。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.amz123.com/kx/lADJn1c1",
+      "source": "amz123",
+      "published_at": "2026-08-05T09:26:54+00:00"
+    },
+    {
+      "title": "Product variation eating up 95% of impressions",
+      "summary": "卖家为老ASIN新增变体后在同广告组投放，发现新变体几乎无曝光，老ASIN占据约95%曝光。主要原因可能是亚马逊偏好有历史数据的ASIN。可考虑等待数日观察，或为新变体单独建立广告系列并提高竞价，避免与老ASIN直接竞争预算。",
+      "category": "experience",
+      "score": 6.8,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vwd2f9/product_variation_eating_up_95_of_impressions",
       "source": "reddit_fba",
-      "published_at": "2026-07-17T08:58:01+00:00"
+      "published_at": "2026-08-23T17:19:53.000Z"
+    },
+    {
+      "title": "亚马逊9月1日起多类目退货期限调整为14天",
+      "summary": "亚马逊自2026年9月1日起，将母婴、美妆、家居等十余个品类的退货期限缩短至14天，适用于FBA和自配送模式。配送日期在10月1日前的订单有过渡缓冲期。卖家可通过后台撤销权设置主动延长退货期以优化体验，商品详情页将自动展示新退货窗口。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.amz123.com/kx/KzlNFjAq",
+      "source": "amz123",
+      "published_at": "2026-08-05T09:47:24+00:00"
+    },
+    {
+      "title": "亚马逊后台逐步移除差评“Contact Buyer”入口",
+      "summary": "亚马逊后台正逐步移除1至3星差评旁的联系买家入口，卖家无法再主动沟通挽回差评。应对方法是转向差评前预防，优先使用官方Vine计划及后台索评功能合规获评；严禁使用包裹返现卡、直评及合并僵尸链接等违规操作；若用外部测评须严格核验服务商并保留凭证以防封号。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.amz123.com/kx/RXsiQVES",
+      "source": "amz123",
+      "published_at": "2026-07-01T09:08:47+00:00"
+    },
+    {
+      "title": "亚马逊严打明信片催评及诱导改评 违规直接撤销售权限",
+      "summary": "亚马逊严厉打击通过明信片催评、PayPal或礼品卡返现诱导改评等违规行为，情节严重者将跳过警告直接封号。卖家必须立即停止任何站外联系买家、批量获取用户信息及异常返现的操纵评论行为，合规运营，将运营重心从冲评数量转向提升评论内容的真实性与场景化。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.amz123.com/kx/NXcdeLDw",
+      "source": "amz123",
+      "published_at": "2026-07-07T09:20:21+00:00"
     }
   ]
 }
