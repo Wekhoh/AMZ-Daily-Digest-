@@ -18,6 +18,11 @@ on:
         description: 'Type "yes" to confirm manual run'
         required: true
         type: string
+      force_rerun:
+        description: 'Re-run a date that already has a digest (diagnostic only; the email is suppressed)'
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: write   # commit the published public/digest-latest.json (D-042)
@@ -69,6 +74,7 @@ jobs:
         env:
           AMZ_DIGEST_EMAIL_ENABLED: '0'
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          AMZ_FORCE_RERUN: ${{ inputs.force_rerun && '1' || '' }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
           GMAIL_USER: ${{ secrets.GMAIL_USER }}

@@ -1002,8 +1002,13 @@ export async function runPipeline(): Promise<void> {
     validateConfig();
     const existingDigest = await getDigestByDate(date);
     const existingCount = existingDigest?.article_count ?? 0;
+    // AMZ_FORCE_RERUN reuses the existing repair path to re-run a date that already has a
+    // digest. It exists to validate AI-layer changes (2026-08-28: the rerank timeout) without
+    // waiting for the next calendar day, and it deliberately suppresses the digest email so a
+    // diagnostic run never sends subscribers a duplicate. Never set it on the schedule.
+    const forceRerun = process.env.AMZ_FORCE_RERUN === '1';
     const shouldRepairExistingDigest =
-      Boolean(existingDigest) && existingCount < AI.MIN_ARTICLES;
+      Boolean(existingDigest) && (existingCount < AI.MIN_ARTICLES || forceRerun);
 
     if (shouldRepairExistingDigest) {
       console.warn(
@@ -1315,7 +1320,15 @@ export async function runPipeline(): Promise<void> {
       throw new Error('No recipients configured (subscribers table empty and DIGEST_EMAIL missing)');
     }
 
-    const digestSendResult = await sendDigestEmail(emailHtml, date, recipients);
+    if (forceRerun) {
+      console.warn(
+        '[Email] AMZ_FORCE_RERUN is set - skipping the digest email so this diagnostic run ' +
+          'does not deliver a duplicate. Scoring, rerank and publishing still ran.',
+      );
+    }
+    const digestSendResult: Awaited<ReturnType<typeof sendDigestEmail>> = forceRerun
+      ? { sent: [], failed: [] }
+      : await sendDigestEmail(emailHtml, date, recipients);
     emailSent = true;
 
     if (subscribers.length > 0) {
