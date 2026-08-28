@@ -8,8 +8,8 @@ import type OpenAI from 'openai';
 export const AI = {
   /** Articles per AI batch */
   BATCH_SIZE: 6,
-  /** DeepSeek model name (override with DEEPSEEK_MODEL if needed) */
-  MODEL: process.env.DEEPSEEK_MODEL?.trim() || 'deepseek-v4-pro',
+  /** Chat model name (override with LLM_MODEL if needed) */
+  MODEL: process.env.LLM_MODEL?.trim() || 'glm-5.3-flash',
   /** Max output tokens per AI call; reasoning tokens are billed against it */
   MAX_OUTPUT_TOKENS: 32_768,
   /** Max chars of article content sent to AI */
@@ -44,26 +44,37 @@ export const AI = {
   MAX_CONCURRENCY: 3,
 } as const;
 
-/**
- * DeepSeek defaults `thinking` to enabled and `reasoning_effort` to high, and
- * reasoning tokens are billed against the completion budget — left implicit, a
- * provider-side default flip silently changes both cost and output. Every call
- * site therefore states its choice through these constants.
- *
- * Scoring and rerank are the quality steps and buy max effort (Director
- * ruling); the health check is a connectivity ping and buys none.
- */
-export const DEEPSEEK_THINKING_ENABLED = { type: 'enabled' } as const;
-export const DEEPSEEK_THINKING_DISABLED = { type: 'disabled' } as const;
-export const DEEPSEEK_REASONING_EFFORT = 'max' as const;
+/** OpenAI-compatible base URL of the chat provider (override with LLM_BASE_URL) */
+export const LLM_BASE_URL =
+  process.env.LLM_BASE_URL?.trim() || 'https://open.bigmodel.cn/api/paas/v4/';
 
 /**
- * DeepSeek adds `thinking` to the OpenAI-compatible body and accepts only
+ * `enabled` is the only value GLM-5.3 / GLM-5.3-Flash accept — they think
+ * unconditionally and reject a request that asks them to stop. There is
+ * deliberately no disabled counterpart here for a later change to reach for.
+ */
+export const LLM_THINKING_ENABLED = { type: 'enabled' } as const;
+
+/**
+ * Reasoning tokens are billed against the completion budget, so the effort tier
+ * is a cost lever rather than a style knob. An absent or unrecognised value
+ * means `max` on this provider, so passing it explicitly is not redundant: it
+ * puts the tier in the request where it can be read, and behind an env var
+ * where it can be changed without a code edit.
+ *
+ * `max` stands per the Director ruling that scoring and rerank buy max effort;
+ * the health check opts down on its own, being a connectivity ping.
+ */
+export const LLM_REASONING_EFFORT = (process.env.LLM_REASONING_EFFORT?.trim() ||
+  'max') as 'low' | 'high' | 'max';
+
+/**
+ * The provider adds `thinking` to the OpenAI-compatible body and accepts only
  * low/high/max for `reasoning_effort`, narrower than the SDK union.
  */
-export type DeepSeekChatParams =
+export type LlmChatParams =
   OpenAI.Chat.Completions.ChatCompletionCreateParamsNonStreaming & {
-    thinking?: { type: 'enabled' | 'disabled' };
+    thinking?: { type: 'enabled' };
     reasoning_effort?: 'low' | 'high' | 'max';
   };
 

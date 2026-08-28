@@ -12,10 +12,14 @@ import {
 import type { Article } from '../store.js';
 
 const openaiCreate = vi.hoisted(() => vi.fn());
+const openaiConstruct = vi.hoisted(() => vi.fn());
 
 vi.mock('openai', () => ({
   default: class MockOpenAI {
     chat = { completions: { create: openaiCreate } };
+    constructor(options: unknown) {
+      openaiConstruct(options);
+    }
   },
 }));
 
@@ -322,8 +326,8 @@ describe('buildRerankPrompt', () => {
 
 describe('processArticles', () => {
   it('runs scoring at max reasoning effort', async () => {
-    const previousKey = process.env.DEEPSEEK_API_KEY;
-    process.env.DEEPSEEK_API_KEY = 'test-key';
+    const previousKey = process.env.LLM_API_KEY;
+    process.env.LLM_API_KEY = 'test-key';
     openaiCreate.mockReset();
     openaiCreate.mockResolvedValue({
       choices: [
@@ -342,17 +346,21 @@ describe('processArticles', () => {
         { source: 'rss', url: 'https://example.test/scored', title: 'scored', content: '内容' },
       ]);
 
+      expect(openaiConstruct).toHaveBeenCalledWith(
+        expect.objectContaining({ baseURL: 'https://open.bigmodel.cn/api/paas/v4/' }),
+      );
       expect(openaiCreate).toHaveBeenCalledTimes(1);
       expect(openaiCreate.mock.calls[0]?.[0]).toMatchObject({
+        model: 'glm-5.3-flash',
         thinking: { type: 'enabled' },
         reasoning_effort: 'max',
       });
     } finally {
       openaiCreate.mockReset();
       if (previousKey === undefined) {
-        delete process.env.DEEPSEEK_API_KEY;
+        delete process.env.LLM_API_KEY;
       } else {
-        process.env.DEEPSEEK_API_KEY = previousKey;
+        process.env.LLM_API_KEY = previousKey;
       }
     }
   });
@@ -368,8 +376,8 @@ describe('rerankFinalSelection', () => {
   }
 
   it('applies the parsed plan to the pool on the success path', async () => {
-    const previousKey = process.env.DEEPSEEK_API_KEY;
-    process.env.DEEPSEEK_API_KEY = 'test-key';
+    const previousKey = process.env.LLM_API_KEY;
+    process.env.LLM_API_KEY = 'test-key';
     openaiCreate.mockReset();
     openaiCreate.mockResolvedValue({
       choices: [{ message: { content: '{"order":[3,1,0,2],"duplicate_groups":[[1,0]]}' } }],
@@ -384,6 +392,7 @@ describe('rerankFinalSelection', () => {
       // Reasoning is an explicit purchase, never a provider default: the quality
       // steps buy max effort, and max_tokens has to cover the reasoning spend.
       expect(openaiCreate.mock.calls[0]?.[0]).toMatchObject({
+        model: 'glm-5.3-flash',
         thinking: { type: 'enabled' },
         reasoning_effort: 'max',
       });
@@ -395,16 +404,16 @@ describe('rerankFinalSelection', () => {
     } finally {
       openaiCreate.mockReset();
       if (previousKey === undefined) {
-        delete process.env.DEEPSEEK_API_KEY;
+        delete process.env.LLM_API_KEY;
       } else {
-        process.env.DEEPSEEK_API_KEY = previousKey;
+        process.env.LLM_API_KEY = previousKey;
       }
     }
   });
 
   it('keeps the original order and logs [RERANK_FALLBACK] when the call cannot run', async () => {
-    const previousKey = process.env.DEEPSEEK_API_KEY;
-    delete process.env.DEEPSEEK_API_KEY;
+    const previousKey = process.env.LLM_API_KEY;
+    delete process.env.LLM_API_KEY;
     const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
 
     try {
@@ -421,16 +430,16 @@ describe('rerankFinalSelection', () => {
     } finally {
       warn.mockRestore();
       if (previousKey === undefined) {
-        delete process.env.DEEPSEEK_API_KEY;
+        delete process.env.LLM_API_KEY;
       } else {
-        process.env.DEEPSEEK_API_KEY = previousKey;
+        process.env.LLM_API_KEY = previousKey;
       }
     }
   });
 
   it('reports a fallback when the model returns a plan the parser rejects', async () => {
-    const previousKey = process.env.DEEPSEEK_API_KEY;
-    process.env.DEEPSEEK_API_KEY = 'test-key';
+    const previousKey = process.env.LLM_API_KEY;
+    process.env.LLM_API_KEY = 'test-key';
     openaiCreate.mockReset();
     openaiCreate.mockResolvedValue({
       choices: [{ message: { content: '{"order":[0,1]}' } }],
@@ -449,9 +458,9 @@ describe('rerankFinalSelection', () => {
       warn.mockRestore();
       openaiCreate.mockReset();
       if (previousKey === undefined) {
-        delete process.env.DEEPSEEK_API_KEY;
+        delete process.env.LLM_API_KEY;
       } else {
-        process.env.DEEPSEEK_API_KEY = previousKey;
+        process.env.LLM_API_KEY = previousKey;
       }
     }
   });

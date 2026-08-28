@@ -6,14 +6,19 @@
  * 1. All required env vars are set
  * 2. Supabase connection works
  * 3. Gmail SMTP transporter verifies
- * 4. DeepSeek API key is valid (lightweight test)
+ * 4. LLM API key is valid (lightweight connectivity ping)
  */
 
 import 'dotenv/config';
 import { createClient } from '@supabase/supabase-js';
 import nodemailer from 'nodemailer';
 import OpenAI from 'openai';
-import { DEEPSEEK_THINKING_DISABLED, type DeepSeekChatParams } from './config.js';
+import {
+  AI,
+  LLM_BASE_URL,
+  LLM_THINKING_ENABLED,
+  type LlmChatParams,
+} from './config.js';
 
 interface CheckResult {
   name: string;
@@ -72,7 +77,7 @@ export function evaluateChatCompletionResponse(response: ChatCompletionLike): {
 // ---------------------------------------------------------------------------
 function checkEnvVars(): void {
   const required = [
-    'DEEPSEEK_API_KEY',
+    'LLM_API_KEY',
     'SUPABASE_URL',
     'SUPABASE_KEY',
     'GMAIL_USER',
@@ -140,31 +145,50 @@ async function checkGmail(): Promise<void> {
 }
 
 // ---------------------------------------------------------------------------
-// Check 4: DeepSeek API
+// Check 4: LLM API
 // ---------------------------------------------------------------------------
-async function checkDeepSeek(): Promise<void> {
+
+/**
+ * Forced thinking spends this budget before any content appears, so this number
+ * alone prices the ping. Small, but off the floor: the provider documents no
+ * minimum for `max_tokens`, and a ping that fails a hidden one would report a
+ * healthy pipeline as broken. A truncated trace is still a passing round trip —
+ * evaluateChatCompletionResponse accepts choices that carry a finish_reason.
+ */
+const PING_MAX_OUTPUT_TOKENS = 128;
+
+/**
+ * Connectivity ping. It stays a chat call rather than a cheaper metadata
+ * endpoint because the failure this check exists to catch is a request body the
+ * provider rejects — an unknown model name, an unsupported `thinking` shape —
+ * and only the chat endpoint answers that question. Reasoning cannot be switched
+ * off on GLM-5.3, so the spend is held down by the lowest effort tier and by
+ * PING_MAX_OUTPUT_TOKENS instead.
+ */
+export async function checkLlm(): Promise<void> {
   try {
-    const apiKey = process.env.DEEPSEEK_API_KEY;
+    const apiKey = process.env.LLM_API_KEY;
     if (!apiKey) {
-      record('DeepSeek API', false, 'Missing DEEPSEEK_API_KEY');
+      record('LLM API', false, 'Missing LLM_API_KEY');
       return;
     }
 
-    const client = new OpenAI({ apiKey, baseURL: 'https://api.deepseek.com' });
-    const body: DeepSeekChatParams = {
-      model: process.env.DEEPSEEK_MODEL?.trim() || 'deepseek-v4-pro',
+    const client = new OpenAI({ apiKey, baseURL: LLM_BASE_URL });
+    const body: LlmChatParams = {
+      model: AI.MODEL,
       messages: [{ role: 'user', content: 'Reply with only the word "OK".' }],
-      max_tokens: 64,
-      thinking: DEEPSEEK_THINKING_DISABLED,
+      max_tokens: PING_MAX_OUTPUT_TOKENS,
+      thinking: LLM_THINKING_ENABLED,
+      reasoning_effort: 'low',
     };
 
     const response = await client.chat.completions.create(body);
 
     const evaluation = evaluateChatCompletionResponse(response);
-    record('DeepSeek API', evaluation.ok, evaluation.detail);
+    record('LLM API', evaluation.ok, evaluation.detail);
   } catch (err) {
     const msg = err instanceof Error ? err.message : String(err);
-    record('DeepSeek API', false, `API error: ${msg}`);
+    record('LLM API', false, `API error: ${msg}`);
   }
 }
 
@@ -177,7 +201,7 @@ async function main(): Promise<void> {
   checkEnvVars();
   await checkSupabase();
   await checkGmail();
-  await checkDeepSeek();
+  await checkLlm();
 
   console.log('\n--- Summary ---');
   const passed = results.filter((r) => r.ok).length;

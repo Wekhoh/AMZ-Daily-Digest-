@@ -5,9 +5,9 @@
 ## 特点
 
 - **全自动**: GitHub Actions 每日定时执行，无需服务器
-- **近乎 $0/月**: GitHub Actions + Supabase + Gmail SMTP 走免费额度，AI 调用 DeepSeek 按量计费（每天约几美分）
+- **低成本**: GitHub Actions + Supabase + Gmail SMTP 走免费额度，AI 调用智谱 GLM 按量计费
 - **知无不言优先**: Playwright 登录爬取，确保最重要的中文卖家社区全覆盖
-- **AI 智能筛选**: DeepSeek V4 Pro 打分 + 摘要 + 分类，只推送高相关度内容
+- **AI 智能筛选**: 智谱 GLM-5.3-Flash 打分 + 摘要 + 分类，只推送高相关度内容
 
 ## 信息源
 
@@ -155,7 +155,7 @@ src/
 │   └── amazonofficial.ts # Amazon 官方公告 RSS (SP-API changelog)
 ├── config.ts             # 集中配置常量
 ├── utils.ts              # 共享工具 (SSRF 防护, sleep)
-├── process.ts            # DeepSeek AI 处理
+├── process.ts            # LLM 打分/重排 (OpenAI 兼容接口)
 ├── store.ts              # Supabase 读写
 ├── email.ts              # Gmail SMTP 邮件
 └── main.ts               # 入口编排
@@ -178,7 +178,10 @@ supabase/migrations/
 
 | 变量 | 说明 |
 |------|------|
-| `DEEPSEEK_API_KEY` | platform.deepseek.com 获取 |
+| `LLM_API_KEY` | 智谱开放平台 bigmodel.cn 获取 |
+| `LLM_MODEL` | 可选，默认 `glm-5.3-flash` |
+| `LLM_BASE_URL` | 可选，OpenAI 兼容基址，默认 `https://open.bigmodel.cn/api/paas/v4/` |
+| `LLM_REASONING_EFFORT` | 可选，`low`/`high`/`max`，默认 `max`；降档省钱改这一个变量即可 |
 | `SUPABASE_URL` | Supabase 项目 URL |
 | `SUPABASE_KEY` | Supabase service role key |
 | `GMAIL_USER` | Gmail 发件邮箱 |
@@ -188,7 +191,7 @@ supabase/migrations/
 
 ## 技术栈
 
-Node.js 20 + TypeScript (tsx) / Playwright / Supabase / DeepSeek V4 Pro / nodemailer (Gmail SMTP)
+Node.js 20 + TypeScript (tsx) / Playwright / Supabase / 智谱 GLM-5.3-Flash / nodemailer (Gmail SMTP)
 
 ## 详细计划
 
