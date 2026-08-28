@@ -769,7 +769,7 @@ async function releaseSentRunLockForRepair(
  */
 function validateConfig(): void {
   const required = [
-    'DEEPSEEK_API_KEY',
+    'LLM_API_KEY',
     'SUPABASE_URL',
     'SUPABASE_KEY',
     'GMAIL_USER',

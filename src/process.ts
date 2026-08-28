@@ -2,10 +2,11 @@ import OpenAI from 'openai';
 import type { Article } from './store.js';
 import {
   AI,
-  DEEPSEEK_REASONING_EFFORT,
-  DEEPSEEK_THINKING_ENABLED,
+  LLM_BASE_URL,
+  LLM_REASONING_EFFORT,
+  LLM_THINKING_ENABLED,
   SOURCE_CAPS,
-  type DeepSeekChatParams,
+  type LlmChatParams,
 } from './config.js';
 import { sleep } from './utils.js';
 
@@ -29,20 +30,19 @@ interface AiResult {
   evidence: string[];
 }
 
-const DEEPSEEK_BASE_URL = 'https://api.deepseek.com';
 /**
- * Per-request ceiling for every DeepSeek call. Max-effort reasoning is slow, and
+ * Per-request ceiling for every model call. Max-effort reasoning is slow, and
  * the SDK would otherwise wait 10 minutes and retry twice on top; both call
  * sites run their own retry policy, so the SDK layer is switched off.
  */
-const DEEPSEEK_REQUEST_TIMEOUT_MS = 300_000;
+const LLM_REQUEST_TIMEOUT_MS = 300_000;
 
 function getAiClient(): OpenAI {
-  const apiKey = process.env.DEEPSEEK_API_KEY;
+  const apiKey = process.env.LLM_API_KEY;
   if (!apiKey) {
-    throw new Error('Missing DEEPSEEK_API_KEY environment variable');
+    throw new Error('Missing LLM_API_KEY environment variable');
   }
-  return new OpenAI({ apiKey, baseURL: DEEPSEEK_BASE_URL });
+  return new OpenAI({ apiKey, baseURL: LLM_BASE_URL });
 }
 
 /** Strip content that looks like prompt injection attempts */
@@ -206,8 +206,8 @@ export function parseAiResponse(text: string, batchSize: number): AiResult[] {
     }
     parsed = JSON.parse(arrayMatch[0]);
   }
-  // DeepSeek json_object mode guarantees an object, not a top-level array, so the
-  // prompt asks for {"results": [...]} — unwrap that envelope before validating.
+  // json_object mode returns an object, not a top-level array, so the prompt
+  // asks for {"results": [...]} — unwrap that envelope before validating.
   if (
     parsed !== null &&
     typeof parsed === 'object' &&
@@ -232,24 +232,24 @@ async function processBatch(
 ): Promise<AiResult[]> {
   const prompt = buildPrompt(batch);
 
-  const body: DeepSeekChatParams = {
+  const body: LlmChatParams = {
     model: AI.MODEL,
     messages: [{ role: 'user', content: prompt }],
     temperature: 0.2,
     max_tokens: AI.MAX_OUTPUT_TOKENS,
     response_format: { type: 'json_object' },
-    thinking: DEEPSEEK_THINKING_ENABLED,
-    reasoning_effort: DEEPSEEK_REASONING_EFFORT,
+    thinking: LLM_THINKING_ENABLED,
+    reasoning_effort: LLM_REASONING_EFFORT,
   };
 
   const response = await ai.chat.completions.create(body, {
-    timeout: DEEPSEEK_REQUEST_TIMEOUT_MS,
+    timeout: LLM_REQUEST_TIMEOUT_MS,
     maxRetries: 0,
   });
 
   const text = response.choices[0]?.message?.content;
   if (!text) {
-    throw new Error('Empty response from DeepSeek');
+    throw new Error('Empty scoring response from the model');
   }
 
   return parseAiResponse(text, batch.length);
@@ -370,7 +370,7 @@ export function enforceDigestWindow(
 }
 
 /**
- * Process articles through the DeepSeek chat API (OpenAI-compatible).
+ * Process articles through the OpenAI-compatible chat API.
  * Executes rough screening -> fine screening -> rerank.
  */
 export async function processArticles(
@@ -698,24 +698,24 @@ export async function rerankFinalSelection(
 
   try {
     const ai = getAiClient();
-    const body: DeepSeekChatParams = {
+    const body: LlmChatParams = {
       model: AI.MODEL,
       messages: [{ role: 'user', content: buildRerankPrompt(articles, digestDate) }],
       temperature: 0.1,
       max_tokens: RERANK_MAX_OUTPUT_TOKENS,
       response_format: { type: 'json_object' },
-      thinking: DEEPSEEK_THINKING_ENABLED,
-      reasoning_effort: DEEPSEEK_REASONING_EFFORT,
+      thinking: LLM_THINKING_ENABLED,
+      reasoning_effort: LLM_REASONING_EFFORT,
     };
 
     const response = await ai.chat.completions.create(body, {
-      timeout: DEEPSEEK_REQUEST_TIMEOUT_MS,
+      timeout: LLM_REQUEST_TIMEOUT_MS,
       maxRetries: 0,
     });
 
     const text = response.choices[0]?.message?.content;
     if (!text) {
-      throw new Error('Empty rerank response from DeepSeek');
+      throw new Error('Empty rerank response from the model');
     }
 
     const plan = parseRerankResponse(text, articles.length);
