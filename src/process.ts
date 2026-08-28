@@ -34,13 +34,17 @@ interface AiResult {
  * Per-request ceiling for every model call. Max-effort reasoning is slow, and
  * the SDK would otherwise wait 10 minutes and retry twice on top; both call
  * sites run their own retry policy, so the SDK layer is switched off.
- * Raised 300_000 -> 900_000 on 2026-08-28: GLM-5.3 always reasons and cannot disable
+ * Raised 300_000 -> 720_000 on 2026-08-28: GLM-5.3 always reasons and cannot disable
  * thinking, and rerank sends the whole pool in one call, so the old five-minute cutoff
  * aborted before the model answered - we never learned how much longer it needed.
+ * MEASURED the same day: a fifty-article rerank returns in 4m07s with finish_reason=stop,
+ * spending 12904 of 13144 completion tokens on reasoning. The old 300s ceiling therefore
+ * sat just 53 seconds above the real duration - a 15% margin any variance would breach.
+ * 720_000 is that measurement times three, replacing the interim 900_000 guess.
  * The pipeline ceiling was raised to 26 minutes in the same change and the Actions job
- * allows 30, so a fifteen-minute rerank fits inside both.
+ * allows 30, so a twelve-minute rerank fits inside both.
  */
-const LLM_REQUEST_TIMEOUT_MS = 900_000;
+const LLM_REQUEST_TIMEOUT_MS = 720_000;
 
 function getAiClient(): OpenAI {
   const apiKey = process.env.LLM_API_KEY;
