@@ -34,8 +34,12 @@ interface AiResult {
  * Per-request ceiling for every model call. Max-effort reasoning is slow, and
  * the SDK would otherwise wait 10 minutes and retry twice on top; both call
  * sites run their own retry policy, so the SDK layer is switched off.
+ * Raised 300_000 -> 900_000 on 2026-08-28: GLM-5.3 always reasons and cannot disable
+ * thinking, and rerank sends the whole pool in one call, so the old five-minute cutoff
+ * aborted before the model answered - we never learned how much longer it needed.
+ * The pipeline self-aborts at 20 minutes and the Actions job at 30, so this fits both.
  */
-const LLM_REQUEST_TIMEOUT_MS = 300_000;
+const LLM_REQUEST_TIMEOUT_MS = 900_000;
 
 function getAiClient(): OpenAI {
   const apiKey = process.env.LLM_API_KEY;
@@ -531,8 +535,14 @@ export interface RerankOutcome {
   reranked: boolean;
 }
 
-/** Reasoning tokens are billed against this, so it sits far above the JSON payload. */
-const RERANK_MAX_OUTPUT_TOKENS = 32_768;
+/**
+ * Reasoning tokens are billed against this, so it sits far above the JSON payload.
+ * Raised 32_768 -> 65_536 on 2026-08-28 while diagnosing the rerank timeout: with
+ * thinking permanently on, a fifty-article pass can spend the entire budget on
+ * reasoning before emitting any JSON. glm-5.3-flash documents 128K max output, so
+ * this stays well inside. A ceiling, not a target - an early finish bills what it used.
+ */
+const RERANK_MAX_OUTPUT_TOKENS = 65_536;
 /** Titles are attacker-reachable text; keep only enough to judge relevance. */
 const RERANK_TITLE_LIMIT = 120;
 /** More duplicate groups than one per this many articles reads as invention, not detection. */
@@ -713,6 +723,16 @@ export async function rerankFinalSelection(
       maxRetries: 0,
     });
 
+    // Diagnostics for the 2026-08-28 rerank timeout: without finish_reason and usage
+    // a truncated answer and a slow one look identical from the outside.
+    const finishReason = response.choices[0]?.finish_reason ?? 'unknown';
+    console.log(
+      `[AI] rerank returned: finish_reason=${finishReason} ` +
+        `usage=${JSON.stringify(response.usage ?? {})}`,
+    );
+    if (finishReason === 'length') {
+      console.warn('[AI] [RERANK_TRUNCATED] the model hit max_tokens before finishing its JSON');
+    }
     const text = response.choices[0]?.message?.content;
     if (!text) {
       throw new Error('Empty rerank response from the model');
