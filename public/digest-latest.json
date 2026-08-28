@@ -1,17 +1,17 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-08-28T07:35:47Z",
+  "generated_at_utc": "2026-08-28T08:18:43Z",
   "digest_date": "2026-08-28",
   "article_count": 50,
   "articles": [
     {
-      "title": "百万美金广告操盘手独立起步美国站，诚邀运营大佬交流--可提供广告建议",
-      "summary": "卖家凭个人战绩拉到投资人，初步投入30-50个，招亲戚做运营助理，单干美国站精铺，客单价40美金以内，美区跑通后再考虑欧洲澳洲。核心疑问：精铺是否先无品牌发货再转品牌、首批200-300个是否合适及质检方式、贴标打包可否交工厂或货代、UPC豁免、品牌化与拓站时机。作者擅长亚马逊广告与DSP，可提供广告建议。",
+      "title": "关于亚马逊新功能：买家退货时自动向买家索评。高退货率产品该如何控评继续稳定销售的思考以及案例研究",
+      "summary": "亚马逊退货索评实为退货客服AI对话末尾递出五星评分器，针对退货不满人群，服装尺码类与详情页落差大的电子产品受冲击最大。应对分三层：减——优化详情页颜色尺寸与适配描述以降低退货来源；增——新品送测五星对冲，老品用其他链接合并稀释差评；限——利用高留评触发删评机制及父体内四子体轮流每4个月翻新重置评分。",
       "category": "experience",
-      "score": 6.8,
-      "url": "https://www.wearesellers.com/question/123905",
+      "score": 9.4,
+      "url": "https://www.wearesellers.com/question/123720",
       "source": "wearesellers",
-      "published_at": "2026-08-28T06:23:22.236Z"
+      "published_at": "2026-08-28T07:24:06.117Z"
     },
     {
       "title": "Section 122 sunset was July 24. Here's the actual duty stack that replaced it for China-origin FBA imports (with math)",
@@ -20,79 +20,79 @@
       "score": 9.4,
       "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vzd2hi/section_122_sunset_was_july_24_heres_the_actual",
       "source": "reddit_fba",
-      "published_at": "2026-08-26T23:15:37.000Z"
+      "published_at": "2026-08-26T23:15:37+00:00"
     },
     {
-      "title": "亚马逊9月1日起多类目退货期限调整为14天",
-      "summary": "亚马逊自2026年9月1日起，将母婴、美妆、家居等十余个品类的退货期限缩短至14天，适用于FBA和自配送模式。配送日期在10月1日前的订单有过渡缓冲期。卖家可通过后台撤销权设置主动延长退货期以优化体验，商品详情页将自动展示新退货窗口。",
+      "title": "标题超限直接被AI改写！亚马逊75字符新规即将强制执行",
+      "summary": "亚马逊将于2026年7月27日起强制执行75字符标题新规。超出字符需移至可被搜索的商品亮点中。卖家需在后台管理所有库存中，通过编辑页面的查看改进内容，预览并一键采用或调整AI推荐的名称与亮点，避免逾期被AI强制替代。",
       "category": "policy",
       "score": 9.4,
-      "url": "https://www.amz123.com/kx/KzlNFjAq",
-      "source": "amz123",
-      "published_at": "2026-08-05T09:47:24+00:00"
-    },
-    {
-      "title": "前台图片显示副图中的某一张，而不是显示白底主图。问了case，回复是：目前您那边显示副图的原因很可能是亚马逊搜索系统会自动选择最匹配买家搜索意图的图片，而不是始终显示主图",
-      "summary": "美国站前台搜索结果出现副图替代白底主图：登录买家账号搜索时部分商品展示副图，无痕模式未登录则全部显示白底图。官方Case回复称搜索系统会自动选择最匹配买家搜索意图的图片而非始终显示主图，后台论坛两个月前已有类似反馈。运营启示是副图同样参与搜索展示，需按搜索意图优化全套图片。",
-      "category": "trend",
-      "score": 7.4,
-      "url": "https://www.wearesellers.com/question/123893",
+      "url": "https://www.wearesellers.com/question/122858",
       "source": "wearesellers",
-      "published_at": "2026-08-28T06:23:17.450Z"
+      "published_at": "2026-07-31T08:01:06.536+00:00"
     },
     {
-      "title": "参考价被Coupon折后价拉低了，怎么救？促销节奏怎么安排？类似“优惠券挂太久被抓折后价”怎么处理的",
-      "summary": "Coupon长期挂置被系统抓取折后价，导致参考价被拉低；已取消Coupon，拟改用Checkout叠加折扣稳转化，但担心同样被抓取；Vine出单是否计入历史出单存疑；计划一周挂折扣一周跑活动交替拉参考价。核心逻辑：参考价与真实成交价强相关，任何促销工具只要压低实际成交价都可能被抓取，补救需围绕抬升真实成交价安排促销节奏。",
+      "title": "The reimbursement money I was leaving on the table for over a year (FBA)",
+      "summary": "亚马逊FBA索赔实操方法。卖家应每月比对退货报告与赔偿报告，针对买家未退回货物、超45天未退回已退款件、库容损毁未自动赔偿等异常，以一单一案、只陈述事实的方式开case索赔，避免因超出时效而造成资金损失。",
       "category": "experience",
-      "score": 6.8,
-      "url": "https://www.wearesellers.com/question/123869",
-      "source": "wearesellers",
-      "published_at": "2026-08-28T06:22:43.589Z"
+      "score": 9.4,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vbqfwd/the_reimbursement_money_i_was_leaving_on_the",
+      "source": "reddit_fba",
+      "published_at": "2026-07-31T13:06:17+00:00"
     },
     {
-      "title": "用 Codex 运营多个 Amazon API 店铺，如何规避店铺关联风险？",
-      "summary": "Codex调用SP-API或Ads API时经本机网络发请求，Amazon可记录API应用、授权信息与公网出口IP，同一IP调多店API存在关联风险。解法是一店一线路一固定IP：店铺、API凭证、网络线路、固定出口IP四者绑定，从LWA换Token到调API、下载报表全程走本店线路；请求前校验实际出口IP，不一致或断线直接停止请求；凭证本机加密保存，Codex无需接触Token。",
+      "title": "Stop running Amazon PPC on all your ASIN variations. Here is the strict logic you need to apply to your catalog:",
+      "summary": "针对多变体ASIN的亚马逊PPC广告，应避免将所有子变体混入同个广告组。核心策略是：将高转化、普适性强的Hero SKU用于投放高流量核心词；将尺寸、颜色等具体变体精准匹配长尾特定意图词。若父体TACoS升高，需隔离分析具体子ASIN的TACoS和搜索词重叠度，优化变体层面的广告流失。",
       "category": "experience",
-      "score": 7.4,
-      "url": "https://www.wearesellers.com/question/123903",
-      "source": "wearesellers",
-      "published_at": "2026-08-28T06:22:33.849Z"
+      "score": 9.4,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vht1zt/stop_running_amazon_ppc_on_all_your_asin",
+      "source": "reddit_fba",
+      "published_at": "2026-08-07T06:42:46+00:00"
     },
     {
-      "title": "欧洲站的主要营业地址审核账单问题：欧洲站主营业地址审核突然盯上180天账单，挂靠地址和中国银行综合信息凭证能过吗？",
-      "summary": "亚马逊针对欧盟英国卖家开展税局主导的主要营业地址真实性核验，目的是精准判定税务主体、杜绝空壳公司与虚拟地址；此审核非KYC，注册地址不等于主要营业地址；需备近180天水电网络账单、办公场地证明、供应商发票，抬头地址须与填报完全一致，仅收PDF原件，截图翻拍直接驳回；挂靠地址与中国银行综合信息凭证能否过审存疑。",
+      "title": "0110报关监管趋严：境外收货人不得填写Amazon或FBA仓名",
+      "summary": "自2026年7月下旬起，多地报关行明确0110一般贸易报关单中境外收货人不得填写Amazon或FBA仓名。卖家必须提供真实境外购货方信息、购销合同、商业发票及货款结算凭证。此举是金税四期推进下多部门数据联动监管的落实，不合规将面临拒绝接单。",
       "category": "policy",
-      "score": 6,
-      "url": "https://www.wearesellers.com/question/123898",
-      "source": "wearesellers",
-      "published_at": "2026-08-28T03:22:46.005Z"
+      "score": 9.4,
+      "url": "https://www.amz123.com/kx/lADJn1c1",
+      "source": "amz123",
+      "published_at": "2026-08-05T09:26:54+00:00"
     },
     {
-      "title": "外部比价丢购物车，找不到源头低价链接，申诉回来改主图 + 印 LOGO 换包装有用吗？除了改产品外观，还有什么长效规避外部比价的手段？",
-      "summary": "外部比价致购物车丢失，后台不给比价源链接，无法投诉下架。结论：改图印LOGO换包装不能直接恢复购物车，恢复靠申诉，改图只降低AI识图判定同款概率。方案：申诉后开英文case要求定价团队清除旧比价缓存；重拍全套图并印LOGO换包装做视觉差异化；五点描述强化品牌设计但不大改核心参数防权重波动；持续监控定价健康面板，再预警立即升级case。",
+      "title": "I looked at the top 20 Amazon listings for water bottles and electric kettles. Here's what they all had in common.",
+      "summary": "通过分析亚马逊热水壶类目Top20主图发现，高点击率主图具有高共性：产品需占满大部分画面以减少空白，利用强对比度提升移动端辨识度，采用简单拍摄角度，确保轮廓在一秒内可识别，且整体干净整洁。卖家应优先保证主图直观易懂，而非单纯追求美观，以此提升主图点击率。",
       "category": "experience",
-      "score": 8.4,
-      "url": "https://www.wearesellers.com/question/123894",
-      "source": "wearesellers",
-      "published_at": "2026-08-28T03:22:28.950Z"
+      "score": 9.4,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vbh2gx/i_looked_at_the_top_20_amazon_listings_for_water",
+      "source": "reddit_fba",
+      "published_at": "2026-07-31T04:58:34+00:00"
     },
     {
-      "title": "品牌备案被撤，商标已买回+投诉已撤，但Brand Registry还是一直被拒，求解",
-      "summary": "欧盟商标被抢注方投诉19条核心ASIN后品牌备案被撤；完成EUIPO转让、投诉全撤、账号健康正常后重新备案仍被拒，亚马逊只回三条模板理由且不告知具体违规ASIN。可核查Account Health的涉嫌知识产权违规页面，逐条排查Listing商标词与品牌内容，并尝试升级Escalation渠道而非重复开Case。",
-      "category": "experience",
-      "score": 7.2,
-      "url": "https://www.wearesellers.com/question/123858",
+      "title": "亚马逊 1DC（One Distribution Center）仓点入仓异常风险，你们遇到过这些新的仓库代码吗？IMS1、IGA3、XMI3、XCH2、IMI1、IMO1、ITX3、INC1 等",
+      "summary": "亚马逊上线1DC仓网导致IMS1、IGA3等新仓库出现无法送仓、不更新等异常。卖家在创建货件时应重点留意仓库代码，谨慎分配。应对方法是创建多于5个货件以刷出老仓库；若货件已送达并出现异常，可利用货代提供的POD送仓凭证向亚马逊开Case进行申诉。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.wearesellers.com/question/123088",
       "source": "wearesellers",
-      "published_at": "2026-08-28T02:22:55.640Z"
+      "published_at": "2026-08-07T05:02:15.665+00:00"
     },
     {
-      "title": "庆祝自己S2发个贴分享亚马逊AR模型的基础知识 | 纯干货",
-      "summary": "亚马逊AR模型可全角度查看、放入房间比对、展现真实尺寸减少退货，退出时以加入购物车代替退出按钮，换花色建模成本低。制作三方案：官方手机APP扫描样品，高斯点云渐进加载降低跳失但不可二次修改；犀牛SW等导出KeyShot渲染后导出GLB，适合相框地毯等简单品但面数易超限；专业级走C4D-SP-Blender管线。审核时严时松且有偏色。",
-      "category": "experience",
-      "score": 7.4,
-      "url": "https://www.wearesellers.com/question/123867",
-      "source": "wearesellers",
-      "published_at": "2026-08-28T02:22:31.400Z"
+      "title": "Looks like TIC testing is now required by 3rd party before listing items",
+      "summary": "亚马逊收紧合规政策，取消了新品上架的检测宽限期。玩具、电子和膳食补充剂等受管制类目的卖家，必须在产品上架前通过合规的第三方TIC机构完成检测，且检测报告须由实验室直接提交给亚马逊，否则新品将立即面临禁售。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vhurrl/looks_like_tic_testing_is_now_required_by_3rd",
+      "source": "reddit_fba",
+      "published_at": "2026-08-07T08:25:31+00:00"
+    },
+    {
+      "title": "Notice: New AWD Inbound Rules (Effective Jul 31, 2026)",
+      "summary": "亚马逊美国站AWD将于2026年7月31日起停止接收超重或超大件商品，仅允许标准尺寸商品入库。标准为单件长宽高不超过18x14x8英寸且重量不超过20磅。超标商品创建货件时将被自动拦截，卖家需直接发往FBA或第三方海外仓。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1uyu9tp/notice_new_awd_inbound_rules_effective_jul_31_2026",
+      "source": "reddit_fba",
+      "published_at": "2026-07-17T08:58:01+00:00"
     }
   ]
 }
