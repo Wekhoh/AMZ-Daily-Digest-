@@ -1,71 +1,26 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-08-24T06:49:16Z",
-  "digest_date": "2026-08-24",
+  "generated_at_utc": "2026-08-28T07:35:47Z",
+  "digest_date": "2026-08-28",
   "article_count": 50,
   "articles": [
     {
-      "title": "WOOT BD 怎么提报？巧豚豚 6 步拆解卖家版",
-      "summary": "WOOT BD提报：先确认资格，Review 10个以上、星级4.0以上、Deal价20美元以上、日销10个以上（新品可放宽至5）。报价确认后补活动规划并签协议，需自查站内BD/LD冲突，同ASIN不能同时叠加。划库存不动货、不换标，常规3-5工作日授权，建议提前7工作日，划库存后7日内必须启动BD。广告由卖家控制，预算预充值，按实际花费多退少补。活动数据沉淀回原Listing。",
-      "category": "experience",
-      "score": 8.4,
-      "url": "https://www.wearesellers.com/question/123733",
-      "source": "wearesellers",
-      "published_at": "2026-08-24T06:10:51.031Z"
-    },
-    {
-      "title": "Amazon 新退货流程开始引导买家直接打星？新品 Rating 正在被明显影响",
-      "summary": "亚马逊在退货流程中引导买家打星，导致退货买家样本偏差被放大，低星Rating可轻易留在链接，尤其对新品冲击大。机制形成Rating下降→转化下降→广告效率下降→自然排名下降→销量减少→新增Rating更慢的负向循环，并可能抑制新品开发。需关注该政策变化并制定防御策略。",
-      "category": "policy",
-      "score": 6.8,
-      "url": "https://www.wearesellers.com/question/123713",
-      "source": "wearesellers",
-      "published_at": "2026-08-24T04:39:16.581Z"
-    },
-    {
-      "title": "手动关键词广告增加出单量的方式有哪些？",
-      "summary": "关键词在自动广告中出单良好，后自动广告花费下降，手动广泛、短语、精准均无法恢复原量。卖家已提高广泛广告出价80%，并计划缓慢小幅增加预算、复制广告组测试自动提高降低与固定竞价、重做精准广告并提价。建议先排查竞价环境变化，再分阶段优化广告结构。",
+      "title": "百万美金广告操盘手独立起步美国站，诚邀运营大佬交流--可提供广告建议",
+      "summary": "卖家凭个人战绩拉到投资人，初步投入30-50个，招亲戚做运营助理，单干美国站精铺，客单价40美金以内，美区跑通后再考虑欧洲澳洲。核心疑问：精铺是否先无品牌发货再转品牌、首批200-300个是否合适及质检方式、贴标打包可否交工厂或货代、UPC豁免、品牌化与拓站时机。作者擅长亚马逊广告与DSP，可提供广告建议。",
       "category": "experience",
       "score": 6.8,
-      "url": "https://www.wearesellers.com/question/123722",
+      "url": "https://www.wearesellers.com/question/123905",
       "source": "wearesellers",
-      "published_at": "2026-08-24T06:20:14.345Z"
+      "published_at": "2026-08-28T06:23:22.236Z"
     },
     {
-      "title": "亚马逊美国AWD将于7月31日起全面停止接收大件商品",
-      "summary": "亚马逊美国站AWD将于2026年7月31日起停止接收大件及超重商品，单件尺寸超45.7×35.6×20.3厘米或重超9公斤将被拦截。主营家具、健身器材等大件商品的卖家需及早调整海外仓布局，改变依靠AWD储备长期库存以降低FBA仓储成本的运营模式。",
+      "title": "Section 122 sunset was July 24. Here's the actual duty stack that replaced it for China-origin FBA imports (with math)",
+      "summary": "Section 122的10%统一附加税按150天上限于7月24日到期，USTR同日对中国等60个原产地启用301强迫劳动关税：有非强迫劳动供应链证明的Tier B为10%，无证明默认Tier A为12.5%，多数中国出口商无Tier B文件。以3万美元CIF的61章T恤海运为例，叠加MFN 16.5%、301 List 3的25%、Tier A 12.5%、MPF上限634.62美元及HMF 0.125%后，落地税负16,872.12美元，占CIF约56.2%，卖家需按新税栈重算成本与利润。",
       "category": "policy",
       "score": 9.4,
-      "url": "https://www.amz123.com/kx/S1F3tDAH",
-      "source": "amz123",
-      "published_at": "2026-07-16T05:54:01+00:00"
-    },
-    {
-      "title": "亚马逊NSP计划将于7月30日进行重大升级",
-      "summary": "亚马逊物流新品入仓优惠计划（NSP）将于2026年7月30日升级。旧用户需在10月31日前重新确认注册。升级后新父ASIN首件入仓120天内享优惠，前100件商品佣金降至10%，次100件降至5%，前200件免除仓储费等多项费用，并新增Vine和Coupon费用优惠。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.amz123.com/kx/4ifaih3a",
-      "source": "amz123",
-      "published_at": "2026-07-31T06:29:54+00:00"
-    },
-    {
-      "title": "0110报关监管趋严：境外收货人不得填写Amazon或FBA仓名",
-      "summary": "自2026年7月下旬起，多地报关行明确0110一般贸易报关单中境外收货人不得填写Amazon或FBA仓名。卖家必须提供真实境外购货方信息、购销合同、商业发票及货款结算凭证。此举是金税四期推进下多部门数据联动监管的落实，不合规将面临拒绝接单。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.amz123.com/kx/lADJn1c1",
-      "source": "amz123",
-      "published_at": "2026-08-05T09:26:54+00:00"
-    },
-    {
-      "title": "Product variation eating up 95% of impressions",
-      "summary": "卖家为老ASIN新增变体后在同广告组投放，发现新变体几乎无曝光，老ASIN占据约95%曝光。主要原因可能是亚马逊偏好有历史数据的ASIN。可考虑等待数日观察，或为新变体单独建立广告系列并提高竞价，避免与老ASIN直接竞争预算。",
-      "category": "experience",
-      "score": 6.8,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vwd2f9/product_variation_eating_up_95_of_impressions",
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vzd2hi/section_122_sunset_was_july_24_heres_the_actual",
       "source": "reddit_fba",
-      "published_at": "2026-08-23T17:19:53.000Z"
+      "published_at": "2026-08-26T23:15:37.000Z"
     },
     {
       "title": "亚马逊9月1日起多类目退货期限调整为14天",
@@ -77,22 +32,67 @@
       "published_at": "2026-08-05T09:47:24+00:00"
     },
     {
-      "title": "亚马逊后台逐步移除差评“Contact Buyer”入口",
-      "summary": "亚马逊后台正逐步移除1至3星差评旁的联系买家入口，卖家无法再主动沟通挽回差评。应对方法是转向差评前预防，优先使用官方Vine计划及后台索评功能合规获评；严禁使用包裹返现卡、直评及合并僵尸链接等违规操作；若用外部测评须严格核验服务商并保留凭证以防封号。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.amz123.com/kx/RXsiQVES",
-      "source": "amz123",
-      "published_at": "2026-07-01T09:08:47+00:00"
+      "title": "前台图片显示副图中的某一张，而不是显示白底主图。问了case，回复是：目前您那边显示副图的原因很可能是亚马逊搜索系统会自动选择最匹配买家搜索意图的图片，而不是始终显示主图",
+      "summary": "美国站前台搜索结果出现副图替代白底主图：登录买家账号搜索时部分商品展示副图，无痕模式未登录则全部显示白底图。官方Case回复称搜索系统会自动选择最匹配买家搜索意图的图片而非始终显示主图，后台论坛两个月前已有类似反馈。运营启示是副图同样参与搜索展示，需按搜索意图优化全套图片。",
+      "category": "trend",
+      "score": 7.4,
+      "url": "https://www.wearesellers.com/question/123893",
+      "source": "wearesellers",
+      "published_at": "2026-08-28T06:23:17.450Z"
     },
     {
-      "title": "亚马逊严打明信片催评及诱导改评 违规直接撤销售权限",
-      "summary": "亚马逊严厉打击通过明信片催评、PayPal或礼品卡返现诱导改评等违规行为，情节严重者将跳过警告直接封号。卖家必须立即停止任何站外联系买家、批量获取用户信息及异常返现的操纵评论行为，合规运营，将运营重心从冲评数量转向提升评论内容的真实性与场景化。",
+      "title": "参考价被Coupon折后价拉低了，怎么救？促销节奏怎么安排？类似“优惠券挂太久被抓折后价”怎么处理的",
+      "summary": "Coupon长期挂置被系统抓取折后价，导致参考价被拉低；已取消Coupon，拟改用Checkout叠加折扣稳转化，但担心同样被抓取；Vine出单是否计入历史出单存疑；计划一周挂折扣一周跑活动交替拉参考价。核心逻辑：参考价与真实成交价强相关，任何促销工具只要压低实际成交价都可能被抓取，补救需围绕抬升真实成交价安排促销节奏。",
+      "category": "experience",
+      "score": 6.8,
+      "url": "https://www.wearesellers.com/question/123869",
+      "source": "wearesellers",
+      "published_at": "2026-08-28T06:22:43.589Z"
+    },
+    {
+      "title": "用 Codex 运营多个 Amazon API 店铺，如何规避店铺关联风险？",
+      "summary": "Codex调用SP-API或Ads API时经本机网络发请求，Amazon可记录API应用、授权信息与公网出口IP，同一IP调多店API存在关联风险。解法是一店一线路一固定IP：店铺、API凭证、网络线路、固定出口IP四者绑定，从LWA换Token到调API、下载报表全程走本店线路；请求前校验实际出口IP，不一致或断线直接停止请求；凭证本机加密保存，Codex无需接触Token。",
+      "category": "experience",
+      "score": 7.4,
+      "url": "https://www.wearesellers.com/question/123903",
+      "source": "wearesellers",
+      "published_at": "2026-08-28T06:22:33.849Z"
+    },
+    {
+      "title": "欧洲站的主要营业地址审核账单问题：欧洲站主营业地址审核突然盯上180天账单，挂靠地址和中国银行综合信息凭证能过吗？",
+      "summary": "亚马逊针对欧盟英国卖家开展税局主导的主要营业地址真实性核验，目的是精准判定税务主体、杜绝空壳公司与虚拟地址；此审核非KYC，注册地址不等于主要营业地址；需备近180天水电网络账单、办公场地证明、供应商发票，抬头地址须与填报完全一致，仅收PDF原件，截图翻拍直接驳回；挂靠地址与中国银行综合信息凭证能否过审存疑。",
       "category": "policy",
-      "score": 9.4,
-      "url": "https://www.amz123.com/kx/NXcdeLDw",
-      "source": "amz123",
-      "published_at": "2026-07-07T09:20:21+00:00"
+      "score": 6,
+      "url": "https://www.wearesellers.com/question/123898",
+      "source": "wearesellers",
+      "published_at": "2026-08-28T03:22:46.005Z"
+    },
+    {
+      "title": "外部比价丢购物车，找不到源头低价链接，申诉回来改主图 + 印 LOGO 换包装有用吗？除了改产品外观，还有什么长效规避外部比价的手段？",
+      "summary": "外部比价致购物车丢失，后台不给比价源链接，无法投诉下架。结论：改图印LOGO换包装不能直接恢复购物车，恢复靠申诉，改图只降低AI识图判定同款概率。方案：申诉后开英文case要求定价团队清除旧比价缓存；重拍全套图并印LOGO换包装做视觉差异化；五点描述强化品牌设计但不大改核心参数防权重波动；持续监控定价健康面板，再预警立即升级case。",
+      "category": "experience",
+      "score": 8.4,
+      "url": "https://www.wearesellers.com/question/123894",
+      "source": "wearesellers",
+      "published_at": "2026-08-28T03:22:28.950Z"
+    },
+    {
+      "title": "品牌备案被撤，商标已买回+投诉已撤，但Brand Registry还是一直被拒，求解",
+      "summary": "欧盟商标被抢注方投诉19条核心ASIN后品牌备案被撤；完成EUIPO转让、投诉全撤、账号健康正常后重新备案仍被拒，亚马逊只回三条模板理由且不告知具体违规ASIN。可核查Account Health的涉嫌知识产权违规页面，逐条排查Listing商标词与品牌内容，并尝试升级Escalation渠道而非重复开Case。",
+      "category": "experience",
+      "score": 7.2,
+      "url": "https://www.wearesellers.com/question/123858",
+      "source": "wearesellers",
+      "published_at": "2026-08-28T02:22:55.640Z"
+    },
+    {
+      "title": "庆祝自己S2发个贴分享亚马逊AR模型的基础知识 | 纯干货",
+      "summary": "亚马逊AR模型可全角度查看、放入房间比对、展现真实尺寸减少退货，退出时以加入购物车代替退出按钮，换花色建模成本低。制作三方案：官方手机APP扫描样品，高斯点云渐进加载降低跳失但不可二次修改；犀牛SW等导出KeyShot渲染后导出GLB，适合相框地毯等简单品但面数易超限；专业级走C4D-SP-Blender管线。审核时严时松且有偏色。",
+      "category": "experience",
+      "score": 7.4,
+      "url": "https://www.wearesellers.com/question/123867",
+      "source": "wearesellers",
+      "published_at": "2026-08-28T02:22:31.400Z"
     }
   ]
 }
