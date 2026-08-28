@@ -37,7 +37,8 @@ interface AiResult {
  * Raised 300_000 -> 900_000 on 2026-08-28: GLM-5.3 always reasons and cannot disable
  * thinking, and rerank sends the whole pool in one call, so the old five-minute cutoff
  * aborted before the model answered - we never learned how much longer it needed.
- * The pipeline self-aborts at 20 minutes and the Actions job at 30, so this fits both.
+ * The pipeline ceiling was raised to 26 minutes in the same change and the Actions job
+ * allows 30, so a fifteen-minute rerank fits inside both.
  */
 const LLM_REQUEST_TIMEOUT_MS = 900_000;
 

@@ -1422,14 +1422,20 @@ export async function runPipeline(): Promise<void> {
 // Entry point
 // ---------------------------------------------------------------------------
 
-const PIPELINE_TIMEOUT_MS = 20 * 60 * 1_000;
+/**
+ * Whole-run ceiling. Raised 20 -> 26 minutes on 2026-08-28 together with the rerank
+ * request timeout: the pre-rerank stages take roughly six minutes, so a fifteen-minute
+ * rerank would have hit this self-abort before the model was given its chance. The
+ * Actions job allows 30 minutes and spends a couple on setup, so 26 stays inside it.
+ */
+const PIPELINE_TIMEOUT_MS = 26 * 60 * 1_000;
 export async function runPipelineWithTimeout(
   timeoutMs = PIPELINE_TIMEOUT_MS,
 ): Promise<void> {
   let timeoutId: ReturnType<typeof setTimeout> | undefined;
   const timeoutPromise = new Promise<never>((_, reject) => {
     timeoutId = setTimeout(
-      () => reject(new Error('Pipeline timeout (20 min)')),
+      () => reject(new Error('Pipeline timeout (26 min)')),
       timeoutMs,
     );
   });
