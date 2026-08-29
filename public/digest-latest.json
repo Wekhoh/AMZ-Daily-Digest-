@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-08-28T08:18:43Z",
-  "digest_date": "2026-08-28",
+  "generated_at_utc": "2026-08-29T12:21:21Z",
+  "digest_date": "2026-08-29",
   "article_count": 50,
   "articles": [
     {
-      "title": "关于亚马逊新功能：买家退货时自动向买家索评。高退货率产品该如何控评继续稳定销售的思考以及案例研究",
-      "summary": "亚马逊退货索评实为退货客服AI对话末尾递出五星评分器，针对退货不满人群，服装尺码类与详情页落差大的电子产品受冲击最大。应对分三层：减——优化详情页颜色尺寸与适配描述以降低退货来源；增——新品送测五星对冲，老品用其他链接合并稀释差评；限——利用高留评触发删评机制及父体内四子体轮流每4个月翻新重置评分。",
-      "category": "experience",
-      "score": 9.4,
-      "url": "https://www.wearesellers.com/question/123720",
+      "title": "收到税局短信，说出口业务取得的收入与申报的增值税不符，让自查整改、",
+      "summary": "深圳税务局比对出口收入与增值税申报后发出自查短信，要求将符合免税情形的销售额填入小规模纳税人申报表出口免税销售额栏次、更正申报表，超过小规模纳税人标准的须登记为一般纳税人，逾期将启动后续征管；作者怀疑9810出口申报货值与平台推送销售额不一致触发预警。",
+      "category": "policy",
+      "score": 7.4,
+      "url": "https://www.wearesellers.com/question/123786",
       "source": "wearesellers",
-      "published_at": "2026-08-28T07:24:06.117Z"
+      "published_at": "2026-08-29T11:08:32.434Z"
     },
     {
-      "title": "Section 122 sunset was July 24. Here's the actual duty stack that replaced it for China-origin FBA imports (with math)",
-      "summary": "Section 122的10%统一附加税按150天上限于7月24日到期，USTR同日对中国等60个原产地启用301强迫劳动关税：有非强迫劳动供应链证明的Tier B为10%，无证明默认Tier A为12.5%，多数中国出口商无Tier B文件。以3万美元CIF的61章T恤海运为例，叠加MFN 16.5%、301 List 3的25%、Tier A 12.5%、MPF上限634.62美元及HMF 0.125%后，落地税负16,872.12美元，占CIF约56.2%，卖家需按新税栈重算成本与利润。",
+      "title": "Account Suspended INFORM ACT for address verification - any advice?",
+      "summary": "美国站卖家因INFORM Consumers Act地址验证未通过被暂停账号：反复重新提交验证两个月仍无法通过，开case无回复，FBA仓内600件库存滞留。结论：地址验证卡死会同时触发账号暂停与库存冻结，且客服渠道可能长期空转，卖家应提前确认INFORM Act验证状态，勿等账号被暂停后才补救。",
+      "category": "policy",
+      "score": 6.6,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1w1iqpv/account_suspended_inform_act_for_address",
+      "source": "reddit_fba",
+      "published_at": "2026-08-29T10:15:15.000Z"
+    },
+    {
+      "title": "亚马逊取消精选报价前置门槛，全球卖家同台内卷",
+      "summary": "亚马逊调整精选报价规则，自今年7月起分批取消卖家前置资格筛选，全店产品报价自动进入候选池。虽然取消了前置审核，但最终评选逻辑不变。卖家无需手动操作，但必须持续优化价格竞争力、配送时效及店铺综合绩效这三个核心维度，以在更激烈的自动竞争中获取购物车权重。",
       "category": "policy",
       "score": 9.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vzd2hi/section_122_sunset_was_july_24_heres_the_actual",
-      "source": "reddit_fba",
-      "published_at": "2026-08-26T23:15:37+00:00"
-    },
-    {
-      "title": "标题超限直接被AI改写！亚马逊75字符新规即将强制执行",
-      "summary": "亚马逊将于2026年7月27日起强制执行75字符标题新规。超出字符需移至可被搜索的商品亮点中。卖家需在后台管理所有库存中，通过编辑页面的查看改进内容，预览并一键采用或调整AI推荐的名称与亮点，避免逾期被AI强制替代。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.wearesellers.com/question/122858",
-      "source": "wearesellers",
-      "published_at": "2026-07-31T08:01:06.536+00:00"
-    },
-    {
-      "title": "The reimbursement money I was leaving on the table for over a year (FBA)",
-      "summary": "亚马逊FBA索赔实操方法。卖家应每月比对退货报告与赔偿报告，针对买家未退回货物、超45天未退回已退款件、库容损毁未自动赔偿等异常，以一单一案、只陈述事实的方式开case索赔，避免因超出时效而造成资金损失。",
-      "category": "experience",
-      "score": 9.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vbqfwd/the_reimbursement_money_i_was_leaving_on_the",
-      "source": "reddit_fba",
-      "published_at": "2026-07-31T13:06:17+00:00"
-    },
-    {
-      "title": "Stop running Amazon PPC on all your ASIN variations. Here is the strict logic you need to apply to your catalog:",
-      "summary": "针对多变体ASIN的亚马逊PPC广告，应避免将所有子变体混入同个广告组。核心策略是：将高转化、普适性强的Hero SKU用于投放高流量核心词；将尺寸、颜色等具体变体精准匹配长尾特定意图词。若父体TACoS升高，需隔离分析具体子ASIN的TACoS和搜索词重叠度，优化变体层面的广告流失。",
-      "category": "experience",
-      "score": 9.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vht1zt/stop_running_amazon_ppc_on_all_your_asin",
-      "source": "reddit_fba",
-      "published_at": "2026-08-07T06:42:46+00:00"
-    },
-    {
-      "title": "0110报关监管趋严：境外收货人不得填写Amazon或FBA仓名",
-      "summary": "自2026年7月下旬起，多地报关行明确0110一般贸易报关单中境外收货人不得填写Amazon或FBA仓名。卖家必须提供真实境外购货方信息、购销合同、商业发票及货款结算凭证。此举是金税四期推进下多部门数据联动监管的落实，不合规将面临拒绝接单。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.amz123.com/kx/lADJn1c1",
+      "url": "https://www.amz123.com/kx/VLqeusSZ",
       "source": "amz123",
-      "published_at": "2026-08-05T09:26:54+00:00"
+      "published_at": "2026-07-13T06:19:29+00:00"
     },
     {
-      "title": "I looked at the top 20 Amazon listings for water bottles and electric kettles. Here's what they all had in common.",
-      "summary": "通过分析亚马逊热水壶类目Top20主图发现，高点击率主图具有高共性：产品需占满大部分画面以减少空白，利用强对比度提升移动端辨识度，采用简单拍摄角度，确保轮廓在一秒内可识别，且整体干净整洁。卖家应优先保证主图直观易懂，而非单纯追求美观，以此提升主图点击率。",
+      "title": "被批量差评攻击的处理方法：下面的方法只是个人经验分享，不保证一定能删除差评，建议多个办法同时进行。",
+      "summary": "被批量差评攻击可同时用三种合规手段：前台买家号点Report举报；在账户状况页面举报滥用亚马逊政策，有订单证据选侵害业务通道，无证据选其他通道，建议提交3次以上拿投诉编号，再凭编号让卖家支持转交团队；发英文邮件至community-help@amazon.com详述。作者实测10天左右删除大部分差评，处理不掉则翻新清货，可提价保利润。",
       "category": "experience",
-      "score": 9.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vbh2gx/i_looked_at_the_top_20_amazon_listings_for_water",
-      "source": "reddit_fba",
-      "published_at": "2026-07-31T04:58:34+00:00"
-    },
-    {
-      "title": "亚马逊 1DC（One Distribution Center）仓点入仓异常风险，你们遇到过这些新的仓库代码吗？IMS1、IGA3、XMI3、XCH2、IMI1、IMO1、ITX3、INC1 等",
-      "summary": "亚马逊上线1DC仓网导致IMS1、IGA3等新仓库出现无法送仓、不更新等异常。卖家在创建货件时应重点留意仓库代码，谨慎分配。应对方法是创建多于5个货件以刷出老仓库；若货件已送达并出现异常，可利用货代提供的POD送仓凭证向亚马逊开Case进行申诉。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.wearesellers.com/question/123088",
+      "score": 9,
+      "url": "https://www.wearesellers.com/question/123955",
       "source": "wearesellers",
-      "published_at": "2026-08-07T05:02:15.665+00:00"
+      "published_at": "2026-08-29T10:08:39.599Z"
     },
     {
-      "title": "Looks like TIC testing is now required by 3rd party before listing items",
-      "summary": "亚马逊收紧合规政策，取消了新品上架的检测宽限期。玩具、电子和膳食补充剂等受管制类目的卖家，必须在产品上架前通过合规的第三方TIC机构完成检测，且检测报告须由实验室直接提交给亚马逊，否则新品将立即面临禁售。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vhurrl/looks_like_tic_testing_is_now_required_by_3rd",
-      "source": "reddit_fba",
-      "published_at": "2026-08-07T08:25:31+00:00"
+      "title": "干了 10 年不锈钢餐具，聊聊 90% 卖家选品时踩过的材料坑",
+      "summary": "低价不锈钢多为201冒充304，镍低锰高，海运高湿高盐及厨房宠物场景下很快生锈；304含镍8%-10.5%是食品接触主流，316加钼抗氯离子腐蚀更强。验证方法：钼检测液测内壁仅作粗筛，磁铁判断是误区，冷加工后带弱磁性属正常，最靠谱是送SGS等做光谱成分分析，报告几百元；美国站还需FDA食品接触、加州65等认证；普通宠物碗餐具盒用304即可，无需上316。",
+      "category": "experience",
+      "score": 9,
+      "url": "https://www.wearesellers.com/question/123915",
+      "source": "wearesellers",
+      "published_at": "2026-08-29T10:08:08.912Z"
     },
     {
-      "title": "Notice: New AWD Inbound Rules (Effective Jul 31, 2026)",
-      "summary": "亚马逊美国站AWD将于2026年7月31日起停止接收超重或超大件商品，仅允许标准尺寸商品入库。标准为单件长宽高不超过18x14x8英寸且重量不超过20磅。超标商品创建货件时将被自动拦截，卖家需直接发往FBA或第三方海外仓。",
+      "title": "感觉每次评分下降/来差评的两三天单量会急剧下降，后面才慢慢回来，评分下降时会影响到链接权重吗？还是我推广的问题？",
+      "summary": "卖家实测评分下降与差评出现后两三天单量急剧下滑：一条链接德美站评分各降0.1，以往同时段出七八单仅剩1单，155条评论基数下疑似差评触发权重波动，帖子提出评分是否影响链接权重的疑问，但无验证方法或结论，仅有现象数据可供同类卖家参考。",
+      "category": "experience",
+      "score": 6.2,
+      "url": "https://www.wearesellers.com/question/123946",
+      "source": "wearesellers",
+      "published_at": "2026-08-29T09:09:00.973Z"
+    },
+    {
+      "title": "Slope Pay Line of Credit yanked, \"you are no longer eligible for financing at this time\"",
+      "summary": "亚马逊渠道的Slope Pay信用额度可在从未动用的情况下被取消，官方理由是个人与企业信用分未达内部门槛，且不公布具体分数线，称还综合现金流与经营历史评估；被拒后须等90天才能重新申请，认为征信有误可向征信机构申诉；楼主Experian企业信用55分、个人分750+仍被拒，该额度利率约15%以上。",
       "category": "policy",
-      "score": 9.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1uyu9tp/notice_new_awd_inbound_rules_effective_jul_31_2026",
+      "score": 6.4,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1w1da1u/slope_pay_line_of_credit_yanked_you_are_no_longer",
       "source": "reddit_fba",
-      "published_at": "2026-07-17T08:58:01+00:00"
+      "published_at": "2026-08-29T05:03:15.000Z"
+    },
+    {
+      "title": "庆祝自己S2发个贴 | 分享亚马逊AI作图技巧 | 纯干货",
+      "summary": "AI作图实操结论：全自动批量生图工具存在纹理失真、参考图质量失控等硬伤，出的图多数不可用，仅适合大批量铺货卖家，投入产出比可能为亏；推荐半自动化路线，由摄影师或3D建模产出干净白底图作输入，运营或美工用loveart、runninghub等无限画布类工具人工介入出图，兼顾效率与图片质量，避免退货率飙升。",
+      "category": "experience",
+      "score": 7.8,
+      "url": "https://www.wearesellers.com/question/123922",
+      "source": "wearesellers",
+      "published_at": "2026-08-29T02:08:04.366Z"
+    },
+    {
+      "title": "Related account deactivation for an account I've never heard of",
+      "summary": "今年新开的唯一账号因关联账号违规被封，卖家为单人US LLC、无VA无合伙人、从未共享登录、零违规，且从未听说过被指关联的账号；三次申诉提交护照、组织证明、IRS EIN信、银行签字人证明、租约与水电账单，均被同一自动模板拒绝；致电账号健康两次无效，现由卖家论坛版主复核，案例显示关联判定可在无直接操作关联时触发。",
+      "category": "experience",
+      "score": 7.2,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1w14k6b/related_account_deactivation_for_an_account_ive",
+      "source": "reddit_fba",
+      "published_at": "2026-08-28T22:13:32.000Z"
+    },
+    {
+      "title": "Most Amazon sellers lower their price when sales slow down. That can make the problem worse.",
+      "summary": "销量下滑时先降价是常见误区：根源问题未解决，只是每单利润更低。应先诊断真实原因，包括竞品listing优化、近期评论变差、主图失去吸引力、流量转化率下降，再决定是否动价格；降价不应成为回避诊断的手段。",
+      "category": "experience",
+      "score": 6.2,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1w0z2e7/most_amazon_sellers_lower_their_price_when_sales",
+      "source": "reddit_fba",
+      "published_at": "2026-08-28T18:44:03.000Z"
     }
   ]
 }
