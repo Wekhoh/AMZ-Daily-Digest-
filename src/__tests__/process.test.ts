@@ -375,13 +375,40 @@ describe('rerankFinalSelection', () => {
     }));
   }
 
+  function streamedCompletion(
+    chunks: Array<{
+      choices?: Array<{
+        delta?: { content?: string | null; reasoning_content?: string };
+        finish_reason?: string | null;
+        index?: number;
+      }>;
+      usage?: { prompt_tokens: number; completion_tokens: number; total_tokens: number };
+    }>,
+  ) {
+    return {
+      async *[Symbol.asyncIterator]() {
+        for (const chunk of chunks) {
+          yield chunk;
+        }
+      },
+    };
+  }
+
   it('applies the parsed plan to the pool on the success path', async () => {
     const previousKey = process.env.LLM_API_KEY;
     process.env.LLM_API_KEY = 'test-key';
     openaiCreate.mockReset();
-    openaiCreate.mockResolvedValue({
-      choices: [{ message: { content: '{"order":[3,1,0,2],"duplicate_groups":[[1,0]]}' } }],
-    });
+    openaiCreate.mockResolvedValue(
+      streamedCompletion([
+        {
+          choices: [{
+            index: 0,
+            delta: { content: '{"order":[3,1,0,2],"duplicate_groups":[[1,0]]}' },
+            finish_reason: 'stop',
+          }],
+        },
+      ]),
+    );
 
     try {
       const pool = rerankPool();
@@ -441,9 +468,17 @@ describe('rerankFinalSelection', () => {
     const previousKey = process.env.LLM_API_KEY;
     process.env.LLM_API_KEY = 'test-key';
     openaiCreate.mockReset();
-    openaiCreate.mockResolvedValue({
-      choices: [{ message: { content: '{"order":[0,1]}' } }],
-    });
+    openaiCreate.mockResolvedValue(
+      streamedCompletion([
+        {
+          choices: [{
+            index: 0,
+            delta: { content: '{"order":[0,1]}' },
+            finish_reason: 'stop',
+          }],
+        },
+      ]),
+    );
     const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
 
     try {
@@ -456,6 +491,62 @@ describe('rerankFinalSelection', () => {
       expect(warn).toHaveBeenCalledWith(expect.stringContaining('[RERANK_FALLBACK]'));
     } finally {
       warn.mockRestore();
+      openaiCreate.mockReset();
+      if (previousKey === undefined) {
+        delete process.env.LLM_API_KEY;
+      } else {
+        process.env.LLM_API_KEY = previousKey;
+      }
+    }
+  });
+
+  it('accumulates streamed content deltas and logs finish_reason/usage', async () => {
+    const previousKey = process.env.LLM_API_KEY;
+    process.env.LLM_API_KEY = 'test-key';
+    openaiCreate.mockReset();
+    openaiCreate.mockResolvedValue(
+      streamedCompletion([
+        {
+          choices: [{ index: 0, delta: { reasoning_content: 'not-json' }, finish_reason: null }],
+        },
+        {
+          choices: [{ index: 0, delta: { content: '{"order":[3,1' }, finish_reason: null }],
+        },
+        {
+          choices: [{
+            index: 0,
+            delta: { content: ',0,2],"duplicate_groups":[[1,0]]}' },
+            finish_reason: null,
+          }],
+        },
+        { choices: [{ index: 0, delta: {}, finish_reason: 'stop' }] },
+        {
+          choices: [],
+          usage: { prompt_tokens: 100, completion_tokens: 13144, total_tokens: 13244 },
+        },
+      ]),
+    );
+    const log = vi.spyOn(console, 'log').mockImplementation(() => {});
+
+    try {
+      const pool = rerankPool();
+
+      const result = await rerankFinalSelection(pool, '2026-07-23');
+
+      expect(openaiCreate).toHaveBeenCalledTimes(1);
+      expect(openaiCreate.mock.calls[0]?.[0]).toMatchObject({
+        stream: true,
+        stream_options: { include_usage: true },
+        response_format: { type: 'json_object' },
+      });
+      expect(result.reranked).toBe(true);
+      expect(result.articles.map((item) => item.title)).toEqual(['d', 'b', 'c', 'a']);
+      expect(log).toHaveBeenCalledWith(
+        '[AI] rerank returned: finish_reason=stop ' +
+          'usage={"prompt_tokens":100,"completion_tokens":13144,"total_tokens":13244}',
+      );
+    } finally {
+      log.mockRestore();
       openaiCreate.mockReset();
       if (previousKey === undefined) {
         delete process.env.LLM_API_KEY;

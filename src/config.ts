@@ -78,6 +78,12 @@ export type LlmChatParams =
     reasoning_effort?: 'low' | 'high' | 'max';
   };
 
+export type LlmChatStreamingParams =
+  OpenAI.Chat.Completions.ChatCompletionCreateParamsStreaming & {
+    thinking?: { type: 'enabled' };
+    reasoning_effort?: 'low' | 'high' | 'max';
+  };
+
 /** Source health thresholds for non-blocking observability alerts */
 export const SOURCE_HEALTH = {
   WEARESELLERS_MIN_ARTICLES: 5,
