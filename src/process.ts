@@ -274,6 +274,10 @@ async function processBatchWithRetry(
       return await processBatch(ai, batch);
     } catch (err) {
       const msg = err instanceof Error ? err.message : String(err);
+      console.error(
+        `[AI] batch error: name=${(err as Error)?.name} ` +
+          `cause=${JSON.stringify((err as { cause?: unknown })?.cause ?? null)}`,
+      );
       console.warn(
         `[AI] Batch ${batchIndex} attempt ${attempt + 1} failed: ${msg}`,
       );
@@ -757,6 +761,10 @@ export async function rerankFinalSelection(
     return { articles: ordered, reranked: true };
   } catch (err) {
     const msg = err instanceof Error ? err.message : String(err);
+    console.error(
+      `[AI] rerank error: name=${(err as Error)?.name} ` +
+        `cause=${JSON.stringify((err as { cause?: unknown })?.cause ?? null)}`,
+    );
     console.warn(`[AI] [RERANK_FALLBACK] rerank failed (${msg}); keeping original order`);
     return { articles, reranked: false };
   }
