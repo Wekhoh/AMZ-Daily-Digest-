@@ -7,6 +7,7 @@ import {
   LLM_THINKING_ENABLED,
   SOURCE_CAPS,
   type LlmChatParams,
+  type LlmChatStreamingParams,
 } from './config.js';
 import { sleep } from './utils.js';
 
@@ -717,7 +718,7 @@ export async function rerankFinalSelection(
 
   try {
     const ai = getAiClient();
-    const body: LlmChatParams = {
+    const body: LlmChatStreamingParams = {
       model: AI.MODEL,
       messages: [{ role: 'user', content: buildRerankPrompt(articles, digestDate) }],
       temperature: 0.1,
@@ -725,24 +726,44 @@ export async function rerankFinalSelection(
       response_format: { type: 'json_object' },
       thinking: LLM_THINKING_ENABLED,
       reasoning_effort: LLM_REASONING_EFFORT,
+      stream: true,
+      stream_options: { include_usage: true },
     };
 
-    const response = await ai.chat.completions.create(body, {
+    // Scorer at processBatch stays non-streaming: it completes in ~90s today.
+    const stream = await ai.chat.completions.create(body, {
       timeout: LLM_REQUEST_TIMEOUT_MS,
       maxRetries: 0,
     });
 
+    let text = '';
+    let finishReason = 'unknown';
+    let usage: OpenAI.Completions.CompletionUsage | undefined;
+    for await (const chunk of stream) {
+      if (chunk.usage) {
+        usage = chunk.usage;
+      }
+      const choice = chunk.choices[0];
+      if (!choice) continue;
+      // GLM may stream reasoning separately; only message content is the JSON body.
+      const deltaContent = choice.delta?.content;
+      if (typeof deltaContent === 'string') {
+        text += deltaContent;
+      }
+      if (choice.finish_reason) {
+        finishReason = choice.finish_reason;
+      }
+    }
+
     // Diagnostics for the 2026-08-28 rerank timeout: without finish_reason and usage
     // a truncated answer and a slow one look identical from the outside.
-    const finishReason = response.choices[0]?.finish_reason ?? 'unknown';
     console.log(
       `[AI] rerank returned: finish_reason=${finishReason} ` +
-        `usage=${JSON.stringify(response.usage ?? {})}`,
+        `usage=${JSON.stringify(usage ?? {})}`,
     );
     if (finishReason === 'length') {
       console.warn('[AI] [RERANK_TRUNCATED] the model hit max_tokens before finishing its JSON');
     }
-    const text = response.choices[0]?.message?.content;
     if (!text) {
       throw new Error('Empty rerank response from the model');
     }
