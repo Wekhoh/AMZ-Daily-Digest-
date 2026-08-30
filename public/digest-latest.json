@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-08-29T12:21:21Z",
-  "digest_date": "2026-08-29",
+  "generated_at_utc": "2026-08-30T11:15:46Z",
+  "digest_date": "2026-08-30",
   "article_count": 50,
   "articles": [
     {
-      "title": "收到税局短信，说出口业务取得的收入与申报的增值税不符，让自查整改、",
-      "summary": "深圳税务局比对出口收入与增值税申报后发出自查短信，要求将符合免税情形的销售额填入小规模纳税人申报表出口免税销售额栏次、更正申报表，超过小规模纳税人标准的须登记为一般纳税人，逾期将启动后续征管；作者怀疑9810出口申报货值与平台推送销售额不一致触发预警。",
-      "category": "policy",
-      "score": 7.4,
-      "url": "https://www.wearesellers.com/question/123786",
+      "title": "请教各位大卖，高客单新品推广和vine的问题?",
+      "summary": "200美金客单、6-10个变体的新品，计划用75美金Vine获取评论。文中给出两条路径：一是建低价Vine链接快速返评后停售，再合并到正常售价链接或父体；二是单链接用coupon或code降低买家ETV以加快领取。另涉及种子链接是否要求属性一致、高客单获取评论方式等问题，方法可行性与风险均待验证。",
+      "category": "experience",
+      "score": 6.8,
+      "url": "https://www.wearesellers.com/question/123965",
       "source": "wearesellers",
-      "published_at": "2026-08-29T11:08:32.434Z"
+      "published_at": "2026-08-30T10:04:03.066Z"
     },
     {
-      "title": "Account Suspended INFORM ACT for address verification - any advice?",
-      "summary": "美国站卖家因INFORM Consumers Act地址验证未通过被暂停账号：反复重新提交验证两个月仍无法通过，开case无回复，FBA仓内600件库存滞留。结论：地址验证卡死会同时触发账号暂停与库存冻结，且客服渠道可能长期空转，卖家应提前确认INFORM Act验证状态，勿等账号被暂停后才补救。",
-      "category": "policy",
-      "score": 6.6,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1w1iqpv/account_suspended_inform_act_for_address",
+      "title": "7 months into Amazon FBA: $23K in revenue, $26K invested, and I’ve paid myself about $2K. Please tell me this gets better 😭",
+      "summary": "时尚珠宝品牌卖家7个月实盘数据：仅4条listing做到23275美元营收，但总投入约2.6万美元、实际到手约2000美元，前期现金流为负；打法是重资产打造品牌感——FBA、品牌备案、高级包装、专业摄影、Premium A+，并自建Shopify、启动红人合作以分散单一平台流量风险。",
+      "category": "experience",
+      "score": 6.8,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1w1zxq4/7_months_into_amazon_fba_23k_in_revenue_26k",
       "source": "reddit_fba",
-      "published_at": "2026-08-29T10:15:15.000Z"
+      "published_at": "2026-08-29T22:25:04.000Z"
     },
     {
-      "title": "亚马逊取消精选报价前置门槛，全球卖家同台内卷",
-      "summary": "亚马逊调整精选报价规则，自今年7月起分批取消卖家前置资格筛选，全店产品报价自动进入候选池。虽然取消了前置审核，但最终评选逻辑不变。卖家无需手动操作，但必须持续优化价格竞争力、配送时效及店铺综合绩效这三个核心维度，以在更激烈的自动竞争中获取购物车权重。",
+      "title": "美海关2R禁装指令集中出现，ISF异常货物面临起运港拦截",
+      "summary": "美国海关近期集中启动2R前置拦截措施，ISF申报异常货物将在起运港被禁装，或在目的港面临最高一万美元罚款。卖家需确保ISF与AMS及提单数据一致，保证IOR主体、EIN及Bond有效，且必须在装船前24小时完成提交，避免临近开船改单。",
       "category": "policy",
-      "score": 9.4,
-      "url": "https://www.amz123.com/kx/VLqeusSZ",
+      "score": 9,
+      "url": "https://www.amz123.com/kx/J8S12Yar",
       "source": "amz123",
-      "published_at": "2026-07-13T06:19:29+00:00"
+      "published_at": "2026-07-29T06:16:24+00:00"
     },
     {
-      "title": "被批量差评攻击的处理方法：下面的方法只是个人经验分享，不保证一定能删除差评，建议多个办法同时进行。",
-      "summary": "被批量差评攻击可同时用三种合规手段：前台买家号点Report举报；在账户状况页面举报滥用亚马逊政策，有订单证据选侵害业务通道，无证据选其他通道，建议提交3次以上拿投诉编号，再凭编号让卖家支持转交团队；发英文邮件至community-help@amazon.com详述。作者实测10天左右删除大部分差评，处理不掉则翻新清货，可提价保利润。",
-      "category": "experience",
-      "score": 9,
-      "url": "https://www.wearesellers.com/question/123955",
-      "source": "wearesellers",
-      "published_at": "2026-08-29T10:08:39.599Z"
-    },
-    {
-      "title": "干了 10 年不锈钢餐具，聊聊 90% 卖家选品时踩过的材料坑",
-      "summary": "低价不锈钢多为201冒充304，镍低锰高，海运高湿高盐及厨房宠物场景下很快生锈；304含镍8%-10.5%是食品接触主流，316加钼抗氯离子腐蚀更强。验证方法：钼检测液测内壁仅作粗筛，磁铁判断是误区，冷加工后带弱磁性属正常，最靠谱是送SGS等做光谱成分分析，报告几百元；美国站还需FDA食品接触、加州65等认证；普通宠物碗餐具盒用304即可，无需上316。",
-      "category": "experience",
-      "score": 9,
-      "url": "https://www.wearesellers.com/question/123915",
-      "source": "wearesellers",
-      "published_at": "2026-08-29T10:08:08.912Z"
-    },
-    {
-      "title": "感觉每次评分下降/来差评的两三天单量会急剧下降，后面才慢慢回来，评分下降时会影响到链接权重吗？还是我推广的问题？",
-      "summary": "卖家实测评分下降与差评出现后两三天单量急剧下滑：一条链接德美站评分各降0.1，以往同时段出七八单仅剩1单，155条评论基数下疑似差评触发权重波动，帖子提出评分是否影响链接权重的疑问，但无验证方法或结论，仅有现象数据可供同类卖家参考。",
-      "category": "experience",
-      "score": 6.2,
-      "url": "https://www.wearesellers.com/question/123946",
-      "source": "wearesellers",
-      "published_at": "2026-08-29T09:09:00.973Z"
-    },
-    {
-      "title": "Slope Pay Line of Credit yanked, \"you are no longer eligible for financing at this time\"",
-      "summary": "亚马逊渠道的Slope Pay信用额度可在从未动用的情况下被取消，官方理由是个人与企业信用分未达内部门槛，且不公布具体分数线，称还综合现金流与经营历史评估；被拒后须等90天才能重新申请，认为征信有误可向征信机构申诉；楼主Experian企业信用55分、个人分750+仍被拒，该额度利率约15%以上。",
+      "title": "求助，近期收到亚马逊邮件 扫号侵权，我们是白名单，该如何去申诉提交材料？求分享经验",
+      "summary": "加拿大站账户因协议3被停用，涉事ASIN为白名单上传产品，经查国际及加拿大商标均无注册记录，判断为机器扫号侵权而非权利人投诉，账户状况页无违规记录。可准备材料包括供应商发票、商标回执加法人授权公司的品牌授权书、白名单通过邮件截图，申诉需确认是否先备案品牌再提交。",
       "category": "policy",
-      "score": 6.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1w1da1u/slope_pay_line_of_credit_yanked_you_are_no_longer",
-      "source": "reddit_fba",
-      "published_at": "2026-08-29T05:03:15.000Z"
-    },
-    {
-      "title": "庆祝自己S2发个贴 | 分享亚马逊AI作图技巧 | 纯干货",
-      "summary": "AI作图实操结论：全自动批量生图工具存在纹理失真、参考图质量失控等硬伤，出的图多数不可用，仅适合大批量铺货卖家，投入产出比可能为亏；推荐半自动化路线，由摄影师或3D建模产出干净白底图作输入，运营或美工用loveart、runninghub等无限画布类工具人工介入出图，兼顾效率与图片质量，避免退货率飙升。",
-      "category": "experience",
       "score": 7.8,
-      "url": "https://www.wearesellers.com/question/123922",
+      "url": "https://www.wearesellers.com/question/123963",
       "source": "wearesellers",
-      "published_at": "2026-08-29T02:08:04.366Z"
+      "published_at": "2026-08-30T07:04:09.826Z"
     },
     {
-      "title": "Related account deactivation for an account I've never heard of",
-      "summary": "今年新开的唯一账号因关联账号违规被封，卖家为单人US LLC、无VA无合伙人、从未共享登录、零违规，且从未听说过被指关联的账号；三次申诉提交护照、组织证明、IRS EIN信、银行签字人证明、租约与水电账单，均被同一自动模板拒绝；致电账号健康两次无效，现由卖家论坛版主复核，案例显示关联判定可在无直接操作关联时触发。",
+      "title": "两款3.5分有线耳机的差评拆解：差评一样多，死法完全相反",
+      "summary": "拆解两款3.5分有线耳机评论，差评率相近但死因相反：Amazon Basics差评首因是寿命短占23.3%，LUDOS是耳塞掉出占26.8%。方法：评论导出后用AI按痛点类型、严重程度、提及频率打标聚类，一个品类两三小时跑完，API成本几块钱。打法：对标Basics就把寿命做扎实并承诺12个月以上保修；对标LUDOS则做人体工学，外壳做轻、加耳挂、配XS耳套。",
       "category": "experience",
-      "score": 7.2,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1w14k6b/related_account_deactivation_for_an_account_ive",
-      "source": "reddit_fba",
-      "published_at": "2026-08-28T22:13:32.000Z"
+      "score": 9,
+      "url": "https://www.wearesellers.com/question/123960",
+      "source": "wearesellers",
+      "published_at": "2026-08-30T04:04:18.860Z"
     },
     {
-      "title": "Most Amazon sellers lower their price when sales slow down. That can make the problem worse.",
-      "summary": "销量下滑时先降价是常见误区：根源问题未解决，只是每单利润更低。应先诊断真实原因，包括竞品listing优化、近期评论变差、主图失去吸引力、流量转化率下降，再决定是否动价格；降价不应成为回避诊断的手段。",
+      "title": "亚马逊CVR总是不稳，7天改了好几次Bid还是掉单，广告位跑偏到底怎么救？",
+      "summary": "针对亚马逊SP/SB/SD广告CVR不稳，应停止高频改Bid，遵守7-14天归因周期，每次调整后观察7-10天。下载广告位报告，若商品页面曝光转化差则降低基础竞价并提高首页溢价；自动广告出单词转手动精准，及时否定垃圾词控制词数。同时诊断详情页说服力，用竞品差评优化副图五点，补充A+和视频提升转化。",
       "category": "experience",
-      "score": 6.2,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1w0z2e7/most_amazon_sellers_lower_their_price_when_sales",
+      "score": 9,
+      "url": "https://www.wearesellers.com/question/123707",
+      "source": "wearesellers",
+      "published_at": "2026-08-23T04:25:55.63+00:00"
+    },
+    {
+      "title": "亚马逊AI生成图片新规落地：卖家如何批量完成合规标记？",
+      "summary": "亚马逊新规要求，商品图片或视频含AI生成逼真人物时，上传前必须在文件元数据添加 contains-synthetic-performer 披露词。仅完全AI生成的非真实人物需标记，真实人物修改、影视游戏角色、无人像内容无需标记。卖家可用Windows文件属性批量处理：全选目标图，右键属性，在详细信息选项卡的标记字段输入 contains-synthetic-performer，点击应用确定即可写入多张图片，注意只选真正含AI人物的素材。",
+      "category": "policy",
+      "score": 9,
+      "url": "https://www.wearesellers.com/question/123525",
+      "source": "wearesellers",
+      "published_at": "2026-08-22T10:26:27.589+00:00"
+    },
+    {
+      "title": "4个月投资1600万盈利250w、月销100w美元的泳池机器人，这个类目你敢豪赌吗？",
+      "summary": "泳池机器人是10亿美元级高客单价季节性品类，5-7月占全年销售额53%以上，2月前需到货。TOP100新品中95%为老品牌马甲，纯新品牌一年存活率仅5%。打爆前十需1600万人民币现金流峰值，4个月净利约250万，毛利率15.6%，但99%卖家不适合。定价169美元以下低端，399美元以上中高端。",
+      "category": "trend",
+      "score": 9,
+      "url": "https://www.wearesellers.com/question/123439",
+      "source": "wearesellers",
+      "published_at": "2026-08-18T06:12:56.831+00:00"
+    },
+    {
+      "title": "每天盯竞品还是看不懂变化？我把4个ASIN的64天数据交给了智能体",
+      "summary": "作者使用竞品ASIN巡检智能体复盘4个猫饮水机ASIN共64天数据，设置两个等长32天周期对比。AI执行周期对齐、多时间窗口复核、自然位与广告位拆分、价格语义归一、多信号交叉验证等8项增量动作，最终按信号一致性将竞品分为高、中、低警惕等级。报告发现子类排名稳定但大类BSR变化显著，需警惕广告曝光被误判为自然排名改善。",
+      "category": "experience",
+      "score": 9,
+      "url": "https://www.wearesellers.com/question/123475",
+      "source": "wearesellers",
+      "published_at": "2026-08-18T02:27:23.136+00:00"
+    },
+    {
+      "title": "Looks like TIC testing is now required by 3rd party before listing items",
+      "summary": "亚马逊取消了受规管品类（如玩具、电子产品、保健品）合规检测的宽限期，新上架产品若未完成检测将立即被下架。卖家无法再直接上传合规测试报告，必须通过亚马逊批准的第三方检测、检验和认证（TIC）机构进行测试，并由该实验室直接向亚马逊提交验证结果。",
+      "category": "policy",
+      "score": 9,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vhuqog/looks_like_tic_testing_is_now_required_by_3rd",
       "source": "reddit_fba",
-      "published_at": "2026-08-28T18:44:03.000Z"
+      "published_at": "2026-08-07T08:23:39+00:00"
     }
   ]
 }
