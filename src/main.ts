@@ -1457,9 +1457,44 @@ export async function runPipelineWithTimeout(
   }
 }
 
+/**
+ * Grace period between "the pipeline is done" and "something is still holding the
+ * event loop open".
+ */
+const EXIT_GUARD_MS = 30_000;
+
+/**
+ * Second line of defence, not the fix. The fix for the 2026-08-31 incident is in
+ * collectors/feed.ts: a feed request rss-parser had abandoned kept a socket
+ * referenced forever, so a finished pipeline could not exit, the publish step
+ * never ran, and the job died at the Actions 30-minute ceiling with the digest
+ * built but unpublished. That leak is closed and covered by a test.
+ *
+ * Both lines are kept because the leak class is wider than the one instance
+ * proven: the pipeline also drives Playwright, SMTP, Supabase and the LLM client,
+ * and no test in this repo can prove all of them handle-clean. The guard is
+ * unref'd, so a healthy run exits on its own and this timer never fires. It only
+ * turns a future leak from a silent half-hour job timeout into exit 0 plus a line
+ * naming the handles that were still alive.
+ */
+export function scheduleExitGuard(delayMs = EXIT_GUARD_MS): ReturnType<typeof setTimeout> {
+  const guard = setTimeout(() => {
+    console.warn(
+      `[Main] [EXIT_GUARD] pipeline finished but the event loop was still busy after ` +
+        `${delayMs}ms; forcing exit. Active handles: ` +
+        `${JSON.stringify(process.getActiveResourcesInfo())}`,
+    );
+    process.exit(0);
+  }, delayMs);
+  guard.unref();
+  return guard;
+}
+
 if (process.env.AMZ_SKIP_MAIN_AUTORUN !== '1') {
-  runPipelineWithTimeout().catch((err) => {
-    console.error('[Main] Fatal error:', err);
-    process.exit(1);
-  });
+  runPipelineWithTimeout()
+    .then(() => scheduleExitGuard())
+    .catch((err) => {
+      console.error('[Main] Fatal error:', err);
+      process.exit(1);
+    });
 }

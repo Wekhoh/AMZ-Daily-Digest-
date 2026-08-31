@@ -1,7 +1,7 @@
-import Parser from 'rss-parser';
 import type { Article } from '../store.js';
 import { isSafeUrl } from '../utils.js';
 import { COLLECTORS } from '../config.js';
+import { fetchFeed } from './feed.js';
 
 // Try multiple RSSHub instances — public ones may rate-limit or block
 const RSS_URLS = [
@@ -14,17 +14,6 @@ const RSS_URLS = [
 
 const ALLOWED_ARTICLE_DOMAINS = ['amz123.com', 'www.amz123.com'];
 
-let _parser: Parser | null = null;
-
-function getParser(): Parser {
-  if (_parser) return _parser;
-  _parser = new Parser({
-    timeout: COLLECTORS.RSS_TIMEOUT_MS,
-    headers: { 'User-Agent': 'amz-daily-digest/1.0' },
-  });
-  return _parser;
-}
-
 /**
  * Collect articles from AMZ123 快讯 via RSSHub.
  * Tries multiple RSSHub instances with fallback.
@@ -35,7 +24,7 @@ export async function collectRSS(): Promise<Article[]> {
     try {
       console.log(`[RSS] Trying: ${rssUrl}`);
 
-      const feed = await getParser().parseURL(rssUrl);
+      const feed = await fetchFeed(rssUrl, COLLECTORS.RSS_TIMEOUT_MS);
 
       const items = feed.items.slice(0, COLLECTORS.RSS_MAX_ITEMS);
 

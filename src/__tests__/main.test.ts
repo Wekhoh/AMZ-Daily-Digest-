@@ -121,6 +121,7 @@ async function loadMainWithMocks(
     missingGroups: MissingSourceGroup[],
   ) => Promise<CoverageGapAlertDecision>;
   decideRerankFallbackAlert: (date: string) => Promise<RerankFallbackAlertDecision>;
+  scheduleExitGuard: (delayMs?: number) => ReturnType<typeof setTimeout>;
   mocks: PipelineMocks;
 }> {
   vi.resetModules();
@@ -217,6 +218,9 @@ async function loadMainWithMocks(
     decideRerankFallbackAlert: mod.decideRerankFallbackAlert as (
       date: string,
     ) => Promise<RerankFallbackAlertDecision>,
+    scheduleExitGuard: mod.scheduleExitGuard as (
+      delayMs?: number,
+    ) => ReturnType<typeof setTimeout>,
     mocks,
   };
 }
@@ -1121,5 +1125,41 @@ describe('decideRerankFallbackAlert cadence', () => {
     const decision = await decideRerankFallbackAlert(TODAY_UTC);
 
     expect(decision).toEqual({ shouldAlert: false, streak: 2 });
+  });
+});
+
+describe('scheduleExitGuard', () => {
+  it('never delays a process that is able to exit on its own', async () => {
+    const { scheduleExitGuard } = await loadMainWithMocks();
+
+    const guard = scheduleExitGuard(1_000);
+
+    try {
+      expect(guard.hasRef()).toBe(false);
+    } finally {
+      clearTimeout(guard);
+    }
+  });
+
+  it('forces exit 0 and names the live handles when the loop is still busy', async () => {
+    const { scheduleExitGuard } = await loadMainWithMocks();
+    const exit = vi
+      .spyOn(process, 'exit')
+      .mockImplementation((() => undefined) as unknown as typeof process.exit);
+    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+    vi.useFakeTimers();
+
+    try {
+      scheduleExitGuard(1_000);
+      vi.advanceTimersByTime(1_000);
+
+      expect(exit).toHaveBeenCalledWith(0);
+      expect(String(warn.mock.calls[0]?.[0])).toContain('[EXIT_GUARD]');
+      expect(String(warn.mock.calls[0]?.[0])).toContain('Active handles:');
+    } finally {
+      vi.useRealTimers();
+      warn.mockRestore();
+      exit.mockRestore();
+    }
   });
 });
