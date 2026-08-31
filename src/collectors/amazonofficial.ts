@@ -1,7 +1,7 @@
-import Parser from 'rss-parser';
 import type { Article } from '../store.js';
 import { isSafeUrl } from '../utils.js';
 import { COLLECTORS } from '../config.js';
+import { fetchFeed } from './feed.js';
 
 /**
  * Amazon official announcements. The SP-API changelog is the Amazon-operated
@@ -24,17 +24,6 @@ const FEED_LINK_PREFIX = 'https://developer-docs.amazon/';
 const DOCS_LINK_PREFIX = 'https://developer-docs.amazon.com/';
 
 const ALLOWED_ARTICLE_DOMAINS = ['developer-docs.amazon.com'];
-
-let _parser: Parser | null = null;
-
-function getParser(): Parser {
-  if (_parser) return _parser;
-  _parser = new Parser({
-    timeout: COLLECTORS.OFFICIAL_TIMEOUT_MS,
-    headers: { 'User-Agent': 'amz-daily-digest/1.0' },
-  });
-  return _parser;
-}
 
 function repairLink(link: string): string {
   return link.startsWith(FEED_LINK_PREFIX)
@@ -66,7 +55,7 @@ export async function collectAmazonOfficial(): Promise<Article[]> {
   try {
     console.log(`[AmazonOfficial] Fetching: ${FEED_URL}`);
 
-    const feed = await getParser().parseURL(FEED_URL);
+    const feed = await fetchFeed(FEED_URL, COLLECTORS.OFFICIAL_TIMEOUT_MS);
     const now = Date.now();
     const articles: Article[] = [];
 
