@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-08-31T14:17:49Z",
-  "digest_date": "2026-08-31",
+  "generated_at_utc": "2026-09-01T11:11:10Z",
+  "digest_date": "2026-09-01",
   "article_count": 50,
   "articles": [
     {
-      "title": "Section 122 sunset was July 24. Here's the actual duty stack that replaced it for China-origin FBA imports (with math)",
-      "summary": "Section 122的10%统一附加税按150天上限于7月24日到期，USTR同日对中国等60个原产地启用301强迫劳动关税：有非强迫劳动供应链证明的Tier B为10%，无证明默认Tier A为12.5%，多数中国出口商无Tier B文件。以3万美元CIF的61章T恤海运为例，叠加MFN 16.5%、301 List 3的25%、Tier A 12.5%、MPF上限634.62美元及HMF 0.125%后，落地税负16,872.12美元，占CIF约56.2%，卖家需按新税栈重算成本与利润。",
+      "title": "做了3年亚马逊运营，只推过1个新品，面试总被追问推广打法和目标定多少才像样？",
+      "summary": "三年运营者给出可复用的新品推广框架：先调研差异点与定价，listing埋词并突出使用场景；广告前期以自动加核心词为主，出单3-5单后拓大词词根宽泛词并配SB/SD，10单以上报LD/BD，20单以上收缩广告保利润；评论先做Vine 10或30个，差评按描述或产品问题分别处理；首批备货300个，日销七八单后每次补500个。",
+      "category": "experience",
+      "score": 8.4,
+      "url": "https://www.wearesellers.com/question/124054",
+      "source": "wearesellers",
+      "published_at": "2026-09-01T10:33:10.218Z"
+    },
+    {
+      "title": "被批量差评攻击的处理方法：下面的方法只是个人经验分享，不保证一定能删除差评，建议多个办法同时进行。",
+      "summary": "被批量差评攻击可同时用三种合规手段：前台买家号点Report举报；在账户状况页面举报滥用亚马逊政策，有订单证据选侵害业务通道，无证据选其他通道，建议提交3次以上拿投诉编号，再凭编号让卖家支持转交团队；发英文邮件至community-help@amazon.com详述。作者实测10天左右删除大部分差评，处理不掉则翻新清货，可提价保利润。",
+      "category": "experience",
+      "score": 9,
+      "url": "https://www.wearesellers.com/question/123955",
+      "source": "wearesellers",
+      "published_at": "2026-08-29T10:08:39.599+00:00"
+    },
+    {
+      "title": "亚马逊FBA新费政生效：超龄库存附加费大幅上涨",
+      "summary": "亚马逊FBA新费政实施，商品库龄达181天即收超龄附加费，超365天最高达月仓储费13倍；未加入SIPP的大件商品加收包装费。卖家须通过Outlet、清仓或移除清理冗余库存，大件商品应尽快申请SIPP认证以降低包装成本。",
       "category": "policy",
       "score": 9.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vzd2hi/section_122_sunset_was_july_24_heres_the_actual",
-      "source": "reddit_fba",
-      "published_at": "2026-08-26T23:15:37+00:00"
+      "url": "https://www.amz123.com/kx/RkUvZPFw",
+      "source": "amz123",
+      "published_at": "2026-07-08T02:31:43+00:00"
     },
     {
-      "title": "关于亚马逊新功能：买家退货时自动向买家索评。高退货率产品该如何控评继续稳定销售的思考以及案例研究",
-      "summary": "亚马逊退货索评实为退货客服AI对话末尾递出五星评分器，针对退货不满人群，服装尺码类与详情页落差大的电子产品受冲击最大。应对分三层：减——优化详情页颜色尺寸与适配描述以降低退货来源；增——新品送测五星对冲，老品用其他链接合并稀释差评；限——利用高留评触发删评机制及父体内四子体轮流每4个月翻新重置评分。",
-      "category": "experience",
+      "title": "今天开始，美国清关彻底变了！不会电子申报，货物可能直接卡港！",
+      "summary": "美国CPSC电子申报于2026年7月8日起强制实施，进口消费品全面进入先系统核验、再放行模式。涉及儿童玩具、电子产品、服装等监管产品的卖家，必须通过eFiling提交结构化电子数据，在途货物亦受限制。卖家须立即自查CPC证书并对接数字化清关流程。",
+      "category": "policy",
       "score": 9.4,
-      "url": "https://www.wearesellers.com/question/123720",
+      "url": "https://www.wearesellers.com/question/121981",
       "source": "wearesellers",
-      "published_at": "2026-08-28T07:24:06.117+00:00"
+      "published_at": "2026-07-08T07:51:40.029+00:00"
     },
     {
-      "title": "同一法人名下中国公司和日本公司分别开美国站，会有多账号关联风险吗？",
-      "summary": "卖家同一法人名下中国公司运营美国站店铺A多年，新设日本公司已开日本本土店并注册全新品牌，现拟用日本公司再开美国站卖新品牌。结构为不同主体、不同品牌、不同业务但法人相同，核心疑问是两美国站是否会被判关联、一店出事是否牵连另一店；新品牌商标权利人是中国公司，或加大关联风险并影响品牌备案，需同类结构经验佐证。",
+      "title": "Amazon sued by FTC, 22 US states over advertising practices",
+      "summary": "亚马逊因在广告竞拍中制造虚假出价及其他抬价操作，被FTC与22个州起诉，涉事行为直接推高卖家与品牌的广告成本。若诉讼促成竞拍机制整改，PPC花费结构可能变化，卖家应跟踪案件进展并核查自身广告花费异常。",
+      "category": "policy",
+      "score": 6.2,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1w3u3c5/amazon_sued_by_ftc_22_us_states_over_advertising",
+      "source": "reddit_fba",
+      "published_at": "2026-08-31T22:59:29.000Z"
+    },
+    {
+      "title": "7月27日亚马逊商品名称新规倒计时：标题优化实操指南",
+      "summary": "亚马逊新规要求非媒介类商品标题缩减至75字符以内。卖家应主动优化标题，仅保留品牌名和核心流量词，将材质、功能等次要卖点转移至新增的125字符商品亮点板块及五点描述中。建议先用中等销量链接测试，避免被系统AI强制乱改。",
+      "category": "policy",
+      "score": 10,
+      "url": "https://www.wearesellers.com/question/122034",
+      "source": "wearesellers",
+      "published_at": "2026-07-09T08:52:43.54+00:00"
+    },
+    {
+      "title": "亚马逊下半年大促提报开启，早鸟优惠、促销资格速看！",
+      "summary": "2026年亚马逊下半年大促提报开启。美国站Prime会员大促提报为7月8日至9月8日，黑五网一为7月8日至10月20日。促销要求定价不高于60天最低价，且比30天最低价至少优惠5%。早鸟提报可省50美元固定费。旺季配送费平均每件上涨0.32美元。",
+      "category": "policy",
+      "score": 10,
+      "url": "https://www.wearesellers.com/question/122045",
+      "source": "wearesellers",
+      "published_at": "2026-07-09T09:01:29.635+00:00"
+    },
+    {
+      "title": "干了 10 年不锈钢餐具，聊聊 90% 卖家选品时踩过的材料坑",
+      "summary": "低价不锈钢多为201冒充304，镍低锰高，海运高湿高盐及厨房宠物场景下很快生锈；304含镍8%-10.5%是食品接触主流，316加钼抗氯离子腐蚀更强。验证方法：钼检测液测内壁仅作粗筛，磁铁判断是误区，冷加工后带弱磁性属正常，最靠谱是送SGS等做光谱成分分析，报告几百元；美国站还需FDA食品接触、加州65等认证；普通宠物碗餐具盒用304即可，无需上316。",
+      "category": "experience",
+      "score": 9,
+      "url": "https://www.wearesellers.com/question/123915",
+      "source": "wearesellers",
+      "published_at": "2026-08-29T10:08:08.912+00:00"
+    },
+    {
+      "title": "加拿大站秒杀/Z划算连续做会拉低秒杀活动价吗？如果想让将来的秒杀、Z划算活动价格 55.99 不报错，应该怎么办？不再长期做优惠券吗？还有什么需要注意的？",
+      "summary": "加拿大站Listing 90天内每天挂5%优惠券并密集做55.99的Z划算和秒杀，8/31秒杀部分子ASIN被要求报名价降至47.59；发帖者推算秒杀价取参考价85%折扣与近30天最低价孰低，并质疑was price抓取了促销低价；核心待解问题是如何调整长期优惠券与促销节奏，才能让55.99报名价不再报错。",
       "category": "experience",
       "score": 6.2,
-      "url": "https://www.wearesellers.com/question/123975",
+      "url": "https://www.wearesellers.com/question/123974",
       "source": "wearesellers",
-      "published_at": "2026-08-31T07:02:29.289Z"
+      "published_at": "2026-09-01T10:24:50.262Z"
     },
     {
-      "title": "品牌备案发票合同要求",
-      "summary": "品牌备案流程提供两个选项：有自己生产设施的仅需提交发票；与生产品牌下大部分或所有商品的工厂签订协议合同的，需同时提交合同和发票。发帖者询问哪种选项一次通过概率更高，帖内未给出答案。要点是备案材料路径取决于生产模式：自有工厂走发票，代工模式需合同加发票双重凭证。",
-      "category": "policy",
-      "score": 6.2,
-      "url": "https://www.wearesellers.com/question/124023",
-      "source": "wearesellers",
-      "published_at": "2026-08-31T13:02:42.988Z"
-    },
-    {
-      "title": "Notice: New AWD Inbound Rules (Effective Jul 31, 2026)",
-      "summary": "亚马逊美国站AWD将于2026年7月31日起停止接收超重或超大件商品，仅允许标准尺寸商品入库。标准为单件长宽高不超过18x14x8英寸且重量不超过20磅。超标商品创建货件时将被自动拦截，卖家需直接发往FBA或第三方海外仓。",
+      "title": "亚马逊后台逐步移除差评“Contact Buyer”入口",
+      "summary": "亚马逊后台正逐步移除1至3星差评旁的联系买家入口，卖家无法再主动沟通挽回差评。应对方法是转向差评前预防，优先使用官方Vine计划及后台索评功能合规获评；严禁使用包裹返现卡、直评及合并僵尸链接等违规操作；若用外部测评须严格核验服务商并保留凭证以防封号。",
       "category": "policy",
       "score": 9.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1uyu9tp/notice_new_awd_inbound_rules_effective_jul_31_2026",
-      "source": "reddit_fba",
-      "published_at": "2026-07-17T08:58:01+00:00"
-    },
-    {
-      "title": "The reimbursement money I was leaving on the table for over a year (FBA)",
-      "summary": "亚马逊FBA索赔实操方法。卖家应每月比对退货报告与赔偿报告，针对买家未退回货物、超45天未退回已退款件、库容损毁未自动赔偿等异常，以一单一案、只陈述事实的方式开case索赔，避免因超出时效而造成资金损失。",
-      "category": "experience",
-      "score": 9.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vbqfwd/the_reimbursement_money_i_was_leaving_on_the",
-      "source": "reddit_fba",
-      "published_at": "2026-07-31T13:06:17+00:00"
-    },
-    {
-      "title": "亚马逊 1DC（One Distribution Center）仓点入仓异常风险，你们遇到过这些新的仓库代码吗？IMS1、IGA3、XMI3、XCH2、IMI1、IMO1、ITX3、INC1 等",
-      "summary": "亚马逊上线1DC仓网导致IMS1、IGA3等新仓库出现无法送仓、不更新等异常。卖家在创建货件时应重点留意仓库代码，谨慎分配。应对方法是创建多于5个货件以刷出老仓库；若货件已送达并出现异常，可利用货代提供的POD送仓凭证向亚马逊开Case进行申诉。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.wearesellers.com/question/123088",
-      "source": "wearesellers",
-      "published_at": "2026-08-07T05:02:15.665+00:00"
-    },
-    {
-      "title": "Looks like TIC testing is now required by 3rd party before listing items",
-      "summary": "亚马逊收紧合规政策，取消了新品上架的检测宽限期。玩具、电子和膳食补充剂等受管制类目的卖家，必须在产品上架前通过合规的第三方TIC机构完成检测，且检测报告须由实验室直接提交给亚马逊，否则新品将立即面临禁售。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vhurrl/looks_like_tic_testing_is_now_required_by_3rd",
-      "source": "reddit_fba",
-      "published_at": "2026-08-07T08:25:31+00:00"
-    },
-    {
-      "title": "亚马逊新规标题改完，销量为什么反而掉了？标题仍然承担产品识别和第一眼点击，Item Highlights 是补充信息位。正确做法不是机械搬家，而是重新分配信息权重......",
-      "summary": "针对亚马逊标题限制75字符新规，提出修改标题后销量下滑的诊断与应对方法。运营应将信息重构为标题、Item Highlights和五点描述三层，通过分析曝光、点击和转化三项指标，利用业务报告与SQP数据定位流失关键词，避免盲目改回。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.wearesellers.com/question/123070",
-      "source": "wearesellers",
-      "published_at": "2026-08-06T03:17:08.421+00:00"
-    },
-    {
-      "title": "关于亚马逊safe索赔的问题？真的是令人匪夷所思，希望大家可以畅所欲言，帮我追回退款",
-      "summary": "FBM高货值订单因地址错误补发第二包裹，客户收首包后经CSBA拿到三个ASIN全额退款；卖家凭收货证明和客户收货证据发起SAFE索赔被拒3次，开case确认仍具申诉资格，当前可行路径是继续就同一SAFE索赔申诉，并同步联系客户让其向亚马逊说明已收到正确包裹，以追回货款。",
-      "category": "experience",
-      "score": 6.2,
-      "url": "https://www.wearesellers.com/question/123962",
-      "source": "wearesellers",
-      "published_at": "2026-08-31T13:02:10.946Z"
+      "url": "https://www.amz123.com/kx/RXsiQVES",
+      "source": "amz123",
+      "published_at": "2026-07-01T09:08:47+00:00"
     }
   ]
 }
