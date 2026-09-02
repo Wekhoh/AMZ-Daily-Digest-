@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-09-01T11:11:10Z",
-  "digest_date": "2026-09-01",
+  "generated_at_utc": "2026-09-02T10:43:49Z",
+  "digest_date": "2026-09-02",
   "article_count": 50,
   "articles": [
     {
-      "title": "做了3年亚马逊运营，只推过1个新品，面试总被追问推广打法和目标定多少才像样？",
-      "summary": "三年运营者给出可复用的新品推广框架：先调研差异点与定价，listing埋词并突出使用场景；广告前期以自动加核心词为主，出单3-5单后拓大词词根宽泛词并配SB/SD，10单以上报LD/BD，20单以上收缩广告保利润；评论先做Vine 10或30个，差评按描述或产品问题分别处理；首批备货300个，日销七八单后每次补500个。",
-      "category": "experience",
-      "score": 8.4,
-      "url": "https://www.wearesellers.com/question/124054",
+      "title": "9.2突袭】锂电池“食品和商品安全”又开始大规模扫链接了？大家都在做什么UL认证？",
+      "summary": "9月2日平台对锂离子电池商品安全合规再度大规模扫描，多个主力变体被要求9月4日前解决，仅48小时缓冲期，逾期面临移除且涉及金额较大；目前讨论的认证标准有UL 2054、UL 2271、UL 62133、UL 1642和UN38.3，完整UL报告周期远超平台期限，应选ISO 17025与ILAC-MRA资质实验室并争取延期或提交过渡资料申诉。",
+      "category": "policy",
+      "score": 6.8,
+      "url": "https://www.wearesellers.com/question/124103",
       "source": "wearesellers",
-      "published_at": "2026-09-01T10:33:10.218Z"
+      "published_at": "2026-09-02T09:44:45.869Z"
     },
     {
-      "title": "被批量差评攻击的处理方法：下面的方法只是个人经验分享，不保证一定能删除差评，建议多个办法同时进行。",
-      "summary": "被批量差评攻击可同时用三种合规手段：前台买家号点Report举报；在账户状况页面举报滥用亚马逊政策，有订单证据选侵害业务通道，无证据选其他通道，建议提交3次以上拿投诉编号，再凭编号让卖家支持转交团队；发英文邮件至community-help@amazon.com详述。作者实测10天左右删除大部分差评，处理不掉则翻新清货，可提价保利润。",
+      "title": "重磅！亚马逊上线 Amazon Business Deals，跑 Woot Deal 如何做好企业购运营",
+      "summary": "亚马逊8月31日上线Amazon Business Deals，覆盖美国等10站点，仅企业买家可见，时长1小时至30天，普通活动最低10% OFF、大促场次15% OFF，ASIN须先配置Business Price才有创建入口，2026年底前大促节点可免费获企业买家曝光。跑Woot Deal期间卖家自设B端Deal不生效，需用企业购定向广告承接大宗流量；未设企业购价格的ASIN在Woot空档期也应保留企业购广告抓低垂流量。",
+      "category": "trend",
+      "score": 9,
+      "url": "https://www.wearesellers.com/question/124107",
+      "source": "wearesellers",
+      "published_at": "2026-09-02T09:53:30.692Z"
+    },
+    {
+      "title": "新店铺开售两天50多订单，直接来临时审核---自发货被停用，资金被预留？？？",
+      "summary": "新号短期爆单极易触发自配送临时审核并冻结资金，核心触发点是绩效不达标：迟发率超4%、有效追踪率低于95%、取消率超2.5%、ODR高于1%，美国站还要求OTDR高于90%；无效单号、提前点发货、违规代发货和运费过高同样触发风控。审核周期通常不超30天，真实履约者小概率自动解冻，多数需申诉，其中准时送达率类申诉最易通过。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.wearesellers.com/question/124104",
+      "source": "wearesellers",
+      "published_at": "2026-09-02T09:47:41.539Z"
+    },
+    {
+      "title": "新开的精准广告，为什么总是跑得特别差？新开的精准广告 ACOS 偏高，不一定意味着关键词表现差。",
+      "summary": "以19.99美元非标品为例：新精准广告ACOS高不等于关键词差，活动层数据差多是10个词零散无转化点击叠加所致。调整须拆到关键词层级，结合CPC、累计花费、客单价与可接受ACOS范围综合判断；如某词20次点击未出单但仅花6.4美元，未达客单价三分之一，应继续跑数据，勿过早降竞价或否定，冲量期忌整广告一起乱调。",
       "category": "experience",
       "score": 9,
-      "url": "https://www.wearesellers.com/question/123955",
+      "url": "https://www.wearesellers.com/question/124106",
       "source": "wearesellers",
-      "published_at": "2026-08-29T10:08:39.599+00:00"
+      "published_at": "2026-09-02T09:51:32.873Z"
     },
     {
-      "title": "亚马逊FBA新费政生效：超龄库存附加费大幅上涨",
-      "summary": "亚马逊FBA新费政实施，商品库龄达181天即收超龄附加费，超365天最高达月仓储费13倍；未加入SIPP的大件商品加收包装费。卖家须通过Outlet、清仓或移除清理冗余库存，大件商品应尽快申请SIPP认证以降低包装成本。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.amz123.com/kx/RkUvZPFw",
-      "source": "amz123",
-      "published_at": "2026-07-08T02:31:43+00:00"
-    },
-    {
-      "title": "今天开始，美国清关彻底变了！不会电子申报，货物可能直接卡港！",
-      "summary": "美国CPSC电子申报于2026年7月8日起强制实施，进口消费品全面进入先系统核验、再放行模式。涉及儿童玩具、电子产品、服装等监管产品的卖家，必须通过eFiling提交结构化电子数据，在途货物亦受限制。卖家须立即自查CPC证书并对接数字化清关流程。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.wearesellers.com/question/121981",
+      "title": "协议三封号 ≠ WOOT导致，别把两件事混为一谈",
+      "summary": "协议三封号与WOOT无因果关系，平台风控针对的始终是刷单、测评、异常评论等异常经营行为；真正危险的是WOOT期间叠加补单、冲评论等高风险操作。作者2023年起持续跑WOOT BD且店铺正常，其新品打法是上架后先用自己的广告跑两到三周，验证产品竞争力、价格、转化、目标词排名与流量承接能力，产品能接住流量就无需为几天数据冒违规风险。",
+      "category": "experience",
+      "score": 7.8,
+      "url": "https://www.wearesellers.com/question/124051",
       "source": "wearesellers",
-      "published_at": "2026-07-08T07:51:40.029+00:00"
+      "published_at": "2026-09-02T06:24:50.909Z"
     },
     {
-      "title": "Amazon sued by FTC, 22 US states over advertising practices",
-      "summary": "亚马逊因在广告竞拍中制造虚假出价及其他抬价操作，被FTC与22个州起诉，涉事行为直接推高卖家与品牌的广告成本。若诉讼促成竞拍机制整改，PPC花费结构可能变化，卖家应跟踪案件进展并核查自身广告花费异常。",
-      "category": "policy",
+      "title": "库存到亚马逊仓库已登记一个月，仍然无法转成符合Prime要求的库存，导致前台prime配送时间变的很长，求助该如何解决？",
+      "summary": "卖家两箱货8月5-6日入库登记，27天卡在同一仓库未转运，货件活动已显示完成，1000件无法供Prime配送，同批其余货件已转运99%。已做加急补货防断货、多次开case但客服仅回复在转运中需等待。正常货件3-7天分配、10天基本转运完成，此属异常滞留，文中无解法，作者征集同类案例与方案。",
+      "category": "experience",
       "score": 6.2,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1w3u3c5/amazon_sued_by_ftc_22_us_states_over_advertising",
+      "url": "https://www.wearesellers.com/question/124110",
+      "source": "wearesellers",
+      "published_at": "2026-09-02T10:01:26.391Z"
+    },
+    {
+      "title": "鸭马逊漂流记-贯穿转化与流量，一个实例聊聊关键词调研（0828直播课分享）",
+      "summary": "关键词调研的本质是还原买家搜索决策路径并建立市场流量结构认知，而非找词塞Listing或扔进广告跑；以电气面板开关为例：美国普通开关2～8美元、调光/智能开关10～40美元，电工上门100美元起，需求分流后流向Home Depot、Lowe's、Walmart和亚马逊；因任天堂Switch同名，Switch不能作词根，选词须贴合买家真实搜索语言。",
+      "category": "experience",
+      "score": 9.4,
+      "url": "https://www.wearesellers.com/question/124096",
+      "source": "wearesellers",
+      "published_at": "2026-09-02T09:44:48.182Z"
+    },
+    {
+      "title": "汽配类目到底该怎么选品？从0到1建立选品思路，求做过汽配的大佬指点",
+      "summary": "汽配选品与家居逻辑不同：机会车型需同时满足一定保有量、已进入维修周期、配件有真实需求、亚马逊竞争未饱和四个条件。方法上用Fitment和OE号验证适配，按汽车系统或公司产品池建立选品池；Amazon看搜索量、销量、评论、竞争度，eBay结果数量多不等于成熟，需结合车型覆盖与老车型需求解读。",
+      "category": "experience",
+      "score": 6.2,
+      "url": "https://www.wearesellers.com/question/123938",
+      "source": "wearesellers",
+      "published_at": "2026-09-02T07:25:13.415Z"
+    },
+    {
+      "title": "AI 做亚马逊运营到底行不行？5款亚马逊智能体深度体验报告",
+      "summary": "介绍五个独立的亚马逊运营AI智能体。VOC深度洞察可按站点与ASIN抓取好评差评，清理无效内容，按提及频次整理用户、场景、痛点和卖点，输出产品升级与Listing优化建议，已用美国站真实ASIN实测，处理约510条评论，生成约4分53秒；选品分析助手支持从ASIN、图片或类目生成选品调研报告；广告利润优化主打先算清利润再调广告；其余作品能力仅详情页披露，需卖家用真实数据自行验证。",
+      "category": "trend",
+      "score": 7.8,
+      "url": "https://www.wearesellers.com/question/124092",
+      "source": "wearesellers",
+      "published_at": "2026-09-02T07:24:42.115Z"
+    },
+    {
+      "title": "Amazon dietary supplement compliance -- which testing/compliance/inspection provider to choose (Intertek, Eurofins, SGS etc.)?",
+      "summary": "美国站膳食补充剂ASIN遭合规标记，平台允许卖家与指定TIC机构合作解除，可选名单八家：Certified Laboratories、Cotecna、Eurofins、Intertek、Mérieux NutriSciences、NSF、SGS、UL；帖内征询各机构速度与响应度对比，暂无推荐结论，可直接按名单筛选并自行比测。",
+      "category": "policy",
+      "score": 6.8,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1w4v34p/amazon_dietary_supplement_compliance_which",
       "source": "reddit_fba",
-      "published_at": "2026-08-31T22:59:29.000Z"
-    },
-    {
-      "title": "7月27日亚马逊商品名称新规倒计时：标题优化实操指南",
-      "summary": "亚马逊新规要求非媒介类商品标题缩减至75字符以内。卖家应主动优化标题，仅保留品牌名和核心流量词，将材质、功能等次要卖点转移至新增的125字符商品亮点板块及五点描述中。建议先用中等销量链接测试，避免被系统AI强制乱改。",
-      "category": "policy",
-      "score": 10,
-      "url": "https://www.wearesellers.com/question/122034",
-      "source": "wearesellers",
-      "published_at": "2026-07-09T08:52:43.54+00:00"
-    },
-    {
-      "title": "亚马逊下半年大促提报开启，早鸟优惠、促销资格速看！",
-      "summary": "2026年亚马逊下半年大促提报开启。美国站Prime会员大促提报为7月8日至9月8日，黑五网一为7月8日至10月20日。促销要求定价不高于60天最低价，且比30天最低价至少优惠5%。早鸟提报可省50美元固定费。旺季配送费平均每件上涨0.32美元。",
-      "category": "policy",
-      "score": 10,
-      "url": "https://www.wearesellers.com/question/122045",
-      "source": "wearesellers",
-      "published_at": "2026-07-09T09:01:29.635+00:00"
-    },
-    {
-      "title": "干了 10 年不锈钢餐具，聊聊 90% 卖家选品时踩过的材料坑",
-      "summary": "低价不锈钢多为201冒充304，镍低锰高，海运高湿高盐及厨房宠物场景下很快生锈；304含镍8%-10.5%是食品接触主流，316加钼抗氯离子腐蚀更强。验证方法：钼检测液测内壁仅作粗筛，磁铁判断是误区，冷加工后带弱磁性属正常，最靠谱是送SGS等做光谱成分分析，报告几百元；美国站还需FDA食品接触、加州65等认证；普通宠物碗餐具盒用304即可，无需上316。",
-      "category": "experience",
-      "score": 9,
-      "url": "https://www.wearesellers.com/question/123915",
-      "source": "wearesellers",
-      "published_at": "2026-08-29T10:08:08.912+00:00"
-    },
-    {
-      "title": "加拿大站秒杀/Z划算连续做会拉低秒杀活动价吗？如果想让将来的秒杀、Z划算活动价格 55.99 不报错，应该怎么办？不再长期做优惠券吗？还有什么需要注意的？",
-      "summary": "加拿大站Listing 90天内每天挂5%优惠券并密集做55.99的Z划算和秒杀，8/31秒杀部分子ASIN被要求报名价降至47.59；发帖者推算秒杀价取参考价85%折扣与近30天最低价孰低，并质疑was price抓取了促销低价；核心待解问题是如何调整长期优惠券与促销节奏，才能让55.99报名价不再报错。",
-      "category": "experience",
-      "score": 6.2,
-      "url": "https://www.wearesellers.com/question/123974",
-      "source": "wearesellers",
-      "published_at": "2026-09-01T10:24:50.262Z"
-    },
-    {
-      "title": "亚马逊后台逐步移除差评“Contact Buyer”入口",
-      "summary": "亚马逊后台正逐步移除1至3星差评旁的联系买家入口，卖家无法再主动沟通挽回差评。应对方法是转向差评前预防，优先使用官方Vine计划及后台索评功能合规获评；严禁使用包裹返现卡、直评及合并僵尸链接等违规操作；若用外部测评须严格核验服务商并保留凭证以防封号。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.amz123.com/kx/RXsiQVES",
-      "source": "amz123",
-      "published_at": "2026-07-01T09:08:47+00:00"
+      "published_at": "2026-09-02T00:35:53.000Z"
     }
   ]
 }
