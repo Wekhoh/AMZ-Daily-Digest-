@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-09-02T10:43:49Z",
-  "digest_date": "2026-09-02",
+  "generated_at_utc": "2026-09-03T11:29:48Z",
+  "digest_date": "2026-09-03",
   "article_count": 50,
   "articles": [
     {
-      "title": "9.2突袭】锂电池“食品和商品安全”又开始大规模扫链接了？大家都在做什么UL认证？",
-      "summary": "9月2日平台对锂离子电池商品安全合规再度大规模扫描，多个主力变体被要求9月4日前解决，仅48小时缓冲期，逾期面临移除且涉及金额较大；目前讨论的认证标准有UL 2054、UL 2271、UL 62133、UL 1642和UN38.3，完整UL报告周期远超平台期限，应选ISO 17025与ILAC-MRA资质实验室并争取延期或提交过渡资料申诉。",
-      "category": "policy",
-      "score": 6.8,
-      "url": "https://www.wearesellers.com/question/124103",
-      "source": "wearesellers",
-      "published_at": "2026-09-02T09:44:45.869Z"
-    },
-    {
-      "title": "重磅！亚马逊上线 Amazon Business Deals，跑 Woot Deal 如何做好企业购运营",
-      "summary": "亚马逊8月31日上线Amazon Business Deals，覆盖美国等10站点，仅企业买家可见，时长1小时至30天，普通活动最低10% OFF、大促场次15% OFF，ASIN须先配置Business Price才有创建入口，2026年底前大促节点可免费获企业买家曝光。跑Woot Deal期间卖家自设B端Deal不生效，需用企业购定向广告承接大宗流量；未设企业购价格的ASIN在Woot空档期也应保留企业购广告抓低垂流量。",
-      "category": "trend",
-      "score": 9,
-      "url": "https://www.wearesellers.com/question/124107",
-      "source": "wearesellers",
-      "published_at": "2026-09-02T09:53:30.692Z"
-    },
-    {
-      "title": "新店铺开售两天50多订单，直接来临时审核---自发货被停用，资金被预留？？？",
-      "summary": "新号短期爆单极易触发自配送临时审核并冻结资金，核心触发点是绩效不达标：迟发率超4%、有效追踪率低于95%、取消率超2.5%、ODR高于1%，美国站还要求OTDR高于90%；无效单号、提前点发货、违规代发货和运费过高同样触发风控。审核周期通常不超30天，真实履约者小概率自动解冻，多数需申诉，其中准时送达率类申诉最易通过。",
+      "title": "亚马逊集中整治\"重复创建ASIN\"违规，翻新配合Vine套评成主要触发原因",
+      "summary": "亚马逊集中审查重复创建ASIN，大批卖家收到绩效警告、部分店铺被直接停用，核心触发点是翻新加重复创建ASIN的复合违规：反复注册Vine套取免费测评、违规拆分合并变体操控星级、旧库存套新ASIN骗新品流量，滥用Vine列为首要原因；平台综合品牌、型号、核心功能、UPC/EAN、包装及变体关系多维判定，卖家应立即停止翻新与变体操弄类操作。",
       "category": "policy",
       "score": 9.4,
-      "url": "https://www.wearesellers.com/question/124104",
-      "source": "wearesellers",
-      "published_at": "2026-09-02T09:47:41.539Z"
+      "url": "https://www.amz123.com/kx/z0Q6YNbV",
+      "source": "amz123",
+      "published_at": "2026-09-03T02:28:09.000Z"
     },
     {
-      "title": "新开的精准广告，为什么总是跑得特别差？新开的精准广告 ACOS 偏高，不一定意味着关键词表现差。",
-      "summary": "以19.99美元非标品为例：新精准广告ACOS高不等于关键词差，活动层数据差多是10个词零散无转化点击叠加所致。调整须拆到关键词层级，结合CPC、累计花费、客单价与可接受ACOS范围综合判断；如某词20次点击未出单但仅花6.4美元，未达客单价三分之一，应继续跑数据，勿过早降竞价或否定，冲量期忌整广告一起乱调。",
+      "title": "深圳税局发短信要求卖家10日内自查出口增值税申报",
+      "summary": "深圳税务局向部分跨境卖家发短信，要求10日内自查整改2026年以来出口收入涉嫌未足额申报增值税：免税收入须在电子税务局更正申报并填入出口免税栏次，代理出口需开具代理出口证明并提示委托方补充申报，逾期将依税收征管法处理；亚马逊同期重发2025年Q4中国季度税务报告，新版佣金与平台费用数据被调高，卖家需重新对账排查申报缺口。",
+      "category": "policy",
+      "score": 9,
+      "url": "https://www.amz123.com/kx/zS3V73OK",
+      "source": "amz123",
+      "published_at": "2026-09-03T02:32:41.000Z"
+    },
+    {
+      "title": "调酒套装月销千单背后：美国站新品成功率仅7.69%",
+      "summary": "调酒壶套装案例揭示美国站选品陷阱：前台月销约千单、标价18.5美元、表面毛利率52%，但类目仅62个产品，13个新品中只有1个盈利，成功率7.69%已跌破10%警戒线；唯一跑出的新品牌净利率仅10.74%、仅30条评论。可执行打法：新品进场前必须用选品工具核查类目新品成功率与真实净利率，低于10%即放弃。",
       "category": "experience",
       "score": 9,
-      "url": "https://www.wearesellers.com/question/124106",
-      "source": "wearesellers",
-      "published_at": "2026-09-02T09:51:32.873Z"
+      "url": "https://www.amz123.com/kx/2TtkHsPd",
+      "source": "amz123",
+      "published_at": "2026-09-03T07:24:04.000Z"
     },
     {
-      "title": "协议三封号 ≠ WOOT导致，别把两件事混为一谈",
-      "summary": "协议三封号与WOOT无因果关系，平台风控针对的始终是刷单、测评、异常评论等异常经营行为；真正危险的是WOOT期间叠加补单、冲评论等高风险操作。作者2023年起持续跑WOOT BD且店铺正常，其新品打法是上架后先用自己的广告跑两到三周，验证产品竞争力、价格、转化、目标词排名与流量承接能力，产品能接住流量就无需为几天数据冒违规风险。",
+      "title": "两款按摩器差评第一都是用几周就坏，评分却差半颗星——这次差距不在产品上",
+      "summary": "两款指压按摩器差评主因同为用几周就坏，评分却差0.5星，差距在客服与功能落地：Zyllion好评中16条专提客服并免费换新，把差评拦在发出前；Mo Cuishle热线空号、保修不兑现，加热只有红灯无热度占其差评11.9%。按月销1000台估算两者月损失6255对5010美元。方法：导出评论AI批量打标聚类，再把好评中客服保修等非产品因素与差评对照。",
       "category": "experience",
-      "score": 7.8,
-      "url": "https://www.wearesellers.com/question/124051",
+      "score": 9,
+      "url": "https://www.wearesellers.com/question/124066",
       "source": "wearesellers",
-      "published_at": "2026-09-02T06:24:50.909Z"
+      "published_at": "2026-09-03T08:08:59.829Z"
     },
     {
-      "title": "库存到亚马逊仓库已登记一个月，仍然无法转成符合Prime要求的库存，导致前台prime配送时间变的很长，求助该如何解决？",
-      "summary": "卖家两箱货8月5-6日入库登记，27天卡在同一仓库未转运，货件活动已显示完成，1000件无法供Prime配送，同批其余货件已转运99%。已做加急补货防断货、多次开case但客服仅回复在转运中需等待。正常货件3-7天分配、10天基本转运完成，此属异常滞留，文中无解法，作者征集同类案例与方案。",
-      "category": "experience",
-      "score": 6.2,
-      "url": "https://www.wearesellers.com/question/124110",
-      "source": "wearesellers",
-      "published_at": "2026-09-02T10:01:26.391Z"
-    },
-    {
-      "title": "鸭马逊漂流记-贯穿转化与流量，一个实例聊聊关键词调研（0828直播课分享）",
-      "summary": "关键词调研的本质是还原买家搜索决策路径并建立市场流量结构认知，而非找词塞Listing或扔进广告跑；以电气面板开关为例：美国普通开关2～8美元、调光/智能开关10～40美元，电工上门100美元起，需求分流后流向Home Depot、Lowe's、Walmart和亚马逊；因任天堂Switch同名，Switch不能作词根，选词须贴合买家真实搜索语言。",
-      "category": "experience",
-      "score": 9.4,
-      "url": "https://www.wearesellers.com/question/124096",
-      "source": "wearesellers",
-      "published_at": "2026-09-02T09:44:48.182Z"
-    },
-    {
-      "title": "汽配类目到底该怎么选品？从0到1建立选品思路，求做过汽配的大佬指点",
-      "summary": "汽配选品与家居逻辑不同：机会车型需同时满足一定保有量、已进入维修周期、配件有真实需求、亚马逊竞争未饱和四个条件。方法上用Fitment和OE号验证适配，按汽车系统或公司产品池建立选品池；Amazon看搜索量、销量、评论、竞争度，eBay结果数量多不等于成熟，需结合车型覆盖与老车型需求解读。",
-      "category": "experience",
-      "score": 6.2,
-      "url": "https://www.wearesellers.com/question/123938",
-      "source": "wearesellers",
-      "published_at": "2026-09-02T07:25:13.415Z"
-    },
-    {
-      "title": "AI 做亚马逊运营到底行不行？5款亚马逊智能体深度体验报告",
-      "summary": "介绍五个独立的亚马逊运营AI智能体。VOC深度洞察可按站点与ASIN抓取好评差评，清理无效内容，按提及频次整理用户、场景、痛点和卖点，输出产品升级与Listing优化建议，已用美国站真实ASIN实测，处理约510条评论，生成约4分53秒；选品分析助手支持从ASIN、图片或类目生成选品调研报告；广告利润优化主打先算清利润再调广告；其余作品能力仅详情页披露，需卖家用真实数据自行验证。",
-      "category": "trend",
-      "score": 7.8,
-      "url": "https://www.wearesellers.com/question/124092",
-      "source": "wearesellers",
-      "published_at": "2026-09-02T07:24:42.115Z"
-    },
-    {
-      "title": "Amazon dietary supplement compliance -- which testing/compliance/inspection provider to choose (Intertek, Eurofins, SGS etc.)?",
-      "summary": "美国站膳食补充剂ASIN遭合规标记，平台允许卖家与指定TIC机构合作解除，可选名单八家：Certified Laboratories、Cotecna、Eurofins、Intertek、Mérieux NutriSciences、NSF、SGS、UL；帖内征询各机构速度与响应度对比，暂无推荐结论，可直接按名单筛选并自行比测。",
+      "title": "深圳大鹏海关查扣10.8万个电子烟雾化器，涉嫌以虚报品名骗取出口退税",
+      "summary": "深圳大鹏海关开箱查验一票以9810海外仓模式申报出口的货物，申报品名为转接头、电缆、线缆，实际夹藏未申报电子烟雾化器10.8万个、净重3.7吨；利用离境即退税瞒报敏感品类已触及多项法规红线，或构成骗取出口退税，后果包括追税罚款、暂停或永久取消退税资格乃至刑事追责，走9810模式备货FBA须确保申报品名与实物一致。",
       "category": "policy",
-      "score": 6.8,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1w4v34p/amazon_dietary_supplement_compliance_which",
+      "score": 8,
+      "url": "https://www.amz123.com/kx/MP33RZdI",
+      "source": "amz123",
+      "published_at": "2026-09-03T02:53:09.000Z"
+    },
+    {
+      "title": "“消费者告知法案”验证，我这是不是G了",
+      "summary": "19年注册的老店重新运营，缴清欠费后触发消费者告知法案验证；后台已无提交入口，点击重新激活跳转卖家信息页面，也无法开在线case。经客服邮件提交法人身份证、营业执照、法人信用卡账单、租赁合同、房东燃气账单、租金转账记录截图，第二次审核失败；第三次不再附文件，专攻重启验证入口，8月19日case至9月13日仍显示处理中、追问无回复。",
+      "category": "policy",
+      "score": 6.2,
+      "url": "https://www.wearesellers.com/question/124151",
+      "source": "wearesellers",
+      "published_at": "2026-09-03T10:09:44.949Z"
+    },
+    {
+      "title": "Section 122 sunset was July 24. Here's the actual duty stack that replaced it for China-origin FBA imports (with math)",
+      "summary": "Section 122的10%统一附加税按150天上限于7月24日到期，USTR同日对中国等60个原产地启用301强迫劳动关税：有非强迫劳动供应链证明的Tier B为10%，无证明默认Tier A为12.5%，多数中国出口商无Tier B文件。以3万美元CIF的61章T恤海运为例，叠加MFN 16.5%、301 List 3的25%、Tier A 12.5%、MPF上限634.62美元及HMF 0.125%后，落地税负16,872.12美元，占CIF约56.2%，卖家需按新税栈重算成本与利润。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vzd2hi/section_122_sunset_was_july_24_heres_the_actual",
       "source": "reddit_fba",
-      "published_at": "2026-09-02T00:35:53.000Z"
+      "published_at": "2026-08-26T23:15:37+00:00"
+    },
+    {
+      "title": "亚马逊美国站产品责任诉讼后保险拒付亚马逊律师费，5年老店余额被冻结，现在连店都想弃了还能怎么解？",
+      "summary": "产品责任诉讼致资金冻结机制复盘：2024年3月被诉后提交商业责任险证明，账户未冻；2026年8月亚马逊律师向保险公司索律师费，保险以其未经书面授权拒付，谈不拢后店铺余额被冻结无法提现。原告处庭前和解阶段，因个人破产与离婚诉讼主动降低和解金额；卖家正评估新主体同名商标备案关联风险及美国判决在华执行难度。",
+      "category": "policy",
+      "score": 8.4,
+      "url": "https://www.wearesellers.com/question/124089",
+      "source": "wearesellers",
+      "published_at": "2026-09-03T03:09:26.850Z"
+    },
+    {
+      "title": "求助：亚马逊最近跟卖我们。我们下了测试单，发现就是我们自己在美亚的库存，而且是全新品。我们从未供货给亚马逊，亚马逊的库存从哪里来的呢？能不能解决它并追回损失",
+      "summary": "亚马逊自营跟卖已超两周：前期以20%的价格、后面又以10%的价格，近期改成与卖家差不多的价格销售；卖家从未向亚马逊供货，测试单证实对方所售即自家在美亚的全新品库存。处理难点：举报入口没有针对亚马逊的选项，客服以供货渠道保密为由推诿踢皮球；帖内无解决方案，诉求为排除跟卖并追回损失。",
+      "category": "experience",
+      "score": 6.2,
+      "url": "https://www.wearesellers.com/question/124079",
+      "source": "wearesellers",
+      "published_at": "2026-09-03T10:10:40.490Z"
+    },
+    {
+      "title": "# 运营案例分析 # 大件家具新品FBM海外仓，56,000曝光466点击0订单，价格已降至市场价仍不转化，就算Listing再差也不至于一个转化都没有，问题出在哪？实在不解",
+      "summary": "大件家具新品FBM海外仓零转化复盘：售价179-249美金远高于竞品89-149美金，配送约9天慢于同行4-9天；8.20-9.1曝光56000、点击466、零订单，点击率0.83%、CPC0.79。已试降价至市场价、60美金优惠券、主推黑色款、固定竞价提曝光、其余位置出价升至85%、加长尾精准词仍零转化，商品页流量占比74%被疑低质流量。",
+      "category": "experience",
+      "score": 7.8,
+      "url": "https://www.wearesellers.com/question/124070",
+      "source": "wearesellers",
+      "published_at": "2026-09-03T03:09:16.020Z"
     }
   ]
 }
