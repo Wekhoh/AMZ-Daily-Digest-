@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-09-03T11:29:48Z",
-  "digest_date": "2026-09-03",
+  "generated_at_utc": "2026-09-04T10:41:04Z",
+  "digest_date": "2026-09-04",
   "article_count": 50,
   "articles": [
     {
-      "title": "亚马逊集中整治\"重复创建ASIN\"违规，翻新配合Vine套评成主要触发原因",
-      "summary": "亚马逊集中审查重复创建ASIN，大批卖家收到绩效警告、部分店铺被直接停用，核心触发点是翻新加重复创建ASIN的复合违规：反复注册Vine套取免费测评、违规拆分合并变体操控星级、旧库存套新ASIN骗新品流量，滥用Vine列为首要原因；平台综合品牌、型号、核心功能、UPC/EAN、包装及变体关系多维判定，卖家应立即停止翻新与变体操弄类操作。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.amz123.com/kx/z0Q6YNbV",
-      "source": "amz123",
-      "published_at": "2026-09-03T02:28:09.000Z"
-    },
-    {
-      "title": "深圳税局发短信要求卖家10日内自查出口增值税申报",
-      "summary": "深圳税务局向部分跨境卖家发短信，要求10日内自查整改2026年以来出口收入涉嫌未足额申报增值税：免税收入须在电子税务局更正申报并填入出口免税栏次，代理出口需开具代理出口证明并提示委托方补充申报，逾期将依税收征管法处理；亚马逊同期重发2025年Q4中国季度税务报告，新版佣金与平台费用数据被调高，卖家需重新对账排查申报缺口。",
-      "category": "policy",
-      "score": 9,
-      "url": "https://www.amz123.com/kx/zS3V73OK",
-      "source": "amz123",
-      "published_at": "2026-09-03T02:32:41.000Z"
-    },
-    {
-      "title": "调酒套装月销千单背后：美国站新品成功率仅7.69%",
-      "summary": "调酒壶套装案例揭示美国站选品陷阱：前台月销约千单、标价18.5美元、表面毛利率52%，但类目仅62个产品，13个新品中只有1个盈利，成功率7.69%已跌破10%警戒线；唯一跑出的新品牌净利率仅10.74%、仅30条评论。可执行打法：新品进场前必须用选品工具核查类目新品成功率与真实净利率，低于10%即放弃。",
+      "title": "Unlocked $250,000+ in Savings by Fixing One Amazon Category",
+      "summary": "审计品牌发现5个SKU被归入收取15%佣金的Video Game Console and Accessories类目，深挖后确认其实际符合仅8%佣金的Video Game Console类目；为每个SKU开case申诉全部获批，每年节省超20万美元佣金，现正追讨过往按高费率多扣的5万美元报销。方法：定期核对SKU实际类目与佣金费率，发现错配立即开case纠正并追溯索赔。",
       "category": "experience",
       "score": 9,
-      "url": "https://www.amz123.com/kx/2TtkHsPd",
-      "source": "amz123",
-      "published_at": "2026-09-03T07:24:04.000Z"
-    },
-    {
-      "title": "两款按摩器差评第一都是用几周就坏，评分却差半颗星——这次差距不在产品上",
-      "summary": "两款指压按摩器差评主因同为用几周就坏，评分却差0.5星，差距在客服与功能落地：Zyllion好评中16条专提客服并免费换新，把差评拦在发出前；Mo Cuishle热线空号、保修不兑现，加热只有红灯无热度占其差评11.9%。按月销1000台估算两者月损失6255对5010美元。方法：导出评论AI批量打标聚类，再把好评中客服保修等非产品因素与差评对照。",
-      "category": "experience",
-      "score": 9,
-      "url": "https://www.wearesellers.com/question/124066",
-      "source": "wearesellers",
-      "published_at": "2026-09-03T08:08:59.829Z"
-    },
-    {
-      "title": "深圳大鹏海关查扣10.8万个电子烟雾化器，涉嫌以虚报品名骗取出口退税",
-      "summary": "深圳大鹏海关开箱查验一票以9810海外仓模式申报出口的货物，申报品名为转接头、电缆、线缆，实际夹藏未申报电子烟雾化器10.8万个、净重3.7吨；利用离境即退税瞒报敏感品类已触及多项法规红线，或构成骗取出口退税，后果包括追税罚款、暂停或永久取消退税资格乃至刑事追责，走9810模式备货FBA须确保申报品名与实物一致。",
-      "category": "policy",
-      "score": 8,
-      "url": "https://www.amz123.com/kx/MP33RZdI",
-      "source": "amz123",
-      "published_at": "2026-09-03T02:53:09.000Z"
-    },
-    {
-      "title": "“消费者告知法案”验证，我这是不是G了",
-      "summary": "19年注册的老店重新运营，缴清欠费后触发消费者告知法案验证；后台已无提交入口，点击重新激活跳转卖家信息页面，也无法开在线case。经客服邮件提交法人身份证、营业执照、法人信用卡账单、租赁合同、房东燃气账单、租金转账记录截图，第二次审核失败；第三次不再附文件，专攻重启验证入口，8月19日case至9月13日仍显示处理中、追问无回复。",
-      "category": "policy",
-      "score": 6.2,
-      "url": "https://www.wearesellers.com/question/124151",
-      "source": "wearesellers",
-      "published_at": "2026-09-03T10:09:44.949Z"
-    },
-    {
-      "title": "Section 122 sunset was July 24. Here's the actual duty stack that replaced it for China-origin FBA imports (with math)",
-      "summary": "Section 122的10%统一附加税按150天上限于7月24日到期，USTR同日对中国等60个原产地启用301强迫劳动关税：有非强迫劳动供应链证明的Tier B为10%，无证明默认Tier A为12.5%，多数中国出口商无Tier B文件。以3万美元CIF的61章T恤海运为例，叠加MFN 16.5%、301 List 3的25%、Tier A 12.5%、MPF上限634.62美元及HMF 0.125%后，落地税负16,872.12美元，占CIF约56.2%，卖家需按新税栈重算成本与利润。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vzd2hi/section_122_sunset_was_july_24_heres_the_actual",
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1w6z9ah/unlocked_250000_in_savings_by_fixing_one_amazon",
       "source": "reddit_fba",
-      "published_at": "2026-08-26T23:15:37+00:00"
+      "published_at": "2026-09-04T09:14:58.000Z"
     },
     {
-      "title": "亚马逊美国站产品责任诉讼后保险拒付亚马逊律师费，5年老店余额被冻结，现在连店都想弃了还能怎么解？",
-      "summary": "产品责任诉讼致资金冻结机制复盘：2024年3月被诉后提交商业责任险证明，账户未冻；2026年8月亚马逊律师向保险公司索律师费，保险以其未经书面授权拒付，谈不拢后店铺余额被冻结无法提现。原告处庭前和解阶段，因个人破产与离婚诉讼主动降低和解金额；卖家正评估新主体同名商标备案关联风险及美国判决在华执行难度。",
-      "category": "policy",
-      "score": 8.4,
-      "url": "https://www.wearesellers.com/question/124089",
-      "source": "wearesellers",
-      "published_at": "2026-09-03T03:09:26.850Z"
-    },
-    {
-      "title": "求助：亚马逊最近跟卖我们。我们下了测试单，发现就是我们自己在美亚的库存，而且是全新品。我们从未供货给亚马逊，亚马逊的库存从哪里来的呢？能不能解决它并追回损失",
-      "summary": "亚马逊自营跟卖已超两周：前期以20%的价格、后面又以10%的价格，近期改成与卖家差不多的价格销售；卖家从未向亚马逊供货，测试单证实对方所售即自家在美亚的全新品库存。处理难点：举报入口没有针对亚马逊的选项，客服以供货渠道保密为由推诿踢皮球；帖内无解决方案，诉求为排除跟卖并追回损失。",
-      "category": "experience",
-      "score": 6.2,
-      "url": "https://www.wearesellers.com/question/124079",
-      "source": "wearesellers",
-      "published_at": "2026-09-03T10:10:40.490Z"
-    },
-    {
-      "title": "# 运营案例分析 # 大件家具新品FBM海外仓，56,000曝光466点击0订单，价格已降至市场价仍不转化，就算Listing再差也不至于一个转化都没有，问题出在哪？实在不解",
-      "summary": "大件家具新品FBM海外仓零转化复盘：售价179-249美金远高于竞品89-149美金，配送约9天慢于同行4-9天；8.20-9.1曝光56000、点击466、零订单，点击率0.83%、CPC0.79。已试降价至市场价、60美金优惠券、主推黑色款、固定竞价提曝光、其余位置出价升至85%、加长尾精准词仍零转化，商品页流量占比74%被疑低质流量。",
+      "title": "How to Avoid \"Doubling Down\" When You're Already Maxed Out On a Search Term - Avoid Giving Amazon More Of Your Margin",
+      "summary": "结论：关键词表现好就盲目加价，多半只是白送利润给亚马逊，换不来更多流量。方法：使用账户级搜索词印象份额报告，加价前先查该词印象份额，若已超80%（阈值可自定）说明该搜索词流量接近天花板，尤其精确匹配为主要流量来源时不应再加价；并引FTC诉讼指出亚马逊广告竞价并非真二价拍卖，加价成本风险更高。",
       "category": "experience",
       "score": 7.8,
-      "url": "https://www.wearesellers.com/question/124070",
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1w6zn7u/how_to_avoid_doubling_down_when_youre_already",
+      "source": "reddit_fba",
+      "published_at": "2026-09-04T09:37:29.000Z"
+    },
+    {
+      "title": "亚马逊物流公布2026年旺季附加费方案，峰值期每件最高上浮至0.75美元",
+      "summary": "亚马逊物流公布2026年美国旺季附加费方案，征收期为2026年10月25日至2027年1月16日，按三档计价，峰值档11月22日至12月26日每件0.75美元、额外手续费11.90美元、大包裹117.50美元、超重包裹590美元，整体费率较2025年明显提升且已接近UPS、FedEx水平；使用该渠道的美国站自发货卖家应提前将附加费计入Q4报价与物流成本测算。",
+      "category": "policy",
+      "score": 9,
+      "url": "https://www.amz123.com/kx/TDRMOEKY",
+      "source": "amz123",
+      "published_at": "2026-09-04T08:05:14.000Z"
+    },
+    {
+      "title": "Shipment Issue",
+      "summary": "案例：8月初创建含8个SKU的货件并装箱发货，入仓时发现一个SKU未列在货件台账上；卖家提供仓库装箱监控视频，亚马逊仍回复货件无差异、不赔付未列出台账的产品。教训：选择物流选项发货前必须逐一核对装箱SKU与货件台账一致，仅靠标签扫描关联和事后开case难以追回货款。",
+      "category": "experience",
+      "score": 6.2,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1w6tb1b/shipment_issue",
+      "source": "reddit_fba",
+      "published_at": "2026-09-04T03:46:32.000Z"
+    },
+    {
+      "title": "美商务部长确认半导体定向关税将\"非常激烈\"，在美建厂企业可获豁免",
+      "summary": "美半导体关税将定向加征：在美建厂企业可免征关税，未在美投资却向美国供货的企业须承担关税代价；进口至美国后再转口的芯片已被加征25%关税。白宫正审议对笔记本电脑、游戏机、数据中心服务器等含芯成品广泛征税，但税率与适用范围未定。销美电子类卖家应据此评估供应链在美布局与成本预案。",
+      "category": "policy",
+      "score": 7.4,
+      "url": "https://www.amz123.com/kx/FFRRlRm6",
+      "source": "amz123",
+      "published_at": "2026-09-04T08:56:25.000Z"
+    },
+    {
+      "title": "五年流失逾80万卖家，GMV却增9%，亚马逊加速中小卖家洗牌",
+      "summary": "亚马逊五年内全球活跃卖家从逾240万降至不足156万、累计流失超80万，但第三方GMV仍增长9%，美国站不足8000家卖家已贡献一半第三方GMV；洗牌核心是2025年广告收入增长22%、最新Q2再增26%，连续跑赢卖家服务增速约10个百分点，中小卖家自然流量弱、付费流量依赖高导致利润承压，运营上应降低广告依赖、强化自然流量与产品差异化。",
+      "category": "trend",
+      "score": 8.4,
+      "url": "https://www.amz123.com/kx/vDMrxPB6",
+      "source": "amz123",
+      "published_at": "2026-09-04T07:44:49.000Z"
+    },
+    {
+      "title": "DHL、FedEx、UPS三大国际快递同步调整燃油附加费机制",
+      "summary": "DHL、FedEx、UPS同步调整燃油附加费机制：DHL公布9月7-13日香港出口空运长途附加费10.30港元/公斤、短途2.20港元/公斤；FedEx与UPS按周随航空燃油价格滚动调整。旺季空运直发与国际快递到门卖家必须以出货当周官方费率重新核价，防止按旧费率锁价侵蚀利润。",
+      "category": "policy",
+      "score": 7.4,
+      "url": "https://www.amz123.com/kx/EqPmc2Qu",
+      "source": "amz123",
+      "published_at": "2026-09-04T07:24:15.000Z"
+    },
+    {
+      "title": "9810出口讨论的如此美好，实际走的卖家为什么这么少，9810出口对于SKU量大的卖家可行吗？",
+      "summary": "深圳卖家两店年销合计约700万RMB、净利率10%、各约130个SKU、每周发货约10方；咨询三家货代后发现实际走9810的客户最多约5%，中小卖家寥寥无几，因每次出货都需附采购发票和合同，且品名数量一一对应，SKU多者工作量大。楼主结论是自身更适合买单报关，每年交几万元增值税，省下报关费和繁琐发货资料。",
+      "category": "policy",
+      "score": 6.4,
+      "url": "https://www.wearesellers.com/question/120069",
       "source": "wearesellers",
-      "published_at": "2026-09-03T03:09:16.020Z"
+      "published_at": "2026-09-04T10:21:36.052Z"
+    },
+    {
+      "title": "达飞、马士基、MSC相继重返苏伊士 红海航线进入渐进式恢复阶段",
+      "summary": "绕行好望角超一年后头部船司渐进回归苏伊士：截至9月1日达飞完成15次通行、马士基11次；马士基与赫伯罗特8月10日起将AE19改回苏伊士并即时生效，MSC 8月24日公告分阶段恢复亚洲至地中海、北欧及印度至地中海航线，动因是有效运力被极度压缩。美东海运头程时效与运价有望逐步改善，卖家可关注订舱窗口。",
+      "category": "trend",
+      "score": 6.4,
+      "url": "https://www.amz123.com/kx/pRlsptuQ",
+      "source": "amz123",
+      "published_at": "2026-09-04T07:14:05.000Z"
+    },
+    {
+      "title": "美西阿卡迪亚仓库遭突击搜查，逾2.5万件仿牌服饰被查扣",
+      "summary": "洛杉矶CAPE联合联邦探员查扣阿卡迪亚仓库25898件耐克、阿迪达斯仿冒服饰，货值约1000万美元，线索来自入境口岸查验后的信息共享布控。案件说明仿牌货物流向可被口岸数据追踪，一件代发或家庭仓若经营者出逃将陷入货权僵局，卖家应核查货源与仓储链条合规，远离仿牌货代。",
+      "category": "policy",
+      "score": 6.4,
+      "url": "https://www.amz123.com/kx/UnXTujtf",
+      "source": "amz123",
+      "published_at": "2026-09-04T03:12:04.000Z"
     }
   ]
 }
