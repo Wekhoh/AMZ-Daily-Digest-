@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-09-04T10:41:04Z",
-  "digest_date": "2026-09-04",
+  "generated_at_utc": "2026-09-05T10:03:37Z",
+  "digest_date": "2026-09-05",
   "article_count": 50,
   "articles": [
     {
-      "title": "Unlocked $250,000+ in Savings by Fixing One Amazon Category",
-      "summary": "审计品牌发现5个SKU被归入收取15%佣金的Video Game Console and Accessories类目，深挖后确认其实际符合仅8%佣金的Video Game Console类目；为每个SKU开case申诉全部获批，每年节省超20万美元佣金，现正追讨过往按高费率多扣的5万美元报销。方法：定期核对SKU实际类目与佣金费率，发现错配立即开case纠正并追溯索赔。",
+      "title": "无偿解答各类Amazon问题——雨的跨境创业六段坎坷小故事",
+      "summary": "真实踩坑复盘：账号封禁根因包括版权侵权判定、虚拟视频审核不过、FCC认证缺失、评论违规，后果是资金冻结90天、库存报废弃置；投流教训是照搬大佬打法、一款产品堆100多条广告活动导致ACOS飙到185%；工厂定价协议存在被双向背刺风险。避坑方向：合规认证先行、广告投放需自主精细化而非密集堆量、供应链合作要防违约。",
       "category": "experience",
-      "score": 9,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1w6z9ah/unlocked_250000_in_savings_by_fixing_one_amazon",
-      "source": "reddit_fba",
-      "published_at": "2026-09-04T09:14:58.000Z"
-    },
-    {
-      "title": "How to Avoid \"Doubling Down\" When You're Already Maxed Out On a Search Term - Avoid Giving Amazon More Of Your Margin",
-      "summary": "结论：关键词表现好就盲目加价，多半只是白送利润给亚马逊，换不来更多流量。方法：使用账户级搜索词印象份额报告，加价前先查该词印象份额，若已超80%（阈值可自定）说明该搜索词流量接近天花板，尤其精确匹配为主要流量来源时不应再加价；并引FTC诉讼指出亚马逊广告竞价并非真二价拍卖，加价成本风险更高。",
-      "category": "experience",
-      "score": 7.8,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1w6zn7u/how_to_avoid_doubling_down_when_youre_already",
-      "source": "reddit_fba",
-      "published_at": "2026-09-04T09:37:29.000Z"
-    },
-    {
-      "title": "亚马逊物流公布2026年旺季附加费方案，峰值期每件最高上浮至0.75美元",
-      "summary": "亚马逊物流公布2026年美国旺季附加费方案，征收期为2026年10月25日至2027年1月16日，按三档计价，峰值档11月22日至12月26日每件0.75美元、额外手续费11.90美元、大包裹117.50美元、超重包裹590美元，整体费率较2025年明显提升且已接近UPS、FedEx水平；使用该渠道的美国站自发货卖家应提前将附加费计入Q4报价与物流成本测算。",
-      "category": "policy",
-      "score": 9,
-      "url": "https://www.amz123.com/kx/TDRMOEKY",
-      "source": "amz123",
-      "published_at": "2026-09-04T08:05:14.000Z"
-    },
-    {
-      "title": "Shipment Issue",
-      "summary": "案例：8月初创建含8个SKU的货件并装箱发货，入仓时发现一个SKU未列在货件台账上；卖家提供仓库装箱监控视频，亚马逊仍回复货件无差异、不赔付未列出台账的产品。教训：选择物流选项发货前必须逐一核对装箱SKU与货件台账一致，仅靠标签扫描关联和事后开case难以追回货款。",
-      "category": "experience",
-      "score": 6.2,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1w6tb1b/shipment_issue",
-      "source": "reddit_fba",
-      "published_at": "2026-09-04T03:46:32.000Z"
-    },
-    {
-      "title": "美商务部长确认半导体定向关税将\"非常激烈\"，在美建厂企业可获豁免",
-      "summary": "美半导体关税将定向加征：在美建厂企业可免征关税，未在美投资却向美国供货的企业须承担关税代价；进口至美国后再转口的芯片已被加征25%关税。白宫正审议对笔记本电脑、游戏机、数据中心服务器等含芯成品广泛征税，但税率与适用范围未定。销美电子类卖家应据此评估供应链在美布局与成本预案。",
-      "category": "policy",
       "score": 7.4,
-      "url": "https://www.amz123.com/kx/FFRRlRm6",
-      "source": "amz123",
-      "published_at": "2026-09-04T08:56:25.000Z"
+      "url": "https://www.wearesellers.com/question/124187",
+      "source": "wearesellers",
+      "published_at": "2026-09-05T09:38:11.373Z"
     },
     {
-      "title": "五年流失逾80万卖家，GMV却增9%，亚马逊加速中小卖家洗牌",
-      "summary": "亚马逊五年内全球活跃卖家从逾240万降至不足156万、累计流失超80万，但第三方GMV仍增长9%，美国站不足8000家卖家已贡献一半第三方GMV；洗牌核心是2025年广告收入增长22%、最新Q2再增26%，连续跑赢卖家服务增速约10个百分点，中小卖家自然流量弱、付费流量依赖高导致利润承压，运营上应降低广告依赖、强化自然流量与产品差异化。",
+      "title": "选品不是找能做的，是找到不能做的理由",
+      "summary": "选品结论：工具只负责找线索，真正工作是被筛出后找否定理由。方法：用卖家精灵筛月销300到600、上架约30天、售价30美元以上新品；筛出后必查流量词结构，超过50%流量来自品牌词则新卖家无法复制其销量；再核1688采购价与39.99美元售价的利润空间，最后查外观专利，专利附图高度相似即放弃。否定次数越多，留下的机会越可靠。",
+      "category": "experience",
+      "score": 8.4,
+      "url": "https://www.wearesellers.com/question/123785",
+      "source": "wearesellers",
+      "published_at": "2026-09-05T07:51:06.481Z"
+    },
+    {
+      "title": "亚马逊计划2029年自配送近九成美国包裹",
+      "summary": "亚马逊计划2029年由自有网络配送88.7%的美国包裹，高于2027年预计的86.3%，自有网络包裹量从约122亿件增至158亿件；配送融合独立配送服务合作伙伴与Flex司机，并扩张当日送达网络，其占自配送比例将从17.1%升至21.3%。美国站卖家应预判尾程时效与物流格局变化，同步调整入仓节奏与库存前置布局。",
       "category": "trend",
       "score": 8.4,
-      "url": "https://www.amz123.com/kx/vDMrxPB6",
+      "url": "https://www.amz123.com/kx/uDB1AQXH",
       "source": "amz123",
-      "published_at": "2026-09-04T07:44:49.000Z"
+      "published_at": "2026-09-05T06:14:12.000Z"
     },
     {
-      "title": "DHL、FedEx、UPS三大国际快递同步调整燃油附加费机制",
-      "summary": "DHL、FedEx、UPS同步调整燃油附加费机制：DHL公布9月7-13日香港出口空运长途附加费10.30港元/公斤、短途2.20港元/公斤；FedEx与UPS按周随航空燃油价格滚动调整。旺季空运直发与国际快递到门卖家必须以出货当周官方费率重新核价，防止按旧费率锁价侵蚀利润。",
+      "title": "亚马逊严打包内感谢卡诱导留评行为 多卖家因违规被扣分",
+      "summary": "亚马逊近期严厉打击包装内感谢卡诱导留评行为。卖家若在产品包装中放置含有感谢您的评价或有问题联系我们勿用后台等表述的手写卡或明信片，将被判定为评价滥用并扣减账户绩效分，严重者将导致店铺停用。卖家必须立即排查并下架含有此类诱导留评和规避后台沟通表述的包装配件。",
       "category": "policy",
-      "score": 7.4,
-      "url": "https://www.amz123.com/kx/EqPmc2Qu",
+      "score": 9.4,
+      "url": "https://www.amz123.com/kx/gSS4TUzg",
       "source": "amz123",
-      "published_at": "2026-09-04T07:24:15.000Z"
+      "published_at": "2026-06-25T01:45:34+00:00"
     },
     {
-      "title": "9810出口讨论的如此美好，实际走的卖家为什么这么少，9810出口对于SKU量大的卖家可行吗？",
-      "summary": "深圳卖家两店年销合计约700万RMB、净利率10%、各约130个SKU、每周发货约10方；咨询三家货代后发现实际走9810的客户最多约5%，中小卖家寥寥无几，因每次出货都需附采购发票和合同，且品名数量一一对应，SKU多者工作量大。楼主结论是自身更适合买单报关，每年交几万元增值税，省下报关费和繁琐发货资料。",
+      "title": "全球集装箱船队9月将突破3400万TEU",
+      "summary": "BIMCO与Alphaliner数据显示9月初全球集装箱船队约3420万TEU、共6822艘在役，9月计划交付46艘约28.6万TEU，即将历史性突破3400万TEU；过去5年半运力增42%，同期拆解不足30万TEU，在手订单超1400万TEU排至2030年底。运力持续过剩背景下美线运价上行乏力，FBA头程锁价窗口相对从容。",
+      "category": "trend",
+      "score": 6,
+      "url": "https://www.amz123.com/kx/5pKaqOIi",
+      "source": "amz123",
+      "published_at": "2026-09-05T03:02:40.000Z"
+    },
+    {
+      "title": "FBA Calculator",
+      "summary": "楼主免费开放FBA利润计算器：下单前输入采购成本、头程运费、售价与各项费用，直接判定产品是否真有钱赚，避免凭感觉备货、三个月后扣完费用才发现根本没有利润。工具无需注册免费使用，配套FBA Ladder新手路径课程首周1英镑、之后每月99英镑，可只用免费工具并反馈意见。",
+      "category": "experience",
+      "score": 6.8,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1w7w3xe/fba_calculator",
+      "source": "reddit_fba",
+      "published_at": "2026-09-05T09:33:40.000Z"
+    },
+    {
+      "title": "亚马逊美站要求补全原产地信息，6月30日后将影响FBA发货",
+      "summary": "亚马逊美国站要求所有FBA商品必须在2026年6月30日前补全原产地信息，逾期将面临无法创建货件、入库被拒及Listing下架风险。卖家需登录后台规范填报商品原产地，欧洲站部分类目也在同步推进，应尽早排查并补全信息以防发货受阻。",
       "category": "policy",
-      "score": 6.4,
-      "url": "https://www.wearesellers.com/question/120069",
-      "source": "wearesellers",
-      "published_at": "2026-09-04T10:21:36.052Z"
+      "score": 9.4,
+      "url": "https://www.amz123.com/kx/GBj8sDcc",
+      "source": "amz123",
+      "published_at": "2026-06-18T03:28:38+00:00"
     },
     {
-      "title": "达飞、马士基、MSC相继重返苏伊士 红海航线进入渐进式恢复阶段",
-      "summary": "绕行好望角超一年后头部船司渐进回归苏伊士：截至9月1日达飞完成15次通行、马士基11次；马士基与赫伯罗特8月10日起将AE19改回苏伊士并即时生效，MSC 8月24日公告分阶段恢复亚洲至地中海、北欧及印度至地中海航线，动因是有效运力被极度压缩。美东海运头程时效与运价有望逐步改善，卖家可关注订舱窗口。",
+      "title": "甜菜根咀嚼片月销187万美元，亚马逊健康类目10款热销单品盘点",
+      "summary": "健康类目热销数据：甜菜根咀嚼片月销3.84万件以上、月收入187.41万美元居首，HumanN以心血管一氧化氮定位进驻Target、Walmart等超3万家线下门店；氢分子饮水片月收入115.96万美元；Nekteck足部按摩器48.19万美元；Nature's Bounty护发胶囊45.6万美元、好评超7.2万条；Boiron婴儿出牙滴剂19.79万美元、4.7星。主线为家庭自我护理加婴童天然，可作选品对标。",
       "category": "trend",
       "score": 6.4,
-      "url": "https://www.amz123.com/kx/pRlsptuQ",
+      "url": "https://www.amz123.com/kx/A8nfgADQ",
       "source": "amz123",
-      "published_at": "2026-09-04T07:14:05.000Z"
+      "published_at": "2026-09-05T07:49:51.000Z"
     },
     {
-      "title": "美西阿卡迪亚仓库遭突击搜查，逾2.5万件仿牌服饰被查扣",
-      "summary": "洛杉矶CAPE联合联邦探员查扣阿卡迪亚仓库25898件耐克、阿迪达斯仿冒服饰，货值约1000万美元，线索来自入境口岸查验后的信息共享布控。案件说明仿牌货物流向可被口岸数据追踪，一件代发或家庭仓若经营者出逃将陷入货权僵局，卖家应核查货源与仓储链条合规，远离仿牌货代。",
+      "title": "新店铺养号踩协议三，FBM 少量出单就翻车，求低风险养号实操方案",
+      "summary": "全新店铺按服务商方案养号：扣费后9-11天上品、螺旋式上新、前期仅FBM、不上变体、避开儿童类目、暂缓品牌备案，但刚出少量FBM订单即触发协议三，说明该节奏已越过风控阈值。待验证变量：上品节奏、手工或表格上架方式、FBM出单速度哪个触发风控，以及何时适合开FBA和品牌备案，香港公司店铺需额外排查风控点。",
       "category": "policy",
-      "score": 6.4,
-      "url": "https://www.amz123.com/kx/UnXTujtf",
+      "score": 6.2,
+      "url": "https://www.wearesellers.com/question/124218",
+      "source": "wearesellers",
+      "published_at": "2026-09-05T08:51:01.562Z"
+    },
+    {
+      "title": "TikTok美区橡皮泥压花器售价高达39.99美元，价差超50倍",
+      "summary": "国内批发价4至5元的橡皮泥压花器在TikTok美区售39.99美元，价差超50倍；爆单由8月13日博主3秒短视频触发，三周获810万播放和50万点赞。可复用打法：将使用步骤压缩为放泥—按压—出花三个动作，瞄准美国71%手作爱好者与数字排毒需求，短视频验证需求后可同步亚马逊测款。",
+      "category": "trend",
+      "score": 6,
+      "url": "https://www.amz123.com/kx/WsKtcET8",
       "source": "amz123",
-      "published_at": "2026-09-04T03:12:04.000Z"
+      "published_at": "2026-09-05T03:02:42.000Z"
     }
   ]
 }
