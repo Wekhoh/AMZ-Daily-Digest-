@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-09-05T10:03:37Z",
-  "digest_date": "2026-09-05",
+  "generated_at_utc": "2026-09-06T10:29:15Z",
+  "digest_date": "2026-09-06",
   "article_count": 50,
   "articles": [
     {
-      "title": "无偿解答各类Amazon问题——雨的跨境创业六段坎坷小故事",
-      "summary": "真实踩坑复盘：账号封禁根因包括版权侵权判定、虚拟视频审核不过、FCC认证缺失、评论违规，后果是资金冻结90天、库存报废弃置；投流教训是照搬大佬打法、一款产品堆100多条广告活动导致ACOS飙到185%；工厂定价协议存在被双向背刺风险。避坑方向：合规认证先行、广告投放需自主精细化而非密集堆量、供应链合作要防违约。",
+      "title": "入库缺陷费解决办法，附申诉流程",
+      "summary": "货件被误判已删除或已丢弃产生入库缺陷费时，务必等入仓后再申诉，未入仓申诉必被拒且后续大概率继续被拒；临近入仓两周内的先不点确认，海关查验或货代在途的先确认绩效；路径为货件绩效-货件配置问题-查看详情-提交争议，按模板填写并上传POD的PDF，当天收回执，三天内转处理，14天内出结果。",
       "category": "experience",
-      "score": 7.4,
-      "url": "https://www.wearesellers.com/question/124187",
+      "score": 9,
+      "url": "https://www.wearesellers.com/question/123342",
       "source": "wearesellers",
-      "published_at": "2026-09-05T09:38:11.373Z"
+      "published_at": "2026-09-06T04:07:02.486Z"
     },
     {
-      "title": "选品不是找能做的，是找到不能做的理由",
-      "summary": "选品结论：工具只负责找线索，真正工作是被筛出后找否定理由。方法：用卖家精灵筛月销300到600、上架约30天、售价30美元以上新品；筛出后必查流量词结构，超过50%流量来自品牌词则新卖家无法复制其销量；再核1688采购价与39.99美元售价的利润空间，最后查外观专利，专利附图高度相似即放弃。否定次数越多，留下的机会越可靠。",
+      "title": "Sponsored Brands Video Tip: How Long Should You Make Your Scenes? (AB Tested)",
+      "summary": "Sponsored Brands视频场景时长AB测试结论：轮播图片型视频每场景3秒在ACOS与转化率上优于4-5秒；再用同素材对比2秒与3秒，3秒胜出。实操可把SB视频每场景设为3秒作基准；真演员但镜头缓慢平移的素材同样要压缩时长，切换过快到2秒反而掉效果。",
       "category": "experience",
       "score": 8.4,
-      "url": "https://www.wearesellers.com/question/123785",
-      "source": "wearesellers",
-      "published_at": "2026-09-05T07:51:06.481Z"
-    },
-    {
-      "title": "亚马逊计划2029年自配送近九成美国包裹",
-      "summary": "亚马逊计划2029年由自有网络配送88.7%的美国包裹，高于2027年预计的86.3%，自有网络包裹量从约122亿件增至158亿件；配送融合独立配送服务合作伙伴与Flex司机，并扩张当日送达网络，其占自配送比例将从17.1%升至21.3%。美国站卖家应预判尾程时效与物流格局变化，同步调整入仓节奏与库存前置布局。",
-      "category": "trend",
-      "score": 8.4,
-      "url": "https://www.amz123.com/kx/uDB1AQXH",
-      "source": "amz123",
-      "published_at": "2026-09-05T06:14:12.000Z"
-    },
-    {
-      "title": "亚马逊严打包内感谢卡诱导留评行为 多卖家因违规被扣分",
-      "summary": "亚马逊近期严厉打击包装内感谢卡诱导留评行为。卖家若在产品包装中放置含有感谢您的评价或有问题联系我们勿用后台等表述的手写卡或明信片，将被判定为评价滥用并扣减账户绩效分，严重者将导致店铺停用。卖家必须立即排查并下架含有此类诱导留评和规避后台沟通表述的包装配件。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.amz123.com/kx/gSS4TUzg",
-      "source": "amz123",
-      "published_at": "2026-06-25T01:45:34+00:00"
-    },
-    {
-      "title": "全球集装箱船队9月将突破3400万TEU",
-      "summary": "BIMCO与Alphaliner数据显示9月初全球集装箱船队约3420万TEU、共6822艘在役，9月计划交付46艘约28.6万TEU，即将历史性突破3400万TEU；过去5年半运力增42%，同期拆解不足30万TEU，在手订单超1400万TEU排至2030年底。运力持续过剩背景下美线运价上行乏力，FBA头程锁价窗口相对从容。",
-      "category": "trend",
-      "score": 6,
-      "url": "https://www.amz123.com/kx/5pKaqOIi",
-      "source": "amz123",
-      "published_at": "2026-09-05T03:02:40.000Z"
-    },
-    {
-      "title": "FBA Calculator",
-      "summary": "楼主免费开放FBA利润计算器：下单前输入采购成本、头程运费、售价与各项费用，直接判定产品是否真有钱赚，避免凭感觉备货、三个月后扣完费用才发现根本没有利润。工具无需注册免费使用，配套FBA Ladder新手路径课程首周1英镑、之后每月99英镑，可只用免费工具并反馈意见。",
-      "category": "experience",
-      "score": 6.8,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1w7w3xe/fba_calculator",
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1w8qyaz/sponsored_brands_video_tip_how_long_should_you",
       "source": "reddit_fba",
-      "published_at": "2026-09-05T09:33:40.000Z"
+      "published_at": "2026-09-06T08:58:22.000Z"
     },
     {
-      "title": "亚马逊美站要求补全原产地信息，6月30日后将影响FBA发货",
-      "summary": "亚马逊美国站要求所有FBA商品必须在2026年6月30日前补全原产地信息，逾期将面临无法创建货件、入库被拒及Listing下架风险。卖家需登录后台规范填报商品原产地，欧洲站部分类目也在同步推进，应尽早排查并补全信息以防发货受阻。",
+      "title": "厄尔尼诺致旱情复发，巴拿马运河9月3日起日通行名额由36削减至34",
+      "summary": "结论：巴拿马运河因干旱再度限航，9月3日通行名额由36降至34、9月15日降至32，最大吃水9月2日起由15.24米降至14.63米、10月1日拟降至14.48米，无预约船等待约8.5天且船位拍卖溢价攀升。方法：美东方向FBA补货应提前订舱锁定船位、预留到仓缓冲期，评估分批发运或改道美西，并将船位拍卖溢价计入头程成本。",
+      "category": "trend",
+      "score": 7,
+      "url": "https://www.amz123.com/kx/H4l4Y0Qq",
+      "source": "amz123",
+      "published_at": "2026-09-06T03:46:56.000Z"
+    },
+    {
+      "title": "亚马逊服装鞋子类目 FBM 频繁丢车/无购物车，大家遇到过吗？总结了几大核心原因，求交流！",
+      "summary": "服装鞋子FBM丢车排查结论：OTDR需达90%以上，VTR低于95%或迟发率高于4%购物车立刻消失甚至触发账号风险；NCX进入严重区间或ODR超1%致单品丢车；亚马逊爬虫全网比价，Temu、Shein同款低价会被判定价格过高直接取消Buy Box；子变体断货或高退货会单独丢车并拖累父体权重。",
+      "category": "experience",
+      "score": 9,
+      "url": "https://www.wearesellers.com/question/124223",
+      "source": "wearesellers",
+      "published_at": "2026-09-05T18:07:09.295Z"
+    },
+    {
+      "title": "亚马逊集中整治\"重复创建ASIN\"违规，翻新配合Vine套评成主要触发原因",
+      "summary": "亚马逊集中审查重复创建ASIN，大批卖家收到绩效警告、部分店铺被直接停用，核心触发点是翻新加重复创建ASIN的复合违规：反复注册Vine套取免费测评、违规拆分合并变体操控星级、旧库存套新ASIN骗新品流量，滥用Vine列为首要原因；平台综合品牌、型号、核心功能、UPC/EAN、包装及变体关系多维判定，卖家应立即停止翻新与变体操弄类操作。",
       "category": "policy",
       "score": 9.4,
-      "url": "https://www.amz123.com/kx/GBj8sDcc",
+      "url": "https://www.amz123.com/kx/z0Q6YNbV",
       "source": "amz123",
-      "published_at": "2026-06-18T03:28:38+00:00"
+      "published_at": "2026-09-03T02:28:09+00:00"
     },
     {
-      "title": "甜菜根咀嚼片月销187万美元，亚马逊健康类目10款热销单品盘点",
-      "summary": "健康类目热销数据：甜菜根咀嚼片月销3.84万件以上、月收入187.41万美元居首，HumanN以心血管一氧化氮定位进驻Target、Walmart等超3万家线下门店；氢分子饮水片月收入115.96万美元；Nekteck足部按摩器48.19万美元；Nature's Bounty护发胶囊45.6万美元、好评超7.2万条；Boiron婴儿出牙滴剂19.79万美元、4.7星。主线为家庭自我护理加婴童天然，可作选品对标。",
+      "title": "Amazon Freight LTL price increased significantly",
+      "summary": "亚马逊货运LTL运费出现明显跳涨的实证数据：发帖者每周5托发货至FBA，LTL常态价400-500美元，同线路最新报价约750美元且连续3天维持，而FTL整拖仅约850美元。建议发货前连续数日比价LTL与FTL，当两者价差收窄到百元级时改走FTL更划算，并观察涨价是错误定价还是长期调价。",
       "category": "trend",
-      "score": 6.4,
-      "url": "https://www.amz123.com/kx/A8nfgADQ",
-      "source": "amz123",
-      "published_at": "2026-09-05T07:49:51.000Z"
+      "score": 7.4,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1w8843p/amazon_freight_ltl_price_increased_significantly",
+      "source": "reddit_fba",
+      "published_at": "2026-09-05T18:15:26.000Z"
     },
     {
-      "title": "新店铺养号踩协议三，FBM 少量出单就翻车，求低风险养号实操方案",
-      "summary": "全新店铺按服务商方案养号：扣费后9-11天上品、螺旋式上新、前期仅FBM、不上变体、避开儿童类目、暂缓品牌备案，但刚出少量FBM订单即触发协议三，说明该节奏已越过风控阈值。待验证变量：上品节奏、手工或表格上架方式、FBM出单速度哪个触发风控，以及何时适合开FBA和品牌备案，香港公司店铺需额外排查风控点。",
+      "title": "Section 122 sunset was July 24. Here's the actual duty stack that replaced it for China-origin FBA imports (with math)",
+      "summary": "Section 122的10%统一附加税按150天上限于7月24日到期，USTR同日对中国等60个原产地启用301强迫劳动关税：有非强迫劳动供应链证明的Tier B为10%，无证明默认Tier A为12.5%，多数中国出口商无Tier B文件。以3万美元CIF的61章T恤海运为例，叠加MFN 16.5%、301 List 3的25%、Tier A 12.5%、MPF上限634.62美元及HMF 0.125%后，落地税负16,872.12美元，占CIF约56.2%，卖家需按新税栈重算成本与利润。",
       "category": "policy",
-      "score": 6.2,
-      "url": "https://www.wearesellers.com/question/124218",
-      "source": "wearesellers",
-      "published_at": "2026-09-05T08:51:01.562Z"
+      "score": 9.4,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vzd2hi/section_122_sunset_was_july_24_heres_the_actual",
+      "source": "reddit_fba",
+      "published_at": "2026-08-26T23:15:37+00:00"
     },
     {
-      "title": "TikTok美区橡皮泥压花器售价高达39.99美元，价差超50倍",
-      "summary": "国内批发价4至5元的橡皮泥压花器在TikTok美区售39.99美元，价差超50倍；爆单由8月13日博主3秒短视频触发，三周获810万播放和50万点赞。可复用打法：将使用步骤压缩为放泥—按压—出花三个动作，瞄准美国71%手作爱好者与数字排毒需求，短视频验证需求后可同步亚马逊测款。",
+      "title": "贝恩预测2026年美国假日零售销售额将首次突破1万亿美元",
+      "summary": "贝恩预测2026年11至12月美国假日零售额同比增长4.5%，首次突破1万亿美元，超半数名义增量来自通胀而非实际购买量；非门店销售预计增9%并贡献60%增量，线下仅增2.5%；综合商品、服装配饰与电商量价齐升，71%消费者计划在亚马逊购物，卖家应优先布局线上渠道及上述量价齐升品类。",
+      "category": "trend",
+      "score": 8.4,
+      "url": "https://www.amz123.com/kx/pQ1sm74o",
+      "source": "amz123",
+      "published_at": "2026-09-06T03:06:01.000Z"
+    },
+    {
+      "title": "1688与阿里国际站由张阔统管，AI供应链实现互通",
+      "summary": "阿里将1688与阿里国际站统一交由张阔管理，两平台独立运营但战略协同升级；AI工具Accio Work已实现对1688供应链的调用，付费商家超5万家，选品、找货、询盘分析并入同一工作流，海外买家的模糊趋势可转为带规格与交期的清晰询盘。从1688采购的美国站卖家可借此缩短找货路径、提升选品与询盘效率。",
       "category": "trend",
       "score": 6,
-      "url": "https://www.amz123.com/kx/WsKtcET8",
+      "url": "https://www.amz123.com/kx/a0Zfu5lI",
       "source": "amz123",
-      "published_at": "2026-09-05T03:02:42.000Z"
+      "published_at": "2026-09-06T01:24:22.000Z"
+    },
+    {
+      "title": "海领船务清算人致函吉达货主：放货授权已出具，相关费用须自担",
+      "summary": "结论：海领船务因OFAC制裁于2026年8月2日进入清算，吉达港滞留货物已获放货授权但码头未实质回复。方法：货主持9月4日清算人出具的Release Authority，直接联系Red Sea Gateway Terminal或DP World南集装箱码头及沙特持牌代理提货；注意公司不主张留置权但不代付任何费用，滞港杂费由货主自担，需自行催办并跟进码头响应。",
+      "category": "other",
+      "score": 6,
+      "url": "https://www.amz123.com/kx/zmoK4QMw",
+      "source": "amz123",
+      "published_at": "2026-09-06T05:07:25.000Z"
     }
   ]
 }
