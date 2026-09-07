@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-09-06T10:29:15Z",
-  "digest_date": "2026-09-06",
+  "generated_at_utc": "2026-09-07T11:40:26Z",
+  "digest_date": "2026-09-07",
   "article_count": 50,
   "articles": [
     {
-      "title": "入库缺陷费解决办法，附申诉流程",
-      "summary": "货件被误判已删除或已丢弃产生入库缺陷费时，务必等入仓后再申诉，未入仓申诉必被拒且后续大概率继续被拒；临近入仓两周内的先不点确认，海关查验或货代在途的先确认绩效；路径为货件绩效-货件配置问题-查看详情-提交争议，按模板填写并上传POD的PDF，当天收回执，三天内转处理，14天内出结果。",
-      "category": "experience",
-      "score": 9,
-      "url": "https://www.wearesellers.com/question/123342",
-      "source": "wearesellers",
-      "published_at": "2026-09-06T04:07:02.486Z"
-    },
-    {
-      "title": "Sponsored Brands Video Tip: How Long Should You Make Your Scenes? (AB Tested)",
-      "summary": "Sponsored Brands视频场景时长AB测试结论：轮播图片型视频每场景3秒在ACOS与转化率上优于4-5秒；再用同素材对比2秒与3秒，3秒胜出。实操可把SB视频每场景设为3秒作基准；真演员但镜头缓慢平移的素材同样要压缩时长，切换过快到2秒反而掉效果。",
-      "category": "experience",
-      "score": 8.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1w8qyaz/sponsored_brands_video_tip_how_long_should_you",
-      "source": "reddit_fba",
-      "published_at": "2026-09-06T08:58:22.000Z"
-    },
-    {
-      "title": "厄尔尼诺致旱情复发，巴拿马运河9月3日起日通行名额由36削减至34",
-      "summary": "结论：巴拿马运河因干旱再度限航，9月3日通行名额由36降至34、9月15日降至32，最大吃水9月2日起由15.24米降至14.63米、10月1日拟降至14.48米，无预约船等待约8.5天且船位拍卖溢价攀升。方法：美东方向FBA补货应提前订舱锁定船位、预留到仓缓冲期，评估分批发运或改道美西，并将船位拍卖溢价计入头程成本。",
-      "category": "trend",
-      "score": 7,
-      "url": "https://www.amz123.com/kx/H4l4Y0Qq",
-      "source": "amz123",
-      "published_at": "2026-09-06T03:46:56.000Z"
-    },
-    {
-      "title": "亚马逊服装鞋子类目 FBM 频繁丢车/无购物车，大家遇到过吗？总结了几大核心原因，求交流！",
-      "summary": "服装鞋子FBM丢车排查结论：OTDR需达90%以上，VTR低于95%或迟发率高于4%购物车立刻消失甚至触发账号风险；NCX进入严重区间或ODR超1%致单品丢车；亚马逊爬虫全网比价，Temu、Shein同款低价会被判定价格过高直接取消Buy Box；子变体断货或高退货会单独丢车并拖累父体权重。",
-      "category": "experience",
-      "score": 9,
-      "url": "https://www.wearesellers.com/question/124223",
-      "source": "wearesellers",
-      "published_at": "2026-09-05T18:07:09.295Z"
-    },
-    {
-      "title": "亚马逊集中整治\"重复创建ASIN\"违规，翻新配合Vine套评成主要触发原因",
-      "summary": "亚马逊集中审查重复创建ASIN，大批卖家收到绩效警告、部分店铺被直接停用，核心触发点是翻新加重复创建ASIN的复合违规：反复注册Vine套取免费测评、违规拆分合并变体操控星级、旧库存套新ASIN骗新品流量，滥用Vine列为首要原因；平台综合品牌、型号、核心功能、UPC/EAN、包装及变体关系多维判定，卖家应立即停止翻新与变体操弄类操作。",
+      "title": "亚马逊美国FBA假日旺季与燃油附加费双重叠加，卖家成本压力显著上升",
+      "summary": "美国站Q4费用调整落地：2026年10月15日至2027年1月14日全面加收假日旺季配送费，按仓库出库时间计费，9月成交但出库晚于10月15日同样适用旺季费率，退货后旺季费不退；4月17日起3.5%燃油及物流附加费再叠加其上。卖家需重算低客单价薄利产品利润，尽量在10月15日前完成出库以规避旺季费。",
       "category": "policy",
       "score": 9.4,
-      "url": "https://www.amz123.com/kx/z0Q6YNbV",
+      "url": "https://www.amz123.com/kx/M5oOkpHY",
       "source": "amz123",
-      "published_at": "2026-09-03T02:28:09+00:00"
+      "published_at": "2026-09-07T08:47:14.000Z"
     },
     {
-      "title": "Amazon Freight LTL price increased significantly",
-      "summary": "亚马逊货运LTL运费出现明显跳涨的实证数据：发帖者每周5托发货至FBA，LTL常态价400-500美元，同线路最新报价约750美元且连续3天维持，而FTL整拖仅约850美元。建议发货前连续数日比价LTL与FTL，当两者价差收窄到百元级时改走FTL更划算，并观察涨价是错误定价还是长期调价。",
-      "category": "trend",
-      "score": 7.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1w8843p/amazon_freight_ltl_price_increased_significantly",
-      "source": "reddit_fba",
-      "published_at": "2026-09-05T18:15:26.000Z"
-    },
-    {
-      "title": "Section 122 sunset was July 24. Here's the actual duty stack that replaced it for China-origin FBA imports (with math)",
-      "summary": "Section 122的10%统一附加税按150天上限于7月24日到期，USTR同日对中国等60个原产地启用301强迫劳动关税：有非强迫劳动供应链证明的Tier B为10%，无证明默认Tier A为12.5%，多数中国出口商无Tier B文件。以3万美元CIF的61章T恤海运为例，叠加MFN 16.5%、301 List 3的25%、Tier A 12.5%、MPF上限634.62美元及HMF 0.125%后，落地税负16,872.12美元，占CIF约56.2%，卖家需按新税栈重算成本与利润。",
+      "title": "美国CBP将于9月18日强化IOR审核，跨境卖家清关风险上升",
+      "summary": "美国CBP自2026年9月18日起强化IOR（登记进口商）审核，进口商备案的公司名称、地址、税务资料错误、缺失或长期未更新将影响IOR资格并干扰进口申报。依赖货代或第三方IOR服务的中国卖家合规门槛显著提高，资质异常极易导致清关受阻、滞港，应尽快自查并更新备案信息以保住进口清关资格。",
       "category": "policy",
       "score": 9.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vzd2hi/section_122_sunset_was_july_24_heres_the_actual",
+      "url": "https://www.amz123.com/kx/YXfoKl6v",
+      "source": "amz123",
+      "published_at": "2026-09-07T02:12:10.000Z"
+    },
+    {
+      "title": "运价分化：美西40尺柜涨至6361美元，北欧航线出现回调",
+      "summary": "截至9月7日，亚洲至美西40尺柜NYSHEX指数约6361美元，周环比涨1%；北欧航线约4059美元，跌4.1%，走势分化。Q4海外旺季备货启动推升美西需求，运价仍受舱位供需、地缘局势与油价影响存在波动。美区卖家宜尽早安排头程备货锁定舱位与价格，避免旺季运价上行侵蚀利润。",
+      "category": "trend",
+      "score": 6.4,
+      "url": "https://www.amz123.com/kx/mdj5G8Ie",
+      "source": "amz123",
+      "published_at": "2026-09-07T07:06:02.000Z"
+    },
+    {
+      "title": "员工侵权被判赔156万元，跨境卖家数据安全管理再受关注",
+      "summary": "深圳某跨境公司前员工利用职务便利，将热销产品Listing资料、产品图片及核心运营数据用于个人亚马逊店铺，被判赔23.2万美元约合156万元人民币。卖家需对Listing、广告报表、退货记录、供应商报价等运营资产做权限分级与离职数据审计，防范内部数据外泄；该案信息源自网传通报，裁判文书尚未披露，细节待权威确认。",
+      "category": "trend",
+      "score": 6.4,
+      "url": "https://www.amz123.com/kx/YFqnV8GW",
+      "source": "amz123",
+      "published_at": "2026-09-07T09:48:19.000Z"
+    },
+    {
+      "title": "美国测评封号会导致澳洲封号吗？美国澳洲是同一套资料，邮箱也是一样的。",
+      "summary": "2026年6月11日美国新账号推新品做真人测评，上十来个好评、上评过快留评率过高，被以操控评论封号，申诉发现是二刷页面、多个服务商救不回，体检称高级别经理封号难申诉；同一套资料同一邮箱的澳洲站截至9月4日仍正常，关联是否封店无定论。可借鉴的教训是控制上评节奏与留评率。",
+      "category": "experience",
+      "score": 6.2,
+      "url": "https://www.wearesellers.com/question/124196",
+      "source": "wearesellers",
+      "published_at": "2026-09-07T06:20:41.817Z"
+    },
+    {
+      "title": "MyLevis+12套提示词，跑通亚马逊选品-Listing-广告搭建全流程（附使用教程和Skill文件）",
+      "summary": "用MyLevis Agent加卖家精灵MCP跑通选品到广告全流程：MCP可在能力市场一键安装，或手动配置MCP Key并测试连接，注意拿MCP Key而非API Key；市场调研三步：类目体检看集中度防巨头垄断陪跑、验证核心关键词流量趋势辨增量存量、挖掘细分市场找新品机会；结论示例：家居小件为开放市场，建议15至20美金价格带切入，避开10美金以下轻小件。",
+      "category": "experience",
+      "score": 9,
+      "url": "https://www.wearesellers.com/question/124280",
+      "source": "wearesellers",
+      "published_at": "2026-09-07T10:21:09.965Z"
+    },
+    {
+      "title": "售价59美元的基督教主题卫衣在TikTok美区30天销售额达32.5万美元",
+      "summary": "基督教主题卫衣在TikTok美区30天销售额32.5万美元，占累计57.67万美元的55%以上。打法核心：以PSALM、GLO等信仰符号做极简设计，避免宗教图案堆叠；Oversized宽松廓形配超大袋鼠口袋与拉链暗袋，棉质面料兼顾舒适；定价59美元面向美国信仰消费人群，可作为美区服饰选品参考。",
+      "category": "experience",
+      "score": 6,
+      "url": "https://www.amz123.com/kx/Swv0v5Ul",
+      "source": "amz123",
+      "published_at": "2026-09-07T08:57:28.000Z"
+    },
+    {
+      "title": "How do you get an Amazon private-label brand name approved before mass production?",
+      "summary": "私牌卖家在量产前想先获亚马逊品牌名批准：USPTO查重通过不等于亚马逊认可，且Seller Central要求带品牌名的实物产品照片；降低损失的可行路径是先让工厂做一件打标样品、提交照片获批后再批量生产，避免整单刻标后被拒造成大额损失。",
+      "category": "policy",
+      "score": 7.8,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1w8xhrx/how_do_you_get_an_amazon_privatelabel_brand_name",
       "source": "reddit_fba",
-      "published_at": "2026-08-26T23:15:37+00:00"
+      "published_at": "2026-09-06T14:20:57.000Z"
     },
     {
-      "title": "贝恩预测2026年美国假日零售销售额将首次突破1万亿美元",
-      "summary": "贝恩预测2026年11至12月美国假日零售额同比增长4.5%，首次突破1万亿美元，超半数名义增量来自通胀而非实际购买量；非门店销售预计增9%并贡献60%增量，线下仅增2.5%；综合商品、服装配饰与电商量价齐升，71%消费者计划在亚马逊购物，卖家应优先布局线上渠道及上述量价齐升品类。",
-      "category": "trend",
-      "score": 8.4,
-      "url": "https://www.amz123.com/kx/pQ1sm74o",
-      "source": "amz123",
-      "published_at": "2026-09-06T03:06:01.000Z"
+      "title": "亚马逊欧洲站乳胶气球｜CE‑EN71 务必带上 EN71‑12 亚硝胺测试",
+      "summary": "欧盟/英国站把气球按玩具监管，需完整CE-EN71报告：EN71-1物理机械、EN71-2阻燃、EN71-3重金属迁移，乳胶气球强制加做EN71-12亚硝胺测试，3岁以上也不豁免，缺项会触发下架、审核甚至召回；包装需标注天然乳胶材质和8岁以下需成人监护警示语，上架前核对报告标准版本与测试项目。",
+      "category": "policy",
+      "score": 8.6,
+      "url": "https://www.wearesellers.com/question/124278",
+      "source": "wearesellers",
+      "published_at": "2026-09-07T10:21:16.836Z"
     },
     {
-      "title": "1688与阿里国际站由张阔统管，AI供应链实现互通",
-      "summary": "阿里将1688与阿里国际站统一交由张阔管理，两平台独立运营但战略协同升级；AI工具Accio Work已实现对1688供应链的调用，付费商家超5万家，选品、找货、询盘分析并入同一工作流，海外买家的模糊趋势可转为带规格与交期的清晰询盘。从1688采购的美国站卖家可借此缩短找货路径、提升选品与询盘效率。",
-      "category": "trend",
-      "score": 6,
-      "url": "https://www.amz123.com/kx/a0Zfu5lI",
-      "source": "amz123",
-      "published_at": "2026-09-06T01:24:22.000Z"
-    },
-    {
-      "title": "海领船务清算人致函吉达货主：放货授权已出具，相关费用须自担",
-      "summary": "结论：海领船务因OFAC制裁于2026年8月2日进入清算，吉达港滞留货物已获放货授权但码头未实质回复。方法：货主持9月4日清算人出具的Release Authority，直接联系Red Sea Gateway Terminal或DP World南集装箱码头及沙特持牌代理提货；注意公司不主张留置权但不代付任何费用，滞港杂费由货主自担，需自行催办并跟进码头响应。",
-      "category": "other",
-      "score": 6,
-      "url": "https://www.amz123.com/kx/zmoK4QMw",
-      "source": "amz123",
-      "published_at": "2026-09-06T05:07:25.000Z"
+      "title": "新入职，要求销量翻倍，毛利20%才能转正，求助大佬该怎么做？",
+      "summary": "一年经验运营接手小类200的老品，转正条件是销量翻倍且毛利20%。痛点：30多个广告活动预算分散在8-20美元、cpc0.6、单活动日点击仅15-30下难出单；自有流量词500多个远少于竞品1200个。待解：是否打不相关大词、如何增加关键词收录、参考30天（CR12%、ACOS22%）还是7天（CR8%、ACOS30%）数据、30多条广告如何取舍调整。",
+      "category": "experience",
+      "score": 6.8,
+      "url": "https://www.wearesellers.com/question/111743",
+      "source": "wearesellers",
+      "published_at": "2026-09-07T10:21:19.122Z"
     }
   ]
 }
