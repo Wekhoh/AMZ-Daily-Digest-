@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-09-07T11:40:26Z",
-  "digest_date": "2026-09-07",
+  "generated_at_utc": "2026-09-08T10:34:58Z",
+  "digest_date": "2026-09-08",
   "article_count": 50,
   "articles": [
     {
-      "title": "亚马逊美国FBA假日旺季与燃油附加费双重叠加，卖家成本压力显著上升",
-      "summary": "美国站Q4费用调整落地：2026年10月15日至2027年1月14日全面加收假日旺季配送费，按仓库出库时间计费，9月成交但出库晚于10月15日同样适用旺季费率，退货后旺季费不退；4月17日起3.5%燃油及物流附加费再叠加其上。卖家需重算低客单价薄利产品利润，尽量在10月15日前完成出库以规避旺季费。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.amz123.com/kx/M5oOkpHY",
-      "source": "amz123",
-      "published_at": "2026-09-07T08:47:14.000Z"
-    },
-    {
-      "title": "美国CBP将于9月18日强化IOR审核，跨境卖家清关风险上升",
-      "summary": "美国CBP自2026年9月18日起强化IOR（登记进口商）审核，进口商备案的公司名称、地址、税务资料错误、缺失或长期未更新将影响IOR资格并干扰进口申报。依赖货代或第三方IOR服务的中国卖家合规门槛显著提高，资质异常极易导致清关受阻、滞港，应尽快自查并更新备案信息以保住进口清关资格。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.amz123.com/kx/YXfoKl6v",
-      "source": "amz123",
-      "published_at": "2026-09-07T02:12:10.000Z"
-    },
-    {
-      "title": "运价分化：美西40尺柜涨至6361美元，北欧航线出现回调",
-      "summary": "截至9月7日，亚洲至美西40尺柜NYSHEX指数约6361美元，周环比涨1%；北欧航线约4059美元，跌4.1%，走势分化。Q4海外旺季备货启动推升美西需求，运价仍受舱位供需、地缘局势与油价影响存在波动。美区卖家宜尽早安排头程备货锁定舱位与价格，避免旺季运价上行侵蚀利润。",
-      "category": "trend",
-      "score": 6.4,
-      "url": "https://www.amz123.com/kx/mdj5G8Ie",
-      "source": "amz123",
-      "published_at": "2026-09-07T07:06:02.000Z"
-    },
-    {
-      "title": "员工侵权被判赔156万元，跨境卖家数据安全管理再受关注",
-      "summary": "深圳某跨境公司前员工利用职务便利，将热销产品Listing资料、产品图片及核心运营数据用于个人亚马逊店铺，被判赔23.2万美元约合156万元人民币。卖家需对Listing、广告报表、退货记录、供应商报价等运营资产做权限分级与离职数据审计，防范内部数据外泄；该案信息源自网传通报，裁判文书尚未披露，细节待权威确认。",
-      "category": "trend",
-      "score": 6.4,
-      "url": "https://www.amz123.com/kx/YFqnV8GW",
-      "source": "amz123",
-      "published_at": "2026-09-07T09:48:19.000Z"
-    },
-    {
-      "title": "美国测评封号会导致澳洲封号吗？美国澳洲是同一套资料，邮箱也是一样的。",
-      "summary": "2026年6月11日美国新账号推新品做真人测评，上十来个好评、上评过快留评率过高，被以操控评论封号，申诉发现是二刷页面、多个服务商救不回，体检称高级别经理封号难申诉；同一套资料同一邮箱的澳洲站截至9月4日仍正常，关联是否封店无定论。可借鉴的教训是控制上评节奏与留评率。",
+      "title": "重复创建ASIN导致绩效通知了，申述失败不知道咋办了",
+      "summary": "同一款连衣裙换图案时先新建独立链接又在老链接添加子体，双路径上架触发重复ASIN绩效通知；删除新链接后两次申诉均失败，说明仅删除链接或提交实拍差异图不足以通过审核。正确做法是新品一律以变体挂在既有父体下，避免重复铺货，申诉需说明操作失误并给出完整差异证据链。",
       "category": "experience",
-      "score": 6.2,
-      "url": "https://www.wearesellers.com/question/124196",
+      "score": 6.6,
+      "url": "https://www.wearesellers.com/question/124331",
       "source": "wearesellers",
-      "published_at": "2026-09-07T06:20:41.817Z"
+      "published_at": "2026-09-08T10:26:43.196Z"
     },
     {
-      "title": "MyLevis+12套提示词，跑通亚马逊选品-Listing-广告搭建全流程（附使用教程和Skill文件）",
-      "summary": "用MyLevis Agent加卖家精灵MCP跑通选品到广告全流程：MCP可在能力市场一键安装，或手动配置MCP Key并测试连接，注意拿MCP Key而非API Key；市场调研三步：类目体检看集中度防巨头垄断陪跑、验证核心关键词流量趋势辨增量存量、挖掘细分市场找新品机会；结论示例：家居小件为开放市场，建议15至20美金价格带切入，避开10美金以下轻小件。",
+      "title": "亚马逊大批Listing划线价异常消失，卖家订单量大幅下滑",
+      "summary": "美国站大量Listing划线价无故消失、专享折扣报错，部分店铺六成乃至全部商品划线失效，叠加9月7日劳动节假期线下分流，销量腰斩、近三天单量仅为日常三分之一；业内消息指亚马逊将推行新参考价规则：90天周期内至少10%的天数按参考价成交才能展示划线价。卖家需立即核查前台优惠展示并调整定价，保证周期内有足够参考价出单天数。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.amz123.com/kx/6SrmZULT",
+      "source": "amz123",
+      "published_at": "2026-09-08T02:12:27.000Z"
+    },
+    {
+      "title": "What’s your best Amazon Ads “hack” that actually works?",
+      "summary": "介绍一种名为LAZY_PPC的低成本亚马逊广告实操打法。通过手动广告添加约200个系统推荐的目标（含多种匹配模式与商品定位），将竞价设在0.1美元以下，每双月更新一次，实现低曝光下高投资回报率的自动出单。",
+      "category": "experience",
+      "score": 9.4,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1umisqm/whats_your_best_amazon_ads_hack_that_actually",
+      "source": "reddit_fba",
+      "published_at": "2026-07-03T16:17:23+00:00"
+    },
+    {
+      "title": "好消息！用这个工具不用买家账号也能看亚马逊评论了",
+      "summary": "亚马逊前台评论限制锁的是访问账号而非评论本身，手动翻页易被风控标记。卖家精灵新版评论分析无需买家账号，基于页面可展示评论持续抓取更新，单次最多约500条样本并标明各星级条数；报告提供评论摘要、结论可溯源原始评论、少数但值得关注的反馈和使用情境洞察，支持导出原始数据。适合竞品差评挖掘与VOC分析，可从边缘反馈挖掘产品切入点。",
+      "category": "experience",
+      "score": 7.2,
+      "url": "https://www.wearesellers.com/question/124337",
+      "source": "wearesellers",
+      "published_at": "2026-09-08T10:08:17.422Z"
+    },
+    {
+      "title": "2026年亚马逊个人卖家还要赌1个爆款吗？我想改成小批量测试，先做5个盈利SKU再复制，靠谱吗？",
+      "summary": "提出不押单爆款的个人卖家模式：保留稳定盈利品保现金流；每月小批量测新品，用广告与市场数据判断需求、点击、转化与利润；设测试周期后分类处置——能赚钱放大、问题明确优化、数据差淘汰；滚动复制把5个盈利SKU扩至10个以上；AI用于选品机会、竞品与Review分析、Listing撰写和广告数据分析，人负责选方向与判断。",
+      "category": "trend",
+      "score": 7.4,
+      "url": "https://www.wearesellers.com/question/124313",
+      "source": "wearesellers",
+      "published_at": "2026-09-08T10:01:21.993Z"
+    },
+    {
+      "title": "干货｜纽扣电池出口美国全套认证&测试标准（2026最新）",
+      "summary": "纽扣电池输美分两套合规体系：裸电池需ANSI C18.3M、16CFR1700儿童防开启包装、GCC证书及UN38.3摘要加SDS；内置电池整机需16CFR1263/UL4200A电池仓测试，机身外包装说明书三处警示标签缺一即下架清关失败，儿童产品出CPC，整机按PI967运输；最常见下架原因是只做C18.3M不做UL4200A，建议同步加州65筛查。",
+      "category": "policy",
+      "score": 9,
+      "url": "https://www.wearesellers.com/question/124336",
+      "source": "wearesellers",
+      "published_at": "2026-09-08T09:49:24.251Z"
+    },
+    {
+      "title": "5个方法快速搭建亚马逊评论体系：别再让Listing裸奔了",
+      "summary": "直评无权重但可让无评链接显示星级并占位父体最多4个直评位防竞品上差评，无质保市价20元内、质保一月约90元；Vine为官方合规渠道，最高200美元、单父体限30个，缺点是回评不稳、高货值领取慢且领取者需付约35%税费，降价促领后涨价易丢购物车；定制Vine约300-500元一条，建议单独子体操作，不动主推链接。",
+      "category": "experience",
+      "score": 8.4,
+      "url": "https://www.wearesellers.com/question/116930",
+      "source": "wearesellers",
+      "published_at": "2026-09-08T09:42:36.029Z"
+    },
+    {
+      "title": "这个跨境平台扩大招商，邀请制！",
+      "summary": "德国第二大电商平台OTTO首次向全欧洲卖家开放，此前仅限德国注册且持德国VAT卖家；一年1170万顾客增3%、商品数增26%破1800万件、第三方伙伴增33%超6500家，系德国电商下滑11.8%下逆势增长。客单价约230欧元，坚持限量邀请加人工审核，核查上年德国或全球销售额；2025年推半托管绕开德国公司、本地仓、德语客服门槛，2026年夏开放膳食补充剂、太阳能板等新品类。",
+      "category": "trend",
+      "score": 7.2,
+      "url": "https://www.wearesellers.com/question/124332",
+      "source": "wearesellers",
+      "published_at": "2026-09-08T09:31:40.885Z"
+    },
+    {
+      "title": "83% 卖家在用 AI，25% 却看不到任何结果",
+      "summary": "结论：AI放大效率而非思路。83.4%卖家在用AI，25.4%无任何可衡量结果，根源是让AI给思路而规则须自己定，否则只得平均答案，全员同质化只能拼价格。卖家63.5%用在listing优化属内容生产，平台却用Rufus以一方数据建推荐引擎决定可见性，写快三倍不会多获推荐；有思路者应借AI省试错时间，腾手做定向、判断、抓资源。",
+      "category": "trend",
+      "score": 8,
+      "url": "https://www.wearesellers.com/question/124286",
+      "source": "wearesellers",
+      "published_at": "2026-09-08T09:26:49.442Z"
+    },
+    {
+      "title": "自动4拆、手动3拆真的有必要吗？聊聊新品广告为什么不能只看结构",
+      "summary": "结论：拆活动价值不在权重，在独立控制。仅为设不同基础竞价不必拆，同活动可对不同关键词和匹配方式设不同竞价；需独立预算、独立广告位、独立竞价策略、独立考核目标时拆分才有价值。预算有限时拆太细会把钱隔离成多个池，A剩余预算不会补B，高CPC类目更难积累点击样本；独立预算既保护赢家也保护输家，持续低效流量不应机械保留独立预算。",
       "category": "experience",
       "score": 9,
-      "url": "https://www.wearesellers.com/question/124280",
+      "url": "https://www.wearesellers.com/question/124263",
       "source": "wearesellers",
-      "published_at": "2026-09-07T10:21:09.965Z"
-    },
-    {
-      "title": "售价59美元的基督教主题卫衣在TikTok美区30天销售额达32.5万美元",
-      "summary": "基督教主题卫衣在TikTok美区30天销售额32.5万美元，占累计57.67万美元的55%以上。打法核心：以PSALM、GLO等信仰符号做极简设计，避免宗教图案堆叠；Oversized宽松廓形配超大袋鼠口袋与拉链暗袋，棉质面料兼顾舒适；定价59美元面向美国信仰消费人群，可作为美区服饰选品参考。",
-      "category": "experience",
-      "score": 6,
-      "url": "https://www.amz123.com/kx/Swv0v5Ul",
-      "source": "amz123",
-      "published_at": "2026-09-07T08:57:28.000Z"
-    },
-    {
-      "title": "How do you get an Amazon private-label brand name approved before mass production?",
-      "summary": "私牌卖家在量产前想先获亚马逊品牌名批准：USPTO查重通过不等于亚马逊认可，且Seller Central要求带品牌名的实物产品照片；降低损失的可行路径是先让工厂做一件打标样品、提交照片获批后再批量生产，避免整单刻标后被拒造成大额损失。",
-      "category": "policy",
-      "score": 7.8,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1w8xhrx/how_do_you_get_an_amazon_privatelabel_brand_name",
-      "source": "reddit_fba",
-      "published_at": "2026-09-06T14:20:57.000Z"
-    },
-    {
-      "title": "亚马逊欧洲站乳胶气球｜CE‑EN71 务必带上 EN71‑12 亚硝胺测试",
-      "summary": "欧盟/英国站把气球按玩具监管，需完整CE-EN71报告：EN71-1物理机械、EN71-2阻燃、EN71-3重金属迁移，乳胶气球强制加做EN71-12亚硝胺测试，3岁以上也不豁免，缺项会触发下架、审核甚至召回；包装需标注天然乳胶材质和8岁以下需成人监护警示语，上架前核对报告标准版本与测试项目。",
-      "category": "policy",
-      "score": 8.6,
-      "url": "https://www.wearesellers.com/question/124278",
-      "source": "wearesellers",
-      "published_at": "2026-09-07T10:21:16.836Z"
-    },
-    {
-      "title": "新入职，要求销量翻倍，毛利20%才能转正，求助大佬该怎么做？",
-      "summary": "一年经验运营接手小类200的老品，转正条件是销量翻倍且毛利20%。痛点：30多个广告活动预算分散在8-20美元、cpc0.6、单活动日点击仅15-30下难出单；自有流量词500多个远少于竞品1200个。待解：是否打不相关大词、如何增加关键词收录、参考30天（CR12%、ACOS22%）还是7天（CR8%、ACOS30%）数据、30多条广告如何取舍调整。",
-      "category": "experience",
-      "score": 6.8,
-      "url": "https://www.wearesellers.com/question/111743",
-      "source": "wearesellers",
-      "published_at": "2026-09-07T10:21:19.122Z"
+      "published_at": "2026-09-08T08:26:51.782Z"
     }
   ]
 }
