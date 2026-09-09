@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-09-08T10:34:58Z",
-  "digest_date": "2026-09-08",
+  "generated_at_utc": "2026-09-09T10:45:13Z",
+  "digest_date": "2026-09-09",
   "article_count": 50,
   "articles": [
     {
-      "title": "重复创建ASIN导致绩效通知了，申述失败不知道咋办了",
-      "summary": "同一款连衣裙换图案时先新建独立链接又在老链接添加子体，双路径上架触发重复ASIN绩效通知；删除新链接后两次申诉均失败，说明仅删除链接或提交实拍差异图不足以通过审核。正确做法是新品一律以变体挂在既有父体下，避免重复铺货，申诉需说明操作失误并给出完整差异证据链。",
+      "title": "AI和亚马逊-我用WorkBuddy手搓了一个亚马逊分时广告诊断台",
+      "summary": "以真实账户14天701次点击数据证明按小时ACOS做分时调价近一半概率是错的：3小时段仅88次点击，95%置信区间宽至8.2%到23.5%，无差异时段合计误判率46.6%；逐时段检验会遇多重比较陷阱，p=0.023经Bonferroni校正后0.55不显著；正确框架为先算单时段所需点击数做样本量闸门，再检验加校正，最后才调价。",
       "category": "experience",
-      "score": 6.6,
-      "url": "https://www.wearesellers.com/question/124331",
+      "score": 9,
+      "url": "https://www.wearesellers.com/question/124296",
       "source": "wearesellers",
-      "published_at": "2026-09-08T10:26:43.196Z"
+      "published_at": "2026-09-09T10:34:42.864Z"
     },
     {
-      "title": "亚马逊大批Listing划线价异常消失，卖家订单量大幅下滑",
-      "summary": "美国站大量Listing划线价无故消失、专享折扣报错，部分店铺六成乃至全部商品划线失效，叠加9月7日劳动节假期线下分流，销量腰斩、近三天单量仅为日常三分之一；业内消息指亚马逊将推行新参考价规则：90天周期内至少10%的天数按参考价成交才能展示划线价。卖家需立即核查前台优惠展示并调整定价，保证周期内有足够参考价出单天数。",
+      "title": "求助！美国站cpc审核一直被驳回，追踪标签贴外包装不行了？客服说必须永久附着，大家怎么过的？",
+      "summary": "美国站儿童产品CPC审核口径收紧：追踪标签贴在外包装再拍正反面照片提交已被驳回，CPSC要求所有儿童产品必须有永久区别性标记，追踪标签须以缝制、热转印、印刷或牢固粘贴等不易脱落移除的方式附着在产品本体上，样版或效果图形式的标签不符合合规政策。以前外包装贴标过审的做法现已失效，需改到产品本体做永久标识。",
       "category": "policy",
-      "score": 9.4,
-      "url": "https://www.amz123.com/kx/6SrmZULT",
-      "source": "amz123",
-      "published_at": "2026-09-08T02:12:27.000Z"
-    },
-    {
-      "title": "What’s your best Amazon Ads “hack” that actually works?",
-      "summary": "介绍一种名为LAZY_PPC的低成本亚马逊广告实操打法。通过手动广告添加约200个系统推荐的目标（含多种匹配模式与商品定位），将竞价设在0.1美元以下，每双月更新一次，实现低曝光下高投资回报率的自动出单。",
-      "category": "experience",
-      "score": 9.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1umisqm/whats_your_best_amazon_ads_hack_that_actually",
-      "source": "reddit_fba",
-      "published_at": "2026-07-03T16:17:23+00:00"
-    },
-    {
-      "title": "好消息！用这个工具不用买家账号也能看亚马逊评论了",
-      "summary": "亚马逊前台评论限制锁的是访问账号而非评论本身，手动翻页易被风控标记。卖家精灵新版评论分析无需买家账号，基于页面可展示评论持续抓取更新，单次最多约500条样本并标明各星级条数；报告提供评论摘要、结论可溯源原始评论、少数但值得关注的反馈和使用情境洞察，支持导出原始数据。适合竞品差评挖掘与VOC分析，可从边缘反馈挖掘产品切入点。",
-      "category": "experience",
-      "score": 7.2,
-      "url": "https://www.wearesellers.com/question/124337",
-      "source": "wearesellers",
-      "published_at": "2026-09-08T10:08:17.422Z"
-    },
-    {
-      "title": "2026年亚马逊个人卖家还要赌1个爆款吗？我想改成小批量测试，先做5个盈利SKU再复制，靠谱吗？",
-      "summary": "提出不押单爆款的个人卖家模式：保留稳定盈利品保现金流；每月小批量测新品，用广告与市场数据判断需求、点击、转化与利润；设测试周期后分类处置——能赚钱放大、问题明确优化、数据差淘汰；滚动复制把5个盈利SKU扩至10个以上；AI用于选品机会、竞品与Review分析、Listing撰写和广告数据分析，人负责选方向与判断。",
-      "category": "trend",
       "score": 7.4,
-      "url": "https://www.wearesellers.com/question/124313",
+      "url": "https://www.wearesellers.com/question/119693",
       "source": "wearesellers",
-      "published_at": "2026-09-08T10:01:21.993Z"
+      "published_at": "2026-09-09T09:37:33.112Z"
     },
     {
-      "title": "干货｜纽扣电池出口美国全套认证&测试标准（2026最新）",
-      "summary": "纽扣电池输美分两套合规体系：裸电池需ANSI C18.3M、16CFR1700儿童防开启包装、GCC证书及UN38.3摘要加SDS；内置电池整机需16CFR1263/UL4200A电池仓测试，机身外包装说明书三处警示标签缺一即下架清关失败，儿童产品出CPC，整机按PI967运输；最常见下架原因是只做C18.3M不做UL4200A，建议同步加州65筛查。",
+      "title": "亚马逊全球物流即将推出中美空运双档新品，时效分别为7—10天及11—15天",
+      "summary": "亚马逊全球物流将推两档中美空运新品：优享飞依托上海及香港固定航班，7至10个自然日到达美国运营中心；惠享飞走上海及深圳航班，11至15天。两档均标配即时卸货，支持优享入仓与单点入仓，优享飞另支持分仓优选；服装、带电及含锂电池品类免附加费，多核心城市可上门提货。FBA卖家可据此规划头程补货时效，但上线日期与收费标准未公布。",
+      "category": "policy",
+      "score": 8.4,
+      "url": "https://www.amz123.com/kx/ZIVXhN1s",
+      "source": "amz123",
+      "published_at": "2026-09-09T09:16:32.000Z"
+    },
+    {
+      "title": "亚马逊美国站手表GCC认证｜极简合规+避坑指南",
+      "summary": "美国站手表合规结论：成人手表办GCC通用符合性证书，儿童手表必须CPC证书且严禁混用；强制法规16 CFR 1263全站严查，测试标准ANSI/UL 4200A-2023，纯机械无电池手表豁免。可换电池仓须工具开启或双独立动作开启，徒手可开即不合格，并需通过拉力、扭矩、跌落测试；产品与外包装须印合规英文误食警示语并留实拍图。2026年7月起CPSC启用GCC电子eFiling申报，清关与平台双重核验，结构改版需重新测试更新证书。",
       "category": "policy",
       "score": 9,
-      "url": "https://www.wearesellers.com/question/124336",
+      "url": "https://www.wearesellers.com/question/124373",
       "source": "wearesellers",
-      "published_at": "2026-09-08T09:49:24.251Z"
+      "published_at": "2026-09-09T09:47:28.016Z"
     },
     {
-      "title": "5个方法快速搭建亚马逊评论体系：别再让Listing裸奔了",
-      "summary": "直评无权重但可让无评链接显示星级并占位父体最多4个直评位防竞品上差评，无质保市价20元内、质保一月约90元；Vine为官方合规渠道，最高200美元、单父体限30个，缺点是回评不稳、高货值领取慢且领取者需付约35%税费，降价促领后涨价易丢购物车；定制Vine约300-500元一条，建议单独子体操作，不动主推链接。",
+      "title": "Section 122 sunset was July 24. Here's the actual duty stack that replaced it for China-origin FBA imports (with math)",
+      "summary": "Section 122的10%统一附加税按150天上限于7月24日到期，USTR同日对中国等60个原产地启用301强迫劳动关税：有非强迫劳动供应链证明的Tier B为10%，无证明默认Tier A为12.5%，多数中国出口商无Tier B文件。以3万美元CIF的61章T恤海运为例，叠加MFN 16.5%、301 List 3的25%、Tier A 12.5%、MPF上限634.62美元及HMF 0.125%后，落地税负16,872.12美元，占CIF约56.2%，卖家需按新税栈重算成本与利润。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vzd2hi/section_122_sunset_was_july_24_heres_the_actual",
+      "source": "reddit_fba",
+      "published_at": "2026-08-26T23:15:37+00:00"
+    },
+    {
+      "title": "# Amazon案例分析 # 接手汽配老链接虽小类前5，但广泛匹配导致广告单占比高达60-80%，怎么优化ACOS 提高自然单占比？",
+      "summary": "汽配老链接已做到小类前5，但前任运营全打广泛匹配，致广告单占比高达60-80%；楼主思路是保留原架构不动，新增精准广告，待关键词自然位稳住后再慢慢收缩广泛；两个颜色变体均在投广告，但调研发现颜色相关关键词几乎没有，多变体广告如何优化尚无结论，属问题定义清晰的待解案例。",
       "category": "experience",
+      "score": 6.2,
+      "url": "https://www.wearesellers.com/question/124295",
+      "source": "wearesellers",
+      "published_at": "2026-09-09T08:36:37.759Z"
+    },
+    {
+      "title": "2026年上半年美国玩具市场销售额同比增长17%，成年人消费贡献近六成增量",
+      "summary": "Circana数据：2026上半年美国玩具销售额同比增17%、销量增12%、均价涨4%，为近六年同期最佳；18岁以上成人销售额增25%、12至17岁青少年购买量增33%，合计贡献近60%增量，成人家庭占玩具销售额55%，游戏拼图涨45%。美国站玩具选品应向成人收藏、粉丝IP与社交属性产品倾斜。",
+      "category": "trend",
+      "score": 7,
+      "url": "https://www.amz123.com/kx/BFip4hxH",
+      "source": "amz123",
+      "published_at": "2026-09-09T09:27:01.000Z"
+    },
+    {
+      "title": "美国CBP将启动邮政小包电子报关测试",
+      "summary": "CBP的Entry Type 13邮政小包电子简易报关测试9月22日在ACE系统上线，面向申报价值2500美元及以下邮包，自愿参与，申报方须持报关保证金并经Pay.gov按月缴税；10月22日起Chapter 98/99商品、自贸协定优惠商品及化妆品、儿童用品、食品接触材料等PGA监管品类被排除，须转常规报关，相关品类卖家需提前调整报关通道与合规安排。",
+      "category": "policy",
       "score": 8.4,
-      "url": "https://www.wearesellers.com/question/116930",
-      "source": "wearesellers",
-      "published_at": "2026-09-08T09:42:36.029Z"
+      "url": "https://www.amz123.com/kx/AJ7XC5Jj",
+      "source": "amz123",
+      "published_at": "2026-09-09T06:25:11.000Z"
     },
     {
-      "title": "这个跨境平台扩大招商，邀请制！",
-      "summary": "德国第二大电商平台OTTO首次向全欧洲卖家开放，此前仅限德国注册且持德国VAT卖家；一年1170万顾客增3%、商品数增26%破1800万件、第三方伙伴增33%超6500家，系德国电商下滑11.8%下逆势增长。客单价约230欧元，坚持限量邀请加人工审核，核查上年德国或全球销售额；2025年推半托管绕开德国公司、本地仓、德语客服门槛，2026年夏开放膳食补充剂、太阳能板等新品类。",
+      "title": "子不语2026年上半年营收28亿元，TikTok渠道收入同比增长662%",
+      "summary": "子不语2026上半年营收28.27亿元增44.2%，亚马逊收入23.53亿元增29.6%但占比由92%降至83%，TikTok收入2.89亿元增662.1%、占比升至10.2%。可借鉴打法：从零组建内容电商团队，用AIGC半年产出超5万条自制视频，跑通达人、商品卡与自制视频组合，并靠十大核心品牌把收入集中度提升至65%，为亚马逊卖家多元化渠道提供样本。",
       "category": "trend",
-      "score": 7.2,
-      "url": "https://www.wearesellers.com/question/124332",
-      "source": "wearesellers",
-      "published_at": "2026-09-08T09:31:40.885Z"
+      "score": 6.4,
+      "url": "https://www.amz123.com/kx/SxFhZxsW",
+      "source": "amz123",
+      "published_at": "2026-09-09T09:47:45.000Z"
     },
     {
-      "title": "83% 卖家在用 AI，25% 却看不到任何结果",
-      "summary": "结论：AI放大效率而非思路。83.4%卖家在用AI，25.4%无任何可衡量结果，根源是让AI给思路而规则须自己定，否则只得平均答案，全员同质化只能拼价格。卖家63.5%用在listing优化属内容生产，平台却用Rufus以一方数据建推荐引擎决定可见性，写快三倍不会多获推荐；有思路者应借AI省试错时间，腾手做定向、判断、抓资源。",
+      "title": "马士基宣布10月7日起对西地中海至美加航线征收250美元旺季附加费",
+      "summary": "马士基公告自2026年10月7日起，对西地中海至美国、加拿大航线征收每箱250美元旺季附加费，覆盖西班牙、法国、意大利、葡萄牙、希腊及北非港口，有效期至另行通知。经欧洲口岸发美加货物的卖家应提前重算联运报价，对冲PSS与干线运价上涨叠加造成的利润压缩。",
       "category": "trend",
-      "score": 8,
-      "url": "https://www.wearesellers.com/question/124286",
-      "source": "wearesellers",
-      "published_at": "2026-09-08T09:26:49.442Z"
-    },
-    {
-      "title": "自动4拆、手动3拆真的有必要吗？聊聊新品广告为什么不能只看结构",
-      "summary": "结论：拆活动价值不在权重，在独立控制。仅为设不同基础竞价不必拆，同活动可对不同关键词和匹配方式设不同竞价；需独立预算、独立广告位、独立竞价策略、独立考核目标时拆分才有价值。预算有限时拆太细会把钱隔离成多个池，A剩余预算不会补B，高CPC类目更难积累点击样本；独立预算既保护赢家也保护输家，持续低效流量不应机械保留独立预算。",
-      "category": "experience",
-      "score": 9,
-      "url": "https://www.wearesellers.com/question/124263",
-      "source": "wearesellers",
-      "published_at": "2026-09-08T08:26:51.782Z"
+      "score": 6,
+      "url": "https://www.amz123.com/kx/aTuJ7J17",
+      "source": "amz123",
+      "published_at": "2026-09-09T06:35:31.000Z"
     }
   ]
 }
