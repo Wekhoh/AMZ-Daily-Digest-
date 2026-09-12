@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-09-11T10:34:52Z",
-  "digest_date": "2026-09-11",
+  "generated_at_utc": "2026-09-12T11:01:42Z",
+  "digest_date": "2026-09-12",
   "article_count": 50,
   "articles": [
     {
-      "title": "美线IOR新规前置整治：上千柜遭扣押，BCO直客亦受波及",
-      "summary": "美线清关异常：上千条货柜在美港口被锁押，2O、2P稽查代码频发，部分单证齐备的BCO直客货柜仍被强制退运。根因是低价舱位经BCO外流转卖，造成货物归卖家、订舱抬头属他人的主体错配；IOR名下任一票违规即连坐扣押，滞港、堆存、退运费用常超货值。本质是CBP为9月18日IOR新规落地做的前置整治，发FBA头程需核查订舱抬头与贸易主体一致性。",
-      "category": "policy",
-      "score": 8.4,
-      "url": "https://www.amz123.com/kx/Rg8GDoRC",
-      "source": "amz123",
-      "published_at": "2026-09-11T03:12:59.000Z"
+      "title": "亚马逊登陆时二次验证完强制要求创建通行密钥Passkey登陆，WINDOW电脑要求使用USB安全密钥的解决办法",
+      "summary": "亚马逊将强制要求Passkey登录，老式组装台式机因无指纹人脸识别会卡在USB安全密钥提示。解法：升级Win10和最新chrome并设置Windows Hello PIN，若仍调用外部密钥，安装免费的Bitwarden chrome插件，注册设好主密码后回到亚马逊后台，在插件而非亚马逊页面创建密钥即可一秒通过。通行密钥与硬件绑定，建议提前备用机也添加，防止原电脑损坏无法登录。",
+      "category": "experience",
+      "score": 9,
+      "url": "https://www.wearesellers.com/question/124460",
+      "source": "wearesellers",
+      "published_at": "2026-09-12T03:54:28.797Z"
     },
     {
-      "title": "亚马逊大批Listing划线价异常消失，卖家订单量大幅下滑",
-      "summary": "美国站大量Listing划线价无故消失、专享折扣报错，部分店铺六成乃至全部商品划线失效，叠加9月7日劳动节假期线下分流，销量腰斩、近三天单量仅为日常三分之一；业内消息指亚马逊将推行新参考价规则：90天周期内至少10%的天数按参考价成交才能展示划线价。卖家需立即核查前台优惠展示并调整定价，保证周期内有足够参考价出单天数。",
+      "title": "请各位大佬帮我看看，到底是同行“恶搞”我，还是平台“恶搞”我？",
+      "summary": "低价淘宝商标代理暴雷完整案例：律师出问题致商标注册中断，品牌失效后链接变白牌被多账号含FBA跟卖；库存2000+时链接因品牌id与备案id不匹配被拆出父体并禁售，改Generic与多次开case均无效。最终用2025年9月重新注册的R标翻新链接，挽救2000个库存。教训：商标服务不保证成功、备案id不一致会禁售、翻新链接是保库存的可行退路。",
+      "category": "experience",
+      "score": 8.4,
+      "url": "https://www.wearesellers.com/question/124478",
+      "source": "wearesellers",
+      "published_at": "2026-09-12T10:00:19.703Z"
+    },
+    {
+      "title": "到底应该为“广告的学习周期”付出多少成本？怎么判断关闭广告的动作是在合理止损，还是过早干预了数据？",
+      "summary": "卖家以样本量加当前经济结果决定广告去留：新词15至20次点击无转化即关闭；活动ACOS超100%立即停跑，即使单词条样本不足也重建活动重测；有潜力的词给两到三次机会。成熟广告突然转差时，关闭原活动或将预算砍到20%，再复制同设置新活动重跑，实操中同花费下常能恢复；但新组表现差也可能连带拖垮旧组，核心逻辑是买样本成本过高时优先控损。",
+      "category": "experience",
+      "score": 9,
+      "url": "https://www.wearesellers.com/question/124488",
+      "source": "wearesellers",
+      "published_at": "2026-09-12T09:54:56.298Z"
+    },
+    {
+      "title": "5套提示词，用WorkBuddy跑出亚马逊竞品精准狙击最佳实践（附教程/资料包）",
+      "summary": "竞品追踪五步法：先拿自己ASIN反查流量词，分品类词与场景词；逐词下钻统计流量重叠度，按重叠度取前15到20个ASIN建候选池；拉主图用视觉模型区分同形态与跨形态竞品并人工复核；再对Listing打分，分清流量对手和打法老师。案例中美区卷发棒通用品类词占72%，curling iron独占35.5%，TOP3竞品重合5个以上关键词。工具为WorkBuddy加卖家精灵MCP，可换其他Agent组合。",
+      "category": "experience",
+      "score": 9,
+      "url": "https://www.wearesellers.com/question/124465",
+      "source": "wearesellers",
+      "published_at": "2026-09-11T10:54:24.457Z"
+    },
+    {
+      "title": "Shipment software",
+      "summary": "月销约8万的批发卖家完整披露现有发货流程：打印FNSKU标签、装箱贴标、预码临时托盘、回Send to Amazon录入箱规与件数、贴亚马逊箱标、按分配FC建托盘、打托盘标签并出BOL；其想预知箱子对应托盘以免二次码托，并想在FNSKU标签上打印过期日期。",
+      "category": "other",
+      "score": 6.8,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wdwnrp/shipment_software",
+      "source": "reddit_fba",
+      "published_at": "2026-09-11T23:46:04.000Z"
+    },
+    {
+      "title": "跨境老板，看过来，想问问，我们美工还有需求市场么",
+      "summary": "结论：AI把美工门槛拉低但不能直接当跨境视觉成品，砍掉美工预算会在三处吃亏——主图合规（白底、缩放比例、禁水印文字、字体版权）、欧美买家信任感与转化率、多SKU品牌一致性。方法：AI只出底图，人工做修正、材质校准、统一风格与平台合规处理后再上架；全职养人成本高且淡季不饱和，需求断续的团队优先按结果交付的外包。",
+      "category": "trend",
+      "score": 6.4,
+      "url": "https://www.wearesellers.com/question/124451",
+      "source": "wearesellers",
+      "published_at": "2026-09-12T10:31:15.354Z"
+    },
+    {
+      "title": "Section 122 sunset was July 24. Here's the actual duty stack that replaced it for China-origin FBA imports (with math)",
+      "summary": "Section 122的10%统一附加税按150天上限于7月24日到期，USTR同日对中国等60个原产地启用301强迫劳动关税：有非强迫劳动供应链证明的Tier B为10%，无证明默认Tier A为12.5%，多数中国出口商无Tier B文件。以3万美元CIF的61章T恤海运为例，叠加MFN 16.5%、301 List 3的25%、Tier A 12.5%、MPF上限634.62美元及HMF 0.125%后，落地税负16,872.12美元，占CIF约56.2%，卖家需按新税栈重算成本与利润。",
       "category": "policy",
       "score": 9.4,
-      "url": "https://www.amz123.com/kx/6SrmZULT",
-      "source": "amz123",
-      "published_at": "2026-09-08T02:12:27+00:00"
-    },
-    {
-      "title": "美国站被专利权利人投诉，链接直接中招，但同款还有7家正常在售，到底是什么逻辑？",
-      "summary": "美国站专利侵权投诉处理要点：账户绩效显示Patent Infringement而非商标或版权投诉，本产品与投诉方产品仅功能性相似、外观差异大，但链接仍被下架，同款还有七八家正常在售。关键结论是专利侵权绩效没有申诉入口，无法向亚马逊自辩，只能争取权利人提交撤销请求。可行方向为做专利比对确认是否落入保护范围，主动联系投诉方谈撤诉、和解或授权，但邮件两天未获回复，恢复路径尚无实例答案。",
-      "category": "policy",
-      "score": 7.2,
-      "url": "https://www.wearesellers.com/question/124444",
-      "source": "wearesellers",
-      "published_at": "2026-09-11T10:19:04.310Z"
-    },
-    {
-      "title": "At what point do you consider an FBA inbound shortage “too old” to ignore?",
-      "summary": "卖家咨询FBA入库短收的处理时限：亚马逊实收少于发货量后，应等30、45还是60天再放弃等待自然对账。可行动作包括核查Reimbursements赔偿页、Inventory Ledger库存分类账、开case追偿、计提坏账或交VA排查；在数百票货量规模下，需要建立定期扫描历史未决短收的固定流程，而非依赖人工偶然发现异常。",
-      "category": "experience",
-      "score": 6.2,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wczeev/at_what_point_do_you_consider_an_fba_inbound",
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vzd2hi/section_122_sunset_was_july_24_heres_the_actual",
       "source": "reddit_fba",
-      "published_at": "2026-09-10T23:28:13.000Z"
+      "published_at": "2026-08-26T23:15:37+00:00"
     },
     {
-      "title": "Prime会员优惠券是否会影响参考价？",
-      "summary": "普通优惠券长期投放会拉低listing参考价，卖家需控制普通券的持续时长或频率以保护历史成交价。文中给出验证路径：优惠券消费群体类型选计划-亚马逊Prime会员的券，可能属于不影响常规价格的量身定制优惠券，但是否仅品牌类型才算量身定制尚无定论，建议小预算测试Prime券并观察参考价波动后再决定放量。",
+      "title": "The reimbursement money I was leaving on the table for over a year (FBA)",
+      "summary": "亚马逊FBA索赔实操方法。卖家应每月比对退货报告与赔偿报告，针对买家未退回货物、超45天未退回已退款件、库容损毁未自动赔偿等异常，以一单一案、只陈述事实的方式开case索赔，避免因超出时效而造成资金损失。",
       "category": "experience",
-      "score": 6.2,
-      "url": "https://www.wearesellers.com/question/124425",
-      "source": "wearesellers",
-      "published_at": "2026-09-11T09:27:32.869Z"
+      "score": 9.4,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vbqfwd/the_reimbursement_money_i_was_leaving_on_the",
+      "source": "reddit_fba",
+      "published_at": "2026-07-31T13:06:17+00:00"
     },
     {
-      "title": "13.86美元存钱本登顶TikTok美区爆款，近30天GMV达29.55万美元",
-      "summary": "TikTok美区存钱本案例给出可复制打法：13.86美元密码锁存钱本上线约75天，近30天售出2.14万件、GMV29.55万美元，近7天占61%；不靠直播，靠249位达人发468条短视频，围绕每周存100美元年存1万美元话题渗透，最佳24.93秒翻卡塞钞视频获735.52万播放。美区卖家可复用达人短视频矩阵加单一储蓄话题的打法。",
+      "title": "Pro tip especially for sellers with big catalogs: How to accurately calculate profitability on Sponsored Brands (yes, even with multiple asins - with different profit margins - in your ad creative)",
+      "summary": "管理Sponsored Brands应以利润目标替代ACOS目标：下载Attributed Purchases Report获取广告真实成交ASIN与销量，用销量乘以含头程运费与FBA费用的COGS得出总成本，再据此按campaign动态设定ACOS上限；多ASIN不同毛利混投时该方法可避免因表观ACOS偏高而误杀高毛利产品线。",
       "category": "experience",
-      "score": 7,
-      "url": "https://www.amz123.com/kx/rx8uTtB4",
-      "source": "amz123",
-      "published_at": "2026-09-11T09:27:05.000Z"
+      "score": 9.4,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1w9uem6/pro_tip_especially_for_sellers_with_big_catalogs",
+      "source": "reddit_fba",
+      "published_at": "2026-09-07T14:55:51+00:00"
     },
     {
-      "title": "亚马逊电动工具UL62841+TIC审核规则要求 卖家必看！",
-      "summary": "美国站电动切割工具上架必须由ISO17025实验室近12个月内出具结果为通过的TIC报告，整机按UL62841-1加对应专项标准测试，电源适配器需UL1310或UL1012，无射频功能仅需FCC SDoC声明；内置锂电池另需UN38.3、IEC62133-2或UL2054报告及容量警示标签；亚马逊随机抽检不通过直接下架，电动工具不按锂电池家电管控。",
+      "title": "标题超限直接被AI改写！亚马逊75字符新规即将强制执行",
+      "summary": "亚马逊将于2026年7月27日起强制执行75字符标题新规。超出字符需移至可被搜索的商品亮点中。卖家需在后台管理所有库存中，通过编辑页面的查看改进内容，预览并一键采用或调整AI推荐的名称与亮点，避免逾期被AI强制替代。",
       "category": "policy",
-      "score": 9,
-      "url": "https://www.wearesellers.com/question/124474",
+      "score": 9.4,
+      "url": "https://www.wearesellers.com/question/122858",
       "source": "wearesellers",
-      "published_at": "2026-09-11T09:37:26.317Z"
-    },
-    {
-      "title": "美国电商季节性特征加剧，年末购物季消费持续集中",
-      "summary": "美国线上零售季节性加剧，2025年2月为低谷约771亿美元，消费持续向年末集中；2026年11-12月假日季零售总额预计约1万亿美元，同比增4.5%，其中线上增9%。美国站卖家应将备货、物流与营销预算向Q4倾斜，提前锁定库存与履约能力以承接旺季流量。",
-      "category": "trend",
-      "score": 8.4,
-      "url": "https://www.amz123.com/kx/aTFUnhcZ",
-      "source": "amz123",
-      "published_at": "2026-09-11T07:15:56.000Z"
-    },
-    {
-      "title": "一款非标品击碎了我的亚马逊梦：亚马逊做非标季节品，7月测款从15一路降到9还是没起量，只能考虑转行了",
-      "summary": "非标季节品测款失败复盘：标品看转化、非标看流量，非标降价对转化影响小，需靠广泛词组扩大并筛选流量；该品旺季核心词仅4-5个同类、淡季几乎无核心词，公司仍沿用维持顶部广告位测点击转化再测价格的老方法，精准无效后价格从15连降至9仍无起量，CPC难降，叠加内部管理矛盾，运营最终转行。可借鉴结论是淡季非标品不宜套用标品降价快测节奏。",
-      "category": "experience",
-      "score": 7.4,
-      "url": "https://www.wearesellers.com/question/124409",
-      "source": "wearesellers",
-      "published_at": "2026-09-11T08:26:48.919Z"
-    },
-    {
-      "title": "亚马逊高尔夫推杆套月销252单、毛利率59%，评论异常与专利风险不容忽视",
-      "summary": "亚马逊19.95美元高尔夫推杆头套上架661天、近30天252单、毛利率约59%，FBA费仅5.13美元、类目集中度8.1%，但评分4.8评论数却从百余条骤降至43条，涉嫌合并评论黑帽操作，核心词PPC出价约0.85美元仍停在第3页，且多项外观专利有效，不宜当无专利白牌跟卖。",
-      "category": "experience",
-      "score": 9,
-      "url": "https://www.amz123.com/kx/V5lZtOIk",
-      "source": "amz123",
-      "published_at": "2026-09-11T03:33:36.000Z"
+      "published_at": "2026-07-31T08:01:06.536+00:00"
     }
   ]
 }
