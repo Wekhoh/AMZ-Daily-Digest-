@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-09-12T11:01:42Z",
-  "digest_date": "2026-09-12",
+  "generated_at_utc": "2026-09-13T11:03:23Z",
+  "digest_date": "2026-09-13",
   "article_count": 50,
   "articles": [
     {
-      "title": "亚马逊登陆时二次验证完强制要求创建通行密钥Passkey登陆，WINDOW电脑要求使用USB安全密钥的解决办法",
-      "summary": "亚马逊将强制要求Passkey登录，老式组装台式机因无指纹人脸识别会卡在USB安全密钥提示。解法：升级Win10和最新chrome并设置Windows Hello PIN，若仍调用外部密钥，安装免费的Bitwarden chrome插件，注册设好主密码后回到亚马逊后台，在插件而非亚马逊页面创建密钥即可一秒通过。通行密钥与硬件绑定，建议提前备用机也添加，防止原电脑损坏无法登录。",
-      "category": "experience",
+      "title": "深圳税局批量下发预警短信，跨境卖家须在10日内自查增值税申报情况",
+      "summary": "深圳税局经金税四期自动比对平台GMV与9610/9810/0110报关数据，批量预警出口收入涉嫌未足额申报增值税，卖家须10日内自查整改。关键纠偏：增值税计税基数为买家实付订单全额，不得按扣佣金物流费后的净回款申报，平台扣费仅能在企业所得税中抵扣。",
+      "category": "policy",
       "score": 9,
-      "url": "https://www.wearesellers.com/question/124460",
-      "source": "wearesellers",
-      "published_at": "2026-09-12T03:54:28.797Z"
+      "url": "https://www.amz123.com/kx/2SgoXbHF",
+      "source": "amz123",
+      "published_at": "2026-09-10T09:37:34+00:00"
     },
     {
-      "title": "请各位大佬帮我看看，到底是同行“恶搞”我，还是平台“恶搞”我？",
-      "summary": "低价淘宝商标代理暴雷完整案例：律师出问题致商标注册中断，品牌失效后链接变白牌被多账号含FBA跟卖；库存2000+时链接因品牌id与备案id不匹配被拆出父体并禁售，改Generic与多次开case均无效。最终用2025年9月重新注册的R标翻新链接，挽救2000个库存。教训：商标服务不保证成功、备案id不一致会禁售、翻新链接是保库存的可行退路。",
+      "title": "亚马逊美国站旺季费用多项叠加，卖家成本压力显著上升",
+      "summary": "美国站旺季成本进入叠加期：2026年10月15日至2027年1月14日，FBA、MCF及Buy with Prime配送收取旺季附加费，小号标准件每件约0.19美元、T恤约0.39美元、超大件约2.81美元、平均约0.32美元，并与已执行的3.5%燃油及物流附加费同时计收。卖家应将双重费用纳入售价测算，轻小件低客单价商品优先复核利润，大件需叠加燃油与大件附加费核算。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.amz123.com/kx/0eTtbNN6",
+      "source": "amz123",
+      "published_at": "2026-09-10T09:37:28+00:00"
+    },
+    {
+      "title": "亚马逊2026年11月2日起调整商业责任险规则，新增11类高危类目强制投保要求",
+      "summary": "亚马逊商业责任险新规2026年11月2日生效，保留月销超1万美元30天内投保、保额100万美元的门槛，同时新增儿童商品、化妆品、锂电池、床垫、汽车摩托轮胎等11类高危类目强制投保，且不限新品在售、不看月销量，均须不低于100万美元保额；涉及类目卖家应立即排查自身ASIN是否在列，尽快完成投保并上传保单，避免销售权限受限。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.amz123.com/kx/i7xMS7Zg",
+      "source": "amz123",
+      "published_at": "2026-09-10T09:16:41+00:00"
+    },
+    {
+      "title": "Amazon Global Logistics increasing freight charge w/o notice",
+      "summary": "卖家首次使用AGL，Seller Central预订报价承诺按报价付费无隐藏费用，但最终被多收约20%、超1000美元；起因是承运商要求特殊审查导致货件晚于cargo ready date，费率卡上调。AGL条款第9.2条规定调价须在交货前通知卖家，AGL却以NRA文件上传至预订页视为已通知，且卖家未收到通常应有的邮件提醒。启示：使用AGL须留存报价与条款原文，主动核查NRA通知机制，调价时凭条款第9.2条通过邮件升级与开case争议。",
       "category": "experience",
       "score": 8.4,
-      "url": "https://www.wearesellers.com/question/124478",
-      "source": "wearesellers",
-      "published_at": "2026-09-12T10:00:19.703Z"
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1weoztf/amazon_global_logistics_increasing_freight_charge",
+      "source": "reddit_fba",
+      "published_at": "2026-09-12T21:35:38.000Z"
     },
     {
-      "title": "到底应该为“广告的学习周期”付出多少成本？怎么判断关闭广告的动作是在合理止损，还是过早干预了数据？",
-      "summary": "卖家以样本量加当前经济结果决定广告去留：新词15至20次点击无转化即关闭；活动ACOS超100%立即停跑，即使单词条样本不足也重建活动重测；有潜力的词给两到三次机会。成熟广告突然转差时，关闭原活动或将预算砍到20%，再复制同设置新活动重跑，实操中同花费下常能恢复；但新组表现差也可能连带拖垮旧组，核心逻辑是买样本成本过高时优先控损。",
-      "category": "experience",
-      "score": 9,
-      "url": "https://www.wearesellers.com/question/124488",
-      "source": "wearesellers",
-      "published_at": "2026-09-12T09:54:56.298Z"
-    },
-    {
-      "title": "5套提示词，用WorkBuddy跑出亚马逊竞品精准狙击最佳实践（附教程/资料包）",
-      "summary": "竞品追踪五步法：先拿自己ASIN反查流量词，分品类词与场景词；逐词下钻统计流量重叠度，按重叠度取前15到20个ASIN建候选池；拉主图用视觉模型区分同形态与跨形态竞品并人工复核；再对Listing打分，分清流量对手和打法老师。案例中美区卷发棒通用品类词占72%，curling iron独占35.5%，TOP3竞品重合5个以上关键词。工具为WorkBuddy加卖家精灵MCP，可换其他Agent组合。",
-      "category": "experience",
-      "score": 9,
-      "url": "https://www.wearesellers.com/question/124465",
-      "source": "wearesellers",
-      "published_at": "2026-09-11T10:54:24.457Z"
-    },
-    {
-      "title": "Shipment software",
-      "summary": "月销约8万的批发卖家完整披露现有发货流程：打印FNSKU标签、装箱贴标、预码临时托盘、回Send to Amazon录入箱规与件数、贴亚马逊箱标、按分配FC建托盘、打托盘标签并出BOL；其想预知箱子对应托盘以免二次码托，并想在FNSKU标签上打印过期日期。",
-      "category": "other",
+      "title": "September Updates to Listing Attribute Usage and Enumeration Values",
+      "summary": "亚马逊官方公告：2026年9月28日起，将更新全站点大量商品类型的属性用法与枚举值，直接影响Listing字段定义与上传模板。卖家应在生效前核对所售商品类型的必填属性、可选枚举值范围，同步调整库存文件或API对接逻辑，避免Listing创建与更新报错或属性被判定无效。",
+      "category": "policy",
       "score": 6.8,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wdwnrp/shipment_software",
-      "source": "reddit_fba",
-      "published_at": "2026-09-11T23:46:04.000Z"
+      "url": "https://developer-docs.amazon.com/sp-api/changelog/september-updates-to-listing-attribute-usage-and-enumeration-values",
+      "source": "amazon_official",
+      "published_at": "2026-09-09T23:21:39.000Z"
     },
     {
-      "title": "跨境老板，看过来，想问问，我们美工还有需求市场么",
-      "summary": "结论：AI把美工门槛拉低但不能直接当跨境视觉成品，砍掉美工预算会在三处吃亏——主图合规（白底、缩放比例、禁水印文字、字体版权）、欧美买家信任感与转化率、多SKU品牌一致性。方法：AI只出底图，人工做修正、材质校准、统一风格与平台合规处理后再上架；全职养人成本高且淡季不饱和，需求断续的团队优先按结果交付的外包。",
+      "title": "预告：9月24日前后或公布对华降税清单，涉约300亿美元中国商品",
+      "summary": "中美贸易委员会机制下，美方计划9月24日前后公布约300亿美元中国商品对等降税清单，重点调整2018年加征的301关税（税率7.5%至25%），服装鞋类、家居、玩具、节日装饰品、箱包、部分纺织品、非敏感医疗耗材及能源品有望降至最惠国税率或更低；征求意见已结束，清单正与中方核对。美国站卖家可据此预判采购成本与补货节奏，提前规划备货和定价窗口。",
+      "category": "policy",
+      "score": 9,
+      "url": "https://www.amz123.com/kx/x8TAl1Zr",
+      "source": "amz123",
+      "published_at": "2026-09-10T06:14:50+00:00"
+    },
+    {
+      "title": "2026 最危险的卖家，是量最大的",
+      "summary": "结论：美国需求走低令铺货量从优势变风险，压货即压死现金流。广告收入同比涨22.1%超佣金涨10.3%，SCFI涨35.9%、美西线涨61.6%；7月美国零售环比降0.6%、线上降2.2%，密歇根情绪指数5月创历史低点44.8。方法：选品勿外包给滞后数据以免同质化红海，在图片、情绪价值、定价上各多做一步差异化。",
       "category": "trend",
-      "score": 6.4,
-      "url": "https://www.wearesellers.com/question/124451",
+      "score": 8.4,
+      "url": "https://www.wearesellers.com/question/124510",
       "source": "wearesellers",
-      "published_at": "2026-09-12T10:31:15.354Z"
+      "published_at": "2026-09-13T09:57:24.517Z"
     },
     {
-      "title": "Section 122 sunset was July 24. Here's the actual duty stack that replaced it for China-origin FBA imports (with math)",
-      "summary": "Section 122的10%统一附加税按150天上限于7月24日到期，USTR同日对中国等60个原产地启用301强迫劳动关税：有非强迫劳动供应链证明的Tier B为10%，无证明默认Tier A为12.5%，多数中国出口商无Tier B文件。以3万美元CIF的61章T恤海运为例，叠加MFN 16.5%、301 List 3的25%、Tier A 12.5%、MPF上限634.62美元及HMF 0.125%后，落地税负16,872.12美元，占CIF约56.2%，卖家需按新税栈重算成本与利润。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vzd2hi/section_122_sunset_was_july_24_heres_the_actual",
-      "source": "reddit_fba",
-      "published_at": "2026-08-26T23:15:37+00:00"
-    },
-    {
-      "title": "The reimbursement money I was leaving on the table for over a year (FBA)",
-      "summary": "亚马逊FBA索赔实操方法。卖家应每月比对退货报告与赔偿报告，针对买家未退回货物、超45天未退回已退款件、库容损毁未自动赔偿等异常，以一单一案、只陈述事实的方式开case索赔，避免因超出时效而造成资金损失。",
+      "title": "入库缺陷费解决办法，附申诉流程",
+      "summary": "货件被误判已删除或已丢弃产生入库缺陷费时，务必等入仓后再申诉，未入仓申诉必被拒且后续大概率继续被拒；临近入仓两周内的先不点确认，海关查验或货代在途的先确认绩效；路径为货件绩效-货件配置问题-查看详情-提交争议，按模板填写并上传POD的PDF，当天收回执，三天内转处理，14天内出结果。",
       "category": "experience",
-      "score": 9.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vbqfwd/the_reimbursement_money_i_was_leaving_on_the",
-      "source": "reddit_fba",
-      "published_at": "2026-07-31T13:06:17+00:00"
-    },
-    {
-      "title": "Pro tip especially for sellers with big catalogs: How to accurately calculate profitability on Sponsored Brands (yes, even with multiple asins - with different profit margins - in your ad creative)",
-      "summary": "管理Sponsored Brands应以利润目标替代ACOS目标：下载Attributed Purchases Report获取广告真实成交ASIN与销量，用销量乘以含头程运费与FBA费用的COGS得出总成本，再据此按campaign动态设定ACOS上限；多ASIN不同毛利混投时该方法可避免因表观ACOS偏高而误杀高毛利产品线。",
-      "category": "experience",
-      "score": 9.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1w9uem6/pro_tip_especially_for_sellers_with_big_catalogs",
-      "source": "reddit_fba",
-      "published_at": "2026-09-07T14:55:51+00:00"
-    },
-    {
-      "title": "标题超限直接被AI改写！亚马逊75字符新规即将强制执行",
-      "summary": "亚马逊将于2026年7月27日起强制执行75字符标题新规。超出字符需移至可被搜索的商品亮点中。卖家需在后台管理所有库存中，通过编辑页面的查看改进内容，预览并一键采用或调整AI推荐的名称与亮点，避免逾期被AI强制替代。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.wearesellers.com/question/122858",
+      "score": 9,
+      "url": "https://www.wearesellers.com/question/123342",
       "source": "wearesellers",
-      "published_at": "2026-07-31T08:01:06.536+00:00"
+      "published_at": "2026-09-06T04:07:02.486+00:00"
+    },
+    {
+      "title": "美国邮政小包电子报关新规落地：ET13将于9月22日上线，PGA类商品2026年10月起退出简易通道",
+      "summary": "CBP将于9月22日在ACE系统上线ET13邮政小包电子简易报关测试，适用2500美元及以下国际邮政包裹；申报仅限具备IOR资质的进口商或持证报关行，须持连续进口保证金并按月经Pay.gov缴税，申报须含filer代码、IOR编号、10位HTSUS税号等12项信息。直发小包卖家应核验物流商资质或改用合规申报渠道，避免包裹清关受阻。",
+      "category": "policy",
+      "score": 9,
+      "url": "https://www.amz123.com/kx/w6x0mUsS",
+      "source": "amz123",
+      "published_at": "2026-09-10T09:27:00+00:00"
+    },
+    {
+      "title": "Unlocked $250,000+ in Savings by Fixing One Amazon Category",
+      "summary": "审计品牌发现5个SKU被归入收取15%佣金的Video Game Console and Accessories类目，深挖后确认其实际符合仅8%佣金的Video Game Console类目；为每个SKU开case申诉全部获批，每年节省超20万美元佣金，现正追讨过往按高费率多扣的5万美元报销。方法：定期核对SKU实际类目与佣金费率，发现错配立即开case纠正并追溯索赔。",
+      "category": "experience",
+      "score": 9,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1w6z9ah/unlocked_250000_in_savings_by_fixing_one_amazon",
+      "source": "reddit_fba",
+      "published_at": "2026-09-04T09:14:58+00:00"
     }
   ]
 }
