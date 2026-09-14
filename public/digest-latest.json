@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-09-13T11:03:23Z",
-  "digest_date": "2026-09-13",
+  "generated_at_utc": "2026-09-14T11:35:21Z",
+  "digest_date": "2026-09-14",
   "article_count": 50,
   "articles": [
     {
-      "title": "深圳税局批量下发预警短信，跨境卖家须在10日内自查增值税申报情况",
-      "summary": "深圳税局经金税四期自动比对平台GMV与9610/9810/0110报关数据，批量预警出口收入涉嫌未足额申报增值税，卖家须10日内自查整改。关键纠偏：增值税计税基数为买家实付订单全额，不得按扣佣金物流费后的净回款申报，平台扣费仅能在企业所得税中抵扣。",
+      "title": "FBA索赔窗口到底是18个月还是60天？亚马逊红线文件里18 months是被划掉的，但我只拿到英欧站那一份",
+      "summary": "FBA库存丢损索赔窗口已从18个月改为60天，以库存台账报告丢损日为锚点，逾期不予赔偿；客户退货索赔须在退款或换货后45至105天内提交，早于45天直接驳回；移除订单分两个窗口：途中丢失自货件创建起75天，途中损坏自退回签收起60天；90天说法在四份官方文件中均不存在，美国站子页面在登录墙后待核实。",
       "category": "policy",
       "score": 9,
-      "url": "https://www.amz123.com/kx/2SgoXbHF",
-      "source": "amz123",
-      "published_at": "2026-09-10T09:37:34+00:00"
+      "url": "https://www.wearesellers.com/question/124480",
+      "source": "wearesellers",
+      "published_at": "2026-09-14T03:30:09.732Z"
     },
     {
-      "title": "亚马逊美国站旺季费用多项叠加，卖家成本压力显著上升",
-      "summary": "美国站旺季成本进入叠加期：2026年10月15日至2027年1月14日，FBA、MCF及Buy with Prime配送收取旺季附加费，小号标准件每件约0.19美元、T恤约0.39美元、超大件约2.81美元、平均约0.32美元，并与已执行的3.5%燃油及物流附加费同时计收。卖家应将双重费用纳入售价测算，轻小件低客单价商品优先复核利润，大件需叠加燃油与大件附加费核算。",
+      "title": "突发！北美站3小时0单？亚马逊又崩了？目前还在持续未恢复",
+      "summary": "北美站疑似发生大规模系统故障，两个账号连续3小时订单为0且前台链接显示正常，可判断为平台侧问题而非链接异常；故障期间卖家需尽快决策广告是否继续投放，避免无效花费，文中未给出最终处置结论。",
+      "category": "other",
+      "score": 6.2,
+      "url": "https://www.wearesellers.com/question/124513",
+      "source": "wearesellers",
+      "published_at": "2026-09-14T10:30:55.164Z"
+    },
+    {
+      "title": "上新重复创建以及翻新过后的链接不修改 会导致抓取到封链接或者严重会导致店铺……我这边已经有人在美国站上重复发布得到绩效再申诉了",
+      "summary": "亚马逊正批量扫描重复创建：翻新后未删旧链接、变体属性图片详情完全相同、种子与主链接无差异、改老链接发新品、对手恶意改成同款后投诉，五种情形均可能触发绩效问题甚至封店。应对：种子建在原生父体下并与主链接做属性详情差异化；未传图时用标题颜色型号如Blak-1区分；废弃种子删除前先全改详情图片属性标题。美国站已有重复发布吃绩效再申诉案例。",
+      "category": "policy",
+      "score": 8.4,
+      "url": "https://www.wearesellers.com/question/124497",
+      "source": "wearesellers",
+      "published_at": "2026-09-14T10:30:00.232Z"
+    },
+    {
+      "title": "亚马逊大批Listing划线价异常消失，卖家订单量大幅下滑",
+      "summary": "美国站大量Listing划线价无故消失、专享折扣报错，部分店铺六成乃至全部商品划线失效，叠加9月7日劳动节假期线下分流，销量腰斩、近三天单量仅为日常三分之一；业内消息指亚马逊将推行新参考价规则：90天周期内至少10%的天数按参考价成交才能展示划线价。卖家需立即核查前台优惠展示并调整定价，保证周期内有足够参考价出单天数。",
       "category": "policy",
       "score": 9.4,
-      "url": "https://www.amz123.com/kx/0eTtbNN6",
+      "url": "https://www.amz123.com/kx/6SrmZULT",
       "source": "amz123",
-      "published_at": "2026-09-10T09:37:28+00:00"
+      "published_at": "2026-09-08T02:12:27+00:00"
     },
     {
-      "title": "亚马逊2026年11月2日起调整商业责任险规则，新增11类高危类目强制投保要求",
-      "summary": "亚马逊商业责任险新规2026年11月2日生效，保留月销超1万美元30天内投保、保额100万美元的门槛，同时新增儿童商品、化妆品、锂电池、床垫、汽车摩托轮胎等11类高危类目强制投保，且不限新品在售、不看月销量，均须不低于100万美元保额；涉及类目卖家应立即排查自身ASIN是否在列，尽快完成投保并上传保单，避免销售权限受限。",
+      "title": "亚马逊FBA新费政生效：超龄库存附加费大幅上涨",
+      "summary": "亚马逊FBA新费政实施，商品库龄达181天即收超龄附加费，超365天最高达月仓储费13倍；未加入SIPP的大件商品加收包装费。卖家须通过Outlet、清仓或移除清理冗余库存，大件商品应尽快申请SIPP认证以降低包装成本。",
       "category": "policy",
       "score": 9.4,
-      "url": "https://www.amz123.com/kx/i7xMS7Zg",
+      "url": "https://www.amz123.com/kx/RkUvZPFw",
       "source": "amz123",
-      "published_at": "2026-09-10T09:16:41+00:00"
+      "published_at": "2026-07-08T02:31:43+00:00"
     },
     {
-      "title": "Amazon Global Logistics increasing freight charge w/o notice",
-      "summary": "卖家首次使用AGL，Seller Central预订报价承诺按报价付费无隐藏费用，但最终被多收约20%、超1000美元；起因是承运商要求特殊审查导致货件晚于cargo ready date，费率卡上调。AGL条款第9.2条规定调价须在交货前通知卖家，AGL却以NRA文件上传至预订页视为已通知，且卖家未收到通常应有的邮件提醒。启示：使用AGL须留存报价与条款原文，主动核查NRA通知机制，调价时凭条款第9.2条通过邮件升级与开case争议。",
+      "title": "魔法对轰|GPT6 Astar VS Alexa 手搓listing&关键词&QA优化Skill，拥抱改变的核心并不是改变，而是从切实自己的需求端出发，我也给服务商交过学费，要看到服务商的思考模式和我们卖家的思考模式差距在哪",
+      "summary": "作者用GPT6 Astra反推Alexa推荐逻辑：先分析同品类竞品优势并自查补齐差距，再通过API接入卖家精灵与自有账号读取竞品Listing、关键词、Review数据并降低AI味，再用DeepSeek V4 PRO在Skill中加入中英文对照、评分与反查系统，产出脱敏版Listing优化Skill。核心结论：Alexa抓取亚马逊现成数据库，个人无法穷尽算法倾向，可行路径是先对齐差距再看齐标准而非直接猜算法。",
       "category": "experience",
       "score": 8.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1weoztf/amazon_global_logistics_increasing_freight_charge",
-      "source": "reddit_fba",
-      "published_at": "2026-09-12T21:35:38.000Z"
+      "url": "https://www.wearesellers.com/question/124494",
+      "source": "wearesellers",
+      "published_at": "2026-09-14T04:30:07.492Z"
     },
     {
-      "title": "September Updates to Listing Attribute Usage and Enumeration Values",
-      "summary": "亚马逊官方公告：2026年9月28日起，将更新全站点大量商品类型的属性用法与枚举值，直接影响Listing字段定义与上传模板。卖家应在生效前核对所售商品类型的必填属性、可选枚举值范围，同步调整库存文件或API对接逻辑，避免Listing创建与更新报错或属性被判定无效。",
-      "category": "policy",
+      "title": "求助：新店铺跟卖自己老店铺链接，如何拿到链接编辑权？",
+      "summary": "老店铺明年注销，8条链接需转新店铺承接。楼主已规划：新店跟卖老链接、老库存清完后靠新店库存抢购物车、新老广告一关一开择机切换，并已通过品牌授权让新店成为管理员和权利所有者；待解问题是合规拿到链接编辑权的具体流程、品牌备案撤销与商标转让的时点，以及跟卖自家链接的关联风险评估。",
+      "category": "experience",
       "score": 6.8,
-      "url": "https://developer-docs.amazon.com/sp-api/changelog/september-updates-to-listing-attribute-usage-and-enumeration-values",
-      "source": "amazon_official",
-      "published_at": "2026-09-09T23:21:39.000Z"
-    },
-    {
-      "title": "预告：9月24日前后或公布对华降税清单，涉约300亿美元中国商品",
-      "summary": "中美贸易委员会机制下，美方计划9月24日前后公布约300亿美元中国商品对等降税清单，重点调整2018年加征的301关税（税率7.5%至25%），服装鞋类、家居、玩具、节日装饰品、箱包、部分纺织品、非敏感医疗耗材及能源品有望降至最惠国税率或更低；征求意见已结束，清单正与中方核对。美国站卖家可据此预判采购成本与补货节奏，提前规划备货和定价窗口。",
-      "category": "policy",
-      "score": 9,
-      "url": "https://www.amz123.com/kx/x8TAl1Zr",
-      "source": "amz123",
-      "published_at": "2026-09-10T06:14:50+00:00"
-    },
-    {
-      "title": "2026 最危险的卖家，是量最大的",
-      "summary": "结论：美国需求走低令铺货量从优势变风险，压货即压死现金流。广告收入同比涨22.1%超佣金涨10.3%，SCFI涨35.9%、美西线涨61.6%；7月美国零售环比降0.6%、线上降2.2%，密歇根情绪指数5月创历史低点44.8。方法：选品勿外包给滞后数据以免同质化红海，在图片、情绪价值、定价上各多做一步差异化。",
-      "category": "trend",
-      "score": 8.4,
-      "url": "https://www.wearesellers.com/question/124510",
+      "url": "https://www.wearesellers.com/question/124556",
       "source": "wearesellers",
-      "published_at": "2026-09-13T09:57:24.517Z"
+      "published_at": "2026-09-14T10:30:46.367Z"
     },
     {
-      "title": "入库缺陷费解决办法，附申诉流程",
-      "summary": "货件被误判已删除或已丢弃产生入库缺陷费时，务必等入仓后再申诉，未入仓申诉必被拒且后续大概率继续被拒；临近入仓两周内的先不点确认，海关查验或货代在途的先确认绩效；路径为货件绩效-货件配置问题-查看详情-提交争议，按模板填写并上传POD的PDF，当天收回执，三天内转处理，14天内出结果。",
-      "category": "experience",
-      "score": 9,
-      "url": "https://www.wearesellers.com/question/123342",
+      "title": "同城会丨旺季增长、Alexa与AMC实战、广告利润智能体构建……带着问题学习，带回方案落地",
+      "summary": "深圳两场实战沙龙与Alexa/AMC研习营的干货框架：旺季转化体检区分流量、点击、页面、促销四类问题；Listing从关键词覆盖升级为按Who、Problem、Scenario、Result四要素回答问题；广告按SP搜索、关联、人群三入口搭建标品与非标品架构；AMC完成受众洞察、报表解读与三类人群激活；旺季按预热蓄水、爆发收割、复盘迭代四阶段执行并建立4W2H诊断SOP。",
+      "category": "other",
+      "score": 6.4,
+      "url": "https://www.wearesellers.com/question/124536",
       "source": "wearesellers",
-      "published_at": "2026-09-06T04:07:02.486+00:00"
+      "published_at": "2026-09-14T04:29:55.523Z"
     },
     {
-      "title": "美国邮政小包电子报关新规落地：ET13将于9月22日上线，PGA类商品2026年10月起退出简易通道",
-      "summary": "CBP将于9月22日在ACE系统上线ET13邮政小包电子简易报关测试，适用2500美元及以下国际邮政包裹；申报仅限具备IOR资质的进口商或持证报关行，须持连续进口保证金并按月经Pay.gov缴税，申报须含filer代码、IOR编号、10位HTSUS税号等12项信息。直发小包卖家应核验物流商资质或改用合规申报渠道，避免包裹清关受阻。",
-      "category": "policy",
-      "score": 9,
-      "url": "https://www.amz123.com/kx/w6x0mUsS",
-      "source": "amz123",
-      "published_at": "2026-09-10T09:27:00+00:00"
-    },
-    {
-      "title": "Unlocked $250,000+ in Savings by Fixing One Amazon Category",
-      "summary": "审计品牌发现5个SKU被归入收取15%佣金的Video Game Console and Accessories类目，深挖后确认其实际符合仅8%佣金的Video Game Console类目；为每个SKU开case申诉全部获批，每年节省超20万美元佣金，现正追讨过往按高费率多扣的5万美元报销。方法：定期核对SKU实际类目与佣金费率，发现错配立即开case纠正并追溯索赔。",
+      "title": "美国亚马逊账单验证通过以后，没有了美国站的选项了",
+      "summary": "登录工具Passkey异常后改密触发账单审核，审核通过并收到官方恢复邮件后美国站入口反而消失，站点选项仅剩日本、英国、埃及、澳洲；日本站开case被告知无法跨站点处理也无法转交美国团队，登录页团队邮件回复查不到该邮箱关联的美国站店铺，问题尚无解法，可作账号异常处理路径参考。",
       "category": "experience",
-      "score": 9,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1w6z9ah/unlocked_250000_in_savings_by_fixing_one_amazon",
-      "source": "reddit_fba",
-      "published_at": "2026-09-04T09:14:58+00:00"
+      "score": 6.8,
+      "url": "https://www.wearesellers.com/question/124532",
+      "source": "wearesellers",
+      "published_at": "2026-09-14T10:30:59.965Z"
+    },
+    {
+      "title": "新店铺开售两天50多订单，直接来临时审核---自发货被停用，资金被预留？？？",
+      "summary": "新号短期爆单极易触发自配送临时审核并冻结资金，核心触发点是绩效不达标：迟发率超4%、有效追踪率低于95%、取消率超2.5%、ODR高于1%，美国站还要求OTDR高于90%；无效单号、提前点发货、违规代发货和运费过高同样触发风控。审核周期通常不超30天，真实履约者小概率自动解冻，多数需申诉，其中准时送达率类申诉最易通过。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.wearesellers.com/question/124104",
+      "source": "wearesellers",
+      "published_at": "2026-09-02T09:47:41.539+00:00"
     }
   ]
 }
