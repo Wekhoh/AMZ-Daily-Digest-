@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-09-15T10:58:47Z",
-  "digest_date": "2026-09-15",
+  "generated_at_utc": "2026-09-16T10:47:25Z",
+  "digest_date": "2026-09-16",
   "article_count": 50,
   "articles": [
     {
-      "title": "2026年亚马逊Prime会员大促定档10月6日至7日",
-      "summary": "2026年秋季Prime会员大促定档10月6至7日，覆盖美国等22国。美国站秒杀与Z划算提报截止9月22日，路径为营销推广、管理促销和特惠、创建促销；除秒杀外应同步提报Prime专享价格折扣（单活动最多500子ASIN）和覆盖活动全程的优惠券，并跟进上线状态，提报不等于成功上线。",
+      "title": "Amazon Liability insurance",
+      "summary": "亚马逊自10月2日起将严查未投保卖家。楼主近两年未购保险，现询问覆盖所售商品的商业责任险费用。结论：美国站强制投保执法趋严，未投保存在账号受限风险。方法：卖家应自查是否在强制投保范围，询价商业综合责任险并及时投保以保号。",
       "category": "policy",
-      "score": 9,
-      "url": "https://www.amz123.com/kx/vCVKZtkl",
-      "source": "amz123",
-      "published_at": "2026-09-15T09:37:07.000Z"
+      "score": 6.2,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1whmysc/amazon_liability_insurance",
+      "source": "reddit_fba",
+      "published_at": "2026-09-16T04:26:55.000Z"
     },
     {
-      "title": "CBP starts voiding importer numbers with wrong Form 5106 details on September 18 (four things to check)",
-      "summary": "美国海关自2026年9月18日起逐一核查进口商存档的Form 5106，信息不准将作废IOR号且无法清关。应让货代调出5106核对四项：地址须为实体地址（可用负责人家庭住址，禁用注册代理、货代、P.O.箱）；邮箱和电话须属IOR本人；货代须持与IOR直接签署的POA。恢复需按指定主题行邮件申请，官方未给时限。",
+      "title": "TRO问题求助！一个asin的TRO拖到现在，工厂法务让我预交2万美金，我该弃店还是继续扛？求过来人指点",
+      "summary": "美国站个人卖家TRO求助帖：工厂法务要求预付2万美金找美国律师和解、多退少补；不处理则3-4个月后可能被缺席判决，单店赔偿或达100-200万美元。核心待解问题：弃店后老店品牌授权新店是否触发关联、TRO冻结全店资金时非侵权链接回款是否被划扣、划扣是否仅限涉案链接销售款。",
       "category": "policy",
-      "score": 9.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wgmkm6/cbp_starts_voiding_importer_numbers_with_wrong",
-      "source": "reddit_fba",
-      "published_at": "2026-09-15T01:36:54.000Z"
-    },
-    {
-      "title": "亚马逊灰度测试关闭差评\"联系买家\"按钮，卖家主动沟通渠道受阻",
-      "summary": "亚马逊全站点灰度下架1至3星差评的联系买家按钮，美国站已分批落地且不设品牌备案豁免，部分账号入口已完全关闭。买家不主动发消息时卖家无官方渠道触达低分买家，补发货、退款安抚争取改评的打法失效。运营重心应转向预防差评：前置质检、把控物流时效与售前预期管理，降低低分评价产生概率。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.amz123.com/kx/1UYbAIRt",
-      "source": "amz123",
-      "published_at": "2026-09-15T05:54:25.000Z"
-    },
-    {
-      "title": "万里汇大批亚马逊店铺授权集中失效，官方确认为技术故障",
-      "summary": "9月15日10时起多省亚马逊卖家收到万里汇店铺授权失效短信，重新授权后数分钟再度失效且多店铺同时报错，官方确认为技术故障。应对方法：立即停止重复授权，留存后台账户正常状态截图，确认店铺运营与入款不受影响，等官方修复通知后统一重授权，客服拥堵期改用工单跟进。",
-      "category": "other",
-      "score": 7.8,
-      "url": "https://www.amz123.com/kx/3VKVXOKN",
-      "source": "amz123",
-      "published_at": "2026-09-15T09:26:44.000Z"
-    },
-    {
-      "title": "Pro Hack to use the Seller Storefront for Brand Stores and Sponsored Brands",
-      "summary": "品牌店与卖家店铺是两个不同入口：品牌店是产品标题下Visit Brand Store链接的落点，有一定单量必须自建，否则该链接跳到亚马逊站内搜索，竞品会以广告或自然位截流；卖家店铺从购买框卖家名进入，展示跨品牌全部在售商品，按近30天销量排序且可搜索。方法：输入想打的关键词，查出自家在该词下卖得最好的产品，按此顺序布置品牌店页面并用于Sponsored Brands广告素材。",
-      "category": "experience",
-      "score": 9,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wgvpyn/pro_hack_to_use_the_seller_storefront_for_brand",
-      "source": "reddit_fba",
-      "published_at": "2026-09-15T09:42:48.000Z"
-    },
-    {
-      "title": "如何用 ChatGPT 做出高质量的亚马逊主图和 A+？附完整案例与 Skill",
-      "summary": "可直接落地的AI主图与A+制作流程：先把竞对链接交给AI拆解卖点顺序与各图分工，结合自家产品参数定优先级；再让AI自动搜集场景与排版参考，画面和排版分开评价并选定风格小样；用产品多角度实拍图约束外观结构，降低变形抽卡；出图后按结构、文案、风格、尺寸做QC，只对问题图针对性返工。配套史莱姆亚马逊设计Skill在Codex中调用原生生图工具使用。",
-      "category": "experience",
-      "score": 8.4,
-      "url": "https://www.wearesellers.com/question/124537",
+      "score": 7.2,
+      "url": "https://www.wearesellers.com/question/124605",
       "source": "wearesellers",
-      "published_at": "2026-09-15T09:51:47.420Z"
+      "published_at": "2026-09-16T10:10:14.035Z"
     },
     {
-      "title": "# 运营案例分析 # 亚马逊竞品9月12日销量突然涨8倍，没开广告、降价一个半月后爆单，到底流量从哪来的？",
-      "summary": "竞品9月11日销量正常，12日单量涨8倍，13日爆单。排查结论：该品从未开亚马逊站内广告，流量靠自然位与TK视频；TK端销量经确认无变化，排除TK引流波动；唯一变量是7月底从14.99降至9.99并维持一个半月未动；站外初步搜索无明显变动。疑点指向自然权重积累或未发现的站外流量，原文未定位真实来源，但其排除法可用于自查流量结构。",
-      "category": "experience",
-      "score": 6.8,
-      "url": "https://www.wearesellers.com/question/124599",
-      "source": "wearesellers",
-      "published_at": "2026-09-15T09:52:49.019Z"
-    },
-    {
-      "title": "3.2 stars, 30% return rate, patented product. Do I start a new ASIN for the improved version or fix the one I have?",
-      "summary": "宠物类专利产品实测账目：售价65美元、到岸成本17美元，632件累计销售额37321美元、净利3903美元、利润率10.46%；真实ACOS仅6.27%说明广告不是问题，退款成本每件约10美元、亚马逊费用18美元才是黑洞。退货率从8月7.6%升至9月两周27%，评分3.2，差评集中于内置手电和易用性，下一代生产已针对性改进。原帖在选修复老ASIN还是开新ASIN处被截断，无结论，但财务与退货数据可直接作同类目基准。",
-      "category": "experience",
-      "score": 8.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wgormx/32_stars_30_return_rate_patented_product_do_i",
-      "source": "reddit_fba",
-      "published_at": "2026-09-15T03:20:45.000Z"
-    },
-    {
-      "title": "店铺换过法人半年后触发协议1视频验证，采购都是1688的，提供不了发票，可以给审核员直接看1688的采购记录吗？我名下也有店铺，会不会关联？该怎么合理解释B店铺在更换公司法人后为什么不同步到亚马逊",
-      "summary": "协议1增强型视频验证关键要求：亚马逊明确要求出示注册账户时使用的身份证件原件，不接受任何新证件，因此先改后台法人再验证存在证件不匹配硬伤；1688采购无发票可尝试用采购记录佐证，但需准备法人变更未同步后台的合理解释；名下另有店铺存在关联风险，美国站半年未运营且新信用卡无账单也会加大通过难度。",
-      "category": "experience",
-      "score": 6.8,
-      "url": "https://www.wearesellers.com/question/124561",
-      "source": "wearesellers",
-      "published_at": "2026-09-15T00:52:12.413Z"
-    },
-    {
-      "title": "AI推荐难以直接赢得消费者信任，用户主动核验商品信息趋势显现",
-      "summary": "Skeepers调研显示66%消费者会用UGC创作者评价交叉验证网红或AI推荐，18至25岁群体达83%；59%不会仅凭AI建议下单，58%认为真实买家图片和视频最可信，品牌自有内容仅获35%信任。可执行点是：Listing与广告素材应放大真实买家秀和视频，弱化纯AI生成内容以建立信任。",
+      "title": "未来5周全球主干航线79个航次取消 黄金周前运力加速收紧",
+      "summary": "未来5周（9月14日至10月18日）全球核心东西向航线721个计划航次中取消79个，取消率约11%，跨太平洋东向占52%；第38至41周已公示空班从39个激增至70个，单周增幅近56%，船公司主动收紧运力以应对黄金周前后货量波动；马士基预警亚洲天气与港口拥堵影响准点率。发美国线的FBA卖家应避开空班集中期提前订舱，并预留备货与发货缓冲期。",
       "category": "trend",
-      "score": 6.6,
-      "url": "https://www.amz123.com/kx/2LpnEerm",
+      "score": 7.4,
+      "url": "https://www.amz123.com/kx/WC54DYv1",
       "source": "amz123",
-      "published_at": "2026-09-15T03:53:36.000Z"
+      "published_at": "2026-09-16T03:53:47.000Z"
+    },
+    {
+      "title": "亚马逊2026年11月2日起调整商业责任险规则，新增11类高危类目强制投保要求",
+      "summary": "亚马逊商业责任险新规2026年11月2日生效，保留月销超1万美元30天内投保、保额100万美元的门槛，同时新增儿童商品、化妆品、锂电池、床垫、汽车摩托轮胎等11类高危类目强制投保，且不限新品在售、不看月销量，均须不低于100万美元保额；涉及类目卖家应立即排查自身ASIN是否在列，尽快完成投保并上传保单，避免销售权限受限。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.amz123.com/kx/i7xMS7Zg",
+      "source": "amz123",
+      "published_at": "2026-09-10T09:16:41+00:00"
+    },
+    {
+      "title": "亚马逊\"水星计划\"曝光：2031年当日达网点将超1000个",
+      "summary": "亚马逊水星计划拟2031年前将美国当日达履约网点从约85个扩至1000个以上，规模增超十倍并投入数十亿美元，目标是80%的美国Prime会员10英里内有SSD站点，各站储备9万款畅销品以直接挑战沃尔玛。内部文件预计自有配送网络承接全美包裹比例2027年为86.3%、2028年为87.4%、2029年达88.7%，承运量从约122亿件增至158亿件。",
+      "category": "trend",
+      "score": 8.4,
+      "url": "https://www.amz123.com/kx/6hVKlbmm",
+      "source": "amz123",
+      "published_at": "2026-09-16T09:39:32.000Z"
+    },
+    {
+      "title": "NRF：美国9月港口进口预计达231万TEU，旺季延长刷新2026年单月纪录",
+      "summary": "NRF报告：美国9月港口进口预计231万TEU，同比增长9.6%，超7月230万TEU成2026年单月最高；7月实际约230万、8月预计229万TEU，连续三月高位，旺季未如市场预期在8月后快速回落。主因中国恶劣天气致船舶延误、巴拿马运河潜在干旱引发改道，叠加关税通胀下消费需求稳健、零售商持续补货，进口旺季拉长至夏末秋初，对补货与物流窗口判断有直接数据参考。",
+      "category": "trend",
+      "score": 8.4,
+      "url": "https://www.amz123.com/kx/I9CRAe69",
+      "source": "amz123",
+      "published_at": "2026-09-16T09:49:45.000Z"
+    },
+    {
+      "title": "亚马逊美国站旺季费用多项叠加，卖家成本压力显著上升",
+      "summary": "美国站旺季成本进入叠加期：2026年10月15日至2027年1月14日，FBA、MCF及Buy with Prime配送收取旺季附加费，小号标准件每件约0.19美元、T恤约0.39美元、超大件约2.81美元、平均约0.32美元，并与已执行的3.5%燃油及物流附加费同时计收。卖家应将双重费用纳入售价测算，轻小件低客单价商品优先复核利润，大件需叠加燃油与大件附加费核算。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.amz123.com/kx/0eTtbNN6",
+      "source": "amz123",
+      "published_at": "2026-09-10T09:37:28+00:00"
+    },
+    {
+      "title": "烧掉1亿token做了这个Skill，帮你判断亚马逊爆品在TK上到底能不能做？",
+      "summary": "亚马逊爆品转TK的可行性评估工具与流程：tk-content-fit先预筛剔除纯工业件、B2B规格件等不适合拍内容的品，再将Listing拆成品类、功能、痛点、演示点、价格，转译成TK搜索语言，分层验证需求、竞争与达人生态、对标脚本，最终输出内容方向、达人画像与最小测试计划，项目已开源可直接安装使用。",
+      "category": "trend",
+      "score": 7,
+      "url": "https://www.wearesellers.com/question/123294",
+      "source": "wearesellers",
+      "published_at": "2026-09-16T10:04:45.490Z"
+    },
+    {
+      "title": "陕西首单跨境电商\"无票免税\"申报落地，中小卖家合规出口迎新通道",
+      "summary": "陕西完成首单跨境电商无票免税申报：综试区内注册的B2C出口企业在陕西省跨境电商线上综合服务平台登记出口明细，并经综试区海关办理9610零售出口申报，即便无有效进货凭证亦可免征增值税和消费税，消除中小卖家零散采购无进项发票而被视同内销补税的风险。陕西已依托单一窗口搭建全省线上平台，统一执法标准并开展合规辅导。",
+      "category": "policy",
+      "score": 6,
+      "url": "https://www.amz123.com/kx/oAN28SlU",
+      "source": "amz123",
+      "published_at": "2026-09-16T09:29:15.000Z"
+    },
+    {
+      "title": "美国CBP将于9月18日强化IOR审核，跨境卖家清关风险上升",
+      "summary": "美国CBP自2026年9月18日起强化IOR（登记进口商）审核，进口商备案的公司名称、地址、税务资料错误、缺失或长期未更新将影响IOR资格并干扰进口申报。依赖货代或第三方IOR服务的中国卖家合规门槛显著提高，资质异常极易导致清关受阻、滞港，应尽快自查并更新备案信息以保住进口清关资格。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.amz123.com/kx/YXfoKl6v",
+      "source": "amz123",
+      "published_at": "2026-09-07T02:12:10+00:00"
     }
   ]
 }
