@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-09-17T10:56:49Z",
-  "digest_date": "2026-09-17",
+  "generated_at_utc": "2026-09-18T10:37:04Z",
+  "digest_date": "2026-09-18",
   "article_count": 50,
   "articles": [
     {
-      "title": "Q4 FBA inventory planning: how are sellers managing backup stock?",
-      "summary": "Q4备货核心不是猜销量，而是核算每个交接环节：生产、验货、prep、运输、清关和FBA入仓，任一环节延迟都会在BFCM演变成断货；现金紧张时需在全部发FBA、分批发货与亚马逊站外储备库存之间取舍。帖中给出该规划框架并征集国内外仓备份做法，尚无卖家答案，框架可直接用于Q4排期自查。",
-      "category": "experience",
-      "score": 7.2,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wif6ys/q4_fba_inventory_planning_how_are_sellers",
-      "source": "reddit_fba",
-      "published_at": "2026-09-17T00:49:17.000Z"
-    },
-    {
-      "title": "自然位排名还在手动查？分享一套自动化流程。",
-      "summary": "每小时监控关键词排名的自动化流程：用XY（西柚）MCP获取关键词监控数据，飞书群机器人每小时自动拉取自然位与广告位并推送；再扩展每日链接监控（大类小类排名、评分、评价数与前日对比）与运营日报机器人（销量、流量、转化率、广告占比、ACOS、库存可售天数及SKU预警），把重复检查交给机器人，只处理异常链接，配置可由AI辅助完成。",
-      "category": "experience",
+      "title": "[PSA / Math] Q4 Holiday Peak fees start Oct 15: How much phantom profit is your sourcing sheet calculating right now?",
+      "summary": "10月15日至1月14日亚马逊收取旺季配送费，标准尺寸加收约0.32-0.40美元，并叠加3.5%燃油附加费与入库配置费。以1.2磅、售价26.99美元商品为例：旧费率卡估算净利7.29美元、ROI 63.4%，按实际Q4费率净利仅6.48美元、ROI 56.3%，单件虚增利润0.81美元，40件试单即少赚32.40美元；选品需按新费率重算，可用免费工具按官方公式直推Google Sheets。",
+      "category": "policy",
       "score": 9,
-      "url": "https://www.wearesellers.com/question/124646",
-      "source": "wearesellers",
-      "published_at": "2026-09-17T10:18:55.672Z"
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wisvab/psa_math_q4_holiday_peak_fees_start_oct_15_how",
+      "source": "reddit_fba",
+      "published_at": "2026-09-17T12:39:15.000Z"
     },
     {
-      "title": "划线价【亿级大佬】请进屋~疑惑点，比如我提供图片的这个，为什么它没有把价格恢复到原价79.99（就是没有恢复到List Price和Your Price 79.99）却能一直保持79.99划线价呢？谢谢",
-      "summary": "划线价操作方法：List Price与Your Price保持59.99不动，出单1-2天让系统抓取划线价，再到后台编辑商品仅改Sales Price为49.99并把销售时长设2个月；到期自动恢复59.99后卖1-2天再改回49.99，即每约两个月循环一次。帖子还提出竞品划线价维持机制及如何查询是否被抓取等问题，方法未经系统验证。",
+      "title": "关于广告受限类产品的投放策略要注意哪些？求有实操经验的回答",
+      "summary": "烟盒类产品投关键词广告会被标记并禁止所有广告形式；自动广告可短暂运行，但再次触碰关键词广告同样被标记。实测路径：把Listing改写成普通收纳盒并换图可短暂恢复，但会被二次标记；开Case申辩因评论含卷烟内容被驳回两次，两个ASIN基本失效。楼主计划：翻新白色变体换新ASIN保持Listing干净，之后只开定向或自动广告规避审查。",
       "category": "experience",
-      "score": 6.8,
-      "url": "https://www.wearesellers.com/question/124644",
+      "score": 7.4,
+      "url": "https://www.wearesellers.com/question/124706",
       "source": "wearesellers",
-      "published_at": "2026-09-17T05:49:49.117Z"
+      "published_at": "2026-09-18T10:18:16.645Z"
     },
     {
-      "title": "How do you manage ppc campaign budgets according to your ACOS? Intermediate - Advanced PPC optimization / scaling tips",
-      "summary": "PPC预算不应按低ACOS调动：盈利活动不该被预算封顶；为冲排名在保本或微亏投放下，应改用分时段、否定词和降价控花费，而非让预算自然跑完；预算不等于实际消耗，日预算2000美元的活动常只花不到四分之一。正确做法是按盈利与增长空间分配：用Sponsored Products购买产品报告和Sponsored Brands归因购买报告加活动花费核算各活动盈利，再用搜索词印象份额报告确认盈利搜索词的占比。",
-      "category": "experience",
+      "title": "关于货件差异调查后，亚马逊拒绝赔偿。开了好几个case都是同样的回答：我们必须能够根据您的发货计划确认具体商品及数量的收货情况。送达证明仅确认承运商已将货物送达我们的物流中心，并非亚马逊已收到您发货计划中所述确切商品及数量的确认。",
+      "summary": "2290套装货物货件存在差异，卖家提供货代POD与发货单并开5个中英文case仍被拒赔。亚马逊口径：POD仅证明承运商送达，不能确认按发货计划收到具体商品与数量，建议与承运商或3PL协商并购买运输保险。结论：丢货索赔不能只靠POD，发货前应投保并保留能证明亚马逊实收数量的证据。",
+      "category": "policy",
       "score": 7.8,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wi3ng4/how_do_you_manage_ppc_campaign_budgets_according",
-      "source": "reddit_fba",
-      "published_at": "2026-09-16T17:22:41.000Z"
-    },
-    {
-      "title": "亚马逊评论分析竞品选择把这些失望发生的瞬间找出来提前规避",
-      "summary": "竞品评论分析的价值取决于选样质量：上万条评论的老链接问题发生时间久且差评点分散，新品评论基数太小，随机挑ASIN易混入不真实评论。应选材质与安装方式相似、近一年上架的白帽竞品，判断特征为评论增长平缓、评论时间晚于上架时间、掉评后评分无明显增长，并排除定制VINE评论。采购前找出买家差评场景，发货前规避。",
-      "category": "experience",
-      "score": 9,
-      "url": "https://www.wearesellers.com/question/124616",
+      "url": "https://www.wearesellers.com/question/114740",
       "source": "wearesellers",
-      "published_at": "2026-09-17T10:03:26.092Z"
+      "published_at": "2026-09-18T09:29:41.016Z"
     },
     {
-      "title": "iPhone Duo发布前夕配件市场提前爆发，速卖通单日上新手机壳膜逾30万件",
-      "summary": "iPhone Duo（10月23日发售，海外售价1999美元起）引爆配件商机：8月速卖通配件搜索量环比增182%，折叠屏关键词增8倍，发布当天壳膜新品超30万件；亚马逊相关条目已超千条，Spigen已上架铰链保护壳与外屏贴膜。供应链提前4个月开模备产并涨价锁利，配件卖家应在10月16日预购至发售窗口内完成上架卡位抢排名。",
-      "category": "trend",
-      "score": 8,
-      "url": "https://www.amz123.com/kx/l9i63tBK",
-      "source": "amz123",
-      "published_at": "2026-09-17T09:31:43.000Z"
+      "title": "实测GPT-Image-2.5：用一张白底图跑完13个电商素材场景，比2.0强在哪？（附提示词）",
+      "summary": "实测OpenAI新发布的GPT-Image-2.5，用一张白底图跑13个电商素材场景：产品一致性、细节真实性、局部编辑准确度、生图速度较2.0明显提升。方法：手机实拍图一句话生成亚马逊白底主图（产品居中占画面85%、纯白背景、柔和棚拍光），再用结构化提示词生成卖家信息图、平铺场景图，强制要求文字为北美英语、产品与参考图完全一致，附全部提示词文档，可直接套用于Listing素材制作。",
+      "category": "experience",
+      "score": 7.4,
+      "url": "https://www.wearesellers.com/question/124660",
+      "source": "wearesellers",
+      "published_at": "2026-09-18T08:24:56.661Z"
     },
     {
-      "title": "亚马逊大批Listing划线价异常消失，卖家订单量大幅下滑",
-      "summary": "美国站大量Listing划线价无故消失、专享折扣报错，部分店铺六成乃至全部商品划线失效，叠加9月7日劳动节假期线下分流，销量腰斩、近三天单量仅为日常三分之一；业内消息指亚马逊将推行新参考价规则：90天周期内至少10%的天数按参考价成交才能展示划线价。卖家需立即核查前台优惠展示并调整定价，保证周期内有足够参考价出单天数。",
+      "title": "亚马逊灰度测试关闭差评\"联系买家\"按钮，卖家主动沟通渠道受阻",
+      "summary": "亚马逊全站点灰度下架1至3星差评的联系买家按钮，美国站已分批落地且不设品牌备案豁免，部分账号入口已完全关闭。买家不主动发消息时卖家无官方渠道触达低分买家，补发货、退款安抚争取改评的打法失效。运营重心应转向预防差评：前置质检、把控物流时效与售前预期管理，降低低分评价产生概率。",
       "category": "policy",
       "score": 9.4,
-      "url": "https://www.amz123.com/kx/6SrmZULT",
+      "url": "https://www.amz123.com/kx/1UYbAIRt",
       "source": "amz123",
-      "published_at": "2026-09-08T02:12:27+00:00"
+      "published_at": "2026-09-15T05:54:25+00:00"
     },
     {
-      "title": "大家今天广告点击正常吗？继昨天订单问题后，今天连广告都烧不动了？",
-      "summary": "美国站本周异常密集：昨天出现订单不显示bug，今天广告烧不动；在广告调整极度克制的前提下，昨日花200刀，今日截稿前不足50刀；发帖人不排除类目竞品竞价上浮，但称未见如此严重情况。帖内为异常反馈与同行征询，无排查结论，可作美国站系统性波动信号参考。",
-      "category": "trend",
-      "score": 6.2,
-      "url": "https://www.wearesellers.com/question/124564",
+      "title": "CBP starts voiding importer numbers with wrong Form 5106 details on September 18 (four things to check)",
+      "summary": "美国海关自2026年9月18日起逐一核查进口商存档的Form 5106，信息不准将作废IOR号且无法清关。应让货代调出5106核对四项：地址须为实体地址（可用负责人家庭住址，禁用注册代理、货代、P.O.箱）；邮箱和电话须属IOR本人；货代须持与IOR直接签署的POA。恢复需按指定主题行邮件申请，官方未给时限。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wgmkm6/cbp_starts_voiding_importer_numbers_with_wrong",
+      "source": "reddit_fba",
+      "published_at": "2026-09-15T01:36:54+00:00"
+    },
+    {
+      "title": "差评拆解第5期：这次不拆产品，讲讲我是怎么用AI拆差评的",
+      "summary": "用AI拆差评为选品找切入点的四步法：拉评论（官方API已堵死，用工具或爬虫，文字评论至少100条再动手，样本少结论不可靠）；AI按固定标签体系（寿命、佩戴、音质、连接、客服等）打标，避免每次分类漂移；对比各标签占比再用退货率验证影响面；按卖点未兑现、基础体验塌、品控寿命、服务不兜底定死法。注意前台大分与可拆评论口径不一致，剔除描述笼统的恶意差评，AI归类需抽查原始评论核对，单品类约两三小时。",
+      "category": "experience",
+      "score": 9,
+      "url": "https://www.wearesellers.com/question/124651",
       "source": "wearesellers",
-      "published_at": "2026-09-17T09:50:24.193Z"
+      "published_at": "2026-09-18T09:24:52.178Z"
     },
     {
-      "title": "深圳集卡运输燃油附加费标准调整：每百公里加收80—100元",
-      "summary": "深圳集装箱运输协会9月14日发通知，建议会员企业对所有未结算及新签订单收取燃油附加费，标准为每百公里加收80—100元，主因0号柴油最高零售价已达7.98元/升。若柴油价回落至7.0元/升以下且连续保持15天，可协商取消。深圳发货的FBA卖家需预算盐田、蛇口拖车成本上涨，发货前与货代确认附加费口径并锁定报价。",
-      "category": "policy",
+      "title": "亚马逊推出GIA工具助力品牌挖掘区域广告增长机会",
+      "summary": "亚马逊推出GIA地理洞察工具，将广告主地理数据与亚马逊内部数据结合，以地图界面呈现各区域广告表现，用于识别市场渗透率较低或存在增长空间的地区，并支持构建区域受众群体及调整广告竞价策略；已向美、英、德、法、意、西、日、澳、加市场中使用Amazon Marketing Cloud和Amazon DSP的广告主开放，符合条件品牌可借此优化区域广告预算分配。",
+      "category": "trend",
       "score": 7.4,
-      "url": "https://www.amz123.com/kx/eiRoag2l",
+      "url": "https://www.amz123.com/kx/UhGaNTD9",
       "source": "amz123",
-      "published_at": "2026-09-17T05:48:12.000Z"
+      "published_at": "2026-09-18T03:38:00.000Z"
     },
     {
-      "title": "欧盟新海关法规正式通过，11月1日起对跨境小包征收统一处理费",
-      "summary": "欧盟海关改革正式通过，非欧盟电商平台向欧盟消费者售货将被认定为进口方，须承担海关手续、关税与合规责任，反复违规最高罚前12个月进口商品总值6%。新设远程销售小包统一处理费，成员国最迟2026年11月1日实施，与已生效的150欧元以下小包3欧元临时关税叠加征收，欧盟站卖家应提前核算物流成本。",
-      "category": "policy",
-      "score": 6,
-      "url": "https://www.amz123.com/kx/hhQA0B00",
+      "title": "亚马逊美国站10款家居工具月销破万，灭火器类目月入63万美元",
+      "summary": "亚马逊美国站家居工具类目10款单品月销破万，需求集中于家庭安全、净水替换、卫浴维修、园艺固定、基础DIY五大方向；everydrop冰箱水滤芯月销超4.4万件、月销售额约383.9万美元居首，热销品评分多在4.3星以上，可作选品对标。",
+      "category": "trend",
+      "score": 8.4,
+      "url": "https://www.amz123.com/kx/OC2QwpTE",
       "source": "amz123",
-      "published_at": "2026-09-17T06:39:42.000Z"
+      "published_at": "2026-09-18T05:59:19.000Z"
+    },
+    {
+      "title": "影石曝光亚马逊恶意差评黑产：竞争对手高管雇佣留学生实施抹黑",
+      "summary": "影石披露亚马逊恶意差评黑产案：同行公司高管以每条200至300元雇佣黑灰产及留学生发布虚假差评并退回未拆封包裹，3人被刑拘、高管被行拘；黑市竞对差评报价约280元、好评低至60元，新品上市期需警惕集中差评与异常账号攻击并报警处理。",
+      "category": "other",
+      "score": 7.4,
+      "url": "https://www.amz123.com/kx/MPYQAa3k",
+      "source": "amz123",
+      "published_at": "2026-09-18T05:59:21.000Z"
     }
   ]
 }
