@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-09-18T10:37:04Z",
-  "digest_date": "2026-09-18",
+  "generated_at_utc": "2026-09-19T10:14:26Z",
+  "digest_date": "2026-09-19",
   "article_count": 50,
   "articles": [
     {
-      "title": "[PSA / Math] Q4 Holiday Peak fees start Oct 15: How much phantom profit is your sourcing sheet calculating right now?",
-      "summary": "10月15日至1月14日亚马逊收取旺季配送费，标准尺寸加收约0.32-0.40美元，并叠加3.5%燃油附加费与入库配置费。以1.2磅、售价26.99美元商品为例：旧费率卡估算净利7.29美元、ROI 63.4%，按实际Q4费率净利仅6.48美元、ROI 56.3%，单件虚增利润0.81美元，40件试单即少赚32.40美元；选品需按新费率重算，可用免费工具按官方公式直推Google Sheets。",
+      "title": "Anyone else getting billed on dimensional weight instead of actual weight after the 2026 size tier changes?",
+      "summary": "2026年1月尺寸分段调整后，实重约4磅、箱体14x12x10英寸的产品按体积重公式长x宽x高除以139计得约12磅，亚马逊按两者取高计费，单件费用涨约40%，而价格与包装均未动。要点：费用按打包后箱体计算，缩小一个尺寸计费重几乎不降；2025年该品恰在低价档，新规后跳档。核算利润须用计费重，可测试换外箱降档。",
       "category": "policy",
-      "score": 9,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wisvab/psa_math_q4_holiday_peak_fees_start_oct_15_how",
-      "source": "reddit_fba",
-      "published_at": "2026-09-17T12:39:15.000Z"
-    },
-    {
-      "title": "关于广告受限类产品的投放策略要注意哪些？求有实操经验的回答",
-      "summary": "烟盒类产品投关键词广告会被标记并禁止所有广告形式；自动广告可短暂运行，但再次触碰关键词广告同样被标记。实测路径：把Listing改写成普通收纳盒并换图可短暂恢复，但会被二次标记；开Case申辩因评论含卷烟内容被驳回两次，两个ASIN基本失效。楼主计划：翻新白色变体换新ASIN保持Listing干净，之后只开定向或自动广告规避审查。",
-      "category": "experience",
-      "score": 7.4,
-      "url": "https://www.wearesellers.com/question/124706",
-      "source": "wearesellers",
-      "published_at": "2026-09-18T10:18:16.645Z"
-    },
-    {
-      "title": "关于货件差异调查后，亚马逊拒绝赔偿。开了好几个case都是同样的回答：我们必须能够根据您的发货计划确认具体商品及数量的收货情况。送达证明仅确认承运商已将货物送达我们的物流中心，并非亚马逊已收到您发货计划中所述确切商品及数量的确认。",
-      "summary": "2290套装货物货件存在差异，卖家提供货代POD与发货单并开5个中英文case仍被拒赔。亚马逊口径：POD仅证明承运商送达，不能确认按发货计划收到具体商品与数量，建议与承运商或3PL协商并购买运输保险。结论：丢货索赔不能只靠POD，发货前应投保并保留能证明亚马逊实收数量的证据。",
-      "category": "policy",
-      "score": 7.8,
-      "url": "https://www.wearesellers.com/question/114740",
-      "source": "wearesellers",
-      "published_at": "2026-09-18T09:29:41.016Z"
-    },
-    {
-      "title": "实测GPT-Image-2.5：用一张白底图跑完13个电商素材场景，比2.0强在哪？（附提示词）",
-      "summary": "实测OpenAI新发布的GPT-Image-2.5，用一张白底图跑13个电商素材场景：产品一致性、细节真实性、局部编辑准确度、生图速度较2.0明显提升。方法：手机实拍图一句话生成亚马逊白底主图（产品居中占画面85%、纯白背景、柔和棚拍光），再用结构化提示词生成卖家信息图、平铺场景图，强制要求文字为北美英语、产品与参考图完全一致，附全部提示词文档，可直接套用于Listing素材制作。",
-      "category": "experience",
-      "score": 7.4,
-      "url": "https://www.wearesellers.com/question/124660",
-      "source": "wearesellers",
-      "published_at": "2026-09-18T08:24:56.661Z"
-    },
-    {
-      "title": "亚马逊灰度测试关闭差评\"联系买家\"按钮，卖家主动沟通渠道受阻",
-      "summary": "亚马逊全站点灰度下架1至3星差评的联系买家按钮，美国站已分批落地且不设品牌备案豁免，部分账号入口已完全关闭。买家不主动发消息时卖家无官方渠道触达低分买家，补发货、退款安抚争取改评的打法失效。运营重心应转向预防差评：前置质检、把控物流时效与售前预期管理，降低低分评价产生概率。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.amz123.com/kx/1UYbAIRt",
-      "source": "amz123",
-      "published_at": "2026-09-15T05:54:25+00:00"
-    },
-    {
-      "title": "CBP starts voiding importer numbers with wrong Form 5106 details on September 18 (four things to check)",
-      "summary": "美国海关自2026年9月18日起逐一核查进口商存档的Form 5106，信息不准将作废IOR号且无法清关。应让货代调出5106核对四项：地址须为实体地址（可用负责人家庭住址，禁用注册代理、货代、P.O.箱）；邮箱和电话须属IOR本人；货代须持与IOR直接签署的POA。恢复需按指定主题行邮件申请，官方未给时限。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wgmkm6/cbp_starts_voiding_importer_numbers_with_wrong",
-      "source": "reddit_fba",
-      "published_at": "2026-09-15T01:36:54+00:00"
-    },
-    {
-      "title": "差评拆解第5期：这次不拆产品，讲讲我是怎么用AI拆差评的",
-      "summary": "用AI拆差评为选品找切入点的四步法：拉评论（官方API已堵死，用工具或爬虫，文字评论至少100条再动手，样本少结论不可靠）；AI按固定标签体系（寿命、佩戴、音质、连接、客服等）打标，避免每次分类漂移；对比各标签占比再用退货率验证影响面；按卖点未兑现、基础体验塌、品控寿命、服务不兜底定死法。注意前台大分与可拆评论口径不一致，剔除描述笼统的恶意差评，AI归类需抽查原始评论核对，单品类约两三小时。",
-      "category": "experience",
-      "score": 9,
-      "url": "https://www.wearesellers.com/question/124651",
-      "source": "wearesellers",
-      "published_at": "2026-09-18T09:24:52.178Z"
-    },
-    {
-      "title": "亚马逊推出GIA工具助力品牌挖掘区域广告增长机会",
-      "summary": "亚马逊推出GIA地理洞察工具，将广告主地理数据与亚马逊内部数据结合，以地图界面呈现各区域广告表现，用于识别市场渗透率较低或存在增长空间的地区，并支持构建区域受众群体及调整广告竞价策略；已向美、英、德、法、意、西、日、澳、加市场中使用Amazon Marketing Cloud和Amazon DSP的广告主开放，符合条件品牌可借此优化区域广告预算分配。",
-      "category": "trend",
-      "score": 7.4,
-      "url": "https://www.amz123.com/kx/UhGaNTD9",
-      "source": "amz123",
-      "published_at": "2026-09-18T03:38:00.000Z"
-    },
-    {
-      "title": "亚马逊美国站10款家居工具月销破万，灭火器类目月入63万美元",
-      "summary": "亚马逊美国站家居工具类目10款单品月销破万，需求集中于家庭安全、净水替换、卫浴维修、园艺固定、基础DIY五大方向；everydrop冰箱水滤芯月销超4.4万件、月销售额约383.9万美元居首，热销品评分多在4.3星以上，可作选品对标。",
-      "category": "trend",
       "score": 8.4,
-      "url": "https://www.amz123.com/kx/OC2QwpTE",
-      "source": "amz123",
-      "published_at": "2026-09-18T05:59:19.000Z"
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wkd72s/anyone_else_getting_billed_on_dimensional_weight",
+      "source": "reddit_fba",
+      "published_at": "2026-09-19T05:16:32.000Z"
     },
     {
-      "title": "影石曝光亚马逊恶意差评黑产：竞争对手高管雇佣留学生实施抹黑",
-      "summary": "影石披露亚马逊恶意差评黑产案：同行公司高管以每条200至300元雇佣黑灰产及留学生发布虚假差评并退回未拆封包裹，3人被刑拘、高管被行拘；黑市竞对差评报价约280元、好评低至60元，新品上市期需警惕集中差评与异常账号攻击并报警处理。",
-      "category": "other",
-      "score": 7.4,
-      "url": "https://www.amz123.com/kx/MPYQAa3k",
+      "title": "I wouldn’t make the decision from the “high risk” label alone.",
+      "summary": "面对高风险标签不要直接据此决定发货或拒单。方法：核查触发风控的具体信号，判断信号与客户场景是否一致，找出发货前可独立验证的信息；分清系统发现风险指标与订单确定欺诈是两回事。若证据仍模糊，推迟发货转人工审核，优于盲目发货或误拒真实客户。",
+      "category": "experience",
+      "score": 6.8,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wkhztj/i_wouldnt_make_the_decision_from_the_high_risk",
+      "source": "reddit_fba",
+      "published_at": "2026-09-19T09:50:21.000Z"
+    },
+    {
+      "title": "Anyone else's Amazon partnered carrier quote jumping from $50 to $390 for the exact same shipment?",
+      "summary": "小卖家反馈亚马逊合作承运商报价异常跳涨：同SKU、同箱数与尺寸重量，一周内报价从50美元涨到390美元约7倍；其他卖家称相同货件涨幅600%到1000%。开case仅获费率正确答复且无明细。可行选择只有自吞约340美元差价，或取消重贴标转第三方承运商，代价是错过取件窗口、入仓延至下周。",
+      "category": "experience",
+      "score": 7.2,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wkd6j9/anyone_elses_amazon_partnered_carrier_quote",
+      "source": "reddit_fba",
+      "published_at": "2026-09-19T05:15:52.000Z"
+    },
+    {
+      "title": "亚马逊登陆时二次验证完强制要求创建通行密钥Passkey登陆，WINDOW电脑要求使用USB安全密钥的解决办法",
+      "summary": "亚马逊将强制要求Passkey登录，老式组装台式机因无指纹人脸识别会卡在USB安全密钥提示。解法：升级Win10和最新chrome并设置Windows Hello PIN，若仍调用外部密钥，安装免费的Bitwarden chrome插件，注册设好主密码后回到亚马逊后台，在插件而非亚马逊页面创建密钥即可一秒通过。通行密钥与硬件绑定，建议提前备用机也添加，防止原电脑损坏无法登录。",
+      "category": "experience",
+      "score": 9,
+      "url": "https://www.wearesellers.com/question/124460",
+      "source": "wearesellers",
+      "published_at": "2026-09-12T03:54:28.797+00:00"
+    },
+    {
+      "title": "亚马逊美国站旺季费用多项叠加，卖家成本压力显著上升",
+      "summary": "美国站旺季成本进入叠加期：2026年10月15日至2027年1月14日，FBA、MCF及Buy with Prime配送收取旺季附加费，小号标准件每件约0.19美元、T恤约0.39美元、超大件约2.81美元、平均约0.32美元，并与已执行的3.5%燃油及物流附加费同时计收。卖家应将双重费用纳入售价测算，轻小件低客单价商品优先复核利润，大件需叠加燃油与大件附加费核算。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.amz123.com/kx/0eTtbNN6",
       "source": "amz123",
-      "published_at": "2026-09-18T05:59:21.000Z"
+      "published_at": "2026-09-10T09:37:28+00:00"
+    },
+    {
+      "title": "FBA索赔窗口到底是18个月还是60天？亚马逊红线文件里18 months是被划掉的，但我只拿到英欧站那一份",
+      "summary": "FBA库存丢损索赔窗口已从18个月改为60天，以库存台账报告丢损日为锚点，逾期不予赔偿；客户退货索赔须在退款或换货后45至105天内提交，早于45天直接驳回；移除订单分两个窗口：途中丢失自货件创建起75天，途中损坏自退回签收起60天；90天说法在四份官方文件中均不存在，美国站子页面在登录墙后待核实。",
+      "category": "policy",
+      "score": 9,
+      "url": "https://www.wearesellers.com/question/124480",
+      "source": "wearesellers",
+      "published_at": "2026-09-14T03:30:09.732+00:00"
+    },
+    {
+      "title": "标题超限直接被AI改写！亚马逊75字符新规即将强制执行",
+      "summary": "亚马逊将于2026年7月27日起强制执行75字符标题新规。超出字符需移至可被搜索的商品亮点中。卖家需在后台管理所有库存中，通过编辑页面的查看改进内容，预览并一键采用或调整AI推荐的名称与亮点，避免逾期被AI强制替代。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.wearesellers.com/question/122858",
+      "source": "wearesellers",
+      "published_at": "2026-07-31T08:01:06.536+00:00"
+    },
+    {
+      "title": "亚马逊2026年11月2日起调整商业责任险规则，新增11类高危类目强制投保要求",
+      "summary": "亚马逊商业责任险新规2026年11月2日生效，保留月销超1万美元30天内投保、保额100万美元的门槛，同时新增儿童商品、化妆品、锂电池、床垫、汽车摩托轮胎等11类高危类目强制投保，且不限新品在售、不看月销量，均须不低于100万美元保额；涉及类目卖家应立即排查自身ASIN是否在列，尽快完成投保并上传保单，避免销售权限受限。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.amz123.com/kx/i7xMS7Zg",
+      "source": "amz123",
+      "published_at": "2026-09-10T09:16:41+00:00"
+    },
+    {
+      "title": "GPT 电商图很好看，但产品越来越不像你的产品！",
+      "summary": "GPT做电商产品图存在三个硬伤：给了实拍图后产品仍会被AI重新理解，结构、边缘、接口位置漂移，变成像但不等于实物的产品；多轮编辑导致画质衰减，出现噪点、白边脏边和清晰度下降；AI会凭明暗变化脑补褶皱、织物纹、裂纹等实物不存在的纹理。可执行的稳定工作流是GPT负责场景、构图、人物、光影，PS负责产品真实性、细节锁定和最终合成，以保障亚马逊主图、A+和详情页中产品与实物一致。",
+      "category": "experience",
+      "score": 9,
+      "url": "https://www.wearesellers.com/question/124712",
+      "source": "wearesellers",
+      "published_at": "2026-09-19T09:59:28.149Z"
+    },
+    {
+      "title": "2026年亚马逊Prime会员大促定档10月6日至7日",
+      "summary": "2026年秋季Prime会员大促定档10月6至7日，覆盖美国等22国。美国站秒杀与Z划算提报截止9月22日，路径为营销推广、管理促销和特惠、创建促销；除秒杀外应同步提报Prime专享价格折扣（单活动最多500子ASIN）和覆盖活动全程的优惠券，并跟进上线状态，提报不等于成功上线。",
+      "category": "policy",
+      "score": 9,
+      "url": "https://www.amz123.com/kx/vCVKZtkl",
+      "source": "amz123",
+      "published_at": "2026-09-15T09:37:07+00:00"
     }
   ]
 }
