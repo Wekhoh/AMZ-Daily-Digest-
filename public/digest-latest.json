@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-09-19T10:14:26Z",
-  "digest_date": "2026-09-19",
+  "generated_at_utc": "2026-09-20T10:38:16Z",
+  "digest_date": "2026-09-20",
   "article_count": 50,
   "articles": [
     {
-      "title": "Anyone else getting billed on dimensional weight instead of actual weight after the 2026 size tier changes?",
-      "summary": "2026年1月尺寸分段调整后，实重约4磅、箱体14x12x10英寸的产品按体积重公式长x宽x高除以139计得约12磅，亚马逊按两者取高计费，单件费用涨约40%，而价格与包装均未动。要点：费用按打包后箱体计算，缩小一个尺寸计费重几乎不降；2025年该品恰在低价档，新规后跳档。核算利润须用计费重，可测试换外箱降档。",
+      "title": "Anyone else's all in Amazon cost now eating close to 40 percent of revenue before you pay yourself?",
+      "summary": "逐项拆解上季度成本：佣金、配送、仓储、各类附加费、广告与头程运费合计占毛收入38%，而该SKU两年前还是利润最好的产品；剔除广告与头程后约26%。单项涨幅均不显眼，周报无一触发决策，总成本却已悄然变质；2026年口径亚马逊相关开支普遍占营收35%至45%。方法：按全口径而非Seller Central费用页核算，除提价外需逐项压降。",
+      "category": "experience",
+      "score": 7.4,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wl9jv1/anyone_elses_all_in_amazon_cost_now_eating_close",
+      "source": "reddit_fba",
+      "published_at": "2026-09-20T06:41:35.000Z"
+    },
+    {
+      "title": "日常5000单，旺季翻倍：一个亚马逊趋势品/节日品卖家的选品·广告·Listing全链路实操复盘",
+      "summary": "趋势品核心是节奏：先用12至24个月核心词搜索曲线确认季节性；核心词连续2至3周环比涨超30%即小批量上架，逼近历史峰值集中放量，连续2周下滑超20%立即停补货清仓；大节日提前4至6个月下单，海运留3至4周；新品0至7天不看ACOS，累计点击200+、出单20+为门槛；7至30天预算从大词转向精准词，ACOS目标压到35%至50%。",
+      "category": "experience",
+      "score": 9,
+      "url": "https://www.wearesellers.com/question/124703",
+      "source": "wearesellers",
+      "published_at": "2026-09-20T07:27:07.881Z"
+    },
+    {
+      "title": "绩效显示，该产品被认定为虚假宣称获得美国保险商实验室（UL）认证，或擅自使用UL安全标识。如何申诉",
+      "summary": "产品因品牌故事使用UL标志被判定虚假宣称UL认证。亚马逊官方给出两条恢复路径：一是由权利方UL Solutions直接提交撤回，仅接受权利所有者直接提交，转发或附件形式无效，邮箱UL.ACO@ul.com；二是提供有效法院判决书。作者多链接申诉失败、已邮件UL等待处理。可执行要点：无真实认证勿用UL标志，被诉后关键在促成UL撤诉，而非反复向亚马逊提交申诉。",
       "category": "policy",
-      "score": 8.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wkd72s/anyone_else_getting_billed_on_dimensional_weight",
-      "source": "reddit_fba",
-      "published_at": "2026-09-19T05:16:32.000Z"
-    },
-    {
-      "title": "I wouldn’t make the decision from the “high risk” label alone.",
-      "summary": "面对高风险标签不要直接据此决定发货或拒单。方法：核查触发风控的具体信号，判断信号与客户场景是否一致，找出发货前可独立验证的信息；分清系统发现风险指标与订单确定欺诈是两回事。若证据仍模糊，推迟发货转人工审核，优于盲目发货或误拒真实客户。",
-      "category": "experience",
-      "score": 6.8,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wkhztj/i_wouldnt_make_the_decision_from_the_high_risk",
-      "source": "reddit_fba",
-      "published_at": "2026-09-19T09:50:21.000Z"
-    },
-    {
-      "title": "Anyone else's Amazon partnered carrier quote jumping from $50 to $390 for the exact same shipment?",
-      "summary": "小卖家反馈亚马逊合作承运商报价异常跳涨：同SKU、同箱数与尺寸重量，一周内报价从50美元涨到390美元约7倍；其他卖家称相同货件涨幅600%到1000%。开case仅获费率正确答复且无明细。可行选择只有自吞约340美元差价，或取消重贴标转第三方承运商，代价是错过取件窗口、入仓延至下周。",
-      "category": "experience",
       "score": 7.2,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wkd6j9/anyone_elses_amazon_partnered_carrier_quote",
+      "url": "https://www.wearesellers.com/question/124727",
+      "source": "wearesellers",
+      "published_at": "2026-09-20T03:27:25.046Z"
+    },
+    {
+      "title": "我通过关键词搜索发现产品的广告明明在首页，为什么就是没人点？",
+      "summary": "广告在首页却没点击，根源是用PC前台搜词的快照判断广告表现，而真实流量结构不同：示例账户App会话占77%、浏览器仅23%，浏览器盯位置价值极低，且被盯的大词对ASIN流量贡献可能很小。方法：先看业务报告确认主要访问入口，优先用Sessions判断，再核对关键词在ASIN流量结构中的贡献，转向中腰部出单词。",
+      "category": "experience",
+      "score": 8.4,
+      "url": "https://www.wearesellers.com/question/124724",
+      "source": "wearesellers",
+      "published_at": "2026-09-20T08:27:03.470Z"
+    },
+    {
+      "title": "求助大佬，想咨询一下有没有遇到过类似的版权投诉，以及提交 DMCA 反通知后的处理经验",
+      "summary": "无版权号的照片版权投诉可直接下架Listing；应对方法是提交DMCA反通知，并保留原始底片、原图、拍摄文件信息及PSD分层源文件自证独立创作。核心风险是流程或需十几个工作日以上，季节品即使恢复链接也已错过销售期，且投诉方不行动时ASIN是否自动恢复尚不明确。",
+      "category": "policy",
+      "score": 7.4,
+      "url": "https://www.wearesellers.com/question/124778",
+      "source": "wearesellers",
+      "published_at": "2026-09-20T08:27:48.730Z"
+    },
+    {
+      "title": "上海港平均等泊达4.42天，马士基Qilin航线10个航次临时调整",
+      "summary": "上海港拥堵持续，7天平均等泊4.42天，洋山、外高桥部分船舶等待7至8天，宁波、盐田港区亦处严重扰动。马士基临时调整亚洲至澳洲Qilin航线641S至650S共10个航次挂靠顺序，新增香港为中转港。头程启示：从华东及盐田出货的备货计划应预留更长订舱与到仓缓冲时间。",
+      "category": "trend",
+      "score": 6,
+      "url": "https://www.amz123.com/kx/et7hxg9v",
+      "source": "amz123",
+      "published_at": "2026-09-20T09:25:30.000Z"
+    },
+    {
+      "title": "Anyone else's ACoS creeping up on the same bids now that CPCs are sitting near $1.10?",
+      "summary": "同一关键词与竞价自春季未动，CPC仍从0.78美元漂移至1.14美元，主广告活动ACoS由21%升至33%；卖家复查转化率未变，并排除竞品降价、listing被压制与自然排名波动，唯一变量是平台单次点击收费，2026年Sponsored Products基准约0.90至1.20美元；应对只能在砍词保毛利、降竞价保量、接受低毛利之间取舍。",
+      "category": "trend",
+      "score": 6.8,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wl9jki/anyone_elses_acos_creeping_up_on_the_same_bids",
       "source": "reddit_fba",
-      "published_at": "2026-09-19T05:15:52.000Z"
+      "published_at": "2026-09-20T06:41:10.000Z"
     },
     {
-      "title": "亚马逊登陆时二次验证完强制要求创建通行密钥Passkey登陆，WINDOW电脑要求使用USB安全密钥的解决办法",
-      "summary": "亚马逊将强制要求Passkey登录，老式组装台式机因无指纹人脸识别会卡在USB安全密钥提示。解法：升级Win10和最新chrome并设置Windows Hello PIN，若仍调用外部密钥，安装免费的Bitwarden chrome插件，注册设好主密码后回到亚马逊后台，在插件而非亚马逊页面创建密钥即可一秒通过。通行密钥与硬件绑定，建议提前备用机也添加，防止原电脑损坏无法登录。",
-      "category": "experience",
-      "score": 9,
-      "url": "https://www.wearesellers.com/question/124460",
+      "title": "SpeedPAK中秋国庆假期揽收安排公布，大陆仅9月26日正常收件",
+      "summary": "SpeedPAK中秋国庆安排：大陆9月25日、27日及10月1日至7日揽收基本暂停，仅9月26日正常收件，10月5日恢复日常揽收；香港自送点9月26日、27日及10月1日暂停。美国欧洲旺季备货需提前安排发货计划，避免以下单日代替发货日，不宜等10月1日后再交运，防止订单处理时限受假期影响。",
+      "category": "policy",
+      "score": 6.6,
+      "url": "https://www.amz123.com/kx/LAwJkq4U",
+      "source": "amz123",
+      "published_at": "2026-09-20T06:03:56.000Z"
+    },
+    {
+      "title": "关于SBV流量越跑越少问题",
+      "summary": "SBV视频广告老组流量持续萎缩：去年8月单月可出500单，今年CPC被拉高后原竞价跑不出量，转化正常但曝光流失；将大搜索词拆出单打精准后另一个视频精准组同样下滑，视频素材偏旧，作者正求解流量修复与素材更新的优化方案。",
+      "category": "trend",
+      "score": 6.2,
+      "url": "https://www.wearesellers.com/question/124790",
       "source": "wearesellers",
-      "published_at": "2026-09-12T03:54:28.797+00:00"
+      "published_at": "2026-09-20T09:36:33.676Z"
     },
     {
-      "title": "亚马逊美国站旺季费用多项叠加，卖家成本压力显著上升",
-      "summary": "美国站旺季成本进入叠加期：2026年10月15日至2027年1月14日，FBA、MCF及Buy with Prime配送收取旺季附加费，小号标准件每件约0.19美元、T恤约0.39美元、超大件约2.81美元、平均约0.32美元，并与已执行的3.5%燃油及物流附加费同时计收。卖家应将双重费用纳入售价测算，轻小件低客单价商品优先复核利润，大件需叠加燃油与大件附加费核算。",
+      "title": "亚马逊大批Listing划线价异常消失，卖家订单量大幅下滑",
+      "summary": "美国站大量Listing划线价无故消失、专享折扣报错，部分店铺六成乃至全部商品划线失效，叠加9月7日劳动节假期线下分流，销量腰斩、近三天单量仅为日常三分之一；业内消息指亚马逊将推行新参考价规则：90天周期内至少10%的天数按参考价成交才能展示划线价。卖家需立即核查前台优惠展示并调整定价，保证周期内有足够参考价出单天数。",
       "category": "policy",
       "score": 9.4,
-      "url": "https://www.amz123.com/kx/0eTtbNN6",
+      "url": "https://www.amz123.com/kx/6SrmZULT",
       "source": "amz123",
-      "published_at": "2026-09-10T09:37:28+00:00"
-    },
-    {
-      "title": "FBA索赔窗口到底是18个月还是60天？亚马逊红线文件里18 months是被划掉的，但我只拿到英欧站那一份",
-      "summary": "FBA库存丢损索赔窗口已从18个月改为60天，以库存台账报告丢损日为锚点，逾期不予赔偿；客户退货索赔须在退款或换货后45至105天内提交，早于45天直接驳回；移除订单分两个窗口：途中丢失自货件创建起75天，途中损坏自退回签收起60天；90天说法在四份官方文件中均不存在，美国站子页面在登录墙后待核实。",
-      "category": "policy",
-      "score": 9,
-      "url": "https://www.wearesellers.com/question/124480",
-      "source": "wearesellers",
-      "published_at": "2026-09-14T03:30:09.732+00:00"
-    },
-    {
-      "title": "标题超限直接被AI改写！亚马逊75字符新规即将强制执行",
-      "summary": "亚马逊将于2026年7月27日起强制执行75字符标题新规。超出字符需移至可被搜索的商品亮点中。卖家需在后台管理所有库存中，通过编辑页面的查看改进内容，预览并一键采用或调整AI推荐的名称与亮点，避免逾期被AI强制替代。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.wearesellers.com/question/122858",
-      "source": "wearesellers",
-      "published_at": "2026-07-31T08:01:06.536+00:00"
-    },
-    {
-      "title": "亚马逊2026年11月2日起调整商业责任险规则，新增11类高危类目强制投保要求",
-      "summary": "亚马逊商业责任险新规2026年11月2日生效，保留月销超1万美元30天内投保、保额100万美元的门槛，同时新增儿童商品、化妆品、锂电池、床垫、汽车摩托轮胎等11类高危类目强制投保，且不限新品在售、不看月销量，均须不低于100万美元保额；涉及类目卖家应立即排查自身ASIN是否在列，尽快完成投保并上传保单，避免销售权限受限。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.amz123.com/kx/i7xMS7Zg",
-      "source": "amz123",
-      "published_at": "2026-09-10T09:16:41+00:00"
-    },
-    {
-      "title": "GPT 电商图很好看，但产品越来越不像你的产品！",
-      "summary": "GPT做电商产品图存在三个硬伤：给了实拍图后产品仍会被AI重新理解，结构、边缘、接口位置漂移，变成像但不等于实物的产品；多轮编辑导致画质衰减，出现噪点、白边脏边和清晰度下降；AI会凭明暗变化脑补褶皱、织物纹、裂纹等实物不存在的纹理。可执行的稳定工作流是GPT负责场景、构图、人物、光影，PS负责产品真实性、细节锁定和最终合成，以保障亚马逊主图、A+和详情页中产品与实物一致。",
-      "category": "experience",
-      "score": 9,
-      "url": "https://www.wearesellers.com/question/124712",
-      "source": "wearesellers",
-      "published_at": "2026-09-19T09:59:28.149Z"
-    },
-    {
-      "title": "2026年亚马逊Prime会员大促定档10月6日至7日",
-      "summary": "2026年秋季Prime会员大促定档10月6至7日，覆盖美国等22国。美国站秒杀与Z划算提报截止9月22日，路径为营销推广、管理促销和特惠、创建促销；除秒杀外应同步提报Prime专享价格折扣（单活动最多500子ASIN）和覆盖活动全程的优惠券，并跟进上线状态，提报不等于成功上线。",
-      "category": "policy",
-      "score": 9,
-      "url": "https://www.amz123.com/kx/vCVKZtkl",
-      "source": "amz123",
-      "published_at": "2026-09-15T09:37:07+00:00"
+      "published_at": "2026-09-08T02:12:27+00:00"
     }
   ]
 }
