@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-09-20T10:38:16Z",
-  "digest_date": "2026-09-20",
+  "generated_at_utc": "2026-09-21T11:58:32Z",
+  "digest_date": "2026-09-21",
   "article_count": 50,
   "articles": [
     {
-      "title": "Anyone else's all in Amazon cost now eating close to 40 percent of revenue before you pay yourself?",
-      "summary": "逐项拆解上季度成本：佣金、配送、仓储、各类附加费、广告与头程运费合计占毛收入38%，而该SKU两年前还是利润最好的产品；剔除广告与头程后约26%。单项涨幅均不显眼，周报无一触发决策，总成本却已悄然变质；2026年口径亚马逊相关开支普遍占营收35%至45%。方法：按全口径而非Seller Central费用页核算，除提价外需逐项压降。",
-      "category": "experience",
+      "title": "SCFI连涨八周，美西报7560美元、美东破万，美线运价逼近历史高位",
+      "summary": "SCFI连涨八周至3687.83点，上海至美西报7560美元/FEU、美东10579美元/FEU，中国至美东现货运价距2022年历史高位仅差8%；国庆前集中出货、亚洲港口拥堵与巴拿马运河限制支撑运价，美线舱位趋紧，FBA补货应提前订舱锁定舱位与运价，东南亚近洋补货成本同步上行。",
+      "category": "trend",
       "score": 7.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wl9jv1/anyone_elses_all_in_amazon_cost_now_eating_close",
-      "source": "reddit_fba",
-      "published_at": "2026-09-20T06:41:35.000Z"
+      "url": "https://www.amz123.com/kx/QB7ehFnS",
+      "source": "amz123",
+      "published_at": "2026-09-21T04:02:15.000Z"
     },
     {
-      "title": "日常5000单，旺季翻倍：一个亚马逊趋势品/节日品卖家的选品·广告·Listing全链路实操复盘",
-      "summary": "趋势品核心是节奏：先用12至24个月核心词搜索曲线确认季节性；核心词连续2至3周环比涨超30%即小批量上架，逼近历史峰值集中放量，连续2周下滑超20%立即停补货清仓；大节日提前4至6个月下单，海运留3至4周；新品0至7天不看ACOS，累计点击200+、出单20+为门槛；7至30天预算从大词转向精准词，ACOS目标压到35%至50%。",
-      "category": "experience",
-      "score": 9,
-      "url": "https://www.wearesellers.com/question/124703",
-      "source": "wearesellers",
-      "published_at": "2026-09-20T07:27:07.881Z"
-    },
-    {
-      "title": "绩效显示，该产品被认定为虚假宣称获得美国保险商实验室（UL）认证，或擅自使用UL安全标识。如何申诉",
-      "summary": "产品因品牌故事使用UL标志被判定虚假宣称UL认证。亚马逊官方给出两条恢复路径：一是由权利方UL Solutions直接提交撤回，仅接受权利所有者直接提交，转发或附件形式无效，邮箱UL.ACO@ul.com；二是提供有效法院判决书。作者多链接申诉失败、已邮件UL等待处理。可执行要点：无真实认证勿用UL标志，被诉后关键在促成UL撤诉，而非反复向亚马逊提交申诉。",
-      "category": "policy",
-      "score": 7.2,
-      "url": "https://www.wearesellers.com/question/124727",
-      "source": "wearesellers",
-      "published_at": "2026-09-20T03:27:25.046Z"
-    },
-    {
-      "title": "我通过关键词搜索发现产品的广告明明在首页，为什么就是没人点？",
-      "summary": "广告在首页却没点击，根源是用PC前台搜词的快照判断广告表现，而真实流量结构不同：示例账户App会话占77%、浏览器仅23%，浏览器盯位置价值极低，且被盯的大词对ASIN流量贡献可能很小。方法：先看业务报告确认主要访问入口，优先用Sessions判断，再核对关键词在ASIN流量结构中的贡献，转向中腰部出单词。",
+      "title": "警惕！亚马逊品牌类目与商标局注册类目不匹配，导致丢失链接编辑权、A + 页面！",
+      "summary": "美国站卖家品牌备案后仍可能丢失编辑权、A+页面消失：系统识别品牌不只看品牌名，还看品牌名加产品类目，当失效类目被他国同名商标抢注且覆盖ASIN售卖类目时，ASIN会被绑定到他人品牌ID，导致编辑权丢失、A+消失、流量被劫持。规避方法：商标保护类目须覆盖实际销售类目，上架前检索同名商标，多站点统一保护类目，定期检查备案状态。",
       "category": "experience",
       "score": 8.4,
-      "url": "https://www.wearesellers.com/question/124724",
+      "url": "https://www.wearesellers.com/question/124806",
       "source": "wearesellers",
-      "published_at": "2026-09-20T08:27:03.470Z"
+      "published_at": "2026-09-21T09:45:06.579Z"
     },
     {
-      "title": "求助大佬，想咨询一下有没有遇到过类似的版权投诉，以及提交 DMCA 反通知后的处理经验",
-      "summary": "无版权号的照片版权投诉可直接下架Listing；应对方法是提交DMCA反通知，并保留原始底片、原图、拍摄文件信息及PSD分层源文件自证独立创作。核心风险是流程或需十几个工作日以上，季节品即使恢复链接也已错过销售期，且投诉方不行动时ASIN是否自动恢复尚不明确。",
+      "title": "Anyone else cut ad spend 40 percent to protect margin and then watched organic rank slide instead?",
+      "summary": "卖家8月将月广告预算从4000美元降至2400美元，砍掉零转化关键词并全面降竞价，TACoS从9.4%降至7.1%，单件广告成本降约三分之一；但五周后自然流量下滑约22%，两个主关键词跌出首页。结论：广告买的不只是销量还有支撑销量的排名，砍预算的排名反噬会延迟出现，需寻找稳排名与控成本之间的平衡点，而非机械压缩广告线。",
+      "category": "experience",
+      "score": 8.4,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wlxamh/anyone_else_cut_ad_spend_40_percent_to_protect",
+      "source": "reddit_fba",
+      "published_at": "2026-09-21T00:10:32.000Z"
+    },
+    {
+      "title": "浅谈亚马逊税务报送后小卖家税务合规最优解",
+      "summary": "涉税报送落地后，小卖家税务合规最优解为小规模纳税人+进项普票+9810/9710/9610出口+出口免税，操作最简费用最低；无退税需求不必做一般纳税人，其年费是小规模的2倍，13%专票退税是唯一优势；普票可作进项入成本，开票成本仅多1%，供应商开不出票反映实力不足，合规将倒逼供应链跟进。",
       "category": "policy",
-      "score": 7.4,
-      "url": "https://www.wearesellers.com/question/124778",
+      "score": 9,
+      "url": "https://www.wearesellers.com/question/111062",
       "source": "wearesellers",
-      "published_at": "2026-09-20T08:27:48.730Z"
+      "published_at": "2026-09-21T10:44:42.897Z"
     },
     {
-      "title": "上海港平均等泊达4.42天，马士基Qilin航线10个航次临时调整",
-      "summary": "上海港拥堵持续，7天平均等泊4.42天，洋山、外高桥部分船舶等待7至8天，宁波、盐田港区亦处严重扰动。马士基临时调整亚洲至澳洲Qilin航线641S至650S共10个航次挂靠顺序，新增香港为中转港。头程启示：从华东及盐田出货的备货计划应预留更长订舱与到仓缓冲时间。",
+      "title": "中远、长荣、达飞、马士基等船公司发布国庆假期免箱政策",
+      "summary": "国庆前多家船公司发布免箱政策：中远海运对10月4-10日开航船次每日额外延长1-7天免箱期；长荣10月1-14日出口重柜免滞箱费；达飞9月23日-10月2日提箱享10天免滞箱期；ONE免10月1-7日用箱费；赫伯罗特上海提前10天、宁波厦门提前14天放空箱；马士基按航次给8-14天免箱期仅限干柜，可借此压缩假期前后滞箱与堆存成本。",
+      "category": "policy",
+      "score": 6,
+      "url": "https://www.amz123.com/kx/gU55vO49",
+      "source": "amz123",
+      "published_at": "2026-09-21T09:45:38.000Z"
+    },
+    {
+      "title": "人民币汇率走强，跨境卖家利润承压",
+      "summary": "人民币近半年对美元累计升值约2.05%，美元结算的跨境卖家利润被汇兑损失压缩，乐歌上半年汇兑由盈转亏致净利润下滑83.43%。可执行对策：用美元收入直接支付海外广告、物流及仓储费用；以自然对冲加衍生工具管控净敞口；避免押注汇率反弹，不急于集中结汇，把汇率风险当作日常经营成本管理。",
+      "category": "trend",
+      "score": 8.4,
+      "url": "https://www.amz123.com/kx/dYtnpYpu",
+      "source": "amz123",
+      "published_at": "2026-09-21T04:02:17.000Z"
+    },
+    {
+      "title": "求教！84条违反受限商品政策一直申诉不通过，该如何申诉",
+      "summary": "卖家因威斯康星州与宾夕法尼亚州电子回收审核累计84条受限商品政策违规，已通过回收商注册回收计划、持有制造商注册证明且品牌列入两州政府官网名单，但后台ASIN申诉与邮件申诉均被驳回，卖家支持称无权限处理。可借鉴点是先完成州级回收注册并备齐制造商证明再申诉，该案例显示常规资料路径已失效。",
+      "category": "policy",
+      "score": 6.2,
+      "url": "https://www.wearesellers.com/question/124823",
+      "source": "wearesellers",
+      "published_at": "2026-09-21T10:44:50.438Z"
+    },
+    {
+      "title": "Pinterest推出视觉搜索广告，月搜索量超800亿次逾半数具购物意图",
+      "summary": "Pinterest推出视觉搜索广告，直接展示在搜索结果页和放大的图片Pin中，整合关键词与商品识别信号，覆盖比价等临近下单决策环节；平台月搜索量超800亿次、过半具商业意图。数周内开放全广告市场Beta测试并兼容Performance+，另有自助A/B测试和Priority Products单品加权，美国站卖家可借此布局站外引流。",
       "category": "trend",
       "score": 6,
-      "url": "https://www.amz123.com/kx/et7hxg9v",
+      "url": "https://www.amz123.com/kx/oFqw9f6d",
       "source": "amz123",
-      "published_at": "2026-09-20T09:25:30.000Z"
+      "published_at": "2026-09-21T09:14:58.000Z"
     },
     {
-      "title": "Anyone else's ACoS creeping up on the same bids now that CPCs are sitting near $1.10?",
-      "summary": "同一关键词与竞价自春季未动，CPC仍从0.78美元漂移至1.14美元，主广告活动ACoS由21%升至33%；卖家复查转化率未变，并排除竞品降价、listing被压制与自然排名波动，唯一变量是平台单次点击收费，2026年Sponsored Products基准约0.90至1.20美元；应对只能在砍词保毛利、降竞价保量、接受低毛利之间取舍。",
-      "category": "trend",
-      "score": 6.8,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wl9jki/anyone_elses_acos_creeping_up_on_the_same_bids",
-      "source": "reddit_fba",
-      "published_at": "2026-09-20T06:41:10.000Z"
-    },
-    {
-      "title": "SpeedPAK中秋国庆假期揽收安排公布，大陆仅9月26日正常收件",
-      "summary": "SpeedPAK中秋国庆安排：大陆9月25日、27日及10月1日至7日揽收基本暂停，仅9月26日正常收件，10月5日恢复日常揽收；香港自送点9月26日、27日及10月1日暂停。美国欧洲旺季备货需提前安排发货计划，避免以下单日代替发货日，不宜等10月1日后再交运，防止订单处理时限受假期影响。",
-      "category": "policy",
-      "score": 6.6,
-      "url": "https://www.amz123.com/kx/LAwJkq4U",
-      "source": "amz123",
-      "published_at": "2026-09-20T06:03:56.000Z"
-    },
-    {
-      "title": "关于SBV流量越跑越少问题",
-      "summary": "SBV视频广告老组流量持续萎缩：去年8月单月可出500单，今年CPC被拉高后原竞价跑不出量，转化正常但曝光流失；将大搜索词拆出单打精准后另一个视频精准组同样下滑，视频素材偏旧，作者正求解流量修复与素材更新的优化方案。",
+      "title": "大家有没有感觉关键词的ABA排名和搜索量都在下滑   相比去年前年    那哪些词上涨了呢？和Alexa有关吗",
+      "summary": "卖家观察到核心大词搜索量一降再降，带AC标的ABA去年约9万的关键词本周已跌至35万；手机端搜索大词改为先展示Alexa推荐、需手动点击跳转搜索页。运营方向是按Alexa逻辑重新评估流量入口并调整链接与广告布局，但帖内仅为现象提问，无验证结论与具体操作步骤。",
       "category": "trend",
       "score": 6.2,
-      "url": "https://www.wearesellers.com/question/124790",
+      "url": "https://www.wearesellers.com/question/124655",
       "source": "wearesellers",
-      "published_at": "2026-09-20T09:36:33.676Z"
+      "published_at": "2026-09-21T10:44:17.662Z"
     },
     {
-      "title": "亚马逊大批Listing划线价异常消失，卖家订单量大幅下滑",
-      "summary": "美国站大量Listing划线价无故消失、专享折扣报错，部分店铺六成乃至全部商品划线失效，叠加9月7日劳动节假期线下分流，销量腰斩、近三天单量仅为日常三分之一；业内消息指亚马逊将推行新参考价规则：90天周期内至少10%的天数按参考价成交才能展示划线价。卖家需立即核查前台优惠展示并调整定价，保证周期内有足够参考价出单天数。",
+      "title": "亚马逊B店铺因协议三被封，店铺做过同类不同款合并、5单划线价测评、直评且已出500单，如何申诉救回B店？求各路大神支招！！！！！",
+      "summary": "B店因三项协议被封，可确认的风险操作包括同类不同款变体合并、五单划线价测评、直评，且已出500单；店铺结构为买家号品牌授权A、B两店轮流跟卖同一ASIN。案例说明变体滥用叠加测评直评易触发封店，申诉需逐项整改说明，但帖内未给出成功方案。",
       "category": "policy",
-      "score": 9.4,
-      "url": "https://www.amz123.com/kx/6SrmZULT",
-      "source": "amz123",
-      "published_at": "2026-09-08T02:12:27+00:00"
+      "score": 6.2,
+      "url": "https://www.wearesellers.com/question/124725",
+      "source": "wearesellers",
+      "published_at": "2026-09-21T01:44:22.212Z"
     }
   ]
 }
