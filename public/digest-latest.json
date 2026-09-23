@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-09-22T11:55:05Z",
-  "digest_date": "2026-09-22",
+  "generated_at_utc": "2026-09-23T11:00:06Z",
+  "digest_date": "2026-09-23",
   "article_count": 50,
   "articles": [
     {
-      "title": "深圳亚马逊店铺月销150万被核定转查账，成本多2个点、超500万还要先交后退，大家怎么扛？",
-      "summary": "深圳税局发文将跨境核定征收改为查账征收，需进项票并按法定税率缴所得税；月销150万店铺成本增两个点，超500万增值税先交后退、13%资金占压，所得税或从5%升至25%。可行路径包括取得进项票、用收10%费用的垫退服务、把公司迁往核定未变的郑州或注销重注，发帖人尚未定论并征集同行方案。",
+      "title": "2026新版FBA新品入仓：新父子变体注册10个Vine，$75 Credit资格何时生效？求7月30日后实操案例",
+      "summary": "美国站2026新版FBA新品入仓计划：全新父ASIN加全新子ASIN首次FBA入仓第4-5天，计划注册10个Vine，3-10件档费用为75美元，目标是拿到75美元Vine Credit。两次咨询客服结论矛盾：一说按父ASIN判断、以后台New Selection名单为准；一查说不符合却讲不出具体条件，且案例日期疑似旧版数据。求7月30日后从首次接收、资格出现、Vine注册到Credit到账的完整时间线实操案例。",
       "category": "policy",
-      "score": 7.4,
-      "url": "https://www.wearesellers.com/question/124803",
+      "score": 7.2,
+      "url": "https://www.wearesellers.com/question/124905",
       "source": "wearesellers",
-      "published_at": "2026-09-22T08:30:18.343Z"
+      "published_at": "2026-09-23T10:10:23.217Z"
     },
     {
-      "title": "关键词排名第一也没用？亚马逊AI推荐或正绕开传统搜索排名机制",
-      "summary": "基于1963条非品牌词查询、12810条AI商品推荐的采集研究，Alexa for Shopping Atlas推荐与传统搜索页差异显著：63.9%被AI推荐listing不在关键词搜索首页，40.9%自然权重很差。AI用语义理解替代搜索排序信号，过去无人触达的深层关联位被重新匹配价值而非捡漏，卖家应尽早监控AI推荐流量占比并针对性调整内容布局。",
+      "title": "亚马逊前台迎多项调整：搜索取消分页，卖家排名判断方式或改变",
+      "summary": "亚马逊前台两项变化直接影响卖家日常监测：无痕模式浏览特定页面被要求登录，惯用的无痕窗口查关键词排名、Listing及竞品方式受限；搜索结果页正测试取消传统分页，改为Show more式无限滚动加载，排名页面概念被弱化。变化未覆盖全部用户和站点，卖家应改用第三方数据工具跟踪排名与搜索布局变化。",
       "category": "trend",
       "score": 8.4,
-      "url": "https://www.wearesellers.com/question/124834",
-      "source": "wearesellers",
-      "published_at": "2026-09-22T10:30:13.785Z"
+      "url": "https://www.amz123.com/kx/DyMCvMv8",
+      "source": "amz123",
+      "published_at": "2026-09-23T07:36:45.000Z"
     },
     {
-      "title": "亚马逊2026年11月2日起调整商业责任险规则，新增11类高危类目强制投保要求",
-      "summary": "亚马逊商业责任险新规2026年11月2日生效，保留月销超1万美元30天内投保、保额100万美元的门槛，同时新增儿童商品、化妆品、锂电池、床垫、汽车摩托轮胎等11类高危类目强制投保，且不限新品在售、不看月销量，均须不低于100万美元保额；涉及类目卖家应立即排查自身ASIN是否在列，尽快完成投保并上传保单，避免销售权限受限。",
+      "title": "Meltable products in FBA during summer",
+      "summary": "FBA每年4月至10月禁止向仓库发送巧克力等可熔化商品，但仍见卖家夏季保持FBA在售，说明该政策执行存在抽查漏洞；客户抱怨巧克力融化的差评有时会被平台删除，因归因为FBA物流而非卖家问题，可据此申诉融化差评，但违规入仓仍有库存被移除风险。",
       "category": "policy",
-      "score": 9.4,
-      "url": "https://www.amz123.com/kx/i7xMS7Zg",
-      "source": "amz123",
-      "published_at": "2026-09-10T09:16:41+00:00"
-    },
-    {
-      "title": "沃尔玛卖家测品方案 — 用Temu货盘，0风险起步",
-      "summary": "针对沃尔玛新店测品压货痛点，方案为Temu代采直入美国仓再换Walmart官方面单发货：卖家发链接选品，服务商完成采购、验货、入库，上传面单后当天出库；2美元/票全包收货验货换单打包，0仓储0操作费，支持1件起测与多SKU混发，30天内卖不完可退回止损，适合低成本小批量测款。",
-      "category": "other",
-      "score": 6,
-      "url": "https://www.wearesellers.com/question/121206",
-      "source": "wearesellers",
-      "published_at": "2026-09-22T10:31:05.451Z"
-    },
-    {
-      "title": "亚马逊美国站旺季费用多项叠加，卖家成本压力显著上升",
-      "summary": "美国站旺季成本进入叠加期：2026年10月15日至2027年1月14日，FBA、MCF及Buy with Prime配送收取旺季附加费，小号标准件每件约0.19美元、T恤约0.39美元、超大件约2.81美元、平均约0.32美元，并与已执行的3.5%燃油及物流附加费同时计收。卖家应将双重费用纳入售价测算，轻小件低客单价商品优先复核利润，大件需叠加燃油与大件附加费核算。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.amz123.com/kx/0eTtbNN6",
-      "source": "amz123",
-      "published_at": "2026-09-10T09:37:28+00:00"
-    },
-    {
-      "title": "23年刚开始做亚马逊，两个产品亏了20w的经验总结",
-      "summary": "两个亏20万案例的可复用教训：大件必须模拟长距离搬运堆叠再测包装，国内货代仓库即破损就应放弃，否则发美国后头程退货仓储成本叠加；对平台规则理解不足时用擦边操作致账号被封，8000美金恢复费不值得花。破局靠百元产品慢速起量，经付费交流与拜访前辈补齐认知，明白图片、listing、评论、价格、广告、库存联动决定出单。",
-      "category": "experience",
-      "score": 8.4,
-      "url": "https://www.wearesellers.com/question/124827",
-      "source": "wearesellers",
-      "published_at": "2026-09-22T10:30:11.467Z"
-    },
-    {
-      "title": "跪求亚马逊办公类产品精铺广告打法：核心精准词无搜索量而流量集中在cute+产品词等风格描述词，导致缺乏标准广告SOP，广泛匹配及自动/手动投放效果差",
-      "summary": "办公类产品客单价7.99至9.99美金、不扣广告利润3.5美金、半标非标；流量集中在cute+产品词等风格描述词而核心精准产品词无搜索量；当前较好打法是低于市场价1-2美金、自动紧密检漏加手动打少数精准词加定位高度相关ASIN，但新品自动基本无曝光点击转化、手动风格词不够精准，缺标准SOP。",
-      "category": "other",
-      "score": 6.2,
-      "url": "https://www.wearesellers.com/question/124817",
-      "source": "wearesellers",
-      "published_at": "2026-09-22T10:30:23.067Z"
-    },
-    {
-      "title": "折叠屏手机密集上新，柔性电路板迎量价齐升",
-      "summary": "华为、苹果、小米密集发布折叠屏新品，折叠机型对FPC用量与材料等级要求显著高于直板机型，价值空间扩大。跨境3C卖家可围绕保护壳、铰链周边及维修配件布局选品，借折叠屏换机周期与高端配件需求上行提前备货。",
-      "category": "trend",
-      "score": 6.4,
-      "url": "https://www.amz123.com/kx/AYtaLo4t",
-      "source": "amz123",
-      "published_at": "2026-09-22T08:25:30.000Z"
-    },
-    {
-      "title": "The reimbursement money I was leaving on the table for over a year (FBA)",
-      "summary": "亚马逊FBA索赔实操方法。卖家应每月比对退货报告与赔偿报告，针对买家未退回货物、超45天未退回已退款件、库容损毁未自动赔偿等异常，以一单一案、只陈述事实的方式开case索赔，避免因超出时效而造成资金损失。",
-      "category": "experience",
-      "score": 9.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vbqfwd/the_reimbursement_money_i_was_leaving_on_the",
+      "score": 6.8,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wnn7vz/meltable_products_in_fba_during_summer",
       "source": "reddit_fba",
-      "published_at": "2026-07-31T13:06:17+00:00"
+      "published_at": "2026-09-22T21:52:42.000Z"
     },
     {
-      "title": "化学品输美墨加需申请许可证，出口管制目录调整",
-      "summary": "商务部等五部门调整易制毒化学品出口管理目录：向美国、墨西哥、加拿大出口附件第一部分所列化学品须申请出口许可证，向缅甸、老挝、阿富汗出口第二部分所列同样需办证。化工类卖家走美墨加航线或经上述国家中转，须提前核查目录范围并完成许可证办理，否则报关面临退运及后续合规风险。",
+      "title": "非标新品开始冲量，怎么提前做好准备？冲量前筛选好精准关键词、补充更多流量入口。",
+      "summary": "19.9刀非标新品7天87单、转化率8.9%。冲量前广告调整：手动广泛广告顶部转化24.3%最佳、商品页5.5%最差，应降基础竞价压缩商品页曝光，给顶部多加位置百分比，高点击词同步小幅降价避免订单波动；自动广告三位置各有优势，直接提基础竞价整体放量；ASIN定位转化5.8%、ACOS29%不宜加基础竞价，先给顶部加百分比观察，并砍掉高点击不出单的差ASIN目标。",
+      "category": "experience",
+      "score": 9,
+      "url": "https://www.wearesellers.com/question/124728",
+      "source": "wearesellers",
+      "published_at": "2026-09-23T09:59:28.133Z"
+    },
+    {
+      "title": "致还在亚马逊一线战斗的同僚们的一封信：当亚马逊红利消退、一个产品只能吃三五年且七分靠产品三分靠运营时，你还敢仅凭过往的运营成绩就出来创业吗？",
+      "summary": "红利消退期是否离职单干的决策框架：运营能力只是一个点，创业需自己整合供应链、资金与仓库美工财务全流程，多数人高估个人能力、忽略公司协同价值。注册账户资源一次性，出问题即报废。合作创业最易互相甩锅，较优结构是一方出资一方出技术，事先约定各阶段目标与不达标时的撤退预案。",
+      "category": "experience",
+      "score": 6.4,
+      "url": "https://www.wearesellers.com/question/124769",
+      "source": "wearesellers",
+      "published_at": "2026-09-23T09:37:44.876Z"
+    },
+    {
+      "title": "亚马逊要求使用AI人物的图片要在文件元数据中添加标签，在上传图片时勾选AI选项。纽约州的法案是AI人物图片进行广告推广时，图片需要标注AI生成。如果使用AI人物图片进行广告，完成了亚马逊的文件元数据标注和……",
+      "summary": "亚马逊现行要求：所有图片含广告推广图需在文件元数据添加contains-synthetic-performer标签，上传图片时勾选AI标识；纽约州法案对AI人物广告图另有图片上文字标注要求。作者用纽约州邮编浏览多类目未见实际标注案例，核心疑问是投广告是否需叠加州法文字标注、标注是否影响转化，暂无定论。",
       "category": "policy",
-      "score": 7,
-      "url": "https://www.amz123.com/kx/gaIu4yi4",
+      "score": 6.8,
+      "url": "https://www.wearesellers.com/question/124836",
+      "source": "wearesellers",
+      "published_at": "2026-09-23T08:38:16.111Z"
+    },
+    {
+      "title": "超70%电商弃购源于运费透明度不足，退货成本可达营收15%",
+      "summary": "巴西电商论坛报告显示，超70%的购物车放弃源于运费环节缺乏数据智能，消费者结算前拿不到准确、可预期的配送成本与时效；库存、运费计算、运输、追踪与退货系统相互独立引发的退货规模可达总营收15%，托运人平均需应对多达54种供应链方案。运营要点是让运费与时效在结算前透明可预期，并打通各系统数据协同以压降退货损失。",
+      "category": "trend",
+      "score": 6,
+      "url": "https://www.amz123.com/kx/16xFOIhH",
       "source": "amz123",
-      "published_at": "2026-09-22T09:46:55.000Z"
+      "published_at": "2026-09-23T06:35:51.000Z"
+    },
+    {
+      "title": "亚马逊上线虚拟身份验证：收到通知后14天内须完成视频核验，否则暂停销售",
+      "summary": "亚马逊上线虚拟身份验证，身份存疑卖家将收到视频核验通知，宽限期通常仅14天，部分账户不设宽限期，逾期未完成将暂停销售权限。入口在注册邮箱、绩效通知与账户状况页优先操作栏目。法人须备身份证或护照、企业注册文件、180天内银行及信用卡对账单、关系证明、供应链票据，材料不得图像处理，点击进入通话后无法回传，运营可陪同但不得代验。",
+      "category": "policy",
+      "score": 9,
+      "url": "https://www.amz123.com/kx/gOSy3rSD",
+      "source": "amz123",
+      "published_at": "2026-09-23T05:55:04.000Z"
+    },
+    {
+      "title": "亚马逊电动牙刷还能不能做？拆完 Aquasonic 和飞利浦 437 条评论，两款死在同一个地方",
+      "summary": "拆解Amazon.com两款电动牙刷437条评论：Sonicare 4100样本3.2分、1-2星占29.4%，死于充电底座充不进电和电源键橡胶脱落进水；Aquasonic黑系列3.9分、差评率8.6%，电机动力不稳定。两款故障集中在12到24个月保修期后。入局打法：电源键密封不省成本、保修给到3年、充电改USB-C加电量显示。",
+      "category": "experience",
+      "score": 9,
+      "url": "https://www.wearesellers.com/question/124844",
+      "source": "wearesellers",
+      "published_at": "2026-09-23T01:37:56.976Z"
+    },
+    {
+      "title": "亚马逊大批Listing划线价异常消失，卖家订单量大幅下滑",
+      "summary": "美国站大量Listing划线价无故消失、专享折扣报错，部分店铺六成乃至全部商品划线失效，叠加9月7日劳动节假期线下分流，销量腰斩、近三天单量仅为日常三分之一；业内消息指亚马逊将推行新参考价规则：90天周期内至少10%的天数按参考价成交才能展示划线价。卖家需立即核查前台优惠展示并调整定价，保证周期内有足够参考价出单天数。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.amz123.com/kx/6SrmZULT",
+      "source": "amz123",
+      "published_at": "2026-09-08T02:12:27+00:00"
     }
   ]
 }
