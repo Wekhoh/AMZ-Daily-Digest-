@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-09-23T11:00:06Z",
-  "digest_date": "2026-09-23",
+  "generated_at_utc": "2026-09-24T11:16:19Z",
+  "digest_date": "2026-09-24",
   "article_count": 50,
   "articles": [
     {
-      "title": "2026新版FBA新品入仓：新父子变体注册10个Vine，$75 Credit资格何时生效？求7月30日后实操案例",
-      "summary": "美国站2026新版FBA新品入仓计划：全新父ASIN加全新子ASIN首次FBA入仓第4-5天，计划注册10个Vine，3-10件档费用为75美元，目标是拿到75美元Vine Credit。两次咨询客服结论矛盾：一说按父ASIN判断、以后台New Selection名单为准；一查说不符合却讲不出具体条件，且案例日期疑似旧版数据。求7月30日后从首次接收、资格出现、Vine注册到Credit到账的完整时间线实操案例。",
-      "category": "policy",
-      "score": 7.2,
-      "url": "https://www.wearesellers.com/question/124905",
-      "source": "wearesellers",
-      "published_at": "2026-09-23T10:10:23.217Z"
-    },
-    {
-      "title": "亚马逊前台迎多项调整：搜索取消分页，卖家排名判断方式或改变",
-      "summary": "亚马逊前台两项变化直接影响卖家日常监测：无痕模式浏览特定页面被要求登录，惯用的无痕窗口查关键词排名、Listing及竞品方式受限；搜索结果页正测试取消传统分页，改为Show more式无限滚动加载，排名页面概念被弱化。变化未覆盖全部用户和站点，卖家应改用第三方数据工具跟踪排名与搜索布局变化。",
-      "category": "trend",
-      "score": 8.4,
-      "url": "https://www.amz123.com/kx/DyMCvMv8",
-      "source": "amz123",
-      "published_at": "2026-09-23T07:36:45.000Z"
-    },
-    {
-      "title": "Meltable products in FBA during summer",
-      "summary": "FBA每年4月至10月禁止向仓库发送巧克力等可熔化商品，但仍见卖家夏季保持FBA在售，说明该政策执行存在抽查漏洞；客户抱怨巧克力融化的差评有时会被平台删除，因归因为FBA物流而非卖家问题，可据此申诉融化差评，但违规入仓仍有库存被移除风险。",
-      "category": "policy",
-      "score": 6.8,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wnn7vz/meltable_products_in_fba_during_summer",
-      "source": "reddit_fba",
-      "published_at": "2026-09-22T21:52:42.000Z"
-    },
-    {
-      "title": "非标新品开始冲量，怎么提前做好准备？冲量前筛选好精准关键词、补充更多流量入口。",
-      "summary": "19.9刀非标新品7天87单、转化率8.9%。冲量前广告调整：手动广泛广告顶部转化24.3%最佳、商品页5.5%最差，应降基础竞价压缩商品页曝光，给顶部多加位置百分比，高点击词同步小幅降价避免订单波动；自动广告三位置各有优势，直接提基础竞价整体放量；ASIN定位转化5.8%、ACOS29%不宜加基础竞价，先给顶部加百分比观察，并砍掉高点击不出单的差ASIN目标。",
-      "category": "experience",
-      "score": 9,
-      "url": "https://www.wearesellers.com/question/124728",
-      "source": "wearesellers",
-      "published_at": "2026-09-23T09:59:28.133Z"
-    },
-    {
-      "title": "致还在亚马逊一线战斗的同僚们的一封信：当亚马逊红利消退、一个产品只能吃三五年且七分靠产品三分靠运营时，你还敢仅凭过往的运营成绩就出来创业吗？",
-      "summary": "红利消退期是否离职单干的决策框架：运营能力只是一个点，创业需自己整合供应链、资金与仓库美工财务全流程，多数人高估个人能力、忽略公司协同价值。注册账户资源一次性，出问题即报废。合作创业最易互相甩锅，较优结构是一方出资一方出技术，事先约定各阶段目标与不达标时的撤退预案。",
-      "category": "experience",
-      "score": 6.4,
-      "url": "https://www.wearesellers.com/question/124769",
-      "source": "wearesellers",
-      "published_at": "2026-09-23T09:37:44.876Z"
-    },
-    {
-      "title": "亚马逊要求使用AI人物的图片要在文件元数据中添加标签，在上传图片时勾选AI选项。纽约州的法案是AI人物图片进行广告推广时，图片需要标注AI生成。如果使用AI人物图片进行广告，完成了亚马逊的文件元数据标注和……",
-      "summary": "亚马逊现行要求：所有图片含广告推广图需在文件元数据添加contains-synthetic-performer标签，上传图片时勾选AI标识；纽约州法案对AI人物广告图另有图片上文字标注要求。作者用纽约州邮编浏览多类目未见实际标注案例，核心疑问是投广告是否需叠加州法文字标注、标注是否影响转化，暂无定论。",
-      "category": "policy",
-      "score": 6.8,
-      "url": "https://www.wearesellers.com/question/124836",
-      "source": "wearesellers",
-      "published_at": "2026-09-23T08:38:16.111Z"
-    },
-    {
-      "title": "超70%电商弃购源于运费透明度不足，退货成本可达营收15%",
-      "summary": "巴西电商论坛报告显示，超70%的购物车放弃源于运费环节缺乏数据智能，消费者结算前拿不到准确、可预期的配送成本与时效；库存、运费计算、运输、追踪与退货系统相互独立引发的退货规模可达总营收15%，托运人平均需应对多达54种供应链方案。运营要点是让运费与时效在结算前透明可预期，并打通各系统数据协同以压降退货损失。",
-      "category": "trend",
-      "score": 6,
-      "url": "https://www.amz123.com/kx/16xFOIhH",
-      "source": "amz123",
-      "published_at": "2026-09-23T06:35:51.000Z"
-    },
-    {
-      "title": "亚马逊上线虚拟身份验证：收到通知后14天内须完成视频核验，否则暂停销售",
-      "summary": "亚马逊上线虚拟身份验证，身份存疑卖家将收到视频核验通知，宽限期通常仅14天，部分账户不设宽限期，逾期未完成将暂停销售权限。入口在注册邮箱、绩效通知与账户状况页优先操作栏目。法人须备身份证或护照、企业注册文件、180天内银行及信用卡对账单、关系证明、供应链票据，材料不得图像处理，点击进入通话后无法回传，运营可陪同但不得代验。",
-      "category": "policy",
-      "score": 9,
-      "url": "https://www.amz123.com/kx/gOSy3rSD",
-      "source": "amz123",
-      "published_at": "2026-09-23T05:55:04.000Z"
-    },
-    {
-      "title": "亚马逊电动牙刷还能不能做？拆完 Aquasonic 和飞利浦 437 条评论，两款死在同一个地方",
-      "summary": "拆解Amazon.com两款电动牙刷437条评论：Sonicare 4100样本3.2分、1-2星占29.4%，死于充电底座充不进电和电源键橡胶脱落进水；Aquasonic黑系列3.9分、差评率8.6%，电机动力不稳定。两款故障集中在12到24个月保修期后。入局打法：电源键密封不省成本、保修给到3年、充电改USB-C加电量显示。",
-      "category": "experience",
-      "score": 9,
-      "url": "https://www.wearesellers.com/question/124844",
-      "source": "wearesellers",
-      "published_at": "2026-09-23T01:37:56.976Z"
-    },
-    {
-      "title": "亚马逊大批Listing划线价异常消失，卖家订单量大幅下滑",
-      "summary": "美国站大量Listing划线价无故消失、专享折扣报错，部分店铺六成乃至全部商品划线失效，叠加9月7日劳动节假期线下分流，销量腰斩、近三天单量仅为日常三分之一；业内消息指亚马逊将推行新参考价规则：90天周期内至少10%的天数按参考价成交才能展示划线价。卖家需立即核查前台优惠展示并调整定价，保证周期内有足够参考价出单天数。",
+      "title": "亚马逊MCF折扣上限提升至25% 独立站免费Prime配送全面开放",
+      "summary": "美国MCF卖家可立即利用的政策红利：优选定价计划履约费折扣上限升至25%，与按件发放的FBA抵扣金合并计算，前六个月省15%-25%，无需签合同、后台一键加入、发货后自动抵扣；独立站免费Prime配送全面开放，商品页展示Prime标识，买家选Prime配送后由亚马逊核验会员身份并从FBA库存发货，卖家结账、支付与店铺政策无需改动。",
       "category": "policy",
       "score": 9.4,
-      "url": "https://www.amz123.com/kx/6SrmZULT",
+      "url": "https://www.amz123.com/kx/YeKAMavg",
       "source": "amz123",
-      "published_at": "2026-09-08T02:12:27+00:00"
+      "published_at": "2026-09-24T10:39:53.000Z"
+    },
+    {
+      "title": "分享3个亚马逊广告运营工具：推广架构、关键词整理和否词分析",
+      "summary": "卖家给出AI处理亚马逊广告的可复制路径：不申请API怕关联，最终选择下载广告数据上传AI、设计Skill后自己执行。三款工具：推广架构梳理新品探索到复盘的思路与预算分配；高转化关键词整理从搜索词报表归纳出单词建立词库；否词分析筛查零单花费并结合历史订单降低误否风险，工具仅辅助判断不自动改后台。",
+      "category": "experience",
+      "score": 8.4,
+      "url": "https://www.wearesellers.com/question/124880",
+      "source": "wearesellers",
+      "published_at": "2026-09-24T10:24:46.498Z"
+    },
+    {
+      "title": "CBP starts voiding importer numbers with wrong Form 5106 details on September 18 (four things to check)",
+      "summary": "美国海关自2026年9月18日起逐一核查进口商存档的Form 5106，信息不准将作废IOR号且无法清关。应让货代调出5106核对四项：地址须为实体地址（可用负责人家庭住址，禁用注册代理、货代、P.O.箱）；邮箱和电话须属IOR本人；货代须持与IOR直接签署的POA。恢复需按指定主题行邮件申请，官方未给时限。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wgmkm6/cbp_starts_voiding_importer_numbers_with_wrong",
+      "source": "reddit_fba",
+      "published_at": "2026-09-15T01:36:54+00:00"
+    },
+    {
+      "title": "用WorkBuddy跑通「亚马逊新品关键词库搭建」最佳实践（附教程资料包）",
+      "summary": "作者演示用WorkBuddy加关键词Skill和Sif数据MCP，从0到1搭建美国站新品关键词库：先安装数据MCP并填API KEY，再用Sif按词根反查头部竞品，要求输出ASIN、价格、细分需求并禁止编造ASIN；选竞品不机械取前三名，而按产品形态与尺寸段覆盖小中大型犬需求。竞品选错则词池失效，Skill不绑定单一数据源。",
+      "category": "experience",
+      "score": 8.4,
+      "url": "https://www.wearesellers.com/question/124881",
+      "source": "wearesellers",
+      "published_at": "2026-09-24T09:56:51.462Z"
+    },
+    {
+      "title": "服装上架后收到食品和商品安全问题的绩效，提交合规性资料后一直无人审核怎么办",
+      "summary": "服装上架被收食品和商品安全问题绩效，平台要求2天内提供文件；因CPC检测耗时第20天才提交合规资料，客服承诺15个工作日完成审核，超期后多次开case催审仍停在审核中。结论是该类合规审核积压严重、催审基本无效，帖内未给出有效加急办法。",
+      "category": "policy",
+      "score": 6.2,
+      "url": "https://www.wearesellers.com/question/124889",
+      "source": "wearesellers",
+      "published_at": "2026-09-24T10:43:34.020Z"
+    },
+    {
+      "title": "Little Known PPC Hack To Double Down On Good Keywords & Gain Market Share",
+      "summary": "利用广告后台的Purchased Product Report做PPC扩张：广告归因的销量常落在未打广告的其他ASIN上，案例中 advertised ASIN 与其他ASIN的出单比例达1:1到1:5。做法是挑出持续出单的非广告ASIN，把它们放进原本只聚焦1-2个关键词的窄主题广告活动，用同一批已验证的高效关键词推替代产品，实现市场份额增长。",
+      "category": "experience",
+      "score": 8.4,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wo2rfq/little_known_ppc_hack_to_double_down_on_good",
+      "source": "reddit_fba",
+      "published_at": "2026-09-23T10:59:03.000Z"
+    },
+    {
+      "title": "Margins acos/tacos",
+      "summary": "结论：ACoS与TACOS均按亚马逊总销售额而非净销售额计算，只看平台口径会高估广告效率、误判真实利润。方法：用净收入重新核算广告占比，将ACoS/TACOS与自身财务口径对齐后再做预算与投放决策，避免自欺式盈利评估。",
+      "category": "experience",
+      "score": 7.4,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1woay0r/margins_acostacos",
+      "source": "reddit_fba",
+      "published_at": "2026-09-23T16:33:38.000Z"
+    },
+    {
+      "title": "美国加征50%关税后，加拿大进口商转向欧盟与英国货源",
+      "summary": "美国对加拿大商品加征50%关税后，加拿大进口商将采购由美国转向欧盟与英国；工业制造、汽车零部件、快消品等低利润品类先调整，25%至50%关税直接令利润归零。当前以小批量试单为主，先用几个标准箱或拼箱验证运输时效与到岸成本；运输由2天卡车改为14至21天海运后，需重算库存持有成本与仓库容量。",
+      "category": "trend",
+      "score": 6,
+      "url": "https://www.amz123.com/kx/FwxtqG8Q",
+      "source": "amz123",
+      "published_at": "2026-09-24T06:17:24.000Z"
+    },
+    {
+      "title": "欧盟统一海关改革正式生效：27国111套系统整合为单一数据入口",
+      "summary": "欧盟9月21日组建EUCA并建统一海关数据中心，27国111套系统整合为单一数据入口，2028年7月先在电商落地，2034年3月全面强制；150欧元以下免税已于2026年7月取消，暂按每件3欧元征税，11月前后叠加小包裹统一处理费。欧洲站卖家需重算低货值直发成本并调整定价。",
+      "category": "policy",
+      "score": 7,
+      "url": "https://www.amz123.com/kx/X3MxBDny",
+      "source": "amz123",
+      "published_at": "2026-09-24T06:07:01.000Z"
+    },
+    {
+      "title": "亚马逊灰度测试关闭差评\"联系买家\"按钮，卖家主动沟通渠道受阻",
+      "summary": "亚马逊全站点灰度下架1至3星差评的联系买家按钮，美国站已分批落地且不设品牌备案豁免，部分账号入口已完全关闭。买家不主动发消息时卖家无官方渠道触达低分买家，补发货、退款安抚争取改评的打法失效。运营重心应转向预防差评：前置质检、把控物流时效与售前预期管理，降低低分评价产生概率。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.amz123.com/kx/1UYbAIRt",
+      "source": "amz123",
+      "published_at": "2026-09-15T05:54:25+00:00"
     }
   ]
 }
