@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-09-24T11:16:19Z",
-  "digest_date": "2026-09-24",
+  "generated_at_utc": "2026-09-25T11:19:25Z",
+  "digest_date": "2026-09-25",
   "article_count": 50,
   "articles": [
     {
-      "title": "亚马逊MCF折扣上限提升至25% 独立站免费Prime配送全面开放",
-      "summary": "美国MCF卖家可立即利用的政策红利：优选定价计划履约费折扣上限升至25%，与按件发放的FBA抵扣金合并计算，前六个月省15%-25%，无需签合同、后台一键加入、发货后自动抵扣；独立站免费Prime配送全面开放，商品页展示Prime标识，买家选Prime配送后由亚马逊核验会员身份并从FBA库存发货，卖家结账、支付与店铺政策无需改动。",
+      "title": "亚马逊卖家后台接入eBay等四平台，多渠道订单统一管理",
+      "summary": "亚马逊9月24日在卖家后台上线多渠道销售工具，可接入eBay、Shopify、TikTok与沃尔玛账号，统一管理商品、订单和利润数据，美国站逐步开放且不额外收费。商品修改一次自动同步全渠道，订单可直接交由FBA履约并自动回传单号，利润看板汇总各渠道广告与销售数据。多渠道卖家应尽快接入，省去逐平台更新商品与月末手动对账。",
+      "category": "policy",
+      "score": 9,
+      "url": "https://www.amz123.com/kx/Nl1nOuq5",
+      "source": "amz123",
+      "published_at": "2026-09-25T00:43:20.000Z"
+    },
+    {
+      "title": "亚马逊无品牌授权小号收到“不适当库存调查”：14天内不申诉将封店，必须视频面试吗？求成功案例、资料清单及审核时效",
+      "summary": "无品牌授权小号收到不适当库存调查，14天内不申诉将封店；本次通知未提及协议第三条也未明确要求视频验证，可准备材料为采购发票、品牌授权书、品牌后台授权、采购付款记录、货件POD、营业执照、身份证，核心疑问是书面材料能否过审、补授权是否被接受及审核时效。",
+      "category": "policy",
+      "score": 7.2,
+      "url": "https://www.wearesellers.com/question/124950",
+      "source": "wearesellers",
+      "published_at": "2026-09-25T00:59:09.473Z"
+    },
+    {
+      "title": "Mapped out how many days Express Payout cuts from sale to bank",
+      "summary": "卖家实测Express Payout放款链路：订单妥投后按DD+7第8天资金可用，旧ACH还需3-5个工作日、约11至13日到账，现24小时内到账且含周末、约第9日，每次放款可省3-5天；但首周资金冻结与结算周期未变。目前免费，亚马逊称后续可能每笔收0.5美元并提前通知，可在Deposit Methods中关闭；已有卖家收款账户被错误切回旧账户，需自查。",
+      "category": "experience",
+      "score": 7.2,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wpgr5i/mapped_out_how_many_days_express_payout_cuts_from",
+      "source": "reddit_fba",
+      "published_at": "2026-09-24T23:19:30.000Z"
+    },
+    {
+      "title": "亚马逊2026年11月2日起调整商业责任险规则，新增11类高危类目强制投保要求",
+      "summary": "亚马逊商业责任险新规2026年11月2日生效，保留月销超1万美元30天内投保、保额100万美元的门槛，同时新增儿童商品、化妆品、锂电池、床垫、汽车摩托轮胎等11类高危类目强制投保，且不限新品在售、不看月销量，均须不低于100万美元保额；涉及类目卖家应立即排查自身ASIN是否在列，尽快完成投保并上传保单，避免销售权限受限。",
       "category": "policy",
       "score": 9.4,
-      "url": "https://www.amz123.com/kx/YeKAMavg",
+      "url": "https://www.amz123.com/kx/i7xMS7Zg",
       "source": "amz123",
-      "published_at": "2026-09-24T10:39:53.000Z"
+      "published_at": "2026-09-10T09:16:41+00:00"
     },
     {
-      "title": "分享3个亚马逊广告运营工具：推广架构、关键词整理和否词分析",
-      "summary": "卖家给出AI处理亚马逊广告的可复制路径：不申请API怕关联，最终选择下载广告数据上传AI、设计Skill后自己执行。三款工具：推广架构梳理新品探索到复盘的思路与预算分配；高转化关键词整理从搜索词报表归纳出单词建立词库；否词分析筛查零单花费并结合历史订单降低误否风险，工具仅辅助判断不自动改后台。",
-      "category": "experience",
-      "score": 8.4,
-      "url": "https://www.wearesellers.com/question/124880",
-      "source": "wearesellers",
-      "published_at": "2026-09-24T10:24:46.498Z"
-    },
-    {
-      "title": "CBP starts voiding importer numbers with wrong Form 5106 details on September 18 (four things to check)",
-      "summary": "美国海关自2026年9月18日起逐一核查进口商存档的Form 5106，信息不准将作废IOR号且无法清关。应让货代调出5106核对四项：地址须为实体地址（可用负责人家庭住址，禁用注册代理、货代、P.O.箱）；邮箱和电话须属IOR本人；货代须持与IOR直接签署的POA。恢复需按指定主题行邮件申请，官方未给时限。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wgmkm6/cbp_starts_voiding_importer_numbers_with_wrong",
-      "source": "reddit_fba",
-      "published_at": "2026-09-15T01:36:54+00:00"
-    },
-    {
-      "title": "用WorkBuddy跑通「亚马逊新品关键词库搭建」最佳实践（附教程资料包）",
-      "summary": "作者演示用WorkBuddy加关键词Skill和Sif数据MCP，从0到1搭建美国站新品关键词库：先安装数据MCP并填API KEY，再用Sif按词根反查头部竞品，要求输出ASIN、价格、细分需求并禁止编造ASIN；选竞品不机械取前三名，而按产品形态与尺寸段覆盖小中大型犬需求。竞品选错则词池失效，Skill不绑定单一数据源。",
-      "category": "experience",
-      "score": 8.4,
-      "url": "https://www.wearesellers.com/question/124881",
-      "source": "wearesellers",
-      "published_at": "2026-09-24T09:56:51.462Z"
-    },
-    {
-      "title": "服装上架后收到食品和商品安全问题的绩效，提交合规性资料后一直无人审核怎么办",
-      "summary": "服装上架被收食品和商品安全问题绩效，平台要求2天内提供文件；因CPC检测耗时第20天才提交合规资料，客服承诺15个工作日完成审核，超期后多次开case催审仍停在审核中。结论是该类合规审核积压严重、催审基本无效，帖内未给出有效加急办法。",
-      "category": "policy",
-      "score": 6.2,
-      "url": "https://www.wearesellers.com/question/124889",
-      "source": "wearesellers",
-      "published_at": "2026-09-24T10:43:34.020Z"
-    },
-    {
-      "title": "Little Known PPC Hack To Double Down On Good Keywords & Gain Market Share",
-      "summary": "利用广告后台的Purchased Product Report做PPC扩张：广告归因的销量常落在未打广告的其他ASIN上，案例中 advertised ASIN 与其他ASIN的出单比例达1:1到1:5。做法是挑出持续出单的非广告ASIN，把它们放进原本只聚焦1-2个关键词的窄主题广告活动，用同一批已验证的高效关键词推替代产品，实现市场份额增长。",
-      "category": "experience",
-      "score": 8.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wo2rfq/little_known_ppc_hack_to_double_down_on_good",
-      "source": "reddit_fba",
-      "published_at": "2026-09-23T10:59:03.000Z"
-    },
-    {
-      "title": "Margins acos/tacos",
-      "summary": "结论：ACoS与TACOS均按亚马逊总销售额而非净销售额计算，只看平台口径会高估广告效率、误判真实利润。方法：用净收入重新核算广告占比，将ACoS/TACOS与自身财务口径对齐后再做预算与投放决策，避免自欺式盈利评估。",
-      "category": "experience",
-      "score": 7.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1woay0r/margins_acostacos",
-      "source": "reddit_fba",
-      "published_at": "2026-09-23T16:33:38.000Z"
-    },
-    {
-      "title": "美国加征50%关税后，加拿大进口商转向欧盟与英国货源",
-      "summary": "美国对加拿大商品加征50%关税后，加拿大进口商将采购由美国转向欧盟与英国；工业制造、汽车零部件、快消品等低利润品类先调整，25%至50%关税直接令利润归零。当前以小批量试单为主，先用几个标准箱或拼箱验证运输时效与到岸成本；运输由2天卡车改为14至21天海运后，需重算库存持有成本与仓库容量。",
-      "category": "trend",
-      "score": 6,
-      "url": "https://www.amz123.com/kx/FwxtqG8Q",
-      "source": "amz123",
-      "published_at": "2026-09-24T06:17:24.000Z"
-    },
-    {
-      "title": "欧盟统一海关改革正式生效：27国111套系统整合为单一数据入口",
-      "summary": "欧盟9月21日组建EUCA并建统一海关数据中心，27国111套系统整合为单一数据入口，2028年7月先在电商落地，2034年3月全面强制；150欧元以下免税已于2026年7月取消，暂按每件3欧元征税，11月前后叠加小包裹统一处理费。欧洲站卖家需重算低货值直发成本并调整定价。",
+      "title": "亚马逊全球仓配扩展至8国，合规测试一次覆盖多国",
+      "summary": "亚马逊9月24日发布全球开店新工具：玩具类目推出合并规格表，一次测试可满足多国认证且已有认证可直接沿用，试点卖家合规成本最高降60%，电子与母婴品类年底跟进；全球仓配年内从美国扩展至英、日、德、法、意、西、加，一次入仓覆盖八国。多国经营卖家平均收入比单国高70%，美国站卖家可借这两项工具低成本试水多国扩张。",
       "category": "policy",
       "score": 7,
-      "url": "https://www.amz123.com/kx/X3MxBDny",
+      "url": "https://www.amz123.com/kx/vwyUDFFz",
       "source": "amz123",
-      "published_at": "2026-09-24T06:07:01.000Z"
+      "published_at": "2026-09-25T00:43:18.000Z"
     },
     {
-      "title": "亚马逊灰度测试关闭差评\"联系买家\"按钮，卖家主动沟通渠道受阻",
-      "summary": "亚马逊全站点灰度下架1至3星差评的联系买家按钮，美国站已分批落地且不设品牌备案豁免，部分账号入口已完全关闭。买家不主动发消息时卖家无官方渠道触达低分买家，补发货、退款安抚争取改评的打法失效。运营重心应转向预防差评：前置质检、把控物流时效与售前预期管理，降低低分评价产生概率。",
+      "title": "亚马逊美国站旺季费用多项叠加，卖家成本压力显著上升",
+      "summary": "美国站旺季成本进入叠加期：2026年10月15日至2027年1月14日，FBA、MCF及Buy with Prime配送收取旺季附加费，小号标准件每件约0.19美元、T恤约0.39美元、超大件约2.81美元、平均约0.32美元，并与已执行的3.5%燃油及物流附加费同时计收。卖家应将双重费用纳入售价测算，轻小件低客单价商品优先复核利润，大件需叠加燃油与大件附加费核算。",
       "category": "policy",
       "score": 9.4,
-      "url": "https://www.amz123.com/kx/1UYbAIRt",
+      "url": "https://www.amz123.com/kx/0eTtbNN6",
       "source": "amz123",
-      "published_at": "2026-09-15T05:54:25+00:00"
+      "published_at": "2026-09-10T09:37:28+00:00"
+    },
+    {
+      "title": "美国万圣节消费预计达135亿美元，折扣店成主要购买渠道",
+      "summary": "美国零售联合会调查显示，2026年美国万圣节消费预计达135亿美元创历史新高，74%消费者计划参与。渠道上折扣店占39%居首，线上零售占27%。49%消费者9月或更早下单以分散预算压力。卖家应把万圣节选品上架提前到9月前，并跟进近半数消费者用AI做策划催生的创意商品与调研类需求。",
+      "category": "trend",
+      "score": 8,
+      "url": "https://www.amz123.com/kx/laWC7L12",
+      "source": "amz123",
+      "published_at": "2026-09-25T01:03:44.000Z"
+    },
+    {
+      "title": "The reimbursement money I was leaving on the table for over a year (FBA)",
+      "summary": "亚马逊FBA索赔实操方法。卖家应每月比对退货报告与赔偿报告，针对买家未退回货物、超45天未退回已退款件、库容损毁未自动赔偿等异常，以一单一案、只陈述事实的方式开case索赔，避免因超出时效而造成资金损失。",
+      "category": "experience",
+      "score": 9.4,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vbqfwd/the_reimbursement_money_i_was_leaving_on_the",
+      "source": "reddit_fba",
+      "published_at": "2026-07-31T13:06:17+00:00"
+    },
+    {
+      "title": "美国家居市场2026年销售额预计增至437亿美元",
+      "summary": "Circana预测美国家居行业2026年销售额增至437亿美元，同比增2.9%，增长动力来自均价提升、换新需求与产品创新；厨房小家电为主要拉动项，空气炸锅销售额预计增15.6%；2020至2021年购入的高频商品进入更换周期，微波炉购买中65%为以旧换新，电咖啡机与立式吸尘器换新比例约六成；消费方向转向节省成本、提升便利的产品，可直接用于美站家居选品决策。",
+      "category": "trend",
+      "score": 7.4,
+      "url": "https://www.amz123.com/kx/SphHETSt",
+      "source": "amz123",
+      "published_at": "2026-09-25T02:54:34.000Z"
+    },
+    {
+      "title": "ChannelEngine调研：平台卖家将利润率置于营收增长之上",
+      "summary": "ChannelEngine 2026报告调研美英德法荷550余名电商决策者：利润率重要性已超越销量与净营收，扩大平台覆盖的优先级由第4降至第8；入驻7个以上平台的企业占比从34%升至39%；26%将引入AI优化运营列为首要任务，25%优先提升盈利，82%已用或考虑AI，英国AI应用领先、德国垫底。",
+      "category": "trend",
+      "score": 6.4,
+      "url": "https://www.amz123.com/kx/73aY7bwU",
+      "source": "amz123",
+      "published_at": "2026-09-25T06:46:14.000Z"
     }
   ]
 }
