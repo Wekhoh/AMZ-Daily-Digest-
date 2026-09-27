@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-09-26T10:59:25Z",
-  "digest_date": "2026-09-26",
+  "generated_at_utc": "2026-09-27T11:26:40Z",
+  "digest_date": "2026-09-27",
   "article_count": 50,
   "articles": [
     {
-      "title": "Here’s what happens when the bots take over: I ran Amazon’s top lingerie listings through a compliance scanner and it wasn’t sexy",
-      "summary": "卖家对女装内衣类目在售Listing跑合规扫描器实测：抽查的前两个ASIN全部不达标，第一条蕾丝连体衣标题达114字符，超出75字符上限39字符；亚马逊机器人改写标题时不看转化效果，只按字数机械裁切并继续处理下一个Listing。结论是美国站卖家应立即自查全店铺标题长度，控制在75字符内，避免被系统自动截改损伤转化。",
+      "title": "亚马逊上线虚拟身份验证：收到通知后14天内须完成视频核验，否则暂停销售",
+      "summary": "亚马逊上线虚拟身份验证，身份存疑卖家将收到视频核验通知，宽限期通常仅14天，部分账户不设宽限期，逾期未完成将暂停销售权限。入口在注册邮箱、绩效通知与账户状况页优先操作栏目。法人须备身份证或护照、企业注册文件、180天内银行及信用卡对账单、关系证明、供应链票据，材料不得图像处理，点击进入通话后无法回传，运营可陪同但不得代验。",
       "category": "policy",
-      "score": 8.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wqmrpx/heres_what_happens_when_the_bots_take_over_i_ran",
-      "source": "reddit_fba",
-      "published_at": "2026-09-26T10:04:46.000Z"
-    },
-    {
-      "title": "现在新品推广这么难么？核心词广泛匹配，建议竞价0.45，提高和降低出价到0.7，实际点击1.4",
-      "summary": "新品冷启动实操复盘：开4组广告（自动精准、5个精准核心词、核心大词广泛、竞品ASIN定投），bid从0.3加到0.7仍卡在1.4实际点击，老店同款CPC仅0.7；上架半月Vine回5个五星后平均CPC降至0.9左右，回评对降CPC影响显著；现行打法为高于市场价约20%底价加20%优惠券跑收录与积累否词，待大货到再降价放开广告。",
-      "category": "experience",
-      "score": 8.4,
-      "url": "https://www.wearesellers.com/question/111140",
-      "source": "wearesellers",
-      "published_at": "2026-09-26T09:40:06.336Z"
-    },
-    {
-      "title": "what supplier clause has saved you the most trouble?",
-      "summary": "卖家为主力FBA产品更换供应商：旧供应商在订单确认后仍反复改动MOQ和交期，一批货短装后直接造成库存缺口。换供应商后其计划把单价、MOQ、交期、验货、运输条款全部写入书面协议，因为新供应商在中国且主要用微信沟通，口头承诺不可靠。教训是合同必须预先锁定履约细节，防止断货。",
-      "category": "experience",
-      "score": 6.8,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wqdwee/what_supplier_clause_has_saved_you_the_most",
-      "source": "reddit_fba",
-      "published_at": "2026-09-26T01:36:56.000Z"
-    },
-    {
-      "title": "First Q4 with ad costs coming out of payouts. Anyone run the numbers on November?",
-      "summary": "自4月15日起亚马逊先从回款中扣广告费，回款不足才刷备用卡；Q4广告加码与补货付款重叠。以月广告1万美元、11月翻倍至2万美元为例，若回款6万实际仅到账约4万，与1月补货下单同期；2500美元一次性补偿杯水车薪。黑五前应在报表-付款中对比常规广告支出与结算余额，接近则确保备用卡额度充足以应对自动扣款。",
-      "category": "policy",
-      "score": 7.8,
-      "url": "https://www.reddit.com/r/AmazonSeller/comments/1wqaqjm/first_q4_with_ad_costs_coming_out_of_payouts",
-      "source": "reddit_seller",
-      "published_at": "2026-09-25T23:06:30.000Z"
-    },
-    {
-      "title": "船公司调整大西洋运力布局，欧洲直航加拿大运力年增14%",
-      "summary": "欧洲至北美运力正向加拿大倾斜：前9个月欧洲直美运力降6%、直加拿大增14%，美国仍占欧洲至北美总运力89%；Xeneta周报显示大西洋即期运价升至2956美元/大柜、较伊朗冲突爆发初期约翻倍，业内归因于11月恢复征收的中国建造船舶港口费。对发美线补货的卖家，应提前锁舱锁价、按运价上行重估头程预算，走加拿大线者需重新谈舱位与报价。",
-      "category": "trend",
-      "score": 6.4,
-      "url": "https://www.amz123.com/kx/0ZMraiEa",
+      "score": 9,
+      "url": "https://www.amz123.com/kx/gOSy3rSD",
       "source": "amz123",
-      "published_at": "2026-09-25T05:05:31.000Z"
+      "published_at": "2026-09-23T05:55:04+00:00"
     },
     {
-      "title": "手里有一家销售额1000W的亚马逊店铺，现在出口报关遇到问题了，根据现在有的情况下，我应该如何操作再能合理持续的运营下去。毕竟还是想做下去的，求咨询",
-      "summary": "年销1000万级店铺遭遇报关断点：原先走0110且境外收货人填亚马逊，货代已明确不能再走此方式；卖家认为体量不适合设香港公司，转9810则面临当地税务认定不明、既往0110遗漏问题暴露的风险。帖子呈现真实合规困境与路径权衡，无解决方案，同类美国站卖家可借此提前自查报关结构。",
-      "category": "policy",
-      "score": 6.2,
-      "url": "https://www.wearesellers.com/question/124787",
+      "title": "想拿亚马逊AC标？别只会死砸大词，我是怎么一步步把词推上去的",
+      "summary": "AC标获取取决于该词自然排名能否全天大部分时间稳定靠前，正常情况下自然排第一基本就能拿到，而非靠砸预算硬刚单个精准大词。可执行打法：把同词缀词、长尾词、相关意图词一起拉起形成词群持续补单，用整个词群把核心词自然位拱上去；加价前先看广告位转化，顶部能出单才该顶，只烧钱不出单则放弃该位置。",
+      "category": "experience",
+      "score": 9,
+      "url": "https://www.wearesellers.com/question/119098",
       "source": "wearesellers",
-      "published_at": "2026-09-26T03:39:45.940Z"
+      "published_at": "2026-09-27T10:13:38.944Z"
     },
     {
-      "title": "亚马逊大批Listing划线价异常消失，卖家订单量大幅下滑",
-      "summary": "美国站大量Listing划线价无故消失、专享折扣报错，部分店铺六成乃至全部商品划线失效，叠加9月7日劳动节假期线下分流，销量腰斩、近三天单量仅为日常三分之一；业内消息指亚马逊将推行新参考价规则：90天周期内至少10%的天数按参考价成交才能展示划线价。卖家需立即核查前台优惠展示并调整定价，保证周期内有足够参考价出单天数。",
+      "title": "亚马逊MCF折扣上限提升至25% 独立站免费Prime配送全面开放",
+      "summary": "美国MCF卖家可立即利用的政策红利：优选定价计划履约费折扣上限升至25%，与按件发放的FBA抵扣金合并计算，前六个月省15%-25%，无需签合同、后台一键加入、发货后自动抵扣；独立站免费Prime配送全面开放，商品页展示Prime标识，买家选Prime配送后由亚马逊核验会员身份并从FBA库存发货，卖家结账、支付与店铺政策无需改动。",
       "category": "policy",
       "score": 9.4,
-      "url": "https://www.amz123.com/kx/6SrmZULT",
+      "url": "https://www.amz123.com/kx/YeKAMavg",
       "source": "amz123",
-      "published_at": "2026-09-08T02:12:27+00:00"
+      "published_at": "2026-09-24T10:39:53+00:00"
     },
     {
-      "title": "USPS审计披露：电商弃件致年收入减少1.63亿美元",
-      "summary": "USPS审计显示，截至今年2月的12个月内无法投递的电商包裹使其收入减少1.63亿美元，总量约1900万件、增45%，75%来自商业寄件人。根源是Parcel Select不含退件服务，退件须按Ground Advantage补邮资每件至少12.63美元，履约中心处理退货成本达货值20%至65%。走USPS渠道的卖家应把退件成本纳入物流比价。",
-      "category": "other",
-      "score": 6,
-      "url": "https://www.amz123.com/kx/qVxlgFsZ",
-      "source": "amz123",
-      "published_at": "2026-09-26T06:42:50.000Z"
-    },
-    {
-      "title": "亚马逊下半年大促提报开启，早鸟优惠、促销资格速看！",
-      "summary": "2026年亚马逊下半年大促提报开启。美国站Prime会员大促提报为7月8日至9月8日，黑五网一为7月8日至10月20日。促销要求定价不高于60天最低价，且比30天最低价至少优惠5%。早鸟提报可省50美元固定费。旺季配送费平均每件上涨0.32美元。",
+      "title": "美国站Health类目普通纺织品卖了几年，FDA字段突然强制必填，新品无法上架，老品也被锁编辑该怎么解决",
+      "summary": "美国站Health类目普通非医疗纺织品突遭FDA字段强制必填：用新版模板上架同品类新品直接报错，老品后台编辑页因FDA字段空白无法保存，批量模板更新这条路也失效，listing编辑权限被锁。文中仅提出开case清除校验、换类目等求助方向，无已验证解法，属于类目合规强制校验变化的风险警示。",
       "category": "policy",
-      "score": 10,
-      "url": "https://www.wearesellers.com/question/122045",
+      "score": 6.2,
+      "url": "https://www.wearesellers.com/question/124821",
       "source": "wearesellers",
-      "published_at": "2026-07-09T09:01:29.635+00:00"
+      "published_at": "2026-09-27T09:13:43.375Z"
     },
     {
-      "title": "USPS安装新分拣设备，印第安纳波利斯及路易斯维尔包裹或现延误",
-      "summary": "USPS警告，印第安纳波利斯和路易斯维尔两处处理中心安装新包裹分拣设备，未来数周上述地区派送可能延误。印第安纳波利斯部署大件及超规件分拣机，安装还需两至三周收尾；路易斯维尔9月承接埃文斯维尔分流货量整月积压，部分包裹改道纳什维尔及斯普林代尔。发往该区域的卖家需预留时效缓冲。",
-      "category": "other",
-      "score": 6.4,
-      "url": "https://www.amz123.com/kx/qiBzagdh",
+      "title": "亚马逊卖家收到的货和图片差距大，80% 是表面处理工艺没搞懂",
+      "summary": "收到的货与图片差距大主因是下单时表面处理工艺未写清，不锈钢本色在工厂少说有五六种做法。可执行要点：镜面易留指纹水渍只适合展示礼品类；拉丝必须在规格书写死方向与丝纹粗细并留确认样，宠物碗选粗深丝纹；喷粉喷漆附着力差，下单前问工厂能否过洗碗机测试多少轮，食品接触涂层迁移测试要单独做；PVD色差需同批一次做完不拆单，补货留第一批色板对色。",
+      "category": "experience",
+      "score": 7.6,
+      "url": "https://www.wearesellers.com/question/124975",
+      "source": "wearesellers",
+      "published_at": "2026-09-27T08:13:47.776Z"
+    },
+    {
+      "title": "Your product might not be the reason customers return it. Your Amazon listing might be.",
+      "summary": "退货未必是产品问题，更多是listing制造的预期落差：图片显大、功能被夸大、未说明包装内容、遗漏使用限制、卖点引导错误使用场景，都会让合格产品被退回。因此listing优化不应只看点击率和转化率，还要在购买前设定正确预期，让买家清楚产品是什么、能做什么、包含什么、不能做什么，页面越贴近实物，落差越小，退货越少。",
+      "category": "experience",
+      "score": 8.4,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wqqoa5/your_product_might_not_be_the_reason_customers",
+      "source": "reddit_fba",
+      "published_at": "2026-09-26T13:33:13.000Z"
+    },
+    {
+      "title": "非标新品开始冲量，怎么提前做好准备？冲量前筛选好精准关键词、补充更多流量入口。",
+      "summary": "19.9刀非标新品7天87单、转化率8.9%。冲量前广告调整：手动广泛广告顶部转化24.3%最佳、商品页5.5%最差，应降基础竞价压缩商品页曝光，给顶部多加位置百分比，高点击词同步小幅降价避免订单波动；自动广告三位置各有优势，直接提基础竞价整体放量；ASIN定位转化5.8%、ACOS29%不宜加基础竞价，先给顶部加百分比观察，并砍掉高点击不出单的差ASIN目标。",
+      "category": "experience",
+      "score": 9,
+      "url": "https://www.wearesellers.com/question/124728",
+      "source": "wearesellers",
+      "published_at": "2026-09-23T09:59:28.133+00:00"
+    },
+    {
+      "title": "亚马逊电动牙刷还能不能做？拆完 Aquasonic 和飞利浦 437 条评论，两款死在同一个地方",
+      "summary": "拆解Amazon.com两款电动牙刷437条评论：Sonicare 4100样本3.2分、1-2星占29.4%，死于充电底座充不进电和电源键橡胶脱落进水；Aquasonic黑系列3.9分、差评率8.6%，电机动力不稳定。两款故障集中在12到24个月保修期后。入局打法：电源键密封不省成本、保修给到3年、充电改USB-C加电量显示。",
+      "category": "experience",
+      "score": 9,
+      "url": "https://www.wearesellers.com/question/124844",
+      "source": "wearesellers",
+      "published_at": "2026-09-23T01:37:56.976+00:00"
+    },
+    {
+      "title": "美国8月爱好类消费同比增长7.9% 户外与手工用品增速超整体零售",
+      "summary": "美国8月爱好类支出同比增长7.9%，交易笔数仅增3.4%，说明客单价同步走高；截至8月的12个月内运动用品、爱好、乐器与书店销售额增10.7%，远超零售餐饮整体6%的增幅。油价上涨促使预算从旅行转向居家爱好，年长千禧一代人均支出为Z世代两倍以上。美国站卖家可加大手工、露营、滑雪潜水装备等品类投入，并重点面向千禧一代布局定价。",
+      "category": "trend",
+      "score": 7,
+      "url": "https://www.amz123.com/kx/eyikiNL5",
       "source": "amz123",
-      "published_at": "2026-09-26T01:21:32.000Z"
+      "published_at": "2026-09-27T06:48:44.000Z"
+    },
+    {
+      "title": "CBP starts voiding importer numbers with wrong Form 5106 details on September 18 (four things to check)",
+      "summary": "美国海关自2026年9月18日起逐一核查进口商存档的Form 5106，信息不准将作废IOR号且无法清关。应让货代调出5106核对四项：地址须为实体地址（可用负责人家庭住址，禁用注册代理、货代、P.O.箱）；邮箱和电话须属IOR本人；货代须持与IOR直接签署的POA。恢复需按指定主题行邮件申请，官方未给时限。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wgmkm6/cbp_starts_voiding_importer_numbers_with_wrong",
+      "source": "reddit_fba",
+      "published_at": "2026-09-15T01:36:54+00:00"
     }
   ]
 }
