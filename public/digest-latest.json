@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-09-29T12:14:22Z",
-  "digest_date": "2026-09-29",
+  "generated_at_utc": "2026-09-30T11:59:50Z",
+  "digest_date": "2026-09-30",
   "article_count": 50,
   "articles": [
     {
-      "title": "做了一个表格，方便计算日常以及大促活动BD，LD，价格折扣和优惠券可做的最高价格",
-      "summary": "自制表格用于计算日常及大促BD、LD、价格折扣和优惠券可做的最高价格。用法：向客服获取绿色部分对应价格并填入，即按规则算出结果。三个用途：按当前价格核查后续可做的最高活动价；后台活动价报错时定位具体出错价格；提前规划并验证长期日常或大促价格能否做到。",
-      "category": "experience",
+      "title": "收到美国专利侵权警告函（只发了邮件、还没投诉）——想知道大家实际遇到的赔偿范围和谈法，以及后面怎么处理",
+      "summary": "美国站产品收到专利权人邮件警告函，主张两项实用专利并点名两个链接，限10个工作日停售关链接、交代供应商、提供销量营收库存清单，否则投诉平台并追禁令、三倍赔偿与律师费；当前尚未正式投诉，待解核心是赔偿量级与回信下架策略，可选路径含平台中立评估与美国专利律师意见。",
+      "category": "policy",
+      "score": 7.8,
+      "url": "https://www.wearesellers.com/question/125078",
+      "source": "wearesellers",
+      "published_at": "2026-09-30T10:47:33.900Z"
+    },
+    {
+      "title": "【亚马逊】美国站膳食补充剂新品上传链接后立即触发合规审核，已提交COA仍在审核中。请教大家美国站膳食补充剂产品，COA 是否足以完成审核？如果后台提示 GMP 认证问题，是否还需要额外提交 GMP 证书？",
+      "summary": "美国站膳食补充剂新品创建链接后立即触发GMP第三方认证审核，仅上传COA不足，需走亚马逊认可TIC机构（NSF、UL、Eurofins、SGS、Intertek、USP等）认证：填写工厂与产品信息、提交符合21 CFR 111/117且在有效期内的GMP证书、整理受限ASIN清单一次性交机构统一向亚马逊同步验证，通过后后台状态更新、商品恢复在售。",
+      "category": "policy",
       "score": 8.4,
-      "url": "https://www.wearesellers.com/question/125032",
+      "url": "https://www.wearesellers.com/question/120788",
       "source": "wearesellers",
-      "published_at": "2026-09-29T10:59:11.826Z"
+      "published_at": "2026-09-30T10:47:17.300Z"
     },
     {
-      "title": "[PSA / Math] Q4 Holiday Peak fees start Oct 15: How much phantom profit is your sourcing sheet calculating right now?",
-      "summary": "10月15日至1月14日亚马逊收取旺季配送费，标准尺寸加收约0.32-0.40美元，并叠加3.5%燃油附加费与入库配置费。以1.2磅、售价26.99美元商品为例：旧费率卡估算净利7.29美元、ROI 63.4%，按实际Q4费率净利仅6.48美元、ROI 56.3%，单件虚增利润0.81美元，40件试单即少赚32.40美元；选品需按新费率重算，可用免费工具按官方公式直推Google Sheets。",
-      "category": "policy",
-      "score": 9,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wisvab/psa_math_q4_holiday_peak_fees_start_oct_15_how",
+      "title": "​同样20万，一个月稳定赚10万的老品，和可能赚20万的新品，你会选哪个？",
+      "summary": "卖家案例：老品裸成本约200元、售价约100美元、月净利约10万且稳定近3年，但铝制品供应链从备料到可售需提前半年，今年仅备1500套已注定断货；最终把20万投给新品而非老品，逻辑是稳定期先守住现金流，想做大必须持续押注新品开发，错过时间窗口无法挽回。可借鉴：长周期类目预留半年备货、善用供应商账期周转、旺季前评估断货风险。",
+      "category": "experience",
+      "score": 7.4,
+      "url": "https://www.wearesellers.com/question/125046",
+      "source": "wearesellers",
+      "published_at": "2026-09-30T10:47:21.854Z"
+    },
+    {
+      "title": "Business Supply Client came to me on the brink of bankruptcy. I saved the business. Now he wants me to double his all-time sales record for Q4 but rigged my commission gate. Am I being set up?",
+      "summary": "亚马逊PPC代运营案例：服务商接手濒临破产客户后重建广告架构，用B2B批量订单策略砍掉无效花费，TACoS压到14%-17%，三条产品线冲上首页自然位。客户Q4要求月净利5万美元，但其历史Q4月均仅5000-10000美元、最高22000美元，超纪录两倍多，属近乎不可达的门槛；接单前应以历史损益数据核定Q4目标再谈佣金。",
+      "category": "experience",
+      "score": 6.8,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wu1pr1/business_supply_client_came_to_me_on_the_brink_of",
       "source": "reddit_fba",
-      "published_at": "2026-09-17T12:39:15+00:00"
+      "published_at": "2026-09-30T10:48:21.000Z"
     },
     {
-      "title": "我们公司美工组开始转运营了，说说 AI 出图到底改了什么",
-      "summary": "测款流程改为工厂手机实拍加AI出图：按一页纸规范拍白墙浅色台面、光别太硬、不开闪光灯、正侧细节多角度，照片连同卖点和毛成本价录入系统，AI一次产出八张主副图加四张A+，初稿十分钟，样品未到即可开工。纯色结构简单的品直接上架；渐变色、复杂结构、自带文字logo的需框选返修约半小时；砸广告的核心款仍走摄影棚。",
+      "title": "分享一种个人一直在用的选品方法，源于一位认识的大佬，个人就是在选品上适当的做一些补充，觉得好你就试试，觉得不好请别跟我杠",
+      "summary": "选品三步法：先用流量会下沉的无实际意义大词，在品牌分析从前往后翻，到前台挑评价几十个的机会产品；再逆推核心关键词热度，用品牌分析与Google Trends验证，热度低或无核心词直接放弃；最后算利润，没利润坚决不做。案例中44评新品因靠50%折扣及多重折扣卷上去而中止，被卷上去的品不碰。",
       "category": "experience",
-      "score": 9,
-      "url": "https://www.wearesellers.com/question/125033",
+      "score": 7.4,
+      "url": "https://www.wearesellers.com/question/100529",
       "source": "wearesellers",
-      "published_at": "2026-09-29T11:44:02.368Z"
+      "published_at": "2026-09-30T10:47:14.982Z"
     },
     {
-      "title": "2026年亚马逊Prime会员大促定档10月6日至7日",
-      "summary": "2026年秋季Prime会员大促定档10月6至7日，覆盖美国等22国。美国站秒杀与Z划算提报截止9月22日，路径为营销推广、管理促销和特惠、创建促销；除秒杀外应同步提报Prime专享价格折扣（单活动最多500子ASIN）和覆盖活动全程的优惠券，并跟进上线状态，提报不等于成功上线。",
-      "category": "policy",
-      "score": 9,
-      "url": "https://www.amz123.com/kx/vCVKZtkl",
-      "source": "amz123",
-      "published_at": "2026-09-15T09:37:07+00:00"
-    },
-    {
-      "title": "亚马逊卖家后台接入eBay等四平台，多渠道订单统一管理",
-      "summary": "亚马逊9月24日在卖家后台上线多渠道销售工具，可接入eBay、Shopify、TikTok与沃尔玛账号，统一管理商品、订单和利润数据，美国站逐步开放且不额外收费。商品修改一次自动同步全渠道，订单可直接交由FBA履约并自动回传单号，利润看板汇总各渠道广告与销售数据。多渠道卖家应尽快接入，省去逐平台更新商品与月末手动对账。",
-      "category": "policy",
-      "score": 9,
-      "url": "https://www.amz123.com/kx/Nl1nOuq5",
-      "source": "amz123",
-      "published_at": "2026-09-25T00:43:20+00:00"
-    },
-    {
-      "title": "FBA索赔窗口到底是18个月还是60天？亚马逊红线文件里18 months是被划掉的，但我只拿到英欧站那一份",
-      "summary": "FBA库存丢损索赔窗口已从18个月改为60天，以库存台账报告丢损日为锚点，逾期不予赔偿；客户退货索赔须在退款或换货后45至105天内提交，早于45天直接驳回；移除订单分两个窗口：途中丢失自货件创建起75天，途中损坏自退回签收起60天；90天说法在四份官方文件中均不存在，美国站子页面在登录墙后待核实。",
-      "category": "policy",
-      "score": 9,
-      "url": "https://www.wearesellers.com/question/124480",
-      "source": "wearesellers",
-      "published_at": "2026-09-14T03:30:09.732+00:00"
-    },
-    {
-      "title": "家具类目做了1年，广告该慢慢积累权重还是直接打大词？海外仓要90天，订货和备货量怎么控制才不压库存？",
-      "summary": "家具类目一年实操：用卖家精灵竞品关键词报告搭建自动、词组、精准、广泛、捡漏五组广告，先打精准词把排名推进类目前一百，纠结是否拉高预算快速度过新品期再降广告。海外仓出货需90天，首批备三个月货，后续按当前DMS、类目流量趋势与竞品黑五数据预估走货量并加50件保险库存；300套分三批隔两周各发100套，装柜常延迟一周打乱节奏。",
+      "title": "单干卖家要怎样搞团队？我从日销几十单做到月毛利30万，但第一次建团队却失败了，现在该怎么组建和管理团队才能把销量稳住并做大？",
+      "summary": "美国站低价精铺单干样本：10万启动资金三四个月回本，19年底日出百单、月入破10万，22年日销六七百单、月毛利30万；组建4运营加1美工加1选品后交家人代管3个月即失控，2024年底团队解散，日销跌至100多单、月毛利仅两三万，作者单干两年重回月毛利30万，教训是缺乏交接与管理机制的团队扩张易失败。",
       "category": "experience",
-      "score": 7.2,
-      "url": "https://www.wearesellers.com/question/125006",
+      "score": 6.8,
+      "url": "https://www.wearesellers.com/question/125026",
       "source": "wearesellers",
-      "published_at": "2026-09-29T11:25:45.684Z"
+      "published_at": "2026-09-30T10:46:44.584Z"
     },
     {
-      "title": "亚马逊电动剃须刀怎么做才有机会？拆完 403 条评论，改进方向就三个",
-      "summary": "拆解飞利浦OneBlade 360与博朗Series 3 ProSkin共403条亚马逊文字评论：两款均3.3分，差评率27.1%对29.2%。OneBlade死于耐用性，博朗剃须效果差占其痛点50.5%，同一功能夸骂各半、品类一致性差。切入方向三点：改通用USB-C充电并送插头、强化结构强度、专攻颈部与粗硬胡须场景，入局前先算清成本结构。",
+      "title": "亚马逊价格折扣打排名问题：产品用15%折扣两周把核心大词从20名外推到前5，自然单量提升了但广告ACOS很高，我该现在调整广告，还是等折扣取消后再调整？具体该怎么调？",
+      "summary": "产品用15%折扣两周把核心大词从20名外推进前5，自然单量提升，但广告出单不理想、ACOS偏高（TACOS尚可）；广告结构为精准大词词组3组、精准2组、自动紧密1组、自动同类1组。当前纠结是立即调广告降预算，还是等折扣取消后再调及如何调。全文求助，未给出结论。",
       "category": "experience",
-      "score": 9,
-      "url": "https://www.wearesellers.com/question/124983",
+      "score": 6.2,
+      "url": "https://www.wearesellers.com/question/125023",
       "source": "wearesellers",
-      "published_at": "2026-09-29T08:58:36.129Z"
+      "published_at": "2026-09-30T07:47:03.418Z"
     },
     {
-      "title": "差评拆解第5期：这次不拆产品，讲讲我是怎么用AI拆差评的",
-      "summary": "用AI拆差评为选品找切入点的四步法：拉评论（官方API已堵死，用工具或爬虫，文字评论至少100条再动手，样本少结论不可靠）；AI按固定标签体系（寿命、佩戴、音质、连接、客服等）打标，避免每次分类漂移；对比各标签占比再用退货率验证影响面；按卖点未兑现、基础体验塌、品控寿命、服务不兜底定死法。注意前台大分与可拆评论口径不一致，剔除描述笼统的恶意差评，AI归类需抽查原始评论核对，单品类约两三小时。",
-      "category": "experience",
-      "score": 9,
-      "url": "https://www.wearesellers.com/question/124651",
-      "source": "wearesellers",
-      "published_at": "2026-09-18T09:24:52.178+00:00"
-    },
-    {
-      "title": "亚马逊虚拟视频⾝份验证-多店铺怎么解决？",
-      "summary": "亚马逊虚拟视频验证需备齐材料：法人、共同参与的运营或同事的关系证明、收款信息、付款信息、公司文件，官方称两类必选两类可选，建议每份备打印件加电子件。多店铺场景存疑：B店法人为老板同学，若验证需追加运营共同参与，该运营与B店的关系证明如何出具，帖内无解。",
+      "title": "Foreign-owned Wyoming LLC — DIY or software for Form 5472? Worried 2024 filing was incomplete too",
+      "summary": "英国居民持有的怀俄明州单成员LLC主营加拿大FBA（约9.9万加元，美国销售仅92美元），2025年需报Form 5472加Pro Forma 1120及Form 1040-NR，延期截止2026年10月15日；作者比较Edetax约50美元、Form5472.io约147美元与DIY、CPA方案，并担心2024年仅报1040-NR漏报5472面临2.5万美元罚款，询问补报与合理原因豁免流程，帖内尚无解答。",
       "category": "policy",
       "score": 6.8,
-      "url": "https://www.wearesellers.com/question/124992",
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wt5i6q/foreignowned_wyoming_llc_diy_or_software_for_form",
+      "source": "reddit_fba",
+      "published_at": "2026-09-29T09:26:31.000Z"
+    },
+    {
+      "title": "亚马逊MCF折扣上限提升至25% 独立站免费Prime配送全面开放",
+      "summary": "美国MCF卖家可立即利用的政策红利：优选定价计划履约费折扣上限升至25%，与按件发放的FBA抵扣金合并计算，前六个月省15%-25%，无需签合同、后台一键加入、发货后自动抵扣；独立站免费Prime配送全面开放，商品页展示Prime标识，买家选Prime配送后由亚马逊核验会员身份并从FBA库存发货，卖家结账、支付与店铺政策无需改动。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.amz123.com/kx/YeKAMavg",
+      "source": "amz123",
+      "published_at": "2026-09-24T10:39:53+00:00"
+    },
+    {
+      "title": "亚马逊意大利站同一ASIN恢复购物车后几小时又被外部比价打掉，Temu低价链接下架仍无效，怎么彻底解决？",
+      "summary": "意大利站同一ASIN频繁触发外部比价导致购物车丢失，后台case恢复后几小时内又丢，陷入循环；已购买Temu比价链接并发起专利投诉使其下架，购物车仍不恢复，怀疑亚马逊缓存比价数据或比价来源不止已知链接。文中列出触发根源、匹配依据、低价链接定位、直达定价或Catalog团队渠道、成功案例、比价来源查询六问，均无答案。",
+      "category": "policy",
+      "score": 6.2,
+      "url": "https://www.wearesellers.com/question/125082",
       "source": "wearesellers",
-      "published_at": "2026-09-29T05:58:50.598Z"
+      "published_at": "2026-09-30T10:47:12.685Z"
     }
   ]
 }
