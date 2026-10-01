@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-09-30T11:59:50Z",
-  "digest_date": "2026-09-30",
+  "generated_at_utc": "2026-10-01T12:34:07Z",
+  "digest_date": "2026-10-01",
   "article_count": 50,
   "articles": [
     {
-      "title": "收到美国专利侵权警告函（只发了邮件、还没投诉）——想知道大家实际遇到的赔偿范围和谈法，以及后面怎么处理",
-      "summary": "美国站产品收到专利权人邮件警告函，主张两项实用专利并点名两个链接，限10个工作日停售关链接、交代供应商、提供销量营收库存清单，否则投诉平台并追禁令、三倍赔偿与律师费；当前尚未正式投诉，待解核心是赔偿量级与回信下架策略，可选路径含平台中立评估与美国专利律师意见。",
-      "category": "policy",
-      "score": 7.8,
-      "url": "https://www.wearesellers.com/question/125078",
-      "source": "wearesellers",
-      "published_at": "2026-09-30T10:47:33.900Z"
-    },
-    {
-      "title": "【亚马逊】美国站膳食补充剂新品上传链接后立即触发合规审核，已提交COA仍在审核中。请教大家美国站膳食补充剂产品，COA 是否足以完成审核？如果后台提示 GMP 认证问题，是否还需要额外提交 GMP 证书？",
-      "summary": "美国站膳食补充剂新品创建链接后立即触发GMP第三方认证审核，仅上传COA不足，需走亚马逊认可TIC机构（NSF、UL、Eurofins、SGS、Intertek、USP等）认证：填写工厂与产品信息、提交符合21 CFR 111/117且在有效期内的GMP证书、整理受限ASIN清单一次性交机构统一向亚马逊同步验证，通过后后台状态更新、商品恢复在售。",
-      "category": "policy",
-      "score": 8.4,
-      "url": "https://www.wearesellers.com/question/120788",
-      "source": "wearesellers",
-      "published_at": "2026-09-30T10:47:17.300Z"
-    },
-    {
-      "title": "​同样20万，一个月稳定赚10万的老品，和可能赚20万的新品，你会选哪个？",
-      "summary": "卖家案例：老品裸成本约200元、售价约100美元、月净利约10万且稳定近3年，但铝制品供应链从备料到可售需提前半年，今年仅备1500套已注定断货；最终把20万投给新品而非老品，逻辑是稳定期先守住现金流，想做大必须持续押注新品开发，错过时间窗口无法挽回。可借鉴：长周期类目预留半年备货、善用供应商账期周转、旺季前评估断货风险。",
-      "category": "experience",
-      "score": 7.4,
-      "url": "https://www.wearesellers.com/question/125046",
-      "source": "wearesellers",
-      "published_at": "2026-09-30T10:47:21.854Z"
-    },
-    {
-      "title": "Business Supply Client came to me on the brink of bankruptcy. I saved the business. Now he wants me to double his all-time sales record for Q4 but rigged my commission gate. Am I being set up?",
-      "summary": "亚马逊PPC代运营案例：服务商接手濒临破产客户后重建广告架构，用B2B批量订单策略砍掉无效花费，TACoS压到14%-17%，三条产品线冲上首页自然位。客户Q4要求月净利5万美元，但其历史Q4月均仅5000-10000美元、最高22000美元，超纪录两倍多，属近乎不可达的门槛；接单前应以历史损益数据核定Q4目标再谈佣金。",
-      "category": "experience",
-      "score": 6.8,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wu1pr1/business_supply_client_came_to_me_on_the_brink_of",
-      "source": "reddit_fba",
-      "published_at": "2026-09-30T10:48:21.000Z"
-    },
-    {
-      "title": "分享一种个人一直在用的选品方法，源于一位认识的大佬，个人就是在选品上适当的做一些补充，觉得好你就试试，觉得不好请别跟我杠",
-      "summary": "选品三步法：先用流量会下沉的无实际意义大词，在品牌分析从前往后翻，到前台挑评价几十个的机会产品；再逆推核心关键词热度，用品牌分析与Google Trends验证，热度低或无核心词直接放弃；最后算利润，没利润坚决不做。案例中44评新品因靠50%折扣及多重折扣卷上去而中止，被卷上去的品不碰。",
-      "category": "experience",
-      "score": 7.4,
-      "url": "https://www.wearesellers.com/question/100529",
-      "source": "wearesellers",
-      "published_at": "2026-09-30T10:47:14.982Z"
-    },
-    {
-      "title": "单干卖家要怎样搞团队？我从日销几十单做到月毛利30万，但第一次建团队却失败了，现在该怎么组建和管理团队才能把销量稳住并做大？",
-      "summary": "美国站低价精铺单干样本：10万启动资金三四个月回本，19年底日出百单、月入破10万，22年日销六七百单、月毛利30万；组建4运营加1美工加1选品后交家人代管3个月即失控，2024年底团队解散，日销跌至100多单、月毛利仅两三万，作者单干两年重回月毛利30万，教训是缺乏交接与管理机制的团队扩张易失败。",
-      "category": "experience",
-      "score": 6.8,
-      "url": "https://www.wearesellers.com/question/125026",
-      "source": "wearesellers",
-      "published_at": "2026-09-30T10:46:44.584Z"
-    },
-    {
-      "title": "亚马逊价格折扣打排名问题：产品用15%折扣两周把核心大词从20名外推到前5，自然单量提升了但广告ACOS很高，我该现在调整广告，还是等折扣取消后再调整？具体该怎么调？",
-      "summary": "产品用15%折扣两周把核心大词从20名外推进前5，自然单量提升，但广告出单不理想、ACOS偏高（TACOS尚可）；广告结构为精准大词词组3组、精准2组、自动紧密1组、自动同类1组。当前纠结是立即调广告降预算，还是等折扣取消后再调及如何调。全文求助，未给出结论。",
-      "category": "experience",
-      "score": 6.2,
-      "url": "https://www.wearesellers.com/question/125023",
-      "source": "wearesellers",
-      "published_at": "2026-09-30T07:47:03.418Z"
-    },
-    {
-      "title": "Foreign-owned Wyoming LLC — DIY or software for Form 5472? Worried 2024 filing was incomplete too",
-      "summary": "英国居民持有的怀俄明州单成员LLC主营加拿大FBA（约9.9万加元，美国销售仅92美元），2025年需报Form 5472加Pro Forma 1120及Form 1040-NR，延期截止2026年10月15日；作者比较Edetax约50美元、Form5472.io约147美元与DIY、CPA方案，并担心2024年仅报1040-NR漏报5472面临2.5万美元罚款，询问补报与合理原因豁免流程，帖内尚无解答。",
-      "category": "policy",
-      "score": 6.8,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wt5i6q/foreignowned_wyoming_llc_diy_or_software_for_form",
-      "source": "reddit_fba",
-      "published_at": "2026-09-29T09:26:31.000Z"
-    },
-    {
-      "title": "亚马逊MCF折扣上限提升至25% 独立站免费Prime配送全面开放",
-      "summary": "美国MCF卖家可立即利用的政策红利：优选定价计划履约费折扣上限升至25%，与按件发放的FBA抵扣金合并计算，前六个月省15%-25%，无需签合同、后台一键加入、发货后自动抵扣；独立站免费Prime配送全面开放，商品页展示Prime标识，买家选Prime配送后由亚马逊核验会员身份并从FBA库存发货，卖家结账、支付与店铺政策无需改动。",
+      "title": "亚马逊10月起开放大件零担标签，卖家可享议定费率",
+      "summary": "亚马逊在2026 Accelerate大会发布大件发货新功能：10月起卖家可在Buy Shipping及第三方发货软件直接购买零担LTL标签，享平台议定协议价并获迟交保护；2027年初上线大件区域配送定价，可分区域设差异化运费；平台还将为大件卖家匹配仓库周边100英里内具备当日达或次日达能力的本地承运商，大件卖家应据此优化发货成本结构。",
       "category": "policy",
       "score": 9.4,
-      "url": "https://www.amz123.com/kx/YeKAMavg",
+      "url": "https://www.amz123.com/kx/be3txtki",
       "source": "amz123",
-      "published_at": "2026-09-24T10:39:53+00:00"
+      "published_at": "2026-10-01T00:56:26.000Z"
     },
     {
-      "title": "亚马逊意大利站同一ASIN恢复购物车后几小时又被外部比价打掉，Temu低价链接下架仍无效，怎么彻底解决？",
-      "summary": "意大利站同一ASIN频繁触发外部比价导致购物车丢失，后台case恢复后几小时内又丢，陷入循环；已购买Temu比价链接并发起专利投诉使其下架，购物车仍不恢复，怀疑亚马逊缓存比价数据或比价来源不止已知链接。文中列出触发根源、匹配依据、低价链接定位、直达定价或Catalog团队渠道、成功案例、比价来源查询六问，均无答案。",
+      "title": "亚马逊版权侵权DMCA反诉应对措施-DMCA反诉整体流程注意事项都有哪些？",
+      "summary": "结论：主图或详情页被版权投诉导致删图或下架时，可走DMCA反诉争取恢复。先确认绩效影响、图片是否原创并备好源文件，再收集ASIN、投诉方信息与未侵权证据，后台勾选DMCA反通知提交，10-14个工作日内对方不起诉则链接恢复，起诉则需应对诉讼。须谨慎发起，自行提交可能招致TRO冻结令，虚假材料会被判欺诈关店。",
       "category": "policy",
-      "score": 6.2,
-      "url": "https://www.wearesellers.com/question/125082",
+      "score": 8.4,
+      "url": "https://www.wearesellers.com/question/125090",
       "source": "wearesellers",
-      "published_at": "2026-09-30T10:47:12.685Z"
+      "published_at": "2026-10-01T05:16:09.355Z"
+    },
+    {
+      "title": "亚马逊重复创建ASIN店铺停用-解析！",
+      "summary": "结论：重复创建ASIN违反平台政策，成因含手动重复建链、标题图片等属性细微差异被系统误判、变体滥用，后果可至商品下架、限制销售权限甚至永久封号。方法：用库存健康报告自查，提交合并申请，删除冗余Listing，注册品牌备案增强控制权，每月审核库存报告；优先挂用现有商品页，系统误判时凭说明书、包装图申诉。",
+      "category": "policy",
+      "score": 7.4,
+      "url": "https://www.wearesellers.com/question/125091",
+      "source": "wearesellers",
+      "published_at": "2026-10-01T05:16:06.928Z"
+    },
+    {
+      "title": "亚马逊2026年11月2日起调整商业责任险规则，新增11类高危类目强制投保要求",
+      "summary": "亚马逊商业责任险新规2026年11月2日生效，保留月销超1万美元30天内投保、保额100万美元的门槛，同时新增儿童商品、化妆品、锂电池、床垫、汽车摩托轮胎等11类高危类目强制投保，且不限新品在售、不看月销量，均须不低于100万美元保额；涉及类目卖家应立即排查自身ASIN是否在列，尽快完成投保并上传保单，避免销售权限受限。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.amz123.com/kx/i7xMS7Zg",
+      "source": "amz123",
+      "published_at": "2026-09-10T09:16:41+00:00"
+    },
+    {
+      "title": "亚马逊美国站旺季费用多项叠加，卖家成本压力显著上升",
+      "summary": "美国站旺季成本进入叠加期：2026年10月15日至2027年1月14日，FBA、MCF及Buy with Prime配送收取旺季附加费，小号标准件每件约0.19美元、T恤约0.39美元、超大件约2.81美元、平均约0.32美元，并与已执行的3.5%燃油及物流附加费同时计收。卖家应将双重费用纳入售价测算，轻小件低客单价商品优先复核利润，大件需叠加燃油与大件附加费核算。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.amz123.com/kx/0eTtbNN6",
+      "source": "amz123",
+      "published_at": "2026-09-10T09:37:28+00:00"
+    },
+    {
+      "title": "Do you factor return rate into whether you scale PPC on an ASIN?",
+      "summary": "单看ACOS盈利、转化率尚可不代表ASIN值得加大广告投入，高退货率会侵蚀真实利润。方法：在放大PPC前先核查该ASIN退货率，把退货损失计入利润核算，确认真实盈利后再加广告预算，避免账面盈利掩盖退货成本。",
+      "category": "experience",
+      "score": 6.8,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wuck50/do_you_factor_return_rate_into_whether_you_scale",
+      "source": "reddit_fba",
+      "published_at": "2026-09-30T18:21:32.000Z"
+    },
+    {
+      "title": "猫meme挂件在TikTok走红，单条视频两周播放超900万次",
+      "summary": "猫meme周边成TikTok带货风口：#catmeme话题播放约27亿次；新账号Miimow运营两个月吸粉超6万，一款魔性笑声猫头挂件视频两周获超900万播放、近2万条评论，评论区大量询问购买渠道。该挂件独立站售价9.99美元，淘宝同款最低3至4元，溢价近20倍，可循梗文化加低价货源思路测品。",
+      "category": "trend",
+      "score": 6,
+      "url": "https://www.amz123.com/kx/ZurUa8HZ",
+      "source": "amz123",
+      "published_at": "2026-10-01T02:47:28.000Z"
+    },
+    {
+      "title": "亚马逊广告新工具Branded Conversations计划2027年1月在美上线",
+      "summary": "亚马逊广告新工具Branded Conversations计划2027年1月在美上线，品牌可介入买家与Alexa的语音对话，Alexa响应时同时调用亚马逊商品及品牌数据库与广告主自供品牌信息；早期测试中近20%接触过Sponsored Brands提示词的买家会进一步发起品牌对话，语音场景或成品牌新增流量入口，卖家可提前布局提示词广告与品牌内容。",
+      "category": "trend",
+      "score": 6.8,
+      "url": "https://www.amz123.com/kx/ThkFlooK",
+      "source": "amz123",
+      "published_at": "2026-10-01T00:56:24.000Z"
+    },
+    {
+      "title": "华凯易佰子公司帕斯伯遭税务稽查，税局调取四年账簿",
+      "summary": "深圳税务局对华凯易佰旗下亚马逊店铺运营主体帕斯伯启动税务稽查，责令限期提供2022年1月至2025年12月账簿、记账凭证及报表，文书以公告送达、期满视为送达，提示企业或已失联。跨境卖家应对照自查：规范近四年账簿凭证、按时申报平台收入、确保税务登记联系方式畅通。",
+      "category": "policy",
+      "score": 6.4,
+      "url": "https://www.amz123.com/kx/JTRByy5s",
+      "source": "amz123",
+      "published_at": "2026-09-30T15:34:09.000Z"
+    },
+    {
+      "title": "3票美国FBA有货送错仓，APR已从0.25%升到0.26%：到底是货代还是亚马逊的问题，申诉POD怎么准备？",
+      "summary": "三票美国FBA货件被判送错仓，亚马逊已拍箱唛照片；后台申诉POD须含目的FC名称、亚马逊签收确认及准确PO或FBA货件ID，帖内两种POD分别缺签收或箱数；错误路线货件缺陷APR标准0.25%、当前0.26%，并讨论是否认领缺陷及改用亚马逊Send发货，属入库物流申诉实操参考。",
+      "category": "experience",
+      "score": 7.8,
+      "url": "https://www.wearesellers.com/question/125051",
+      "source": "wearesellers",
+      "published_at": "2026-09-30T12:15:59.964Z"
     }
   ]
 }
