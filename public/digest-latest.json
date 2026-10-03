@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-02T11:58:37Z",
-  "digest_date": "2026-10-02",
+  "generated_at_utc": "2026-10-03T11:11:01Z",
+  "digest_date": "2026-10-03",
   "article_count": 50,
   "articles": [
     {
-      "title": "亚马逊首次向外部AI助手Claude开放卖家后台",
-      "summary": "亚马逊9月23日卖家大会推出卖家伙伴插件，首次向外部AI助手Claude开放Seller Central：无需登录后台即可调取商品、销售、库存及运营数据，用于动销分析、识别周转下滑商品并获取优化建议。目前仅在美国分阶段推进，AI未获全部操作权限，改价、调广告出价等敏感操作仍需人工审核。美区卖家可跟进开放进度，先用其做数据分析。",
-      "category": "trend",
-      "score": 6.8,
-      "url": "https://www.amz123.com/kx/nZy1eKSv",
-      "source": "amz123",
-      "published_at": "2026-10-02T10:47:00.000Z"
-    },
-    {
-      "title": "亚马逊 Woot BD 提报通过率高吗？看看这些常见的被拒原因！",
-      "summary": "Woot BD通过率取决于产品指标而非渠道门槛。被拒主因：Listing承接力弱，需Review≥10条、评分≥4.0、日销10以上；核价抓取近30到60天成交记录，含Coupon、会员价及BD/LD历史价，近期大促会压低核价；库存不足或审核期移仓锁库存会中断排期；店铺违规直接驳回，透明计划链接须提前授权透明码。备齐则通过率很高。",
+      "title": "Prime Big Deal Days is next week. How are you balancing discounts, bids and margin this time?",
+      "summary": "核心结论：大促前先修转化再买流量。作者2025年两次Prime Day达日常销量约8-10倍，最近一次仅3-4倍；本次准备：提前数周对图片做A/B测试，按新标题与高亮格式优化listing，主推品设20%折扣，并测试Sponsored Products出价规则，同时权衡销量提升与利润侵蚀。",
       "category": "experience",
-      "score": 8.4,
-      "url": "https://www.wearesellers.com/question/125095",
-      "source": "wearesellers",
-      "published_at": "2026-10-02T01:45:29.771Z"
-    },
-    {
-      "title": "达飞14亿美元完成收购联邦快递供应链，北美履约网络纳入版图",
-      "summary": "达飞以14亿美元完成收购FedEx供应链，获北美约35个履约中心、2800万平方英尺仓储资源，航运巨头向仓配末端一体化延伸。影响：仓配资源集中令旺季运力与账期议价权向船公司倾斜，卖家选物流商时应预留多套备选方案，避免旺季被动。",
-      "category": "trend",
-      "score": 6.4,
-      "url": "https://www.amz123.com/kx/RuPHSd1p",
-      "source": "amz123",
-      "published_at": "2026-10-02T04:54:51.000Z"
-    },
-    {
-      "title": "我用AI写了个脚本，把20分钟的采购合同压缩到30秒",
-      "summary": "把重复制式工作交给AI脚本：订单PDF丢进文件夹运行，30秒生成完整采购合同并自动逐条核对型号、描述、数量、单价，替代原先至少20分钟的手工流程；关键词分析、备货计划、广告报告筛选同样适用。前提是自己能看懂并改通脚本，一次调通后长期复用。",
-      "category": "experience",
-      "score": 7,
-      "url": "https://www.wearesellers.com/question/125100",
-      "source": "wearesellers",
-      "published_at": "2026-10-02T06:45:20.361Z"
-    },
-    {
-      "title": "Difference between ColorSize and SizeColor variation schemes?",
-      "summary": "美国站PDP已不再展示断货变体选项，长期只留3/6变体在售的ColorSize变体家族失去跨变体导航，最热ASIN页面浏览量同比下滑50%；可测试SizeColor变体主题是否改变OOS选项的前端展示差异，或评估补齐在售变体以恢复交叉导流。",
-      "category": "experience",
-      "score": 8.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wvf497/difference_between_colorsize_and_sizecolor",
+      "score": 7.8,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wvxet9/prime_big_deal_days_is_next_week_how_are_you",
       "source": "reddit_fba",
-      "published_at": "2026-10-01T23:55:25.000Z"
+      "published_at": "2026-10-02T15:53:51.000Z"
     },
     {
-      "title": "我们公司美工组开始转运营了，说说 AI 出图到底改了什么",
-      "summary": "测款流程改为工厂手机实拍加AI出图：按一页纸规范拍白墙浅色台面、光别太硬、不开闪光灯、正侧细节多角度，照片连同卖点和毛成本价录入系统，AI一次产出八张主副图加四张A+，初稿十分钟，样品未到即可开工。纯色结构简单的品直接上架；渐变色、复杂结构、自带文字logo的需框选返修约半小时；砸广告的核心款仍走摄影棚。",
+      "title": "亚马逊选品怎么避坑？拆完 7 个品类近 3000 条差评，能改的地方分三类",
+      "summary": "作者拆解7个品类近3000条差评，头部产品评分普遍在3到4分之间，问题出在实现而非需求。改进点分三类：一是低成本结构件与基础项，如耳挂、USB-C充电、密封料，对手大多没做；二是品控一致性与寿命，需先算货值是否容得下；三是原理硬伤靠客服和保修兜底，Zyllion靠服务把星级撑到3.8。拿到产品先按三类过差评，再决定是否进场。",
       "category": "experience",
       "score": 9,
-      "url": "https://www.wearesellers.com/question/125033",
+      "url": "https://www.wearesellers.com/question/125105",
       "source": "wearesellers",
-      "published_at": "2026-09-29T11:44:02.368+00:00"
+      "published_at": "2026-10-03T04:58:56.655Z"
     },
     {
-      "title": "真的被逼到绝路了！日亚竞对 狂刷礼品卡好评+半年无限连秒+不断丢差评给我们，白帽卖家如何破局？",
-      "summary": "日亚竞对打法：多店铺轮换14天BD无限连秒刷划线价、礼品券兑换好评刷到4.7-4.8分、每次连续3条投放1-2星差评，已核实为福州黑帽公司且日亚拿下大几十个BS1。作者已试举报滥用政策、品牌违规、deal团队及贝索斯等邮箱并提交Deal ID等证据全部无效，仅剩付费经理未试，说明常规举报渠道对该打法失效。",
+      "title": "报WOOT前中后，卖家该怎么操作？选品、广告、间隔期、排名维稳，一篇讲透",
+      "summary": "WOOT提报门槛：星级4.0以上、Review10个以上、日销10单、Deal价20美元以上、退货率低于10%。新品冷启动、中腰部冲头部、TOP10冲TOP3三类场景最易出单；家居、宠物、户外、节日装饰、应季服饰及20至60美元客单更优。广告应复制店铺已验证的高转化活动到WOOT，首轮BD处于学习期，后期同出价能拿更好位置。",
       "category": "experience",
-      "score": 7,
-      "url": "https://www.wearesellers.com/question/125103",
+      "score": 8.4,
+      "url": "https://www.wearesellers.com/question/125104",
       "source": "wearesellers",
-      "published_at": "2026-10-02T10:45:11.344Z"
+      "published_at": "2026-10-03T01:59:01.668Z"
     },
     {
-      "title": "老链接卖了3年评分4.4、退货率仅2%，今年却两次被调查负面退货反馈，会影响申诉、降权或库存吗？",
-      "summary": "卖了3年、评分稳定4.4、退货率约2%、买家之声良好的老链接，今年两次被亚马逊把在售库存转预留以调查负面退货反馈，首次找服务商解决5个月后复发。作者疑问为何突然连续触发、反复提交文档是否终究过不了、是否导致链接降权，帖文只有现象与疑问，无结论。",
+      "title": "How do you get a supplier in China to agree to better terms than 30/70?",
+      "summary": "30/70条款下货款在生产加海运的60至90天里无法回款，资金压力全压在卖家。可行替代路径有三种：尾款改凭提单付款、谈更低定金、返单给账期，但供应商是否同意主要取决于合作订单历史，新合作关系很难直接争取到优于30/70的条件。",
+      "category": "experience",
+      "score": 6.8,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1ww9qhc/how_do_you_get_a_supplier_in_china_to_agree_to",
+      "source": "reddit_fba",
+      "published_at": "2026-10-03T00:33:01.000Z"
+    },
+    {
+      "title": "Got hit with a design patent infringement claim. Should I reach out to my competitors to see if they were hit too?",
+      "summary": "核心结论：外观专利投诉风险高，即使专利缺乏独特性，只要在USPTO注册获批，权利人即可索要高额授权费，否则无法继续销售，直接威胁主营产品。帖主在付费和解、请律师对抗、未来重新设计三者间犹豫，并考虑联系同样销售该设计的竞对核实是否也被投诉，帖内无最终结论。",
       "category": "policy",
       "score": 6.2,
-      "url": "https://www.wearesellers.com/question/125055",
-      "source": "wearesellers",
-      "published_at": "2026-10-02T04:44:59.132Z"
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wwawiv/got_hit_with_a_design_patent_infringement_claim",
+      "source": "reddit_fba",
+      "published_at": "2026-10-03T01:34:19.000Z"
     },
     {
-      "title": "亚马逊大批Listing划线价异常消失，卖家订单量大幅下滑",
-      "summary": "美国站大量Listing划线价无故消失、专享折扣报错，部分店铺六成乃至全部商品划线失效，叠加9月7日劳动节假期线下分流，销量腰斩、近三天单量仅为日常三分之一；业内消息指亚马逊将推行新参考价规则：90天周期内至少10%的天数按参考价成交才能展示划线价。卖家需立即核查前台优惠展示并调整定价，保证周期内有足够参考价出单天数。",
+      "title": "消费者法案没有过，怎么样正常关店，公司已经注销了",
+      "summary": "长期闲置账户被暂停后想关店，但公司已提前一个月注销。关店要求店铺状态正常，重新激活信用卡反而触发消费者法案验证且未通过，协议3，店铺无法正常关闭。关键结论：先注销公司会卡死消费者法案身份验证，正确顺序是趁账户状态正常先完成关店再注销公司，否则法人再开新店受阻。",
+      "category": "policy",
+      "score": 6.8,
+      "url": "https://www.wearesellers.com/question/125107",
+      "source": "wearesellers",
+      "published_at": "2026-10-03T09:58:47.136Z"
+    },
+    {
+      "title": "How do you vet wholesale distributors for Amazon without getting burned?",
+      "summary": "零售套利利润收窄后转做批发，筛选分销商可设三道关卡：拒付月费才给供应商名单的目录、要求提供转售证书与品牌授权书、坚持先小额试单验证。另可在Alibaba上找接受小批量的工厂绕开目录直采，但各家MOQ差异大，需逐家核对后再定。",
+      "category": "experience",
+      "score": 6.8,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wvvskb/how_do_you_vet_wholesale_distributors_for_amazon",
+      "source": "reddit_fba",
+      "published_at": "2026-10-02T14:50:24.000Z"
+    },
+    {
+      "title": "接手的新品与低价竞品高度同质化却因品质溢价滞销，这种情况该怎么破局？本身没有多少产品，现在来到公司就跟傻子一样坐在电脑面",
+      "summary": "欧洲站风扇衍生品与竞品外观相似度80%以上、功能尺寸几乎一致，对手价格仅一半且100多个评论4.5分；作者已建关键词词库、否词并调完三类广告位仍约一天1单，直评后常规手段用尽。公司与作者在品质溢价与降价追平间分歧，老板要求月销超100的方案，但小类第一的SKU都不到100。结论是评分与价格双落后仅靠广告优化难破局，须在降价或差异化上做取舍。",
+      "category": "experience",
+      "score": 6,
+      "url": "https://www.wearesellers.com/question/125020",
+      "source": "wearesellers",
+      "published_at": "2026-10-03T05:58:54.390Z"
+    },
+    {
+      "title": "亚马逊MCF折扣上限提升至25% 独立站免费Prime配送全面开放",
+      "summary": "美国MCF卖家可立即利用的政策红利：优选定价计划履约费折扣上限升至25%，与按件发放的FBA抵扣金合并计算，前六个月省15%-25%，无需签合同、后台一键加入、发货后自动抵扣；独立站免费Prime配送全面开放，商品页展示Prime标识，买家选Prime配送后由亚马逊核验会员身份并从FBA库存发货，卖家结账、支付与店铺政策无需改动。",
       "category": "policy",
       "score": 9.4,
-      "url": "https://www.amz123.com/kx/6SrmZULT",
+      "url": "https://www.amz123.com/kx/YeKAMavg",
       "source": "amz123",
-      "published_at": "2026-09-08T02:12:27+00:00"
+      "published_at": "2026-09-24T10:39:53+00:00"
     },
     {
-      "title": "亚马逊美站自发货卖家须维持90%营业时间配送率",
-      "summary": "亚马逊美国站规定自2026年9月30日起，卖家自配送发往企业购客户的订单，其营业时间配送率必须保持在90%以上。该指标按14天滚动周期计算。若10月30日仍未达标，自配送商品将在企业购频道被暂停展示。自发货卖家须密切监控配送时效，优化末端派送，确保在企业客户营业时间内送达以维持销售权限。",
+      "title": "CBP starts voiding importer numbers with wrong Form 5106 details on September 18 (four things to check)",
+      "summary": "美国海关自2026年9月18日起逐一核查进口商存档的Form 5106，信息不准将作废IOR号且无法清关。应让货代调出5106核对四项：地址须为实体地址（可用负责人家庭住址，禁用注册代理、货代、P.O.箱）；邮箱和电话须属IOR本人；货代须持与IOR直接签署的POA。恢复需按指定主题行邮件申请，官方未给时限。",
       "category": "policy",
-      "score": 10,
-      "url": "https://www.amz123.com/kx/1yaEUQpk",
-      "source": "amz123",
-      "published_at": "2026-07-08T01:49:07+00:00"
+      "score": 9.4,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wgmkm6/cbp_starts_voiding_importer_numbers_with_wrong",
+      "source": "reddit_fba",
+      "published_at": "2026-09-15T01:36:54+00:00"
     }
   ]
 }
