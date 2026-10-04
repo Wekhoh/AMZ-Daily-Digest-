@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-03T11:11:01Z",
-  "digest_date": "2026-10-03",
+  "generated_at_utc": "2026-10-04T11:56:20Z",
+  "digest_date": "2026-10-04",
   "article_count": 50,
   "articles": [
     {
-      "title": "Prime Big Deal Days is next week. How are you balancing discounts, bids and margin this time?",
-      "summary": "核心结论：大促前先修转化再买流量。作者2025年两次Prime Day达日常销量约8-10倍，最近一次仅3-4倍；本次准备：提前数周对图片做A/B测试，按新标题与高亮格式优化listing，主推品设20%折扣，并测试Sponsored Products出价规则，同时权衡销量提升与利润侵蚀。",
+      "title": "Do you actually know how much profit you're making from each product?",
+      "summary": "销售额不代表真实盈利：30美元的商品扣除产品成本、平台费、支付费、物流、广告和折扣后利润可能大幅缩水，多SKU时更难追踪。解法是按单品核算实际利润，用工具统一追踪成本、利润率、营收和月度表现；注意文中附带付费工具推广链接，方法本身可用自建表格复现。",
       "category": "experience",
-      "score": 7.8,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wvxet9/prime_big_deal_days_is_next_week_how_are_you",
+      "score": 6.2,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wwjxz0/do_you_actually_know_how_much_profit_youre_making",
       "source": "reddit_fba",
-      "published_at": "2026-10-02T15:53:51.000Z"
+      "published_at": "2026-10-03T10:28:42.000Z"
     },
     {
-      "title": "亚马逊选品怎么避坑？拆完 7 个品类近 3000 条差评，能改的地方分三类",
-      "summary": "作者拆解7个品类近3000条差评，头部产品评分普遍在3到4分之间，问题出在实现而非需求。改进点分三类：一是低成本结构件与基础项，如耳挂、USB-C充电、密封料，对手大多没做；二是品控一致性与寿命，需先算货值是否容得下；三是原理硬伤靠客服和保修兜底，Zyllion靠服务把星级撑到3.8。拿到产品先按三类过差评，再决定是否进场。",
+      "title": "地址验证把姓名提交后，亚马逊系统提示现在正在由明信片转为上传文件，24小时再回来看，但是到现在还是死循环",
+      "summary": "地址验证从明信片改文件上传的升级中出现死循环：提交姓名后提示24小时后再试，刷新页面又回到输入姓名状态，换浏览器无效。开普通CASE三天仍转接内部团队无回复，致电账户经理也无法处理。可行路径为等待24小时复查上传入口，仍失败则联系Selling Partner Support，年底补货期需预留处理时间。",
+      "category": "experience",
+      "score": 6.2,
+      "url": "https://www.wearesellers.com/question/125111",
+      "source": "wearesellers",
+      "published_at": "2026-10-04T02:41:22.800Z"
+    },
+    {
+      "title": "新加坡母婴品牌KeaBabies上半年线上销售额达2.81亿元",
+      "summary": "KeaBabies以定价25至35美元的婴儿背巾切入美国市场，2026年上半年电商收入约4200万美元、销量超190万件，6月单月540万美元；2020年年销破2000万美元，2024年收入7600万美元、同比增46.5%，亚马逊贡献大部分销售额。打法上体现单品切入美国站、以亚马逊为主渠道持续放量，可作选品与定价基准。",
+      "category": "trend",
+      "score": 6.4,
+      "url": "https://www.amz123.com/kx/Ho7FzUaE",
+      "source": "amz123",
+      "published_at": "2026-10-04T01:46:28.000Z"
+    },
+    {
+      "title": "日本通运推出美线五日达服务，亚洲至美国海运到港后5天内送达",
+      "summary": "日本通运上线亚洲至美国海运五日达，货物在洛杉矶港卸船后5天内送达美国主要城市，覆盖东京、上海、海防始发货源，依托今年6月上线的NX Ocean Fast Track网络，以优先转运、双司机接力、百英里配送圈和物联网传感器保障时效，适合补货节奏敏感、对交付速度要求高的美国站卖家评估采用。",
+      "category": "trend",
+      "score": 6.4,
+      "url": "https://www.amz123.com/kx/L6mwyNJI",
+      "source": "amz123",
+      "published_at": "2026-10-03T09:02:16.000Z"
+    },
+    {
+      "title": "想拿亚马逊AC标？别只会死砸大词，我是怎么一步步把词推上去的",
+      "summary": "AC标获取取决于该词自然排名能否全天大部分时间稳定靠前，正常情况下自然排第一基本就能拿到，而非靠砸预算硬刚单个精准大词。可执行打法：把同词缀词、长尾词、相关意图词一起拉起形成词群持续补单，用整个词群把核心词自然位拱上去；加价前先看广告位转化，顶部能出单才该顶，只烧钱不出单则放弃该位置。",
       "category": "experience",
       "score": 9,
-      "url": "https://www.wearesellers.com/question/125105",
+      "url": "https://www.wearesellers.com/question/119098",
       "source": "wearesellers",
-      "published_at": "2026-10-03T04:58:56.655Z"
+      "published_at": "2026-09-27T10:13:38.944+00:00"
     },
     {
-      "title": "报WOOT前中后，卖家该怎么操作？选品、广告、间隔期、排名维稳，一篇讲透",
-      "summary": "WOOT提报门槛：星级4.0以上、Review10个以上、日销10单、Deal价20美元以上、退货率低于10%。新品冷启动、中腰部冲头部、TOP10冲TOP3三类场景最易出单；家居、宠物、户外、节日装饰、应季服饰及20至60美元客单更优。广告应复制店铺已验证的高转化活动到WOOT，首轮BD处于学习期，后期同出价能拿更好位置。",
-      "category": "experience",
-      "score": 8.4,
-      "url": "https://www.wearesellers.com/question/125104",
-      "source": "wearesellers",
-      "published_at": "2026-10-03T01:59:01.668Z"
-    },
-    {
-      "title": "How do you get a supplier in China to agree to better terms than 30/70?",
-      "summary": "30/70条款下货款在生产加海运的60至90天里无法回款，资金压力全压在卖家。可行替代路径有三种：尾款改凭提单付款、谈更低定金、返单给账期，但供应商是否同意主要取决于合作订单历史，新合作关系很难直接争取到优于30/70的条件。",
-      "category": "experience",
-      "score": 6.8,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1ww9qhc/how_do_you_get_a_supplier_in_china_to_agree_to",
-      "source": "reddit_fba",
-      "published_at": "2026-10-03T00:33:01.000Z"
-    },
-    {
-      "title": "Got hit with a design patent infringement claim. Should I reach out to my competitors to see if they were hit too?",
-      "summary": "核心结论：外观专利投诉风险高，即使专利缺乏独特性，只要在USPTO注册获批，权利人即可索要高额授权费，否则无法继续销售，直接威胁主营产品。帖主在付费和解、请律师对抗、未来重新设计三者间犹豫，并考虑联系同样销售该设计的竞对核实是否也被投诉，帖内无最终结论。",
+      "title": "亚马逊上线虚拟身份验证：收到通知后14天内须完成视频核验，否则暂停销售",
+      "summary": "亚马逊上线虚拟身份验证，身份存疑卖家将收到视频核验通知，宽限期通常仅14天，部分账户不设宽限期，逾期未完成将暂停销售权限。入口在注册邮箱、绩效通知与账户状况页优先操作栏目。法人须备身份证或护照、企业注册文件、180天内银行及信用卡对账单、关系证明、供应链票据，材料不得图像处理，点击进入通话后无法回传，运营可陪同但不得代验。",
       "category": "policy",
-      "score": 6.2,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wwawiv/got_hit_with_a_design_patent_infringement_claim",
-      "source": "reddit_fba",
-      "published_at": "2026-10-03T01:34:19.000Z"
-    },
-    {
-      "title": "消费者法案没有过，怎么样正常关店，公司已经注销了",
-      "summary": "长期闲置账户被暂停后想关店，但公司已提前一个月注销。关店要求店铺状态正常，重新激活信用卡反而触发消费者法案验证且未通过，协议3，店铺无法正常关闭。关键结论：先注销公司会卡死消费者法案身份验证，正确顺序是趁账户状态正常先完成关店再注销公司，否则法人再开新店受阻。",
-      "category": "policy",
-      "score": 6.8,
-      "url": "https://www.wearesellers.com/question/125107",
-      "source": "wearesellers",
-      "published_at": "2026-10-03T09:58:47.136Z"
-    },
-    {
-      "title": "How do you vet wholesale distributors for Amazon without getting burned?",
-      "summary": "零售套利利润收窄后转做批发，筛选分销商可设三道关卡：拒付月费才给供应商名单的目录、要求提供转售证书与品牌授权书、坚持先小额试单验证。另可在Alibaba上找接受小批量的工厂绕开目录直采，但各家MOQ差异大，需逐家核对后再定。",
-      "category": "experience",
-      "score": 6.8,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wvvskb/how_do_you_vet_wholesale_distributors_for_amazon",
-      "source": "reddit_fba",
-      "published_at": "2026-10-02T14:50:24.000Z"
-    },
-    {
-      "title": "接手的新品与低价竞品高度同质化却因品质溢价滞销，这种情况该怎么破局？本身没有多少产品，现在来到公司就跟傻子一样坐在电脑面",
-      "summary": "欧洲站风扇衍生品与竞品外观相似度80%以上、功能尺寸几乎一致，对手价格仅一半且100多个评论4.5分；作者已建关键词词库、否词并调完三类广告位仍约一天1单，直评后常规手段用尽。公司与作者在品质溢价与降价追平间分歧，老板要求月销超100的方案，但小类第一的SKU都不到100。结论是评分与价格双落后仅靠广告优化难破局，须在降价或差异化上做取舍。",
-      "category": "experience",
-      "score": 6,
-      "url": "https://www.wearesellers.com/question/125020",
-      "source": "wearesellers",
-      "published_at": "2026-10-03T05:58:54.390Z"
-    },
-    {
-      "title": "亚马逊MCF折扣上限提升至25% 独立站免费Prime配送全面开放",
-      "summary": "美国MCF卖家可立即利用的政策红利：优选定价计划履约费折扣上限升至25%，与按件发放的FBA抵扣金合并计算，前六个月省15%-25%，无需签合同、后台一键加入、发货后自动抵扣；独立站免费Prime配送全面开放，商品页展示Prime标识，买家选Prime配送后由亚马逊核验会员身份并从FBA库存发货，卖家结账、支付与店铺政策无需改动。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.amz123.com/kx/YeKAMavg",
+      "score": 9,
+      "url": "https://www.amz123.com/kx/gOSy3rSD",
       "source": "amz123",
-      "published_at": "2026-09-24T10:39:53+00:00"
+      "published_at": "2026-09-23T05:55:04+00:00"
     },
     {
-      "title": "CBP starts voiding importer numbers with wrong Form 5106 details on September 18 (four things to check)",
-      "summary": "美国海关自2026年9月18日起逐一核查进口商存档的Form 5106，信息不准将作废IOR号且无法清关。应让货代调出5106核对四项：地址须为实体地址（可用负责人家庭住址，禁用注册代理、货代、P.O.箱）；邮箱和电话须属IOR本人；货代须持与IOR直接签署的POA。恢复需按指定主题行邮件申请，官方未给时限。",
+      "title": "亚马逊10月起开放大件零担标签，卖家可享议定费率",
+      "summary": "亚马逊在2026 Accelerate大会发布大件发货新功能：10月起卖家可在Buy Shipping及第三方发货软件直接购买零担LTL标签，享平台议定协议价并获迟交保护；2027年初上线大件区域配送定价，可分区域设差异化运费；平台还将为大件卖家匹配仓库周边100英里内具备当日达或次日达能力的本地承运商，大件卖家应据此优化发货成本结构。",
       "category": "policy",
       "score": 9.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wgmkm6/cbp_starts_voiding_importer_numbers_with_wrong",
+      "url": "https://www.amz123.com/kx/be3txtki",
+      "source": "amz123",
+      "published_at": "2026-10-01T00:56:26+00:00"
+    },
+    {
+      "title": "亚马逊2026年11月2日起调整商业责任险规则，新增11类高危类目强制投保要求",
+      "summary": "亚马逊商业责任险新规2026年11月2日生效，保留月销超1万美元30天内投保、保额100万美元的门槛，同时新增儿童商品、化妆品、锂电池、床垫、汽车摩托轮胎等11类高危类目强制投保，且不限新品在售、不看月销量，均须不低于100万美元保额；涉及类目卖家应立即排查自身ASIN是否在列，尽快完成投保并上传保单，避免销售权限受限。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.amz123.com/kx/i7xMS7Zg",
+      "source": "amz123",
+      "published_at": "2026-09-10T09:16:41+00:00"
+    },
+    {
+      "title": "亚马逊美国站旺季费用多项叠加，卖家成本压力显著上升",
+      "summary": "美国站旺季成本进入叠加期：2026年10月15日至2027年1月14日，FBA、MCF及Buy with Prime配送收取旺季附加费，小号标准件每件约0.19美元、T恤约0.39美元、超大件约2.81美元、平均约0.32美元，并与已执行的3.5%燃油及物流附加费同时计收。卖家应将双重费用纳入售价测算，轻小件低客单价商品优先复核利润，大件需叠加燃油与大件附加费核算。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.amz123.com/kx/0eTtbNN6",
+      "source": "amz123",
+      "published_at": "2026-09-10T09:37:28+00:00"
+    },
+    {
+      "title": "The reimbursement money I was leaving on the table for over a year (FBA)",
+      "summary": "亚马逊FBA索赔实操方法。卖家应每月比对退货报告与赔偿报告，针对买家未退回货物、超45天未退回已退款件、库容损毁未自动赔偿等异常，以一单一案、只陈述事实的方式开case索赔，避免因超出时效而造成资金损失。",
+      "category": "experience",
+      "score": 9.4,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vbqfwd/the_reimbursement_money_i_was_leaving_on_the",
       "source": "reddit_fba",
-      "published_at": "2026-09-15T01:36:54+00:00"
+      "published_at": "2026-07-31T13:06:17+00:00"
     }
   ]
 }
