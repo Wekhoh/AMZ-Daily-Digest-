@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-04T11:56:20Z",
-  "digest_date": "2026-10-04",
+  "generated_at_utc": "2026-10-05T13:31:13Z",
+  "digest_date": "2026-10-05",
   "article_count": 50,
   "articles": [
     {
-      "title": "Do you actually know how much profit you're making from each product?",
-      "summary": "销售额不代表真实盈利：30美元的商品扣除产品成本、平台费、支付费、物流、广告和折扣后利润可能大幅缩水，多SKU时更难追踪。解法是按单品核算实际利润，用工具统一追踪成本、利润率、营收和月度表现；注意文中附带付费工具推广链接，方法本身可用自建表格复现。",
+      "title": "BFCM is coming - here's how we plan to Claude our PPC bids (super useful for *enterprise* sellers, but good for medium size catalogs too)",
+      "summary": "BFCM前一周点击仍在但转化逐日下滑，周末与周一后购买行为反复波动，大批量ASIN手动调价难以跟上。打法：调取去年按子ASIN拆分的业务报告，按BFCM前周日到周三、周四、黑五、周末、网一及之后分段计算sales/session，逐段求差值，处理新品无数据、样本过少与SB广告例外，把偏离目标ACOS的竞价改为测算值并批量操作。",
       "category": "experience",
-      "score": 6.2,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wwjxz0/do_you_actually_know_how_much_profit_youre_making",
+      "score": 8.4,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wy6nr3/bfcm_is_coming_heres_how_we_plan_to_claude_our",
       "source": "reddit_fba",
-      "published_at": "2026-10-03T10:28:42.000Z"
+      "published_at": "2026-10-05T11:58:29.000Z"
     },
     {
-      "title": "地址验证把姓名提交后，亚马逊系统提示现在正在由明信片转为上传文件，24小时再回来看，但是到现在还是死循环",
-      "summary": "地址验证从明信片改文件上传的升级中出现死循环：提交姓名后提示24小时后再试，刷新页面又回到输入姓名状态，换浏览器无效。开普通CASE三天仍转接内部团队无回复，致电账户经理也无法处理。可行路径为等待24小时复查上传入口，仍失败则联系Selling Partner Support，年底补货期需预留处理时间。",
+      "title": "亚马逊二审第二封邮件被判欺诈性，如何转法人视频审核，要怎么操作去转视频审核。没有看到转视频的入口",
+      "summary": "二审第一封邮件要求水电账单，因同一地址有两个营业执照、水电挂在工厂执照名下无法提供，改交宽带转让受理单加对公账户流水后次日被拒，第二封邮件直接判欺诈性行为，作者怀疑与挂VPN登录店铺有关。计划准备中国银行综合信息证明、重办宽带、营业执照公证三份材料，并想转视频审核但未找到入口。",
       "category": "experience",
-      "score": 6.2,
-      "url": "https://www.wearesellers.com/question/125111",
+      "score": 6.8,
+      "url": "https://www.wearesellers.com/question/125125",
       "source": "wearesellers",
-      "published_at": "2026-10-04T02:41:22.800Z"
+      "published_at": "2026-10-05T12:20:34.161Z"
     },
     {
-      "title": "新加坡母婴品牌KeaBabies上半年线上销售额达2.81亿元",
-      "summary": "KeaBabies以定价25至35美元的婴儿背巾切入美国市场，2026年上半年电商收入约4200万美元、销量超190万件，6月单月540万美元；2020年年销破2000万美元，2024年收入7600万美元、同比增46.5%，亚马逊贡献大部分销售额。打法上体现单品切入美国站、以亚马逊为主渠道持续放量，可作选品与定价基准。",
-      "category": "trend",
-      "score": 6.4,
-      "url": "https://www.amz123.com/kx/Ho7FzUaE",
-      "source": "amz123",
-      "published_at": "2026-10-04T01:46:28.000Z"
-    },
-    {
-      "title": "日本通运推出美线五日达服务，亚洲至美国海运到港后5天内送达",
-      "summary": "日本通运上线亚洲至美国海运五日达，货物在洛杉矶港卸船后5天内送达美国主要城市，覆盖东京、上海、海防始发货源，依托今年6月上线的NX Ocean Fast Track网络，以优先转运、双司机接力、百英里配送圈和物联网传感器保障时效，适合补货节奏敏感、对交付速度要求高的美国站卖家评估采用。",
-      "category": "trend",
-      "score": 6.4,
-      "url": "https://www.amz123.com/kx/L6mwyNJI",
-      "source": "amz123",
-      "published_at": "2026-10-03T09:02:16.000Z"
-    },
-    {
-      "title": "想拿亚马逊AC标？别只会死砸大词，我是怎么一步步把词推上去的",
-      "summary": "AC标获取取决于该词自然排名能否全天大部分时间稳定靠前，正常情况下自然排第一基本就能拿到，而非靠砸预算硬刚单个精准大词。可执行打法：把同词缀词、长尾词、相关意图词一起拉起形成词群持续补单，用整个词群把核心词自然位拱上去；加价前先看广告位转化，顶部能出单才该顶，只烧钱不出单则放弃该位置。",
-      "category": "experience",
-      "score": 9,
-      "url": "https://www.wearesellers.com/question/119098",
-      "source": "wearesellers",
-      "published_at": "2026-09-27T10:13:38.944+00:00"
-    },
-    {
-      "title": "亚马逊上线虚拟身份验证：收到通知后14天内须完成视频核验，否则暂停销售",
-      "summary": "亚马逊上线虚拟身份验证，身份存疑卖家将收到视频核验通知，宽限期通常仅14天，部分账户不设宽限期，逾期未完成将暂停销售权限。入口在注册邮箱、绩效通知与账户状况页优先操作栏目。法人须备身份证或护照、企业注册文件、180天内银行及信用卡对账单、关系证明、供应链票据，材料不得图像处理，点击进入通话后无法回传，运营可陪同但不得代验。",
+      "title": "[PSA / Math] Q4 Holiday Peak fees start Oct 15: How much phantom profit is your sourcing sheet calculating right now?",
+      "summary": "10月15日至1月14日亚马逊收取旺季配送费，标准尺寸加收约0.32-0.40美元，并叠加3.5%燃油附加费与入库配置费。以1.2磅、售价26.99美元商品为例：旧费率卡估算净利7.29美元、ROI 63.4%，按实际Q4费率净利仅6.48美元、ROI 56.3%，单件虚增利润0.81美元，40件试单即少赚32.40美元；选品需按新费率重算，可用免费工具按官方公式直推Google Sheets。",
       "category": "policy",
       "score": 9,
-      "url": "https://www.amz123.com/kx/gOSy3rSD",
-      "source": "amz123",
-      "published_at": "2026-09-23T05:55:04+00:00"
-    },
-    {
-      "title": "亚马逊10月起开放大件零担标签，卖家可享议定费率",
-      "summary": "亚马逊在2026 Accelerate大会发布大件发货新功能：10月起卖家可在Buy Shipping及第三方发货软件直接购买零担LTL标签，享平台议定协议价并获迟交保护；2027年初上线大件区域配送定价，可分区域设差异化运费；平台还将为大件卖家匹配仓库周边100英里内具备当日达或次日达能力的本地承运商，大件卖家应据此优化发货成本结构。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.amz123.com/kx/be3txtki",
-      "source": "amz123",
-      "published_at": "2026-10-01T00:56:26+00:00"
-    },
-    {
-      "title": "亚马逊2026年11月2日起调整商业责任险规则，新增11类高危类目强制投保要求",
-      "summary": "亚马逊商业责任险新规2026年11月2日生效，保留月销超1万美元30天内投保、保额100万美元的门槛，同时新增儿童商品、化妆品、锂电池、床垫、汽车摩托轮胎等11类高危类目强制投保，且不限新品在售、不看月销量，均须不低于100万美元保额；涉及类目卖家应立即排查自身ASIN是否在列，尽快完成投保并上传保单，避免销售权限受限。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.amz123.com/kx/i7xMS7Zg",
-      "source": "amz123",
-      "published_at": "2026-09-10T09:16:41+00:00"
-    },
-    {
-      "title": "亚马逊美国站旺季费用多项叠加，卖家成本压力显著上升",
-      "summary": "美国站旺季成本进入叠加期：2026年10月15日至2027年1月14日，FBA、MCF及Buy with Prime配送收取旺季附加费，小号标准件每件约0.19美元、T恤约0.39美元、超大件约2.81美元、平均约0.32美元，并与已执行的3.5%燃油及物流附加费同时计收。卖家应将双重费用纳入售价测算，轻小件低客单价商品优先复核利润，大件需叠加燃油与大件附加费核算。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.amz123.com/kx/0eTtbNN6",
-      "source": "amz123",
-      "published_at": "2026-09-10T09:37:28+00:00"
-    },
-    {
-      "title": "The reimbursement money I was leaving on the table for over a year (FBA)",
-      "summary": "亚马逊FBA索赔实操方法。卖家应每月比对退货报告与赔偿报告，针对买家未退回货物、超45天未退回已退款件、库容损毁未自动赔偿等异常，以一单一案、只陈述事实的方式开case索赔，避免因超出时效而造成资金损失。",
-      "category": "experience",
-      "score": 9.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vbqfwd/the_reimbursement_money_i_was_leaving_on_the",
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wisvab/psa_math_q4_holiday_peak_fees_start_oct_15_how",
       "source": "reddit_fba",
-      "published_at": "2026-07-31T13:06:17+00:00"
+      "published_at": "2026-09-17T12:39:15+00:00"
+    },
+    {
+      "title": "2026年亚马逊Prime会员大促定档10月6日至7日",
+      "summary": "2026年秋季Prime会员大促定档10月6至7日，覆盖美国等22国。美国站秒杀与Z划算提报截止9月22日，路径为营销推广、管理促销和特惠、创建促销；除秒杀外应同步提报Prime专享价格折扣（单活动最多500子ASIN）和覆盖活动全程的优惠券，并跟进上线状态，提报不等于成功上线。",
+      "category": "policy",
+      "score": 9,
+      "url": "https://www.amz123.com/kx/vCVKZtkl",
+      "source": "amz123",
+      "published_at": "2026-09-15T09:37:07+00:00"
+    },
+    {
+      "title": "FBA索赔窗口到底是18个月还是60天？亚马逊红线文件里18 months是被划掉的，但我只拿到英欧站那一份",
+      "summary": "FBA库存丢损索赔窗口已从18个月改为60天，以库存台账报告丢损日为锚点，逾期不予赔偿；客户退货索赔须在退款或换货后45至105天内提交，早于45天直接驳回；移除订单分两个窗口：途中丢失自货件创建起75天，途中损坏自退回签收起60天；90天说法在四份官方文件中均不存在，美国站子页面在登录墙后待核实。",
+      "category": "policy",
+      "score": 9,
+      "url": "https://www.wearesellers.com/question/124480",
+      "source": "wearesellers",
+      "published_at": "2026-09-14T03:30:09.732+00:00"
+    },
+    {
+      "title": "我们公司美工组开始转运营了，说说 AI 出图到底改了什么",
+      "summary": "测款流程改为工厂手机实拍加AI出图：按一页纸规范拍白墙浅色台面、光别太硬、不开闪光灯、正侧细节多角度，照片连同卖点和毛成本价录入系统，AI一次产出八张主副图加四张A+，初稿十分钟，样品未到即可开工。纯色结构简单的品直接上架；渐变色、复杂结构、自带文字logo的需框选返修约半小时；砸广告的核心款仍走摄影棚。",
+      "category": "experience",
+      "score": 9,
+      "url": "https://www.wearesellers.com/question/125033",
+      "source": "wearesellers",
+      "published_at": "2026-09-29T11:44:02.368+00:00"
+    },
+    {
+      "title": "亚马逊登陆时二次验证完强制要求创建通行密钥Passkey登陆，WINDOW电脑要求使用USB安全密钥的解决办法",
+      "summary": "亚马逊将强制要求Passkey登录，老式组装台式机因无指纹人脸识别会卡在USB安全密钥提示。解法：升级Win10和最新chrome并设置Windows Hello PIN，若仍调用外部密钥，安装免费的Bitwarden chrome插件，注册设好主密码后回到亚马逊后台，在插件而非亚马逊页面创建密钥即可一秒通过。通行密钥与硬件绑定，建议提前备用机也添加，防止原电脑损坏无法登录。",
+      "category": "experience",
+      "score": 9,
+      "url": "https://www.wearesellers.com/question/124460",
+      "source": "wearesellers",
+      "published_at": "2026-09-12T03:54:28.797+00:00"
+    },
+    {
+      "title": "日常5000单，旺季翻倍：一个亚马逊趋势品/节日品卖家的选品·广告·Listing全链路实操复盘",
+      "summary": "趋势品核心是节奏：先用12至24个月核心词搜索曲线确认季节性；核心词连续2至3周环比涨超30%即小批量上架，逼近历史峰值集中放量，连续2周下滑超20%立即停补货清仓；大节日提前4至6个月下单，海运留3至4周；新品0至7天不看ACOS，累计点击200+、出单20+为门槛；7至30天预算从大词转向精准词，ACOS目标压到35%至50%。",
+      "category": "experience",
+      "score": 9,
+      "url": "https://www.wearesellers.com/question/124703",
+      "source": "wearesellers",
+      "published_at": "2026-09-20T07:27:07.881+00:00"
+    },
+    {
+      "title": "亚马逊协议三视频认证的信用卡问题,昨天参加过了，现在要求补信用卡账单，当时准备的账单有误",
+      "summary": "视频审核已通过但信用卡账单出错：实际用卡为中信银行，却提交了抬头P成法人的光大账单，审核员当场发现卡号不符并多次确认。补救有三：重做光大账单、把中信账单抬头改成法人、解释原因后提交本人中信账单，作者已向审核展示过与法人的亲属关系，成败取决于审核员是否记录了此前问答。",
+      "category": "experience",
+      "score": 6.2,
+      "url": "https://www.wearesellers.com/question/125097",
+      "source": "wearesellers",
+      "published_at": "2026-10-05T06:20:24.353Z"
+    },
+    {
+      "title": "美国耳机类目4个品9个链接，每天烧100美金广告只出2单、转化率1%出头，我该怎么推才能完成8万美金的试用期目标？",
+      "summary": "美国站耳机类目4个品9条链接，6月建链7月到货，日烧100美金广告仅出2单，点击率0.3%至0.5%正常但广告转化率仅1%出头，TACOS大于20。已开高中低档自动与广泛词组精准手动各一组，优化过标题五点，创作者计划一个月仅两三单，主图A+品牌故事无优化条件也无法上站外，试用期需完成8万多美金。数据与已试动作完整，但无解法。",
+      "category": "experience",
+      "score": 6.6,
+      "url": "https://www.wearesellers.com/question/124888",
+      "source": "wearesellers",
+      "published_at": "2026-10-05T09:21:01.239Z"
     }
   ]
 }
