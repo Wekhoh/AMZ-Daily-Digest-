@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-06T12:48:12Z",
-  "digest_date": "2026-10-06",
+  "generated_at_utc": "2026-10-07T12:39:05Z",
+  "digest_date": "2026-10-07",
   "article_count": 50,
   "articles": [
     {
-      "title": "亚马逊紧急预警：高度仿真钓鱼邮件以\"24小时停用\"诱导卖家点击恶意链接",
-      "summary": "亚马逊官方预警：高度仿真钓鱼邮件以账户异常、24小时内不验证将永久停用为由诱导卖家点击恶意链接或下载附件。官方声明绝不通过邮件索取银行账户、信用卡、密码，真实网址仅以amazon.com、amazonsellerservices.com或sellercentral.amazon.com结尾。卖家应不点邮件链接与附件，仅从卖家平台官方入口登录，并在业绩通知与管理订单页核实账户信息。",
+      "title": "这次怎么没有人讨论10月会员日情况了，平常不是凌晨就开始看动静了吗？",
+      "summary": "2026年10月会员日表现平淡，作者实测销量约2.5倍、销售额约2倍，判断今年旺季启动更晚、大促力度不及往年；并预警黑五活动拉长到12天会摊薄单日爆发力。帖内无具体打法，可用作大促倍数基准与黑五排期的风险参照。",
+      "category": "trend",
+      "score": 6.2,
+      "url": "https://www.wearesellers.com/question/125150",
+      "source": "wearesellers",
+      "published_at": "2026-10-07T10:30:37.936Z"
+    },
+    {
+      "title": "Will this change come back and bite me later? (Profit margin change)",
+      "summary": "FBA批发卖家将全店最低价改到约17%利润率、走量款降至10-15%后，销量立即激增（此前日均约50单且竞争不过大卖家）。本质是降价换量，但作者担心低毛利会被退款与后续成本反噬，尚无验证结论。可借鉴分层定价测试思路：利润款与走量款设不同利润率并观察销量弹性，跟进前需核算退款率与费用缓冲。",
+      "category": "experience",
+      "score": 6.2,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wzm6do/will_this_change_come_back_and_bite_me_later",
+      "source": "reddit_fba",
+      "published_at": "2026-10-07T03:20:40.000Z"
+    },
+    {
+      "title": "合并种子链接和评论消失的问题：种子链接共享已显示，变体合规，但是合并了种子链接的新品上架后3天内评论就一次性全部消失不见。拆开父体后所有子变体的评论还是消失的状态……为什么会出现这种情况，如何规避？",
+      "summary": "种子链接共享已显示且变体合规的前提下，合并种子链接的新品上架3天内评论一次性全部消失，拆开父体后评论也未返回原ASIN；发帖者追问成因、规避方法、评论能否找回及正确的合并方式，帖子本身未给出结论或解法，可作为种子合并风险的真实案例参考，操作种子链接前需评估评论清零风险。",
+      "category": "experience",
+      "score": 6.6,
+      "url": "https://www.wearesellers.com/question/121115",
+      "source": "wearesellers",
+      "published_at": "2026-10-07T10:30:31.144Z"
+    },
+    {
+      "title": "亚马逊选品怎么避坑？拆完 7 个品类近 3000 条差评，能改的地方分三类",
+      "summary": "作者拆解7个品类近3000条差评，头部产品评分普遍在3到4分之间，问题出在实现而非需求。改进点分三类：一是低成本结构件与基础项，如耳挂、USB-C充电、密封料，对手大多没做；二是品控一致性与寿命，需先算货值是否容得下；三是原理硬伤靠客服和保修兜底，Zyllion靠服务把星级撑到3.8。拿到产品先按三类过差评，再决定是否进场。",
+      "category": "experience",
+      "score": 9,
+      "url": "https://www.wearesellers.com/question/125105",
+      "source": "wearesellers",
+      "published_at": "2026-10-03T04:58:56.655+00:00"
+    },
+    {
+      "title": "亚马逊上线虚拟身份验证：收到通知后14天内须完成视频核验，否则暂停销售",
+      "summary": "亚马逊上线虚拟身份验证，身份存疑卖家将收到视频核验通知，宽限期通常仅14天，部分账户不设宽限期，逾期未完成将暂停销售权限。入口在注册邮箱、绩效通知与账户状况页优先操作栏目。法人须备身份证或护照、企业注册文件、180天内银行及信用卡对账单、关系证明、供应链票据，材料不得图像处理，点击进入通话后无法回传，运营可陪同但不得代验。",
       "category": "policy",
       "score": 9,
-      "url": "https://www.amz123.com/kx/1y9fxBXh",
+      "url": "https://www.amz123.com/kx/gOSy3rSD",
       "source": "amz123",
-      "published_at": "2026-10-06T05:49:09.000Z"
+      "published_at": "2026-09-23T05:55:04+00:00"
     },
     {
-      "title": "亚马逊MCF折扣上限提升至25% 独立站免费Prime配送全面开放",
-      "summary": "美国MCF卖家可立即利用的政策红利：优选定价计划履约费折扣上限升至25%，与按件发放的FBA抵扣金合并计算，前六个月省15%-25%，无需签合同、后台一键加入、发货后自动抵扣；独立站免费Prime配送全面开放，商品页展示Prime标识，买家选Prime配送后由亚马逊核验会员身份并从FBA库存发货，卖家结账、支付与店铺政策无需改动。",
+      "title": "亚马逊2026年11月2日起调整商业责任险规则，新增11类高危类目强制投保要求",
+      "summary": "亚马逊商业责任险新规2026年11月2日生效，保留月销超1万美元30天内投保、保额100万美元的门槛，同时新增儿童商品、化妆品、锂电池、床垫、汽车摩托轮胎等11类高危类目强制投保，且不限新品在售、不看月销量，均须不低于100万美元保额；涉及类目卖家应立即排查自身ASIN是否在列，尽快完成投保并上传保单，避免销售权限受限。",
       "category": "policy",
       "score": 9.4,
-      "url": "https://www.amz123.com/kx/YeKAMavg",
+      "url": "https://www.amz123.com/kx/i7xMS7Zg",
       "source": "amz123",
-      "published_at": "2026-09-24T10:39:53+00:00"
+      "published_at": "2026-09-10T09:16:41+00:00"
     },
     {
-      "title": "做竞品分析抓不到全量Review？自己写了套采集脚本，顺便聊聊大家对这类数据的需求，目前跑下来单个ASIN的代理和服务器成本大概在10元左右。打算后续对外开放服务，但在定价上有点拿不准",
-      "summary": "市面插件抓Review常被截断在前500条或频繁被封，导致大样本分析失真；作者自建脚本可突破条数限制，获取ASIN全量公开评论，直接交付Excel/CSV，含用户id、星级、变体属性、时间、文字、图片视频、点赞数等字段，单ASIN代理与服务器成本约10元，拟以19～29元/ASIN定价对外服务，纠结单次购买或充值额度包模式。",
+      "title": "深圳税局批量下发预警短信，跨境卖家须在10日内自查增值税申报情况",
+      "summary": "深圳税局经金税四期自动比对平台GMV与9610/9810/0110报关数据，批量预警出口收入涉嫌未足额申报增值税，卖家须10日内自查整改。关键纠偏：增值税计税基数为买家实付订单全额，不得按扣佣金物流费后的净回款申报，平台扣费仅能在企业所得税中抵扣。",
+      "category": "policy",
+      "score": 9,
+      "url": "https://www.amz123.com/kx/2SgoXbHF",
+      "source": "amz123",
+      "published_at": "2026-09-10T09:37:34+00:00"
+    },
+    {
+      "title": "亚马逊美国站旺季费用多项叠加，卖家成本压力显著上升",
+      "summary": "美国站旺季成本进入叠加期：2026年10月15日至2027年1月14日，FBA、MCF及Buy with Prime配送收取旺季附加费，小号标准件每件约0.19美元、T恤约0.39美元、超大件约2.81美元、平均约0.32美元，并与已执行的3.5%燃油及物流附加费同时计收。卖家应将双重费用纳入售价测算，轻小件低客单价商品优先复核利润，大件需叠加燃油与大件附加费核算。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.amz123.com/kx/0eTtbNN6",
+      "source": "amz123",
+      "published_at": "2026-09-10T09:37:28+00:00"
+    },
+    {
+      "title": "亚马逊10月起开放大件零担标签，卖家可享议定费率",
+      "summary": "亚马逊在2026 Accelerate大会发布大件发货新功能：10月起卖家可在Buy Shipping及第三方发货软件直接购买零担LTL标签，享平台议定协议价并获迟交保护；2027年初上线大件区域配送定价，可分区域设差异化运费；平台还将为大件卖家匹配仓库周边100英里内具备当日达或次日达能力的本地承运商，大件卖家应据此优化发货成本结构。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.amz123.com/kx/be3txtki",
+      "source": "amz123",
+      "published_at": "2026-10-01T00:56:26+00:00"
+    },
+    {
+      "title": "想拿亚马逊AC标？别只会死砸大词，我是怎么一步步把词推上去的",
+      "summary": "AC标获取取决于该词自然排名能否全天大部分时间稳定靠前，正常情况下自然排第一基本就能拿到，而非靠砸预算硬刚单个精准大词。可执行打法：把同词缀词、长尾词、相关意图词一起拉起形成词群持续补单，用整个词群把核心词自然位拱上去；加价前先看广告位转化，顶部能出单才该顶，只烧钱不出单则放弃该位置。",
       "category": "experience",
-      "score": 7.4,
-      "url": "https://www.wearesellers.com/question/125132",
+      "score": 9,
+      "url": "https://www.wearesellers.com/question/119098",
       "source": "wearesellers",
-      "published_at": "2026-10-06T10:37:31.805Z"
-    },
-    {
-      "title": "ChatGPT Shopping上线虚拟试穿与商品收藏功能",
-      "summary": "OpenAI为ChatGPT Shopping新增虚拟试穿与商品收藏功能，并公开选品逻辑：依据价格、描述等结构化数据选品，可改写标题、生成摘要与标签。Shopify商家已自动接入，其他卖家可提交商品数据源参与。美区卖家应完善商品结构化数据与图片素材，抢占AI购物流量入口。",
-      "category": "trend",
-      "score": 7.6,
-      "url": "https://www.amz123.com/kx/CrD2vyuc",
-      "source": "amz123",
-      "published_at": "2026-10-05T14:39:33.000Z"
-    },
-    {
-      "title": "PSA: You're probably losing 2-3% to hidden FX fees and don't even know it",
-      "summary": "在英国和欧盟站点收款为欧元英镑、供应商在中国时，资金链路为Amazon、卖家、换汇、供应商、CNY，每次转手都可能被吃一次汇差，隐性换汇成本约2-3%，月流水达5万美元时损耗迅速放大。可行动作：评估多币种账户安全性、分币种保留余额、直接以人民币支付中国供应商，把换汇次数压到最少。",
-      "category": "experience",
-      "score": 6.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wwczic/psa_youre_probably_losing_23_to_hidden_fx_fees",
-      "source": "reddit_fba",
-      "published_at": "2026-10-03T03:26:06.000Z"
-    },
-    {
-      "title": "CBP starts voiding importer numbers with wrong Form 5106 details on September 18 (four things to check)",
-      "summary": "美国海关自2026年9月18日起逐一核查进口商存档的Form 5106，信息不准将作废IOR号且无法清关。应让货代调出5106核对四项：地址须为实体地址（可用负责人家庭住址，禁用注册代理、货代、P.O.箱）；邮箱和电话须属IOR本人；货代须持与IOR直接签署的POA。恢复需按指定主题行邮件申请，官方未给时限。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wgmkm6/cbp_starts_voiding_importer_numbers_with_wrong",
-      "source": "reddit_fba",
-      "published_at": "2026-09-15T01:36:54+00:00"
-    },
-    {
-      "title": "美国电商增速上调至约10%，Walmart与Shopify增速超越Amazon",
-      "summary": "伯恩斯坦将美国电商增速预期由约8%上调至约10%，前三季度增速维持10%附近。二季度沃尔玛电商增速约25%、Shopify约21%，均高于亚马逊的14%；亚马逊份额42.9%居首，但Shopify升至14.2%、沃尔玛升至8.7%，分流明显。卖家宜评估Walmart与Shopify等多渠道布局，对冲亚马逊增速放缓。",
-      "category": "trend",
-      "score": 7.8,
-      "url": "https://www.amz123.com/kx/iYDI7aIb",
-      "source": "amz123",
-      "published_at": "2026-10-05T22:51:28.000Z"
-    },
-    {
-      "title": "Section 122 sunset was July 24. Here's the actual duty stack that replaced it for China-origin FBA imports (with math)",
-      "summary": "Section 122的10%统一附加税按150天上限于7月24日到期，USTR同日对中国等60个原产地启用301强迫劳动关税：有非强迫劳动供应链证明的Tier B为10%，无证明默认Tier A为12.5%，多数中国出口商无Tier B文件。以3万美元CIF的61章T恤海运为例，叠加MFN 16.5%、301 List 3的25%、Tier A 12.5%、MPF上限634.62美元及HMF 0.125%后，落地税负16,872.12美元，占CIF约56.2%，卖家需按新税栈重算成本与利润。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vzd2hi/section_122_sunset_was_july_24_heres_the_actual",
-      "source": "reddit_fba",
-      "published_at": "2026-08-26T23:15:37+00:00"
-    },
-    {
-      "title": "亚马逊灰度测试关闭差评\"联系买家\"按钮，卖家主动沟通渠道受阻",
-      "summary": "亚马逊全站点灰度下架1至3星差评的联系买家按钮，美国站已分批落地且不设品牌备案豁免，部分账号入口已完全关闭。买家不主动发消息时卖家无官方渠道触达低分买家，补发货、退款安抚争取改评的打法失效。运营重心应转向预防差评：前置质检、把控物流时效与售前预期管理，降低低分评价产生概率。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.amz123.com/kx/1UYbAIRt",
-      "source": "amz123",
-      "published_at": "2026-09-15T05:54:25+00:00"
-    },
-    {
-      "title": "英国站产品被外部比价丢失购物车，公模专利已被他人抢注，未找到直接偷用我们图片的链接，但目前TEMU有多款低价的类似款产品，甚至销量上1k+，账号无付费经理，无法确认实际比价链接，还有什么渠道能够解决？",
-      "summary": "英国站ASIN因外部比价丢失购物车，价格被砍50%以上且无法修改，后台case申诉均被拒，亚马逊答复称外部竞争价格有效、报价缺乏竞争力故无推荐报价资格。TEMU有多款极低价类似款但未找到比价源链接，账号无付费经理；正尝试自建独立站链接、品牌证书加LOGO及带建议零售价包装图申诉。",
-      "category": "policy",
-      "score": 6.4,
-      "url": "https://www.wearesellers.com/question/125137",
-      "source": "wearesellers",
-      "published_at": "2026-10-06T09:37:50.923Z"
+      "published_at": "2026-09-27T10:13:38.944+00:00"
     }
   ]
 }
