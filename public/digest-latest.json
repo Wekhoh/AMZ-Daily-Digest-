@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-07T12:39:05Z",
-  "digest_date": "2026-10-07",
+  "generated_at_utc": "2026-10-08T12:55:40Z",
+  "digest_date": "2026-10-08",
   "article_count": 50,
   "articles": [
     {
-      "title": "这次怎么没有人讨论10月会员日情况了，平常不是凌晨就开始看动静了吗？",
-      "summary": "2026年10月会员日表现平淡，作者实测销量约2.5倍、销售额约2倍，判断今年旺季启动更晚、大促力度不及往年；并预警黑五活动拉长到12天会摊薄单日爆发力。帖内无具体打法，可用作大促倍数基准与黑五排期的风险参照。",
+      "title": "2026年亚马逊美国站秋季会员日10.6-7，大家的感受如何？如果你10.6已经跑完一天了，欢迎直接甩数据打脸",
+      "summary": "美国站秋季会员日10.6-10.7第一天，一个中等店铺部分链接销量做到平时约4倍，但CPC明显上涨，出现销量涨、利润反而降的现象，核心判断是GMV涨4倍不等于利润涨4倍。方法上按类目、平时日销、销量倍数、CPC、CVR、ACOS、活动类型、利润变化接龙晒数据，重点验证次日是否透支需求、是否头部吃流量而中腰部陪跑。",
       "category": "trend",
-      "score": 6.2,
-      "url": "https://www.wearesellers.com/question/125150",
+      "score": 7.8,
+      "url": "https://www.wearesellers.com/question/125159",
       "source": "wearesellers",
-      "published_at": "2026-10-07T10:30:37.936Z"
+      "published_at": "2026-10-08T10:40:09.411Z"
     },
     {
-      "title": "Will this change come back and bite me later? (Profit margin change)",
-      "summary": "FBA批发卖家将全店最低价改到约17%利润率、走量款降至10-15%后，销量立即激增（此前日均约50单且竞争不过大卖家）。本质是降价换量，但作者担心低毛利会被退款与后续成本反噬，尚无验证结论。可借鉴分层定价测试思路：利润款与走量款设不同利润率并观察销量弹性，跟进前需核算退款率与费用缓冲。",
+      "title": "美国玩具被CPSC在亚马逊购买抽测不合规，纠正措施：停止销售。这情况该怎么回复，对别的子体有影响么",
+      "summary": "美国站玩具遭CPSC亚马逊购买抽测判定不合规并收到NOV邮件，两项问题为小零件拉力测试脱落和电池仓盖板螺丝拆下会掉，官方纠正措施为停止销售。卖家收到邮件后已删除父体并拆开全部子体，正在确认如何回复NOV、其他子体是否受影响。核心信息：CPSC购买抽测不合规的直接后果是停售，需按NOV要求处理回复与整改。",
+      "category": "policy",
+      "score": 7.2,
+      "url": "https://www.wearesellers.com/question/125148",
+      "source": "wearesellers",
+      "published_at": "2026-10-08T08:39:53.470Z"
+    },
+    {
+      "title": "Anyone else paying over $1.40 a click on their own brand name because competitors keep bidding on it?",
+      "summary": "竞品8月起跟投品牌ASIN，品牌词精确匹配CPC六周内从0.31美元涨至1.42美元，同广告组同预算其余未变；约三分之一广告费花在本就会找到你的买家身上，TACoS表面健康实为自然单在撑。核心取舍是加价防守硬扛竞价底价，还是放弃品牌词防守承受流失，需先算清防守成本与自然位护城河。",
       "category": "experience",
-      "score": 6.2,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wzm6do/will_this_change_come_back_and_bite_me_later",
-      "source": "reddit_fba",
-      "published_at": "2026-10-07T03:20:40.000Z"
+      "score": 7.8,
+      "url": "https://www.reddit.com/r/AmazonSeller/comments/1wvm1z6/anyone_else_paying_over_140_a_click_on_their_own",
+      "source": "reddit_seller",
+      "published_at": "2026-10-02T05:56:56.000Z"
     },
     {
-      "title": "合并种子链接和评论消失的问题：种子链接共享已显示，变体合规，但是合并了种子链接的新品上架后3天内评论就一次性全部消失不见。拆开父体后所有子变体的评论还是消失的状态……为什么会出现这种情况，如何规避？",
-      "summary": "种子链接共享已显示且变体合规的前提下，合并种子链接的新品上架3天内评论一次性全部消失，拆开父体后评论也未返回原ASIN；发帖者追问成因、规避方法、评论能否找回及正确的合并方式，帖子本身未给出结论或解法，可作为种子合并风险的真实案例参考，操作种子链接前需评估评论清零风险。",
+      "title": "更换亚马逊店铺主体需要注意什么？怎么操作才更安全？之前刷到需要报备，我去问了客服之后，客服要求我更改之前需要得到亚马逊的许可之后才可以更改......",
+      "summary": "更换店铺主体不能直接操作，需先获得亚马逊许可，客服要求提交四项材料：更改主体的原因、新老主体关系（收购、重组等）、新主体营业执照、新主体税务登记。报备核心是说明主体变更背景并提供新主体资质文件，帖内还在确认税务登记具体含义及哪种变更理由更安全更能通过。",
+      "category": "policy",
+      "score": 7.4,
+      "url": "https://www.wearesellers.com/question/118628",
+      "source": "wearesellers",
+      "published_at": "2026-10-08T10:40:19.092Z"
+    },
+    {
+      "title": "PD前广告&自然点击上涨、转化率下滑，国庆9.30-10.3期间，大家也是这样吗？",
+      "summary": "国庆9.30-10.3美国站PD前数据异常：单量打对折、广告花费没减，点击量反而增长，但广告转化率较前一周大幅下滑，往年PD只有前两天流量差。作者未改listing、仅节前改过投放词，推测链接处于再激活状态，亚马逊向不同人群试探投放带来低质点击，可作为转化率异常的排查思路。",
+      "category": "experience",
+      "score": 6.8,
+      "url": "https://www.wearesellers.com/question/125179",
+      "source": "wearesellers",
+      "published_at": "2026-10-08T10:40:14.094Z"
+    },
+    {
+      "title": "# Amazon案例分析 # 亚马逊来图定制产品，如何在一个月内做到日均50-100单？希望能从广告结构、关键词布局、运营节奏等，从大方向到具体操作上给出明确的建议。不限方法、不限预算，acos别太离谱",
+      "summary": "亚马逊来图定制新品上架当天开广告，结构为自动加手动核心词宽泛、组词仅降低，二三四级词手动精准固定，预算出价用系统推荐，结果平均竞价高达2.5、点击率仅0.1%；随后每日下调竞价0.2，并调整关键词、关闭无点击SKU、修改主图和listing，日花费70-100美元仅出1-3单，与日均50-100单目标差距大，发帖求解广告结构与运营节奏打法。",
       "category": "experience",
       "score": 6.6,
-      "url": "https://www.wearesellers.com/question/121115",
+      "url": "https://www.wearesellers.com/question/125169",
       "source": "wearesellers",
-      "published_at": "2026-10-07T10:30:31.144Z"
+      "published_at": "2026-10-07T12:39:46.461Z"
     },
     {
-      "title": "亚马逊选品怎么避坑？拆完 7 个品类近 3000 条差评，能改的地方分三类",
-      "summary": "作者拆解7个品类近3000条差评，头部产品评分普遍在3到4分之间，问题出在实现而非需求。改进点分三类：一是低成本结构件与基础项，如耳挂、USB-C充电、密封料，对手大多没做；二是品控一致性与寿命，需先算货值是否容得下；三是原理硬伤靠客服和保修兜底，Zyllion靠服务把星级撑到3.8。拿到产品先按三类过差评，再决定是否进场。",
+      "title": "用Grok Bot搭建5个跨境电商数字员工，实现自动化经营（附部署教程）",
+      "summary": "Grok Bot是xAI的云端Agent助手，配云电脑可7×24定时执行任务，工作背景可存成Skill复用，多Bot能群聊协作交接，适合岗位固定、流程明确的持续任务；文中实测竞品情报Bot等5个跨境电商场景并开放从0到1部署教程与提示词，用Google账号可领7天免费试用，付费档与Cursor套餐打通。",
       "category": "experience",
-      "score": 9,
-      "url": "https://www.wearesellers.com/question/125105",
+      "score": 8.4,
+      "url": "https://www.wearesellers.com/question/125154",
       "source": "wearesellers",
-      "published_at": "2026-10-03T04:58:56.655+00:00"
+      "published_at": "2026-10-08T07:39:25.817Z"
     },
     {
-      "title": "亚马逊上线虚拟身份验证：收到通知后14天内须完成视频核验，否则暂停销售",
-      "summary": "亚马逊上线虚拟身份验证，身份存疑卖家将收到视频核验通知，宽限期通常仅14天，部分账户不设宽限期，逾期未完成将暂停销售权限。入口在注册邮箱、绩效通知与账户状况页优先操作栏目。法人须备身份证或护照、企业注册文件、180天内银行及信用卡对账单、关系证明、供应链票据，材料不得图像处理，点击进入通话后无法回传，运营可陪同但不得代验。",
-      "category": "policy",
-      "score": 9,
-      "url": "https://www.amz123.com/kx/gOSy3rSD",
-      "source": "amz123",
-      "published_at": "2026-09-23T05:55:04+00:00"
-    },
-    {
-      "title": "亚马逊2026年11月2日起调整商业责任险规则，新增11类高危类目强制投保要求",
-      "summary": "亚马逊商业责任险新规2026年11月2日生效，保留月销超1万美元30天内投保、保额100万美元的门槛，同时新增儿童商品、化妆品、锂电池、床垫、汽车摩托轮胎等11类高危类目强制投保，且不限新品在售、不看月销量，均须不低于100万美元保额；涉及类目卖家应立即排查自身ASIN是否在列，尽快完成投保并上传保单，避免销售权限受限。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.amz123.com/kx/i7xMS7Zg",
-      "source": "amz123",
-      "published_at": "2026-09-10T09:16:41+00:00"
-    },
-    {
-      "title": "深圳税局批量下发预警短信，跨境卖家须在10日内自查增值税申报情况",
-      "summary": "深圳税局经金税四期自动比对平台GMV与9610/9810/0110报关数据，批量预警出口收入涉嫌未足额申报增值税，卖家须10日内自查整改。关键纠偏：增值税计税基数为买家实付订单全额，不得按扣佣金物流费后的净回款申报，平台扣费仅能在企业所得税中抵扣。",
-      "category": "policy",
-      "score": 9,
-      "url": "https://www.amz123.com/kx/2SgoXbHF",
-      "source": "amz123",
-      "published_at": "2026-09-10T09:37:34+00:00"
-    },
-    {
-      "title": "亚马逊美国站旺季费用多项叠加，卖家成本压力显著上升",
-      "summary": "美国站旺季成本进入叠加期：2026年10月15日至2027年1月14日，FBA、MCF及Buy with Prime配送收取旺季附加费，小号标准件每件约0.19美元、T恤约0.39美元、超大件约2.81美元、平均约0.32美元，并与已执行的3.5%燃油及物流附加费同时计收。卖家应将双重费用纳入售价测算，轻小件低客单价商品优先复核利润，大件需叠加燃油与大件附加费核算。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.amz123.com/kx/0eTtbNN6",
-      "source": "amz123",
-      "published_at": "2026-09-10T09:37:28+00:00"
-    },
-    {
-      "title": "亚马逊10月起开放大件零担标签，卖家可享议定费率",
-      "summary": "亚马逊在2026 Accelerate大会发布大件发货新功能：10月起卖家可在Buy Shipping及第三方发货软件直接购买零担LTL标签，享平台议定协议价并获迟交保护；2027年初上线大件区域配送定价，可分区域设差异化运费；平台还将为大件卖家匹配仓库周边100英里内具备当日达或次日达能力的本地承运商，大件卖家应据此优化发货成本结构。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.amz123.com/kx/be3txtki",
-      "source": "amz123",
-      "published_at": "2026-10-01T00:56:26+00:00"
-    },
-    {
-      "title": "想拿亚马逊AC标？别只会死砸大词，我是怎么一步步把词推上去的",
-      "summary": "AC标获取取决于该词自然排名能否全天大部分时间稳定靠前，正常情况下自然排第一基本就能拿到，而非靠砸预算硬刚单个精准大词。可执行打法：把同词缀词、长尾词、相关意图词一起拉起形成词群持续补单，用整个词群把核心词自然位拱上去；加价前先看广告位转化，顶部能出单才该顶，只烧钱不出单则放弃该位置。",
+      "title": "Prime Big Deal Days is next week. How are you balancing discounts, bids and margin this time?",
+      "summary": "Prime大促（10月6-7日）备战打法：活动前数周对主图做A/B测试并适配新标题与高亮格式，先补转化再拉流量；主力产品设20%折扣，需权衡销量提升与毛利损耗；提前测试Sponsored Products广告与竞价规则。参考数据：2025年两场Prime Day达日常8-10倍销量，最近一场仅3-4倍，应复盘下滑原因后再定折扣与广告力度。",
       "category": "experience",
-      "score": 9,
-      "url": "https://www.wearesellers.com/question/119098",
-      "source": "wearesellers",
-      "published_at": "2026-09-27T10:13:38.944+00:00"
+      "score": 7.8,
+      "url": "https://www.reddit.com/r/AmazonSeller/comments/1wvxfsn/prime_big_deal_days_is_next_week_how_are_you",
+      "source": "reddit_seller",
+      "published_at": "2026-10-02T15:55:01.000Z"
+    },
+    {
+      "title": "How has there not been more complaints about the OTDR violation issues? Forcing sellers to pay more for Amazon shipping labels.",
+      "summary": "自发货卖家两年内第6次收到OTDR违规警告，当天或次日交邮仍因USPS/UPS晚点1-2小时被追责并威胁停用账户。其运输模板已设5-8天，但后台自动时效与之冲突，仍向买家承诺2-3天送达；客服称属内部错误，并要求购买亚马逊标签以豁免OTDR追责，价格比Pirate Ship贵约30%，实为变相强制付费换指标安全。",
+      "category": "policy",
+      "score": 8.4,
+      "url": "https://www.reddit.com/r/AmazonSeller/comments/1wst107/how_has_there_not_been_more_complaints_about_the",
+      "source": "reddit_seller",
+      "published_at": "2026-09-28T22:30:33.000Z"
+    },
+    {
+      "title": "I think Amazon listings are starting to look too similar",
+      "summary": "同类目Listing已高度同质化：白底主图、生活方式图、图标、对比表和A+结构雷同，根源是所有人复制同一套最佳实践。AI让合格素材几分钟即可量产，合格本身不再构成优势。可行方向是建立品牌视觉识别，让买家不读品牌名也能认出产品，同时不牺牲转化清晰度。",
+      "category": "trend",
+      "score": 6.8,
+      "url": "https://www.reddit.com/r/AmazonSeller/comments/1wxajuj/i_think_amazon_listings_are_starting_to_look_too",
+      "source": "reddit_seller",
+      "published_at": "2026-10-04T08:27:52.000Z"
     }
   ]
 }
