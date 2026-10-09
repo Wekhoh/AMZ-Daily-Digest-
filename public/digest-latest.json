@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-08T12:55:40Z",
-  "digest_date": "2026-10-08",
+  "generated_at_utc": "2026-10-09T12:42:30Z",
+  "digest_date": "2026-10-09",
   "article_count": 50,
   "articles": [
     {
-      "title": "2026年亚马逊美国站秋季会员日10.6-7，大家的感受如何？如果你10.6已经跑完一天了，欢迎直接甩数据打脸",
-      "summary": "美国站秋季会员日10.6-10.7第一天，一个中等店铺部分链接销量做到平时约4倍，但CPC明显上涨，出现销量涨、利润反而降的现象，核心判断是GMV涨4倍不等于利润涨4倍。方法上按类目、平时日销、销量倍数、CPC、CVR、ACOS、活动类型、利润变化接龙晒数据，重点验证次日是否透支需求、是否头部吃流量而中腰部陪跑。",
+      "title": "新品发不满5箱，被强制合仓每箱多几十美金的处理费，少量试款怎么发？前期发得少，是不是就只能接受这笔合仓处理费，当做自己试款成本呢？",
+      "summary": "按现行入库规则，单SKU发满5箱以上才免亚马逊处理费，箱数不足会被强制合并成一个货件，算下来每箱至少多收24美金以上处理费。作者行情差只能少量试款，面临两难：把合仓处理费当试款成本接受，或寻找低成本发货方式；文中明确了费用门槛数据，但仅提出问题未给出解法。",
+      "category": "policy",
+      "score": 6.2,
+      "url": "https://www.wearesellers.com/question/125206",
+      "source": "wearesellers",
+      "published_at": "2026-10-09T11:43:57.043Z"
+    },
+    {
+      "title": "捡漏的本质 不是便宜点击，广告捡漏的八个入口 从筛选流量到控制成交成本（附找到的前辈文章）",
+      "summary": "捡漏本质是在相关流量里用可承受成本拿订单，定位补充渠道而非主力。方法：出价边界以正常竞价1/5开跑、最高不超1/3；按贡献利润与目标ACOS倒推可承受CPC，例25美元订单、目标ACOS20%、转化率8%时CPC约0.40美元；长尾词优先已有转化词，用ABA特征词筛点击份额大于转化份额的词，阶梯法逐级测最低曝光价，并设转化率基准淘汰线。",
+      "category": "experience",
+      "score": 9,
+      "url": "https://www.wearesellers.com/question/125231",
+      "source": "wearesellers",
+      "published_at": "2026-10-09T10:27:17.825Z"
+    },
+    {
+      "title": "When do you blame the product, the creatives or the ads?",
+      "summary": "新品上架一两周无单时的排查顺序问题：先用点击率与转化率判断流量承接，再改主图、加视频等素材，其次调广告关键词与竞价，最后才归因选品差并砍listing。核心是以量化指标设定每步触发条件，避免无数据时盲目归责或乱改。",
+      "category": "experience",
+      "score": 6.2,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1x1hkeb/when_do_you_blame_the_product_the_creatives_or",
+      "source": "reddit_fba",
+      "published_at": "2026-10-09T10:12:56.000Z"
+    },
+    {
+      "title": "Q4 Reminder: Don't Let Shipping Deadlines Compromise Product Quality",
+      "summary": "Q4旺季备货的质检实操提醒：工厂赶工易产生五类隐患——批次做工不一致、漏配件或错包装、未完成终检就装箱、FBA标签与箱唛错误、临时更换材料部件；方法是与发货日错开验货时间，预留工厂整改和复检窗口。核心结论是晚到几天损失有限，旺季收一批次品代价远更大，可直接纳入备货流程。",
+      "category": "experience",
+      "score": 9,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1x0q71l/q4_reminder_dont_let_shipping_deadlines",
+      "source": "reddit_fba",
+      "published_at": "2026-10-08T12:55:55.000Z"
+    },
+    {
+      "title": "​亚马逊老品优化：三条主线（附带出处）",
+      "summary": "针对单量不温不火、无明显下滑的老品，先定位卡点再动手：点击够而转化差是承接问题，点击本身不足是入口问题。方法按三条主线依次执行：先盘自己的图片与Listing承接力，再反查竞品流量结构找差距，最后用广告验证放大，顺序不可颠倒。自查标准：广告花费占销售额低于20%还有余地，超过30%且毛利率低于15%时继续加预算大概率是赔本买卖。",
+      "category": "experience",
+      "score": 9,
+      "url": "https://www.wearesellers.com/question/125204",
+      "source": "wearesellers",
+      "published_at": "2026-10-09T07:26:29.659Z"
+    },
+    {
+      "title": "亚马逊广告推出\"评论邀请\"广告格式，美国站点预计今秋公测",
+      "summary": "亚马逊广告推出评论邀请广告格式，向近期购买的已验证买家推送一键星级或图文视频评论邀请；美国站封闭测试期间参与卖家周评论量达测试前3倍。门槛为商品总评分与评论数低于1000条方可投放，达标自动暂停，仅限账户状态良好、无违规记录的注册卖家与供应商；美国站预计2026年10月下旬公测，卖家可提前核查资质并规划新品冲评。",
       "category": "trend",
-      "score": 7.8,
-      "url": "https://www.wearesellers.com/question/125159",
-      "source": "wearesellers",
-      "published_at": "2026-10-08T10:40:09.411Z"
+      "score": 8.4,
+      "url": "https://www.amz123.com/kx/wDNCwmG6",
+      "source": "amz123",
+      "published_at": "2026-10-09T06:13:45.000Z"
     },
     {
-      "title": "美国玩具被CPSC在亚马逊购买抽测不合规，纠正措施：停止销售。这情况该怎么回复，对别的子体有影响么",
-      "summary": "美国站玩具遭CPSC亚马逊购买抽测判定不合规并收到NOV邮件，两项问题为小零件拉力测试脱落和电池仓盖板螺丝拆下会掉，官方纠正措施为停止销售。卖家收到邮件后已删除父体并拆开全部子体，正在确认如何回复NOV、其他子体是否受影响。核心信息：CPSC购买抽测不合规的直接后果是停售，需按NOV要求处理回复与整改。",
-      "category": "policy",
-      "score": 7.2,
-      "url": "https://www.wearesellers.com/question/125148",
-      "source": "wearesellers",
-      "published_at": "2026-10-08T08:39:53.470Z"
-    },
-    {
-      "title": "Anyone else paying over $1.40 a click on their own brand name because competitors keep bidding on it?",
-      "summary": "竞品8月起跟投品牌ASIN，品牌词精确匹配CPC六周内从0.31美元涨至1.42美元，同广告组同预算其余未变；约三分之一广告费花在本就会找到你的买家身上，TACoS表面健康实为自然单在撑。核心取舍是加价防守硬扛竞价底价，还是放弃品牌词防守承受流失，需先算清防守成本与自然位护城河。",
-      "category": "experience",
-      "score": 7.8,
-      "url": "https://www.reddit.com/r/AmazonSeller/comments/1wvm1z6/anyone_else_paying_over_140_a_click_on_their_own",
-      "source": "reddit_seller",
-      "published_at": "2026-10-02T05:56:56.000Z"
-    },
-    {
-      "title": "更换亚马逊店铺主体需要注意什么？怎么操作才更安全？之前刷到需要报备，我去问了客服之后，客服要求我更改之前需要得到亚马逊的许可之后才可以更改......",
-      "summary": "更换店铺主体不能直接操作，需先获得亚马逊许可，客服要求提交四项材料：更改主体的原因、新老主体关系（收购、重组等）、新主体营业执照、新主体税务登记。报备核心是说明主体变更背景并提供新主体资质文件，帖内还在确认税务登记具体含义及哪种变更理由更安全更能通过。",
-      "category": "policy",
-      "score": 7.4,
-      "url": "https://www.wearesellers.com/question/118628",
-      "source": "wearesellers",
-      "published_at": "2026-10-08T10:40:19.092Z"
-    },
-    {
-      "title": "PD前广告&自然点击上涨、转化率下滑，国庆9.30-10.3期间，大家也是这样吗？",
-      "summary": "国庆9.30-10.3美国站PD前数据异常：单量打对折、广告花费没减，点击量反而增长，但广告转化率较前一周大幅下滑，往年PD只有前两天流量差。作者未改listing、仅节前改过投放词，推测链接处于再激活状态，亚马逊向不同人群试探投放带来低质点击，可作为转化率异常的排查思路。",
-      "category": "experience",
-      "score": 6.8,
-      "url": "https://www.wearesellers.com/question/125179",
-      "source": "wearesellers",
-      "published_at": "2026-10-08T10:40:14.094Z"
-    },
-    {
-      "title": "# Amazon案例分析 # 亚马逊来图定制产品，如何在一个月内做到日均50-100单？希望能从广告结构、关键词布局、运营节奏等，从大方向到具体操作上给出明确的建议。不限方法、不限预算，acos别太离谱",
-      "summary": "亚马逊来图定制新品上架当天开广告，结构为自动加手动核心词宽泛、组词仅降低，二三四级词手动精准固定，预算出价用系统推荐，结果平均竞价高达2.5、点击率仅0.1%；随后每日下调竞价0.2，并调整关键词、关闭无点击SKU、修改主图和listing，日花费70-100美元仅出1-3单，与日均50-100单目标差距大，发帖求解广告结构与运营节奏打法。",
-      "category": "experience",
-      "score": 6.6,
-      "url": "https://www.wearesellers.com/question/125169",
-      "source": "wearesellers",
-      "published_at": "2026-10-07T12:39:46.461Z"
-    },
-    {
-      "title": "用Grok Bot搭建5个跨境电商数字员工，实现自动化经营（附部署教程）",
-      "summary": "Grok Bot是xAI的云端Agent助手，配云电脑可7×24定时执行任务，工作背景可存成Skill复用，多Bot能群聊协作交接，适合岗位固定、流程明确的持续任务；文中实测竞品情报Bot等5个跨境电商场景并开放从0到1部署教程与提示词，用Google账号可领7天免费试用，付费档与Cursor套餐打通。",
+      "title": "亚马逊宠物喂食器还能不能做？拆完 403 条差评，两款头部都卡在同一个地方",
+      "summary": "拆完两款头部宠物喂食器共403条差评的结论：评分低于4星的类目不应直接划掉，先拆头部差评区分品牌级坑与品类级坑，前者绕开，后者是明牌进场点。品类卡点集中在联网可靠性：贵款服务器中断导致错过喂食35条居首，按月销千台估算其每月退货损失一万四美金出头。打法是把断网也能按点出粮做成卖点，接走最不满用户，避开堆功能与纯压成本两条老路。",
       "category": "experience",
       "score": 8.4,
-      "url": "https://www.wearesellers.com/question/125154",
+      "url": "https://www.wearesellers.com/question/125176",
       "source": "wearesellers",
-      "published_at": "2026-10-08T07:39:25.817Z"
+      "published_at": "2026-10-09T08:26:36.443Z"
     },
     {
-      "title": "Prime Big Deal Days is next week. How are you balancing discounts, bids and margin this time?",
-      "summary": "Prime大促（10月6-7日）备战打法：活动前数周对主图做A/B测试并适配新标题与高亮格式，先补转化再拉流量；主力产品设20%折扣，需权衡销量提升与毛利损耗；提前测试Sponsored Products广告与竞价规则。参考数据：2025年两场Prime Day达日常8-10倍销量，最近一场仅3-4倍，应复盘下滑原因后再定折扣与广告力度。",
-      "category": "experience",
-      "score": 7.8,
-      "url": "https://www.reddit.com/r/AmazonSeller/comments/1wvxfsn/prime_big_deal_days_is_next_week_how_are_you",
-      "source": "reddit_seller",
-      "published_at": "2026-10-02T15:55:01.000Z"
-    },
-    {
-      "title": "How has there not been more complaints about the OTDR violation issues? Forcing sellers to pay more for Amazon shipping labels.",
-      "summary": "自发货卖家两年内第6次收到OTDR违规警告，当天或次日交邮仍因USPS/UPS晚点1-2小时被追责并威胁停用账户。其运输模板已设5-8天，但后台自动时效与之冲突，仍向买家承诺2-3天送达；客服称属内部错误，并要求购买亚马逊标签以豁免OTDR追责，价格比Pirate Ship贵约30%，实为变相强制付费换指标安全。",
-      "category": "policy",
-      "score": 8.4,
-      "url": "https://www.reddit.com/r/AmazonSeller/comments/1wst107/how_has_there_not_been_more_complaints_about_the",
-      "source": "reddit_seller",
-      "published_at": "2026-09-28T22:30:33.000Z"
-    },
-    {
-      "title": "I think Amazon listings are starting to look too similar",
-      "summary": "同类目Listing已高度同质化：白底主图、生活方式图、图标、对比表和A+结构雷同，根源是所有人复制同一套最佳实践。AI让合格素材几分钟即可量产，合格本身不再构成优势。可行方向是建立品牌视觉识别，让买家不读品牌名也能认出产品，同时不牺牲转化清晰度。",
+      "title": "亚马逊广告发布AI广告平台，全流域广告活动向美国广告主全面开放",
+      "summary": "亚马逊广告在unBoxed大会将广告控制台与DSP整合为AI广告平台，广告活动分为搜索、DVA+与全流域三类；全流域广告已向美国全体广告主开放，仅需提供预算、商品与创意素材，AI自动负责渠道分配、受众定向及持续优化，测试广告主长期回报率提升67%、品牌新客成本降29%；DVA+预计2026年10月下旬在美推出。",
       "category": "trend",
-      "score": 6.8,
-      "url": "https://www.reddit.com/r/AmazonSeller/comments/1wxajuj/i_think_amazon_listings_are_starting_to_look_too",
-      "source": "reddit_seller",
-      "published_at": "2026-10-04T08:27:52.000Z"
+      "score": 8.4,
+      "url": "https://www.amz123.com/kx/gnVPL5Br",
+      "source": "amz123",
+      "published_at": "2026-10-09T06:13:41.000Z"
+    },
+    {
+      "title": "CBP starts voiding importer numbers with wrong Form 5106 details on September 18 (four things to check)",
+      "summary": "美国海关自2026年9月18日起逐一核查进口商存档的Form 5106，信息不准将作废IOR号且无法清关。应让货代调出5106核对四项：地址须为实体地址（可用负责人家庭住址，禁用注册代理、货代、P.O.箱）；邮箱和电话须属IOR本人；货代须持与IOR直接签署的POA。恢复需按指定主题行邮件申请，官方未给时限。",
+      "category": "policy",
+      "score": 9.4,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wgmkm6/cbp_starts_voiding_importer_numbers_with_wrong",
+      "source": "reddit_fba",
+      "published_at": "2026-09-15T01:36:54+00:00"
+    },
+    {
+      "title": "调研显示仅23%亚马逊买家能识别搜索首位广告",
+      "summary": "Remazing与Appinio覆盖英德意法西美6000名买家的报告显示，仅23%能正确识别搜索首位商品为付费广告位，较上年降1个百分点；25%认为是平台最匹配结果，24%认为销量最高；74%愿意购买赞助商品，美国接受度79%。结论：多数买家无法分辨首位广告且对赞助商品接受度高，首页顶部广告位兼具伪装性与转化价值，可加大头部关键词首页广告投入。",
+      "category": "trend",
+      "score": 6.4,
+      "url": "https://www.amz123.com/kx/fwFCrI7o",
+      "source": "amz123",
+      "published_at": "2026-10-09T11:16:45.000Z"
     }
   ]
 }
