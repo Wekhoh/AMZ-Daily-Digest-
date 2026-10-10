@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-09T12:42:30Z",
-  "digest_date": "2026-10-09",
+  "generated_at_utc": "2026-10-10T11:55:52Z",
+  "digest_date": "2026-10-10",
   "article_count": 50,
   "articles": [
     {
-      "title": "新品发不满5箱，被强制合仓每箱多几十美金的处理费，少量试款怎么发？前期发得少，是不是就只能接受这笔合仓处理费，当做自己试款成本呢？",
-      "summary": "按现行入库规则，单SKU发满5箱以上才免亚马逊处理费，箱数不足会被强制合并成一个货件，算下来每箱至少多收24美金以上处理费。作者行情差只能少量试款，面临两难：把合仓处理费当试款成本接受，或寻找低成本发货方式；文中明确了费用门槛数据，但仅提出问题未给出解法。",
+      "title": "运营还在每天抄广告位？真正该记录的，是关键词流量份额",
+      "summary": "人工记录关键词广告位只是不稳定的前台快照，判断流量增减应改看Search Term Impression Share报告：IS是账户在某搜索词SP曝光的份额占比，IR是曝光量在全部广告主中的排名；前台手搜只用于确认广告触发、发现新强势竞品、检查变体价格和Coupon异常，大促期间位置波动更大，趋势判断必须用份额而非位置。",
+      "category": "experience",
+      "score": 8.4,
+      "url": "https://www.wearesellers.com/question/125216",
+      "source": "wearesellers",
+      "published_at": "2026-10-10T10:45:42.304Z"
+    },
+    {
+      "title": "Amazon Fiasco",
+      "summary": "膳食补充剂listing先因非有机被下架，卖家两次提交USDA认证、制造商认证及独立认证机构信息后恢复；不到一小时又被误判为FDA医疗器械，要求提供510(k)清关文件。产品仅为草本加水加甘油的补充剂，邮件申诉与卖家支持沟通均被驳回，FBA仓数千件库存被困。启示：该类目易被系统误分类，需备齐认证文件并持续申诉升级。",
       "category": "policy",
-      "score": 6.2,
-      "url": "https://www.wearesellers.com/question/125206",
-      "source": "wearesellers",
-      "published_at": "2026-10-09T11:43:57.043Z"
-    },
-    {
-      "title": "捡漏的本质 不是便宜点击，广告捡漏的八个入口 从筛选流量到控制成交成本（附找到的前辈文章）",
-      "summary": "捡漏本质是在相关流量里用可承受成本拿订单，定位补充渠道而非主力。方法：出价边界以正常竞价1/5开跑、最高不超1/3；按贡献利润与目标ACOS倒推可承受CPC，例25美元订单、目标ACOS20%、转化率8%时CPC约0.40美元；长尾词优先已有转化词，用ABA特征词筛点击份额大于转化份额的词，阶梯法逐级测最低曝光价，并设转化率基准淘汰线。",
-      "category": "experience",
-      "score": 9,
-      "url": "https://www.wearesellers.com/question/125231",
-      "source": "wearesellers",
-      "published_at": "2026-10-09T10:27:17.825Z"
-    },
-    {
-      "title": "When do you blame the product, the creatives or the ads?",
-      "summary": "新品上架一两周无单时的排查顺序问题：先用点击率与转化率判断流量承接，再改主图、加视频等素材，其次调广告关键词与竞价，最后才归因选品差并砍listing。核心是以量化指标设定每步触发条件，避免无数据时盲目归责或乱改。",
-      "category": "experience",
-      "score": 6.2,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1x1hkeb/when_do_you_blame_the_product_the_creatives_or",
+      "score": 7.8,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1x1rvnp/amazon_fiasco",
       "source": "reddit_fba",
-      "published_at": "2026-10-09T10:12:56.000Z"
+      "published_at": "2026-10-09T17:44:28.000Z"
     },
     {
-      "title": "Q4 Reminder: Don't Let Shipping Deadlines Compromise Product Quality",
-      "summary": "Q4旺季备货的质检实操提醒：工厂赶工易产生五类隐患——批次做工不一致、漏配件或错包装、未完成终检就装箱、FBA标签与箱唛错误、临时更换材料部件；方法是与发货日错开验货时间，预留工厂整改和复检窗口。核心结论是晚到几天损失有限，旺季收一批次品代价远更大，可直接纳入备货流程。",
+      "title": "卖12年的老链接，被28条评分的新品挤到第5",
+      "summary": "护肩红海里新品上架19天、28条rating冲到小类第四、月销1580，打法是评价打底加Coupon撑量：直接对标Anaconda省去需求验证，标价35.99不降，Coupon从15%提到20%把成交价压到28.79卡位截流；26条评分中23条来自Vine真实性存疑，且长期折扣价会被计入历史价格基准，压缩后续报秒杀和Prime专享折扣的空间。",
       "category": "experience",
       "score": 9,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1x0q71l/q4_reminder_dont_let_shipping_deadlines",
-      "source": "reddit_fba",
-      "published_at": "2026-10-08T12:55:55.000Z"
+      "url": "https://www.wearesellers.com/question/125234",
+      "source": "wearesellers",
+      "published_at": "2026-10-10T10:45:39.752Z"
     },
     {
-      "title": "​亚马逊老品优化：三条主线（附带出处）",
-      "summary": "针对单量不温不火、无明显下滑的老品，先定位卡点再动手：点击够而转化差是承接问题，点击本身不足是入口问题。方法按三条主线依次执行：先盘自己的图片与Listing承接力，再反查竞品流量结构找差距，最后用广告验证放大，顺序不可颠倒。自查标准：广告花费占销售额低于20%还有余地，超过30%且毛利率低于15%时继续加预算大概率是赔本买卖。",
+      "title": "亚马逊评论分析前，我会先筛掉671条合并评价和27条全五星VINE，这些数据还能信吗？",
+      "summary": "Review分析前先保真再保相关：用Keepa评价曲线验证真实性，链接合并一次性涌入671条评价、27条全五星长篇VINE的样本直接剔除；分析时跨价格带对比，区分价格决定、产品决定、可用定价绕开的三类痛点，样本需材质用途真正接近，并排除多年前老链接的过时差评。",
       "category": "experience",
       "score": 9,
-      "url": "https://www.wearesellers.com/question/125204",
+      "url": "https://www.wearesellers.com/question/125256",
       "source": "wearesellers",
-      "published_at": "2026-10-09T07:26:29.659Z"
+      "published_at": "2026-10-10T04:46:00.927Z"
     },
     {
-      "title": "亚马逊广告推出\"评论邀请\"广告格式，美国站点预计今秋公测",
-      "summary": "亚马逊广告推出评论邀请广告格式，向近期购买的已验证买家推送一键星级或图文视频评论邀请；美国站封闭测试期间参与卖家周评论量达测试前3倍。门槛为商品总评分与评论数低于1000条方可投放，达标自动暂停，仅限账户状态良好、无违规记录的注册卖家与供应商；美国站预计2026年10月下旬公测，卖家可提前核查资质并规划新品冲评。",
-      "category": "trend",
-      "score": 8.4,
-      "url": "https://www.amz123.com/kx/wDNCwmG6",
-      "source": "amz123",
-      "published_at": "2026-10-09T06:13:45.000Z"
-    },
-    {
-      "title": "亚马逊宠物喂食器还能不能做？拆完 403 条差评，两款头部都卡在同一个地方",
-      "summary": "拆完两款头部宠物喂食器共403条差评的结论：评分低于4星的类目不应直接划掉，先拆头部差评区分品牌级坑与品类级坑，前者绕开，后者是明牌进场点。品类卡点集中在联网可靠性：贵款服务器中断导致错过喂食35条居首，按月销千台估算其每月退货损失一万四美金出头。打法是把断网也能按点出粮做成卖点，接走最不满用户，避开堆功能与纯压成本两条老路。",
+      "title": "# Amazon案例分析 # 亚马逊化妆品类目广告CPA从$6涨到$15，点击和转化同时下降，该先查哪里？如何优化低样本搜索词和预算分配",
+      "summary": "化妆品类目广告突然恶化：日均点击降约37%、订单降约78%，全周期CPA约$7.15、目标控制在$7内；358个搜索词中300个无订单且占花费56%，其中281个仅1-2次点击，直接否定样本不足；评分从5星波动跌回4.1、评论仅剩10条；帖内提出排查顺序与预算分配问题，尚无结论。",
       "category": "experience",
-      "score": 8.4,
-      "url": "https://www.wearesellers.com/question/125176",
+      "score": 6.2,
+      "url": "https://www.wearesellers.com/question/125254",
       "source": "wearesellers",
-      "published_at": "2026-10-09T08:26:36.443Z"
+      "published_at": "2026-10-10T07:46:07.680Z"
     },
     {
-      "title": "亚马逊广告发布AI广告平台，全流域广告活动向美国广告主全面开放",
-      "summary": "亚马逊广告在unBoxed大会将广告控制台与DSP整合为AI广告平台，广告活动分为搜索、DVA+与全流域三类；全流域广告已向美国全体广告主开放，仅需提供预算、商品与创意素材，AI自动负责渠道分配、受众定向及持续优化，测试广告主长期回报率提升67%、品牌新客成本降29%；DVA+预计2026年10月下旬在美推出。",
-      "category": "trend",
-      "score": 8.4,
-      "url": "https://www.amz123.com/kx/gnVPL5Br",
-      "source": "amz123",
-      "published_at": "2026-10-09T06:13:41.000Z"
-    },
-    {
-      "title": "CBP starts voiding importer numbers with wrong Form 5106 details on September 18 (four things to check)",
-      "summary": "美国海关自2026年9月18日起逐一核查进口商存档的Form 5106，信息不准将作废IOR号且无法清关。应让货代调出5106核对四项：地址须为实体地址（可用负责人家庭住址，禁用注册代理、货代、P.O.箱）；邮箱和电话须属IOR本人；货代须持与IOR直接签署的POA。恢复需按指定主题行邮件申请，官方未给时限。",
+      "title": "深圳海关查获两起瞒报案：COSCO、OOCL柜共涉22.54吨食品",
+      "summary": "深圳海关10月9日查获两起瞒报案：COSCO柜申报卷纸湿纸巾夹藏冰红茶等未申报食品3.52吨，OOCL柜申报玩具实载流质糖果19.02吨，合计22.54吨法定检验商品。瞒报食品按货值5%至20%罚款，长期多次故意逃避商检可能升级刑事案件；货主与货代须依法申报并办理法定检验手续。",
       "category": "policy",
-      "score": 9.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wgmkm6/cbp_starts_voiding_importer_numbers_with_wrong",
-      "source": "reddit_fba",
-      "published_at": "2026-09-15T01:36:54+00:00"
+      "score": 7,
+      "url": "https://www.amz123.com/kx/FuKESGro",
+      "source": "amz123",
+      "published_at": "2026-10-10T09:44:09.000Z"
     },
     {
-      "title": "调研显示仅23%亚马逊买家能识别搜索首位广告",
-      "summary": "Remazing与Appinio覆盖英德意法西美6000名买家的报告显示，仅23%能正确识别搜索首位商品为付费广告位，较上年降1个百分点；25%认为是平台最匹配结果，24%认为销量最高；74%愿意购买赞助商品，美国接受度79%。结论：多数买家无法分辨首位广告且对赞助商品接受度高，首页顶部广告位兼具伪装性与转化价值，可加大头部关键词首页广告投入。",
+      "title": "5美元包子捏捏炒至200美元 JOYIN万圣节蒸笼款30天GMV达98.86万美元",
+      "summary": "JOYIN万圣节蒸笼捏捏接棒TikTok美区包子捏捏热度，近30天售出27993件，GMV达98.86万美元，90天累计166.41万美元。核心打法是把既有捏捏认知、万圣节Boo Basket送礼场景与开盖挤压视觉反差叠加，以低客单情绪玩具卡位节日窗口期冲高转化；达人侧靠31秒剧情视频（966万播放、带货8.92万美元），并已关联1000多位达人与3757条视频铺量。",
       "category": "trend",
-      "score": 6.4,
-      "url": "https://www.amz123.com/kx/fwFCrI7o",
+      "score": 9,
+      "url": "https://www.amz123.com/kx/L7Xsm5U0",
       "source": "amz123",
-      "published_at": "2026-10-09T11:16:45.000Z"
+      "published_at": "2026-10-10T05:52:33.000Z"
+    },
+    {
+      "title": "TikTok Shop 450万商品报告：逾三分之二头部收入来自身体相关商品",
+      "summary": "追踪15万美国卖家、450万件商品的报告显示，TikTok Shop头部商品超三分之二收入来自涂抹、口服或穿戴于身体的商品，美妆占近三成，中位价约40美元；粉丝量、视频产出与商品数量均与销量相关但权重不同，榜单更替快、长期留存难。布局TikTok Shop的卖家应聚焦身体类目、围绕40美元定价，并在前六个月按权重分配运营资源。",
+      "category": "trend",
+      "score": 6.6,
+      "url": "https://www.amz123.com/kx/o7NsEO7e",
+      "source": "amz123",
+      "published_at": "2026-10-10T04:21:34.000Z"
+    },
+    {
+      "title": "比起 Muse 和 Dots，我更推荐 Grok Bot",
+      "summary": "对比Muse、Dots与Grok Bot：跑亚马逊且需要多AI分工时优先Grok Bot，云电脑加多个分岗AI加大总管统筹，SuperGrok每月30美元起；Muse偏生活琐事，Dots需Pro或Business Premium且目前仅一个Agent。本地接领星ERP与选品关键词MCP可覆盖八到九成场景，再按选品广告库存Listing拆岗并写岗位说明，只找总管拍板。",
+      "category": "trend",
+      "score": 7.4,
+      "url": "https://www.wearesellers.com/question/125219",
+      "source": "wearesellers",
+      "published_at": "2026-10-10T07:45:37.437Z"
+    },
+    {
+      "title": "求助，亚马逊视频验证信用卡账单，店铺绑定信用卡不是法人的，账单如何获取？审核时需要实体卡片吗？",
+      "summary": "英国站虚拟视频验证要点：14天内未完成即停用账户并冻结资金；需备政府带照片证件、存款账户近180天银行对账单、付费信用卡近180天对账单及企业注册文件，且须含全名、地址、银行信息；母语在下拉列表时不可用口译；结果5个工作日内回复，误判可向seller-reactivation@amazon.co.uk申诉，绑卡非法人须提前调取该卡对账单。",
+      "category": "policy",
+      "score": 7.4,
+      "url": "https://www.wearesellers.com/question/125259",
+      "source": "wearesellers",
+      "published_at": "2026-10-10T10:46:16.686Z"
     }
   ]
 }
