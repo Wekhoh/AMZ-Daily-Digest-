@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-11T12:10:38Z",
-  "digest_date": "2026-10-11",
+  "generated_at_utc": "2026-10-12T14:20:14Z",
+  "digest_date": "2026-10-12",
   "article_count": 50,
   "articles": [
     {
-      "title": "美国法院放行IEEPA关税集体诉讼，进口商可追退税",
-      "summary": "美国法院为进口商就IEEPA关税提起集体诉讼扫清程序障碍。最高法院2月已判定IEEPA未授权总统征收关税，海关CAPE退款程序仅覆盖未清算及清算80天内的条目；若集体诉讼获认证，退款范围将扩展至清算超80天、邮政渠道进口等CAPE不覆盖情形。在美有进口业务的中小卖家应关注诉讼认证进展，通过集体途径以更低成本追回被错征关税。",
-      "category": "policy",
-      "score": 8.4,
-      "url": "https://www.amz123.com/kx/ZIqzaEVn",
-      "source": "amz123",
-      "published_at": "2026-10-11T07:28:24.000Z"
-    },
-    {
-      "title": "做了2年亚马逊，一直凭感觉算利润，朋友说我账算错了",
-      "summary": "卖家长期按采购价加头程加FBA费估算利润，漏算广告费、仓储费、退货、汇损和预留金，导致月销5万美金账面应赚2万多实际到账仅1.5万；真实利润需逐项归集杂费，可用Excel或核算工具对账，并确认预留金与汇损的计入口径。",
-      "category": "experience",
-      "score": 6.8,
-      "url": "https://www.wearesellers.com/question/124878",
-      "source": "wearesellers",
-      "published_at": "2026-10-11T08:58:54.301Z"
-    },
-    {
-      "title": "亚马逊紧急预警：高度仿真钓鱼邮件以\"24小时停用\"诱导卖家点击恶意链接",
-      "summary": "亚马逊官方预警：高度仿真钓鱼邮件以账户异常、24小时内不验证将永久停用为由诱导卖家点击恶意链接或下载附件。官方声明绝不通过邮件索取银行账户、信用卡、密码，真实网址仅以amazon.com、amazonsellerservices.com或sellercentral.amazon.com结尾。卖家应不点邮件链接与附件，仅从卖家平台官方入口登录，并在业绩通知与管理订单页核实账户信息。",
-      "category": "policy",
-      "score": 9,
-      "url": "https://www.amz123.com/kx/1y9fxBXh",
-      "source": "amz123",
-      "published_at": "2026-10-06T05:49:09+00:00"
-    },
-    {
-      "title": "# Amazon案例分析 # 新品期应该怎么设置广告?目前上架了一款新品，曝光较正常，点击率低，转化差，acos爆掉，怎么调整才能提高转化？",
-      "summary": "新品上架20天案例：评论29个、评分4.7、绿标23个，竞品评分4.0-4.4，活动价与竞品接近，日单量从1-2单增至3-5单。核心问题：广告转化率低且CPC、系统建议竞价双高，调低竞价就掉曝光，跑活动后转化与ACOS均未改善。待解：该调广告还是优化页面、新品如何让流量更精准、定位广告流量全跑商品页如何纠正。",
-      "category": "experience",
-      "score": 7.2,
-      "url": "https://www.wearesellers.com/question/125264",
-      "source": "wearesellers",
-      "published_at": "2026-10-11T09:58:24.154Z"
-    },
-    {
-      "title": "丢失购物车如何恢复？",
-      "summary": "加拿大站产品因定价被判定相比站外零售商缺乏竞争力而失去推荐报价资格，疑为Temu卖家盗图低价链接被比价抓取；可行方向包括排查并投诉站外比价链接、开case申诉、用优惠券或Prime折扣、先降价后提价，但帖内均未验证实际效果。",
-      "category": "policy",
-      "score": 7.2,
-      "url": "https://www.wearesellers.com/question/125282",
-      "source": "wearesellers",
-      "published_at": "2026-10-11T07:58:56.529Z"
-    },
-    {
-      "title": "As anyone else been having a nightmare with the Amazon C2C shipping from UK to EU?",
-      "summary": "亚马逊对英国至欧盟C2C发货新增校验：箱毛重必须大于总净重（每箱件数×单件净重），但报错时卖家中心任何位置都不显示提示，卖家无从排查；8年老卖家指该功能未经充分用户测试，最简单的问题也常需数周才修复。可执行点：创建英欧C2C货件前先自查毛重大于箱内总净重，避免报错卡单流失销售。",
-      "category": "experience",
-      "score": 6.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1x350db/as_anyone_else_been_having_a_nightmare_with_the",
-      "source": "reddit_fba",
-      "published_at": "2026-10-11T10:39:30.000Z"
-    },
-    {
-      "title": "Kaufland利润增长33%，谋求构建抗衡电商巨头的欧洲销售阵营",
-      "summary": "Kaufland最新财报利润同比增长33%，明确提出打造欧洲反制力量，计划在本土及中东欧建销售网络对抗亚马逊和Temu，规模有望超Allegro；平台已打通德捷斯波奥多国跨境销售，卖家基数小竞争有限，线下门店品牌信任可降低获客成本，是欧洲扩张的新兴渠道备选。",
+      "title": "为啥你做测评老被抓？ORCsize 暴露的，不只是订单",
+      "summary": "ORCsize用于识别留评异常：7天口径为近7天留评率除以前28天基准留评率，14天口径除以前56天基准，核心是比较近期留评率相对历史基准放大多少，再与串谋、排名操纵、刷单三条链路交叉印证；真人下单若呈协同、集中或异常增长仍会暴露。方法：保持留评节奏与统计口径平稳，交易评价需真实独立可解释；文中口径非官方公开算法。",
       "category": "trend",
-      "score": 6,
-      "url": "https://www.amz123.com/kx/d59tgO6k",
-      "source": "amz123",
-      "published_at": "2026-10-11T07:48:43.000Z"
+      "score": 8.4,
+      "url": "https://www.wearesellers.com/question/125323",
+      "source": "wearesellers",
+      "published_at": "2026-10-12T13:10:43.576Z"
     },
     {
-      "title": "亚马逊选品怎么避坑？拆完 7 个品类近 3000 条差评，能改的地方分三类",
-      "summary": "作者拆解7个品类近3000条差评，头部产品评分普遍在3到4分之间，问题出在实现而非需求。改进点分三类：一是低成本结构件与基础项，如耳挂、USB-C充电、密封料，对手大多没做；二是品控一致性与寿命，需先算货值是否容得下；三是原理硬伤靠客服和保修兜底，Zyllion靠服务把星级撑到3.8。拿到产品先按三类过差评，再决定是否进场。",
+      "title": "英德卖家福音！亚马逊头程新选择，价格比货代还低",
+      "summary": "Amazon SEND海运新开中国至英德航线，承运商为美通供应链AAF与九方通逊，英国45-58天、德国47-63天；采用亚马逊协议价，国内入仓与中转费全免，分仓提货灵活，英德库容紧张时自动转仓。打法：海运做计划性补货，空运8-12天做紧急补货测款；在卖家平台供应链菜单选Amazon Partner Carrier创建货件。",
+      "category": "trend",
+      "score": 8,
+      "url": "https://www.wearesellers.com/question/125322",
+      "source": "wearesellers",
+      "published_at": "2026-10-12T12:10:48.112Z"
+    },
+    {
+      "title": "捡漏的本质 不是便宜点击，广告捡漏的八个入口 从筛选流量到控制成交成本（附找到的前辈文章）",
+      "summary": "捡漏本质是在相关流量里用可承受成本拿订单，定位补充渠道而非主力。方法：出价边界以正常竞价1/5开跑、最高不超1/3；按贡献利润与目标ACOS倒推可承受CPC，例25美元订单、目标ACOS20%、转化率8%时CPC约0.40美元；长尾词优先已有转化词，用ABA特征词筛点击份额大于转化份额的词，阶梯法逐级测最低曝光价，并设转化率基准淘汰线。",
       "category": "experience",
       "score": 9,
-      "url": "https://www.wearesellers.com/question/125105",
+      "url": "https://www.wearesellers.com/question/125231",
       "source": "wearesellers",
-      "published_at": "2026-10-03T04:58:56.655+00:00"
+      "published_at": "2026-10-09T10:27:17.825+00:00"
     },
     {
-      "title": "我们公司美工组开始转运营了，说说 AI 出图到底改了什么",
-      "summary": "测款流程改为工厂手机实拍加AI出图：按一页纸规范拍白墙浅色台面、光别太硬、不开闪光灯、正侧细节多角度，照片连同卖点和毛成本价录入系统，AI一次产出八张主副图加四张A+，初稿十分钟，样品未到即可开工。纯色结构简单的品直接上架；渐变色、复杂结构、自带文字logo的需框选返修约半小时；砸广告的核心款仍走摄影棚。",
+      "title": "Q4 Reminder: Don't Let Shipping Deadlines Compromise Product Quality",
+      "summary": "Q4旺季备货的质检实操提醒：工厂赶工易产生五类隐患——批次做工不一致、漏配件或错包装、未完成终检就装箱、FBA标签与箱唛错误、临时更换材料部件；方法是与发货日错开验货时间，预留工厂整改和复检窗口。核心结论是晚到几天损失有限，旺季收一批次品代价远更大，可直接纳入备货流程。",
       "category": "experience",
       "score": 9,
-      "url": "https://www.wearesellers.com/question/125033",
-      "source": "wearesellers",
-      "published_at": "2026-09-29T11:44:02.368+00:00"
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1x0q71l/q4_reminder_dont_let_shipping_deadlines",
+      "source": "reddit_fba",
+      "published_at": "2026-10-08T12:55:55+00:00"
     },
     {
-      "title": "亚马逊大批Listing划线价异常消失，卖家订单量大幅下滑",
-      "summary": "美国站大量Listing划线价无故消失、专享折扣报错，部分店铺六成乃至全部商品划线失效，叠加9月7日劳动节假期线下分流，销量腰斩、近三天单量仅为日常三分之一；业内消息指亚马逊将推行新参考价规则：90天周期内至少10%的天数按参考价成交才能展示划线价。卖家需立即核查前台优惠展示并调整定价，保证周期内有足够参考价出单天数。",
+      "title": "亚马逊MCF折扣上限提升至25% 独立站免费Prime配送全面开放",
+      "summary": "美国MCF卖家可立即利用的政策红利：优选定价计划履约费折扣上限升至25%，与按件发放的FBA抵扣金合并计算，前六个月省15%-25%，无需签合同、后台一键加入、发货后自动抵扣；独立站免费Prime配送全面开放，商品页展示Prime标识，买家选Prime配送后由亚马逊核验会员身份并从FBA库存发货，卖家结账、支付与店铺政策无需改动。",
       "category": "policy",
       "score": 9.4,
-      "url": "https://www.amz123.com/kx/6SrmZULT",
+      "url": "https://www.amz123.com/kx/YeKAMavg",
       "source": "amz123",
-      "published_at": "2026-09-08T02:12:27+00:00"
+      "published_at": "2026-09-24T10:39:53+00:00"
+    },
+    {
+      "title": "亚马逊上线虚拟身份验证：收到通知后14天内须完成视频核验，否则暂停销售",
+      "summary": "亚马逊上线虚拟身份验证，身份存疑卖家将收到视频核验通知，宽限期通常仅14天，部分账户不设宽限期，逾期未完成将暂停销售权限。入口在注册邮箱、绩效通知与账户状况页优先操作栏目。法人须备身份证或护照、企业注册文件、180天内银行及信用卡对账单、关系证明、供应链票据，材料不得图像处理，点击进入通话后无法回传，运营可陪同但不得代验。",
+      "category": "policy",
+      "score": 9,
+      "url": "https://www.amz123.com/kx/gOSy3rSD",
+      "source": "amz123",
+      "published_at": "2026-09-23T05:55:04+00:00"
+    },
+    {
+      "title": "​亚马逊老品优化：三条主线（附带出处）",
+      "summary": "针对单量不温不火、无明显下滑的老品，先定位卡点再动手：点击够而转化差是承接问题，点击本身不足是入口问题。方法按三条主线依次执行：先盘自己的图片与Listing承接力，再反查竞品流量结构找差距，最后用广告验证放大，顺序不可颠倒。自查标准：广告花费占销售额低于20%还有余地，超过30%且毛利率低于15%时继续加预算大概率是赔本买卖。",
+      "category": "experience",
+      "score": 9,
+      "url": "https://www.wearesellers.com/question/125204",
+      "source": "wearesellers",
+      "published_at": "2026-10-09T07:26:29.659+00:00"
+    },
+    {
+      "title": "# 运营案例分析 # 从3C换到家具类目，进来就是床垫清货，利润低，仓储费贵，打法好像跟3C差别很大，跑了几天广告没头绪了，求助各位大佬",
+      "summary": "大件家具FBM清货实录：199美金弹簧床垫不开广告利润仅10多美金，仓储费高使秒杀与广告均易亏本；父体下十多个尺寸床型变体，词根投放出现12寸产品跑出14寸流量错配。作者用自动加手动词根、每组预算5至10美金，广告日仅出1单，日销约8单多为自然单，结论是大件多尺寸产品广泛匹配流量过宽，考虑改用精准匹配或特定词组合。",
+      "category": "experience",
+      "score": 6.8,
+      "url": "https://www.wearesellers.com/question/113199",
+      "source": "wearesellers",
+      "published_at": "2026-10-12T11:10:52.687Z"
+    },
+    {
+      "title": "美国站因为比价 反反复复丢失购物车 比价Temu上1个同功能产品 但是产品颜色不一致  双方的图片也不一致",
+      "summary": "美国站购物车反复丢失，系被系统与Temu上一款同功能低价产品比价所致，双方颜色与图片不一致仍被匹配；多次开Case答复口径不一，Cart恢复仅维持数小时，Temu链接一天变价数次即再触发丢失，问题持续约20天，中介处理仅是给Jeff写邮件，基本无效。可用信息为比价触发机制与客服响应不稳定，文中无成熟解法。",
+      "category": "experience",
+      "score": 6.2,
+      "url": "https://www.wearesellers.com/question/125265",
+      "source": "wearesellers",
+      "published_at": "2026-10-12T03:10:39.041Z"
+    },
+    {
+      "title": "大件FBM新品广告转化差，要怎么提高转化率？日烧$200多几乎不出单，转化率不到0.9%，心态要崩了.......",
+      "summary": "大件FBM新品ebike转化困局：两条链接上架半月各仅2个直评，日烧广告200多美金几乎不出单。正常竞价自动加广泛表现差，改捡漏广告无效，大词精准只烧钱已关。价格不可降，A链接449/549美金另收100运费，B链接599/649免运费带50美金券；链接除评论少外无明显问题，疑因评论量与运费结构压制转化。",
+      "category": "experience",
+      "score": 6.2,
+      "url": "https://www.wearesellers.com/question/125320",
+      "source": "wearesellers",
+      "published_at": "2026-10-12T11:10:54.931Z"
     }
   ]
 }
