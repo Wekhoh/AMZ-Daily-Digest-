@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-12T14:20:14Z",
-  "digest_date": "2026-10-12",
+  "generated_at_utc": "2026-10-13T13:32:02Z",
+  "digest_date": "2026-10-13",
   "article_count": 50,
   "articles": [
     {
-      "title": "为啥你做测评老被抓？ORCsize 暴露的，不只是订单",
-      "summary": "ORCsize用于识别留评异常：7天口径为近7天留评率除以前28天基准留评率，14天口径除以前56天基准，核心是比较近期留评率相对历史基准放大多少，再与串谋、排名操纵、刷单三条链路交叉印证；真人下单若呈协同、集中或异常增长仍会暴露。方法：保持留评节奏与统计口径平稳，交易评价需真实独立可解释；文中口径非官方公开算法。",
+      "title": "亚马逊把索评做成广告了：Review Requests 是新品加速器，还是差评放大器？",
+      "summary": "亚马逊将上线Review Requests评论邀请广告，美国站预计2026年10月下旬公测，门槛为账户状态良好、无有效违规且商品总ratings和reviews少于1000，达标后自动暂停；封闭测试显示参与商品每周获评量约为测试前2倍。本质是花钱触达真实已购买家而非买评论，体验差的商品差评也会被放大，适合订单多但评价沉淀慢的新品，投放前须确认订单追溯天数等未明确规则。",
       "category": "trend",
       "score": 8.4,
-      "url": "https://www.wearesellers.com/question/125323",
+      "url": "https://www.wearesellers.com/question/125302",
       "source": "wearesellers",
-      "published_at": "2026-10-12T13:10:43.576Z"
+      "published_at": "2026-10-13T12:21:55.056Z"
     },
     {
-      "title": "英德卖家福音！亚马逊头程新选择，价格比货代还低",
-      "summary": "Amazon SEND海运新开中国至英德航线，承运商为美通供应链AAF与九方通逊，英国45-58天、德国47-63天；采用亚马逊协议价，国内入仓与中转费全免，分仓提货灵活，英德库容紧张时自动转仓。打法：海运做计划性补货，空运8-12天做紧急补货测款；在卖家平台供应链菜单选Amazon Partner Carrier创建货件。",
-      "category": "trend",
-      "score": 8,
-      "url": "https://www.wearesellers.com/question/125322",
+      "title": "美国站FBA入库缺陷：FedEx已送达却判错过送达时段，如何申诉？会影响后续发货吗？应该如何操作？有处理过类似情况的卖家，麻烦分享一下经验，非常感谢！",
+      "summary": "美国站卖家货件经FedEx发往FBA仓库，后台预约送达时段为9月27日至10月3日，FedEx显示9月25日已送达，但亚马逊后台10月9日才接收货件并判定错过送达时段缺陷。处理路径：申诉需准备FedEx签收证明、物流轨迹等材料以提高撤销成功率；若不申诉直接确认缺陷，需评估是否影响后续创建货件、发货入仓、仓库分配及产生额外费用。",
+      "category": "policy",
+      "score": 7.2,
+      "url": "https://www.wearesellers.com/question/125297",
       "source": "wearesellers",
-      "published_at": "2026-10-12T12:10:48.112Z"
+      "published_at": "2026-10-13T07:22:06.521Z"
     },
     {
-      "title": "捡漏的本质 不是便宜点击，广告捡漏的八个入口 从筛选流量到控制成交成本（附找到的前辈文章）",
-      "summary": "捡漏本质是在相关流量里用可承受成本拿订单，定位补充渠道而非主力。方法：出价边界以正常竞价1/5开跑、最高不超1/3；按贡献利润与目标ACOS倒推可承受CPC，例25美元订单、目标ACOS20%、转化率8%时CPC约0.40美元；长尾词优先已有转化词，用ABA特征词筛点击份额大于转化份额的词，阶梯法逐级测最低曝光价，并设转化率基准淘汰线。",
+      "title": "标品和非标品的冲量，真的有本质区别吗？标品与非标品的产品属性不同，但冲量的底层逻辑并没有本质区别。",
+      "summary": "标品与非标品冲量底层逻辑一致，核心是把核心关键词自然排名推上去。实操按广告位置数据分流：案例整体转化31%，手动精准广告其余位置转化35.3%优于商品页12.6%，操作是降低基础竞价并提高其余位置百分比，把亏损的商品页流量转移；表现差且点击量大的关键词优先降竞价。竞价以CPA为准，CPC高但转化稳定在30%左右即可接受。",
       "category": "experience",
-      "score": 9,
-      "url": "https://www.wearesellers.com/question/125231",
+      "score": 9.4,
+      "url": "https://www.wearesellers.com/question/125352",
       "source": "wearesellers",
-      "published_at": "2026-10-09T10:27:17.825+00:00"
+      "published_at": "2026-10-13T10:22:36.532Z"
     },
     {
-      "title": "Q4 Reminder: Don't Let Shipping Deadlines Compromise Product Quality",
-      "summary": "Q4旺季备货的质检实操提醒：工厂赶工易产生五类隐患——批次做工不一致、漏配件或错包装、未完成终检就装箱、FBA标签与箱唛错误、临时更换材料部件；方法是与发货日错开验货时间，预留工厂整改和复检窗口。核心结论是晚到几天损失有限，旺季收一批次品代价远更大，可直接纳入备货流程。",
+      "title": "How to tell a real yoga mat factory from a trading company before you pay a deposit (from someone on the factory side)",
+      "summary": "晋江瑜伽垫厂员工给出验真工厂的可执行方法：要求发泡线现场视频而非图册；询问现货色MOQ是否下降，TPE定制色约500件起、现货色加激光logo约100-200件，报价完全不动多为贸易商；索取带近期日期的REACH报告与ISO 9001/BSCI审计，营业执照须含生产范围；用30%定金加70%见提单付款、签封样、按书面标准验货，规格写明密度与克重而非仅厚度。",
       "category": "experience",
-      "score": 9,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1x0q71l/q4_reminder_dont_let_shipping_deadlines",
+      "score": 8.6,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1x44new/how_to_tell_a_real_yoga_mat_factory_from_a",
       "source": "reddit_fba",
-      "published_at": "2026-10-08T12:55:55+00:00"
+      "published_at": "2026-10-12T15:19:19.000Z"
     },
     {
-      "title": "亚马逊MCF折扣上限提升至25% 独立站免费Prime配送全面开放",
-      "summary": "美国MCF卖家可立即利用的政策红利：优选定价计划履约费折扣上限升至25%，与按件发放的FBA抵扣金合并计算，前六个月省15%-25%，无需签合同、后台一键加入、发货后自动抵扣；独立站免费Prime配送全面开放，商品页展示Prime标识，买家选Prime配送后由亚马逊核验会员身份并从FBA库存发货，卖家结账、支付与店铺政策无需改动。",
+      "title": "广告做得越细，预算反而越不够花——广告结构优化是不是越来越没有必要",
+      "summary": "SKAG式精细化拆组在CPC上涨环境下失效：23年CPC为0.9-1.1，现已涨至1.6-1.8，转化率停在12%前后，拆组越多ACOS越难降。核心判断：预算低于阈值时拆组带来的控制感是虚假的，组多则数据稀疏、系统学习慢、预算摊薄；实测关停日预算低于50美元的组并集中到大词广泛与精准组，CPC短期降0.2-0.3但曝光掉约30%。",
+      "category": "experience",
+      "score": 7.8,
+      "url": "https://www.wearesellers.com/question/125300",
+      "source": "wearesellers",
+      "published_at": "2026-10-13T10:21:52.758Z"
+    },
+    {
+      "title": "墨西哥空运最快9天到，亚马逊SEND再添新站",
+      "summary": "亚马逊头程物流升级：墨西哥站Amazon SEND空运专线9月22日启用，最快9个工作日送达，运费89折起，可选承运商为纬狮物联网(360Lion)，起运量低至5kg，可用于少量测款与断货前快速补货；中东站ShipTrack货件追踪已上线沙特和阿联酋，全程可追踪免手动填单。SEND空运现已覆盖美国、英国、德国、日本、中东、澳洲与墨西哥站点。",
+      "category": "trend",
+      "score": 7,
+      "url": "https://www.wearesellers.com/question/125367",
+      "source": "wearesellers",
+      "published_at": "2026-10-13T12:22:20.471Z"
+    },
+    {
+      "title": "算不清独立站物流成本？亚马逊MCF计算器来了",
+      "summary": "更新版MCF定价计算器可预估多渠道配送与仓储成本，并纳入TikTok Shop折扣和MCF优选定价优惠；支持手动输入最多3件商品或批量上传最多1000行数据对比。结果仅用于前期评估，实际费用以费率卡与条款为准；已用MCF的卖家应先确认账户功能可用性，独立站卖家可了解Prime Delivery适用条件。",
+      "category": "trend",
+      "score": 7.4,
+      "url": "https://www.wearesellers.com/question/125366",
+      "source": "wearesellers",
+      "published_at": "2026-10-13T11:22:25.064Z"
+    },
+    {
+      "title": "亚马逊10月起开放大件零担标签，卖家可享议定费率",
+      "summary": "亚马逊在2026 Accelerate大会发布大件发货新功能：10月起卖家可在Buy Shipping及第三方发货软件直接购买零担LTL标签，享平台议定协议价并获迟交保护；2027年初上线大件区域配送定价，可分区域设差异化运费；平台还将为大件卖家匹配仓库周边100英里内具备当日达或次日达能力的本地承运商，大件卖家应据此优化发货成本结构。",
       "category": "policy",
       "score": 9.4,
-      "url": "https://www.amz123.com/kx/YeKAMavg",
+      "url": "https://www.amz123.com/kx/be3txtki",
       "source": "amz123",
-      "published_at": "2026-09-24T10:39:53+00:00"
+      "published_at": "2026-10-01T00:56:26+00:00"
     },
     {
-      "title": "亚马逊上线虚拟身份验证：收到通知后14天内须完成视频核验，否则暂停销售",
-      "summary": "亚马逊上线虚拟身份验证，身份存疑卖家将收到视频核验通知，宽限期通常仅14天，部分账户不设宽限期，逾期未完成将暂停销售权限。入口在注册邮箱、绩效通知与账户状况页优先操作栏目。法人须备身份证或护照、企业注册文件、180天内银行及信用卡对账单、关系证明、供应链票据，材料不得图像处理，点击进入通话后无法回传，运营可陪同但不得代验。",
-      "category": "policy",
-      "score": 9,
-      "url": "https://www.amz123.com/kx/gOSy3rSD",
-      "source": "amz123",
-      "published_at": "2026-09-23T05:55:04+00:00"
-    },
-    {
-      "title": "​亚马逊老品优化：三条主线（附带出处）",
-      "summary": "针对单量不温不火、无明显下滑的老品，先定位卡点再动手：点击够而转化差是承接问题，点击本身不足是入口问题。方法按三条主线依次执行：先盘自己的图片与Listing承接力，再反查竞品流量结构找差距，最后用广告验证放大，顺序不可颠倒。自查标准：广告花费占销售额低于20%还有余地，超过30%且毛利率低于15%时继续加预算大概率是赔本买卖。",
-      "category": "experience",
-      "score": 9,
-      "url": "https://www.wearesellers.com/question/125204",
-      "source": "wearesellers",
-      "published_at": "2026-10-09T07:26:29.659+00:00"
-    },
-    {
-      "title": "# 运营案例分析 # 从3C换到家具类目，进来就是床垫清货，利润低，仓储费贵，打法好像跟3C差别很大，跑了几天广告没头绪了，求助各位大佬",
-      "summary": "大件家具FBM清货实录：199美金弹簧床垫不开广告利润仅10多美金，仓储费高使秒杀与广告均易亏本；父体下十多个尺寸床型变体，词根投放出现12寸产品跑出14寸流量错配。作者用自动加手动词根、每组预算5至10美金，广告日仅出1单，日销约8单多为自然单，结论是大件多尺寸产品广泛匹配流量过宽，考虑改用精准匹配或特定词组合。",
-      "category": "experience",
-      "score": 6.8,
-      "url": "https://www.wearesellers.com/question/113199",
-      "source": "wearesellers",
-      "published_at": "2026-10-12T11:10:52.687Z"
-    },
-    {
-      "title": "美国站因为比价 反反复复丢失购物车 比价Temu上1个同功能产品 但是产品颜色不一致  双方的图片也不一致",
-      "summary": "美国站购物车反复丢失，系被系统与Temu上一款同功能低价产品比价所致，双方颜色与图片不一致仍被匹配；多次开Case答复口径不一，Cart恢复仅维持数小时，Temu链接一天变价数次即再触发丢失，问题持续约20天，中介处理仅是给Jeff写邮件，基本无效。可用信息为比价触发机制与客服响应不稳定，文中无成熟解法。",
+      "title": "有没有做过万圣节装饰类的大佬，求指点：售价9.99降到7.99都没起色，单量从会员日的20单掉到5单，800套万圣节拉旗还能在节前清完吗？",
+      "summary": "万圣节拉旗套装成本约16，售价9.99单量停滞，会员日约20单降至约5单，降价至7.99销量无增幅，广告时而花得完时而花不完，剩余800多套库存需在万圣节结束前售罄。帖内给出成本、售价、单量、广告消耗与库存的完整数据，降价测试已失败，节前清货时间窗口有限，属于典型季节品清仓决策，帖内尚无解决方案。",
       "category": "experience",
       "score": 6.2,
-      "url": "https://www.wearesellers.com/question/125265",
+      "url": "https://www.wearesellers.com/question/125361",
       "source": "wearesellers",
-      "published_at": "2026-10-12T03:10:39.041Z"
+      "published_at": "2026-10-13T12:22:18.204Z"
     },
     {
-      "title": "大件FBM新品广告转化差，要怎么提高转化率？日烧$200多几乎不出单，转化率不到0.9%，心态要崩了.......",
-      "summary": "大件FBM新品ebike转化困局：两条链接上架半月各仅2个直评，日烧广告200多美金几乎不出单。正常竞价自动加广泛表现差，改捡漏广告无效，大词精准只烧钱已关。价格不可降，A链接449/549美金另收100运费，B链接599/649免运费带50美金券；链接除评论少外无明显问题，疑因评论量与运费结构压制转化。",
+      "title": "激情预估是爆款，市场教我别上头。产品矩阵微创新往节日款延展失败，分析了一通也不知道哪里出了问题。求各位大佬解答交流。",
+      "summary": "精品卖家深耕类目两年，首年跟款并沉淀用户画像，次年延展产品矩阵：圣诞节日款备货最重、被寄望冲爆款，实际旺季日销仅几单至十几单，降价与站外推广仍无效，普通款反而卖爆，女性款好于预期；关键差异点为市场首见节日款、图案玩法与赠贺卡不同、11月下旬上架偏晚、评分无差评，发帖者倾向判断问题在产品端。",
       "category": "experience",
-      "score": 6.2,
-      "url": "https://www.wearesellers.com/question/125320",
+      "score": 8.4,
+      "url": "https://www.wearesellers.com/question/113956",
       "source": "wearesellers",
-      "published_at": "2026-10-12T11:10:54.931Z"
+      "published_at": "2026-10-13T10:22:34.217Z"
     }
   ]
 }
