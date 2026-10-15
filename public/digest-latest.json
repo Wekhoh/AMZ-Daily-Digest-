@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-14T11:13:06Z",
-  "digest_date": "2026-10-14",
+  "generated_at_utc": "2026-10-15T10:55:11Z",
+  "digest_date": "2026-10-15",
   "article_count": 50,
   "articles": [
     {
-      "title": "Q4 QC Tip: Your Factory Says Everything Is Ready. But Is It Really?",
-      "summary": "Q4出货旺季，中国工厂因假期订单与年底出货截止临近而繁忙，供应商常在未完全完工时就催促安排验货，导致检验员到场时仍有产品在组装、未装箱甚至缺纸箱，验货无法覆盖整批订单并产生复检成本。可执行做法：约验货前先要求供应商确认生产与包装状态，出货前验货标准为生产100%完成且至少80%已装箱。",
-      "category": "experience",
-      "score": 8,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1x4xld3/q4_qc_tip_your_factory_says_everything_is_ready",
-      "source": "reddit_fba",
-      "published_at": "2026-10-13T14:06:35.000Z"
+      "title": "退货缺件还被当作新品发出去？亚马逊这个新功能，终于让卖家自己定规矩了",
+      "summary": "亚马逊FBA上线定制分级功能，卖家可自定义退货按新品转售的验收标准，入口为设置-订单-回收-定制分级。可设四个维度：封膜类型与破膜是否可售、必备配件清单及缺件补配后能否转二手、带电机械产品的功能测试项、正品验证方式；适用范围支持全目录、指定ASIN或CSV批量导入，不达标退货不再回流可售库存。",
+      "category": "policy",
+      "score": 9,
+      "url": "https://www.wearesellers.com/question/125409",
+      "source": "wearesellers",
+      "published_at": "2026-10-14T10:43:30.651Z"
     },
     {
-      "title": "关键词Skill：WorkBuddy一键出亚马逊关键词作战图，告别拍脑袋！",
-      "summary": "作者开源了亚马逊关键词策略Skill，核心结论是标品与非标品打法截然不同：标品集中打透，非标铺开走量。Skill内置新品建库、老品诊断、竞品拆解、词表加工四大场景，可接入SIF或卖家精灵MCP按ASIN拉取搜索量与竞争度，几分钟输出带打法分析的关键词作战图，并生成含精准词表、否定词表、PPC策略、广告结构建议的七表Excel及JSON源数据。",
-      "category": "experience",
+      "title": "Adobe调查：49%美国AI购物者因信息不符弃购，59%因此降低品牌信任",
+      "summary": "Adobe调研1011名美国大模型用户：49%因AI信息与品牌官网内容不一致而弃购，59%会因AI错误信息降低对品牌信任，59%愿在AI推荐下尝试陌生竞品，83%会持续购买经AI首次发现的品牌。美国站卖家行动点：确保listing、品牌官网与各渠道信息一致，减少AI抓取错误信息，并重视AI渠道的品牌首次曝光以锁定复购。",
+      "category": "trend",
+      "score": 6.4,
+      "url": "https://www.amz123.com/kx/LXK9dr2R",
+      "source": "amz123",
+      "published_at": "2026-10-15T09:12:03.000Z"
+    },
+    {
+      "title": "贝恩预测美国黑五网一四天线上销售额将破850亿美元",
+      "summary": "贝恩预测美国黑五网一四天线上销售额超850亿美元，同比增长8.75%，约为假日季4.5%整体增速的两倍，四天下单消费者占比从64%升至70%，黑五购物意愿从55%升至64%。同时2025年美国销售最高的十天中六天落在圣诞前最后两个周末，卖家应把广告预算与库存补货延续到网一后的圣诞冲刺段。",
+      "category": "trend",
+      "score": 7.8,
+      "url": "https://www.amz123.com/kx/cYJm4zij",
+      "source": "amz123",
+      "published_at": "2026-10-15T07:30:41.000Z"
+    },
+    {
+      "title": "Codex接入西柚后，亚马逊运营能做到什么？以前亚马逊运营是在数据里找答案，现在是让 Codex 帮你把答案整理出来。",
+      "summary": "接入方法：在西柚洞察创建MCP Token填入Codex重启即可。输入竞品ASIN一句话反查7天关键词，实测得506个词并自动分类为核心大词、安装场景词、功能长尾词，推广节奏为前期打精准转化词、中期扩中流量主词、后期权重稳定后抢大词；流量诊断显示竞品7天流量增72.7%、广告占比近90%，属广告驱动起量；结论可一键生成指标卡、趋势图、Top关键词表等可视化报告。",
+      "category": "trend",
       "score": 8.4,
-      "url": "https://www.wearesellers.com/question/123845",
+      "url": "https://www.wearesellers.com/question/123824",
       "source": "wearesellers",
-      "published_at": "2026-10-14T10:01:42.660Z"
+      "published_at": "2026-10-15T10:06:03.491Z"
     },
     {
-      "title": "Amazon FBA Inventory Management: How Do You Prevent Stockouts When You’re Too Busy to Monitor Seller Central?",
-      "summary": "FBA断货真实案例：卖家4-5天未登录Seller Central，最畅销SKU断货2天且恰逢销售旺季，直接打掉排名；邮件低库存提醒因手机无信号失效。当前仅备3周库存偏紧，可行方向是用超额FBA库存换断货保险并接受仓储费，或引入自动监控工具加固定巡检习惯。",
+      "title": "What’s one Amazon PPC mistake that cost you money before you figured out what was wrong?",
+      "summary": "作者复盘最贵PPC错误：连续数周不看钱花在哪，误以为设了日预算就安全；结果是部分关键词持续花钱不出单，优质campaign却提前烧完预算。修正做法：用搜索词报告代替曝光判断，按点击、订单、转化率和利润率核对花费，数据支持时加否定关键词，不凭单日差表现大幅调竞价。",
       "category": "experience",
-      "score": 6.8,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1x3ub66/amazon_fba_inventory_management_how_do_you",
+      "score": 7.8,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1x61lb9/whats_one_amazon_ppc_mistake_that_cost_you_money",
       "source": "reddit_fba",
-      "published_at": "2026-10-12T06:16:12.000Z"
+      "published_at": "2026-10-14T20:05:28.000Z"
     },
     {
-      "title": "收到邮件关于【亚马逊商城交易保障索赔政策索赔】，买家问题为财产损失或人身伤害事件。索赔已解决，但我怀疑是恶意索赔，我有必要继续操作吗？",
-      "summary": "无人机电池起火引发财产损失索赔：订单2026年9月26日下单，9月27日即发起两笔索赔，一笔10月2日被拒、另一笔10月9日被同意，卖家已购PICC产品责任险至2027年3月16日。因次日即索赔，卖家怀疑恶意索赔，待解问题为平台是否承担699美金费用、能否联系买家取证、能否开case要求披露证据及举报买家。",
-      "category": "policy",
-      "score": 6.8,
-      "url": "https://www.wearesellers.com/question/125356",
-      "source": "wearesellers",
-      "published_at": "2026-10-14T05:01:14.337Z"
-    },
-    {
-      "title": "亚马逊大批Listing划线价异常消失，卖家订单量大幅下滑",
-      "summary": "美国站大量Listing划线价无故消失、专享折扣报错，部分店铺六成乃至全部商品划线失效，叠加9月7日劳动节假期线下分流，销量腰斩、近三天单量仅为日常三分之一；业内消息指亚马逊将推行新参考价规则：90天周期内至少10%的天数按参考价成交才能展示划线价。卖家需立即核查前台优惠展示并调整定价，保证周期内有足够参考价出单天数。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.amz123.com/kx/6SrmZULT",
-      "source": "amz123",
-      "published_at": "2026-09-08T02:12:27+00:00"
-    },
-    {
-      "title": "做了几个月亚马逊饰品，我开始重新理解选品和产品差异化。我们都从1688拿货成本差不多，到底凭什么让买家选我？想听听有实际开发经验的卖家是怎么考虑的",
-      "summary": "美国站饰品新卖家的选品复盘：BSR爆款背后常是多年老卖家、几百上千评论与低价，1688同款泛滥、成本趋同，客单价低再叠加FBA费、佣金、广告后降价无空间；差异化不是换链条加吊坠即可，须验证美国消费者是否买账。结论：选品是找适合自己去卖的产品，先看竞对数量、价格空间、新品机会与合理差异化。",
+      "title": "用 Grok Bot 做跨境电商的实战分享 - 从 0 到 1 搭建起一整个亚马逊团队",
+      "summary": "作者把原在Claude、Codex上跑的Skill迁到Grok Bot，搭出1个船长加12个岗位的亚马逊AI团队，覆盖前台巡检、竞品跟进、看评论、数据分析、文案、广告、利润与补货，只需与船长交互派单收结果。迁移原因：需登录买家账号看前台的任务MCP拿不到，云电脑可全天运行；订阅建议从网页端最便宜套餐试用。",
       "category": "experience",
-      "score": 6.8,
-      "url": "https://www.wearesellers.com/question/125333",
+      "score": 7.4,
+      "url": "https://www.wearesellers.com/question/125390",
       "source": "wearesellers",
-      "published_at": "2026-10-14T10:00:50.024Z"
+      "published_at": "2026-10-15T04:43:26.293Z"
     },
     {
-      "title": "亚马逊严打明信片催评及诱导改评 违规直接撤销售权限",
-      "summary": "亚马逊严厉打击通过明信片催评、PayPal或礼品卡返现诱导改评等违规行为，情节严重者将跳过警告直接封号。卖家必须立即停止任何站外联系买家、批量获取用户信息及异常返现的操纵评论行为，合规运营，将运营重心从冲评数量转向提升评论内容的真实性与场景化。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.amz123.com/kx/NXcdeLDw",
+      "title": "亚马逊自动猫砂盆还能不能做？拆完 259 条差评，165 美金那款比 130 美金那款还差",
+      "summary": "拆解两款头部自动猫砂盆全部259条评论：165.56美金款差评率54.4%，反高于129.99美金款的42.1%，共同短板在耙子与传动，未兑现自动清理承诺；PetSafe近三月差评率50.9%，按月销千台推算退货月损失约1.1万美金。可执行结论：品类后来者应做开放耗材系统配普通猫砂，敢给两三年保修即是现成差异点。",
+      "category": "trend",
+      "score": 7.4,
+      "url": "https://www.wearesellers.com/question/125381",
+      "source": "wearesellers",
+      "published_at": "2026-10-14T10:43:34.995Z"
+    },
+    {
+      "title": "Numerator报告：健康美妆、服饰鞋包与电子产品最易受AI购物冲击",
+      "summary": "Numerator报告显示，健康美妆、服饰鞋包与电子产品是最易被AI购物代理颠覆的三大品类；超30%美国家庭每周使用AI，约十分之一家庭购物时用AI辅助决策，AI参与家庭带来约370亿美元额外年支出。美区卖家应优先让商品信息可被AI智能体检索与推荐，抢占新流量入口，上述三大品类尤需先行动。",
+      "category": "trend",
+      "score": 6,
+      "url": "https://www.amz123.com/kx/PLiWZ8qO",
       "source": "amz123",
-      "published_at": "2026-07-07T09:20:21+00:00"
+      "published_at": "2026-10-15T07:51:04.000Z"
     },
     {
-      "title": "亚马逊FBA新费政生效：超龄库存附加费大幅上涨",
-      "summary": "亚马逊FBA新费政实施，商品库龄达181天即收超龄附加费，超365天最高达月仓储费13倍；未加入SIPP的大件商品加收包装费。卖家须通过Outlet、清仓或移除清理冗余库存，大件商品应尽快申请SIPP认证以降低包装成本。",
+      "title": "更换账号主体，预计同步触发美国INFORM Act、加拿大FINTRAC KYC核验，深圳租户地址，现在卡在地址证明这块，主要联系人居住地址证明方案求证",
+      "summary": "更换账号主体将同步触发美国INFORM Consumers Act与加拿大FINTRAC受益人KYC，卡点为主联系人深圳租房无本人名下水电燃气账单、信用卡路径不通；可行方向梳理为中行个人综合查询凭证补日期佐证，即合并流水、柜员手写日期补章或附受理回执，另一路线是凭租赁合同将宽带户名登记为租户后开月结上网费账单，明确不走PS等违规路径。",
+      "category": "policy",
+      "score": 7.8,
+      "url": "https://www.wearesellers.com/question/125435",
+      "source": "wearesellers",
+      "published_at": "2026-10-15T06:43:43.801Z"
+    },
+    {
+      "title": "CBP starts voiding importer numbers with wrong Form 5106 details on September 18 (four things to check)",
+      "summary": "美国海关自2026年9月18日起逐一核查进口商存档的Form 5106，信息不准将作废IOR号且无法清关。应让货代调出5106核对四项：地址须为实体地址（可用负责人家庭住址，禁用注册代理、货代、P.O.箱）；邮箱和电话须属IOR本人；货代须持与IOR直接签署的POA。恢复需按指定主题行邮件申请，官方未给时限。",
       "category": "policy",
       "score": 9.4,
-      "url": "https://www.amz123.com/kx/RkUvZPFw",
-      "source": "amz123",
-      "published_at": "2026-07-08T02:31:43+00:00"
-    },
-    {
-      "title": "需求在 TK / 谷歌，亚马逊没有搜索数据，这类配件品的两种思考，想听听大家经验",
-      "summary": "配件选品两难案例：某大牌配套配件在谷歌和TK短视频需求旺盛、评论区大量求购，但亚马逊站内几乎零搜索量也无相关结果。思路一认为属潜在需求可做，难点是无精准关键词投SP广告、只能靠TK站外引流；思路二认为亚马逊流量靠主动搜索，停掉站外内容Listing即断流，风险高，评估维度尚无定论。",
-      "category": "experience",
-      "score": 6.8,
-      "url": "https://www.wearesellers.com/question/125429",
-      "source": "wearesellers",
-      "published_at": "2026-10-14T10:32:16.935Z"
-    },
-    {
-      "title": "今天开始，美国清关彻底变了！不会电子申报，货物可能直接卡港！",
-      "summary": "美国CPSC电子申报于2026年7月8日起强制实施，进口消费品全面进入先系统核验、再放行模式。涉及儿童玩具、电子产品、服装等监管产品的卖家，必须通过eFiling提交结构化电子数据，在途货物亦受限制。卖家须立即自查CPC证书并对接数字化清关流程。",
-      "category": "policy",
-      "score": 9.4,
-      "url": "https://www.wearesellers.com/question/121981",
-      "source": "wearesellers",
-      "published_at": "2026-07-08T07:51:40.029+00:00"
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wgmkm6/cbp_starts_voiding_importer_numbers_with_wrong",
+      "source": "reddit_fba",
+      "published_at": "2026-09-15T01:36:54+00:00"
     }
   ]
 }
