@@ -1,98 +1,98 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-15T10:55:11Z",
-  "digest_date": "2026-10-15",
+  "generated_at_utc": "2026-10-16T10:41:06Z",
+  "digest_date": "2026-10-16",
   "article_count": 50,
   "articles": [
     {
-      "title": "退货缺件还被当作新品发出去？亚马逊这个新功能，终于让卖家自己定规矩了",
-      "summary": "亚马逊FBA上线定制分级功能，卖家可自定义退货按新品转售的验收标准，入口为设置-订单-回收-定制分级。可设四个维度：封膜类型与破膜是否可售、必备配件清单及缺件补配后能否转二手、带电机械产品的功能测试项、正品验证方式；适用范围支持全目录、指定ASIN或CSV批量导入，不达标退货不再回流可售库存。",
-      "category": "policy",
-      "score": 9,
-      "url": "https://www.wearesellers.com/question/125409",
-      "source": "wearesellers",
-      "published_at": "2026-10-14T10:43:30.651Z"
-    },
-    {
-      "title": "Adobe调查：49%美国AI购物者因信息不符弃购，59%因此降低品牌信任",
-      "summary": "Adobe调研1011名美国大模型用户：49%因AI信息与品牌官网内容不一致而弃购，59%会因AI错误信息降低对品牌信任，59%愿在AI推荐下尝试陌生竞品，83%会持续购买经AI首次发现的品牌。美国站卖家行动点：确保listing、品牌官网与各渠道信息一致，减少AI抓取错误信息，并重视AI渠道的品牌首次曝光以锁定复购。",
-      "category": "trend",
-      "score": 6.4,
-      "url": "https://www.amz123.com/kx/LXK9dr2R",
-      "source": "amz123",
-      "published_at": "2026-10-15T09:12:03.000Z"
-    },
-    {
-      "title": "贝恩预测美国黑五网一四天线上销售额将破850亿美元",
-      "summary": "贝恩预测美国黑五网一四天线上销售额超850亿美元，同比增长8.75%，约为假日季4.5%整体增速的两倍，四天下单消费者占比从64%升至70%，黑五购物意愿从55%升至64%。同时2025年美国销售最高的十天中六天落在圣诞前最后两个周末，卖家应把广告预算与库存补货延续到网一后的圣诞冲刺段。",
-      "category": "trend",
-      "score": 7.8,
-      "url": "https://www.amz123.com/kx/cYJm4zij",
-      "source": "amz123",
-      "published_at": "2026-10-15T07:30:41.000Z"
-    },
-    {
-      "title": "Codex接入西柚后，亚马逊运营能做到什么？以前亚马逊运营是在数据里找答案，现在是让 Codex 帮你把答案整理出来。",
-      "summary": "接入方法：在西柚洞察创建MCP Token填入Codex重启即可。输入竞品ASIN一句话反查7天关键词，实测得506个词并自动分类为核心大词、安装场景词、功能长尾词，推广节奏为前期打精准转化词、中期扩中流量主词、后期权重稳定后抢大词；流量诊断显示竞品7天流量增72.7%、广告占比近90%，属广告驱动起量；结论可一键生成指标卡、趋势图、Top关键词表等可视化报告。",
+      "title": "亚马逊广告整合为Amazon Ads Agent，全漏斗投放已向美国卖家开放",
+      "summary": "亚马逊将广告体系整合为Amazon Ads Agent，含商品推广、展示与音视频DVA+、全漏斗三类。全漏斗把搜索、展示、视频、流媒体电视合并为单一活动，由AI负责规划执行与优化，已向美国站符合条件广告主开放，DVA+十月中下旬自美国起步。官方数据显示采用自然语言建议后新增独立顾客提升超25%、千次展示成本下降超10%，建议美国站卖家尽快测试全漏斗投放。",
       "category": "trend",
       "score": 8.4,
-      "url": "https://www.wearesellers.com/question/123824",
-      "source": "wearesellers",
-      "published_at": "2026-10-15T10:06:03.491Z"
-    },
-    {
-      "title": "What’s one Amazon PPC mistake that cost you money before you figured out what was wrong?",
-      "summary": "作者复盘最贵PPC错误：连续数周不看钱花在哪，误以为设了日预算就安全；结果是部分关键词持续花钱不出单，优质campaign却提前烧完预算。修正做法：用搜索词报告代替曝光判断，按点击、订单、转化率和利润率核对花费，数据支持时加否定关键词，不凭单日差表现大幅调竞价。",
-      "category": "experience",
-      "score": 7.8,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1x61lb9/whats_one_amazon_ppc_mistake_that_cost_you_money",
-      "source": "reddit_fba",
-      "published_at": "2026-10-14T20:05:28.000Z"
-    },
-    {
-      "title": "用 Grok Bot 做跨境电商的实战分享 - 从 0 到 1 搭建起一整个亚马逊团队",
-      "summary": "作者把原在Claude、Codex上跑的Skill迁到Grok Bot，搭出1个船长加12个岗位的亚马逊AI团队，覆盖前台巡检、竞品跟进、看评论、数据分析、文案、广告、利润与补货，只需与船长交互派单收结果。迁移原因：需登录买家账号看前台的任务MCP拿不到，云电脑可全天运行；订阅建议从网页端最便宜套餐试用。",
-      "category": "experience",
-      "score": 7.4,
-      "url": "https://www.wearesellers.com/question/125390",
-      "source": "wearesellers",
-      "published_at": "2026-10-15T04:43:26.293Z"
-    },
-    {
-      "title": "亚马逊自动猫砂盆还能不能做？拆完 259 条差评，165 美金那款比 130 美金那款还差",
-      "summary": "拆解两款头部自动猫砂盆全部259条评论：165.56美金款差评率54.4%，反高于129.99美金款的42.1%，共同短板在耙子与传动，未兑现自动清理承诺；PetSafe近三月差评率50.9%，按月销千台推算退货月损失约1.1万美金。可执行结论：品类后来者应做开放耗材系统配普通猫砂，敢给两三年保修即是现成差异点。",
-      "category": "trend",
-      "score": 7.4,
-      "url": "https://www.wearesellers.com/question/125381",
-      "source": "wearesellers",
-      "published_at": "2026-10-14T10:43:34.995Z"
-    },
-    {
-      "title": "Numerator报告：健康美妆、服饰鞋包与电子产品最易受AI购物冲击",
-      "summary": "Numerator报告显示，健康美妆、服饰鞋包与电子产品是最易被AI购物代理颠覆的三大品类；超30%美国家庭每周使用AI，约十分之一家庭购物时用AI辅助决策，AI参与家庭带来约370亿美元额外年支出。美区卖家应优先让商品信息可被AI智能体检索与推荐，抢占新流量入口，上述三大品类尤需先行动。",
-      "category": "trend",
-      "score": 6,
-      "url": "https://www.amz123.com/kx/PLiWZ8qO",
+      "url": "https://www.amz123.com/kx/is9ByUGH",
       "source": "amz123",
-      "published_at": "2026-10-15T07:51:04.000Z"
+      "published_at": "2026-10-16T09:53:30.000Z"
     },
     {
-      "title": "更换账号主体，预计同步触发美国INFORM Act、加拿大FINTRAC KYC核验，深圳租户地址，现在卡在地址证明这块，主要联系人居住地址证明方案求证",
-      "summary": "更换账号主体将同步触发美国INFORM Consumers Act与加拿大FINTRAC受益人KYC，卡点为主联系人深圳租房无本人名下水电燃气账单、信用卡路径不通；可行方向梳理为中行个人综合查询凭证补日期佐证，即合并流水、柜员手写日期补章或附受理回执，另一路线是凭租赁合同将宽带户名登记为租户后开月结上网费账单，明确不走PS等违规路径。",
-      "category": "policy",
-      "score": 7.8,
-      "url": "https://www.wearesellers.com/question/125435",
+      "title": "被亚马逊新版AI客服逼疯？隐藏路径一键切回旧版开Case页面！这个方法特别适合处理FBA货件异常、转仓申请、账号申诉等AI解决不了的疑难杂症",
+      "summary": "绕过新版AI客服回到旧版开Case页面的六步路径：先通过AI开case进入聊天页，拉到最下方点击切换服务分类，在分类页点底部帮助，再依次选广告和品牌旗舰店、开店，即可自由选择问题切入老版页面。适用于FBA货件异常、转仓申请、账号申诉等AI解决不了的疑难场景。",
+      "category": "experience",
+      "score": 8.4,
+      "url": "https://www.wearesellers.com/question/125468",
       "source": "wearesellers",
-      "published_at": "2026-10-15T06:43:43.801Z"
+      "published_at": "2026-10-16T09:40:09.083Z"
     },
     {
-      "title": "CBP starts voiding importer numbers with wrong Form 5106 details on September 18 (four things to check)",
-      "summary": "美国海关自2026年9月18日起逐一核查进口商存档的Form 5106，信息不准将作废IOR号且无法清关。应让货代调出5106核对四项：地址须为实体地址（可用负责人家庭住址，禁用注册代理、货代、P.O.箱）；邮箱和电话须属IOR本人；货代须持与IOR直接签署的POA。恢复需按指定主题行邮件申请，官方未给时限。",
+      "title": "税局打电话要求提供成本发票，不承认平台的采购截图，否则按照回款缴纳所得税，大家有遇到过吗？怎么办？",
+      "summary": "南昌单干小卖家季度销售额29万，申报次日接到税局电话要求提供进项发票佐证成本，淘宝和阿里巴巴采购凭证不被认可；税局明确无法补开发票的成本不得扣除。作者担心届时只能按回款5%缴纳企业所得税，可行路径仅剩联系供应商补开发票或向12366投诉供应商，帖内无两全解法。",
+      "category": "policy",
+      "score": 6.8,
+      "url": "https://www.wearesellers.com/question/125517",
+      "source": "wearesellers",
+      "published_at": "2026-10-16T10:04:01.915Z"
+    },
+    {
+      "title": "2026年刚授权的亚马逊专利，把搜索推荐的底层逻辑全说清楚了",
+      "summary": "亚马逊A9子公司2026年2月24日授权的专利显示，搜索系统分关键词检索与意图预测两层：通过BERT语义向量化、意图六分类（细化、泛化等）、历史行为预测，在买家打出下一个字前生成3到5个推荐词。细化阶段购买意愿最强，listing此时消失即流失高意向顾客，只堆关键词等于只做第一层。",
+      "category": "trend",
+      "score": 8.4,
+      "url": "https://www.wearesellers.com/question/125498",
+      "source": "wearesellers",
+      "published_at": "2026-10-16T09:39:11.704Z"
+    },
+    {
+      "title": "亚马逊2026年11月2日起调整商业责任险规则，新增11类高危类目强制投保要求",
+      "summary": "亚马逊商业责任险新规2026年11月2日生效，保留月销超1万美元30天内投保、保额100万美元的门槛，同时新增儿童商品、化妆品、锂电池、床垫、汽车摩托轮胎等11类高危类目强制投保，且不限新品在售、不看月销量，均须不低于100万美元保额；涉及类目卖家应立即排查自身ASIN是否在列，尽快完成投保并上传保单，避免销售权限受限。",
       "category": "policy",
       "score": 9.4,
-      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1wgmkm6/cbp_starts_voiding_importer_numbers_with_wrong",
+      "url": "https://www.amz123.com/kx/i7xMS7Zg",
+      "source": "amz123",
+      "published_at": "2026-09-10T09:16:41+00:00"
+    },
+    {
+      "title": "美国亚马逊9月潮玩榜：宝可梦30周年卡牌销量夺冠",
+      "summary": "美国亚马逊9月潮玩双榜：销售额榜万代航海王S.H.Figuarts人偶以619万美元居首，泡泡玛特Labubu 1.0、2.0与Hirono小野跻身前十；销量榜宝可梦30周年卡牌超30万件夺冠，美泰Kpop娃娃、ZURU带LED微缩盲盒等上榜。趋势是从造型稀缺转向可玩机制加集齐复购，25美元以下具互动性的平价盲盒是增量主力，可直接作为美国站选品方向。",
+      "category": "trend",
+      "score": 8.4,
+      "url": "https://www.amz123.com/kx/bfatzEnA",
+      "source": "amz123",
+      "published_at": "2026-10-16T09:22:46.000Z"
+    },
+    {
+      "title": "亚马逊美国站秋季门垫还剩300个，11月底就过季了，配送费$11.19、移除费$4.30，想在11月底之前把这批库存清掉，请各位大佬帮我算算，怎么清仓损失最小？",
+      "summary": "美国站秋季门垫9月上新500个，报30个Vine引来大量3星差评，现评分4.1、27个ratings、退货率5%～10%；9月均价13.99美元日广告约20美元售128个，10月均价13.59美元日广告约16美元售42个，仍剩300个。销售窗口9-11月已过半而库存剩60%，配送费11.19美元、移除费4.30美元，需在11月底前确定损失最小的清仓方式。",
+      "category": "experience",
+      "score": 6.8,
+      "url": "https://www.wearesellers.com/question/125476",
+      "source": "wearesellers",
+      "published_at": "2026-10-16T09:30:38.655Z"
+    },
+    {
+      "title": "The reimbursement money I was leaving on the table for over a year (FBA)",
+      "summary": "亚马逊FBA索赔实操方法。卖家应每月比对退货报告与赔偿报告，针对买家未退回货物、超45天未退回已退款件、库容损毁未自动赔偿等异常，以一单一案、只陈述事实的方式开case索赔，避免因超出时效而造成资金损失。",
+      "category": "experience",
+      "score": 9.4,
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1vbqfwd/the_reimbursement_money_i_was_leaving_on_the",
       "source": "reddit_fba",
-      "published_at": "2026-09-15T01:36:54+00:00"
+      "published_at": "2026-07-31T13:06:17+00:00"
+    },
+    {
+      "title": "复古裁纸器在TikTok美区累计GMV达16.08万美元，98%销量由短视频带动",
+      "summary": "TikTok美区复古相机造型裁纸器在DHG LIVING US售出6540件，GMV16.08万美元，单价22美元，98.14%销量由内容驱动：近28天联动478位达人发布753条视频，单条演示视频播放破900万。产品合并裁纸与胶带分配功能，套装含4卷胶带2片刀片，亚马逊月销亦超5000件，可作家居小工具选品与达人短视频铺量打法参考。",
+      "category": "trend",
+      "score": 6,
+      "url": "https://www.amz123.com/kx/w6WQKCKX",
+      "source": "amz123",
+      "published_at": "2026-10-16T09:33:04.000Z"
+    },
+    {
+      "title": "同类新品一上架就进小类前10，他们是怎么做到上架后就进入小类前几名的？我的点击率基本维持在 2% 左右，整体转化率只有10%、广告ACOS还超100%，到底差在哪？",
+      "summary": "同类竞品上架即进小类前10，疑似每日1单刷单回评、未见站外推广；自家19.99美元产品点击率约2%、转化率10%～15%，直推大词加免评单、加购和心愿单，ACOS可到40%但关键词不增长；广泛匹配竞价高，ACOS约100%每单亏损。旧案例降价到9.99美元只留自动广告后，关键词从100个涨到600多个，可参考低价出单带动词库扩张的路径。",
+      "category": "experience",
+      "score": 7.2,
+      "url": "https://www.wearesellers.com/question/125453",
+      "source": "wearesellers",
+      "published_at": "2026-10-16T09:31:41.147Z"
     }
   ]
 }
